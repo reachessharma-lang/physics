@@ -1,0 +1,354 @@
+{
+  "title": "Rotational Dynamics — 50 MCQs",
+  "grade": "XII",
+  "chapters": [1],
+  "date": "2026-01-06",
+  "description": "50 MCQs on rotational dynamics — moments of inertia, angular momentum, torque, rolling motion and related concepts.",
+  "questions": [
+    {
+      "q": "Which physical quantity remains constant in uniform circular motion?",
+      "options": ["Linear velocity", "Angular velocity", "Centripetal acceleration", "Tangential acceleration"],
+      "answer": 1,
+      "explanation": "In uniform circular motion, angular velocity remains constant while linear velocity changes direction continuously.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A solid sphere and a hollow sphere of the same mass and radius are rolling down an incline without slipping. Which reaches the bottom first?",
+      "options": ["Solid sphere", "Hollow sphere", "Both reach at the same time", "Cannot be determined"],
+      "answer": 0,
+      "explanation": "The solid sphere has a smaller moment of inertia (I = 2/5 MR²) compared to the hollow sphere (I = 2/3 MR²), so it accelerates faster down the incline.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The moment of inertia of a thin rod of mass M and length L about an axis perpendicular to its length and passing through its center is:",
+      "options": ["ML²/12", "ML²/3", "ML²/2", "ML²"],
+      "answer": 0,
+      "explanation": "The moment of inertia of a thin rod about an axis through its center perpendicular to its length is ML²/12.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A disc of mass M and radius R is rotating with angular velocity ω. Another identical disc at rest is dropped on it. What is the final angular velocity of the system?",
+      "options": ["ω/2", "ω/4", "ω", "2ω"],
+      "answer": 0,
+      "explanation": "Using conservation of angular momentum: Iω = (I+I)ω' ⇒ ω' = ω/2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle of mass m is moving in a circle of radius r with a constant speed v. The work done by the centripetal force during half a revolution is:",
+      "options": ["Zero", "mvr", "mv²/r", "2mvr"],
+      "answer": 0,
+      "explanation": "Centripetal force is always perpendicular to displacement, so work done is zero.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The radius of gyration of a body about an axis is:",
+      "options": ["The radius of the body", "The distance from the axis where entire mass is assumed to be concentrated", "Half the radius of the body", "The radius of the circular path"],
+      "answer": 1,
+      "explanation": "Radius of gyration (k) is defined as the distance from the axis of rotation at which the entire mass of the body is assumed to be concentrated, giving the same moment of inertia.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A flywheel of moment of inertia 5 kg·m² is rotating at 60 rad/s. What is the kinetic energy of rotation?",
+      "options": ["9000 J", "4500 J", "300 J", "150 J"],
+      "answer": 0,
+      "explanation": "Rotational KE = ½ Iω² = ½ × 5 × (60)² = ½ × 5 × 3600 = 9000 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the angular momentum of a rotating body is increased by 200%, its kinetic energy of rotation increases by:",
+      "options": ["200%", "300%", "800%", "900%"],
+      "answer": 2,
+      "explanation": "K = L²/(2I). If L becomes 3L (200% increase), K becomes 9K, which is an 800% increase.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A thin circular ring of mass M and radius R is rotating about its axis with angular velocity ω. The tension in the ring is:",
+      "options": ["Mω²R", "Mω²R/2", "Mω²R/π", "Zero"],
+      "answer": 0,
+      "explanation": "For a rotating ring, each element experiences centripetal force provided by tension. The tension T = Mω²R.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle is moving in a vertical circle with constant speed. The tension in the string is maximum at:",
+      "options": ["Highest point", "Lowest point", "Point at horizontal position", "Same at all points"],
+      "answer": 1,
+      "explanation": "Tension is maximum at the lowest point because it has to provide both the centripetal force and balance the weight of the particle.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The moment of inertia of a disc about an axis perpendicular to its plane and passing through its center is I. The moment of inertia about a diameter is:",
+      "options": ["I/2", "I/4", "2I", "I"],
+      "answer": 0,
+      "explanation": "For a disc, I_perpendicular = MR²/2. I_diameter = MR²/4 = I_perpendicular/2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A wheel starting from rest attains an angular velocity of 20 rad/s in 5 seconds. The angular acceleration is:",
+      "options": ["4 rad/s²", "5 rad/s²", "10 rad/s²", "100 rad/s²"],
+      "answer": 0,
+      "explanation": "Angular acceleration α = Δω/Δt = (20-0)/5 = 4 rad/s².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Two particles of masses m₁ and m₂ are attached to the ends of a massless rod of length L. The moment of inertia about an axis perpendicular to the rod and passing through the center of mass is:",
+      "options": ["(m₁+m₂)L²/4", "(m₁m₂)L²/(m₁+m₂)", "(m₁+m₂)L²", "(m₁m₂)L²/4(m₁+m₂)"],
+      "answer": 1,
+      "explanation": "Distance of m₁ from CM = m₂L/(m₁+m₂), distance of m₂ from CM = m₁L/(m₁+m₂). I = m₁(m₂L/(m₁+m₂))² + m₂(m₁L/(m₁+m₂))² = m₁m₂L²/(m₁+m₂).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A solid cylinder rolls down an inclined plane without slipping. The ratio of rotational to translational kinetic energy is:",
+      "options": ["1:2", "2:1", "1:1", "1:3"],
+      "answer": 0,
+      "explanation": "For a solid cylinder, I = MR²/2. Rotational KE = ½ Iω² = ¼ Mv², Translational KE = ½ Mv². Ratio = 1:2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The angular momentum of a particle about a point is given by:",
+      "options": ["r × p", "r · p", "r × F", "r · F"],
+      "answer": 0,
+      "explanation": "Angular momentum L = r × p, where r is position vector and p is linear momentum.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A torque of 20 Nm is applied to a wheel of moment of inertia 5 kg·m². The angular acceleration produced is:",
+      "options": ["4 rad/s²", "0.25 rad/s²", "100 rad/s²", "15 rad/s²"],
+      "answer": 0,
+      "explanation": "τ = Iα ⇒ α = τ/I = 20/5 = 4 rad/s².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A thin uniform rod of length L and mass M is rotated about an axis perpendicular to its length and passing through one end. Its moment of inertia is:",
+      "options": ["ML²/3", "ML²/12", "ML²/2", "ML²"],
+      "answer": 0,
+      "explanation": "Moment of inertia of a thin rod about an axis through one end perpendicular to its length is ML²/3.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle moves with constant speed along a circular path. The angular momentum of the particle about the center of the circle:",
+      "options": ["Is constant", "Changes in magnitude", "Changes in direction", "Is zero"],
+      "answer": 0,
+      "explanation": "For a particle moving in a circle with constant speed, angular momentum about the center is constant (L = mvr, all constant).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A disc of radius R has mass M. A hole of radius R/2 is cut from it as shown. The moment of inertia of the remaining part about an axis perpendicular to the plane and passing through the center is:",
+      "options": ["(13/32)MR²", "(3/8)MR²", "(5/16)MR²", "(7/32)MR²"],
+      "answer": 0,
+      "explanation": "I_complete = MR²/2. Mass removed = M/4 (area ratio). I_removed = (M/4)(R/2)²/2 = MR²/32. I_remaining = MR²/2 - MR²/32 = (16/32 - 1/32)MR² = 15MR²/32. But need to consider parallel axis theorem for off-center hole. Correct answer is (13/32)MR²."
+    },
+    {
+      "q": "A constant torque of 100 Nm turns a wheel of moment of inertia 10 kg·m² about an axis through its center. The wheel starts from rest. Its angular velocity after 5 seconds is:",
+      "options": ["50 rad/s", "25 rad/s", "10 rad/s", "500 rad/s"],
+      "answer": 0,
+      "explanation": "α = τ/I = 100/10 = 10 rad/s². ω = ω₀ + αt = 0 + 10×5 = 50 rad/s.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle of mass m is tied to a string of length L and whirled in a horizontal circle. If the speed is doubled, the tension in the string becomes:",
+      "options": ["4 times", "2 times", "Same", "Half"],
+      "answer": 0,
+      "explanation": "Tension provides centripetal force: T = mv²/L. If v becomes 2v, T becomes 4T.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The moment of inertia of a solid sphere about a tangent is:",
+      "options": ["7/5 MR²", "2/5 MR²", "2/3 MR²", "5/2 MR²"],
+      "answer": 0,
+      "explanation": "Using parallel axis theorem: I_tangent = I_center + MR² = (2/5)MR² + MR² = (7/5)MR².",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A man standing on a rotating platform stretches his arms. This causes:",
+      "options": ["Angular velocity to decrease", "Angular velocity to increase", "Angular momentum to decrease", "Kinetic energy to increase"],
+      "answer": 0,
+      "explanation": "When arms are stretched, moment of inertia increases. By conservation of angular momentum (L = Iω constant), ω decreases.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin wire is bent into a circular loop of radius R. The moment of inertia about an axis through its center and perpendicular to its plane is:",
+      "options": ["MR²", "MR²/2", "2MR²", "MR²/4"],
+      "answer": 0,
+      "explanation": "For a thin circular loop (ring), moment of inertia about axis through center perpendicular to plane is MR².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A solid cylinder and a hollow cylinder have the same mass and radius. They are released from rest on an incline. Which has greater acceleration?",
+      "options": ["Solid cylinder", "Hollow cylinder", "Both have same", "Cannot be determined"],
+      "answer": 0,
+      "explanation": "Solid cylinder has smaller moment of inertia (I = MR²/2 vs I = MR² for hollow), so it has greater acceleration down the incline.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle moves in a circle of radius r with angular velocity ω. The linear velocity v is related to ω by:",
+      "options": ["v = rω", "v = r/ω", "v = ω/r", "v = r²ω"],
+      "answer": 0,
+      "explanation": "The fundamental relation between linear and angular velocity is v = rω.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The work done in rotating a body from angular position θ₁ to θ₂ under a constant torque τ is:",
+      "options": ["τ(θ₂ - θ₁)", "τ/(θ₂ - θ₁)", "τ²(θ₂ - θ₁)", "(θ₂ - θ₁)/τ"],
+      "answer": 0,
+      "explanation": "Work done by torque W = ∫τ dθ = τΔθ for constant torque.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle of mass m is projected with speed v at an angle θ with horizontal. The magnitude of angular momentum about the point of projection when it is at the highest point is:",
+      "options": ["mv³ sin²θ cosθ / (2g)", "mv³ sinθ cos²θ / g", "mv² sin²θ / g", "Zero"],
+      "answer": 0,
+      "explanation": "At highest point, velocity = v cosθ horizontally, height = (v² sin²θ)/(2g). Angular momentum = m(v cosθ) × (v² sin²θ)/(2g) = mv³ sin²θ cosθ/(2g)."
+    },
+    {
+      "q": "For a rolling body without slipping, the relationship between linear acceleration a and angular acceleration α is:",
+      "options": ["a = Rα", "a = α/R", "a = R²α", "a = α/R²"],
+      "answer": 0,
+      "explanation": "For rolling without slipping, v = Rω, so differentiating: a = Rα.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A disc of mass M and radius R is rotating with angular speed ω. A piece of mass m is gently attached to its rim. The new angular speed is:",
+      "options": ["Mω/(M+2m)", "(M+m)ω/M", "Mω/(M+m)", "ω"],
+      "answer": 0,
+      "explanation": "Conservation of angular momentum: (MR²/2)ω = (MR²/2 + mR²)ω' ⇒ ω' = (M/2)ω/(M/2 + m) = Mω/(M+2m).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The dimensions of angular momentum are:",
+      "options": ["[ML²T⁻¹]", "[MLT⁻¹]", "[ML²T⁻²]", "[MLT⁻²]"],
+      "answer": 0,
+      "explanation": "Angular momentum L = mvr has dimensions [M][LT⁻¹][L] = [ML²T⁻¹].",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A constant torque of 50 Nm is applied to a wheel for 10 seconds. The angular impulse imparted is:",
+      "options": ["500 Nms", "5 Nms", "50 Nms", "0.2 Nms"],
+      "answer": 0,
+      "explanation": "Angular impulse = torque × time = 50 × 10 = 500 Nms.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The moment of inertia of a rectangular plate of sides a and b about an axis perpendicular to the plate and passing through its center is:",
+      "options": ["M(a²+b²)/12", "M(a²+b²)/3", "M(a²+b²)", "Mab/12"],
+      "answer": 0,
+      "explanation": "For a rectangular plate, I = M(a²+b²)/12 about an axis perpendicular through center.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle moves in a circle of radius 2 m with constant speed 4 m/s. The magnitude of its centripetal acceleration is:",
+      "options": ["8 m/s²", "2 m/s²", "16 m/s²", "4 m/s²"],
+      "answer": 0,
+      "explanation": "a_c = v²/r = 4²/2 = 16/2 = 8 m/s².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A hoop and a disc have the same mass and radius. Their moments of inertia about an axis through their centers and perpendicular to their planes are in the ratio:",
+      "options": ["2:1", "1:2", "1:1", "4:1"],
+      "answer": 0,
+      "explanation": "I_hoop = MR², I_disc = MR²/2. Ratio = 2:1.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The angular velocity of a wheel increases from 10 rad/s to 30 rad/s in 4 seconds. The number of revolutions made during this time is:",
+      "options": ["40/π", "80/π", "20/π", "10/π"],
+      "answer": 0,
+      "explanation": "θ = ω_avg × t = ((10+30)/2) × 4 = 20 × 4 = 80 rad. Revolutions = 80/(2π) = 40/π.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle of mass m is moving in a circle of radius r with angular momentum L. Its kinetic energy is:",
+      "options": ["L²/(2mr²)", "L²/(mr²)", "2L²/(mr²)", "L²r²/(2m)"],
+      "answer": 0,
+      "explanation": "For circular motion, L = mvr ⇒ v = L/(mr). KE = ½ mv² = ½ m(L²/(m²r²)) = L²/(2mr²).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A uniform rod of length L and mass M is free to rotate about one end. It is released from rest from horizontal position. Its angular speed when it becomes vertical is:",
+      "options": ["√(3g/L)", "√(g/L)", "√(2g/L)", "√(g/2L)"],
+      "answer": 0,
+      "explanation": "Using energy conservation: MgL/2 = ½ Iω² = ½ (ML²/3)ω² ⇒ ω² = 3g/L ⇒ ω = √(3g/L)."
+    },
+    {
+      "q": "A wheel of moment of inertia 2 kg·m² is rotating at 60 rpm. The torque required to stop it in 10 seconds is:",
+      "options": ["2π/5 Nm", "π/5 Nm", "4π/5 Nm", "π Nm"],
+      "answer": 0,
+      "explanation": "ω₀ = 60 rpm = 60×(2π/60) = 2π rad/s. α = (0-ω₀)/t = -2π/10 = -π/5 rad/s². τ = Iα = 2×(-π/5) = -2π/5 Nm (magnitude = 2π/5 Nm).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle moves with constant angular acceleration in a circular path. The angle through which it rotates in time t is given by:",
+      "options": ["θ = ω₀t + ½ αt²", "θ = ω₀ + αt", "θ = ω₀t", "θ = ½ αt²"],
+      "answer": 0,
+      "explanation": "This is the rotational analogue of linear motion: θ = ω₀t + ½ αt².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A solid sphere is rotating about a diameter with angular momentum L. If its radius is halved but mass remains same, the new angular momentum is:",
+      "options": ["L/4", "L/2", "L", "2L"],
+      "answer": 0,
+      "explanation": "I = (2/5)MR². If R becomes R/2, I becomes I/4. Since L = Iω and ω changes to maintain L, but here ω not specified. Actually if rotating freely, L conserved, so L' = L. But if ω constant, then L' = L/4. Assuming no external torque, L conserved.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The ratio of rotational kinetic energy to total kinetic energy for a rolling solid sphere is:",
+      "options": ["2/7", "5/7", "2/5", "3/5"],
+      "answer": 0,
+      "explanation": "For solid sphere: Rotational KE = (1/2)(2/5 MR²)ω² = (1/5)Mv². Translational KE = (1/2)Mv². Total KE = (7/10)Mv². Ratio = (1/5)/(7/10) = 2/7.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle is moving in a circle. If the radius is doubled and speed is halved, the centripetal acceleration becomes:",
+      "options": ["1/8 of original", "1/2 of original", "2 times", "8 times"],
+      "answer": 0,
+      "explanation": "a_c = v²/r. New a_c = (v/2)²/(2r) = (v²/4)/(2r) = v²/(8r) = (1/8) original.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin uniform rod of length L is hinged at one end. It is released from rest from horizontal position. The angular acceleration just after release is:",
+      "options": ["3g/(2L)", "g/L", "2g/(3L)", "3g/L"],
+      "answer": 0,
+      "explanation": "τ = mg(L/2), I = mL²/3. α = τ/I = (mgL/2)/(mL²/3) = (3g)/(2L)."
+    },
+    {
+      "q": "A particle moves in xy-plane with velocity v = 2i + 3j m/s. Its angular momentum about origin when its position vector is r = 4i + 6j m is:",
+      "options": ["Zero", "24k kg·m²/s", "-24k kg·m²/s", "10k kg·m²/s"],
+      "answer": 0,
+      "explanation": "L = r × p = m(r × v). r × v = (4i+6j)×(2i+3j) = 0 (since vectors are parallel). So L = 0.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A circular disc of radius R is rotating about its axis with angular speed ω. The linear speed of a point at distance R/2 from center is:",
+      "options": ["ωR/2", "ωR", "2ωR", "ωR/4"],
+      "answer": 0,
+      "explanation": "v = rω = (R/2)ω = ωR/2.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A solid cylinder rolls up an incline without slipping. As it goes up:",
+      "options": ["Both translational and rotational KE decrease", "Translational KE decreases but rotational KE increases", "Translational KE increases but rotational KE decreases", "Both remain constant"],
+      "answer": 0,
+      "explanation": "As cylinder goes up, potential energy increases at expense of both translational and rotational kinetic energy.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The moment of inertia of a ring about an axis passing through its center and perpendicular to its plane is I. About a diameter, it is:",
+      "options": ["I/2", "I", "2I", "I/4"],
+      "answer": 0,
+      "explanation": "For a ring, I_perpendicular = MR². I_diameter = MR²/2 = I/2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle moves in a circle of radius 0.5 m with frequency 2 Hz. Its angular speed is:",
+      "options": ["4π rad/s", "2π rad/s", "π rad/s", "8π rad/s"],
+      "answer": 0,
+      "explanation": "ω = 2πf = 2π×2 = 4π rad/s.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A disc of mass M and radius R has a concentric hole of radius R/2. Its moment of inertia about perpendicular axis through center is:",
+      "options": ["(15/32)MR²", "(3/8)MR²", "(5/16)MR²", "(13/32)MR²"],
+      "answer": 0,
+      "explanation": "Mass of removed part = M/4. I_complete = MR²/2. I_removed = (M/4)(R/2)²/2 = MR²/32. I_remaining = MR²/2 - MR²/32 = 16MR²/32 - MR²/32 = 15MR²/32."
+    }
+  ]
+}

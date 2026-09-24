@@ -1,0 +1,30 @@
+/* Site bar + footer injected into lesson pages (posts/*.html).
+   Lessons ship their own CSS (often `* { margin:0; padding:0 }`, `body { … }`),
+   so every rule here uses a .pd- class and sets its properties explicitly. */
+
+html { padding-top: 52px !important; scroll-padding-top: 64px; }
+
+.pd-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 2147483000; height: 52px;
+  display: flex; align-items: center; gap: 14px; padding: 0 18px; margin: 0;
+  background: linear-gradient(135deg, #1a237e, #3949ab); box-shadow: 0 2px 10px rgb(0 0 0 / .2);
+  font: 600 15px/1 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; box-sizing: border-box; }
+.pd-bar a { color: #e3e7ff; text-decoration: none; padding: 7px 11px; margin: 0; border-radius: 999px; white-space: nowrap; font: inherit; }
+.pd-bar a:hover { background: rgb(255 255 255 / .14); color: #fff; }
+.pd-bar .pd-brand { color: #fff; font-weight: 800; display: flex; align-items: center; gap: 8px; padding-left: 0; }
+.pd-bar .pd-brand:hover { background: none; }
+.pd-bar .pd-brand img { width: 26px; height: 26px; display: block; margin: 0; padding: 0; border: 0; }
+.pd-bar .pd-crumb { color: #c5cbef; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.pd-bar .pd-spacer { flex: 1; }
+
+.pd-footer { margin: 40px 0 0; padding: 26px 20px; background: #1a237e; color: #c5cbef; box-sizing: border-box;
+  font: 400 14px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; text-align: center; clear: both; }
+.pd-footer .pd-more { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 16px; padding: 0; }
+.pd-footer .pd-more span { color: #fff; font-weight: 700; margin: 0 6px 0 0; padding: 7px 0; }
+.pd-footer a { color: #fff; text-decoration: none; font: inherit; }
+.pd-footer .pd-more a { background: rgb(255 255 255 / .1); padding: 7px 14px; border-radius: 999px; margin: 0; }
+.pd-footer .pd-more a:hover { background: rgb(255 255 255 / .2); }
+
+@media (max-width: 640px) {
+  .pd-bar .pd-crumb, .pd-bar .pd-hide-sm { display: none; }
+  .pd-bar .pd-brand span { display: none; }
+}

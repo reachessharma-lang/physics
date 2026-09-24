@@ -1,0 +1,359 @@
+{
+  "title": "Electrons and Photons — MCQs",
+  "grade": "XII",
+  "chapters": [16],
+  "date": "2026-01-11",
+  "description": "NEB Grade XII Physics - Interactive MCQ Presentation",
+  "questions": [
+    {
+      "q": "Who performed the oil drop experiment?",
+      "options": ["Robert Millikan", "J.J. Thomson", "Ernest Rutherford", "Niels Bohr"],
+      "answer": 0,
+      "explanation": "Robert Millikan conducted the famous oil drop experiment from 1906-1913. This experiment measured the charge of an individual electron and provided evidence for the quantization of electric charge.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What was the primary objective of Millikan's oil drop experiment?",
+      "options": ["To measure the charge of an electron and demonstrate charge quantization", "To discover the existence of electrons", "To measure the mass of oil drops", "To study the viscosity of air"],
+      "answer": 0,
+      "explanation": "The main goal was to determine the charge of a single electron by observing the motion of charged oil drops between parallel plates. This proved that electric charge is quantized in multiples of the electron charge (e).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In Millikan's experiment, what condition exists when the oil drop is stationary?",
+      "options": ["Electric force equals gravitational force (qE = mg)", "Electric force is greater than gravitational force", "Gravitational force is greater than electric force", "No forces act on the drop"],
+      "answer": 0,
+      "explanation": "When the electric force balances the gravitational force, the oil drop remains stationary. Mathematically: qE = mg, where q is charge, E is electric field, m is mass, and g is gravitational acceleration.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "How does Millikan's experiment suggest quantization of charge?",
+      "options": ["Charge on drops are always integer multiples of a fundamental unit (electron charge)", "Charge on drops varies continuously", "Charge is uniformly distributed", "Charge increases linearly with mass"],
+      "answer": 0,
+      "explanation": "Millikan observed that the charge on different oil drops was always a whole number multiple of a smallest charge unit (~1.6 × 10⁻¹⁹ C). This proved that charge is quantized: Q = ne, where n is an integer and e is the elementary charge.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What was used to create the electric field in Millikan's experiment?",
+      "options": ["Parallel metal plates with applied voltage", "A solenoid", "A bar magnet", "A Van de Graaff generator"],
+      "answer": 0,
+      "explanation": "A uniform electric field was created between two parallel horizontal plates. By adjusting the voltage, the electric field strength could be controlled to balance the weight of oil drops.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In Millikan's experiment, an oil drop of mass 2.0 × 10⁻¹⁵ kg is suspended between plates. If E = 2 × 10⁵ N/C, what is the charge on the drop? (g = 10 m/s²)",
+      "options": ["1.0 × 10⁻¹⁹ C", "2.0 × 10⁻¹⁹ C", "1.5 × 10⁻¹⁹ C", "2.5 × 10⁻¹⁹ C"],
+      "answer": 0,
+      "explanation": "At equilibrium: qE = mg. So q = mg/E = (2.0 × 10⁻¹⁵ × 10)/(2 × 10⁵) = (2.0 × 10⁻¹⁴)/(2 × 10⁵) = 1.0 × 10⁻¹⁹ C, which equals one elementary charge (1e).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What does the observation that all charges are multiples of 1.6 × 10⁻¹⁹ C prove?",
+      "options": ["Charge is quantized and this value is the elementary charge", "All masses are related to this value", "All particles have the same charge", "Electric field is always constant"],
+      "answer": 0,
+      "explanation": "This observation proved that electric charge cannot take any arbitrary value but exists only in multiples of a fundamental unit called the elementary charge (e = 1.6 × 10⁻¹⁹ C), providing direct evidence for charge quantization.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If Millikan measured charges of -3.2 × 10⁻¹⁹ C, -6.4 × 10⁻¹⁹ C, and -8.0 × 10⁻¹⁹ C on different drops, what is the elementary charge?",
+      "options": ["1.6 × 10⁻¹⁹ C", "3.2 × 10⁻¹⁹ C", "2.0 × 10⁻¹⁹ C", "4.0 × 10⁻¹⁹ C"],
+      "answer": 0,
+      "explanation": "The charges are: -2e, -4e, and -5e respectively. The greatest common divisor is e = 1.6 × 10⁻¹⁹ C. This represents the elementary charge carried by a single electron.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "How does an electron move when placed in a uniform electric field?",
+      "options": ["It accelerates in the direction opposite to the field", "It accelerates in the direction of the field", "It moves with constant velocity", "It moves in a circular path"],
+      "answer": 0,
+      "explanation": "Since electrons are negatively charged, the electric force on them is F = -eE, which is opposite to the field direction. The electron accelerates opposite to the electric field with acceleration a = eE/m.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the force on an electron in an electric field E?",
+      "options": ["F = eE (opposite to field direction)", "F = eE (same as field direction)", "F = E/e", "F = E²/e"],
+      "answer": 0,
+      "explanation": "The force on an electron is F = qE where q = -e (negative charge). Therefore F = -eE, meaning the force is opposite to the electric field direction. The magnitude is F = eE.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Derive the acceleration of an electron in a uniform electric field.",
+      "options": ["a = eE/m", "a = mE/e", "a = E/em", "a = e²E/m"],
+      "answer": 0,
+      "explanation": "Using Newton's second law: F = ma. Since F = eE (magnitude), we get eE = ma, so a = eE/m. This shows acceleration is proportional to field strength and inversely proportional to electron mass.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An electron enters a uniform electric field perpendicularly. What is its trajectory?",
+      "options": ["Parabolic path (similar to projectile motion)", "Circular path", "Straight line along the field", "Elliptical path"],
+      "answer": 0,
+      "explanation": "When an electron enters perpendicular to a uniform electric field, it experiences constant acceleration in the field direction while maintaining constant velocity perpendicular to it, resulting in a parabolic trajectory similar to projectile motion.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An electron is accelerated from rest through a potential difference V. What is its final velocity?",
+      "options": ["v = √(2eV/m)", "v = 2eV/m", "v = eV/m", "v = √(eV/m)"],
+      "answer": 0,
+      "explanation": "Using energy conservation: Work done = Change in KE. eV = ½mv². Solving for v: v = √(2eV/m). This is the velocity gained by an electron accelerated through potential V.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What force acts on an electron moving in a magnetic field?",
+      "options": ["Lorentz force: F = evB sinθ (perpendicular to both v and B)", "Gravitational force", "Electrostatic force", "No force acts"],
+      "answer": 0,
+      "explanation": "The magnetic force on a moving charge is F = qvB sinθ. For an electron (q = e) moving perpendicular to field (θ = 90°), F = evB. This force is always perpendicular to the velocity, so it changes direction but not speed.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When an electron moves perpendicular to a uniform magnetic field, what is its path?",
+      "options": ["Circular path with radius r = mv/(eB)", "Straight line", "Parabolic path", "Elliptical path"],
+      "answer": 0,
+      "explanation": "The magnetic force provides centripetal acceleration. evB = mv²/r, so r = mv/(eB). The electron moves in a circle with this radius. The period is T = 2πm/(eB), independent of velocity.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Derive the radius of circular motion of an electron in a magnetic field.",
+      "options": ["r = mv/(eB)", "r = eB/mv", "r = eB/(m v²)", "r = m/(eBv)"],
+      "answer": 0,
+      "explanation": "For circular motion in a magnetic field, magnetic force = centripetal force: evB = mv²/r. Solving for r: r = mv/(eB). This radius depends on electron momentum and inversely on magnetic field strength.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the period of circular motion of an electron in a magnetic field?",
+      "options": ["T = 2πm/(eB)", "T = 2πeB/m", "T = eB/(2πm)", "T = πm/(eB)"],
+      "answer": 0,
+      "explanation": "The period T = 2πr/v = 2π(mv/(eB))/v = 2πm/(eB). Remarkably, this is independent of velocity! This is called the cyclotron frequency and is fundamental to cyclotron operation.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An electron enters a magnetic field of 0.5 T perpendicularly with velocity 2 × 10⁶ m/s. What is the radius of its circular path? (m = 9.1 × 10⁻³¹ kg, e = 1.6 × 10⁻¹⁹ C)",
+      "options": ["2.27 × 10⁻⁵ m", "5.7 × 10⁻⁵ m", "1.14 × 10⁻⁵ m", "4.55 × 10⁻⁵ m"],
+      "answer": 0,
+      "explanation": "r = mv/(eB) = (9.1 × 10⁻³¹ × 2 × 10⁶)/(1.6 × 10⁻¹⁹ × 0.5) = (1.82 × 10⁻²⁴)/(8 × 10⁻²⁰) = 2.27 × 10⁻⁵ m = 22.7 μm",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a crossed electric and magnetic field, when does an electron move in a straight line?",
+      "options": ["When electric force equals magnetic force: eE = evB", "When electric force is greater", "When magnetic force is greater", "Never"],
+      "answer": 0,
+      "explanation": "For straight-line motion, the net force must be zero. eE = evB, so v = E/B. This condition is used in velocity selectors in instruments like mass spectrometers to select particles with specific velocities.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Who discovered the electron and in what year?",
+      "options": ["J.J. Thomson in 1897", "Robert Millikan in 1906", "Ernest Rutherford in 1909", "Niels Bohr in 1913"],
+      "answer": 0,
+      "explanation": "J.J. Thomson discovered the electron in 1897 through his cathode ray tube experiments. He demonstrated that cathode rays consisted of negatively charged particles much smaller than atoms.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is a cathode ray?",
+      "options": ["A stream of electrons emitted from the cathode", "Light rays from the anode", "Protons emitted from the cathode", "Electromagnetic radiation"],
+      "answer": 0,
+      "explanation": "Cathode rays are streams of electrons produced when a high voltage is applied between a cathode and anode in a vacuum tube. These rays travel from the cathode (negative electrode) to the anode (positive electrode).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In Thomson's cathode ray tube, what evidence showed that cathode rays are negatively charged?",
+      "options": ["They were deflected toward the positive electrode", "They were deflected toward the negative electrode", "They moved in straight lines", "They produced heat"],
+      "answer": 0,
+      "explanation": "When an electric field was applied, cathode rays deflected toward the positive electrode (anode), proving they carried negative charge. This was the key evidence distinguishing them from light.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What was the role of the magnetic field in Thomson's experiment?",
+      "options": ["To deflect cathode rays perpendicular to the electric field deflection", "To accelerate the cathode rays", "To stop the cathode rays", "To measure the tube length"],
+      "answer": 0,
+      "explanation": "Thomson used both electric and magnetic fields. The magnetic field deflected rays in a direction perpendicular to the electric deflection. By balancing both fields, he could determine the velocity of electrons.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "How did Thomson calculate the mass-to-charge ratio (m/e) of the electron?",
+      "options": ["By measuring deflections in electric and magnetic fields and using the equations of motion", "By measuring the velocity only", "By measuring the charge only", "By measuring the heat produced"],
+      "answer": 0,
+      "explanation": "Thomson set up equations balancing the electric and magnetic forces. By measuring the deflections in each field separately, he could calculate both the velocity (v = E/B) and the ratio m/e using the deflection equations.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Thomson's method, when the electric and magnetic fields balance, what is true about the electron?",
+      "options": ["Electric force equals magnetic force: eE = evB, so v = E/B", "The electron is at rest", "Only electric force acts", "Velocity becomes zero"],
+      "answer": 0,
+      "explanation": "When balanced, the net force is zero, and the electron travels in a straight line. eE = evB gives v = E/B. This undeflected beam allows calculation of electron velocity without knowing e or m separately.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What was the significance of Thomson's determination of m/e ratio?",
+      "options": ["It showed electrons were fundamental particles with properties different from atoms", "It proved atoms were indivisible", "It measured the size of atoms", "It determined the speed of light"],
+      "answer": 0,
+      "explanation": "Thomson's m/e ratio (approximately 1.76 × 10¹¹ C/kg) showed that electrons were much lighter than atoms and had a much larger charge-to-mass ratio. This led to the conclusion that electrons were fundamental particles.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the magnitude of the charge on an electron?",
+      "options": ["1.6 × 10⁻¹⁹ C", "3.2 × 10⁻¹⁹ C", "1.6 × 10⁻²⁷ kg", "9.1 × 10⁻³¹ kg"],
+      "answer": 0,
+      "explanation": "The elementary charge e = 1.6 × 10⁻¹⁹ C. This is the charge magnitude on an electron. All charges in nature are whole number multiples of this fundamental unit.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the rest mass of an electron?",
+      "options": ["9.1 × 10⁻³¹ kg", "1.67 × 10⁻²⁷ kg", "1.6 × 10⁻¹⁹ C", "6.63 × 10⁻³⁴ J·s"],
+      "answer": 0,
+      "explanation": "The electron rest mass m = 9.1 × 10⁻³¹ kg or about 0.511 MeV/c². This is approximately 1/1836 of the proton mass, making the electron the lightest known fundamental particle.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What is the charge-to-mass ratio (e/m) of an electron?",
+      "options": ["1.76 × 10¹¹ C/kg", "5.7 × 10¹⁰ C/kg", "9.1 × 10⁻³¹ C/kg", "1.6 × 10⁻¹⁹ C/kg"],
+      "answer": 0,
+      "explanation": "e/m = 1.6 × 10⁻¹⁹ / 9.1 × 10⁻³¹ = 1.76 × 10¹¹ C/kg. This ratio was one of the first fundamental constants measured and was crucial in early atomic physics.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a cathode ray tube (CRT), what accelerates electrons from cathode to anode?",
+      "options": ["High accelerating voltage between cathode and anode", "Magnetic field", "Gravitational field", "Friction"],
+      "answer": 0,
+      "explanation": "A high voltage (typically kV) is applied between the cathode and anode, creating a strong electric field that accelerates electrons. This gives them kinetic energy proportional to the voltage: KE = eV.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "How do the deflection plates in a CRT function?",
+      "options": ["They apply electric fields perpendicular to the electron beam to deflect it", "They accelerate electrons along the tube axis", "They measure electron velocity", "They produce X-rays"],
+      "answer": 0,
+      "explanation": "Deflection plates create electric fields perpendicular to the electron beam. By varying the voltage on these plates, the beam can be scanned across the screen, which is the principle of CRT displays.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the principle of a mass spectrometer?",
+      "options": ["Using electric and magnetic fields to separate particles by their mass-to-charge ratio", "Measuring only velocity", "Measuring only charge", "Measuring only mass"],
+      "answer": 0,
+      "explanation": "A mass spectrometer uses a velocity selector (crossed fields) followed by a magnetic field region where particles with different m/q ratios follow different circular paths, allowing separation and analysis of isotopes and particles.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What was Thomson's model of the atom?",
+      "options": ["A sphere of positive charge with electrons embedded in it (plum pudding model)", "A nucleus with orbiting electrons", "All empty space", "Only electrons floating freely"],
+      "answer": 0,
+      "explanation": "Thomson proposed that atoms were spheres of positive charge with electrons distributed throughout, like plums in a pudding. This model was later replaced by Rutherford's nuclear model based on alpha particle scattering experiments.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "How are electron beams generated in cathode ray tubes?",
+      "options": ["By thermionic emission from a heated cathode", "By photoelectric effect", "By electromagnetic induction", "By nuclear decay"],
+      "answer": 0,
+      "explanation": "Thermionic emission occurs when a heated cathode (filament) releases electrons due to thermal energy overcoming the work function. These electrons are then accelerated and focused to form a beam.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Why does an electron moving in a magnetic field not gain or lose energy?",
+      "options": ["Because magnetic force is always perpendicular to velocity (does no work)", "Because electrons don't interact with magnetic fields", "Because kinetic energy is conserved", "Because electrons move at constant speed"],
+      "answer": 0,
+      "explanation": "The magnetic force F = q(v × B) is always perpendicular to the velocity vector. Since Work = F·d and F ⊥ d, the work done is zero, so kinetic energy (and speed) remain constant.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What was the key experimental setup that allowed Thomson to determine electron velocity?",
+      "options": ["Crossed electric and magnetic fields where undeflected rays pass when eE = evB", "Only electric field", "Only magnetic field", "Gravitational field"],
+      "answer": 0,
+      "explanation": "By using crossed (perpendicular) electric and magnetic fields, Thomson created a velocity selector. Only electrons with v = E/B pass undeflected. This allowed precise velocity measurement without knowing e or m individually.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An electron travels horizontally between parallel plates with electric field E pointing downward. What is its trajectory?",
+      "options": ["Parabolic path curving upward (opposite to field)", "Parabolic path curving downward", "Straight horizontal path", "Circular path"],
+      "answer": 0,
+      "explanation": "The electron (negative charge) experiences an upward force opposite to the downward field. It maintains constant horizontal velocity while accelerating upward, creating a parabolic trajectory like projectile motion.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If an electron moves at an angle θ to a magnetic field, what is the component of force acting on it?",
+      "options": ["F = evB sin(θ)", "F = evB cos(θ)", "F = evB", "F = 0"],
+      "answer": 0,
+      "explanation": "The magnetic force is F = q(v × B), giving magnitude F = evB sin(θ). Only the velocity component perpendicular to B (v sin θ) contributes. The parallel component (v cos θ) is unaffected.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Why does Millikan's experiment specifically use oil drops rather than water droplets?",
+      "options": ["Oil drops evaporate slowly, allowing long observation periods", "Oil is conductive", "Water is too heavy", "Oil drops move faster"],
+      "answer": 0,
+      "explanation": "Oil has very low evaporation rate, allowing observations to last hours without significant change in drop mass. Water evaporates quickly, making measurements unreliable.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What is the approximate size of an electron according to classical physics?",
+      "options": ["About 2. 8 × 10⁻¹⁵ m (classical electron radius)", "About 1 × 10⁻¹⁰ m", "About 1 × 10⁻¹⁴ m", "Electrons have no size"],
+      "answer": 0,
+      "explanation": "The classical electron radius (re = 2.8 × 10⁻¹⁵ m) is derived from equating electron's rest mass energy to electrostatic energy. However, quantum mechanics shows electrons don't have a well-defined size.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What equation was used by Thomson to find m/e from deflection measurements?",
+      "options": ["From electric deflection: y = eEL²/(2mv₀²) where L is plate length and y is deflection", "y = mv₀²/(eE)", "y = E/(2m)", "y = eE/(2m)"],
+      "answer": 0,
+      "explanation": "For an electron entering horizontally between parallel plates, the vertical deflection is y = eEL²/(2mv₀²). By measuring y, E, L, and v₀ (from the balanced field condition), m/e can be calculated.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "What is the cyclotron frequency of an electron in a magnetic field?",
+      "options": ["f = eB/(2πm)", "f = 2πmB/e", "f = eB/m", "f = m/(eB)"],
+      "answer": 0,
+      "explanation": "The cyclotron frequency (or Larmor frequency) is f = eB/(2πm). This is the frequency at which electrons orbit in a magnetic field, independent of their speed or radius of orbit.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Millikan's experiment, if a drop has charge -3e, what relationship exists between electric force and weight?",
+      "options": ["Electric force can be exactly 3 times the weight at suitable field strength", "Electric force is always less than weight", "Electric force is always greater than weight", "No such relationship exists"],
+      "answer": 0,
+      "explanation": "For a drop with charge q = -3e in upward field E: F = 3eE upward. Weight = mg downward. At equilibrium: 3eE = mg. By adjusting E, any relationship can be achieved, allowing measurement of integer multiples of e.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An electron is deflected through 1 cm while traveling 5 cm horizontally between parallel plates. If plate separation is 2 cm and voltage is 1000 V, what is the electron's initial velocity?",
+      "options": ["Approximately 3.3 × 10⁶ m/s", "1.2 × 10⁶ m/s", "5 × 10⁶ m/s", "2 × 10⁶ m/s"],
+      "answer": 0,
+      "explanation": "Using y = eEL²/(2mv₀²) where y = 0. 01 m, L = 0.05 m, E = V/d = 1000/0.02 = 5×10⁴ V/m. Solving: v₀ = √(eEL²/(2my)) = √(1.6×10⁻¹⁹ × 5×10⁴ × (0.05)²/(2 × 9.1×10⁻³¹ × 0.01)) ≈ 3.3 × 10⁶ m/s",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What historical significance did the discovery of the electron have?",
+      "options": ["It proved atoms are divisible into smaller constituents, revolutionizing atomic theory", "It proved atoms are indivisible", "It explained nuclear fusion", "It determined the speed of light"],
+      "answer": 0,
+      "explanation": "The discovery of the electron was revolutionary because it showed atoms contain smaller, fundamental particles. This led to the development of atomic models and quantum mechanics, fundamentally changing physics.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In crossed fields with E perpendicular to B, what happens to an electron with v = E/B?",
+      "options": ["It travels in a straight line (velocity selector principle)", "It spirals outward", "It stops", "It accelerates"],
+      "answer": 0,
+      "explanation": "When v = E/B, the electric and magnetic forces balance exactly: eE = evB. The net force is zero, so the electron travels undeflected in a straight line. This is the principle of a velocity selector.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What observation led Thomson to conclude cathode rays were particles and not light?",
+      "options": ["They were deflected by both electric and magnetic fields", "They traveled in straight lines", "They produced phosphorescence", "They were invisible"],
+      "answer": 0,
+      "explanation": "Light is not deflected by electric or magnetic fields. Thomson showed that cathode rays were deflected in both fields, with the deflections consistent with negatively charged particles, proving they were material particles, not light.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "What determines the charge-to-mass ratio of an electron?",
+      "options": ["The magnitude of charge e and rest mass m are fundamental constants", "The electron's velocity", "The electric field strength", "The material composing the electron"],
+      "answer": 0,
+      "explanation": "e and m are intrinsic properties of electrons—fundamental constants of nature. The ratio e/m = 1.76 × 10¹¹ C/kg is characteristic of electrons and doesn't change under normal circumstances.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Why is the cyclotron frequency independent of an electron's speed?",
+      "options": ["T = 2πm/(eB) depends only on m, e, and B; not on v", "Electrons always move at the same speed", "Magnetic field only acts on slow electrons", "The radius doesn't change with speed"],
+      "answer": 0,
+      "explanation": "The period T = 2πm/(eB) is derived from T = 2πr/v where r = mv/(eB). The v cancels out, giving T independent of speed. This remarkable property is used in cyclotrons.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "How did the work of Millikan and Thomson complement each other?",
+      "options": ["Thomson measured m/e ratio; Millikan measured e separately, allowing calculation of m", "They performed identical experiments", "Millikan disproved Thomson's results", "They were independent, unrelated discoveries"],
+      "answer": 0,
+      "explanation": "Thomson (1897) found e/m ≈ 1.76 × 10¹¹ C/kg. Millikan (1906-1913) determined e ≈ 1.6 × 10⁻¹⁹ C through the oil drop experiment. This allowed the electron mass to be calculated: m = e/(e/m) = 9.1 × 10⁻³¹ kg.",
+      "difficulty": "hard"
+    }
+  ]
+}

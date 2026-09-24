@@ -1,0 +1,429 @@
+{
+  "title": "Magnetic Field — 60 MCQs",
+  "grade": "XII",
+  "chapters": [13],
+  "date": "2026-01-07",
+  "description": "Topics: magnetic field lines & flux, Oersted, forces on charges and current-carrying conductors, torque on coils, moving-coil galvanometer, Hall effect & probes, Biot–Savart, Ampère's law, and force between conductors (definition of ampere).",
+  "questions": [
+    {
+      "q": "Magnetic field lines around a long straight current-carrying conductor (viewed in plane) are:",
+      "options": ["Concentric circles centered on the conductor", "Radial straight lines outward", "Helical lines parallel to conductor", "Random loops"],
+      "answer": 0,
+      "explanation": "Biot–Savart and Ampère's law show B encircles the conductor; lines are concentric circles around wire.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Direction of magnetic field around a straight conductor is given by:",
+      "options": ["Right-hand rule: thumb in current direction, fingers show B", "Left-hand rule with thumb opposite current", "Fleming's right-hand rule", "Use compass pointing away from wire"],
+      "answer": 0,
+      "explanation": "Right-hand thumb rule gives circular B direction around conductor.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnetic flux Φ through an area is defined as:",
+      "options": ["∫ B · dA (weber, Wb)", "B × A only without angle", "Scalar product of E and A", "Rate of change of charge"],
+      "answer": 0,
+      "explanation": "Magnetic flux is surface integral of magnetic flux density (B) over area; SI unit Weber (Wb).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Sketchable qualitative field lines inside a long ideal solenoid are:",
+      "options": ["Uniform nearly parallel lines inside and nearly zero outside", "Radial outward inside", "Concentric rings inside", "Chaotic lines"],
+      "answer": 0,
+      "explanation": "Long solenoid produces nearly uniform axial B inside and weak external field—field lines are parallel inside.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Oersted's experiment demonstrated that:",
+      "options": ["Electric current produces a magnetic effect (deflects compass needle)", "Magnetic field produces current", "Resistance produces magnetism", "Heat produces magnetism"],
+      "answer": 0,
+      "explanation": "Oersted observed current in wire causes nearby compass needle deflection—current produces magnetic field.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Limitation of Oersted's original experiment is that it:",
+      "options": ["Did not quantify field strength or direction fully and used qualitative compass deflection", "Proved magnetic monopoles", "Was only valid for superconductors", "Worked only in vacuum"],
+      "answer": 0,
+      "explanation": "Oersted's work was qualitative demonstration; later laws (Biot–Savart) gave quantitative B expressions.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Magnetic flux density B has SI unit:",
+      "options": ["Tesla (T) = Wb/m²", "Weber (Wb)", "Ampere (A)", "Henry (H)"],
+      "answer": 0,
+      "explanation": "B (magnetic flux density) unit is Tesla; 1 T = 1 Wb/m².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnetic flux through a closed surface is:",
+      "options": ["Always zero (Gauss's law for magnetism)", "Proportional to enclosed current", "Equal to net charge", "Undefined"],
+      "answer": 0,
+      "explanation": "Magnetic monopoles not observed; net flux through closed surface is zero (∇·B=0).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Sketch of magnetic field lines around a bar magnet shows lines emerging from:",
+      "options": ["North pole and entering at south pole outside the magnet", "Center only", "Uniformly all directions", "No preferred direction"],
+      "answer": 0,
+      "explanation": "Field lines go from north to south outside the magnet and continue through inside from south to north.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnetic flux linkage for a coil of N turns is defined as:",
+      "options": ["N times magnetic flux through one turn (NΦ)", "Flux divided by N", "Flux squared", "Magnetic field times N squared"],
+      "answer": 0,
+      "explanation": "Flux linkage = NΦ; appears in Faraday's law for induced emf.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Force on a charge q moving with velocity v in magnetic field B is given by:",
+      "options": ["F = q (v × B)", "F = q (E + v × B) only for electric field", "F = q v B (scalar always)", "F = q E"],
+      "answer": 0,
+      "explanation": "Lorentz magnetic part: magnetic force is q times cross product, perpendicular to v and B; magnitude qvB sinθ.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnitude of magnetic force on moving charge is:",
+      "options": ["q v B sin θ", "q v B cos θ", "q E only", "B v / q"],
+      "answer": 0,
+      "explanation": "Cross product magnitude yields q v B sin of angle between v and B.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A charged particle moves parallel to a uniform magnetic field. The magnetic force on it is:",
+      "options": ["Zero (no component perpendicular to field)", "Maximum", "Depends on charge sign only", "Infinity"],
+      "answer": 0,
+      "explanation": "If v is parallel (θ=0), sinθ=0 so magnetic force is zero; motion unchanged by B.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Force on a straight conductor of length L carrying current I in uniform B (angle θ between L and B) is:",
+      "options": ["F = I L B sin θ", "F = I L B cos θ", "F = q v B", "F proportional to L²"],
+      "answer": 0,
+      "explanation": "Conductor force is vector sum of forces on moving charges; magnitude I L B sinθ with L vector direction of current.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Direction of force on current-carrying conductor in magnetic field is given by:",
+      "options": ["Fleming's left-hand rule (for motors)", "Right-hand thumb rule used for B direction only", "Lorentz scalar rule", "Faraday's rule"],
+      "answer": 0,
+      "explanation": "Fleming's left-hand rule gives direction of force: thumb-force, forefinger-field, middle-current.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If a conductor is perpendicular to a uniform magnetic field and current reverses direction, force on the conductor:",
+      "options": ["Reverses direction", "Remains same", "Doubles", "Becomes zero"],
+      "answer": 0,
+      "explanation": "Force ∝ I; reversing current reverses force direction (cross product sign flips).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A charged particle moving perpendicular to a uniform B-field undergoes:",
+      "options": ["Uniform circular motion", "Uniform acceleration in straight line", "No motion change", "Spiral outward to infinity"],
+      "answer": 0,
+      "explanation": "Magnetic force perpendicular to velocity provides centripetal force leading to circular motion radius r = mv/(qB).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Radius of circular path of charge q, mass m, speed v in B is:",
+      "options": ["r = m v / (q B)", "r = q B / (m v)", "r = m / (q B v)", "r = v/(m q B)"],
+      "answer": 0,
+      "explanation": "Set q v B = m v²/r → r = m v/(q B).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Cyclotron frequency (angular) for charge q in B is ω = qB/m. This frequency is independent of:",
+      "options": ["Speed of the particle (non-relativistic)", "Magnetic field magnitude", "Charge magnitude", "Mass"],
+      "answer": 0,
+      "explanation": "ω = qB/m doesn't depend on velocity in non-relativistic regime; period independent of energy.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Work done by magnetic force on a moving charge over displacement is:",
+      "options": ["Zero (force always perpendicular to velocity)", "Positive", "Negative", "Depends on direction"],
+      "answer": 0,
+      "explanation": "Magnetic force is perpendicular to instantaneous velocity, so does no work; kinetic energy unchanged.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Torque on a rectangular coil (area A) with N turns carrying current I in uniform B (plane makes angle θ with B) is:",
+      "options": ["τ = N I A B sin θ", "τ = N I A B cos θ", "τ = I B / A", "τ = N I A / B"],
+      "answer": 0,
+      "explanation": "Magnetic moment μ = N I A; torque τ = μ × B = N I A B sinθ.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Maximum torque on rectangular coil occurs when coil plane is:",
+      "options": ["Parallel to magnetic field (so normal is perpendicular) giving sinθ=1", "Perpendicular to field giving sinθ=0", "At any angle equally", "At 45° only"],
+      "answer": 0,
+      "explanation": "Torque ∝ sinθ where θ is angle between coil normal and B; maximum at θ=90° meaning coil plane parallel to B.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Moving-coil galvanometer measures small currents by detecting:",
+      "options": ["Torque on coil in magnetic field balanced by spring restoring torque causing angular deflection", "Change in resistance", "Change in capacitance", "Temperature rise"],
+      "answer": 0,
+      "explanation": "Current in coil produces magnetic torque; equilibrium with torsion spring gives deflection proportional to current.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "D'Arsonval (moving-coil) galvanometer is preferred because of:",
+      "options": ["High sensitivity, linear scale, and low restoring torque", "High power consumption only", "Large size", "No magnetic field requirement"],
+      "answer": 0,
+      "explanation": "Moving-coil galvanometers are precise and have linear response and good sensitivity.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "To increase sensitivity of moving-coil galvanometer you can:",
+      "options": ["Increase number of turns, stronger magnetic field, increase coil area, reduce spring constant", "Decrease turns only", "Use thicker wire only", "Remove the coil"],
+      "answer": 0,
+      "explanation": "Magnetic torque ∝ N I A B; increasing N, A, B or reducing restoring constant increases deflection per current.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Moving-coil galvanometer is converted to voltmeter by:",
+      "options": ["Adding large series resistance", "Adding shunt resistor", "Short-circuiting coil", "Reversing magnet"],
+      "answer": 0,
+      "explanation": "Series resistor limits current for given voltage so galvanometer deflection corresponds to voltage.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Moving-coil galvanometer converted to ammeter requires:",
+      "options": ["A suitably low-value shunt across the coil", "Adding series resistance", "Increasing coil turns", "Using AC only"],
+      "answer": 0,
+      "explanation": "A shunt bypasses most of current so galvanometer measures a fraction, enabling higher current measurement.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Sensitivity in terms of current for a galvanometer (S_I) is often given as:",
+      "options": ["Deflection per unit current (e.g., mm/μA)", "Voltage per unit current", "Resistance per unit length", "Flux per unit current"],
+      "answer": 0,
+      "explanation": "Current sensitivity is physical deflection per unit current; used for calibration.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Dead time / damping in a galvanometer refers to:",
+      "options": ["Oscillatory vs overdamped response; damping reduces oscillations and speeds settling", "Loss of sensitivity permanently", "Change of coil turns", "Thermal runaway"],
+      "answer": 0,
+      "explanation": "Damping (e.g., electromagnetic) determines transient behavior; critical damping gives fast settling without overshoot.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Moving-coil galvanometer has linear response when deflection angles are small because:",
+      "options": ["Restoring torque is proportional to angular displacement (Hooke's law) and magnetic torque ∝ current", "Magnetic field varies strongly with angle", "Coil area changes", "Current changes nonlinearly"],
+      "answer": 0,
+      "explanation": "Small-angle linearity arises from torsion spring torque ∝ angle and magnetic torque ∝ I (assuming uniform B and coil geometry).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Hall effect produces a transverse voltage across a current-carrying conductor when placed in a magnetic field; the Hall voltage is proportional to:",
+      "options": ["B I / (n e t) (for charge carrier density n, thickness t)", "B² only", "I² only", "Resistivity only"],
+      "answer": 0,
+      "explanation": "Hall voltage V_H = (B I)/(n q t) where q is carrier charge (e for electrons), t thickness; shows linear dependence on B and I.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Hall effect derivation, equilibrium transverse electric field E_H balances magnetic force on carriers: q v_d B = q E_H. The Hall voltage VH across thickness t is:",
+      "options": ["V_H = E_H t = (B I)/(n q t)", "V_H = B/t", "V_H = I/n", "V_H = 0"],
+      "answer": 0,
+      "explanation": "Using drift velocity v_d = I/(n q A) with A = width×t yields VH = (B I)/(n q t).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Sign of Hall voltage indicates:",
+      "options": ["Sign of dominant charge carriers (positive for holes, negative for electrons)", "Only magnitude of B", "Temperature only", "Resistivity"],
+      "answer": 0,
+      "explanation": "Polarity of Hall voltage reveals whether carriers are positive or negative.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Hall probe measures magnetic flux density B by:",
+      "options": ["Measuring Hall voltage at known current and probe geometry and using VH = BI/(n q t) or calibrated sensitivity", "Measuring current only", "Measuring flux linkage directly", "Counting field lines visually"],
+      "answer": 0,
+      "explanation": "Practical Hall sensors are calibrated to give B from measured VH for given excitation current.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A Hall probe is preferred for measuring B in localized regions because it:",
+      "options": ["Provides point measurement of B including direction (polarity) and works in DC fields", "Measures average over large volume only", "Works only at cryogenic temperatures", "Cannot resolve sign of B"],
+      "answer": 0,
+      "explanation": "Hall probes give local B measurement and polarity, useful for mapping field distribution.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If thickness t of Hall element decreases (all else constant), Hall voltage for same B and I:",
+      "options": ["Increases (V_H ∝ 1/t)", "Decreases", "Unchanged", "Becomes zero"],
+      "answer": 0,
+      "explanation": "VH inversely proportional to thickness t, so thinner element yields larger VH for given I and B.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Hall coefficient R_H is defined by R_H = E_H/(J B) and equals:",
+      "options": ["1/(n q)", "n q", "B/I", "q/n"],
+      "answer": 0,
+      "explanation": "R_H = 1/(n q) for single-carrier type; used to determine carrier concentration.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Hall effect can be used to determine carrier concentration n by measuring:",
+      "options": ["VH, current I, B, and thickness t (and using VH = BI/(n q t))", "Only resistance", "Only temperature", "Only magnetic susceptibility"],
+      "answer": 0,
+      "explanation": "Measuring VH for known I, B, t yields n since VH = BI/(n q t).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In typical semiconductor Hall sensor, sensitivity depends on:",
+      "options": ["Carrier concentration, mobility and geometry", "Only color", "Only mechanical shape", "Only applied voltage"],
+      "answer": 0,
+      "explanation": "Sensor sensitivity influenced by material properties (n, mobility) and geometry (thickness, contact placement).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Hall probe calibration often yields a linear relation VH = k B for fixed I; the factor k depends on:",
+      "options": ["Probe geometry and excitation current and material properties", "Universal constant only", "Ambient humidity", "Magnet temperature only"],
+      "answer": 0,
+      "explanation": "Calibration factor k encapsulates 1/(n q t) times I and geometry; must be measured.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Biot–Savart law gives magnetic field dB due to small current element I dl at point r as:",
+      "options": ["dB = (μ0/4π) (I dl × r̂) / r²", "dB = μ0 I dl / r", "dB = I r dl", "dB = 0"],
+      "answer": 0,
+      "explanation": "Biot–Savart: contribution of current element to B with vector cross product, distance squared denominator.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Magnetic field at centre of a circular loop of radius R carrying current I (single loop) is:",
+      "options": ["B = μ0 I / (2 R) (axial)", "B = μ0 I / (4π R)", "B = μ0 I / (π R²)", "B = 0"],
+      "answer": 0,
+      "explanation": "On axis at center, single loop field magnitude is μ0 I /(2R) directed along axis.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Magnetic field near long straight conductor at distance r is given by Ampère/Biot–Savart as:",
+      "options": ["B = μ0 I / (2π r) (tangential)", "B = μ0 I r / (2π)", "B = μ0 I / (π r²)", "B is zero"],
+      "answer": 0,
+      "explanation": "Field outside long straight current is μ0 I /(2π r) circling conductor (Ampère law).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnetic field inside an ideal long solenoid (n turns per unit length) carrying current I is:",
+      "options": ["B = μ0 n I (approximately uniform inside)", "B = μ0 I /(2R)", "B = 0", "B = μ0 I²"],
+      "answer": 0,
+      "explanation": "Long solenoid field is μ0 n I inside (n = N/L), nearly uniform, nearly zero outside.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Superposition principle applies to magnetic fields because:",
+      "options": ["Magnetic fields from different sources add vectorially", "They cancel always", "Only largest field matters", "Fields multiply"],
+      "answer": 0,
+      "explanation": "B fields obey linear superposition (sum of contributions from currents).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a circular coil of N turns, field at centre is:",
+      "options": ["B = μ0 N I / (2 R)", "B = μ0 I / (2 N R)", "B = μ0 N I² /(2 R)", "B = μ0 I / (π R)"],
+      "answer": 0,
+      "explanation": "N turns add field linearly: N times single loop's B.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Application of Biot–Savart law is most convenient for:",
+      "options": ["Calculating field from finite current elements and loops where symmetry not sufficient for Ampère's law", "High-symmetry infinite systems only", "Quantum fields only", "Electrostatics"],
+      "answer": 0,
+      "explanation": "Biot–Savart is direct, applicable for finite geometries; Ampère easier for high symmetry (infinite wire, solenoid).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Direction of magnetic field at point due to small current element dl is perpendicular to both dl and vector to point according to:",
+      "options": ["Biot–Savart law (cross-product)", "Ohm's law", "Coulomb's law", "Gauss's law"],
+      "answer": 0,
+      "explanation": "Cross product yields direction perpendicular to plane formed by dl and r vector.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Magnetic field at a point on axis of a finite circular coil (radius R) at distance x from plane (single loop) is:",
+      "options": ["B = (μ0 I R²)/(2(R² + x²)^(3/2))", "B = μ0 I /(2 R) always", "B = μ0 I x / R", "B = 0"],
+      "answer": 0,
+      "explanation": "Standard result for on-axis field of current loop; reduces to μ0 I/(2R) at center x=0.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For long solenoid of finite length, edge effects cause:",
+      "options": ["Field outside not exactly zero and internal field slightly non-uniform near ends", "Perfectly uniform internal field", "Infinite field outside", "No change"],
+      "answer": 0,
+      "explanation": "Finite solenoids have fringing fields; ideal long solenoid assumption neglects end effects.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Ampère's circuital law states that the line integral ∮ B · dl around a closed path equals:",
+      "options": ["μ0 times net current enclosed", "Zero always", "Magnetic flux through surface", "Electric potential"],
+      "answer": 0,
+      "explanation": "Integral of B around closed loop equals μ0 I_enc (in vacuum) — basis of Ampère's law.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Using Ampère's law, magnetic field at distance r from an infinitely long straight wire is derived as:",
+      "options": ["B = μ0 I /(2π r)", "B = μ0 I /(π r²)", "B = μ0 I r", "B = 0"],
+      "answer": 0,
+      "explanation": "Choose circular Amperian loop concentric with wire; B constant on loop yields result.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnetic field inside an ideal toroid (N turns, current I, mean radius r) at radius r is:",
+      "options": ["B = μ0 N I /(2π r)", "B = μ0 I /(2 R)", "B = μ0 N I r /(2π)", "Zero"],
+      "answer": 0,
+      "explanation": "Ampère's law around circular path inside toroid gives B (2π r) = μ0 N I => B = μ0 N I /(2π r).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A toroidal solenoid has negligible external field because:",
+      "options": ["Ampère loops outside enclose net zero current (windings cancel)", "Currents are zero", "Magnetic shielding only", "Constructive interference"],
+      "answer": 0,
+      "explanation": "Currents around torus produce field confined inside; external path encloses equal forward/back currents giving net zero.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Force per unit length between two long parallel conductors separated by distance d carrying currents I1 and I2 is:",
+      "options": ["F/L = μ0 I1 I2 /(2π d)", "F/L = μ0 (I1² + I2²)/(2π d)", "F/L = I1 I2 /(μ0 d)", "Zero"],
+      "answer": 0,
+      "explanation": "Derived from fields of one wire acting on other; used to define ampere.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Parallel currents in same direction experience:",
+      "options": ["Attractive force", "Repulsive force", "No force", "Infinite acceleration"],
+      "answer": 0,
+      "explanation": "Magnetic fields cause force that attracts parallel currents flowing same direction.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The ampere is defined in SI (old definition) via force between two parallel conductors as: two infinite parallel conductors 1 m apart, carrying 1 A each, experience force per metre equal to:",
+      "options": ["2 × 10⁻7 N/m", "1 N/m", "1 × 10⁻3 N/m", "0 N/m"],
+      "answer": 0,
+      "explanation": "By definition, 1 A produces force 2×10⁻7 N per metre between two long parallel conductors 1 m apart in vacuum.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Using Ampère's law, field inside infinite straight solenoid with n turns per unit length is derived assuming:",
+      "options": ["B is uniform inside and tangential field outside ~0 (high symmetry)", "B only outside", "No current present", "Magnetic monopoles"],
+      "answer": 0,
+      "explanation": "Choose rectangular Amperian loop partly inside solenoid; interior contributes μ0 n I.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Magnetic torque on rectangular coil is used in electromechanical meters because torque ∝:",
+      "options": ["N I A B (magnetic moment × B)", "Voltage only", "Resistance only", "Capacitance"],
+      "answer": 0,
+      "explanation": "Torque magnitude equals magnetic moment (NIA) times B, used to drive pointer in meters.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Magnetic flux linkage change NΦ with time induces emf given by Faraday's law:",
+      "options": ["ε = − d(NΦ)/dt (magnitude depends on rate of change)", "ε = + d(NΦ)/dt always positive", "ε independent of flux", "ε = zero always"],
+      "answer": 0,
+      "explanation": "Faraday's law: induced emf equals negative rate of change of flux linkage (Lenz's law gives minus sign).",
+      "difficulty": "easy"
+    }
+  ]
+}

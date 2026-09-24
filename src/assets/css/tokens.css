@@ -1,0 +1,60 @@
+/* Physics Decoded — design tokens.
+   The ONLY place colours, fonts and radii are defined. Every other stylesheet uses these variables.
+   Text/background pairs below meet WCAG AA (4.5:1) in both themes. */
+
+:root {
+  /* Brand indigo */
+  --brand-900: #1a237e;
+  --brand-700: #283593;
+  --brand-600: #3949ab;          /* backgrounds (header, hero, buttons) */
+  --brand-100: #e8eaf6;          /* tinted backgrounds */
+  --brand-ink: #3949ab;          /* brand colour used as TEXT */
+  --on-brand: #ffffff;           /* text on brand backgrounds */
+  --on-brand-muted: #c5cbef;
+  --accent: #ffb300;             /* primary button, focus ring */
+  --on-accent: #1c1c1c;
+
+  /* Content kinds */
+  --notes: #1e63d6;  --notes-bg: #e7f0ff;
+  --mcq:   #17753a;  --mcq-bg:   #e3f6ea;
+  --video: #b3261e;  --video-bg: #fdecea;
+
+  /* Feedback (quizzes, callouts) */
+  --good: #17753a;  --good-bg: #e3f6ea;
+  --bad:  #b3261e;  --bad-bg:  #fdecea;
+  --warn: #8a5300;  --warn-bg: #fff4dc;
+
+  /* Surfaces & text */
+  --bg: #f5f6fb;
+  --surface: #ffffff;
+  --surface-2: #f0f2f9;
+  --text: #1c2233;
+  --muted: #5d6782;
+  --border: #dde1ee;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgb(20 26 60 / .05), 0 6px 20px rgb(20 26 60 / .06);
+  --max: 1160px;
+  --measure: 76ch;               /* comfortable reading width for notes */
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-100: #262b52;
+    --brand-ink: #aab4ff;
+    --notes: #7aa7ff;  --notes-bg: #1b2744;
+    --mcq:   #5fd08a;  --mcq-bg:   #16301f;
+    --video: #ff8a80;  --video-bg: #3a1c1a;
+    --good: #5fd08a;  --good-bg: #16301f;
+    --bad:  #ff8a80;  --bad-bg:  #3a1c1a;
+    --warn: #ffc86b;  --warn-bg: #3a2c12;
+    --bg: #0f1222; --surface: #171b30; --surface-2: #1e2340;
+    --text: #e6e8f2; --muted: #9aa2bf; --border: #2a3052;
+    --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 6px 20px rgb(0 0 0 / .25);
+    color-scheme: dark;
+  }
+}

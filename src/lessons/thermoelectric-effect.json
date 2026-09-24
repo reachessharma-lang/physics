@@ -1,0 +1,149 @@
+{
+  "title": "Thermoelectric Effect — 20 MCQs",
+  "grade": "XII",
+  "chapters": [12],
+  "date": "2026-01-07",
+  "description": "20 MCQs covering Seebeck effect, thermocouple construction & working, Peltier effect and thermopile devices. Options are shuffled each load.",
+  "questions": [
+    {
+      "q": "Seebeck effect describes:",
+      "options": ["Generation of emf when two dissimilar metals have junctions at different temperatures", "Heat flow when current passes through a junction", "Change of resistance with temperature", "Emission of electrons from a hot surface"],
+      "answer": 0,
+      "explanation": "Seebeck effect: a temperature difference between two junctions of dissimilar metals produces a thermoelectric emf.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Seebeck coefficient has units of:",
+      "options": ["V/K", "Ohm", "A/V", "W/K"],
+      "answer": 0,
+      "explanation": "Seebeck coefficient (thermopower) is emf per unit temperature difference, units volts per kelvin.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A thermocouple is formed by:",
+      "options": ["Joining two different metals to form a pair of junctions", "A semiconductor diode only", "Two identical resistors", "A capacitor and inductor"],
+      "answer": 0,
+      "explanation": "Thermocouple: two different conductors joined at two junctions; temperature difference produces emf.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a thermocouple measurement the measured emf depends on:",
+      "options": ["Temperature difference between hot and reference (cold) junctions and materials' Seebeck coefficients", "Absolute temperature only", "Pressure only", "Humidity only"],
+      "answer": 0,
+      "explanation": "Thermocouple emf is integral of difference of Seebeck coefficients over temperatures; depends on ΔT and material properties.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "To measure temperature using a thermocouple one typically needs a reference (cold) junction because:",
+      "options": ["Thermocouple measures temperature difference not absolute temperature", "Reference junction provides mechanical support", "It stabilizes current flow", "It cools the sensor"],
+      "answer": 0,
+      "explanation": "Thermocouples produce emf proportional to temperature difference between measuring junction and reference junction; reference temperature must be known.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Cold-junction (reference) compensation is required because:",
+      "options": ["Instrumentation must correct for non-zero temperature at reference junction to obtain actual hot junction temperature", "It prevents oxidation", "It increases Seebeck coefficient", "It doubles the emf"],
+      "answer": 0,
+      "explanation": "If reference is not at 0°C, compensation (electronic or using an ice bath) is needed to get correct absolute temperature reading.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of the following metals/pairs is a common thermocouple type (e.g., type K)?",
+      "options": ["Chromel–Alumel (Ni–Cr / Ni–Al)", "Copper–copper (identical)", "Gold–silver (not used commonly)", "Iron–lead"],
+      "answer": 0,
+      "explanation": "Type K thermocouples use chromel (Ni–Cr) and alumel (Ni–Al) and are widely used for general-purpose measurements.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Seebeck coefficient can be positive or negative depending on:",
+      "options": ["Which metal has higher thermopower — sign depends on materials", "Ambient pressure only", "Length of wire only", "Color of metal"],
+      "answer": 0,
+      "explanation": "If metal A has greater thermopower than B the measured emf sign depends on which is positive; coefficients can be positive or negative.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Thermopile is:",
+      "options": ["An arrangement of several thermocouples connected in series to increase output emf", "A capacitor array", "A single thermocouple with amplifier", "A type of resistor network"],
+      "answer": 0,
+      "explanation": "Thermopile stacks thermocouples in series (often with alternate hot/cold junctions) to amplify voltage for sensing.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Application of thermopile includes:",
+      "options": ["Infrared sensors and radiation thermometers", "Only as heating elements", "As high-power batteries", "As mechanical switches"],
+      "answer": 0,
+      "explanation": "Thermopiles detect radiant energy (IR) by absorbing radiation to heat junctions and produce measurable voltage.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Peltier effect is:",
+      "options": ["Heating or cooling at a junction when current flows through two dissimilar conductors", "Generation of emf from temperature difference", "Change of resistance with light", "Magnetic induction"],
+      "answer": 0,
+      "explanation": "Peltier effect: when current passes through junction of dissimilar conductors heat is absorbed or released at junction depending on current direction.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Peltier coefficient has units of:",
+      "options": ["V (or J/C) — heat per unit charge", "A/K", "W·m", "Ω/K"],
+      "answer": 0,
+      "explanation": "Peltier coefficient Π has units of energy per charge (J/C) and is often expressed as volts.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A Peltier cooler (thermoelectric cooler) works on which effect?",
+      "options": ["Peltier effect (current produces heating/cooling at junctions)", "Seebeck effect only", "Joule heating only", "Photoelectric effect"],
+      "answer": 0,
+      "explanation": "Thermoelectric coolers use Peltier effect: DC current creates heat pumping from one side to the other producing a temperature difference.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If two thermocouple materials have Seebeck coefficients S_A(T) and S_B(T), the thermocouple emf between temperatures T1 and T2 is:",
+      "options": ["∫_{T1}^{T2} [S_A(T) − S_B(T)] dT", "(S_A − S_B) × (T1 + T2)", "S_A × S_B", "(T2 − T1)/(S_A − S_B)"],
+      "answer": 0,
+      "explanation": "Thermocouple emf is integral of difference of Seebeck coefficients across temperature range; if coefficients are constant it reduces to (S_A − S_B)ΔT.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If Seebeck coefficients are approximately constant over small ΔT, thermocouple emf E ≈",
+      "options": ["(S_A − S_B) × ΔT", "S_A + S_B", "(S_A/S_B) × ΔT", "ΔT/(S_A − S_B)"],
+      "answer": 0,
+      "explanation": "For small temperature span with nearly constant coefficients, emf ≈ difference in coefficients times temperature difference.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Advantage of thermocouple over resistance thermometer (RTD) is:",
+      "options": ["Wide temperature range and fast response", "Higher accuracy at low temperatures only", "Requires no reference junction", "Insensitive to reference temperature"],
+      "answer": 0,
+      "explanation": "Thermocouples cover wide ranges, respond quickly and are rugged; RTDs can be more accurate in limited ranges.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Limitation of thermocouple measurement includes:",
+      "options": ["Nonlinearity of emf vs temperature and need for reference junction compensation", "Unlimited precision", "No drift over years", "Insensitivity to junction material"],
+      "answer": 0,
+      "explanation": "Thermocouple emf is not perfectly linear; tables or polynomial fits and reference compensation are required.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Thermocouple polarity is determined by:",
+      "options": ["Conventional current direction and material Seebeck sign (which end is positive)", "Wire color only", "Temperature alone", "Junction size"],
+      "answer": 0,
+      "explanation": "Polarity indicates which junction is at higher potential dependent on Seebeck coefficients; instrumentation must respect polarity for correct sign.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A thermopile used as a radiation detector typically connects thermocouples such that:",
+      "options": ["All hot junctions are placed on the absorber and cold junctions on a heat sink, producing series voltage proportional to incident power", "Hot and cold junctions are mixed randomly", "All junctions are kept at same temperature", "Thermopile is used as a current source"],
+      "answer": 0,
+      "explanation": "Thermopile arranges hot junctions at absorber (heated by radiation) and cold junctions at reference temperature to generate cumulative voltage.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Example numerical: Two metals A and B have constant Seebeck coefficients S_A = 12 μV/K and S_B = 3 μV/K. If hot junction is at 150°C and reference at 50°C, approximate thermocouple emf is:",
+      "options": ["(12−3)μV/K × 100 K = 900 μV", "(12+3)μV/K × 100 K = 1500 μV", "(12−3)μV/K × 50 K = 450 μV", "(12−3)μV/K × 200 K = 1800 μV"],
+      "answer": 0,
+      "explanation": "ΔT = 100 K; emf ≈ (S_A − S_B)ΔT = (12−3) μV/K × 100 K = 900 μV.",
+      "difficulty": "hard"
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "title": "Electrical Circuits & Measurement — 50 MCQs",
+  "grade": "XII",
+  "chapters": [12],
+  "date": "2026-01-07",
+  "description": "50 MCQs on Kirchhoff's laws, Wheatstone & meter bridge, potentiometer, galvanometer conversions, superconductors and related measurements. Options are shuffled each load.",
+  "questions": [
+    {
+      "q": "Kirchhoff's current law (KCL) states:",
+      "options": ["Sum of currents entering a junction equals sum leaving", "Sum of voltages around a loop equals zero", "Power delivered equals power dissipated", "Resistance is constant"],
+      "answer": 0,
+      "explanation": "KCL is conservation of charge at a junction: algebraic sum of currents = 0.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Kirchhoff's voltage law (KVL) is based on:",
+      "options": ["Conservation of energy around a closed loop", "Conservation of charge", "Ohm's law only", "Faraday's law"],
+      "answer": 0,
+      "explanation": "KVL states algebraic sum of potential differences around any closed loop is zero.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "To find unknown currents in a multi-loop circuit one typically:",
+      "options": ["Apply KCL and KVL to independent nodes/loops and solve simultaneous equations", "Use only Ohm's law at one resistor", "Measure with galvanometer only", "Ignore internal resistances"],
+      "answer": 0,
+      "explanation": "Combine KCL and KVL with Ohm's law to form equations and solve for unknowns.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a Wheatstone bridge, balance condition is when:",
+      "options": ["No current flows through the galvanometer across the bridge", "Supply voltage is zero", "All resistances equal", "Bridge is short-circuited"],
+      "answer": 0,
+      "explanation": "Balance yields zero galvanometer current and relation R1/R2 = R3/R4.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Wheatstone bridge balance condition in terms of resistances R1,R2,R3,Rx is:",
+      "options": ["R1/R2 = R3/Rx", "R1 + R2 = R3 + Rx", "R1*R2 = R3*Rx", "R1 - R2 = R3 - Rx"],
+      "answer": 0,
+      "explanation": "Balance occurs when ratio of two known arms equals ratio of other two arms; useful to find unknown Rx.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A meter bridge is essentially a practical form of:",
+      "options": ["Wheatstone bridge using a uniform wire", "Potentiometer", "Kelvin double bridge", "Ohmmeter"],
+      "answer": 0,
+      "explanation": "Meter bridge uses uniform wire as the bridge arm to compare resistances using null deflection.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In the meter bridge balance method, the null point is located by:",
+      "options": ["Moving jockey until galvanometer shows zero current", "Turning power off", "Changing resistor values only", "Measuring voltage directly"],
+      "answer": 0,
+      "explanation": "Null deflection indicates balanced lengths and allows calculation of unknown resistance by length ratios.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A potentiometer is used primarily to:",
+      "options": ["Measure emf and compare emfs without drawing current from the source", "Measure high current", "Amplify signals", "Measure capacitance"],
+      "answer": 0,
+      "explanation": "Potentiometer provides a null method to measure emf and internal resistance without loading the source.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Working principle of potentiometer is based on:",
+      "options": ["Uniform potential gradient along a wire carrying constant current", "Capacitive coupling", "Magnetic induction", "Thermoelectric effect"],
+      "answer": 0,
+      "explanation": "A constant current through a uniform wire produces a linear potential drop; lengths correspond to emfs.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "To convert a galvanometer into an ammeter you should:",
+      "options": ["Connect a low-value shunt resistor in parallel with the galvanometer", "Connect a high resistance in series", "Reverse the galvanometer", "Use a capacitor in series"],
+      "answer": 0,
+      "explanation": "A shunt bypasses most current so only a fraction passes through galvanometer; appropriate shunt calibrates range.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "To convert a galvanometer into a voltmeter you should:",
+      "options": ["Connect a high resistance in series with the galvanometer", "Connect a shunt in parallel", "Short-circuit the galvanometer", "Connect it across a capacitor"],
+      "answer": 0,
+      "explanation": "Series resistance limits current for a given voltage, allowing measurement over a larger voltage range.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A perfect conductor (ideal conductor) differs from a superconductor because:",
+      "options": ["Perfect conductor has zero resistance but does not necessarily expel magnetic field; superconductor exhibits Meissner effect", "Both are identical in all properties", "Perfect conductors operate at low temperature only", "Superconductors have finite resistance"],
+      "answer": 0,
+      "explanation": "Superconductors show zero resistance and expel magnetic fields (Meissner); an ideal perfect conductor conceptually has zero resistivity but lacks Meissner behavior.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Superconductivity is characterized by:",
+      "options": ["Zero electrical resistance below critical temperature and expulsion of magnetic field (Meissner effect)", "Very high resistance", "Permanent battery action", "Spontaneous combustion"],
+      "answer": 0,
+      "explanation": "Superconductors have zero resistance and exhibit Meissner effect below a critical temperature.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Critical temperature of a superconductor is:",
+      "options": ["Temperature below which superconductivity appears", "Highest temperature the material can reach", "Temperature at which resistance is maximum", "Temperature where conductor melts"],
+      "answer": 0,
+      "explanation": "Superconductors transition to zero resistance at temperatures below their critical temperature (Tc).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a balanced potentiometer measurement to compare two emfs, null point ensures:",
+      "options": ["No current flows through the galvanometer so emf comparison is unaffected by current draw", "Maximum current flows", "Voltage division fails", "Resistance becomes infinite"],
+      "answer": 0,
+      "explanation": "Null method avoids drawing current from test cell, giving accurate emf comparison.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Potentiometer is preferred over a voltmeter for accurate emf measurement because:",
+      "options": ["It is a null method and does not load the source", "It is cheaper", "It directly measures resistance", "It is portable only"],
+      "answer": 0,
+      "explanation": "Null measurement avoids internal resistance effects and yields precise emf without drawing current from source.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Internal resistance of a cell can be measured using potentiometer by:",
+      "options": ["Comparing the terminal emf under load and open-circuit emf using length ratios", "Measuring current directly only", "Measuring capacitance", "Using a voltmeter placed across a short"],
+      "answer": 0,
+      "explanation": "Potentiometer can determine lost voltage under load and hence internal resistance by comparing emfs.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Wheatstone bridge is most accurate for measuring:",
+      "options": ["Resistances of moderate value with high precision", "Very low resistances below milliohm only", "Only reactive components", "Capacitances"],
+      "answer": 0,
+      "explanation": "Wheatstone bridge gives precise resistance ratio measurements when bridge arms are chosen suitably.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In practical Wheatstone bridge the galvanometer least sensitive at balance; best accuracy comes when:",
+      "options": ["Galvanometer is sensitive and null is sharp", "Galvanometer is insensitive", "Galvanometer has zero resistance", "Galvanometer resistance equals bridge arm"],
+      "answer": 0,
+      "explanation": "High sensitivity galvanometer allows detecting small imbalances leading to precise determination of balance point.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In meter bridge experiment the ratio of resistances is equal to:",
+      "options": ["Ratio of lengths on the wire (l1/l2) at null point", "Ratio of areas of wire segments", "Ratio of applied voltages only", "Square root of lengths"],
+      "answer": 0,
+      "explanation": "At balance, unknown/known resistance = corresponding length ratio on uniform wire.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If a galvanometer has resistance G and full-scale current Ig, to convert it into a voltmeter of range V, series resistance R should be:",
+      "options": ["R = (V/Ig) - G", "R = V Ig + G", "R = V / G", "R = G - V/Ig"],
+      "answer": 0,
+      "explanation": "Total resistance required = V/Ig; subtract galvanometer resistance to get series resistor.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "To convert a galvanometer to an ammeter for range I, required shunt Rs is:",
+      "options": ["Rs = (Ig * G) / (I - Ig)", "Rs = (I - Ig) / (Ig * G)", "Rs = G*(I/Ig)", "Rs = I/(Ig*G)"],
+      "answer": 0,
+      "explanation": "Shunt divides current: Ig through galvanometer and remainder through shunt. Rs derived from current division.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A potentiometer wire of length L carries a constant current. The potential gradient is uniform because:",
+      "options": ["Wire is uniform and current is constant so drop per unit length is constant", "Wire has varying cross-section", "Source emf changes along wire", "Temperature varies wildly"],
+      "answer": 0,
+      "explanation": "Uniform wire and constant current produce linear potential drop; used for measurements.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "While measuring internal resistance of a cell with potentiometer, the terminal emf under load is measured by connecting:",
+      "options": ["A known external resistance across the cell and noting new null length", "Short-circuiting the cell", "Only open-circuit measurement", "Switching polarity rapidly"],
+      "answer": 0,
+      "explanation": "Comparing emf under load to open-circuit emf gives voltage drop due to internal resistance; known external resistor allows calculation.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Superconductors are used in practical devices such as:",
+      "options": ["MRI magnets and SQUIDs (sensitive magnetometers)", "Standard resistors", "Ordinary light bulbs", "Plastic insulators"],
+      "answer": 0,
+      "explanation": "Large superconducting magnets and SQUIDs exploit zero resistance and strong fields for applications.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Type I and Type II superconductors differ by:",
+      "options": ["Their behavior in magnetic fields — Type II allows mixed state with vortices at higher fields", "Only their color", "Their mechanical strength only", "Their chemical formula only"],
+      "answer": 0,
+      "explanation": "Type II have two critical fields and a vortex mixed state; Type I show abrupt transition and complete Meissner behavior below critical field.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Meissner effect refers to:",
+      "options": ["Complete expulsion of magnetic field from a superconductor below critical temperature", "Infinite conductivity without magnetic effects", "Spontaneous magnetization", "Loss of superconductivity under pressure"],
+      "answer": 0,
+      "explanation": "Meissner effect distinguishes superconductors from perfect conductors: magnetic flux is expelled when cooling into superconducting state.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A potentiometer compares two emfs directly by adjusting length such that:",
+      "options": ["Potential drop along wire equals emf of test cell at null", "Test cell supplies full current", "Galvanometer reads maximum", "Voltage divider is removed"],
+      "answer": 0,
+      "explanation": "Null ensures potential difference between tapping point and reference equals emf under test.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In potentiometer method, source current must be kept constant because:",
+      "options": ["Potential gradient along wire must remain constant for accurate comparison", "Galvanometer needs changing current", "Short circuit conditions must hold", "Resistance changes unpredictably"],
+      "answer": 0,
+      "explanation": "Stable current ensures linear potential gradient; fluctuations would change null lengths and introduce error.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A practical difficulty in converting galvanometer to voltmeter is ensuring:",
+      "options": ["Series resistance is high enough to limit current but not so high to affect accuracy", "Shunt resistance is zero", "Galvanometer polarity is reversed", "Internal resistance of battery is zero"],
+      "answer": 0,
+      "explanation": "Series resistor must be chosen to provide desired range while keeping meter sensitivity and loading acceptable.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Wheatstone bridge sensitivity increases when bridge arms are chosen so that:",
+      "options": ["Balance point occurs near mid-scale of galvanometer sensitivity", "Arms are extremely unequal", "Galvanometer resistance is infinite", "All resistances zero"],
+      "answer": 0,
+      "explanation": "Choosing arms so balance is near mid-range yields maximum sensitivity for small changes.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In meter bridge if lengths measured at null are l1 and l2 then unknown resistance Rx relates to known R as:",
+      "options": ["Rx = R * (l1 / l2)", "Rx = R * (l2 / l1)", "Rx = R + (l1 - l2)", "Rx = R - (l1 / l2)"],
+      "answer": 0,
+      "explanation": "At balance Rx/R = l1/l2 where l1 is length corresponding to Rx side.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If galvanometer coil has large resistance, converting to ammeter requires:",
+      "options": ["A very small shunt to pass most current", "Large series resistor", "Removing coil", "Increasing supply voltage"],
+      "answer": 0,
+      "explanation": "High coil resistance means most current must bypass through low-value shunt to measure larger currents.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Sensitivity of potentiometer measurement improves with:",
+      "options": ["Longer potentiometer wire and stable low-drop source current", "Short wire only", "Higher noise", "Random temperature fluctuations"],
+      "answer": 0,
+      "explanation": "Longer wire gives larger measurable length per emf; stable current reduces drift.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Galvanometer ideal characteristic for precise null detection is:",
+      "options": ["High sensitivity (deflection per unit current) and low zero offset", "Low sensitivity", "High power consumption", "Large mechanical friction"],
+      "answer": 0,
+      "explanation": "High sensitivity enables detecting very small currents for accurate null detection.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When using potentiometer to measure internal resistance of a cell, internal resistance r is obtained from known external resistance R and measured emfs E_open and E_loaded by:",
+      "options": ["r = R*(E_open - E_loaded)/E_loaded", "r = E_loaded/(R*(E_open - E_loaded))", "r = E_open * R", "r = E_open - E_loaded"],
+      "answer": 0,
+      "explanation": "From voltage division: terminal voltage E_loaded = E_open * (R/(R + r)); solving yields r = R*(E_open - E_loaded)/E_loaded.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A superconductor cooled below Tc carries a persistent current because:",
+      "options": ["There is zero resistance so current persists without applied voltage", "It has infinite resistance", "Current is blocked by Meissner effect", "It continuously generates emf"],
+      "answer": 0,
+      "explanation": "Zero resistivity allows persistent currents to circulate indefinitely in closed superconducting loops.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Distinction between perfect conductor and superconductor: perfect conductor hypothetical behavior does not include:",
+      "options": ["Meissner effect (flux expulsion) which superconductors exhibit", "Zero resistance", "Infinite conductivity", "No energy dissipation"],
+      "answer": 0,
+      "explanation": "Perfect conductor concept lacks Meissner effect; superconductors show flux exclusion, a distinct thermodynamic property.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A Kelvin bridge is used to measure:",
+      "options": ["Low resistances accurately by eliminating lead and contact resistance", "High resistances only", "Capacitance", "Inductance"],
+      "answer": 0,
+      "explanation": "Kelvin (double bridge) measures small resistances accounting for lead resistances via four-terminal connections.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In practical potentiometer an auxiliary battery is used to:",
+      "options": ["Provide current for potentiometer wire independent of test cell", "Power the load under test", "Cool the circuit", "Measure current"],
+      "answer": 0,
+      "explanation": "Auxiliary battery supplies current through potentiometer wire producing required potential gradient across wire.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Null deflection methods are preferred because:",
+      "options": ["They minimize systematic loading errors and can be highly precise", "They are faster than direct measurement always", "They need no calibration", "They work without instruments"],
+      "answer": 0,
+      "explanation": "Null methods draw no current from test source at balance, eliminating loading errors and enabling high precision.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An ammeter should ideally have:",
+      "options": ["Very low internal resistance to avoid altering circuit current", "Very high resistance to avoid loading", "Variable capacitance", "Significant inductance"],
+      "answer": 0,
+      "explanation": "Low internal resistance minimizes voltage drop and disturbance to the circuit when measuring current.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A voltmeter ideally should have:",
+      "options": ["Very high resistance so it draws negligible current", "Very low resistance", "Low reactance only", "Low thermal coefficient"],
+      "answer": 0,
+      "explanation": "High input resistance reduces loading effect on measured circuit element.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When calibrating a voltmeter using potentiometer, main advantage is:",
+      "options": ["Avoiding direct current through meter during calibration (null method)", "Increasing meter heat", "Applying random voltages", "Using approximate values only"],
+      "answer": 0,
+      "explanation": "Null comparison prevents loading of reference source, leading to accurate calibration.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Wheatstone bridge measurement the presence of contact resistance at nodes mainly affects accuracy when:",
+      "options": ["Contact resistances are comparable to measured resistances", "Contacts have zero resistance", "Only inductance matters", "Only capacitance matters"],
+      "answer": 0,
+      "explanation": "Large contact resistances disturb balance; four-terminal or Kelvin methods reduce this error.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Practical meter bridge wire should be:",
+      "options": ["Uniform cross-section and material to ensure uniform resistance per unit length", "Very thin only", "Highly resistive and non-uniform", "Insulating"],
+      "answer": 0,
+      "explanation": "Uniform wire ensures linear potential gradient and valid length-to-resistance ratio assumptions.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When converting galvanometer to voltmeter, the series resistor must be chosen knowing:",
+      "options": ["Galvanometer full-scale current and galvanometer resistance and desired voltage range", "Only galvanometer color", "Ambient temperature only", "Shunt resistor value only"],
+      "answer": 0,
+      "explanation": "Series R = V_range/Ig - Rg; need Ig and Rg to size R for desired range.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A superconducting quantum interference device (SQUID) is used to measure:",
+      "options": ["Extremely small magnetic flux changes with very high sensitivity", "High voltages", "Large currents in power lines only", "Optical wavelengths"],
+      "answer": 0,
+      "explanation": "SQUIDs exploit superconductivity and quantum interference to detect minute magnetic flux changes.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "To measure an unknown emf by potentiometer, first we determine the balancing length l0 for standard cell emf E0, then for test emf E1 balance length l1. The relation is:",
+      "options": ["E1/E0 = l1/l0", "E0/E1 = l1/l0", "E1 - E0 = l1 - l0", "E1 = E0 + constant"],
+      "answer": 0,
+      "explanation": "Potential gradient is constant, so emf ∝ balancing length; ratio gives emf comparison.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which statement about superconductors is correct regarding resistance below Tc?",
+      "options": ["Dc resistance is zero but AC may show losses (depending on frequency and material)", "Resistance becomes infinite", "Resistance negligible only at high currents", "Resistance is high at low temperatures"],
+      "answer": 0,
+      "explanation": "Superconductors show zero DC resistance; AC losses can occur due to flux motion, hysteresis in Type II, or normal regions at high frequency.",
+      "difficulty": "hard"
+    }
+  ]
+}

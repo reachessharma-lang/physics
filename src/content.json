@@ -1,0 +1,546 @@
+{
+  "site": {
+    "name": "Physics Decoded",
+    "tagline": "Learn physics with clarity — concepts, calculations, visuals and exam strategies, explained simply.",
+    "author": "Richesh Sharma",
+    "url": "https://richeshsharma.com.np",
+    "youtube": "https://youtube.com/@rsaphysics",
+    "curriculum": "NEB Curriculum 2076"
+  },
+  "grades": {
+    "XI": {
+      "title": "Grade XI Physics",
+      "hours": 128,
+      "syllabus": [
+        {
+          "n": 1,
+          "title": "Physical Quantities",
+          "area": "Mechanics",
+          "topics": [
+            "Precision and significant figures",
+            "Dimensions and uses of dimensional analysis"
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Vectors",
+          "area": "Mechanics",
+          "topics": [
+            "Triangle, parallelogram and polygon laws of vectors",
+            "Resolution of vectors; Unit vectors",
+            "Scalar and vector products"
+          ]
+        },
+        {
+          "n": 3,
+          "title": "Kinematics",
+          "area": "Mechanics",
+          "topics": [
+            "Instantaneous velocity and acceleration",
+            "Relative velocity",
+            "Equation of motion (graphical treatment)",
+            "Motion of a freely falling body",
+            "Projectile motion and its applications"
+          ]
+        },
+        {
+          "n": 4,
+          "title": "Dynamics",
+          "area": "Mechanics",
+          "topics": [
+            "Linear momentum and impulse",
+            "Conservation of linear momentum",
+            "Application of Newton’s laws",
+            "Moment, torque and equilibrium",
+            "Solid friction: laws and verification"
+          ]
+        },
+        {
+          "n": 5,
+          "title": "Work, Energy and Power",
+          "area": "Mechanics",
+          "topics": [
+            "Work done by constant and variable force",
+            "Power",
+            "Work–energy theorem",
+            "Kinetic and potential energy",
+            "Conservation of energy",
+            "Conservative and non-conservative forces",
+            "Elastic and inelastic collisions"
+          ]
+        },
+        {
+          "n": 6,
+          "title": "Circular Motion",
+          "area": "Mechanics",
+          "topics": [
+            "Angular displacement, velocity and acceleration",
+            "Relation between angular and linear quantities",
+            "Centripetal acceleration and force",
+            "Conical pendulum",
+            "Motion in a vertical circle",
+            "Banking of roads"
+          ]
+        },
+        {
+          "n": 7,
+          "title": "Gravitation",
+          "area": "Mechanics",
+          "topics": [
+            "Newton’s law of gravitation",
+            "Gravitational field strength",
+            "Gravitational potential and potential energy",
+            "Variation of g with altitude and depth",
+            "Centre of mass and centre of gravity",
+            "Orbital velocity and time period",
+            "Escape velocity",
+            "Energy of satellite",
+            "Geostationary satellite and GPS"
+          ]
+        },
+        {
+          "n": 8,
+          "title": "Elasticity",
+          "area": "Mechanics",
+          "topics": [
+            "Hooke’s law and force constant",
+            "Stress, strain, elasticity and plasticity",
+            "Elastic moduli",
+            "Poisson’s ratio",
+            "Elastic potential energy"
+          ]
+        },
+        {
+          "n": 9,
+          "title": "Heat and Temperature",
+          "area": "Heat & Thermodynamics",
+          "topics": [
+            "Molecular concept of heat and temperature",
+            "Cause and direction of heat flow",
+            "Thermal equilibrium",
+            "Zeroth law of thermodynamics",
+            "Mercury thermometer principle"
+          ]
+        },
+        {
+          "n": 10,
+          "title": "Thermal Expansion",
+          "area": "Heat & Thermodynamics",
+          "topics": [
+            "Linear, superficial and cubical expansion",
+            "Liquid expansion",
+            "Dulong and Petit method"
+          ]
+        },
+        {
+          "n": 11,
+          "title": "Quantity of Heat",
+          "area": "Heat & Thermodynamics",
+          "topics": [
+            "Newton’s law of cooling",
+            "Specific heat capacity",
+            "Latent heat and change of phase",
+            "Triple point"
+          ]
+        },
+        {
+          "n": 12,
+          "title": "Rate of Heat Flow",
+          "area": "Heat & Thermodynamics",
+          "topics": [
+            "Conduction and thermal conductivity",
+            "Convection",
+            "Radiation and black body",
+            "Stefan–Boltzmann law"
+          ]
+        },
+        {
+          "n": 13,
+          "title": "Ideal Gas",
+          "area": "Heat & Thermodynamics",
+          "topics": [
+            "Ideal gas equation",
+            "Kinetic theory of gases",
+            "Pressure of gas",
+            "RMS speed",
+            "Heat capacities"
+          ]
+        },
+        {
+          "n": 14,
+          "title": "Reflection at Curved Mirrors",
+          "area": "Waves & Optics",
+          "topics": [
+            "Real and virtual images",
+            "Mirror formula"
+          ]
+        },
+        {
+          "n": 15,
+          "title": "Refraction at Plane Surfaces",
+          "area": "Waves & Optics",
+          "topics": [
+            "Laws of refraction",
+            "Refractive index relations",
+            "Lateral shift",
+            "Total internal reflection"
+          ]
+        },
+        {
+          "n": 16,
+          "title": "Refraction through Prisms",
+          "area": "Waves & Optics",
+          "topics": [
+            "Minimum deviation",
+            "Refractive index relation",
+            "Small angle prism"
+          ]
+        },
+        {
+          "n": 17,
+          "title": "Lenses",
+          "area": "Waves & Optics",
+          "topics": [
+            "Spherical lenses",
+            "Angular magnification",
+            "Lens maker’s formula",
+            "Power of a lens"
+          ]
+        },
+        {
+          "n": 18,
+          "title": "Dispersion",
+          "area": "Waves & Optics",
+          "topics": [
+            "Pure spectrum",
+            "Dispersive power",
+            "Chromatic and spherical aberration",
+            "Achromatism"
+          ]
+        },
+        {
+          "n": 19,
+          "title": "Electric Charges",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Charging by induction",
+            "Coulomb’s law",
+            "Force between multiple charges"
+          ]
+        },
+        {
+          "n": 20,
+          "title": "Electric Field",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Electric field due to point charges",
+            "Electric flux and Gauss law",
+            "Applications of Gauss law"
+          ]
+        },
+        {
+          "n": 21,
+          "title": "Electric Potential",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Potential and potential difference",
+            "Equipotential surfaces",
+            "Potential gradient"
+          ]
+        },
+        {
+          "n": 22,
+          "title": "Capacitor",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Capacitance",
+            "Parallel plate capacitor",
+            "Combination of capacitors",
+            "Energy of capacitor",
+            "Dielectric effect"
+          ]
+        },
+        {
+          "n": 23,
+          "title": "DC Circuits",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Electric current and drift velocity",
+            "Ohm’s law",
+            "Resistance and resistivity",
+            "Series and parallel combination",
+            "Potential divider",
+            "EMF and internal resistance",
+            "Work and power in circuits"
+          ]
+        },
+        {
+          "n": 24,
+          "title": "Nuclear Physics",
+          "area": "Modern Physics",
+          "topics": [
+            "Structure of nucleus",
+            "Mass defect and binding energy",
+            "Einstein’s mass–energy relation",
+            "Fission and fusion"
+          ]
+        },
+        {
+          "n": 25,
+          "title": "Solids",
+          "area": "Modern Physics",
+          "topics": [
+            "Energy band theory",
+            "Conductors, insulators and semiconductors",
+            "Intrinsic and extrinsic semiconductors"
+          ]
+        },
+        {
+          "n": 26,
+          "title": "Recent Trends in Physics",
+          "area": "Modern Physics",
+          "topics": [
+            "Particles and antiparticles",
+            "Quarks and leptons",
+            "Big Bang and expansion of universe",
+            "Dark matter, black hole and gravitational waves"
+          ]
+        }
+      ]
+    },
+    "XII": {
+      "title": "Grade XII Physics",
+      "hours": 128,
+      "syllabus": [
+        {
+          "n": 1,
+          "title": "Rotational Dynamics",
+          "area": "Mechanics",
+          "topics": [
+            "Angular displacement, velocity and acceleration",
+            "Equations of rotational motion",
+            "Moment of inertia and radius of gyration",
+            "Moment of inertia of uniform rod",
+            "Torque and angular acceleration",
+            "Work, energy and power in rotational motion",
+            "Angular momentum and its conservation"
+          ]
+        },
+        {
+          "n": 2,
+          "title": "Periodic Motion",
+          "area": "Mechanics",
+          "topics": [
+            "Simple harmonic motion (SHM)",
+            "Equation and energy of SHM",
+            "Vertical oscillation of spring-mass system",
+            "Simple pendulum",
+            "Damped oscillation",
+            "Forced oscillation and resonance"
+          ]
+        },
+        {
+          "n": 3,
+          "title": "Fluid Statics and Dynamics",
+          "area": "Mechanics",
+          "topics": [
+            "Pressure in fluid and buoyancy",
+            "Surface tension and surface energy",
+            "Angle of contact and capillarity",
+            "Viscosity and Newton’s formula",
+            "Poiseuille’s equation",
+            "Stokes’ law and terminal velocity",
+            "Equation of continuity",
+            "Bernoulli’s theorem and applications"
+          ]
+        },
+        {
+          "n": 4,
+          "title": "Wave Motion",
+          "area": "Waves & Optics",
+          "topics": [
+            "Progressive and stationary waves",
+            "Mathematical description of wave motion",
+            "Velocity of sound in different media",
+            "Laplace correction",
+            "Waves in pipes and stretched strings",
+            "Harmonics and overtones",
+            "Laws of vibration of string"
+          ]
+        },
+        {
+          "n": 5,
+          "title": "Acoustic Phenomena",
+          "area": "Waves & Optics",
+          "topics": [
+            "Sound waves and pressure amplitude",
+            "Characteristics of sound",
+            "Doppler’s effect"
+          ]
+        },
+        {
+          "n": 6,
+          "title": "Nature and Propagation of Light",
+          "area": "Waves & Optics",
+          "topics": [
+            "Huygens’ principle",
+            "Reflection and refraction of light (wave theory)"
+          ]
+        },
+        {
+          "n": 7,
+          "title": "Interference",
+          "area": "Waves & Optics",
+          "topics": [
+            "Coherent sources",
+            "Young’s double slit experiment"
+          ]
+        },
+        {
+          "n": 8,
+          "title": "Diffraction",
+          "area": "Waves & Optics",
+          "topics": [
+            "Diffraction at single slit",
+            "Diffraction grating",
+            "Resolving power"
+          ]
+        },
+        {
+          "n": 9,
+          "title": "Polarization",
+          "area": "Waves & Optics",
+          "topics": [
+            "Polarization of light",
+            "Brewster’s law",
+            "Polaroids"
+          ]
+        },
+        {
+          "n": 10,
+          "title": "First Law of Thermodynamics",
+          "area": "Heat & Thermodynamics",
+          "topics": [
+            "Thermodynamic systems",
+            "Work done during volume change",
+            "Heat, work and internal energy",
+            "Thermodynamic processes",
+            "Heat capacities and relations"
+          ]
+        },
+        {
+          "n": 11,
+          "title": "Second Law of Thermodynamics",
+          "area": "Heat & Thermodynamics",
+          "topics": [
+            "Direction of thermodynamic processes",
+            "Heat engines",
+            "Otto, Diesel and Carnot engines",
+            "Refrigerator",
+            "Entropy (introductory)"
+          ]
+        },
+        {
+          "n": 12,
+          "title": "Electrical Circuits",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Kirchhoff’s laws",
+            "Wheatstone and meter bridge",
+            "Potentiometer",
+            "Joule heating effect",
+            "Thermoelectric effects",
+            "Superconductors"
+          ]
+        },
+        {
+          "n": 13,
+          "title": "Magnetic Field and Properties of Materials",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Magnetic field and flux",
+            "Oersted’s experiment",
+            "Force on charge and conductor",
+            "Moving coil galvanometer",
+            "Hall effect",
+            "Dia-, para- and ferromagnetism",
+            "Hysteresis"
+          ]
+        },
+        {
+          "n": 14,
+          "title": "Electromagnetic Induction",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Faraday’s laws",
+            "Lenz’s law",
+            "Self and mutual inductance",
+            "AC generator",
+            "Transformer"
+          ]
+        },
+        {
+          "n": 15,
+          "title": "Alternating Currents",
+          "area": "Electricity & Magnetism",
+          "topics": [
+            "Peak and RMS values",
+            "AC through R, L and C",
+            "Phasor diagrams",
+            "Resonance",
+            "Power factor"
+          ]
+        },
+        {
+          "n": 16,
+          "title": "Electrons and Photons",
+          "area": "Modern Physics",
+          "topics": [
+            "Millikan oil drop experiment",
+            "Thomson’s experiment",
+            "Motion of electron beam",
+            "Photoelectric effect",
+            "Planck’s constant"
+          ]
+        },
+        {
+          "n": 17,
+          "title": "Semiconductor Devices",
+          "area": "Modern Physics",
+          "topics": [
+            "P-N junction diode",
+            "Rectifiers",
+            "Logic gates"
+          ]
+        },
+        {
+          "n": 18,
+          "title": "Atomic and Nuclear Physics",
+          "area": "Modern Physics",
+          "topics": [
+            "Bohr’s atomic model",
+            "Spectral series",
+            "De Broglie wavelength",
+            "Uncertainty principle",
+            "X-rays and Bragg’s law",
+            "Radioactivity",
+            "Half-life and decay constant",
+            "Carbon dating"
+          ]
+        },
+        {
+          "n": 19,
+          "title": "Recent Trends in Physics",
+          "area": "Modern Physics",
+          "topics": [
+            "Seismology and earthquake waves",
+            "Gorkha Earthquake 2015",
+            "Gravitational waves",
+            "Nanotechnology",
+            "Higgs Boson"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "title": "Fluid Dynamics & Viscosity — MCQs",
+  "grade": "XII",
+  "chapters": [3],
+  "date": "2026-01-07",
+  "description": "Topics: Newton's formula for viscosity, laminar/turbulent flow & Reynolds number, Poiseuille's law, Stoke's law, continuity, Bernoulli, and numerical/conceptual problems.",
+  "questions": [
+    {
+      "q": "Newton's formula for viscosity relates shear stress τ to velocity gradient dv/dy. Which expression is correct?",
+      "options": ["τ = η (dv/dy)", "τ = η / (dy/dv)", "τ = ρ (dv/dy)", "τ = μ g"],
+      "answer": 0,
+      "explanation": "Newton's law of viscosity: shear stress τ = dynamic viscosity η × velocity gradient dv/dy.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "SI unit of dynamic (coefficient of) viscosity η is:",
+      "options": ["Pa·s (N·s·m⁻²)", "Pa", "kg·m²·s⁻1", "m²/s"],
+      "answer": 0,
+      "explanation": "Dynamic viscosity has units of force × time per area = N·s/m² = Pa·s.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Coefficient of viscosity (η) physically represents:",
+      "options": ["Resistance to relative motion between fluid layers", "Density variation with temperature", "Surface tension per unit length", "Compressibility of fluid"],
+      "answer": 0,
+      "explanation": "η quantifies internal friction — how strongly adjacent layers resist relative motion.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which best differentiates laminar from turbulent flow?",
+      "options": ["Laminar has smooth streamlines; turbulent has chaotic eddies", "Laminar is faster; turbulent is always slower", "Laminar occurs only in gases; turbulent only in liquids", "Turbulent has no viscosity effects"],
+      "answer": 0,
+      "explanation": "Laminar: orderly parallel layers; turbulent: random fluctuations and eddies.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which expression gives Reynolds number Re for flow in a pipe?",
+      "options": ["Re = ρ v D / η", "Re = η v D / ρ", "Re = ρ g D / η", "Re = v / (ρ D)"],
+      "answer": 0,
+      "explanation": "Re = (ρ v D)/η (dynamic viscosity η) — a dimensionless quantity indicating inertial to viscous forces.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For flow in a circular pipe, laminar flow typically occurs when Re is:",
+      "options": ["Less than about 2000", "Greater than about 4000", "Between 5000 and 10000", "Always >10000"],
+      "answer": 0,
+      "explanation": "Empirically, Re < ~2000 → laminar; Re > ~4000 → turbulent; between these is transitional.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Poiseuille's formula for volumetric flow rate Q in a circular tube (laminar) is:",
+      "options": ["Q = π r⁴ ΔP / (8 η L)", "Q = π r² ΔP / (4 η L)", "Q = 8 η L / (π r⁴ ΔP)", "Q = ΔP / (ρ L)"],
+      "answer": 0,
+      "explanation": "Poiseuille (Hagen-Poiseuille) for laminar viscous flow: Q = (π r⁴ ΔP)/(8 η L).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Compute Q for r = 1.0 mm, ΔP = 1000 Pa, L = 0.10 m, η = 1.0×10⁻³ Pa·s (water). Approx Q =",
+      "options": ["3.9×10⁻⁶ m³/s", "3.9×10⁻³ m³/s", "3.9×10⁻⁹ m³/s", "3.9×10⁻² m³/s"],
+      "answer": 0,
+      "explanation": "Q = π(1e-3)⁴×1000/(8×1e-3×0.1) ≈ 3.93×10⁻6 m³/s.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Stoke's law for drag on a small sphere moving slowly through a viscous fluid is:",
+      "options": ["F = 6π η r v", "F = 4π η r v", "F = 6π r v / η", "F = 1/2 ρ v² C_d A"],
+      "answer": 0,
+      "explanation": "Stokes drag: F = 6π η r v valid for small Reynolds number (creeping flow).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Terminal velocity v_t of a small sphere (Stokes regime) is given by:",
+      "options": ["v_t = (2 r² (ρ_s - ρ_f) g)/(9 η)", "v_t = (3 r (ρ_s - ρ_f) g)/(4 η)", "v_t = √(2 g r (ρ_s - ρ_f)/ρ_f)", "v_t = 6π η r / m"],
+      "answer": 0,
+      "explanation": "Balancing weight minus buoyancy with Stokes drag gives v_t = 2 r² (ρ_s - ρ_f) g /(9 η).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A steel sphere (ρ = 7800 kg/m³) radius 1.0 mm falls in water (ρ = 1000 kg/m³) and attains terminal speed 0.05 m/s. Using Stoke's law, η ≈ ?",
+      "options": ["0.30 Pa·s", "0.003 Pa·s", "0.0003 Pa·s", "3 Pa·s"],
+      "answer": 0,
+      "explanation": "η = 2 r² (ρ_s - ρ_f) g /(9 v) = 2×(1e-3)²×(6800)×9.8/(9×0.05) ≈ 0.296 Pa·s.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Equation of continuity for an incompressible fluid states:",
+      "options": ["A₁v₁ = A₂v₂", "ρ₁A₁v₁ = ρ₂A₂v₂", "p₁ + ½ρv₁² = p₂ + ½ρv₂²", "Q = η A"],
+      "answer": 0,
+      "explanation": "For incompressible flow mass conservation ⇒ volumetric flow conserved: A₁v₁ = A₂v₂.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If pipe cross-section area is halved, what happens to flow speed (incompressible steady flow)?",
+      "options": ["Speed doubles", "Speed halves", "Speed unchanged", "Speed becomes zero"],
+      "answer": 0,
+      "explanation": "Q constant ⇒ v ∝ 1/A, so halving area doubles speed.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Bernoulli's equation (inviscid steady flow) is:",
+      "options": ["p + ½ρv² + ρgh = constant along streamline", "p = ρgh only", "p + ρv = constant", "p + η dv/dy = constant"],
+      "answer": 0,
+      "explanation": "Bernoulli: static pressure + dynamic pressure + hydrostatic head constant along streamline for steady, incompressible, inviscid flow.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If velocity increases from v₁ to v₂ at same elevation, pressure change Δp (p₂ - p₁) is approximately:",
+      "options": ["-½ρ( v₂² - v₁² )", "+½ρ( v₂² - v₁² )", "0", "ρg(v₂ - v₁)"],
+      "answer": 0,
+      "explanation": "Bernoulli rearranged: p₂ - p₁ = ½ρ( v₁² - v₂² ) = -½ρ( v₂² - v₁² ).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Liquid of density 1000 kg/m³ flows: v₁ = 2 m/s, v₂ = 5 m/s. Pressure difference p₂ - p₁ = ?",
+      "options": ["-10500 Pa", "+10500 Pa", "-2100 Pa", "+2100 Pa"],
+      "answer": 0,
+      "explanation": "Δp = -½ρ(v₂² - v₁²) = -0.5×1000×(25-4) = -10500 Pa (pressure drops where speed increases).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Kinematic viscosity ν relates to dynamic viscosity η by:",
+      "options": ["ν = η/ρ", "ν = ρ/η", "ν = η ρ", "ν = η²/ρ"],
+      "answer": 0,
+      "explanation": "ν (m²/s) = η (Pa·s) / ρ (kg/m³).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Reynolds number is dimensionless because:",
+      "options": ["It is a ratio of inertial to viscous forces", "It is defined in meters", "It has units of pressure", "It depends on viscosity only"],
+      "answer": 0,
+      "explanation": "Re = inertial forces / viscous forces — dimensionless by construction.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Poiseuille's formula is valid for:",
+      "options": ["Steady laminar flow in circular tubes", "Turbulent flow", "Compressible high-speed flow", "Flow with strong secondary currents"],
+      "answer": 0,
+      "explanation": "Poiseuille's law assumes steady, incompressible, laminar, fully developed flow.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Approximate dynamic viscosity of water at room temperature (20–25°C) is:",
+      "options": ["1.0×10⁻³ Pa·s", "1.0 Pa·s", "1.0×10⁻⁵ Pa·s", "0.1 Pa·s"],
+      "answer": 0,
+      "explanation": "η_water ≈ 1.0×10⁻³ Pa·s at room temperature.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "According to Poiseuille, if tube radius doubles, flow rate Q changes by factor:",
+      "options": ["16 (2⁴)", "8", "4", "2"],
+      "answer": 0,
+      "explanation": "Q ∝ r⁴, doubling r gives 2⁴ = 16 times larger Q.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Shear stress between fluid layers τ is related to viscosity and velocity gradient as:",
+      "options": ["τ = η (du/dy)", "τ = ρ (du/dy)", "τ = η u y", "τ = p/A"],
+      "answer": 0,
+      "explanation": "Newtonian fluids: τ = η (du/dy) where du/dy is velocity gradient perpendicular to flow.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For most liquids, increasing temperature causes the dynamic viscosity to:",
+      "options": ["Decrease", "Increase", "Remain same", "Oscillate"],
+      "answer": 0,
+      "explanation": "Heating reduces intermolecular cohesive forces in liquids, lowering viscosity.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Torricelli's theorem: speed of efflux from a small hole at depth h is approximately:",
+      "options": ["v = √(2 g h)", "v = g h", "v = 2 g h", "v = √(g/h)"],
+      "answer": 0,
+      "explanation": "From Bernoulli: v = √(2 g h) for efflux from a large reservoir; example: h=5 m → v≈7.07 m/s.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In Stokes (creeping) flow regime the drag force on a small sphere is:",
+      "options": ["Proportional to velocity v", "Proportional to v²", "Independent of velocity", "Proportional to v³"],
+      "answer": 0,
+      "explanation": "Stokes drag F = 6π η r v is linear in v for low Reynolds numbers.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Compute Re for water (ρ=1000 kg/m³, η=1.0×10⁻³ Pa·s) flowing at v=0.20 m/s in a pipe of diameter D=0.01 m:",
+      "options": ["2000", "200", "20000", "20"],
+      "answer": 0,
+      "explanation": "Re = ρ v D / η = 1000×0.2×0.01/1e-3 = 2000 (borderline laminar/transitional).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Given Q = 1.0×10⁻6 m³/s, r = 1.0×10⁻3 m, L = 0.10 m, ΔP = 100 Pa, compute η ≈",
+      "options": ["3.9×10⁻4 Pa·s", "3.9×10⁻3 Pa·s", "3.9×10⁻5 Pa·s", "3.9 Pa·s"],
+      "answer": 0,
+      "explanation": "η = π r⁴ ΔP / (8 Q L) ≈ π×1e-12×100/(8×1e-6×0.1) ≈ 3.93×10⁻4 Pa·s.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Stokes' law (F = 6π η r v) applies when the Reynolds number around the sphere is:",
+      "options": ["Much less than 1", "Around 1000", "Greater than 4000", "Around 200"],
+      "answer": 0,
+      "explanation": "Stokes regime (creeping flow) requires Re << 1 so inertial effects negligible.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which statement about turbulent flow is true?",
+      "options": ["It has high mixing and enhanced momentum transfer compared to laminar flow", "It always has less drag than laminar flow", "It has well-defined parallel layers", "It occurs only in pipes"],
+      "answer": 0,
+      "explanation": "Turbulence causes mixing and increased momentum/energy transfer; usually increases frictional losses.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Viscosity causes pressure drop along a pipe because:",
+      "options": ["Viscous shear converts mechanical energy into heat, requiring extra pressure to maintain flow", "Viscosity increases density downstream", "Viscosity generates lift", "Viscosity reduces pipe area"],
+      "answer": 0,
+      "explanation": "Viscous friction dissipates mechanical energy as heat; to maintain the same flow, a pressure gradient (ΔP/L) must do work against viscous forces.",
+      "difficulty": "medium"
+    }
+  ]
+}

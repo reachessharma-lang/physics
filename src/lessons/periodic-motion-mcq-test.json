@@ -1,0 +1,354 @@
+{
+  "title": "Periodic Motion & SHM — 50 MCQs",
+  "grade": "XII",
+  "chapters": [2],
+  "date": "2026-01-06",
+  "description": "50 MCQs covering periodic motion concepts and SHM with explanations. Choose an option, submit to view explanation and mark, then navigate.",
+  "questions": [
+    {
+      "q": "Which of the following is NOT a characteristic of simple harmonic motion?",
+      "options": ["The acceleration is proportional to displacement", "The motion is periodic", "The total energy varies with time", "The frequency is independent of amplitude"],
+      "answer": 2,
+      "explanation": "In SHM, total mechanical energy remains constant (kinetic + potential energy is constant).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The time period of a simple pendulum is T. If the length is increased by 300%, the new time period will be:",
+      "options": ["2T", "T/2", "4T", "T/4"],
+      "answer": 0,
+      "explanation": "T ∝ √L. If length becomes 4L (300% increase), T becomes √4 T = 2T.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A particle executing SHM has amplitude A and time period T. The minimum time taken to travel from x = 0 to x = A/2 is:",
+      "options": ["T/2", "T/4", "T/6", "T/12"],
+      "answer": 3,
+      "explanation": "Using x = A sin(ωt), when x = A/2, sin(ωt) = 1/2 ⇒ ωt = π/6 ⇒ t = T/12.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The displacement of a particle in SHM is given by x = A sin(ωt + φ). Its kinetic energy will be maximum when:",
+      "options": ["Displacement is maximum", "Displacement is zero", "Acceleration is maximum", "Phase is π/2"],
+      "answer": 1,
+      "explanation": "Kinetic energy is maximum when potential energy is minimum, which occurs at the mean position (displacement = 0).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Two springs of force constants k₁ and k₂ are connected in series. The equivalent spring constant is:",
+      "options": ["k₁ + k₂", "k₁k₂/(k₁ + k₂)", "(k₁ + k₂)/k₁k₂", "√(k₁k₂)"],
+      "answer": 1,
+      "explanation": "For springs in series, 1/k_eq = 1/k₁ + 1/k₂ ⇒ k_eq = k₁k₂/(k₁ + k₂).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A simple pendulum is suspended from the ceiling of a lift. When the lift is falling freely, the period of the pendulum becomes:",
+      "options": ["Zero", "Infinite", "Same as when lift is stationary", "Double"],
+      "answer": 1,
+      "explanation": "In free fall, effective g = 0, so T = 2π√(L/g) becomes infinite (pendulum doesn't oscillate).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A mass m is suspended from a spring of constant k. The system is set into oscillation with amplitude A. The maximum speed of the mass is:",
+      "options": ["A√(k/m)", "A√(m/k)", "A(k/m)", "A(m/k)"],
+      "answer": 0,
+      "explanation": "Maximum speed v_max = Aω = A√(k/m), where ω = √(k/m).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The displacement of a particle in SHM is given by x = 5 sin(2πt + π/4). What is the magnitude of maximum acceleration?",
+      "options": ["5 m/s²", "10π m/s²", "20π² m/s²", "20π m/s²"],
+      "answer": 2,
+      "explanation": "Maximum acceleration a_max = ω²A = (2π)² × 5 = 20π² m/s².",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle executes SHM with amplitude A. At what displacement from the mean position is the kinetic energy equal to the potential energy?",
+      "options": ["A/4", "A/2", "A/√2", "A√2"],
+      "answer": 2,
+      "explanation": "When KE = PE, total energy E = 2PE ⇒ ½kA² = 2 × ½kx² ⇒ x = A/√2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A mass-spring system oscillates with frequency f. If the mass is increased by 300%, the new frequency will be:",
+      "options": ["f/2", "2f", "f/√2", "√2 f"],
+      "answer": 0,
+      "explanation": "f ∝ 1/√m. If mass becomes 4m (300% increase), f becomes f/√4 = f/2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The total energy of a particle executing SHM is E. When it is at half the amplitude, its kinetic energy is:",
+      "options": ["3E/4", "E/4", "E/2", "E"],
+      "answer": 0,
+      "explanation": "At x = A/2, PE = (1/2)k(A/2)² = (1/4)(1/2)kA² = E/4. So KE = E - E/4 = 3E/4.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A simple pendulum has time period T. If it is taken to a planet where acceleration due to gravity is one-fourth of Earth's, its new time period will be:",
+      "options": ["2T", "T/2", "4T", "T"],
+      "answer": 0,
+      "explanation": "T ∝ 1/√g. If g becomes g/4, T becomes 2T.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The displacement of a particle in SHM is given by x = A cos(ωt). The velocity when displacement is A/2 is:",
+      "options": ["Aω√3/2", "Aω/2", "Aω", "Aω/√2"],
+      "answer": 0,
+      "explanation": "v = ω√(A² - x²) = ω√(A² - (A/2)²) = ω√(3A²/4) = Aω√3/2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A spring of force constant k is cut into two equal parts. The force constant of each part is:",
+      "options": ["2k", "k/2", "k", "4k"],
+      "answer": 0,
+      "explanation": "For a spring, k ∝ 1/length. When cut into two equal parts, each has half the length, so force constant becomes 2k.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle executes SHM with amplitude 5 cm and frequency 2 Hz. Its maximum acceleration is:",
+      "options": ["80π² cm/s²", "20π cm/s²", "40π² cm/s²", "10π cm/s²"],
+      "answer": 0,
+      "explanation": "a_max = ω²A = (2πf)²A = (4π)² × 5 = 80π² cm/s².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two springs of force constants k and 4k are connected in parallel. The effective spring constant is:",
+      "options": ["5k", "4k/5", "2k", "3k"],
+      "answer": 0,
+      "explanation": "For springs in parallel, k_eq = k₁ + k₂ = k + 4k = 5k.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The time period of a simple pendulum of length 1 m is approximately:",
+      "options": ["2 seconds", "1 second", "3.14 seconds", "6.28 seconds"],
+      "answer": 0,
+      "explanation": "T = 2π√(L/g) ≈ 2×3.14×√(1/9.8) ≈ 6.28×0.32 ≈ 2 seconds.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A particle executes SHM with time period T. The time taken to go from mean position to half the amplitude is:",
+      "options": ["T/12", "T/8", "T/6", "T/4"],
+      "answer": 0,
+      "explanation": "x = A sin(ωt). When x = A/2, sin(ωt) = 1/2 ⇒ ωt = π/6 ⇒ t = T/12.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The potential energy of a particle executing SHM is maximum when:",
+      "options": ["Displacement is maximum", "Velocity is maximum", "Acceleration is maximum", "Kinetic energy is maximum"],
+      "answer": 0,
+      "explanation": "Potential energy U = ½kx² is maximum when displacement x is maximum.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A particle executes SHM according to equation x = 10 sin(πt + π/3) cm. Its phase at t = 1 s is:",
+      "options": ["4π/3", "π/3", "π", "2π/3"],
+      "answer": 0,
+      "explanation": "Phase = πt + π/3 = π(1) + π/3 = π + π/3 = 4π/3.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The displacement of a particle in SHM is given by x = A sin(ωt). Its average speed over one oscillation is:",
+      "options": ["4A/T", "2A/T", "A/T", "Zero"],
+      "answer": 0,
+      "explanation": "Total distance in one period = 4A. Time = T. Average speed = 4A/T.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A simple pendulum is taken from Earth to Moon. Its time period on Moon compared to Earth will be:",
+      "options": ["Increase", "Decrease", "Remain same", "Become zero"],
+      "answer": 0,
+      "explanation": "T ∝ 1/√g. Moon's g is less than Earth's, so T increases.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A mass-spring system has time period T. If the spring constant is quadrupled, the new time period is:",
+      "options": ["T/2", "2T", "T", "T/4"],
+      "answer": 0,
+      "explanation": "T ∝ 1/√k. If k becomes 4k, T becomes T/2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The acceleration of a particle in SHM is:",
+      "options": ["Always directed towards mean position", "Always directed away from mean position", "Constant in magnitude", "Maximum at mean position"],
+      "answer": 0,
+      "explanation": "In SHM, acceleration a = -ω²x, always directed towards mean position.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A particle executes SHM with amplitude A and angular frequency ω. Its maximum velocity is:",
+      "options": ["Aω", "A/ω", "ω/A", "A²ω"],
+      "answer": 0,
+      "explanation": "Maximum velocity v_max = Aω.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A simple pendulum of length L has time period T. If length is increased to 9L, the new time period is:",
+      "options": ["3T", "9T", "T/3", "T/9"],
+      "answer": 0,
+      "explanation": "T ∝ √L. If L becomes 9L, T becomes 3T.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The phase difference between displacement and velocity in SHM is:",
+      "options": ["π/2", "π", "π/4", "Zero"],
+      "answer": 0,
+      "explanation": "If x = A sin(ωt), then v = Aω cos(ωt) = Aω sin(ωt + π/2). So phase difference = π/2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle executes SHM with time period 2 seconds. Its frequency is:",
+      "options": ["0.5 Hz", "1 Hz", "2 Hz", "4 Hz"],
+      "answer": 0,
+      "explanation": "f = 1/T = 1/2 = 0.5 Hz.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The total energy of a particle executing SHM is proportional to:",
+      "options": ["Square of amplitude", "Amplitude", "Square root of amplitude", "Frequency"],
+      "answer": 0,
+      "explanation": "Total energy E = ½kA² ∝ A².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A simple pendulum executes 40 oscillations in 80 seconds. Its time period is:",
+      "options": ["2 seconds", "0.5 seconds", "4 seconds", "1 second"],
+      "answer": 0,
+      "explanation": "T = total time / number of oscillations = 80/40 = 2 seconds.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The displacement of a particle in SHM is given by x = 0.1 sin(100πt) m. Its frequency is:",
+      "options": ["50 Hz", "100 Hz", "200 Hz", "25 Hz"],
+      "answer": 0,
+      "explanation": "ω = 100π rad/s. f = ω/(2π) = 100π/(2π) = 50 Hz.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A mass-spring system oscillates with amplitude A. If amplitude is doubled, the total energy becomes:",
+      "options": ["4 times", "2 times", "Same", "Half"],
+      "answer": 0,
+      "explanation": "E ∝ A². If A becomes 2A, E becomes 4E.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The phase difference between acceleration and displacement in SHM is:",
+      "options": ["π", "π/2", "π/4", "Zero"],
+      "answer": 0,
+      "explanation": "a = -ω²x. The negative sign indicates phase difference of π.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A simple pendulum has length L and time period T. If length is reduced to L/4, the new time period is:",
+      "options": ["T/2", "2T", "T/4", "4T"],
+      "answer": 0,
+      "explanation": "T ∝ √L. If L becomes L/4, T becomes T/2.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A particle executes SHM with amplitude 10 cm. The distance traveled in one time period is:",
+      "options": ["40 cm", "20 cm", "10 cm", "Zero"],
+      "answer": 0,
+      "explanation": "In one time period, particle goes from mean to extreme and back twice: 4 × amplitude = 40 cm.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The time period of a simple pendulum is independent of:",
+      "options": ["Mass of bob", "Length of pendulum", "Acceleration due to gravity", "Amplitude (for small oscillations)"],
+      "answer": 0,
+      "explanation": "T = 2π√(L/g) is independent of mass of bob.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A particle executes SHM with time period T. The ratio of time taken to travel from extreme to mean position and from mean to extreme position is:",
+      "options": ["1:1", "1:2", "2:1", "1:3"],
+      "answer": 0,
+      "explanation": "Both take equal time (T/4) due to symmetry of SHM.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A spring-mass system has time period T. If both mass and spring constant are doubled, the new time period is:",
+      "options": ["T", "2T", "T/2", "T/√2"],
+      "answer": 0,
+      "explanation": "T = 2π√(m/k). If both m and k are doubled, ratio m/k remains same, so T remains T.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle executes SHM with amplitude A. Its speed is half the maximum speed when displacement is:",
+      "options": ["A√3/2", "A/2", "A/√2", "A/4"],
+      "answer": 0,
+      "explanation": "v = v_max√(1 - x²/A²). When v = v_max/2, √(1 - x²/A²) = 1/2 ⇒ 1 - x²/A² = 1/4 ⇒ x²/A² = 3/4 ⇒ x = A√3/2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The displacement of a particle in SHM is x = 8 sin(πt + π/6) cm. Its displacement at t = 0 is:",
+      "options": ["4 cm", "8 cm", "0", "4√3 cm"],
+      "answer": 0,
+      "explanation": "x(0) = 8 sin(π/6) = 8 × 1/2 = 4 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A simple pendulum is taken to a height equal to Earth's radius above Earth's surface. Its time period compared to on Earth's surface will be:",
+      "options": ["2 times", "√2 times", "4 times", "8 times"],
+      "answer": 0,
+      "explanation": "At height h = R, g' = g/(1+h/R)² = g/4. T ∝ 1/√g, so T becomes 2T."
+    },
+    {
+      "q": "Two springs of force constants k₁ and k₂ have equal maximum extension under same force. Their potential energy ratio is:",
+      "options": ["k₂:k₁", "k₁:k₂", "1:1", "√k₁:√k₂"],
+      "answer": 0,
+      "explanation": "F = kx, so x = F/k. For same F, x ∝ 1/k. PE = ½kx² = ½k(F²/k²) = F²/(2k). So PE ∝ 1/k. Ratio = (1/k₁):(1/k₂) = k₂:k₁."
+    },
+    {
+      "q": "A particle executes SHM with amplitude A. The mean position of velocity over one oscillation is:",
+      "options": ["Zero", "Aω/2", "2Aω/π", "Aω/√2"],
+      "answer": 0,
+      "explanation": "Velocity is a sinusoidal function. Mean value over one complete cycle is zero.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A mass m is suspended from a spring of constant k. The system oscillates with frequency f. If another mass m is added, the new frequency is:",
+      "options": ["f/√2", "f√2", "f/2", "2f"],
+      "answer": 0,
+      "explanation": "f ∝ 1/√m. If mass becomes 2m, f becomes f/√2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A simple pendulum has time period T in air. When completely immersed in water, its time period:",
+      "options": ["Increases", "Decreases", "Remains same", "Becomes zero"],
+      "answer": 0,
+      "explanation": "In water, effective g decreases due to buoyancy, so T increases.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The displacement of a particle in SHM is given by x = A sin(ωt) + B cos(ωt). The amplitude of motion is:",
+      "options": ["√(A² + B²)", "A + B", "|A - B|", "√(A² - B²)"],
+      "answer": 0,
+      "explanation": "x = √(A²+B²) sin(ωt + φ) where φ = tan⁻¹(B/A). So amplitude = √(A²+B²)."
+    },
+    {
+      "q": "A particle executes SHM with time period 6 seconds. The minimum time after which its kinetic energy becomes 3/4 of total energy is:",
+      "options": ["0.5 seconds", "1 second", "1.5 seconds", "2 seconds"],
+      "answer": 0,
+      "explanation": "KE = (3/4)E when PE = E/4 ⇒ x = A/2. Time from mean to A/2: t = T/12 = 6/12 = 0.5 s."
+    },
+    {
+      "q": "A simple pendulum is vibrating in an elevator. If elevator accelerates upward with acceleration a, the time period becomes:",
+      "options": ["2π√[L/(g+a)]", "2π√[L/(g-a)]", "2π√(L/g)", "2π√(L/a)"],
+      "answer": 0,
+      "explanation": "In accelerating elevator, effective g = g + a (upward acceleration). So T = 2π√[L/(g+a)].",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A mass-spring system oscillates with amplitude A. If amplitude is halved, the maximum acceleration becomes:",
+      "options": ["Half", "Double", "One-fourth", "Four times"],
+      "answer": 0,
+      "explanation": "a_max = ω²A ∝ A. If A becomes A/2, a_max becomes a_max/2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle executes SHM according to x = A sin²(ωt). This represents SHM with amplitude:",
+      "options": ["A/2", "A", "2A", "A/√2"],
+      "answer": 0,
+      "explanation": "x = A sin²(ωt) = (A/2)(1 - cos(2ωt)) = A/2 - (A/2)cos(2ωt). This is SHM about x = A/2 with amplitude A/2."
+    }
+  ]
+}

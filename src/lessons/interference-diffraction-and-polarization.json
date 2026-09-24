@@ -1,0 +1,429 @@
+{
+  "title": "Interference, Diffraction & Polarization — 60 MCQs",
+  "grade": "XII",
+  "chapters": [7, 8, 9],
+  "date": "2026-01-07",
+  "description": "60 questions covering interference (Young's double-slit), diffraction (single slit, grating, resolving power) and polarization (phenomenon, transverse nature, Brewster's law). Options are shuffled each load and the correct choice is tracked accordingly.",
+  "questions": [
+    {
+      "q": "Interference is the phenomenon when two or more waves:",
+      "options": ["Superpose to produce a resultant amplitude distribution", "Propagate without interaction", "Disappear upon meeting", "Change frequency permanently"],
+      "answer": 0,
+      "explanation": "Interference arises when waves superpose; depending on phase relation they add constructively or destructively.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Coherent sources are essential for stable interference because they:",
+      "options": ["Maintain constant phase difference", "Have same amplitude only", "Are physically connected", "Have different frequencies"],
+      "answer": 0,
+      "explanation": "Coherence requires stable phase relationship (and typically same frequency), so interference pattern is stable in time.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In Young's double-slit experiment the fringe separation (bright to bright) on screen is given by:",
+      "options": ["β = λD/d", "β = dD/λ", "β = λd/D", "β = D/(λ d)"],
+      "answer": 0,
+      "explanation": "Fringe spacing β = λ D / d where λ is wavelength, D distance to screen, d slit separation.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For Young's double slit, the path difference for nth order bright fringe is:",
+      "options": ["n λ", "(n+1/2) λ", "(n/2) λ", "λ/n"],
+      "answer": 0,
+      "explanation": "Constructive interference occurs when path difference = n λ (n integer) producing bright fringes.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If slit separation d is doubled in Young's experiment (other parameters fixed), fringe width β:",
+      "options": ["Halves", "Doubles", "Unchanged", "Becomes zero"],
+      "answer": 0,
+      "explanation": "β = λ D / d; doubling d halves β.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Young's experiment, if wavelength increases, fringes:",
+      "options": ["Move further apart (increase spacing)", "Come closer", "Disappear", "Number of fringes decreases only"],
+      "answer": 0,
+      "explanation": "β ∝ λ so larger wavelength gives larger fringe separation.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If the screen distance D is increased, keeping λ and d constant, fringe width:",
+      "options": ["Increases linearly with D", "Decreases", "Remains same", "Oscillates"],
+      "answer": 0,
+      "explanation": "β = λD/d, so β increases linearly with D.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If the two slits have unequal intensities, the interference pattern:",
+      "options": ["Has reduced contrast (visibility) but fringes remain at same positions", "Disappears entirely", "Shifts positions", "Becomes polychromatic"],
+      "answer": 0,
+      "explanation": "Unequal amplitudes reduce visibility (contrast) but positions determined by phase still follow same relation.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The condition for destructive interference (dark fringe) in Young's double slit is path difference:",
+      "options": ["(n + 1/2) λ", "n λ", "2 n λ", "λ/(n+1)"],
+      "answer": 0,
+      "explanation": "Destructive interference when path difference = (n + 1/2)λ.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Fringe visibility (contrast) is defined using I_max and I_min as:",
+      "options": ["(I_max - I_min)/(I_max + I_min)", "I_max/I_min", "I_min/I_max", "I_max + I_min"],
+      "answer": 0,
+      "explanation": "Visibility V = (I_max - I_min)/(I_max + I_min) measures fringe contrast.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two sources are said to be temporally coherent when:",
+      "options": ["They maintain a fixed phase relation over time", "They are at same spatial location", "Their amplitudes are equal", "They have different frequencies"],
+      "answer": 0,
+      "explanation": "Temporal coherence requires constant phase relation over time between waves of same frequency.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Spatial coherence refers to:",
+      "options": ["Phase correlation between points across a wavefront", "Time correlation", "Amplitude stability", "Polarization matching"],
+      "answer": 0,
+      "explanation": "Spatial coherence concerns correlation between phases at different spatial points on a wavefront; necessary for producing interference over finite separation.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Young's experiment performed with white light shows fringes that:",
+      "options": ["Show central white fringe with colored fringes on either side", "Are all white equally", "Show only red fringes", "Disappear because white light is incoherent"],
+      "answer": 0,
+      "explanation": "White light contains many wavelengths; central fringe (zero path difference) is white, other fringes show spectral dispersion (colored) producing overlapping colored bands.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In thin-film interference constructive interference for reflected light occurs when the optical path difference equals:",
+      "options": ["m λ (accounting for phase shifts)", "λ/2 only", "Always 0", "2 λ only"],
+      "answer": 0,
+      "explanation": "Constructive interference when effective path difference (including any π phase shifts upon reflection) equals mλ.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Michelson interferometer measures small lengths by converting change in length to:",
+      "options": ["Shift in interference fringes", "Change in intensity only", "Change in color exclusively", "Polarization shift"],
+      "answer": 0,
+      "explanation": "Displacement of mirror changes optical path difference, producing fringe shifts; counting fringes yields length change (ΔL = m λ / 2).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Diffraction is the phenomenon in which waves:",
+      "options": ["Bend around obstacles and spread through apertures", "Always travel in straight lines without spreading", "Increase in frequency on passing obstacle", "Disappear on encountering aperture"],
+      "answer": 0,
+      "explanation": "Diffraction is wave bending and spreading that occurs when a wave encounters obstacles or openings comparable to its wavelength.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Single-slit diffraction pattern central maximum is:",
+      "options": ["Wider and more intense than secondary maxima", "Narrower than others", "All maxima equal", "Absent"],
+      "answer": 0,
+      "explanation": "The central maximum is the brightest and usually about twice as wide as the side maxima (for single-slit Fraunhofer diffraction).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a single slit of width a, minima occur at angles θ given by:",
+      "options": ["a sin θ = n λ (n = ±1, ±2, ...)", "a sin θ = (n + 1/2) λ", "a cos θ = n λ", "a tan θ = n λ"],
+      "answer": 0,
+      "explanation": "Single-slit minima: a sin θ = n λ for integer n (nonzero integer), with central maximum between first minima.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The angular width of central maximum in single slit is approximately:",
+      "options": ["2 λ / a (small-angle approx)", "λ a", "a / λ", "λ/(2 a)"],
+      "answer": 0,
+      "explanation": "For small angles first minima at ± λ / a, so central maximum angular width ≈ 2 λ/a.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Fraunhofer diffraction applies when:",
+      "options": ["Source and screen are effectively at infinite distance (parallel rays) or lenses are used", "Source is very near to slit (Fresnel zone)", "Wavelength is zero", "Amplitude is zero"],
+      "answer": 0,
+      "explanation": "Fraunhofer (far-field) diffraction assumes plane wave incidence and screen in far field or appropriate lens configuration.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Rayleigh criterion for resolving two point sources by a circular aperture uses:",
+      "options": ["Angle ≈ 1.22 λ/D", "θ ≈ λ/D exactly", "θ ≈ 2 λ/D", "θ ≈ λ/(2D)"],
+      "answer": 0,
+      "explanation": "Rayleigh criterion: minimum resolvable angle ≈ 1.22 λ / D for circular aperture (first zero of Airy disk).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Diffraction grating maxima occur when d sin θ = n λ, where d is grating spacing. The integer n corresponds to:",
+      "options": ["Order of maximum", "Number of slits only", "Wavelength index", "Polarization state"],
+      "answer": 0,
+      "explanation": "The constructive interference condition for a grating gives maxima at orders n satisfying d sin θ = n λ.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If grating has N slits illuminated, intensity of principal maxima scales approximately as:",
+      "options": ["N² times single-slit value (sharp peaks)", "N times", "1/N", "Independent of N"],
+      "answer": 0,
+      "explanation": "Interference from N equally spaced coherent slits gives principal maxima intensity ∝ N² (sharpness increases with N).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For diffraction grating, increasing number of lines per mm results in:",
+      "options": ["Greater angular dispersion (larger separation between spectral lines)", "Less dispersion", "No change", "Wider central maximum only"],
+      "answer": 0,
+      "explanation": "Higher line density (smaller d) increases angular separation for given order and wavelength (sinθ = nλ/d).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Resolving power R of a grating is given by R = λ/Δλ ≈ nN where n is order and N is total number of illuminated slits. This means resolving power increases with:",
+      "options": ["Order and number of slits illuminated", "Slit width only", "Wavelength only", "Angle only"],
+      "answer": 0,
+      "explanation": "R ≈ nN shows higher order or more illuminated slits gives better ability to distinguish close wavelengths.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In single-slit diffraction, position y_n of nth minima on screen at distance D is approximately:",
+      "options": ["y_n = n λ D / a", "y_n = a λ D / n", "y_n = a / (n λ D)", "y_n = n a / (λ D)"],
+      "answer": 0,
+      "explanation": "Using small-angle approximation sinθ ≈ y/D, minima condition a sinθ = n λ => y_n = n λ D / a.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If slit width a decreases, the diffraction pattern central maximum:",
+      "options": ["Becomes wider (increases angular width)", "Becomes narrower", "Has more intensity only", "Doesn't change"],
+      "answer": 0,
+      "explanation": "Smaller slit width increases diffraction (wider central maximum) because λ/a larger.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Diffraction explains why we can hear someone around a corner because sound wavelengths are:",
+      "options": ["Comparable to obstacle sizes causing significant diffraction", "Much smaller than obstacles (no diffraction)", "Always absorbed", "Reflected only"],
+      "answer": 0,
+      "explanation": "When wavelength is comparable to object aperture/obstacle sizes, waves diffract and spread into shadowed regions — sound (longer λ) diffracts more than light.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The central maximum intensity in single-slit diffraction is proportional to:",
+      "options": ["a² (slit width squared) for given illumination per unit width", "a only", "1/a", "Independent of a"],
+      "answer": 0,
+      "explanation": "Total transmitted power ∝ a; central peak amplitude ∝ a, so intensity (∝ amplitude²) scales roughly as a² (for comparable illumination per unit width).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The first minimum in single-slit pattern occurs at angle where sinθ = λ/a. For visible light λ ~ 500 nm and a = 0.1 mm, angle ≈",
+      "options": ["0.005 rad (~0.29°)", "0.05 rad", "0.0005 rad", "5 rad"],
+      "answer": 0,
+      "explanation": "sinθ = 5×10⁻7 / 1×10⁻4 = 5×10⁻3 ≈ 0.005 rad ≈ 0.29°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A transmission grating of 5000 lines per meter (d = 2×10⁻4 m) in first order gives angle for λ=500 nm as sinθ = λ/d. θ ≈",
+      "options": ["~0.0025 rad (≈0.14°)", "~0.5 rad", "~1.0 rad", "~2.5 rad"],
+      "answer": 0,
+      "explanation": "sinθ = 5e-7 / 2e-4 = 2.5e-3 ≈ 0.0025 rad ~0.143°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Grating is preferred over prism for spectral analysis because:",
+      "options": ["Grating dispersion is linear in wavelength and can give higher resolving power for many slits", "Grating absorbs less light", "Prism can't separate colors", "Grating is cheaper"],
+      "answer": 0,
+      "explanation": "Gratings offer predictable angular dispersion and high resolving power proportional to number of illuminated grooves.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Diffraction limit of an optical instrument determines:",
+      "options": ["Smallest angular separation it can resolve (Rayleigh criterion)", "Maximum magnification only", "Color of image", "Weight of instrument"],
+      "answer": 0,
+      "explanation": "Diffraction limit (set by aperture) sets resolving power; below that two point sources are not distinctly resolvable.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which gives best resolution (smallest resolvable angle) for an instrument with aperture diameter D?",
+      "options": ["Large D and short λ (θ_min ≈ 1.22 λ/D)", "Small D and long λ", "Large λ only", "Small D only"],
+      "answer": 0,
+      "explanation": "θ_min scales as λ/D, so large aperture and small wavelength give best angular resolution.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When white light is used with a grating, spectral orders may overlap. To avoid overlap one can:",
+      "options": ["Use lower orders or wavelength filters", "Increase slit width only", "Reduce number of lines", "Change polarization"],
+      "answer": 0,
+      "explanation": "Order overlap can be avoided by restricting spectral range (filters) or using appropriate order selection; grating equation gives overlapping orders for different wavelengths.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Polarization of light describes the:",
+      "options": ["Orientation of electric field vector oscillations", "Frequency distribution", "Intensity only", "Direction of propagation only"],
+      "answer": 0,
+      "explanation": "Polarization refers to the direction (and phase relations) of the transverse E-field oscillation for electromagnetic waves.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Unpolarized light consists of:",
+      "options": ["Randomly oriented polarization components", "Only one fixed polarization", "No electric field", "Only longitudinal waves"],
+      "answer": 0,
+      "explanation": "Unpolarized light has many random polarization orientations on timescales relevant to detection.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Polarizers transmit light whose electric field is aligned with their transmission axis and absorb/reflect perpendicular components. A pair of ideal polarizers at 90° gives transmitted intensity:",
+      "options": ["Zero (for ideal polarizers)", "Same as single polarizer", "Double intensity", "Undefined"],
+      "answer": 0,
+      "explanation": "Two crossed ideal polarizers block all light as second polarizer's axis is perpendicular to transmitted component.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Malus's law states transmitted intensity I through a polarizer for incident polarized light I0 is:",
+      "options": ["I = I0 cos²θ", "I = I0 sin θ", "I = I0 cos θ", "I = I0"],
+      "answer": 0,
+      "explanation": "Malus's law: transmitted intensity = I0 cos²θ where θ is angle between incident polarization and polarizer axis.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Brewster's angle θ_B for no reflected p-polarized light satisfies:",
+      "options": ["tan θ_B = n2/n1 (incident from medium n1 to n2)", "sin θ_B = n2/n1", "cos θ_B = n1/n2", "tan θ_B = n1/n2"],
+      "answer": 0,
+      "explanation": "Brewster's law: tan θ_B = n2 / n1 (when light travels from medium 1 into medium 2) causing reflected light to be fully s-polarized.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "At Brewster's angle the reflected and refracted rays are:",
+      "options": ["At right angles (90°) to each other", "Parallel", "Coincident", "Anti-parallel"],
+      "answer": 0,
+      "explanation": "At Brewster's angle reflected and refracted rays are perpendicular; this geometric condition yields tan θ_B = n2/n1.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Polaroid filters are commonly based on:",
+      "options": ["Dichroic absorption aligning molecules", "Prism reflections only", "Interference only", "Magnetic alignment"],
+      "answer": 0,
+      "explanation": "Polaroids use aligned dichroic molecules that preferentially absorb one polarization direction, transmitting the orthogonal component.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Circular polarization can be formed by:",
+      "options": ["Passing linearly polarized light through a quarter-wave plate at 45° to axis", "Using only linear polarizers", "Only with diffraction gratings", "By reflection at normal incidence"],
+      "answer": 0,
+      "explanation": "Quarter-wave plate introduces 90° phase shift between orthogonal components, generating circular polarization when amplitudes equal and axes at 45°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Polarization by reflection is strongest for light polarized:",
+      "options": ["Perpendicular to the plane of incidence (s-polarized)", "Parallel (p-polarized)", "Random", "Longitudinal"],
+      "answer": 0,
+      "explanation": "At Brewster's angle the p-component is not reflected, so reflected light is predominantly s-polarized (perpendicular to plane of incidence).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Polarization confirms transverse nature of light because:",
+      "options": ["Only transverse waves can have a direction of oscillation (polarization) perpendicular to propagation", "Longitudinal waves are polarized similarly", "Polarization is unrelated to wave nature", "Polarization implies no propagation"],
+      "answer": 0,
+      "explanation": "Polarization demonstrates the vector (transverse) nature of light's electric field; longitudinal waves cannot exhibit polarization transverse to propagation.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A quarter-wave plate introduces a phase shift of:",
+      "options": ["π/2 (90°) between orthogonal components", "π (180°)", "2π (360°)", "π/4 (45°)"],
+      "answer": 0,
+      "explanation": "Quarter-wave plate gives a π/2 phase delay, converting linear to circular or elliptical polarization depending on input orientation.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If unpolarized light of intensity I0 passes through an ideal polarizer, transmitted intensity is:",
+      "options": ["I0/2", "I0", "0", "2 I0"],
+      "answer": 0,
+      "explanation": "An ideal polarizer transmits half the power of unpolarized light on average (I = I0/2).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When two linear polarizers are crossed (90°), inserting a third polarizer at 45° between them results in transmitted intensity:",
+      "options": ["Non-zero (some light transmitted)", "Still zero", "Infinite", "Negative"],
+      "answer": 0,
+      "explanation": "Middle polarizer projects polarization and allows some light through second polarizer (quantified by successive cos² factors), demonstrating interference of polarization states.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Brewster's angle for light from air (n≈1.00) into glass (n≈1.5) is approximately:",
+      "options": ["≈56°", "≈34°", "≈41°", "≈66°"],
+      "answer": 0,
+      "explanation": "tan θ_B = n2/n1 = 1.5 => θ_B ≈ arctan(1.5) ≈ 56.3°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which technique can determine polarization state of light?",
+      "options": ["Using analyzer (polarizer) and rotating it to measure intensity variation", "Only photodiode without polarizer", "Using diffraction grating only", "By measuring temperature"],
+      "answer": 0,
+      "explanation": "Rotating an analyzer and recording transmitted intensity reveals polarization via Malus's law; variation indicates polarization angle and type.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Polarization by scattering (e.g., sky polarization) occurs because:",
+      "options": ["Scattered light has preferential polarization perpendicular to scattering plane", "Scattering doesn't affect polarization", "Only absorption causes polarization", "Scattering randomizes polarization always"],
+      "answer": 0,
+      "explanation": "Rayleigh scattering polarizes sunlight; scattered light tends to be polarized perpendicular to the plane containing incident and scattered rays.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A beam of circularly polarized light passing through a linear polarizer yields an intensity independent of polarizer angle and equal to:",
+      "options": ["Half the incident intensity", "Zero", "Full intensity", "Depends on angle"],
+      "answer": 0,
+      "explanation": "Circularly polarized light has equal amplitude components in all linear polarization directions; transmitted intensity through linear polarizer = I/2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If reflected light from a dielectric surface at Brewster's angle is observed, its polarization is:",
+      "options": ["Perpendicular to plane of incidence (s-polarized)", "Parallel (p-polarized)", "Circular", "Unpolarized"],
+      "answer": 0,
+      "explanation": "At Brewster's angle p-polarized component is not reflected; reflected light is predominantly s-polarized.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which material is commonly used to make high-quality quarter-wave plates in visible range?",
+      "options": ["Quartz (birefringent crystal)", "Glass (isotropic)", "Iron (metal)", "Water"],
+      "answer": 0,
+      "explanation": "Birefringent crystals like quartz or mica produce reliable retardation plates (quarter-wave) due to anisotropic refractive indices.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A polarizer and analyzer crossed transmit no light. Introducing a half-wave plate between them rotates polarization by 90°. Resulting transmission is:",
+      "options": ["Maximum (depends on rotation)", "Zero", "Half only", "Undefined"],
+      "answer": 0,
+      "explanation": "Half-wave plate rotates linear polarization direction by twice the angle between input axis and fast axis; with proper rotation it can align polarization to analyzer allowing transmission.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In Young's double-slit with d = 0.5 mm, D=2 m, λ=600 nm, fringe separation β ≈",
+      "options": ["β = λD/d ≈ 2.4 mm", "0.24 mm", "0.024 mm", "24 mm"],
+      "answer": 0,
+      "explanation": "β = λD/d = 600e-9*2/0.0005 = 2.4e-3 m = 2.4 mm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A single-slit of width a produces first minimum at angle θ ≈ 0.01 rad for λ=500 nm. Slit width a ≈",
+      "options": ["50 μm", "5 μm", "500 μm", "0.5 μm"],
+      "answer": 0,
+      "explanation": "a ≈ λ/ sinθ ≈ 5e-7/0.01 = 5e-5 m = 50 μm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A grating with 600 lines per mm has d = 1/600000 m. First order angle for λ=500 nm is sinθ = λ/d. θ ≈",
+      "options": ["≈0.3 (≈17°)", "0.03", "1.0", "0.9"],
+      "answer": 0,
+      "explanation": "d = 1/(600×10³) = 1.667e-6 m. sinθ = 5e-7/1.667e-6 ≈ 0.3 → θ ≈ 17.5°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For a resolving power R = λ/Δλ = nN; a grating used in 2nd order with 10000 illuminated lines can resolve Δλ at λ=600 nm of order:",
+      "options": ["Δλ ≈ 3×10⁻¹¹ m (0.03 pm)", "0.03 nm", "0.3 nm", "3 nm"],
+      "answer": 0,
+      "explanation": "Δλ = λ/(nN) = 6e-7/(2×10000) = 3e-11 m = 0.03 pm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "At Brewster's angle, reflected light is completely polarized because the reflection coefficient for p-polarized light becomes zero when:",
+      "options": ["Reflected and refracted rays are perpendicular", "Index of refraction is 1", "Incident angle is zero", "Light is monochromatic"],
+      "answer": 0,
+      "explanation": "The zero of p-polarized reflection coefficient occurs when reflected and refracted rays are at 90°, leading to Brewster's condition.",
+      "difficulty": "medium"
+    }
+  ]
+}

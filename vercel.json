@@ -1,0 +1,31 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "python3 build.py",
+  "outputDirectory": "public",
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/search/label/:label", "destination": "/search.html?q=:label", "permanent": true },
+    { "source": "/search", "has": [{ "type": "query", "key": "q", "value": "(?<q>.*)" }], "destination": "/search.html?q=:q", "permanent": true },
+    { "source": "/p/:page.html", "destination": "/pages/:page.html", "permanent": true },
+    { "source": "/:year(\\d{4})/:month(\\d{2})/:slug.html", "destination": "/posts/:slug.html", "permanent": true },
+    { "source": "/:slug((?!index|search|404|styleguide)[a-z0-9-]+).html", "destination": "/posts/:slug.html", "permanent": true },
+    { "source": "/feeds/:path*", "destination": "/", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }]
+    }
+  ]
+}

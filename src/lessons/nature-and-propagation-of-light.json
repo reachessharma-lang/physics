@@ -1,0 +1,114 @@
+{
+  "title": "Nature & Propagation of Light — 15 MCQs",
+  "grade": "XII",
+  "chapters": [6],
+  "date": "2026-01-07",
+  "description": "Huygens' Principle — reflection & refraction. 15 MCQs with explanations. Select an answer and submit to view explanation and marking.",
+  "questions": [
+    {
+      "q": "Huygens' principle states that every point on a wavefront acts as:",
+      "options": ["A source of secondary spherical wavelets", "A point of zero amplitude", "A reflecting barrier only", "A node of oscillation"],
+      "answer": 0,
+      "explanation": "Huygens: each point on a wavefront may be considered a source of secondary wavelets; the new wavefront is the envelope of these wavelets.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Using Huygens' construction, the reflected wavefront is obtained by taking:",
+      "options": ["Envelope of secondary wavelets in the region of reflection", "Sum of intensities only", "Only the initial wavefront", "Geometric mirror without wavelets"],
+      "answer": 0,
+      "explanation": "Reflected wavefront is the envelope of wavelets produced by points on the incident wavefront when reflection boundary conditions are applied.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When applying Huygens' principle at a plane reflecting surface, the angle of reflection equals:",
+      "options": ["Angle of incidence (measured from normal)", "Twice the incidence angle", "Sum of incidence and transmission angles", "Zero"],
+      "answer": 0,
+      "explanation": "The construction yields reflected ray making same angle with the normal as incident ray — law of reflection.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Huygens' principle can be used to derive Snell's law for refraction by considering:",
+      "options": ["Different speeds of secondary wavelets in the two media", "Only amplitudes", "Only frequencies (unchanged)", "Polarization effects"],
+      "answer": 0,
+      "explanation": "In refraction, secondary wavelets travel at different speeds in the two media; envelope construction leads to sin θ1 / sin θ2 = v1 / v2 = n2 / n1 (Snell's law).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Huygens' explanation of refraction, what is conserved across the boundary for a monochromatic wave?",
+      "options": ["Frequency (and hence time period)", "Wavelength", "Wave speed", "Amplitude"],
+      "answer": 0,
+      "explanation": "Frequency is determined by the source and remains the same across boundary; wavelength and speed change.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If sound waves travel from air into water, Huygens' construction predicts that the refracted wavefront in water is:",
+      "options": ["Closer spaced (shorter wavelength) because speed is lower in water?", "Farther spaced (longer wavelength)", "Unchanged spacing", "Completely absorbed"],
+      "answer": 0,
+      "explanation": "If wave speed in water is higher than in air, spacing increases; for sound typically water speed is higher so wavelength increases; general answer depends on v2 vs v1. The principle: spacing ∝ speed (wavelength = v/f).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Huygens' principle explains why rays in reflection obey the law of reflection because the envelope of secondary wavelets is tangent to:",
+      "options": ["Wavelets symmetric about normal leading to equal angles", "Random directions", "Only transmitted direction", "The incident wave only"],
+      "answer": 0,
+      "explanation": "Symmetry of contributions about the normal at a planar surface leads to equal incidence and reflection angles.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When a plane wavefront meets a boundary obliquely and the speed in medium 2 is lower than in medium 1, the refracted ray bends:",
+      "options": ["Toward the normal", "Away from the normal", "Perpendicular to boundary", "Back into medium 1"],
+      "answer": 0,
+      "explanation": "If v2 < v1 then sinθ2 = (v2/v1) sinθ1 < sinθ1 ⇒ θ2 < θ1, so ray bends toward the normal.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Huygens' principle alone does not fully explain intensity distribution; to account for amplitude and energy one supplements it with:",
+      "options": ["Fresnel's construction (and Huygens–Fresnel principle) including phase and amplitude weighting", "Classical ray optics only", "Only geometrical considerations", "Quantum theory only"],
+      "answer": 0,
+      "explanation": "Huygens–Fresnel principle adds phase and amplitude contributions (including obliquity factor) to predict diffraction and interference intensities.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Total internal reflection occurs when light travels from medium 1 to medium 2 and:",
+      "options": ["Incidence angle exceeds critical angle because sinθ_c = n2/n1 (n1>n2)", "n2 > n1 and incidence > critical", "Incidence is normal always", "Frequency changes causing reflection"],
+      "answer": 0,
+      "explanation": "TIR: when n1>n2 and θ_incident > θ_c (sin θ_c = n2/n1), refraction cannot satisfy Snell's law so wave is totally reflected.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Using Huygens, the critical angle for total internal reflection arises because secondary wavelets in the second medium:",
+      "options": ["Cannot form an advancing envelope into the second medium for larger angles", "Travel faster than c", "Vanish entirely", "Reverse frequency"],
+      "answer": 0,
+      "explanation": "Beyond critical angle, the construction cannot produce a real refracted ray in medium 2 — transmitted wave becomes evanescent (no propagating envelope), leading to TIR.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A plane wave traveling in medium A with speed v_A strikes interface to medium B with speed v_B. Snell's law from Huygens yields:",
+      "options": ["sinθ_A / sinθ_B = v_A / v_B", "sinθ_A / sinθ_B = v_B / v_A", "sinθ_A = sinθ_B", "θ_A = θ_B always"],
+      "answer": 0,
+      "explanation": "From geometry of wavelets and common frequency: λ ∝ v so sinθ_A / sinθ_B = λ_A/λ_B = v_A/v_B; equivalently n_B/n_A = sinθ_A / sinθ_B.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A light ray from glass (n=1.5) to air (n=1.0) will have critical angle approximately:",
+      "options": ["≈41.8°", "≈48.6°", "≈30°", "≈66°"],
+      "answer": 0,
+      "explanation": "sin θ_c = n2/n1 = 1/1.5 = 0.6667 → θ_c ≈ 41.8°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "When a spherical wavefront emerges from a point source and reaches a plane interface, Huygens' construction of transmitted wavefront relies on:",
+      "options": ["Drawing secondary wavelets in second medium with reduced/increased radii according to new speed", "Ignoring frequency", "Assuming amplitude doubles", "Reflecting only"],
+      "answer": 0,
+      "explanation": "Each point on incident wavefront emits secondary wavelets in medium 2 whose radii grow with speed v2; the envelope yields refracted wavefront.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of these phenomena can be directly predicted by Huygens–Fresnel construction (wavelets + interference)?",
+      "options": ["Diffraction patterns (and direction of refracted/reflected beams)", "Only ray direction with no diffraction", "Only polarization", "Only absorption"],
+      "answer": 0,
+      "explanation": "Huygens–Fresnel principle (with phase and amplitude superposition) predicts diffraction and interference, beyond simple geometric refraction/reflection.",
+      "difficulty": "hard"
+    }
+  ]
+}

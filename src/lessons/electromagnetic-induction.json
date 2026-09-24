@@ -1,0 +1,429 @@
+{
+  "title": "Electromagnetic Induction — 60 MCQs",
+  "grade": "XII",
+  "chapters": [14],
+  "date": "2026-01-07",
+  "description": "Faraday's & Lenz's laws, AC generators, eddy currents, self/mutual inductance, energy in inductors, transformers and losses. Questions range from basic concepts to advanced applications.",
+  "questions": [
+    {
+      "q": "Faraday's law of electromagnetic induction states the induced emf in a closed circuit equals:",
+      "options": ["Negative rate of change of magnetic flux through the circuit", "Positive rate of change of charge", "Integral of electric field along open path", "Magnetic flux times current"],
+      "answer": 0,
+      "explanation": "Faraday: ε = − dΦ/dt (flux linkage change). Negative sign indicates Lenz's law.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The negative sign in Faraday's law corresponds to which principle?",
+      "options": ["Lenz's law (induced emf opposes flux change)", "Ohm's law", "Ampère's law", "Kirchhoff's law"],
+      "answer": 0,
+      "explanation": "Lenz's law gives direction such that induced current opposes change in flux — represented by minus sign.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Lenz's law ensures the induced current direction is such that it:",
+      "options": ["Opposes the change in magnetic flux that produced it", "Amplifies the change", "Is independent of flux change", "Always flows clockwise"],
+      "answer": 0,
+      "explanation": "Lenz's law enforces conservation of energy by opposing the cause of induction.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If the magnetic flux through a loop increases into the page, the induced current will produce a magnetic field:",
+      "options": ["Out of the page to oppose increase", "Into the page to help increase", "Clockwise only", "No induced field"],
+      "answer": 0,
+      "explanation": "To oppose increasing into-page flux, induced field must be out of page; use right-hand rule to set current direction.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A coil of N turns is rotated in a uniform magnetic field with angular frequency ω. The peak induced emf amplitude is:",
+      "options": ["N B A ω (for area A)", "B A N / ω", "N B A / ω", "B A ω / N"],
+      "answer": 0,
+      "explanation": "If angle between normal and B varies as ωt, emf amplitude = N B A ω (sinusoids give max N B A ω).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If a rectangular loop moves out of a uniform magnetic field region, the induced emf appears because:",
+      "options": ["Magnetic flux through loop changes with time", "Loop potential changes only", "Number of turns changes", "Current supply is present"],
+      "answer": 0,
+      "explanation": "Flux change (due to area in field changing) induces emf per Faraday.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Motional emf produced when a conductor of length l moves with velocity v perpendicular to B is:",
+      "options": ["ε = B l v", "ε = B l / v", "ε = B / (l v)", "ε = 0"],
+      "answer": 0,
+      "explanation": "Motional emf from v × B acting on charges across length: ε = B l v (for perpendicular orientation).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A conductor moves parallel to B (no component perpendicular). The motional emf is:",
+      "options": ["Zero (v × B = 0)", "Maximum", "Equal to Blv", "Depends on mass"],
+      "answer": 0,
+      "explanation": "If v parallel to B then cross product zero so no motional emf.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An induced emf in a closed loop can be produced by:",
+      "options": ["Changing magnetic field, changing area of loop, or changing orientation of loop", "Changing temperature only", "Applying static charges only", "Changing color of loop"],
+      "answer": 0,
+      "explanation": "Flux changes can occur by varying B, A, or angle between B and area vector.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If magnetic flux through a coil changes sinusoidally with time, the induced emf is:",
+      "options": ["Sinusoidal and phase-shifted by 90° relative to flux", "Constant", "Proportional to flux (no derivative)", "Zero"],
+      "answer": 0,
+      "explanation": "Emf = -dΦ/dt; derivative of sine is cosine (90° phase shift).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A single-turn loop and a 10-turn coil experience identical flux change ΔΦ. The induced charge magnitude passing during change is:",
+      "options": ["10 times larger for coil (more turns)", "Same for both", "1/10 for coil", "Depends on resistance only"],
+      "answer": 0,
+      "explanation": "Total induced emf ∝ N; for same rate, more turns produce greater total emf and integrated charge (assuming same resistance per turn aggregate).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When a bar magnet is pushed quickly into a coil, the induced current in coil will:",
+      "options": ["Oppose the motion of the magnet (magnetic braking)", "Help the magnet to move faster", "Be independent of magnet speed", "Be always zero"],
+      "answer": 0,
+      "explanation": "Induced currents create fields opposing the change; work must be done to push magnet, appearing as mechanical resistance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Eddy currents are:",
+      "options": ["Circulating currents induced in bulk conductors by changing magnetic flux", "Flows only in coils", "Direct current source", "Superconducting currents only"],
+      "answer": 0,
+      "explanation": "Eddy currents are loops inside conductors; cause heating and magnetic damping.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An example where eddy currents are useful is:",
+      "options": ["Eddy-current braking in trains and metal detectors", "Transformer cores (solid unlaminated)", "Insulation materials", "Solar cells"],
+      "answer": 0,
+      "explanation": "Eddy currents are exploited for non-contact braking and for detecting conductive objects.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An example where eddy currents are a nuisance is:",
+      "options": ["Heating and energy loss in transformer cores if not laminated", "Eddy current brakes", "Magnetic levitation", "MRI signal generation"],
+      "answer": 0,
+      "explanation": "Eddy currents in solid cores cause significant I^2R losses; cores are laminated to reduce them.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "To reduce eddy current losses in a transformer core you:",
+      "options": ["Use laminated core or high-resistivity core materials", "Use a solid thick iron block", "Increase frequency drastically", "Short the core with conductor"],
+      "answer": 0,
+      "explanation": "Lamination increases electrical resistance of current paths, reducing eddy currents.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Self-inductance L of a coil is defined by relation:",
+      "options": ["Φ = L I (flux linkage proportional to current)", "L = Φ/I²", "L independent of geometry", "Φ = I / L"],
+      "answer": 0,
+      "explanation": "Inductance relates flux linkage to current; L depends on coil geometry and medium.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Mutual inductance M between two coils means:",
+      "options": ["Flux in one coil due to current in the other per unit current", "Flux only in same coil", "Resistance between coils", "Capacitance between coils"],
+      "answer": 0,
+      "explanation": "M = Φ21 / I1 (flux through coil 2 due to current I1) assuming linearity; symmetric property M12=M21.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Mutual inductance M between two coils depends on:",
+      "options": ["Number of turns, geometry and magnetic coupling (core/permeability)", "Only resistances", "Only frequencies", "Only voltage"],
+      "answer": 0,
+      "explanation": "Mutual coupling determined by how well flux from one links the other and by turns.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A key use of mutual inductance is in:",
+      "options": ["Transformers and inductive coupling", "Measuring temperature", "Cooling systems", "Mechanical bearings"],
+      "answer": 0,
+      "explanation": "Transformers use mutual inductance to transfer energy between circuits at different voltages.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Energy stored in an inductor with inductance L carrying current I is:",
+      "options": ["(1/2) L I²", "L I", "(1/2) L² I", "I² / (2L)"],
+      "answer": 0,
+      "explanation": "Magnetic energy stored in inductor = 1/2 L I².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If current in an inductor changes rapidly, voltage across it is v = L (dI/dt). This property is called:",
+      "options": ["Self-induction", "Mutual induction", "Capacitance", "Resistance"],
+      "answer": 0,
+      "explanation": "An inductor resists change in current; induced emf = L dI/dt.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Inductive reactance X_L of an inductor in AC circuit is:",
+      "options": ["X_L = ω L (where ω = 2π f)", "X_L = 1/(ω L)", "X_L = L / R", "X_L = R L"],
+      "answer": 0,
+      "explanation": "Inductive reactance increases with frequency; X_L = 2π f L.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In an ideal inductor the current lags the applied voltage by:",
+      "options": ["90° (π/2) in a purely inductive AC circuit", "0°", "45°", "180°"],
+      "answer": 0,
+      "explanation": "Voltage leads current by 90° in ideal inductance (v = L di/dt).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Back emf in an inductor opposes change of current according to:",
+      "options": ["Lenz's law and v = L dI/dt", "Kirchhoff's law only", "Ohm's law", "Newton's law"],
+      "answer": 0,
+      "explanation": "Induced emf opposes change in current (Lenz), magnitude L dI/dt.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If two inductors are connected in series with coupling coefficient k, total inductance is:",
+      "options": ["L_total = L1 + L2 ± 2 M (depending on connection)", "L_total = L1*L2", "Sum independent of coupling", "Zero"],
+      "answer": 0,
+      "explanation": "Mutual inductance adds or subtracts depending on aiding or opposing orientation; M = k sqrt(L1 L2).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Coupling coefficient k ranges between:",
+      "options": ["0 and 1 (0 no coupling, 1 perfect coupling)", "−1 and 0", "0 and infinity", "1 and 2"],
+      "answer": 0,
+      "explanation": "k = M / sqrt(L1 L2), limited to [0,1] for non-pathological cases.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A coil wound on an iron core has larger inductance than same coil in air because:",
+      "options": ["Higher permeability of core concentrates flux and increases L", "Iron has lower resistivity", "Core reduces number of turns", "Core increases capacitance only"],
+      "answer": 0,
+      "explanation": "Magnetic core increases flux linkage per current, increasing inductance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Self inductance of a solenoid of N turns, length l, cross-sectional area A is approximately:",
+      "options": ["L ≈ μ0 μ_r N² A / l", "L ≈ μ0 N A / l", "L ≈ N A / μ0", "L ≈ μ0 l / N"],
+      "answer": 0,
+      "explanation": "Inductance of long solenoid: L = μ N² A / l where μ = μ0 μ_r.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When current in primary coil changes, induced emf in secondary equals:",
+      "options": ["−M dI1/dt (mutual inductance times rate)", "M dI1/dt without sign", "L dI/dt", "Zero"],
+      "answer": 0,
+      "explanation": "Φ2 = M I1, so emf in coil2 = − dΦ2/dt = − M dI1/dt.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A simple AC generator (alternator) produces emf by:",
+      "options": ["Rotating coil in a magnetic field producing time-varying flux linkage", "Sliding magnet across coil only DC", "Thermal gradients", "Chemical reactions"],
+      "answer": 0,
+      "explanation": "AC generator: coil rotates in B producing sinusoidal flux change and induced emf.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Output emf of ideal AC generator with N turns, area A, B field, rotating at ω is:",
+      "options": ["ε(t) = N B A ω sin(ω t) (or cosine depending on reference)", "ε constant", "ε increases linearly with time", "ε zero"],
+      "answer": 0,
+      "explanation": "Flux = N B A cos(ωt); ε = − dΦ/dt = N B A ω sin(ωt).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Slip rings in an AC generator are used to:",
+      "options": ["Provide continuous connection to rotating coil while delivering AC", "Rectify AC to DC", "Cool the coil", "Increase torque"],
+      "answer": 0,
+      "explanation": "Slip rings maintain electrical contact to rotating coil for AC output; brushes slide on rings.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Commutator is used in DC machines to:",
+      "options": ["Convert induced alternating emf in coils to unidirectional output", "Deliver AC to load", "Prevent rotation", "Measure flux"],
+      "answer": 0,
+      "explanation": "Commutator (split ring) reverses connection each half rotation to produce DC from rotating coil.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In an AC generator, maximum power transfer to a purely resistive load occurs when load is:",
+      "options": ["Purely resistive and matched to generator internal impedance for maximum power point", "Inductive only", "Capacitive only", "Open circuit"],
+      "answer": 0,
+      "explanation": "Maximum power transfer occurs when load equals internal source impedance (for complex sources matching both R and reactive parts).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "When flux through a stationary coil is changed by a time-varying current in nearby coil, the phenomenon is:",
+      "options": ["Mutual induction", "Self induction", "Eddy current heating", "Static coupling"],
+      "answer": 0,
+      "explanation": "Changing current in one coil induces emf in nearby coil via mutual inductance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If mutual inductance between two coils is M and the rate of change of current in coil1 is dI1/dt, induced emf in coil2 magnitude equals:",
+      "options": ["M |dI1/dt|", "M dI1/dt only positive", "I1 / M", "Zero"],
+      "answer": 0,
+      "explanation": "Emf magnitude = M times absolute rate of change; sign determined by Lenz's law.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A transformer transfers power between circuits most efficiently when:",
+      "options": ["Its core has high permeability and is laminated to reduce eddy currents", "Core is solid iron block", "Primary is air-core only", "Using very high leakage"],
+      "answer": 0,
+      "explanation": "High μ concentrates flux and lamination limits eddy currents, increasing efficiency.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Ideal transformer equations (turns N1,N2) relate voltages by:",
+      "options": ["V2/V1 = N2/N1 and I1/I2 = N2/N1 (for ideal, power conserved)", "V2 = V1 always", "I1 = I2 always", "No relation"],
+      "answer": 0,
+      "explanation": "Ideal transformer: voltage ratio equals turns ratio; current ratio inversely so power approximately conserved ignoring losses.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a step-up transformer the secondary has:",
+      "options": ["More turns than primary and higher voltage", "Fewer turns and higher voltage", "Same turns and lower voltage", "No turns"],
+      "answer": 0,
+      "explanation": "Step-up increases voltage by increasing turns N2 > N1.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Energy stored in magnetic field of inductor is recovered when current decreases; this energy originally came from:",
+      "options": ["Work done by source to establish the current against induced emf", "Thermal energy only", "External mechanical work only", "There was no input energy"],
+      "answer": 0,
+      "explanation": "Energy stored in magnetic field equals work done to build current against back emf.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Transformer core hysteresis loss depends mainly on:",
+      "options": ["Area of B–H loop and frequency of magnetization", "Core color", "Primary winding resistance only", "Load impedance"],
+      "answer": 0,
+      "explanation": "Hysteresis loss per cycle ∝ loop area; total loss increases with frequency.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Other principal transformer losses include:",
+      "options": ["Eddy current loss in core, copper loss in windings, flux leakage and stray losses", "Only radiation loss", "Only capacitance loss", "Only chemical degradation"],
+      "answer": 0,
+      "explanation": "Transformers lose energy via core eddy currents, winding I²R (copper) losses, leakage flux, dielectric and stray losses.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Eddy current loss in transformer core increases with:",
+      "options": ["Square of frequency and square of flux density (approx)", "Lower frequency", "Smaller core area only", "Lower flux"],
+      "answer": 0,
+      "explanation": "Eddy current loss ~ k_e f² B_m² for simple models; lamination reduces it.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Copper loss in transformer windings is proportional to:",
+      "options": ["I² R (load current squared times winding resistance)", "Flux squared", "Frequency only", "Voltage only"],
+      "answer": 0,
+      "explanation": "I²R loss in windings increases with square of current and winding resistance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Open-circuit test on a transformer is used to measure primarily:",
+      "options": ["Core losses and magnetizing current (hysteresis and eddy losses)", "Copper loss under full load", "Leakage reactance only", "Temperature rise only"],
+      "answer": 0,
+      "explanation": "OC test applies rated voltage with secondary open to observe no-load current and core losses.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Short-circuit test on a transformer is used to determine:",
+      "options": ["Copper losses and equivalent series impedance", "Core losses", "Magnetic permeability only", "Turns ratio only"],
+      "answer": 0,
+      "explanation": "SC test applies reduced voltage to cause rated current and measures I²R (copper) losses and leakage reactance.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Leakage flux in transformer is undesired because it:",
+      "options": ["Does not link both windings and reduces coupling, causing leakage reactance", "Increases ideal coupling", "Generates useful voltage", "Reduces weight"],
+      "answer": 0,
+      "explanation": "Leakage flux contributes to series leakage reactance limiting short-circuit current and voltage regulation.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Power transformer efficiency improves when:",
+      "options": ["Core and copper losses are minimized and proper loading is maintained", "Voltage is maximized arbitrarily", "Frequency is zero", "Load is disconnected"],
+      "answer": 0,
+      "explanation": "Efficiency high when losses small relative to output; design and load factor influence losses and efficiency.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Autotransformer differs from two-winding transformer by:",
+      "options": ["Sharing a portion of winding between primary and secondary (single continuous winding)", "Having no magnetic core", "Working only at DC", "Being superconducting only"],
+      "answer": 0,
+      "explanation": "Autotransformer uses tapped single winding; economical but no full isolation.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If primary of ideal transformer has N1 turns and secondary N2 turns, flux per turn Φ is determined by applied voltage V1 and frequency f by:",
+      "options": ["V1 = 4.44 f N1 Φ_m (for sinusoidal peak values)", "V1 = N1 Φ only", "Flux independent of V1 and f", "V1 = N2 Φ only"],
+      "answer": 0,
+      "explanation": "RMS voltage V = 4.44 f N Φ_m for sinusoidal flux amplitude Φ_m; used in transformer design.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If frequency in transformer is reduced (with same applied voltage), flux in core will:",
+      "options": ["Increase (may saturate core)", "Decrease", "Be unchanged", "Become zero"],
+      "answer": 0,
+      "explanation": "V ∝ f Φ, so lower f increases flux for same V; core design must account for frequency to avoid saturation.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Core saturation in transformer leads to:",
+      "options": ["Distortion of waveform, high magnetizing current and heating", "Lower losses only", "Perfect operation", "Infinite efficiency"],
+      "answer": 0,
+      "explanation": "Saturation reduces permeability causing nonlinear magnetization, increased magnetizing current and distortion.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A single-phase AC generator output frequency depends on:",
+      "options": ["Number of poles and rotation speed (f = (P/2) * (rpm/60))", "Only voltage", "Field current only", "Load resistance only"],
+      "answer": 0,
+      "explanation": "Electrical frequency determined by mechanical rotation speed and pole pairs.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In eddy-current dampers used in meters, the damping force is proportional to:",
+      "options": ["Velocity of moving conductor in field (v) and B² and geometry", "Only magnetic field direction", "Temperature only", "Capacitance"],
+      "answer": 0,
+      "explanation": "Eddy currents proportional to rate of change of flux (velocity) and produce damping force ∝ v.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A rotating loop in a magnetic field that produces emf also experiences a torque resisting rotation. This torque is due to:",
+      "options": ["Lenz's law: induced currents produce fields opposing motion (generator reaction)", "Friction only", "Gravity only", "Thermal noise"],
+      "answer": 0,
+      "explanation": "Mechanical input must do work against electromagnetic torque; energy converted to electrical form.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a transformer's iron core, adding silicon to the iron alloy primarily:",
+      "options": ["Reduces hysteresis loss by increasing resistivity and altering magnetic properties", "Increases conductivity", "Makes core superconducting", "Removes magnetism entirely"],
+      "answer": 0,
+      "explanation": "Silicon steel reduces core losses by decreasing hysteresis and eddy currents via higher resistivity.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For an ideal lossless transformer, input and output power are related by:",
+      "options": ["V1 I1 cosφ1 = V2 I2 cosφ2 (power in = power out ignoring losses)", "V1 = V2 always", "I1 = I2 always", "Power independent of turns ratio"],
+      "answer": 0,
+      "explanation": "Ideal transformer conserves real power (accounting for phase), V1I1 = V2I2 if phase same; often simplified for resistive loads.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A clamp-on iron-core device that uses induction to detect current in a conductor is called:",
+      "options": ["Current transformer or CT", "Fluxgate", "SQUID", "Eddy probe"],
+      "answer": 0,
+      "explanation": "CT uses magnetic coupling to sense current in primary conductor via transformer action.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Lenz's law and Faraday's law together guarantee conservation of energy because:",
+      "options": ["Induced emf opposes change, so work must be done to change flux; electrical energy comes from mechanical work", "They don't relate to energy", "They create energy out of nothing", "They violate conservation"],
+      "answer": 0,
+      "explanation": "Opposing induced currents require input work; energy converted consistently between mechanical and electrical forms.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "title": "Waves in Pipes & Strings — 50 MCQs",
+  "grade": "XII",
+  "chapters": [5],
+  "date": "2026-01-07",
+  "description": "Topics: stationary waves in open/closed pipes, harmonics & overtones, end correction, transverse wave velocity on strings, vibration laws of fixed strings, and related numericals/concepts.",
+  "questions": [
+    {
+      "q": "A stationary wave in a pipe is formed when:",
+      "options": ["Only one progressive wave is present", "The pipe is infinitely long", "Two progressive waves of same frequency travel in opposite directions and superpose", "Sound is absent"],
+      "answer": 2,
+      "explanation": "Standing waves form by superposition of two equal-amplitude, equal-frequency opposite-traveling waves (reflections create the opposing wave in a pipe).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a pipe open at both ends the boundary condition is:",
+      "options": ["Displacement antinode at each open end", "Displacement node at each open end", "Pressure antinode at each open end", "Both ends behave identically to closed ends"],
+      "answer": 0,
+      "explanation": "Open ends allow maximum particle displacement (displacement antinodes) and minimum pressure variation (pressure nodes).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a pipe closed at one end and open at the other the allowed harmonics are:",
+      "options": ["Only odd harmonics (1,3,5, ...)", "All harmonics (1,2,3, ...)", "Only even harmonics", "No harmonics"],
+      "answer": 0,
+      "explanation": "Closed–open (one end closed) pipes support only odd harmonics: f_n = n v / (4L) with n = 1,3,5,...",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Frequency of the nth harmonic in an open-open pipe of length L is:",
+      "options": ["f_n = n v / (2L)", "f_n = n v / (4L)", "f_n = v / (2L) independent of n", "f_n = v / (4L)"],
+      "answer": 0,
+      "explanation": "Open-open pipe supports all harmonics with f_n = n v/(2L) (n = 1,2,3,...).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "First overtone of an open pipe means:",
+      "options": ["Second harmonic", "First harmonic", "Third harmonic only", "Zero frequency"],
+      "answer": 0,
+      "explanation": "The first overtone is the next mode above the fundamental (first harmonic), i.e., the second harmonic.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a open pipe (both ends open) the allowed frequencies are:",
+      "options": ["f_n = n v/(2L) (all harmonics)", "f_n = n v/(4L) (odd only)", "No standing waves", "f_n = v/(L) only"],
+      "answer": 0,
+      "explanation": "Closed-closed behaves like open-open for allowed modes: nodes at ends produce f_n = n v/(2L).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "End correction for an open pipe of radius r is approximately:",
+      "options": ["0.6 r", "0.3 r", "r", "2 r"],
+      "answer": 0,
+      "explanation": "Empirical end correction ≈ 0.6 r (for a circular tube) added to physical length for effective acoustic length.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Effective length L_eff of an open pipe (both ends open) with physical length L and radius r (small) is approximately:",
+      "options": ["L + 1.2 r", "L + 0.6 r", "L - 0.6 r", "L + 2 r"],
+      "answer": 0,
+      "explanation": "Two open ends each contribute ≈0.6 r correction, so L_eff ≈ L + 0.6r + 0.6r = L + 1.2 r.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a string fixed at both ends the fundamental frequency f1 is given by:",
+      "options": ["f1 = v / (2L)", "f1 = v / L", "f1 = v / (4L)", "f1 = 2 v / L"],
+      "answer": 0,
+      "explanation": "For a string fixed at both ends, λ1 = 2L, so f1 = v/λ1 = v/(2L).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Transverse wave speed on a stretched string depends on tension T and linear mass density μ as:",
+      "options": ["v = √(T/μ)", "v = √(μ/T)", "v = T μ", "v = T/μ"],
+      "answer": 0,
+      "explanation": "Transverse wave speed = sqrt(tension / linear mass density).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If the tension in a string is quadrupled and μ is constant, wave speed changes by factor:",
+      "options": ["2", "4", "1/2", "√2"],
+      "answer": 0,
+      "explanation": "v ∝ √T so quadrupling T multiplies speed by √4 = 2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Overtones for a fixed string are:",
+      "options": ["Integer multiples of the fundamental frequency", "Only odd multiples", "Only even multiples", "Unrelated frequencies"],
+      "answer": 0,
+      "explanation": "Harmonics (overtones) of fixed-fixed string are integer multiples: f_n = n f1.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A closed pipe of length L supports a fundamental frequency f1 = v/(4L). What is the next supported frequency?",
+      "options": ["3 v/(4L)", "2 v/(4L)", "4 v/(4L)", "v/(2L)"],
+      "answer": 0,
+      "explanation": "Closed at one end supports odd harmonics: next is 3 v/(4L) (n=3).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of these is true about harmonics and overtones in an open-open pipe vs a closed-open pipe?",
+      "options": ["Open-open: both even & odd harmonics; Closed-open: odd harmonics only", "Both give only odd harmonics", "Open-open: odd only; closed-open: even only", "Both give only even harmonics"],
+      "answer": 0,
+      "explanation": "Open-open supports all integer harmonics; closed-open only odd multiples of fundamental.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a string of length L, fixed at both ends, the third harmonic has wavelength:",
+      "options": ["λ3 = 2L/3", "λ3 = 3L", "λ3 = 2L", "λ3 = L/3"],
+      "answer": 0,
+      "explanation": "For n-th harmonic λ_n = 2L/n → λ3 = 2L/3.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If a pipe open at both ends resonates at fundamental 256 Hz, its 4th harmonic frequency is:",
+      "options": ["1024 Hz", "512 Hz", "768 Hz", "128 Hz"],
+      "answer": 0,
+      "explanation": "4th harmonic is n=4: f4 = 4×256 = 1024 Hz.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "End correction arises because:",
+      "options": ["Pipe material expands", "Air at open end oscillates and effective antinode is slightly outside geometric end", "Temperature gradient at end", "Viscosity only"],
+      "answer": 1,
+      "explanation": "Open end does not act as exact antinode; air outside vibrates, shifting effective acoustic length beyond physical end.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A pipe of length 0.85 m is open at both ends. Taking v = 340 m/s and ignoring end correction, fundamental frequency is approximately:",
+      "options": ["200 Hz", "400 Hz", "100 Hz", "50 Hz"],
+      "answer": 0,
+      "explanation": "f1 = v/(2L) = 340/(2×0.85) = 340/1.7 = 200 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A string of length 0.5 m with wave speed 200 m/s has fundamental frequency:",
+      "options": ["200 Hz", "400 Hz", "100 Hz", "50 Hz"],
+      "answer": 0,
+      "explanation": "f1 = v/(2L) = 200/(2×0.5)=200 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If linear mass density μ of a string doubles while T unchanged, fundamental frequency changes by factor:",
+      "options": ["1/√2 (decreases)", "2 (increases)", "√2 (increases)", "Unchanged"],
+      "answer": 0,
+      "explanation": "v = √(T/μ) decreases by 1/√2, so f1 ∝ v decreases by 1/√2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which boundary condition corresponds to a closed end of an air column?",
+      "options": ["Displacement node and pressure antinode", "Displacement antinode and pressure node", "Both displacement and pressure nodes", "Both displacement and pressure antinodes"],
+      "answer": 0,
+      "explanation": "Closed end prevents particle motion ⇒ displacement node; pressure fluctuates maximally ⇒ pressure antinode.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Relative ordering closed organ pipe: Fundamental, first overtone, second overtone correspond to which harmonics?",
+      "options": ["1st harmonic, 2nd harmonic, 3rd harmonic", "1st, 3rd, 5th only", "2nd, 3rd, 4th", "3rd, 4th, 5th"],
+      "answer": 1,
+      "explanation": "Fundamental = 1st harmonic; first overtone = 3rdd harmonic; second overtone = 5th harmonic.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A closed-open pipe with fundamental frequency 170 Hz has next overtone at roughly:",
+      "options": ["510 Hz", "340 Hz", "170 Hz", "680 Hz"],
+      "answer": 0,
+      "explanation": "Only odd harmonics: f1=170, next is 3×170=510 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a thin circular pipe of radius r, which has greater end correction constant c (L_eff = L + c r)?",
+      "options": ["Open end into free space: c ≈ 0.6", "Small aperture with flange: lower correction", "Square cross-section: negative correction", "No difference between configurations"],
+      "answer": 0,
+      "explanation": "Standard empirical c ≈ 0.6 for unflanged open pipe; flanged/open geometry can change correction (flanged ≈0.85). The option reflects typical unflanged value.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two pipes of same length: one open-open, one closed-open (one end). Which has lower fundamental frequency (assuming same v)?",
+      "options": ["Closed-open (lower)", "Open-open (lower)", "They are equal", "Depends on radius"],
+      "answer": 0,
+      "explanation": "Closed-open fundamental f_closed = v/(4L) which is half of open-open f_open = v/(2L). So closed-open has lower f.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If a string vibrates in its 5th harmonic (n=5), how many nodes (excluding end nodes) are present along its length?",
+      "options": ["3", "4", "5", "6"],
+      "answer": 1,
+      "explanation": "In n-th harmonic there are n-1 internal nodes (excluding fixed end nodes). For n=5, internal nodes=4.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A musician shortens a vibrating string by pressing at a fret at 1/3 of its length from one end. The new fundamental frequency relative to original is approximately:",
+      "options": ["3/2 times original", "2 times original", "1/2 original", "3 times original"],
+      "answer": 0,
+      "explanation": "New length = 2/3 L, so f_new = v/(2×(2/3) L) = (3/2) v/(2L) so f_new = 3/2 f_old.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Which statement about an open organ pipe and an open string is correct regarding nodes/antinodes correspondence?",
+      "options": ["Open pipe ends = displacement antinodes; open string (free) similar but string fixed ends are nodes", "Strings fixed ends are antinodes", "Open pipe ends are nodes of displacement", "Strings have no nodes"],
+      "answer": 0,
+      "explanation": "Open pipe ends allow maximal particle displacement (antinode). Strings are typically fixed at ends (nodes), different from open pipe.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If wave speed on a string v=100 m/s and string length L=0.8 m, frequency of 3rd harmonic is:",
+      "options": ["187.5 Hz", "125 Hz", "75 Hz", "312.5 Hz"],
+      "answer": 0,
+      "explanation": "f_n = n v/(2L) = 3×100/(2×0.8)=300/1.6=187.5 Hz.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A pipe open at one end and closed at other has fundamental 85 Hz. What is the frequency of its 5th mode (n=5)?",
+      "options": ["425 Hz", "340 Hz", "170 Hz", "85 Hz"],
+      "answer": 0,
+      "explanation": "Closed-open supports odd harmonics: f_n = n v/(4L). If f1=85 → n=5 gives f5 = 5×85 = 425 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "End correction becomes more significant when:",
+      "options": ["Radius is not negligible compared to length", "Radius is extremely small", "Pipe is infinitely long", "Temperature is zero"],
+      "answer": 0,
+      "explanation": "End correction ~0.6 r; for short pipes or large r relative to L, correction is significant.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If string linear density μ = 0.01 kg/m and tension T = 100 N, wave speed is:",
+      "options": ["100 m/s", "10 m/s", "1000 m/s", "1 m/s"],
+      "answer": 0,
+      "explanation": "v = √(T/μ) = √(100/0.01) = √10000 = 100 m/s.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a string fixed at both ends, wavelengths allowed are given by λ_n = 2L/n. Which n gives shortest wavelength?",
+      "options": ["Largest n", "n=1", "n=0", "n negative"],
+      "answer": 0,
+      "explanation": "As n increases wavelength λ_n = 2L/n decreases; largest n gives shortest λ (within physical limits).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If a flute (open-open) and a clarinet (approx. closed-open) have same physical length, which sounds lower for same excitation?",
+      "options": ["Clarinet (closed-open) sounds lower (≈ one octave)", "Flute sounds lower", "They sound same", "Depends only on fingering"],
+      "answer": 0,
+      "explanation": "Closed-open fundamental is half frequency of open-open for same L (v/(4L) vs v/(2L)), so clarinet-like tube has lower pitch (approx one octave lower) for same length.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Which of these is true for an open-open pipe harmonic series compared to closed-open pipe series?",
+      "options": ["Open-open includes consecutive integers; closed-open includes odd-only giving different timbre", "Both are identical", "Closed-open gives all even harmonics only", "Open-open gives only odd harmonics"],
+      "answer": 0,
+      "explanation": "Open-open supports all integer harmonics; closed-open only odd harmonics — affecting harmonic content and timbre.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A pipe open at both ends of physical length 0.6 m has radius 0.01 m. Using end correction, effective length is L_eff ≈ L + 1.2 r. What is L_eff (m)?",
+      "options": ["0.612 m", "0.606 m", "0.600 m", "0.624 m"],
+      "answer": 0,
+      "explanation": "L_eff = 0.6 + 1.2×0.01 = 0.6 + 0.012 = 0.612 m.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When a string vibrates, energy is primarily stored as:",
+      "options": ["Kinetic energy of moving elements and potential energy due to tension (elastic)", "Gravitational potential only", "Chemical energy", "Electrical energy"],
+      "answer": 0,
+      "explanation": "Oscillating string stores KE in particle motion and PE in elastic deformation (due to tension).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which law relates node positions and wavelength for stationary waves on a string fixed at both ends?",
+      "options": ["Nodes separated by λ/2", "Nodes separated by λ/4", "Nodes at λ", "Nodes random"],
+      "answer": 0,
+      "explanation": "Adjacent nodes are separated by λ/2 on standing waves.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If a string length is L and speed v, frequency of second harmonic (n=2) is:",
+      "options": ["f2 = v/L", "f2 = v/(2L)", "f2 = 2 v/L", "f2 = v/(4L)"],
+      "answer": 0,
+      "explanation": "f_n = n v/(2L); for n=2, f2 = 2 v/(2L) = v/L.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A pipe resonates at 400 Hz as its third harmonic (open-open). Fundamental frequency is:",
+      "options": ["133.3 Hz", "400 Hz", "200 Hz", "266.6 Hz"],
+      "answer": 0,
+      "explanation": "If 400 Hz is 3rd harmonic, f1 = 400/3 ≈133.33 Hz.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Which practice shortens effective vibrating portion of a string raising pitch?",
+      "options": ["Pressing at a fret (reduces L)", "Loosening tuning peg", "Adding mass to string", "Damping string"],
+      "answer": 0,
+      "explanation": "Shortening string length increases fundamental frequency (f ∝ 1/L), raising pitch.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In practice, real organ pipes have end corrections because:",
+      "options": ["Air beyond geometric end participates in oscillation", "Pipe walls are frictionless", "Temperature is uniform", "Sound speed is zero outside"],
+      "answer": 0,
+      "explanation": "Air just outside the open end moves with the internal air, shifting the effective node slightly outside geometric end.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If a pipe open at both ends of length L resonates at frequency f, and temperature increases raising sound speed v, the resonant frequency:",
+      "options": ["Increases (f ∝ v)", "Decreases", "Remains same", "Becomes undefined"],
+      "answer": 0,
+      "explanation": "f_n = n v/(2L); if v increases with temperature, f increases proportionally.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which of these is NOT a reason for frequency change when a string is tightened?",
+      "options": ["Linear mass density μ changes instantly", "Tension T changes (dominant)", "Wave speed v changes", "Fundamental frequency f changes"],
+      "answer": 0,
+      "explanation": "Tension T change is the direct reason; μ normally unchanged unless string material changes. Option lists correct effect; pick the one 'NOT'—if μ changes instantly usually not; but as asked, μ does not change by tightening, so that option is NOT a reason.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The nth overtone corresponds to which harmonic number?",
+      "options": ["n+1 (i.e., overtone order + 1)", "n (same)", "n-1", "2n"],
+      "answer": 0,
+      "explanation": "n-th overtone is the (n+1)-th harmonic (first overtone = second harmonic).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A pipe of length L closed at one end and open at other has its first three resonant wavelengths as:",
+      "options": ["λ1 = 4L, λ2 = 4L/3, λ3 = 4L/5", "λ1 = 2L, λ2 = L, λ3 = 2L/3", "λ1 = L, λ2 = L/2, λ3 = L/3", "None of these"],
+      "answer": 0,
+      "explanation": "Closed-open supports odd harmonics: wavelengths λ_n = 4L/n with n =1,3,5 → λ1 = 4L, λ3 = 4L/3, λ5 = 4L/5.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If a string has frequency 440 Hz at T1 tension, increasing tension to 1.44 T1 yields frequency approximately:",
+      "options": ["528 Hz", "440 Hz", "660 Hz", "352 Hz"],
+      "answer": 0,
+      "explanation": "f ∝ √T, factor √1.44 = 1.2 → f_new = 1.2 × 440 = 528 Hz.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Which is correct about overtone numbering in closed-open pipes?",
+      "options": ["Overtones correspond to odd harmonics only, so first overtone = 3rd harmonic", "First overtone = 2nd harmonic (always)", "Overtones do not exist", "Overtones equal even harmonics only"],
+      "answer": 0,
+      "explanation": "Closed-open supports odd harmonics; first overtone is next mode: 3rd harmonic (n=3).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A practical consequence of different harmonic series between instruments is:",
+      "options": ["Different timbre or tone colour", "Identical sound quality", "No audible difference", "Only loudness changes"],
+      "answer": 0,
+      "explanation": "Different harmonic content changes instrument timbre even if fundamentals match.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which boundary condition is true for a string attached at one end and free at other (not typical instrument case)?",
+      "options": ["Fixed end = displacement node; free end = displacement antinode", "Both ends nodes", "Both ends antinodes", "Free end = node"],
+      "answer": 0,
+      "explanation": "Fixed end enforces zero displacement (node); free end allows maximal displacement (antinode).",
+      "difficulty": "hard"
+    }
+  ]
+}

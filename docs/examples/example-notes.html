@@ -1,0 +1,82 @@
+---
+title: Simple Harmonic Motion (example lesson)
+grade: XII
+chapters: [2]
+date: 2026-09-24
+description: An example notes file showing every building block the site supports. Copy this file to start a new lesson.
+---
+
+<h2>Introduction</h2>
+<p>A body performs <strong>simple harmonic motion</strong> (SHM) when the restoring force on it is proportional to its displacement from the mean position and always directed towards it.</p>
+
+<div class="box definition">
+  <p>Simple harmonic motion is periodic motion in which the acceleration is directly proportional to the displacement from the mean position and is always directed towards that position.</p>
+</div>
+
+<div class="formula">
+  \[ a = -\omega^2 x \]
+  <span class="where">where \(a\) = acceleration, \(\omega\) = angular frequency, \(x\) = displacement from the mean position.</span>
+</div>
+
+<h2>Displacement, velocity and acceleration</h2>
+<h3>Displacement</h3>
+<p>The displacement of a particle in SHM at time \(t\) is \(x = A\sin(\omega t + \phi)\), where \(A\) is the amplitude and \(\phi\) is the initial phase.</p>
+
+<h3>Velocity</h3>
+<div class="formula">\[ v = \omega\sqrt{A^2 - x^2} \]</div>
+
+<div class="box note">
+  <p>Velocity is maximum (\(v_{max} = \omega A\)) at the mean position and zero at the extreme positions.</p>
+</div>
+
+<table>
+  <thead><tr><th>Position</th><th>Displacement</th><th>Velocity</th><th>Acceleration</th></tr></thead>
+  <tbody>
+    <tr><td>Mean position</td><td>0</td><td>\(\omega A\) (maximum)</td><td>0</td></tr>
+    <tr><td>Extreme position</td><td>\(\pm A\)</td><td>0</td><td>\(\omega^2 A\) (maximum)</td></tr>
+  </tbody>
+</table>
+
+<h2>Energy in SHM</h2>
+<div class="cols">
+  <div><h3>Kinetic energy</h3><p>\(K = \tfrac12 m\omega^2 (A^2 - x^2)\)</p></div>
+  <div><h3>Potential energy</h3><p>\(U = \tfrac12 m\omega^2 x^2\)</p></div>
+</div>
+
+<div class="box law" data-title="Conservation of energy">
+  <p>The total energy \(E = K + U = \tfrac12 m\omega^2 A^2\) stays constant throughout the motion.</p>
+</div>
+
+<h2>Worked example</h2>
+<div class="box example">
+  <p>A particle executes SHM with amplitude 5 cm and period 2 s. Find its maximum speed.</p>
+  <details class="solution">
+    <summary>Show solution</summary>
+    <p>\(\omega = \dfrac{2\pi}{T} = \dfrac{2\pi}{2} = \pi\ \text{rad s}^{-1}\)</p>
+    <p>\(v_{max} = \omega A = \pi \times 0.05 = 0.157\ \text{m s}^{-1}\)</p>
+  </details>
+</div>
+
+<div class="box tip">
+  <p>In the exam, always convert the amplitude to metres before substituting.</p>
+</div>
+
+<div class="box warning">
+  <p>Do not confuse angular frequency \(\omega\) (rad/s) with frequency \(f\) (Hz): \(\omega = 2\pi f\).</p>
+</div>
+
+<h2>Diagram</h2>
+<figure>
+  <svg viewBox="0 0 400 120" role="img" aria-label="Sine curve showing displacement against time">
+    <line x1="10" y1="60" x2="390" y2="60" stroke="currentColor" stroke-opacity=".4"/>
+    <path d="M10 60 Q 57 -10 105 60 T 200 60 T 295 60 T 390 60" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  </svg>
+  <figcaption>Displacement–time graph of SHM.</figcaption>
+</figure>
+
+<h2>Key points</h2>
+<ul class="key-points">
+  <li>Restoring force \(F = -kx\).</li>
+  <li>Time period \(T = 2\pi\sqrt{m/k}\) for a mass–spring system.</li>
+  <li>Total energy is proportional to the square of the amplitude.</li>
+</ul>

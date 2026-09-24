@@ -1,0 +1,149 @@
+{
+  "title": "Magnetic Properties of Materials — 20 MCQs",
+  "grade": "XII",
+  "chapters": [13],
+  "date": "2026-01-07",
+  "description": "Topics: permeability, susceptibility, dia/para/ferro magnetism, hysteresis, Curie temperature, B–H behaviour, soft/hard magnetic materials.",
+  "questions": [
+    {
+      "q": "Relative permeability μ_r of a material is defined as:",
+      "options": ["μ/μ0 (ratio of material permeability to vacuum)", "χ_m/μ0 (susceptibility divided by μ0)", "B/H (only in vacuum)", "H/B"],
+      "answer": 0,
+      "explanation": "μ_r = μ/μ0; μ is permeability of material, μ0 vacuum permeability.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnetic susceptibility χ_m relates to permeability by which relation (SI)?",
+      "options": ["μ_r = 1 + χ_m", "μ_r = χ_m − 1", "χ_m = μ_r / μ0", "χ_m = μ0 μ_r"],
+      "answer": 0,
+      "explanation": "In linear media B = μ0(1+χ_m)H so μ_r = 1 + χ_m.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a diamagnetic material, the magnetic susceptibility χ_m is typically:",
+      "options": ["Negative and small in magnitude", "Large and positive", "Zero", "Undefined"],
+      "answer": 0,
+      "explanation": "Diamagnets create induced magnetization opposite to applied field → small negative susceptibility.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Paramagnetic materials show which behaviour in a magnetic field?",
+      "options": ["Small positive susceptibility; magnetization in direction of applied field", "Large negative susceptibility", "Permanent magnetization without field", "No response"],
+      "answer": 0,
+      "explanation": "Paramagnets have unpaired moments aligning partially with applied B giving small positive χ.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Ferromagnetic materials differ from paramagnets because they:",
+      "options": ["Exhibit spontaneous magnetization and can have very large positive susceptibilities", "Always have negative susceptibility", "Have no temperature dependence", "Are non-magnetic"],
+      "answer": 0,
+      "explanation": "Ferromagnets show spontaneous ordering below Curie temperature and high permeability.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Curie temperature (T_C) is:",
+      "options": ["The temperature above which a ferromagnet becomes paramagnetic", "Temperature where diamagnetism begins", "Point where superconductivity starts", "Temperature of absolute zero"],
+      "answer": 0,
+      "explanation": "Above T_C thermal agitation destroys long-range order; material becomes paramagnetic.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Initial (or intrinsic) relative permeability refers to:",
+      "options": ["μ_r at very small applied H near zero", "μ_r at saturation", "μ_r at infinite H", "Permeability of vacuum"],
+      "answer": 0,
+      "explanation": "Initial permeability is slope of B–H curve near origin before significant magnetization.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Saturation magnetization means:",
+      "options": ["All magnetic domains aligned and further H produces little additional B", "Domains randomize completely", "Material becomes superconducting", "Permeability becomes negative"],
+      "answer": 0,
+      "explanation": "Saturation occurs when most domains aligned; B approaches saturation value.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Magnetic hysteresis refers to:",
+      "options": ["Non-reversible B–H loop showing history dependence (remanence & coercivity)", "Instantaneous linear B–H", "No dependence on past magnetization", "Only thermal effect"],
+      "answer": 0,
+      "explanation": "Hysteresis loop shows B vs H path differs for magnetizing and demagnetizing; defines remanent flux and coercive field.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Coercivity (H_c) of a ferromagnet is:",
+      "options": ["The negative applied field needed to reduce magnetization to zero after saturation", "The maximum magnetization", "Field where susceptibility is infinite", "The Curie temperature"],
+      "answer": 0,
+      "explanation": "Coercive field quantifies how strongly a material retains magnetization; high H_c = hard magnetic material.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Remanence (residual magnetization) is:",
+      "options": ["Magnetization remaining when applied H is reduced to zero", "Magnetization at infinite H", "Magnetic susceptibility at zero field", "Magnetic flux only in vacuum"],
+      "answer": 0,
+      "explanation": "Remanent magnetization is B or M left after removing applied field.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Soft magnetic materials (e.g., transformer core) are characterized by:",
+      "options": ["Low coercivity, low hysteresis loss, high permeability", "High coercivity and high hysteresis loss", "No susceptibility", "Being superconductors"],
+      "answer": 0,
+      "explanation": "Soft materials easily magnetize/demagnetize with small hysteresis — good for AC cores.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Hard magnetic materials (permanent magnets) are characterized by:",
+      "options": ["High coercivity and large remanence", "Low coercivity", "Zero magnetization", "High electrical conductivity only"],
+      "answer": 0,
+      "explanation": "Hard magnets retain magnetization (large H_c and remanence) suitable for permanent magnets.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Relative susceptibility χ_m,r (often just χ) is related to magnetization M and H by:",
+      "options": ["M = χ_m H", "M = μ0 χ_m H", "B = μ0 χ_m H only", "No relation"],
+      "answer": 0,
+      "explanation": "Magnetization M (A/m) = χ_m H for linear media; B = μ0 (H + M) = μ0 (1+χ_m) H.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For linear isotropic magnetic materials B and H are related by:",
+      "options": ["B = μ0 μ_r H", "B = ε0 E", "E = μ0 H", "B and H are unrelated"],
+      "answer": 0,
+      "explanation": "B = μ H and μ = μ0 μ_r; for linear media μ constant.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In ferromagnets domain theory explains hysteresis because:",
+      "options": ["Domains reorient irreversibly over energy barriers; reversing H needs work (coercivity)", "Magnetic monopoles are created", "Charge builds up", "Temperature alone controls it"],
+      "answer": 0,
+      "explanation": "Domain wall motion and pinning by defects cause hysteresis and energy dissipation.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Temperature dependence of susceptibility for paramagnets approximately follows:",
+      "options": ["Curie law χ ∝ 1/T", "χ independent of T", "χ ∝ T", "χ ∝ e^T"],
+      "answer": 0,
+      "explanation": "Curie law gives χ = C/T for simple paramagnets (C Curie constant) at not-too-low temperatures.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Diamagnetic materials (e.g., bismuth, copper) have which characteristic?",
+      "options": ["Induced magnetization opposite applied field, weak and temperature independent", "Strong permanent magnetization", "Large positive susceptibility", "Becoming superconducting at room temperature"],
+      "answer": 0,
+      "explanation": "Diamagnetism arises from Lenz-type induced currents; effect weak and typically negative χ nearly independent of T.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If a material has relative permeability μ_r ≈ 1 and small positive χ, it is likely:",
+      "options": ["Paramagnetic", "Ferromagnetic", "Diamagnetic", "Superconducting"],
+      "answer": 0,
+      "explanation": "Paramagnets have μ_r slightly greater than 1 (small positive susceptibility).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which experimental feature distinguishes ferromagnetism from paramagnetism?",
+      "options": ["Presence of hysteresis loop and spontaneous magnetization below T_C", "Linear B–H with no hysteresis", "Negative susceptibility", "No temperature dependence"],
+      "answer": 0,
+      "explanation": "Ferromagnets show spontaneous order and hysteresis; paramagnets are linear and reversible.",
+      "difficulty": "easy"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+/* Physics Decoded — layout & components for site pages (home, grade, search, lessons).
+   Colours come from tokens.css; do not hard-code them here. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 var(--font); }
+a { color: var(--notes); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.skip { position: absolute; left: -999px; top: 8px; z-index: 200; background: var(--accent); color: var(--on-accent); padding: 8px 14px; border-radius: var(--radius-sm); font-weight: 700; }
+.skip:focus { left: 8px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { line-height: 1.25; }
+
+/* ---------- Header ---------- */
+.site-header { background: linear-gradient(135deg, var(--brand-900), var(--brand-600)); color: #fff;
+  position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgb(0 0 0 / .15); }
+.nav { max-width: var(--max); margin: auto; padding: 12px 20px; display: flex; align-items: center; gap: 8px 20px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 800; font-size: 1.15rem; letter-spacing: .02em; }
+.brand img { width: 30px; height: 30px; }
+.brand:hover { text-decoration: none; }
+.nav-links { display: flex; gap: 4px; }
+.nav-links a { color: #e3e7ff; font-weight: 600; padding: 6px 12px; border-radius: 999px; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { background: rgb(255 255 255 / .14); color: #fff; text-decoration: none; }
+.nav-search { margin-left: auto; }
+.nav-search input { width: 240px; padding: 8px 14px; border-radius: 999px; border: 1px solid rgb(255 255 255 / .3);
+  background: rgb(255 255 255 / .12); color: #fff; font: inherit; }
+.nav-search input::placeholder { color: #c5cbef; }
+
+/* ---------- Layout ---------- */
+.container { max-width: var(--max); margin: 32px auto; padding: 0 20px; }
+.section { margin: 44px 0; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.section-head h2 { margin: 0; font-size: 1.4rem; }
+.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 12px; }
+.crumbs a { text-decoration: underline; text-underline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Hero ---------- */
+.hero { background: linear-gradient(135deg, var(--brand-900), var(--brand-600)); color: #fff;
+  border-radius: calc(var(--radius) + 6px); padding: 44px 40px; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: auto -60px -80px auto; width: 320px; height: 320px;
+  border-radius: 50%; border: 36px solid rgb(255 255 255 / .06); }
+.hero h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.hero p { margin: 0; max-width: 640px; color: #dfe3ff; font-size: 1.08rem; }
+.hero .hero-search { margin-top: 22px; display: flex; gap: 8px; max-width: 560px; }
+.hero .hero-search input { flex: 1; padding: 12px 16px; border-radius: var(--radius-sm); border: 0; font: inherit; }
+.stats { display: flex; gap: 28px; margin-top: 26px; flex-wrap: wrap; }
+.stats b { display: block; font-size: 1.6rem; line-height: 1.1; }
+.stats span { color: var(--on-brand-muted); font-size: .9rem; }
+
+/* ---------- Buttons & badges ---------- */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--radius-sm);
+  border: 0; font: 600 .95rem var(--font); cursor: pointer; background: var(--accent); color: var(--on-accent); }
+.btn:hover { text-decoration: none; filter: brightness(1.05); }
+.badge { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: 2px 9px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.badge.notes { background: var(--notes-bg); color: var(--notes); }
+.badge.mcq   { background: var(--mcq-bg);   color: var(--mcq); }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: .88rem; font-weight: 600; }
+.chip.notes { background: var(--notes-bg); color: var(--notes); }
+.chip.mcq   { background: var(--mcq-bg);   color: var(--mcq); }
+.chip.video { background: var(--video-bg); color: var(--video); }
+.chip.soon  { background: var(--surface-2); color: var(--muted); font-weight: 500; }
+
+/* ---------- Cards ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px;
+  box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; transition: transform .15s, border-color .15s; }
+.card:hover { transform: translateY(-2px); border-color: var(--brand-ink); }
+@media (prefers-reduced-motion: reduce) { .card, .card:hover { transition: none; transform: none; } html { scroll-behavior: auto; } }
+.card h3 { margin: 0; font-size: 1.05rem; }
+.card h3 a { color: var(--text); }
+.card .meta { color: var(--muted); font-size: .86rem; margin-top: auto; }
+.card.kind-notes { border-top: 4px solid var(--notes); }
+.card.kind-mcq   { border-top: 4px solid var(--mcq); }
+
+.grade-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+.grade-card { padding: 26px; }
+.grade-card h3 { font-size: 1.35rem; }
+.grade-card p { margin: 0; color: var(--muted); }
+
+/* ---------- Syllabus (grade pages) ---------- */
+.area { margin: 36px 0 12px; font-size: 1.15rem; color: var(--brand-ink); display: flex; align-items: center; gap: 10px; }
+.area::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+.chapter { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; box-shadow: var(--shadow); }
+.chapter summary { list-style: none; cursor: pointer; padding: 16px 20px; display: flex; align-items: center; gap: 14px; font-weight: 600; }
+.chapter summary::-webkit-details-marker { display: none; }
+.chapter summary::after { content: "▸"; margin-left: auto; color: var(--muted); transition: transform .15s; }
+.chapter[open] summary::after { transform: rotate(90deg); }
+.chapter .num { flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--brand-100); color: var(--brand-ink); font-size: .9rem; }
+.chapter .counts { display: flex; gap: 6px; }
+.chapter-body { padding: 0 20px 18px 66px; }
+.chapter-body ul { margin: 0 0 14px; padding-left: 18px; color: var(--muted); }
+.chapter-links { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- Search ---------- */
+.search-box { display: flex; gap: 8px; max-width: 640px; }
+.search-box input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--text); font: inherit; }
+.filters { display: flex; gap: 8px; margin: 14px 0 22px; flex-wrap: wrap; }
+.filters button { font: 600 .88rem var(--font); padding: 6px 14px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--muted); cursor: pointer; }
+.filters button[aria-pressed="true"] { background: var(--brand-600); border-color: var(--brand-600); color: #fff; }
+.empty { color: var(--muted); }
+
+/* ---------- Footer ---------- */
+.footer { margin-top: 64px; background: var(--brand-900); color: var(--on-brand-muted); }
+.footer-inner { max-width: var(--max); margin: auto; padding: 32px 20px; display: flex; gap: 12px 28px; flex-wrap: wrap; align-items: center; font-size: .92rem; }
+.footer a { color: #fff; }
+.footer .spacer { flex: 1; }
+
+@media (max-width: 720px) {
+  .site-header { position: static; }
+  .nav-search { order: 3; width: 100%; margin-left: 0; }
+  .nav-search input { width: 100%; }
+  .container { padding: 0 14px; margin-top: 20px; }
+  .hero { padding: 30px 22px; }
+  .chapter-body { padding-left: 20px; }
+  .chapter .counts { display: none; }
+}
