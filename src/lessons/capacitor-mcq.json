@@ -1,0 +1,359 @@
+{
+  "title": "Capacitance and Dielectrics — 50 MCQs",
+  "grade": "XI",
+  "chapters": [22],
+  "date": "2026-09-26",
+  "description": "50 MCQs on capacitance, parallel-plate capacitor, series and parallel combinations, energy stored, and dielectric effects.",
+  "questions": [
+    {
+      "q": "A capacitor is a device used to store:",
+      "options": ["Current", "Electric charge and energy", "Resistance", "Magnetic flux"],
+      "answer": 1,
+      "explanation": "A capacitor stores electric charge on its plates and electrical potential energy in the electric field between them.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The SI unit of capacitance is:",
+      "options": ["Ohm", "Henry", "Farad", "Weber"],
+      "answer": 2,
+      "explanation": "Capacitance is measured in farads (F), where 1 F = 1 C/V.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Capacitance is defined as:",
+      "options": ["The rate of flow of charge", "The ratio of change in charge to the corresponding change in potential", "The product of charge and potential", "The rate of change of potential with time"],
+      "answer": 1,
+      "explanation": "By definition, capacitance C = ΔQ/ΔV, the amount of charge stored per unit increase in potential difference.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "One farad is equal to:",
+      "options": ["1 volt per coulomb", "1 coulomb per volt", "1 joule per coulomb", "1 coulomb per second"],
+      "answer": 1,
+      "explanation": "From C = Q/V, one farad is one coulomb per volt.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "On a Q–V graph for a capacitor, the gradient of the straight line represents:",
+      "options": ["Energy stored", "Electric field", "Capacitance", "Resistance"],
+      "answer": 2,
+      "explanation": "Since Q = CV, the slope of Q against V is ΔQ/ΔV = C.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Practical capacitor values are most commonly expressed in:",
+      "options": ["Farads", "Kilofarads", "Microfarads or picofarads", "Megafarads"],
+      "answer": 2,
+      "explanation": "A farad is large, so practical capacitors are commonly specified in μF, nF, or pF.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which of the following is NOT a typical use of a capacitor?",
+      "options": ["Smoothing rectified voltage", "Timing circuits", "Amplifying current gain in a transistor", "Camera flash energy storage"],
+      "answer": 2,
+      "explanation": "Capacitors store and release charge, filter, time, and couple signals; they do not amplify current gain in a transistor.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The two plates of a charged capacitor carry:",
+      "options": ["Equal charges of the same sign", "Equal and opposite charges", "Unequal charges of opposite sign", "No net charge"],
+      "answer": 1,
+      "explanation": "One plate carries +Q and the other −Q with equal magnitude.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A capacitor blocks:",
+      "options": ["Alternating current only", "Direct current in steady state", "Both AC and DC equally", "Neither AC nor DC"],
+      "answer": 1,
+      "explanation": "In steady state, a capacitor blocks DC but allows AC to pass, depending on frequency and circuit conditions.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If the potential difference across a capacitor is doubled, the charge stored (assuming constant C):",
+      "options": ["Remains the same", "Doubles", "Halves", "Quadruples"],
+      "answer": 1,
+      "explanation": "Since Q = CV, charge is directly proportional to potential difference when capacitance is constant.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The capacitance of a capacitor depends on:",
+      "options": ["The charge stored on it", "The potential difference applied", "Its geometry and the medium between the plates", "The current flowing through it"],
+      "answer": 2,
+      "explanation": "Capacitance depends on geometry and dielectric, not on Q or V for a given capacitor.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A dielectric material is best described as:",
+      "options": ["A good conductor of electricity", "An insulator that can be polarized by an electric field", "A semiconductor", "A superconductor"],
+      "answer": 1,
+      "explanation": "Dielectrics are insulating materials whose molecules polarize when placed in an electric field.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If ΔQ = 4 μC produces ΔV = 2 V across a capacitor, its capacitance is:",
+      "options": ["0.5 μF", "2 μF", "8 μF", "4 μF"],
+      "answer": 1,
+      "explanation": "C = ΔQ/ΔV = 4 μC / 2 V = 2 μF.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A capacitor with a steeper Q–V graph compared to another indicates:",
+      "options": ["Lower capacitance", "Higher capacitance", "Same capacitance", "Cannot be determined"],
+      "answer": 1,
+      "explanation": "A steeper slope means more charge is stored per volt, so capacitance is higher.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which symbol correctly represents permittivity of free space?",
+      "options": ["μ₀", "ε₀", "σ", "εᵣ"],
+      "answer": 1,
+      "explanation": "ε₀ is the permittivity of free space, while εᵣ is the relative permittivity.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The formula for the capacitance of a parallel plate capacitor with vacuum between the plates is:",
+      "options": ["C = ε₀d/A", "C = ε₀A/d", "C = A/ε₀d", "C = ε₀Ad"],
+      "answer": 1,
+      "explanation": "For a parallel plate capacitor, C = ε₀A/d.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In the derivation of C = ε₀A/d, which law is applied to find the electric field between the plates?",
+      "options": ["Coulomb's law directly", "Gauss's law", "Ohm's law", "Faraday's law"],
+      "answer": 1,
+      "explanation": "Gauss’s law gives the field between plate sheets, leading to E = σ/ε₀.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the plate area of a parallel plate capacitor is doubled while separation remains constant, the capacitance:",
+      "options": ["Halves", "Doubles", "Remains unchanged", "Quadruples"],
+      "answer": 1,
+      "explanation": "Capacitance is proportional to area A, so doubling A doubles C.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If the plate separation of a parallel plate capacitor is halved while area remains constant, the capacitance:",
+      "options": ["Halves", "Doubles", "Remains unchanged", "Quadruples"],
+      "answer": 1,
+      "explanation": "Capacitance is inversely proportional to separation d, so halving d doubles C.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The electric field between the plates of a charged parallel plate capacitor (vacuum) is given by:",
+      "options": ["E = σ/ε₀ from a single isolated sheet", "E = σ/ε₀, from the superposition of both plates' fields", "E = σ/2ε₀ only", "E = 0"],
+      "answer": 1,
+      "explanation": "Each plate contributes σ/2ε₀, and these add between the plates to give σ/ε₀.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Outside the plates of an ideal parallel plate capacitor, the net electric field is:",
+      "options": ["σ/ε₀", "σ/2ε₀", "Zero", "Infinite"],
+      "answer": 2,
+      "explanation": "The fields outside are equal and opposite and cancel each other, giving zero net field.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A parallel plate capacitor has plates of area 0.01 m² separated by 2 mm in vacuum. Its capacitance is approximately: (ε₀ = 8.85 × 10⁻¹² F/m)",
+      "options": ["4.4 × 10⁻¹¹ F", "4.4 × 10⁻¹¹ F ≈ 44 pF", "8.85 × 10⁻¹² F", "1.77 × 10⁻¹⁰ F"],
+      "answer": 1,
+      "explanation": "C = ε₀A/d = (8.85×10⁻¹² × 0.01)/(2×10⁻³) = 4.43×10⁻¹¹ F, about 44 pF.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which graph correctly represents C plotted against 1/d for a parallel plate capacitor (A constant)?",
+      "options": ["A curve bending downward", "A straight line through the origin", "A horizontal line", "A hyperbola"],
+      "answer": 1,
+      "explanation": "With A fixed, C = ε₀A(1/d), so C is directly proportional to 1/d and gives a straight line through the origin.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Doubling both the plate area and the plate separation of a parallel plate capacitor leaves the capacitance:",
+      "options": ["Doubled", "Halved", "Unchanged", "Quadrupled"],
+      "answer": 2,
+      "explanation": "C = ε₀A/d; if both A and d double, the ratio A/d does not change.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If a parallel plate capacitor's area is tripled and its separation is also tripled, the new capacitance compared to the original is:",
+      "options": ["9 times", "3 times", "Same as original", "One-third"],
+      "answer": 2,
+      "explanation": "Since both A and d scale by the same factor, A/d remains constant and C is unchanged.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For capacitors connected in series, which quantity is the same across each capacitor?",
+      "options": ["Potential difference", "Charge", "Capacitance", "Energy stored"],
+      "answer": 1,
+      "explanation": "In series, the same charge appears on each capacitor because charge is conserved in the chain.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For capacitors connected in parallel, which quantity is the same across each capacitor?",
+      "options": ["Charge", "Potential difference", "Capacitance", "None of these"],
+      "answer": 1,
+      "explanation": "Each capacitor in parallel is connected across the same two points, so the potential difference is common.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The equivalent capacitance of capacitors in series is:",
+      "options": ["Greater than the largest individual capacitance", "Equal to the sum of individual capacitances", "Smaller than the smallest individual capacitance", "Equal to the average of individual capacitances"],
+      "answer": 2,
+      "explanation": "For series, 1/C_s = Σ(1/C_i), and C_s is always less than the smallest capacitance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The equivalent capacitance of capacitors in parallel is:",
+      "options": ["Greater than the largest individual capacitance", "Smaller than the smallest individual capacitance", "Equal to the reciprocal sum of individual capacitances", "Always equal to zero"],
+      "answer": 0,
+      "explanation": "Parallel adds capacitance: C_p = C_1 + C_2 + ... . It is always greater than the largest individual value.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Two capacitors of 4 μF and 4 μF are connected in series. The equivalent capacitance is:",
+      "options": ["8 μF", "2 μF", "4 μF", "1 μF"],
+      "answer": 1,
+      "explanation": "For equal capacitors in series, C_s = C/n = 4/2 = 2 μF.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Two capacitors of 4 μF and 4 μF are connected in parallel. The equivalent capacitance is:",
+      "options": ["2 μF", "8 μF", "1 μF", "16 μF"],
+      "answer": 1,
+      "explanation": "In parallel, C_p = 4 + 4 = 8 μF.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Three identical capacitors of capacitance C are connected in series. The equivalent capacitance is:",
+      "options": ["3C", "C", "C/3", "9C"],
+      "answer": 2,
+      "explanation": "1/C_s = 1/C + 1/C + 1/C = 3/C, so C_s = C/3.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Two capacitors, 2 μF and 3 μF, are connected in series across a 10 V battery. The charge on each capacitor is:",
+      "options": ["20 μC and 30 μC respectively", "12 μC on each", "6 μC on each", "5 μC on each"],
+      "answer": 1,
+      "explanation": "The series equivalent is 1.2 μF, so Q = C_sV = 1.2×10 = 12 μC on each capacitor.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two capacitors, 2 μF and 3 μF, connected in parallel across a 10 V battery. The total charge supplied is:",
+      "options": ["12 μC", "50 μC", "30 μC", "20 μC"],
+      "answer": 1,
+      "explanation": "C_p = 2 + 3 = 5 μF, so Q = C_pV = 5×10 = 50 μC.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A 6 μF capacitor is in series with a parallel combination of 3 μF and 3 μF. The total equivalent capacitance is:",
+      "options": ["12 μF", "3 μF", "6 μF", "2 μF"],
+      "answer": 1,
+      "explanation": "The parallel part is 6 μF, and in series with another 6 μF gives C = 3 μF.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Four identical capacitors of 8 μF are connected: two in series, and this series pair is connected in parallel with the other two capacitors also in series. The total capacitance is:",
+      "options": ["4 μF", "16 μF", "8 μF", "2 μF"],
+      "answer": 2,
+      "explanation": "Each series pair gives 4 μF, and two such branches in parallel give 8 μF total.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a series combination of unequal capacitors, the capacitor with the smallest capacitance:",
+      "options": ["Has the smallest potential difference across it", "Has the largest potential difference across it", "Has the largest charge", "Has zero potential difference"],
+      "answer": 1,
+      "explanation": "Since Q is same in series and V = Q/C, a smaller capacitance has larger voltage across it.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a parallel combination of unequal capacitors, the capacitor with the largest capacitance:",
+      "options": ["Has the smallest charge", "Has the largest charge", "Has the largest potential difference", "Has zero charge"],
+      "answer": 1,
+      "explanation": "With common voltage V, Q = CV, so the largest capacitance stores the largest charge.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The energy stored in a charged capacitor is given by the area under which graph?",
+      "options": ["V versus t", "Q versus V", "I versus t", "E versus d"],
+      "answer": 1,
+      "explanation": "The area under the Q–V graph gives the work done in charging, equal to the stored energy.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The correct expression for energy stored in a capacitor is:",
+      "options": ["E = QV", "E = ½QV", "E = 2QV", "E = QV²"],
+      "answer": 1,
+      "explanation": "The factor ½ appears because the voltage rises gradually from 0 to V during charging.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Why is E = QV (without the factor ½) incorrect for a capacitor?",
+      "options": ["Because Q is not constant", "Because V is not constant during charging — it rises from 0 to V", "Because capacitors do not store energy", "Because charge and voltage are unrelated"],
+      "answer": 1,
+      "explanation": "The capacitor is charged from zero to final voltage, so V is not constant across the process.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A 5 μF capacitor is charged to 100 V. The energy stored is:",
+      "options": ["0.05 J", "0.025 J", "0.5 J", "5 J"],
+      "answer": 1,
+      "explanation": "E = ½CV² = ½×5×10⁻⁶×(100)² = 0.025 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the potential difference across a capacitor is doubled, the energy stored:",
+      "options": ["Doubles", "Halves", "Quadruples", "Remains the same"],
+      "answer": 2,
+      "explanation": "Since E = ½CV², energy is proportional to V², so doubling V quadruples E.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A capacitor stores charge 8 μC at 4 V. The energy stored is:",
+      "options": ["32 μJ", "16 μJ", "8 μJ", "4 μJ"],
+      "answer": 1,
+      "explanation": "E = ½QV = ½×8×10⁻⁶×4 = 16 μJ.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two capacitors of equal capacitance C are first connected in series and then in parallel across the same voltage V. The ratio of energy stored (series : parallel) is:",
+      "options": ["4 : 1", "2 : 1", "1 : 4", "1 : 1"],
+      "answer": 2,
+      "explanation": "Series equivalent is C/2 and parallel equivalent is 2C, giving E_s : E_p = 1 : 4.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When a dielectric is placed in an external electric field, its molecules become:",
+      "options": ["Ionized", "Polarized", "Demagnetized", "Free to conduct current"],
+      "answer": 1,
+      "explanation": "The field displaces or aligns charges within each molecule, producing polarization.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When a dielectric slab completely fills the gap of a parallel plate capacitor, the capacitance becomes:",
+      "options": ["C₀/εᵣ", "εᵣC₀", "C₀", "C₀ − εᵣ"],
+      "answer": 1,
+      "explanation": "Capacitance rises to C = εᵣ ε₀ A/d = εᵣ C₀.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An isolated, charged parallel plate capacitor (disconnected from the battery) has a dielectric inserted between its plates. Which of the following remains constant?",
+      "options": ["Potential difference V", "Electric field E", "Charge Q", "Capacitance C"],
+      "answer": 2,
+      "explanation": "With no path for charge to flow, Q remains fixed while V and E reduce and C increases.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A parallel plate capacitor remains connected to a battery while a dielectric is inserted. Which quantity stays constant?",
+      "options": ["Charge Q", "Potential difference V", "Capacitance C", "Electric field E"],
+      "answer": 1,
+      "explanation": "The battery maintains a fixed voltage V, so as C increases, Q also increases.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The bound (induced) charge that appears on the surface of a dielectric in an external field arises because:",
+      "options": ["Free electrons move through the dielectric to its surface", "Internal displacement or alignment of charge within each molecule creates a net surface charge without any charge leaving the material", "The dielectric becomes positively charged overall", "The dielectric conducts current like a metal"],
+      "answer": 1,
+      "explanation": "A dielectric remains electrically neutral overall; the surface charge comes from molecular polarization, not free charge flow.",
+      "difficulty": "hard"
+    }
+  ]
+}
