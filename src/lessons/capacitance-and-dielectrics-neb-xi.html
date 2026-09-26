@@ -1,0 +1,1020 @@
+---
+title: Capacitor — Capacitance and Dielectrics
+grade: XI
+chapters: [22]
+date: 2026-09-26
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitor — Capacitance and Dielectrics - Grade XI Physics</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.65;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.97);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+            margin-bottom: 30px;
+            text-align: center;
+            border-left: 5px solid #3498db;
+        }
+
+        h1 {
+            color: #1f3a5f;
+            margin-bottom: 10px;
+            font-size: 2.4em;
+        }
+
+        .subtitle {
+            color: #5d6d7e;
+            font-size: 1.1em;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.97);
+            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #1f3a5f;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 12px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #2c5aa0;
+            margin: 24px 0 16px;
+            font-size: 1.3em;
+        }
+
+        h4 {
+            color: #34495e;
+            margin: 18px 0 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .formula {
+            background: #f5f8fb;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.05em;
+            border-radius: 6px;
+            overflow-x: auto;
+            line-height: 1.8;
+        }
+
+        .example {
+            background: #e8f7fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #16a085;
+        }
+
+        .derivation {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #2980b9;
+        }
+
+        .key-points {
+            background: #f0fff5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #27ae60;
+        }
+
+        .key-points ul {
+            margin-left: 20px;
+        }
+
+        .numerical {
+            background: #fff7f3;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #e67e22;
+        }
+
+        .warning {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #f39c12;
+        }
+
+        .mcq-section {
+            background: #fff8e1;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid #f39c12;
+        }
+
+        .question {
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .options {
+            margin-left: 20px;
+        }
+
+        .option {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .diagram {
+            text-align: center;
+            margin: 25px auto;
+            max-width: 800px;
+        }
+
+        .diagram pre {
+            white-space: pre-wrap;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+            font-size: 0.95em;
+            overflow-x: auto;
+            text-align: left;
+            color: #333;
+        }
+
+        .diagram-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: 12px;
+            font-size: 0.95em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+            font-weight: 700;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 700;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Capacitor — Capacitance and Dielectrics</h1>
+            <div class="subtitle">Grade XI Physics - NEB Curriculum</div>
+        </div>
+
+        <div class="section">
+            <h2>Unit 22: Capacitor — Capacitance and Dielectrics</h2>
+
+            <p>A capacitor is one of the three fundamental passive components of electric circuits, alongside the resistor and the inductor. While a resistor dissipates electrical energy as heat, a capacitor <strong>stores</strong> electrical energy in the form of an electric field. This chapter develops the concept of capacitance, derives the capacitance of a parallel plate capacitor using Gauss's law, analyses capacitor combinations, and examines how dielectric materials modify capacitor behaviour.</p>
+        </div>
+
+        <div class="section">
+            <h2>22.1 Capacitance and Capacitor</h2>
+
+            <h3>22.1(a) Uses of Capacitors in Simple Electrical Circuits</h3>
+            <p>A capacitor is a device consisting of two conductors, generally called <strong>plates</strong>, separated by an insulating medium known as a <strong>dielectric</strong>. It can store electric charge and hence electrical energy. When connected across a potential difference, equal and opposite charges accumulate on the plates and an electric field is set up between them.</p>
+
+            <div class="diagram">
+                <pre>
+         ┌─────────────────┐
+         │                 │
+    ├────┤                 ├────┤
+    │    │   (dielectric)  │    │
+    ├────┤                 ├────┤
+         │                 │
+         └─────────────────┘
+         
+      Plate A (+Q)    Plate B (-Q)
+      
+            Circuit Symbol:
+            
+                  │  │
+             ─────┤  ├─────
+                  │  │
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.1:</strong> Capacitor structure and circuit symbol</div>
+            </div>
+
+            <div class="key-points">
+                <h4>Common uses of capacitors:</h4>
+                <ul>
+                    <li><strong>Energy storage:</strong> Used in camera flashes and similar rapid discharge applications.</li>
+                    <li><strong>Smoothing and filtering:</strong> Helps reduce voltage fluctuations in rectifier circuits.</li>
+                    <li><strong>Timing circuits:</strong> Used with resistors in RC circuits for delay and pulse timing.</li>
+                    <li><strong>Tuning circuits:</strong> Variable capacitors are used in radios and receivers.</li>
+                    <li><strong>Coupling and decoupling:</strong> Allows AC to pass while blocking DC in amplifier circuits.</li>
+                    <li><strong>Protection:</strong> Absorbs sudden voltage surges and protects components.</li>
+                </ul>
+            </div>
+
+            <h3>22.1(b) Definition of Capacitance</h3>
+            <p>When the potential difference across a capacitor is changed, the charge stored on it also changes. Experiments show that, for a given capacitor, the charge stored is directly proportional to the potential difference. The constant ratio is called the capacitance.</p>
+
+            <div class="formula">
+                C = ΔQ / ΔV
+            </div>
+
+            <p><strong>Capacitance</strong> is the ratio of the change in charge on a conductor to the corresponding change in its electric potential. It measures the ability of a system to store charge per unit potential difference.</p>
+
+            <p>For a capacitor charged from zero to a final value, the relation becomes:</p>
+
+            <div class="formula">
+                C = Q / V
+            </div>
+
+            <p>where Q is the charge on either plate and V is the potential difference between them. The SI unit of capacitance is the <strong>farad (F)</strong>, defined as:</p>
+
+            <div class="formula">
+                1 F = 1 C / 1 V
+            </div>
+
+            <p>One farad is very large; practical capacitor values are often given in microfarads (μF = 10⁻⁶ F), nanofarads (nF = 10⁻⁹ F), or picofarads (pF = 10⁻¹² F).</p>
+
+            <h3>22.1(c) Q–V Graph and Capacitance</h3>
+            <p>For an ideal capacitor, charge is directly proportional to potential difference, so a graph of Q against V is a straight line through the origin. The slope of this graph gives the capacitance:</p>
+
+            <div class="diagram">
+                <pre>
+         Q
+         ↑
+         │        ╱
+         │       ╱
+         │      ╱
+       Q │     ╱  ← slope = C
+         │    ╱
+         │   ╱
+         │  ╱
+         │ ╱
+         │╱____________________→ V
+         O                      V
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.2:</strong> Charge vs Potential Difference (slope = C)</div>
+            </div>
+
+            <div class="formula">
+                slope = rise / run = ΔQ / ΔV = C
+            </div>
+
+            <p><strong>Conclusion:</strong> Capacitance is numerically equal to the gradient (slope) of the Q–V graph.</p>
+        </div>
+
+        <div class="section">
+            <h2>22.2 Parallel Plate Capacitor</h2>
+
+            <h3>22.2(a) Derivation of C = ε₀A/d Using Gauss's Law</h3>
+            <p>A parallel plate capacitor consists of two large, flat conducting plates of area A separated by a small distance d. The region between them is usually vacuum or air.</p>
+
+            <div class="diagram">
+                <pre>
+         ┌───────────────────────────┐
+         │  +  +  +  +  +  +  +  +   │
+         │  +  +  +  +  +  +  +  +   │  (+Q)
+         │  +  +  +  +  +  +  +  +   │
+         │                           │
+              ↓ E ↓ E ↓ E ↓ E ↓ E ↓
+              (Electric field)
+                  distance d
+              ↑ E ↑ E ↑ E ↑ E ↑ E ↑
+         │                           │
+         │  -  -  -  -  -  -  -  -   │  (-Q)
+         │  -  -  -  -  -  -  -  -   │
+         │  -  -  -  -  -  -  -  -   │
+         └───────────────────────────┘
+         
+              Area A
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.3:</strong> Parallel plate capacitor showing field lines</div>
+            </div>
+
+            <p><strong>Step 1: Electric field between the plates</strong></p>
+            <p>Using Gauss's law and considering an isolated charged sheet:</p>
+
+            <div class="formula">
+                E_single sheet = σ / 2ε₀
+            </div>
+
+            <p>In a parallel plate capacitor, the fields due to both charged plates add up between the plates:</p>
+
+            <div class="formula">
+                E = σ/2ε₀ + σ/2ε₀ = σ/ε₀ = Q / (ε₀A)
+            </div>
+
+            <p><strong>Step 2: Potential difference between the plates</strong></p>
+            <p>For uniform field:</p>
+
+            <div class="formula">
+                V = E × d = Qd / (ε₀A)
+            </div>
+
+            <p><strong>Step 3: Capacitance formula</strong></p>
+
+            <div class="formula">
+                C = Q / V = Q / [Qd / (ε₀A)] = ε₀A / d
+            </div>
+
+            <div class="key-points">
+                <h4>Parallel Plate Capacitor Formula:</h4>
+                <div class="formula">
+                    <strong>C = ε₀A / d</strong>
+                </div>
+                <p>where:</p>
+                <ul>
+                    <li>ε₀ = 8.85 × 10⁻¹² F m⁻¹ (permittivity of free space)</li>
+                    <li>A = area of overlap of plates (m²)</li>
+                    <li>d = separation between plates (m)</li>
+                </ul>
+            </div>
+
+            <h3>22.2(b) Effect of Plate Area and Separation</h3>
+
+            <div class="key-points">
+                <h4>Effect of plate area (A):</h4>
+                <ul>
+                    <li><strong>C ∝ A</strong> (at constant d)</li>
+                    <li>Larger plate area → more space for charge → larger capacitance</li>
+                </ul>
+            </div>
+
+            <div class="key-points">
+                <h4>Effect of separation (d):</h4>
+                <ul>
+                    <li><strong>C ∝ 1/d</strong> (at constant A)</li>
+                    <li>Smaller separation → stronger electric field → larger capacitance</li>
+                </ul>
+            </div>
+
+            <h3>22.2(c) Effect of a Dielectric</h3>
+            <p>When a dielectric material fills the space between the plates:</p>
+
+            <div class="formula">
+                C = εᵣ ε₀ A / d
+            </div>
+
+            <p>where εᵣ is the relative permittivity (dielectric constant). Since εᵣ > 1 for all dielectrics, inserting a dielectric always <strong>increases</strong> the capacitance.</p>
+
+            <div class="key-points">
+                <h4>Typical dielectric constants:</h4>
+                <ul>
+                    <li>Air ≈ 1.0006</li>
+                    <li>Paper ≈ 2 to 3.5</li>
+                    <li>Glass ≈ 4 to 10</li>
+                    <li>Mica ≈ 3 to 6</li>
+                    <li>Water ≈ 80</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>22.3 Combination of Capacitors</h2>
+
+            <h3>22.3(a) Capacitors in Series</h3>
+            <p>When capacitors are connected in series, the same charge Q flows through each capacitor. The total potential difference is the sum of individual potential differences.</p>
+
+            <div class="diagram">
+                <pre>
+         ┌────────────────────────────┐
+         │                            │
+      ┌──┤  C₁   C₂   C₃          ├──┐
+      │  │ ┌─┐  ┌─┐  ┌─┐         │  │
+   ───┤  └─│ │──│ │──│ │─────────┤  ├───
+      │    └─┘  └─┘  └─┘         │  │
+      │                          │  │
+      │     ─── V₁ ───   ─ V₂ ─  │  │
+      │           ─ V₃ ─          │  │
+      │         ─── V_total ───   │  │
+      │                          │  │
+      └──────────────────────────┴──┘
+              (V₁ + V₂ + V₃ = V)
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.4:</strong> Capacitors in series (same charge Q on each)</div>
+            </div>
+
+            <div class="formula">
+                1/Cₛ = 1/C₁ + 1/C₂ + 1/C₃ + ...
+            </div>
+
+            <p><strong>Key point:</strong> Equivalent capacitance in series is always <strong>smaller</strong> than the smallest individual capacitor.</p>
+
+            <div class="example">
+                <h4>Example 1 (Series):</h4>
+                <p>Two capacitors of 4 μF and 6 μF connected in series. Find equivalent capacitance.</p>
+                <div class="formula">
+                    1/Cₛ = 1/4 + 1/6 = (3+2)/12 = 5/12
+                    <br>
+                    Cₛ = 12/5 = <strong>2.4 μF</strong>
+                </div>
+            </div>
+
+            <h3>22.3(b) Capacitors in Parallel</h3>
+            <p>When capacitors are connected in parallel, the same potential difference V appears across each capacitor. The total charge is the sum of individual charges.</p>
+
+            <div class="diagram">
+                <pre>
+         ┌─────────────────────────────┐
+         │                             │
+         ├──┬──────────────┬───────────┤
+         │  │              │           │
+         │ ┌─┐            ┌─┐        ┌─┐
+    ┌────┤ │ │C₁         │ │C₂      │ │C₃
+    │    │ └─┘            └─┘        └─┘
+    │    │  │              │           │
+    │    └──┼──────────────┼───────────┘
+    │       │              │
+    │       ─ V ─   ─ V ─   ─ V ─
+    │       (same voltage across all)
+    │
+    │    Q = Q₁ + Q₂ + Q₃
+    │
+    └─────────────────────────────────
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.5:</strong> Capacitors in parallel (same voltage V across each)</div>
+            </div>
+
+            <div class="formula">
+                Cₚ = C₁ + C₂ + C₃ + ...
+            </div>
+
+            <p><strong>Key point:</strong> Equivalent capacitance in parallel is always <strong>greater</strong> than the largest individual capacitor.</p>
+
+            <div class="example">
+                <h4>Example 2 (Parallel):</h4>
+                <p>Two capacitors 5 μF and 8 μF connected in parallel. Find equivalent capacitance.</p>
+                <div class="formula">
+                    Cₚ = 5 + 8 = <strong>13 μF</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>22.4 Energy Stored in a Charged Capacitor</h2>
+
+            <h3>22.4(a) Derivation of E = ½QV and E = ½CV²</h3>
+            <p>To charge a capacitor, work must be done against the electric field. This work is stored as electrostatic potential energy.</p>
+
+            <p>During charging, the potential difference rises from 0 to V while the charge rises from 0 to Q. The Q–V graph is a straight line through the origin, and the energy stored equals the area under the graph:</p>
+
+            <div class="diagram">
+                <pre>
+         Q
+         │
+         │                  ╱ ● (Q, V)
+       Q ├─ ─ ─ ─ ─ ─ ─ ─ ╱ │
+         │                ╱��██│
+         │              ╱█████│
+         │            ╱███████│  ← Area = Energy
+         │          ╱█████████│     = ½QV
+         │        ╱███████████│
+         │      ╱█────────────│
+         │_____╱──────────────┼──→ V
+         O                    V
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.6:</strong> Energy stored = area under Q–V graph = ½QV</div>
+            </div>
+
+            <div class="formula">
+                E = ½ Q V
+            </div>
+
+            <p>Using Q = CV:</p>
+
+            <div class="formula">
+                E = ½ C V²
+            </div>
+
+            <p>Or from V = Q/C:</p>
+
+            <div class="formula">
+                E = Q² / 2C
+            </div>
+
+            <div class="warning">
+                <h4>⚠️ Important Note:</h4>
+                <p>The factor ½ appears because the potential difference is <strong>not constant</strong> during charging—it increases gradually from 0 to V. The area under the Q–V graph is triangular (not rectangular), hence the factor ½.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 3:</h4>
+                <p>A 10 μF capacitor is charged to 20 V. Find the energy stored.</p>
+                <div class="formula">
+                    E = ½CV² = ½ × 10×10⁻⁶ × (20)² = ½ × 10×10⁻⁶ × 400
+                    <br>
+                    E = 2 × 10⁻³ J = <strong>2 mJ</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>22.5 Loss of Energy When Joining Capacitors with Like Terminals</h2>
+
+            <p>When two charged capacitors are connected with their like terminals (positive to positive, negative to negative), a sudden charge redistribution occurs, resulting in a <strong>loss of energy</strong>. This energy is dissipated as heat due to the current pulse during connection.</p>
+
+            <h3>22.5(a) Initial and Final States</h3>
+
+            <div class="diagram">
+                <pre>
+         BEFORE CONNECTION          AFTER CONNECTION
+         
+         C₁        C₂                    C₁ ∥ C₂
+         ┌─┐       ┌─┐                    ┌─────┐
+    ───┤ │───  ───┤ │───            ────┤       ├────
+         │ │       │ │               │    │   ∥   │
+         │ │       │ │               │    │       │
+    ───┤ │───  ───┤ │───            ────┤       ├────
+         └─┘       └─┘                    └─────┘
+         
+        V₁, Q₁    V₂, Q₂          Common V, Q_total
+        Q₁ = C₁V₁  Q₂ = C₂V₂      Q_total = Q₁ + Q₂
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.7:</strong> Connection of capacitors: before and after</div>
+            </div>
+
+            <h3>22.5(b) Mathematical Analysis</h3>
+
+            <p><strong>Initial State:</strong></p>
+            <div class="formula">
+                C₁ at voltage V₁ has charge Q₁ = C₁V₁
+                <br>
+                C₂ at voltage V₂ has charge Q₂ = C₂V₂
+                <br>
+                Initial energy: E₁ = ½C₁V₁² + ½C₂V₂²
+            </div>
+
+            <p><strong>Final State (connected in parallel):</strong></p>
+            <p>The two capacitors reach a common final voltage V_f. By conservation of charge:</p>
+
+            <div class="formula">
+                Q₁ + Q₂ = (C₁ + C₂)V_f
+                <br>
+                <br>
+                V_f = (C₁V₁ + C₂V₂) / (C₁ + C₂)
+            </div>
+
+            <p>Final energy stored:</p>
+
+            <div class="formula">
+                E₂ = ½(C₁ + C₂)V_f²
+                <br>
+                <br>
+                E₂ = ½(C₁ + C₂) × [(C₁V₁ + C₂V₂)/(C₁ + C₂)]²
+                <br>
+                <br>
+                E₂ = (C₁V₁ + C₂V₂)² / [2(C₁ + C₂)]
+            </div>
+
+            <p><strong>Energy Loss:</strong></p>
+
+            <div class="formula">
+                <strong>ΔE = E₁ - E₂</strong>
+                <br>
+                <br>
+                <strong>ΔE = C₁C₂(V₁ - V₂)² / [2(C₁ + C₂)]</strong>
+            </div>
+
+            <div class="warning">
+                <h4>⚠️ Important:</h4>
+                <ul>
+                    <li>ΔE is always <strong>positive</strong> (energy is lost)</li>
+                    <li>ΔE depends on the <strong>difference in initial voltages</strong> (V₁ - V₂)</li>
+                    <li>If V₁ = V₂, then ΔE = 0 (no energy loss)</li>
+                    <li>The energy is dissipated as <strong>heat, electromagnetic radiation, and mechanical vibrations</strong> during the transient current</li>
+                </ul>
+            </div>
+
+            <div class="example">
+                <h4>Example 4 (Energy Loss):</h4>
+                <p>A 4 μF capacitor charged to 100 V is connected to a 2 μF capacitor charged to 40 V (positive terminals connected). Find:</p>
+                <p>(i) Common final voltage</p>
+                <p>(ii) Initial total energy</p>
+                <p>(iii) Final total energy</p>
+                <p>(iv) Energy lost</p>
+                
+                <div class="derivation">
+                    <p><strong>Solution:</strong></p>
+                    <div class="formula">
+                        (i) V_f = (C₁V₁ + C₂V₂) / (C₁ + C₂)
+                        <br>
+                        V_f = (4×100 + 2×40) / (4 + 2)
+                        <br>
+                        V_f = (400 + 80) / 6 = 480/6 = <strong>80 V</strong>
+                    </div>
+                    
+                    <div class="formula">
+                        (ii) E₁ = ½C₁V₁² + ½C₂V₂²
+                        <br>
+                        E₁ = ½(4×10⁻⁶)(100)² + ½(2×10⁻⁶)(40)²
+                        <br>
+                        E₁ = 0.02 + 0.0016 = <strong>0.0216 J = 21.6 mJ</strong>
+                    </div>
+                    
+                    <div class="formula">
+                        (iii) E₂ = ½(C₁ + C₂)V_f²
+                        <br>
+                        E₂ = ½(6×10⁻⁶)(80)²
+                        <br>
+                        E₂ = ½ × 6×10⁻⁶ × 6400 = <strong>0.0192 J = 19.2 mJ</strong>
+                    </div>
+                    
+                    <div class="formula">
+                        (iv) ΔE = E₁ - E₂ = 21.6 - 19.2 = <strong>2.4 mJ</strong>
+                        <br>
+                        <br>
+                        OR: ΔE = C₁C₂(V₁ - V₂)² / [2(C₁ + C₂)]
+                        <br>
+                        ΔE = (4×2×10⁻¹²)(100-40)² / [2(6×10⁻⁶)]
+                        <br>
+                        ΔE = (8×10⁻¹²)(3600) / (12×10⁻⁶)
+                        <br>
+                        ΔE = 2.4 × 10⁻³ J = <strong>2.4 mJ</strong> ✓
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>22.6 Common Potential When Joining Capacitors</h2>
+
+            <h3>22.6(a) General Formula for Common Potential</h3>
+
+            <p>When multiple capacitors charged to different voltages are connected in parallel, they reach a <strong>common potential</strong> given by:</p>
+
+            <div class="formula">
+                <strong>V_common = (C₁V₁ + C₂V₂ + C₃V₃ + ...) / (C₁ + C₂ + C₃ + ...)</strong>
+                <br>
+                <br>
+                <strong>V_common = ΣCᵢVᵢ / ΣCᵢ</strong>
+            </div>
+
+            <p>This is derived from conservation of charge: total charge before = total charge after.</p>
+
+            <h3>22.6(b) Physical Interpretation</h3>
+
+            <div class="key-points">
+                <h4>Understanding common potential:</h4>
+                <ul>
+                    <li>The common potential is a <strong>weighted average</strong> of initial voltages, weighted by capacitances</li>
+                    <li>Capacitors with larger capacitance have more weight in determining the final voltage</li>
+                    <li>The common potential always lies <strong>between</strong> the highest and lowest initial voltages</li>
+                    <li>Charge flows from higher potential to lower potential until equilibrium</li>
+                </ul>
+            </div>
+
+            <div class="diagram">
+                <pre>
+         Before:                    After:
+         
+         V₁ > V₂                    Common V
+            ↑                          ↑
+         ┌──┐        ┌─────────┐   
+         │C₁│        │    +    │
+         └──┘        │   C₁∥C₂ │
+            ↓        │    -    │
+         ┌──┐        └─────────┘
+         │C₂│           (Equilibrium)
+         └──┘
+         
+         Charge flows from C₁ → C₂
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.8:</strong> Charge redistribution to reach common potential</div>
+            </div>
+
+            <h3>22.6(c) Special Cases</h3>
+
+            <div class="key-points">
+                <h4>Case 1: Identical Capacitances</h4>
+                <p>If C₁ = C₂ = ... = C, then:</p>
+                <div class="formula">
+                    V_common = (V₁ + V₂ + V₃ + ...) / n
+                </div>
+                <p>The common potential is simply the <strong>arithmetic mean</strong> of the initial voltages.</p>
+            </div>
+
+            <div class="key-points">
+                <h4>Case 2: One Capacitor Much Larger</h4>
+                <p>If C₁ ≫ C₂, then:</p>
+                <div class="formula">
+                    V_common ≈ V₁
+                </div>
+                <p>The final potential is dominated by the larger capacitor.</p>
+            </div>
+
+            <div class="example">
+                <h4>Example 5 (Three Capacitors):</h4>
+                <p>Three capacitors: C₁ = 3 μF at V₁ = 60 V, C₂ = 2 μF at V₂ = 40 V, C₃ = 5 μF at V₃ = 20 V are connected in parallel. Find the common potential and total charge redistribution.</p>
+                
+                <div class="derivation">
+                    <p><strong>Solution:</strong></p>
+                    <div class="formula">
+                        V_common = (C₁V₁ + C₂V₂ + C₃V₃) / (C₁ + C₂ + C₃)
+                        <br>
+                        V_common = (3×60 + 2×40 + 5×20) / (3 + 2 + 5)
+                        <br>
+                        V_common = (180 + 80 + 100) / 10
+                        <br>
+                        V_common = 360 / 10 = <strong>36 V</strong>
+                    </div>
+                    
+                    <p><strong>Charge Redistribution:</strong></p>
+                    <div class="formula">
+                        Q_initial = C₁V₁ + C₂V₂ + C₃V₃
+                        <br>
+                        Q_initial = 3×60 + 2×40 + 5×20 = 180 + 80 + 100 = 360 μC
+                        <br>
+                        <br>
+                        Q_final = (C₁ + C₂ + C₃) × V_common
+                        <br>
+                        Q_final = 10 × 36 = 360 μC ✓
+                        <br>
+                        <br>
+                        <strong>Charge on each:</strong>
+                        <br>
+                        Q₁' = 3 × 36 = 108 μC
+                        <br>
+                        Q₂' = 2 × 36 = 72 μC
+                        <br>
+                        Q₃' = 5 × 36 = 180 μC
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>22.7 Effect of Dielectric</h2>
+
+            <h3>22.7(a) Dielectric and Polarization</h3>
+            <p>A dielectric is an electrical insulator. When placed in an electric field, it becomes <strong>polarized</strong>. The positive and negative charges within molecules shift slightly, producing induced dipoles aligned with the applied field.</p>
+
+            <div class="diagram">
+                <pre>
+         Without Field          With Electric Field
+         
+         (O)  (O)  (O)          (+ -)  (+ -)  (+ -)
+         (O)  (O)  (O)          (+ -)  (+ -)  (+ -)
+         (O)  (O)  (O)          (+ -)  (+ -)  (+ -)
+         
+         Random orientation     Aligned with E→
+                </pre>
+                <div class="diagram-caption"><strong>Figure 22.9:</strong> Polarization of dielectric molecules in electric field</div>
+            </div>
+
+            <h3>22.7(b) Effect of Inserting Dielectric</h3>
+
+            <p>When a dielectric is inserted between capacitor plates:</p>
+
+            <div class="key-points">
+                <ul>
+                    <li>Bound charges appear on dielectric surfaces</li>
+                    <li>Induced field opposes the original field</li>
+                    <li>Net field is reduced by factor εᵣ</li>
+                    <li>Voltage across capacitor decreases (if isolated)</li>
+                    <li>Charge remains constant (if isolated)</li>
+                    <li>Capacitance increases by factor εᵣ</li>
+                </ul>
+            </div>
+
+            <div class="formula">
+                <strong>For isolated capacitor:</strong>
+                <br>
+                E = E₀ / εᵣ    (field reduced)
+                <br>
+                V = V₀ / εᵣ    (voltage reduced)
+                <br>
+                Q = constant
+                <br>
+                C = εᵣ C₀      (capacitance increased)
+                <br>
+                <br>
+                <strong>C = εᵣ ε₀ A / d</strong>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Formulas and Summary</h2>
+
+            <div class="key-points">
+                <h4>Fundamental Relations:</h4>
+                <div class="formula">
+                    C = Q/V
+                    <br>
+                    C = ε₀A/d  (vacuum)
+                    <br>
+                    C = εᵣε₀A/d  (with dielectric)
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h4>Combinations:</h4>
+                <div class="formula">
+                    <strong>Series:</strong> 1/Cₛ = 1/C₁ + 1/C₂ + ...
+                    <br>
+                    <strong>Parallel:</strong> Cₚ = C₁ + C₂ + ...
+                </div>
+            </div>
+
+            <div class="key-points">
+                <h4>Energy:</h4>
+                <div class="formula">
+                    E = ½QV = ½CV² = Q²/2C
+                    <br>
+                    <strong>Energy loss on joining:</strong>
+                    <br>
+                    ΔE = C₁C₂(V₁ - V₂)² / [2(C₁ + C₂)]
+                    <br>
+                    <strong>Common potential:</strong>
+                    <br>
+                    V_common = (C₁V₁ + C₂V₂ + ...) / (C₁ + C₂ + ...)
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Multiple Choice Questions</h2>
+
+            <div class="mcq-section">
+                <div class="question">1. The SI unit of capacitance is:</div>
+                <div class="options">
+                    <div class="option">(a) Volt</div>
+                    <div class="option">(b) Coulomb</div>
+                    <div class="option">(c) Farad ✓</div>
+                    <div class="option">(d) Ohm</div>
+                </div>
+            </div>
+
+            <div class="mcq-section">
+                <div class="question">2. Capacitance C = ε₀A/d is directly proportional to:</div>
+                <div class="options">
+                    <div class="option">(a) Distance d</div>
+                    <div class="option">(b) Area A ✓</div>
+                    <div class="option">(c) Charge Q</div>
+                    <div class="option">(d) Voltage V</div>
+                </div>
+            </div>
+
+            <div class="mcq-section">
+                <div class="question">3. In series combination of capacitors:</div>
+                <div class="options">
+                    <div class="option">(a) Voltage is same</div>
+                    <div class="option">(b) Charge is same ✓</div>
+                    <div class="option">(c) Both are same</div>
+                    <div class="option">(d) None are same</div>
+                </div>
+            </div>
+
+            <div class="mcq-section">
+                <div class="question">4. For parallel combination, equivalent capacitance is:</div>
+                <div class="options">
+                    <div class="option">(a) Sum of capacitances ✓</div>
+                    <div class="option">(b) Reciprocal of sum</div>
+                    <div class="option">(c) Less than smallest C</div>
+                    <div class="option">(d) Always equal</div>
+                </div>
+            </div>
+
+            <div class="mcq-section">
+                <div class="question">5. When joining two charged capacitors with like terminals, energy loss occurs because:</div>
+                <div class="options">
+                    <div class="option">(a) Charge is dissipated</div>
+                    <div class="option">(b) Voltage difference causes transient current dissipation ✓</div>
+                    <div class="option">(c) Capacitance changes</div>
+                    <div class="option">(d) Dielectric breaks down</div>
+                </div>
+            </div>
+
+            <div class="mcq-section">
+                <div class="question">6. Energy stored in capacitor is given by:</div>
+                <div class="options">
+                    <div class="option">(a) QV</div>
+                    <div class="option">(b) ½QV ✓</div>
+                    <div class="option">(c) Q²V</div>
+                    <div class="option">(d) CV</div>
+                </div>
+            </div>
+
+            <div class="mcq-section">
+                <div class="question">7. Inserting a dielectric between capacitor plates:</div>
+                <div class="options">
+                    <div class="option">(a) Decreases capacitance</div>
+                    <div class="option">(b) Increases capacitance ✓</div>
+                    <div class="option">(c) No change</div>
+                    <div class="option">(d) Depends on charge</div>
+                </div>
+            </div>
+
+            <div class="mcq-section">
+                <div class="question">8. When two identical capacitors at different voltages are connected in parallel, the common potential is:</div>
+                <div class="options">
+                    <div class="option">(a) Sum of voltages</div>
+                    <div class="option">(b) Average of voltages ✓</div>
+                    <div class="option">(c) Higher voltage only</div>
+                    <div class="option">(d) Lower voltage only</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Grade XI Physics - Capacitor — Capacitance and Dielectrics | NEB Curriculum</p>
+        </div>
+    </div>
+</body>
+</html>
