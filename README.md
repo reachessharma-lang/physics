@@ -112,20 +112,32 @@ Old Blogger links keep working through redirects in `vercel.json`:
 | `/search?q=…` | `/search.html?q=…` |
 | `/<slug>.html` (old root copies) | `/posts/<slug>.html` |
 
-Every push to `main` redeploys the site. If a lesson file has an error, the build fails and
-the previous version stays online. The same check also runs on GitHub for every pull request
-(`.github/workflows/check.yml`).
+Every push to `main` redeploys the site. If a lesson file has an error, that lesson is **skipped**
+(the Vercel build log lists it under `WARNING`) and every other lesson is still published, so one
+bad upload can't freeze the site. The GitHub check (`.github/workflows/check.yml`) runs
+`python build.py --strict`, which fails on any problem, so errors still show up as a red ✗ on GitHub.
 
 ## Known content issues
 
-- `src/lessons/wave-motion-2.html` was uploaded **truncated**: it stopped inside a stationary-wave
-  diagram placed after the exam tips. The broken diagram was removed; all text is intact. Paste the
-  diagram again from the original if you still have it.
-- Diagrams in converted pages use fixed colours, so they sit on a light panel (`<svg class="panel">`).
-  New diagrams should use `currentColor` instead.
-- `thermoelectric-effect.json` question 12 originally had only one option. Three wrong unit
+- **Full web pages are skipped.** A lesson uploaded as a complete web page (`<!DOCTYPE html>`,
+  Tailwind, `<style>`/`<script>`) is left off the site. Until 2026-10-07 such a file stopped the whole
+  build, which froze the live site from 2026-10-02 while 16 lessons were uploaded that way; they were
+  converted on 2026-10-07. Use the prompts in `docs/prompts/` so lessons come out content-only.
+- MCQ options are shown in a fixed shuffled order (`shuffled_options` in `build.py`), because most
+  sets stored the correct answer as option A. Questions with options like "None of these" keep
+  their order.
+- Equations must use `\( … \)` and `\[ … \]`. `$…$` is not rendered (converted pages were rewritten).
+- The interactive simulators and calculators in the uploaded pages (photoelectric tube, AC
+  generator, cathode-ray beam, standing waves, ray tracer, work/collision calculators) were removed,
+  because notes cannot contain scripts. The original pages are in git history (commit `0ff021b`) if
+  they are rebuilt later as shared site components.
+- Their quizzes became MCQ sets: `electromagnetic-induction-quiz-mcq.json`, `magnetism-quiz-mcq.json`,
+  `pipes-strings-quiz-mcq.json`, `refraction-quiz-mcq.json`, `work-energy-and-power-quiz-mcq.json`.
+- `photon.html` was an earlier upload of `photons.html` and was removed (its address redirects).
+- Diagrams with fixed colours sit on a light panel (`<svg class="panel">`) so they stay readable in
+  dark mode. New diagrams should use `currentColor` instead.
+- `thermoelectric-effect-mcq.json` question 12 originally had only one option. Three wrong unit
   options were added (A/K, W·m, Ω/K), so please review.
-- Grade XI has notes for chapters 9–13 only, and one MCQ set (chapter 11).
 
 ## Roadmap
 

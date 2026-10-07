@@ -4,435 +4,94 @@ grade: XII
 chapters: [4]
 date: 2026-01-19
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade XII Physics - Unit 7: Mechanical Waves</title>
-    
-    <!-- MathJax Configuration -->
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-    <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<h2>7.1 Speed of Wave Motion</h2><p>The speed of wave motion depends on the elastic properties and inertial properties of the medium through which the wave propagates.</p><div class="box law"><p>Fundamental Relationship of Wave Velocity</p>
 
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            color: #1e293b;
-            background-color: #ffffff;
-            line-height: 1.6;
-            font-size: 15px;
-            padding-bottom: 40px;
-        }
+The velocity \(v\) of a mechanical wave in any medium is given by:
+\[v = \sqrt{\frac{\text{Elastic Property}}{\text{Inertial Property}}} = \sqrt{\frac{E}{\rho}}\]
+where \(E\) is the elastic modulus (\(\text{Pa}\) or \(\text{N/m}^2\)) and \(\rho\) is the mass density (\(\text{kg/m}^3\)).</div>
+<h3>Physical Interpretation</h3><ul>
+<li><strong>Elasticity (\(v \propto \sqrt{E}\)):</strong> Greater elasticity provides a stronger restoring force, allowing mechanical disturbances to propagate faster.</li>
+<li><strong>Density (\(v \propto 1/\sqrt{\rho}\)):</strong> Greater density represents higher particle inertia, which resists acceleration and reduces propagation speed.</li>
+</ul><h3>Elastic Moduli Across Media</h3><table>
+<thead>
+<tr>
+<th>Elastic Modulus</th>
+<th>Definition</th>
+<th>Formula</th>
+<th>Applicable Media &amp; Wave Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Young's Modulus (\(Y\))</strong></td>
+<td>Resistance to elongation/compression</td>
+<td>\(Y = \frac{F/A}{\Delta L/L}\)</td>
+<td>Solids (Longitudinal waves in rods)</td>
+</tr>
+<tr>
+<td><strong>Bulk Modulus (\(K\))</strong></td>
+<td>Resistance to uniform volume change</td>
+<td>\(K = -V \frac{\Delta P}{\Delta V}\)</td>
+<td>Fluids &amp; Solids (Volume compression)</td>
+</tr>
+<tr>
+<td><strong>Rigidity Modulus (\(\eta\))</strong></td>
+<td>Resistance to shear deformation</td>
+<td>\(\eta = \frac{F/A}{\theta}\)</td>
+<td>Solids only (Transverse waves)</td>
+</tr>
+<tr>
+<td><strong>Adiabatic Bulk Modulus (\(K_{\text{ad}}\))</strong></td>
+<td>Volume elasticity under adiabatic state</td>
+<td>\(K_{\text{ad}} = \gamma P\)</td>
+<td>Gases (Sound waves)</td>
+</tr>
+</tbody>
+</table><h3>General Wave Velocity Expressions</h3><div class="formula">\[\text{Transverse Waves in Strings/Rods: } v = \sqrt{\frac{\eta}{\rho}} \quad \text{or} \quad v = \sqrt{\frac{T}{\mu}}\]
+\[\text{Longitudinal Waves in Solid Rods: } v = \sqrt{\frac{Y}{\rho}}\]
+\[\text{Longitudinal Waves in Liquids: } v = \sqrt{\frac{K}{\rho}}\]
+\[\text{Longitudinal Waves in Gases: } v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}}\]</div>
+<figure>
+<svg class="panel" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240">
+<line x1="100" y1="180" x2="750" y2="180" stroke="#cbd5e1" stroke-width="2"/>
+<line x1="100" y1="130" x2="750" y2="130" stroke="#e2e8f0" stroke-dasharray="4 4"/>
+<line x1="100" y1="80" x2="750" y2="80" stroke="#e2e8f0" stroke-dasharray="4 4"/>
 
-        .top-banner {
-            background-color: #0f172a;
-            color: #ffffff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid #2563eb;
-            font-family: system-ui, -apple-system, sans-serif;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+<rect x="130" y="169" width="60" height="11" fill="#ef4444" rx="3"/>
+<text x="160" y="160" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">343 m/s</text>
+<text x="160" y="200" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Air</text>
 
-        .top-banner-title {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            color: #38bdf8;
-        }
+<rect x="280" y="132" width="60" height="48" fill="#2563eb" rx="3"/>
+<text x="310" y="123" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">1480 m/s</text>
+<text x="310" y="200" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Water</text>
 
-        .badge {
-            background-color: #2563eb;
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+<rect x="430" y="52" width="60" height="128" fill="#d97706" rx="3"/>
+<text x="460" y="43" font-size="11" font-weight="bold" fill="#d97706" text-anchor="middle">4000 m/s</text>
+<text x="460" y="200" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Wood</text>
 
-        .container {
-            max-width: 900px;
-            margin: 24px auto;
-            background: #ffffff;
-            padding: 32px 40px;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
+<rect x="580" y="20" width="60" height="160" fill="#16a34a" rx="3"/>
+<text x="610" y="11" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">5000 m/s</text>
+<text x="610" y="200" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Steel</text>
 
-        h1.document-title {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 22px;
-            font-weight: 800;
-            color: #0f172a;
-            border-bottom: 2px solid #0f172a;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+<text x="425" y="228" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">General Speed Trend: Solids &gt; Liquids &gt; Gases</text>
+</svg>
+<p>Figure 7.1: Speed of sound comparison across media.</p>
 
-        h2.section-header {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            color: #1e3a8a;
-            background: #ffffff;
-            border-left: 4px solid #2563eb;
-            padding: 8px 12px;
-            margin: 28px 0 14px 0;
-            text-transform: uppercase;
-            border-top: 1px solid #e2e8f0;
-            border-right: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        h3.subsection-header {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 18px 0 8px 0;
-            border-bottom: 1px solid #cbd5e1;
-            padding-bottom: 3px;
-        }
-
-        p {
-            margin-bottom: 12px;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin: 0 0 14px 24px;
-        }
-
-        li {
-            margin-bottom: 4px;
-        }
-
-        .law-box {
-            background-color: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-left: 4px solid #0284c7;
-            padding: 12px 16px;
-            margin: 14px 0;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .law-title {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 700;
-            font-size: 13px;
-            color: #0369a1;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        .formula-box {
-            background-color: #ffffff;
-            border: 1px solid #bbf7d0;
-            border-radius: 6px;
-            padding: 12px;
-            text-align: center;
-            margin: 14px 0;
-            color: #14532d;
-            font-weight: 600;
-        }
-
-        .derivation-step {
-            background-color: #ffffff;
-            border: 1px dashed #cbd5e1;
-            padding: 12px 16px;
-            margin: 12px 0;
-            border-radius: 4px;
-        }
-
-        .diagram-container {
-            background-color: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            padding: 16px;
-            margin: 18px 0;
-            text-align: center;
-        }
-
-        .diagram-caption {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 12px;
-            color: #475569;
-            margin-top: 8px;
-            font-style: italic;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-            font-size: 13.5px;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 8px 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #ffffff;
-            color: #0f172a;
-            font-weight: 700;
-        }
-
-        tr:nth-child(even) {
-            background-color: #ffffff;
-        }
-
-        .example-card {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-top: 3px solid #2563eb;
-            border-radius: 4px;
-            padding: 14px 18px;
-            margin: 16px 0;
-        }
-
-        .example-title {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 700;
-            font-size: 13.5px;
-            color: #1e3a8a;
-            margin-bottom: 6px;
-        }
-
-        details {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            padding: 8px 12px;
-            margin: 8px 0;
-        }
-
-        summary {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 600;
-            font-size: 13.5px;
-            color: #0f172a;
-            cursor: pointer;
-        }
-
-        .solution-content {
-            margin-top: 8px;
-            padding-top: 8px;
-            border-top: 1px solid #cbd5e1;
-            font-size: 13.5px;
-        }
-
-        @media print {
-            body { background: #ffffff; color: #000; padding: 0; font-size: 12pt; }
-            .top-banner { position: static; background: #ffffff; color: #000; border-bottom: 2px solid #000; }
-            .container { border: none; box-shadow: none; padding: 0; }
-            .section-header { background: none; border-left: 3px solid #000; }
-            .law-box, .formula-box, .example-card, .diagram-container { border: 1px solid #000; background: none; }
-            details { border: 1px solid #000; }
-            details > * { display: block; }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="top-banner">
-        <div>
-            <div class="top-banner-title">NEB Grade XII Physics</div>
-            <div>Unit 7: Mechanical Waves</div>
-        </div>
-        <span class="badge">Chapter 7 Notes</span>
-    </header>
-
-    <div class="container">
-        <h1 class="document-title">Unit 7: Mechanical Waves</h1>
-
-        <!-- SECTION 7.1 -->
-        <h2 class="section-header">7.1 Speed of Wave Motion</h2>
-        <p>The speed of wave motion depends on the elastic properties and inertial properties of the medium through which the wave propagates.</p>
-
-        <div class="law-box">
-            <div class="law-title">Fundamental Relationship of Wave Velocity</div>
-            The velocity $v$ of a mechanical wave in any medium is given by:
-            $$v = \sqrt{\frac{\text{Elastic Property}}{\text{Inertial Property}}} = \sqrt{\frac{E}{\rho}}$$
-            where $E$ is the elastic modulus ($\text{Pa}$ or $\text{N/m}^2$) and $\rho$ is the mass density ($\text{kg/m}^3$).
-        </div>
-
-        <h3 class="subsection-header">Physical Interpretation</h3>
-        <ul>
-            <li><strong>Elasticity ($v \propto \sqrt{E}$):</strong> Greater elasticity provides a stronger restoring force, allowing mechanical disturbances to propagate faster.</li>
-            <li><strong>Density ($v \propto 1/\sqrt{\rho}$):</strong> Greater density represents higher particle inertia, which resists acceleration and reduces propagation speed.</li>
-        </ul>
-
-        <h3 class="subsection-header">Elastic Moduli Across Media</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Elastic Modulus</th>
-                    <th>Definition</th>
-                    <th>Formula</th>
-                    <th>Applicable Media &amp; Wave Type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Young's Modulus ($Y$)</strong></td>
-                    <td>Resistance to elongation/compression</td>
-                    <td>$Y = \frac{F/A}{\Delta L/L}$</td>
-                    <td>Solids (Longitudinal waves in rods)</td>
-                </tr>
-                <tr>
-                    <td><strong>Bulk Modulus ($K$)</strong></td>
-                    <td>Resistance to uniform volume change</td>
-                    <td>$K = -V \frac{\Delta P}{\Delta V}$</td>
-                    <td>Fluids &amp; Solids (Volume compression)</td>
-                </tr>
-                <tr>
-                    <td><strong>Rigidity Modulus ($\eta$)</strong></td>
-                    <td>Resistance to shear deformation</td>
-                    <td>$\eta = \frac{F/A}{\theta}$</td>
-                    <td>Solids only (Transverse waves)</td>
-                </tr>
-                <tr>
-                    <td><strong>Adiabatic Bulk Modulus ($K_{\text{ad}}$)</strong></td>
-                    <td>Volume elasticity under adiabatic state</td>
-                    <td>$K_{\text{ad}} = \gamma P$</td>
-                    <td>Gases (Sound waves)</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 class="subsection-header">General Wave Velocity Expressions</h3>
-        <div class="formula-box">
-            $$\text{Transverse Waves in Strings/Rods: } v = \sqrt{\frac{\eta}{\rho}} \quad \text{or} \quad v = \sqrt{\frac{T}{\mu}}$$
-            $$\text{Longitudinal Waves in Solid Rods: } v = \sqrt{\frac{Y}{\rho}}$$
-            $$\text{Longitudinal Waves in Liquids: } v = \sqrt{\frac{K}{\rho}}$$
-            $$\text{Longitudinal Waves in Gases: } v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}}$$
-        </div>
-
-        <div class="diagram-container">
-            <svg width="800" height="240" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="100" y1="180" x2="750" y2="180" stroke="#cbd5e1" stroke-width="2"/>
-                <line x1="100" y1="130" x2="750" y2="130" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-                <line x1="100" y1="80" x2="750" y2="80" stroke="#e2e8f0" stroke-dasharray="4 4"/>
-
-                <!-- Bars -->
-                <rect x="130" y="169" width="60" height="11" fill="#ef4444" rx="3"/>
-                <text x="160" y="160" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">343 m/s</text>
-                <text x="160" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Air</text>
-
-                <rect x="280" y="132" width="60" height="48" fill="#2563eb" rx="3"/>
-                <text x="310" y="123" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">1480 m/s</text>
-                <text x="310" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Water</text>
-
-                <rect x="430" y="52" width="60" height="128" fill="#d97706" rx="3"/>
-                <text x="460" y="43" font-family="sans-serif" font-size="11" font-weight="bold" fill="#d97706" text-anchor="middle">4000 m/s</text>
-                <text x="460" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Wood</text>
-
-                <rect x="580" y="20" width="60" height="160" fill="#16a34a" rx="3"/>
-                <text x="610" y="11" font-family="sans-serif" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">5000 m/s</text>
-                <text x="610" y="200" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Steel</text>
-
-                <text x="425" y="228" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0369a1" text-anchor="middle">General Speed Trend: Solids &gt; Liquids &gt; Gases</text>
-            </svg>
-            <div class="diagram-caption">Figure 7.1: Speed of sound comparison across media.</div>
-        </div>
-
-        <!-- SECTION 7.2 -->
-        <h2 class="section-header">7.2 Velocity of Sound in Solids and Liquids</h2>
-        
-        <h3 class="subsection-header">Derivation for Solid Rods</h3>
-        <div class="derivation-step">
-            <p>Assume velocity $v$ depends on Young's Modulus $Y$ and density $\rho$ via power law:</p>
-            $$v = k Y^a \rho^b$$
-            <p>Dimensional analysis:</p>
-            $$[v] = [L T^{-1}], \quad [Y] = [M L^{-1} T^{-2}], \quad [\rho] = [M L^{-3}]$$
-            $$[L T^{-1}] = [M L^{-1} T^{-2}]^a \cdot [M L^{-3}]^b = [M^{a+b} L^{-a-3b} T^{-2a}]$$
-            <p>Equating exponents:</p>
-            $$M: a + b = 0 \implies b = -a$$
-            $$T: -2a = -1 \implies a = 1/2 \implies b = -1/2$$
-            <div class="formula-box">
-                $$v = \sqrt{\frac{Y}{\rho}}$$
-            </div>
-        </div>
-
-        <h3 class="subsection-header">Velocity in Liquids</h3>
-        <p>Liquids cannot sustain static shear stress, so sound propagates purely as longitudinal waves governed by Bulk Modulus ($K$):</p>
-        <div class="formula-box">
-            $$v = \sqrt{\frac{K}{\rho}}$$
-        </div>
-
-        <!-- SECTION 7.3 -->
-        <h2 class="section-header">7.3 Velocity of Sound in Gases</h2>
-        
-        <h3 class="subsection-header">1. Newton's Formula (Isothermal Model)</h3>
-        <div class="derivation-step">
-            <p>Newton assumed heat generated during compression rapidly dissipates ($T = \text{const}$). For isothermal expansion/compression:</p>
-            $$P V = \text{constant} \implies P dV + V dP = 0 \implies P = -\frac{dP}{dV/V} = K_{\text{iso}}$$
-            <div class="formula-box">
-                $$v_{\text{Newton}} = \sqrt{\frac{P}{\rho}}$$
-            </div>
-            <p>At STP, $v_{\text{Newton}} = \sqrt{\frac{1.013 \times 10^5}{1.293}} \approx 280\text{ m/s}$. Experimental value is $332\text{ m/s}$ ($16\%$ error).</p>
-        </div>
-
-        <h3 class="subsection-header">2. Laplace's Correction (Adiabatic Model)</h3>
-        <div class="derivation-step">
-            <p>Laplace corrected this by noting that oscillations occur rapidly with zero time for heat exchange ($Q = 0$). For adiabatic process:</p>
-            $$P V^\gamma = \text{constant} \implies V^\gamma dP + P \gamma V^{\gamma-1} dV = 0 \implies \gamma P = -\frac{dP}{dV/V} = K_{\text{ad}}$$
-            <div class="formula-box">
-                $$v_{\text{Laplace}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}}$$
-            </div>
-            <p>For air ($\gamma = 1.40$), $v_{\text{Laplace}} = \sqrt{\frac{1.40 \times 101300}{1.293}} \approx 331.1\text{ m/s}$ (matches experiment).</p>
-        </div>
-
-        <!-- PRACTICE TOOLKIT -->
-        <h2 class="section-header">7.4 Solved Examples &amp; Self-Study Questions</h2>
-
-        <div class="example-card">
-            <div class="example-title">Example 7.1: Temperature Scaling in Gas</div>
-            <p><strong>Problem:</strong> At what temperature will the speed of sound in oxygen ($\text{O}_2, M=32\text{ g/mol}, \gamma=1.40$) equal that in helium ($\text{He}, M=4\text{ g/mol}, \gamma=1.67$) at $0^\circ\text{C}$?</p>
-            <p><strong>Solution:</strong></p>
-            $$\sqrt{\frac{1.40 \cdot R \cdot T_{\text{O}_2}}{32 \times 10^{-3}}} = \sqrt{\frac{1.67 \cdot R \cdot 273}{4 \times 10^{-3}}}$$
-            $$\frac{1.40 \cdot T_{\text{O}_2}}{32} = \frac{1.67 \cdot 273}{4} \implies T_{\text{O}_2} \approx 2605.2\text{ K} = 2332.2^\circ\text{C}$$
-        </div>
-
-        <details>
-            <summary>Q1: Why was Laplace's correction necessary for Newton's sound velocity equation?</summary>
-            <div class="solution-content">
-                <p>Newton assumed sound propagation was isothermal ($K = P$), which gave $280\text{ m/s}$ at STP. Sound oscillations happen too fast for heat transfer, making it an adiabatic process ($K = \gamma P$). Laplace's formula gives $331.1\text{ m/s}$, matching experimental findings.</p>
-            </div>
-        </details>
-    </div>
-
-</body>
-</html>
+</figure>
+<h2>7.2 Velocity of Sound in Solids and Liquids</h2><h3>Derivation for Solid Rods</h3><p>Assume velocity \(v\) depends on Young's Modulus \(Y\) and density \(\rho\) via power law:</p><p>\[v = k Y^a \rho^b\]</p>
+<p>Dimensional analysis:</p><p>\[[v] = [L T^{-1}], \quad [Y] = [M L^{-1} T^{-2}], \quad [\rho] = [M L^{-3}]\]
+\[[L T^{-1}] = [M L^{-1} T^{-2}]^a \cdot [M L^{-3}]^b = [M^{a+b} L^{-a-3b} T^{-2a}]\]</p>
+<p>Equating exponents:</p><p>\[M: a + b = 0 \implies b = -a\]
+\[T: -2a = -1 \implies a = 1/2 \implies b = -1/2\]</p>
+<div class="formula">\[v = \sqrt{\frac{Y}{\rho}}\]</div>
+<h3>Velocity in Liquids</h3><p>Liquids cannot sustain static shear stress, so sound propagates purely as longitudinal waves governed by Bulk Modulus (\(K\)):</p><div class="formula">\[v = \sqrt{\frac{K}{\rho}}\]</div>
+<h2>7.3 Velocity of Sound in Gases</h2><h3>1. Newton's Formula (Isothermal Model)</h3><p>Newton assumed heat generated during compression rapidly dissipates (\(T = \text{const}\)). For isothermal expansion/compression:</p><p>\[P V = \text{constant} \implies P dV + V dP = 0 \implies P = -\frac{dP}{dV/V} = K_{\text{iso}}\]</p>
+<div class="formula">\[v_{\text{Newton}} = \sqrt{\frac{P}{\rho}}\]</div>
+<p>At STP, \(v_{\text{Newton}} = \sqrt{\frac{1.013 \times 10^5}{1.293}} \approx 280\text{ m/s}\). Experimental value is \(332\text{ m/s}\) (\(16\%\) error).</p><h3>2. Laplace's Correction (Adiabatic Model)</h3><p>Laplace corrected this by noting that oscillations occur rapidly with zero time for heat exchange (\(Q = 0\)). For adiabatic process:</p><p>\[P V^\gamma = \text{constant} \implies V^\gamma dP + P \gamma V^{\gamma-1} dV = 0 \implies \gamma P = -\frac{dP}{dV/V} = K_{\text{ad}}\]</p>
+<div class="formula">\[v_{\text{Laplace}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}}\]</div>
+<p>For air (\(\gamma = 1.40\)), \(v_{\text{Laplace}} = \sqrt{\frac{1.40 \times 101300}{1.293}} \approx 331.1\text{ m/s}\) (matches experiment).</p><h2>7.4 Solved Examples &amp; Self-Study Questions</h2><p>Example 7.1: Temperature Scaling in Gas</p>
+<p><strong>Problem:</strong> At what temperature will the speed of sound in oxygen (\(\text{O}_2, M=32\text{ g/mol}, \gamma=1.40\)) equal that in helium (\(\text{He}, M=4\text{ g/mol}, \gamma=1.67\)) at \(0^\circ\text{C}\)?</p><p><strong>Solution:</strong></p><p>\[\sqrt{\frac{1.40 \cdot R \cdot T_{\text{O}_2}}{32 \times 10^{-3}}} = \sqrt{\frac{1.67 \cdot R \cdot 273}{4 \times 10^{-3}}}\]
+\[\frac{1.40 \cdot T_{\text{O}_2}}{32} = \frac{1.67 \cdot 273}{4} \implies T_{\text{O}_2} \approx 2605.2\text{ K} = 2332.2^\circ\text{C}\]</p>
+<details class="solution"><summary>Q1: Why was Laplace's correction necessary for Newton's sound velocity equation?</summary>
+<p>Newton assumed sound propagation was isothermal (\(K = P\)), which gave \(280\text{ m/s}\) at STP. Sound oscillations happen too fast for heat transfer, making it an adiabatic process (\(K = \gamma P\)). Laplace's formula gives \(331.1\text{ m/s}\), matching experimental findings.</p></details>

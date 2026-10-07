@@ -4,1604 +4,457 @@ grade: XII
 chapters: [14]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade XII Physics — Unit 18: Electromagnetic Induction</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- MathJax for TeX/LaTeX rendering -->
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Custom Styles -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #0f172a;
-            background-color: #f8fafc;
-            line-height: 1.65;
-        }
-
-        code, pre, .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* Line Diagram Styling for High Contrast Print & Screen */
-        .diagram-svg {
-            background-color: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 0.5rem;
-        }
-
-        .svg-line {
-            stroke: #1e293b;
-            stroke-width: 2;
-            fill: none;
-        }
-
-        .svg-line-thick {
-            stroke: #0f172a;
-            stroke-width: 3.5;
-            fill: none;
-        }
-
-        .svg-line-dashed {
-            stroke: #475569;
-            stroke-width: 1.5;
-            stroke-dasharray: 4,4;
-            fill: none;
-        }
-
-        .svg-text {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
-            fill: #0f172a;
-            font-weight: 500;
-        }
-
-        .svg-text-bold {
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            fill: #0f172a;
-            font-weight: 700;
-        }
-
-        .svg-fill-primary {
-            fill: #3b82f6;
-        }
-
-        .svg-fill-accent {
-            fill: #ef4444;
-        }
-
-        /* Print Media Styles (Optimized for A4 Printing via Ctrl+P) */
-        @media print {
-            .no-print {
-                display: none !important;
-            }
-            body {
-                background-color: #ffffff !important;
-                color: #000000 !important;
-                font-size: 11pt !important;
-            }
-            .page-card {
-                border: 1px solid #94a3b8 !important;
-                box-shadow: none !important;
-                margin-bottom: 1.5rem !important;
-                break-inside: avoid;
-            }
-            .diagram-svg {
-                border: 1px solid #000000 !important;
-                background-color: #ffffff !important;
-            }
-            .svg-line, .svg-line-thick {
-                stroke: #000000 !important;
-            }
-            .svg-text, .svg-text-bold {
-                fill: #000000 !important;
-            }
-            a {
-                text-decoration: none !important;
-                color: #000000 !important;
-            }
-        }
-    </style>
-</head>
-<body class="min-h-screen flex flex-col">
-
-    <!-- Top Header Navigation -->
-    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-blue-600 text-white font-black px-2.5 py-1 rounded text-lg tracking-wider">NEB</div>
-                <div>
-                    <h1 class="text-base font-bold leading-tight">Grade XII Physics — Unit 18</h1>
-                    <p class="text-xs text-slate-400">National Examinations Board, Nepal Syllabus</p>
-                </div>
-            </div>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
-                <a href="#syllabus" class="hover:text-blue-400 transition-colors">Syllabus</a>
-                <a href="#theory" class="hover:text-blue-400 transition-colors">Theory & Derivations</a>
-                <a href="#simulators" class="hover:text-blue-400 transition-colors">Simulators</a>
-                <a href="#numericals" class="hover:text-blue-400 transition-colors">Solved Numericals</a>
-                <a href="#conceptual" class="hover:text-blue-400 transition-colors">Conceptual Q&A</a>
-                <a href="#quiz" class="hover:text-blue-400 transition-colors">Self-Quiz</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
-
-        <!-- Title Banner for Print & Digital -->
-        <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-            <div class="border-b border-slate-200 pb-4 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">NEB Syllabus — Physics XII</span>
-                    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Unit 18: Electromagnetic Induction</h1>
-                    <p class="text-slate-600 mt-1">Complete Textbook Material, Derivations, Interactive Simulators & Exam Preparation Guide</p>
-                </div>
-                <div class="text-right text-xs text-slate-500 font-mono bg-slate-50 p-3 rounded-lg border border-slate-200">
-                    <div><strong>Course Code:</strong> Phy.402</div>
-                    <div><strong>Class:</strong> Grade 12</div>
-                    <div><strong>Faculty:</strong> Science (NEB)</div>
-                </div>
-            </div>
-
-            <!-- Syllabus Objectives Index -->
-            <div id="syllabus" class="bg-slate-50 rounded-lg p-5 border border-slate-200">
-                <h2 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
-                    NEB Curriculum Learning Objectives Checklist
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-slate-700">
-                    <a href="#sec-18-1" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.1</span> Faraday’s laws of electromagnetic induction</a>
-                    <a href="#sec-18-2" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.2</span> Lenz’s law and conservation of energy</a>
-                    <a href="#sec-18-3" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.3</span> Construction and working of A.C. generator</a>
-                    <a href="#sec-18-4" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.4</span> Eddy currents: production, applications & nuisance</a>
-                    <a href="#sec-18-5" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.5</span> Self-inductance and Mutual inductance</a>
-                    <a href="#sec-18-6" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.6</span> Energy stored in an inductor</a>
-                    <a href="#sec-18-7" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.7</span> Transformer: construction, working principle & importance</a>
-                    <a href="#sec-18-8" class="flex items-center gap-2 hover:text-blue-600"><span class="font-bold text-blue-600">18.8</span> Sources of energy loss in practical transformers</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CORE THEORY SECTION -->
-        <div id="theory" class="space-y-10">
-
-            <!-- Section 18.1: Faraday's Laws -->
-            <section id="sec-18-1" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.1</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Faraday’s Laws of Electromagnetic Induction</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-800">
-                    <p>
-                        <strong>Electromagnetic Induction</strong> is the phenomenon of generating an electromotive force (emf) and consequently an electric current in a closed circuit by changing the magnetic flux linked with that circuit.
-                    </p>
-
-                    <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-                        <h3 class="font-bold text-slate-900 mb-1">Magnetic Flux ($\Phi$) and Magnetic Flux Linkage</h3>
-                        <p class="text-sm">
-                            The magnetic flux ($\Phi$) through a surface of area $A$ placed in a uniform magnetic field $B$ is defined as the total number of magnetic field lines passing normally through that area:
-                        </p>
-                        <div class="math-block text-center my-2">
-                            $$\Phi = \vec{B} \cdot \vec{A} = B A \cos\theta$$
-                        </div>
-                        <p class="text-xs text-slate-600">
-                            Where $\theta$ is the angle between the magnetic field vector $\vec{B}$ and the normal area vector $\vec{A}$. 
-                            <strong>SI Unit:</strong> Weber ($\text{Wb}$) or $\text{Tesla}\cdot\text{m}^2$. Dimensions: $[M L^2 T^{-2} A^{-1}]$.
-                        </p>
-                        <p class="text-sm mt-2">
-                            For a coil with $N$ turns, the total <strong>magnetic flux linkage</strong> is given by $N\Phi = N B A \cos\theta$.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold text-slate-900">Statements of Faraday's Laws</h3>
-                            
-                            <div class="bg-blue-50/60 p-4 rounded-lg border border-blue-100">
-                                <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wide">Faraday's First Law (Qualitative)</h4>
-                                <p class="text-sm mt-1 text-slate-800">
-                                    Whenever there is a change in the magnetic flux linked with a closed circuit, an induced electromotive force (emf) is produced in the circuit. The induced emf lasts only as long as the change in magnetic flux continues.
-                                </p>
-                            </div>
-
-                            <div class="bg-blue-50/60 p-4 rounded-lg border border-blue-100">
-                                <h4 class="font-bold text-blue-900 text-sm uppercase tracking-wide">Faraday's Second Law (Quantitative)</h4>
-                                <p class="text-sm mt-1 text-slate-800">
-                                    The magnitude of the induced emf in a circuit is directly proportional to the time rate of change of magnetic flux linked with the circuit.
-                                </p>
-                                <div class="math-block text-center font-bold text-blue-950 my-1">
-                                    $$e \propto \frac{d\Phi}{dt} \implies e = -N \frac{d\Phi}{dt}$$
-                                </div>
-                                <p class="text-xs text-slate-600">
-                                    Where $N$ is the number of turns in the coil, and the negative sign represents opposition according to Lenz's Law.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Diagram 1: Faraday's Experiment -->
-                        <div class="flex flex-col items-center">
-                            <svg class="diagram-svg w-full h-64" viewBox="0 0 500 240">
-                                <!-- Solenoid Coil -->
-                                <g>
-                                    <path d="M 220 100 Q 230 70 240 100 Q 250 130 260 100 Q 270 70 280 100 Q 290 130 300 100 Q 310 70 320 100 Q 330 130 340 100 Q 350 70 360 100 Q 370 130 380 100" class="svg-line-thick" stroke="#2563eb" />
-                                    <!-- Wires to Galvanometer -->
-                                    <polyline points="220,100 220,180 270,180" class="svg-line" />
-                                    <polyline points="380,100 380,180 330,180" class="svg-line" />
-                                    <!-- Galvanometer -->
-                                    <circle cx="300" cy="180" r="22" class="svg-line" fill="#ffffff" />
-                                    <text x="300" y="175" class="svg-text-bold" text-anchor="middle">G</text>
-                                    <line x1="300" y1="180" x2="312" y2="166" class="svg-line" stroke="#dc2626" stroke-width="2" />
-                                </g>
-
-                                <!-- Bar Magnet -->
-                                <g transform="translate(40, 75)">
-                                    <rect x="0" y="0" width="120" height="40" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="3" />
-                                    <rect x="60" y="0" width="60" height="40" fill="#fca5a5" stroke="#0f172a" stroke-width="2" rx="3" />
-                                    <text x="30" y="25" class="svg-text-bold" fill="#0f172a" text-anchor="middle">S</text>
-                                    <text x="90" y="25" class="svg-text-bold" fill="#991b1b" text-anchor="middle">N</text>
-                                    <!-- Motion Arrow -->
-                                    <line x1="130" y1="20" x2="165" y2="20" class="svg-line-thick" stroke="#2563eb" />
-                                    <polygon points="165,15 175,20 165,25" fill="#2563eb" />
-                                    <text x="148" y="12" class="svg-text" font-size="11" text-anchor="middle">Motion (v)</text>
-                                </g>
-
-                                <!-- Magnetic Field Lines -->
-                                <path d="M 160 80 Q 210 50 260 80" class="svg-line-dashed" />
-                                <path d="M 160 110 Q 210 140 260 110" class="svg-line-dashed" />
-
-                                <text x="250" y="225" class="svg-text-bold" text-anchor="middle">Fig 18.1: Faraday's Induction Experiment with Moving Magnet</text>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-slate-200 pt-4">
-                        <h4 class="font-bold text-slate-900 mb-2">Factors Influencing the Magnitude of Induced EMF:</h4>
-                        <ul class="list-disc list-inside text-sm space-y-1 text-slate-700">
-                            <li><strong>Number of turns ($N$):</strong> $e \propto N$. Increasing turns increases total flux linkage.</li>
-                            <li><strong>Speed of relative motion ($v$):</strong> Faster movement causes a higher rate of flux change $\frac{d\Phi}{dt}$.</li>
-                            <li><strong>Strength of magnetic field ($B$):</strong> Stronger magnets create higher flux density.</li>
-                            <li><strong>Area of the coil ($A$):</strong> Larger area encompasses more field lines.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 18.2: Lenz's Law -->
-            <section id="sec-18-2" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.2</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Lenz’s Law and Conservation of Energy</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-800">
-                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg">
-                        <h3 class="font-bold text-amber-900">Statement of Lenz's Law</h3>
-                        <p class="text-sm text-slate-800 mt-1">
-                            "The direction of any induced current is always such that it opposes the change in magnetic flux that produces it."
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold text-slate-900">Proof of Lenz's Law as Conservation of Energy</h3>
-                            <p class="text-sm">
-                                Consider a bar magnet approaching a closed solenoid with its North pole facing the coil:
-                            </p>
-                            <ol class="list-decimal list-inside text-sm space-y-2 text-slate-700">
-                                <li>As the N-pole approaches, magnetic flux through the coil increases.</li>
-                                <li>According to Lenz's law, the induced current flows in a direction such that the front face of the coil becomes a **North pole**.</li>
-                                <li>Like magnetic poles repel. Thus, a repulsive magnetic force opposes the inward motion of the magnet.</li>
-                                <li>To keep moving the magnet forward, an **external mechanical work** must be performed against this repulsive force.</li>
-                                <li>This mechanical work done by the external agent is transformed into electrical energy in the coil, which eventually dissipates as Joule heat ($I^2 R t$).</li>
-                            </ol>
-                            <div class="p-3 bg-red-50 border border-red-200 rounded text-xs text-red-900">
-                                <strong>What if the opposite happened?</strong> If the approaching N-pole induced a South pole, it would attract the magnet, accelerating it automatically. This would generate electrical energy continuously without doing external mechanical work, violating the <em>Law of Conservation of Energy</em>. Hence, opposition is mandatory!
-                            </div>
-                        </div>
-
-                        <!-- Diagram 2: Lenz's Law Mechanics -->
-                        <div class="flex flex-col items-center">
-                            <svg class="diagram-svg w-full h-64" viewBox="0 0 500 240">
-                                <!-- Approaching N pole -->
-                                <g transform="translate(60, 80)">
-                                    <rect x="0" y="0" width="100" height="35" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" />
-                                    <rect x="50" y="0" width="50" height="35" fill="#fca5a5" stroke="#0f172a" stroke-width="2" />
-                                    <text x="25" y="22" class="svg-text-bold" text-anchor="middle">S</text>
-                                    <text x="75" y="22" class="svg-text-bold" fill="#991b1b" text-anchor="middle">N</text>
-                                    <!-- Motion Arrow -->
-                                    <line x1="110" y1="17.5" x2="140" y2="17.5" class="svg-line-thick" stroke="#059669" />
-                                    <polygon points="140,12.5 150,17.5 140,22.5" fill="#059669" />
-                                    <text x="130" y="8" class="svg-text" font-size="10" text-anchor="middle">v</text>
-                                </g>
-
-                                <!-- Induced Coil Polarity -->
-                                <g transform="translate(240, 50)">
-                                    <!-- Coil Loop -->
-                                    <ellipse cx="60" cy="50" rx="20" ry="45" class="svg-line-thick" stroke="#2563eb" fill="none" />
-                                    <!-- Repulsive Force Arrow -->
-                                    <line x1="35" y1="50" x2="5" y2="50" class="svg-line-thick" stroke="#dc2626" />
-                                    <polygon points="5,45 0,50 5,55" fill="#dc2626" />
-                                    <text x="20" y="38" class="svg-text" font-size="10" fill="#dc2626" text-anchor="middle">Opposing Force</text>
-
-                                    <!-- Induced North Pole Symbol inside coil -->
-                                    <path d="M 52 35 L 52 65 M 52 35 L 68 65 M 68 35 L 68 65" class="svg-line" stroke="#dc2626" stroke-width="2" />
-                                    <path d="M 50 38 L 52 35 L 55 38" class="svg-line" stroke="#dc2626" />
-                                    <path d="M 65 62 L 68 65 L 70 62" class="svg-line" stroke="#dc2626" />
-                                    <text x="60" y="115" class="svg-text-bold" text-anchor="middle">Induced N-Pole Face</text>
-                                </g>
-
-                                <text x="250" y="225" class="svg-text-bold" text-anchor="middle">Fig 18.2: Lenz's Law Opposition & Conservation of Energy</text>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- Fleming's Right-Hand Rule -->
-                    <div class="border-t border-slate-200 pt-4 mt-4">
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Fleming's Right-Hand Rule (Generator Rule)</h3>
-                        <p class="text-sm text-slate-700">
-                            Used to determine the direction of induced current in a straight conductor moving in a magnetic field:
-                        </p>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-3 text-sm">
-                            <div class="bg-slate-100 p-3 rounded text-center border border-slate-200">
-                                <span class="font-bold text-blue-700 block">Forefinger</span>
-                                Direction of Magnetic Field ($\vec{B}$)
-                            </div>
-                            <div class="bg-slate-100 p-3 rounded text-center border border-slate-200">
-                                <span class="font-bold text-emerald-700 block">Thumb</span>
-                                Direction of Motion / Force ($\vec{v}$)
-                            </div>
-                            <div class="bg-slate-100 p-3 rounded text-center border border-slate-200">
-                                <span class="font-bold text-amber-700 block">Middle Finger</span>
-                                Direction of Induced Current ($I$)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 18.3: A.C. Generator -->
-            <section id="sec-18-3" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.3</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Construction and Working of A.C. Generator (Alternator)</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-800">
-                    <p>
-                        An <strong>A.C. Generator</strong> (or Alternator) is an electrical machine that converts mechanical energy into alternating electrical energy based on the principle of <em>electromagnetic induction</em>.
-                    </p>
-
-                    <!-- Construction Components -->
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-900 mb-3">Main Construction Components</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
-                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                                <strong class="text-blue-600 block mb-1">1. Armature Coil (ABCD)</strong>
-                                Consists of a rectangular coil of many turns of insulated copper wire wound over a soft iron core to concentrate magnetic lines.
-                            </div>
-                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                                <strong class="text-blue-600 block mb-1">2. Field Magnets (N-S)</strong>
-                                Strong permanent electromagnets with concave pole pieces creating a uniform magnetic field $B$.
-                            </div>
-                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                                <strong class="text-blue-600 block mb-1">3. Slip Rings ($R_1, R_2$)</strong>
-                                Two hollow metallic rings connected to the ends of the armature coil, rotating synchronously with the coil.
-                            </div>
-                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
-                                <strong class="text-blue-600 block mb-1">4. Carbon Brushes ($B_1, B_2$)</strong>
-                                Two stationary flexible graphite blocks pressed against the slip rings to tap current to external load $R$.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Schematic Diagram -->
-                    <div class="flex flex-col items-center my-4">
-                        <svg class="diagram-svg w-full h-80" viewBox="0 0 650 300">
-                            <!-- Magnetic Poles -->
-                            <path d="M 50 40 L 150 40 Q 170 120 150 200 L 50 200 Z" fill="#fca5a5" stroke="#0f172a" stroke-width="2" />
-                            <text x="90" y="125" class="svg-text-bold" fill="#991b1b" font-size="20">N</text>
-
-                            <path d="M 450 40 L 350 40 Q 330 120 350 200 L 450 200 Z" fill="#93c5fd" stroke="#0f172a" stroke-width="2" />
-                            <text x="400" y="125" class="svg-text-bold" fill="#1e3a8a" font-size="20">S</text>
-
-                            <!-- Armature Coil -->
-                            <g transform="translate(180, 60)">
-                                <!-- Rectangular coil in isometric view -->
-                                <polygon points="30,20 110,20 110,120 30,120" fill="none" stroke="#2563eb" stroke-width="3" />
-                                <text x="25" y="15" class="svg-text-bold">A</text>
-                                <text x="115" y="15" class="svg-text-bold">B</text>
-                                <text x="115" y="135" class="svg-text-bold">C</text>
-                                <text x="25" y="135" class="svg-text-bold">D</text>
-
-                                <!-- Central Rotation Axis -->
-                                <line x1="70" y1="-10" x2="70" y2="180" class="svg-line-dashed" stroke="#64748b" />
-                                <path d="M 55 -5 Q 70 -15 85 -5" class="svg-line" stroke="#059669" marker-end="url(#arrow)" />
-                                <text x="90" y="-5" class="svg-text" font-size="11" fill="#059669">Rotation ($\omega$)</text>
-
-                                <!-- Leads to Rings -->
-                                <line x1="50" y1="120" x2="50" y2="150" class="svg-line-thick" stroke="#2563eb" />
-                                <line x1="90" y1="120" x2="90" y2="180" class="svg-line-thick" stroke="#2563eb" />
-
-                                <!-- Slip Rings -->
-                                <ellipse cx="50" cy="150" rx="12" ry="6" fill="#cbd5e1" stroke="#0f172a" stroke-width="2" />
-                                <ellipse cx="90" cy="180" rx="12" ry="6" fill="#cbd5e1" stroke="#0f172a" stroke-width="2" />
-
-                                <!-- Carbon Brushes -->
-                                <rect x="32" y="146" width="6" height="8" fill="#0f172a" />
-                                <rect x="102" y="176" width="6" height="8" fill="#0f172a" />
-
-                                <text x="10" y="152" class="svg-text" font-size="10">B₁</text>
-                                <text x="115" y="182" class="svg-text" font-size="10">B₂</text>
-
-                                <!-- External Load Circuit -->
-                                <polyline points="32,150 0,150 0,210 140,210 140,180 108,180" class="svg-line" />
-                                <rect x="50" y="202" width="40" height="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
-                                <text x="70" y="214" class="svg-text" font-size="10" text-anchor="middle">Load R</text>
-                            </g>
-
-                            <!-- Waveform Plot on the right side -->
-                            <g transform="translate(480, 50)">
-                                <line x1="0" y1="80" x2="150" y2="80" stroke="#0f172a" stroke-width="1.5" />
-                                <line x1="10" y1="10" x2="10" y2="150" stroke="#0f172a" stroke-width="1.5" />
-                                <path d="M 10 80 Q 45 10 80 80 Q 115 150 150 80" fill="none" stroke="#dc2626" stroke-width="2.5" />
-                                <text x="80" y="170" class="svg-text-bold" text-anchor="middle" font-size="11">Induced EMF e(t)</text>
-                                <text x="5" y="20" class="svg-text" font-size="10">+e₀</text>
-                                <text x="5" y="145" class="svg-text" font-size="10">-e₀</text>
-                            </g>
-
-                            <text x="325" y="285" class="svg-text-bold" text-anchor="middle">Fig 18.3: AC Generator Schematic Construction and Sinusoidal Output</text>
-                        </svg>
-                    </div>
-
-                    <!-- Step-by-Step Mathematical Derivation -->
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-4">
-                        <h3 class="text-lg font-bold text-slate-900 border-b border-slate-200 pb-2">
-                            Mathematical Derivation of Induced EMF
-                        </h3>
-                        <p class="text-sm">
-                            Let:
-                        </p>
-                        <ul class="list-disc list-inside text-sm space-y-1 text-slate-700">
-                            <li>$N$ = total number of turns in the rectangular armature coil</li>
-                            <li>$A$ = area of the coil ($A = \text{length} \times \text{breadth}$)</li>
-                            <li>$B$ = uniform magnetic field intensity</li>
-                            <li>$\omega$ = uniform angular velocity of rotation ($2\pi f$)</li>
-                        </ul>
-                        <p class="text-sm">
-                            At any instant $t$, let $\theta$ be the angle between magnetic field $\vec{B}$ and normal to the coil plane area vector $\vec{A}$. Since $\theta = \omega t$, the magnetic flux linked with a single turn is:
-                        </p>
-                        <div class="math-block text-center font-semibold">
-                            $$\Phi = B A \cos\theta = B A \cos(\omega t)$$
-                        </div>
-                        <p class="text-sm">
-                            The total flux linkage for $N$ turns is $N\Phi = N B A \cos(\omega t)$.
-                        </p>
-                        <p class="text-sm">
-                            According to Faraday's Law of electromagnetic induction, the induced instantaneous EMF $e$ is:
-                        </p>
-                        <div class="math-block text-center text-blue-900 font-bold bg-white p-3 rounded border border-slate-200">
-                            $$e = -N \frac{d\Phi}{dt} = -N \frac{d}{dt} \left[ B A \cos(\omega t) \right]$$
-                            $$e = -N B A \left( -\omega \sin(\omega t) \right) = N B A \omega \sin(\omega t)$$
-                            $$e = e_0 \sin(\omega t)$$
-                        </div>
-                        <p class="text-sm">
-                            Where <strong>$e_0 = N B A \omega$</strong> represents the <strong>Peak (Maximum) EMF</strong> produced when $\sin(\omega t) = 1$.
-                        </p>
-                        <p class="text-sm">
-                            If $R$ is the resistance of the circuit, the instantaneous induced current $I$ is:
-                        </p>
-                        <div class="math-block text-center font-semibold">
-                            $$I = \frac{e}{R} = \frac{e_0}{R} \sin(\omega t) = I_0 \sin(\omega t)$$
-                        </div>
-
-                        <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-slate-600">
-                            <strong>Phase Cycle Values:</strong>
-                            <div class="grid grid-cols-5 gap-2 text-center mt-2 font-mono">
-                                <div class="p-2 bg-white rounded border">t=0 ($\theta=0^\circ$)<br>e = 0</div>
-                                <div class="p-2 bg-white rounded border">t=T/4 ($\theta=90^\circ$)<br>e = +e₀</div>
-                                <div class="p-2 bg-white rounded border">t=T/2 ($\theta=180^\circ$)<br>e = 0</div>
-                                <div class="p-2 bg-white rounded border">t=3T/4 ($\theta=270^\circ$)<br>e = -e₀</div>
-                                <div class="p-2 bg-white rounded border">t=T ($\theta=360^\circ$)<br>e = 0</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 18.4: Eddy Currents -->
-            <section id="sec-18-4" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.4</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Eddy Currents (Foucault Currents)</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-800">
-                    <div class="bg-slate-50 border-l-4 border-slate-700 p-4 rounded-r-lg">
-                        <h3 class="font-bold text-slate-900">Definition</h3>
-                        <p class="text-sm text-slate-800 mt-1">
-                            <strong>Eddy currents</strong> (or Foucault currents) are loops of electrical current induced within bulk metallic conductors when subjected to a changing magnetic field or when moving through a non-uniform magnetic field.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold text-slate-900">Useful Applications of Eddy Currents</h3>
-                            
-                            <ul class="space-y-3 text-sm">
-                                <li class="p-3 bg-slate-50 rounded border border-slate-200">
-                                    <strong class="text-blue-700 block">1. Induction Furnace</strong>
-                                    High-frequency alternating magnetic flux induces massive eddy currents in metals inside the furnace, producing intense heat ($I^2 R$) sufficient to melt high-temperature alloys.
-                                </li>
-                                <li class="p-3 bg-slate-50 rounded border border-slate-200">
-                                    <strong class="text-blue-700 block">2. Electromagnetic Braking in Trains</strong>
-                                    Electromagnets positioned directly above metallic train rails induce eddy currents opposing motion (Lenz's Law), providing smooth, frictionless braking without mechanical wear.
-                                </li>
-                                <li class="p-3 bg-slate-50 rounded border border-slate-200">
-                                    <strong class="text-blue-700 block">3. Deadbeat Galvanometer</strong>
-                                    The moving coil is wound on a light aluminum frame. Eddy currents induced in the frame quickly damp mechanical oscillations, bringing the needle to rest instantly without swinging.
-                                </li>
-                                <li class="p-3 bg-slate-50 rounded border border-slate-200">
-                                    <strong class="text-blue-700 block">4. Electric Power Meters</strong>
-                                    Traditional induction-type energy meters use a shiny aluminum disc rotated by torque produced by eddy currents induced from alternating power lines.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Diagram 4: Solid vs Laminated Plate Eddy Currents -->
-                        <div class="flex flex-col items-center">
-                            <svg class="diagram-svg w-full h-80" viewBox="0 0 500 300">
-                                <!-- Solid Plate -->
-                                <g transform="translate(30, 40)">
-                                    <rect x="0" y="0" width="180" height="180" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="4" />
-                                    <text x="90" y="25" class="svg-text-bold" text-anchor="middle">Solid Metallic Plate</text>
-                                    
-                                    <!-- Large Swirling Eddy Loops -->
-                                    <ellipse cx="90" cy="105" rx="55" ry="40" fill="none" stroke="#dc2626" stroke-width="2.5" />
-                                    <path d="M 140 100 L 145 105 L 140 110" fill="#dc2626" />
-                                    <ellipse cx="90" cy="105" rx="30" ry="20" fill="none" stroke="#dc2626" stroke-width="2" />
-                                    <path d="M 118 102 L 120 105 L 118 108" fill="#dc2626" />
-
-                                    <text x="90" y="210" class="svg-text" font-size="11" fill="#dc2626" text-anchor="middle">Large Eddy Currents (High Loss)</text>
-                                </g>
-
-                                <!-- Laminated / Slotted Plate -->
-                                <g transform="translate(280, 40)">
-                                    <rect x="0" y="0" width="180" height="180" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="4" />
-                                    <!-- Vertical Slots / Laminations -->
-                                    <line x1="36" y1="40" x2="36" y2="160" stroke="#0f172a" stroke-width="2" />
-                                    <line x1="72" y1="40" x2="72" y2="160" stroke="#0f172a" stroke-width="2" />
-                                    <line x1="108" y1="40" x2="108" y2="160" stroke="#0f172a" stroke-width="2" />
-                                    <line x1="144" y1="40" x2="144" y2="160" stroke="#0f172a" stroke-width="2" />
-                                    
-                                    <text x="90" y="25" class="svg-text-bold" text-anchor="middle">Laminated Plate</text>
-
-                                    <!-- Restricted Micro Loops -->
-                                    <ellipse cx="18" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5" />
-                                    <ellipse cx="54" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5" />
-                                    <ellipse cx="90" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5" />
-                                    <ellipse cx="126" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5" />
-                                    <ellipse cx="162" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5" />
-
-                                    <text x="90" y="210" class="svg-text" font-size="11" fill="#2563eb" text-anchor="middle">Restricted Loops (Minimized Heat)</text>
-                                </g>
-
-                                <text x="250" y="285" class="svg-text-bold" text-anchor="middle">Fig 18.4: Eddy Currents in Solid Conductor vs. Laminated Sheets</text>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- Nuisance & Minimization -->
-                    <div class="border-t border-slate-200 pt-4">
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Eddy Current Nuisance & How to Minimize It</h3>
-                        <p class="text-sm text-slate-700 mb-3">
-                            In electrical transformers, motors, and dynamos, eddy currents cause significant energy loss in the form of heat ($I^2 R$), lowering overall efficiency and raising internal operating temperature.
-                        </p>
-                        <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg text-sm text-blue-950">
-                            <strong>Minimization Method:</strong> Iron cores are built using thin laminated soft-iron sheets stacked together, insulated from one another by a layer of non-conducting lacquer or varnish. The laminations are arranged parallel to magnetic field lines to break potential large circular current loops into small, high-resistance paths.
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 18.5: Self & Mutual Inductance -->
-            <section id="sec-18-5" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.5</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Self-Inductance and Mutual Inductance</h2>
-                </div>
-
-                <div class="space-y-8 text-slate-800">
-
-                    <!-- Self-Inductance -->
-                    <div class="space-y-4">
-                        <div class="flex items-center justify-between border-b pb-2">
-                            <h3 class="text-xl font-bold text-slate-900">1. Self-Inductance ($L$)</h3>
-                            <span class="text-xs font-mono bg-slate-100 px-2 py-1 rounded">SI Unit: Henry (H)</span>
-                        </div>
-                        <p class="text-sm">
-                            <strong>Self-Inductance</strong> is the phenomenon by which an opposing induced electromotive force (back EMF) is produced in a coil when the electric current passing through the same coil changes.
-                        </p>
-                        <p class="text-sm">
-                            The total magnetic flux linkage $N\Phi$ through the coil is directly proportional to the current $I$ flowing through it:
-                        </p>
-                        <div class="math-block text-center font-bold text-blue-900">
-                            $$N\Phi \propto I \implies N\Phi = L I \implies L = \frac{N\Phi}{I}$$
-                        </div>
-                        <p class="text-sm">
-                            Where $L$ is the <strong>Coefficient of Self-Inductance</strong>. Differentiation with respect to time yields:
-                        </p>
-                        <div class="math-block text-center font-bold">
-                            $$e = -N\frac{d\Phi}{dt} = -L \frac{dI}{dt}$$
-                        </div>
-                        <div class="bg-slate-50 p-3 rounded text-xs text-slate-700 border">
-                            <strong>Definition of 1 Henry ($\text{H}$):</strong> Self-inductance of a coil is defined as $1\text{ Henry}$ if an opposing back EMF of $1\text{ Volt}$ is induced in it when current changes at a rate of $1\text{ Ampere per second}$ ($\frac{dI}{dt} = 1\text{ A/s}$).
-                        </div>
-
-                        <!-- Derivation of Solenoid Self Inductance -->
-                        <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-100 space-y-2">
-                            <h4 class="font-bold text-blue-900 text-sm">Derivation: Self-Inductance of a Long Solenoid</h4>
-                            <p class="text-sm">
-                                Consider a solenoid of length $l$, cross-sectional area $A$, and total turns $N$. Let $n = \frac{N}{l}$ be turns per unit length.
-                            </p>
-                            <p class="text-sm">
-                                1. Magnetic field inside solenoid due to current $I$: $B = \mu_0 n I = \frac{\mu_0 N I}{l}$.
-                            </p>
-                            <p class="text-sm">
-                                2. Flux through 1 turn: $\Phi = B A = \frac{\mu_0 N I A}{l}$.
-                            </p>
-                            <p class="text-sm">
-                                3. Total flux linkage for $N$ turns: $N\Phi = N \left( \frac{\mu_0 N I A}{l} \right) = \frac{\mu_0 N^2 A I}{l}$.
-                            </p>
-                            <p class="text-sm">
-                                4. Comparing with $N\Phi = L I$:
-                            </p>
-                            <div class="math-block text-center font-bold text-blue-900 text-base">
-                                $$L = \frac{\mu_0 N^2 A}{l} = \mu_0 n^2 A l$$
-                            </div>
-                            <p class="text-xs text-slate-600">
-                                If filled with a core of relative permeability $\mu_r$: $L = \frac{\mu_0 \mu_r N^2 A}{l}$.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Mutual Inductance -->
-                    <div class="space-y-4 pt-4 border-t border-slate-200">
-                        <div class="flex items-center justify-between border-b pb-2">
-                            <h3 class="text-xl font-bold text-slate-900">2. Mutual Inductance ($M$)</h3>
-                            <span class="text-xs font-mono bg-slate-100 px-2 py-1 rounded">SI Unit: Henry (H)</span>
-                        </div>
-                        <p class="text-sm">
-                            <strong>Mutual Inductance</strong> is the phenomenon where a changing current in one coil (primary) induces an electromotive force in a neighboring secondary coil.
-                        </p>
-                        <p class="text-sm">
-                            Flux linkage in secondary coil $N_2 \Phi_2$ is proportional to current in primary coil $I_1$:
-                        </p>
-                        <div class="math-block text-center font-bold text-blue-900">
-                            $$N_2 \Phi_2 \propto I_1 \implies N_2 \Phi_2 = M I_1 \implies M = \frac{N_2 \Phi_2}{I_1}$$
-                        </div>
-                        <p class="text-sm">
-                            Induced EMF in secondary coil:
-                        </p>
-                        <div class="math-block text-center font-bold">
-                            $$e_2 = -M \frac{dI_1}{dt}$$
-                        </div>
-
-                        <!-- Derivation of Coaxial Solenoids Mutual Inductance -->
-                        <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-100 space-y-2">
-                            <h4 class="font-bold text-blue-900 text-sm">Derivation: Mutual Inductance of Two Coaxial Long Solenoids</h4>
-                            <p class="text-sm">
-                                Consider two coaxial solenoids $S_1$ and $S_2$ of equal length $l$ and common cross-sectional area $A$, with total turns $N_1$ and $N_2$.
-                            </p>
-                            <p class="text-sm">
-                                1. Current $I_1$ in primary $S_1$ sets up magnetic field: $B_1 = \frac{\mu_0 N_1 I_1}{l}$.
-                            </p>
-                            <p class="text-sm">
-                                2. Magnetic flux linked with single turn of secondary $S_2$: $\Phi_2 = B_1 A = \frac{\mu_0 N_1 I_1 A}{l}$.
-                            </p>
-                            <p class="text-sm">
-                                3. Total flux linkage with secondary coil $N_2$: $N_2 \Phi_2 = N_2 \left( \frac{\mu_0 N_1 I_1 A}{l} \right) = \frac{\mu_0 N_1 N_2 A I_1}{l}$.
-                            </p>
-                            <p class="text-sm">
-                                4. Comparing with $N_2 \Phi_2 = M I_1$:
-                            </p>
-                            <div class="math-block text-center font-bold text-blue-900 text-base">
-                                $$M = \frac{\mu_0 N_1 N_2 A}{l}$$
-                            </div>
-                            <p class="text-xs text-slate-600">
-                                <strong>Coupling Coefficient ($k$):</strong> $M = k \sqrt{L_1 L_2}$, where $0 \le k \le 1$. For ideal tight magnetic coupling, $k = 1$.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Diagram 5: Inductance Schematics -->
-                    <div class="flex flex-col items-center">
-                        <svg class="diagram-svg w-full h-64" viewBox="0 0 550 220">
-                            <!-- Self Inductance Circuit -->
-                            <g transform="translate(30, 30)">
-                                <text x="100" y="20" class="svg-text-bold" text-anchor="middle">Self-Inductance Circuit</text>
-                                <path d="M 20 80 Q 30 50 40 80 Q 50 110 60 80 Q 70 50 80 80 Q 90 110 100 80 Q 110 50 120 80 Q 130 110 140 80 Q 150 50 160 80" class="svg-line-thick" stroke="#2563eb" />
-                                <polyline points="20,80 20,150 80,150" class="svg-line" />
-                                <polyline points="160,80 160,150 120,150" class="svg-line" />
-                                <!-- Battery -->
-                                <line x1="80" y1="140" x2="80" y2="160" class="svg-line-thick" />
-                                <line x1="86" y1="145" x2="86" y2="155" class="svg-line" />
-                                <line x1="92" y1="140" x2="92" y2="160" class="svg-line-thick" />
-                                <line x1="98" y1="145" x2="98" y2="155" class="svg-line" />
-                                <!-- Switch Key -->
-                                <circle cx="112" cy="150" r="3" fill="#0f172a" />
-                                <line x1="112" y1="150" x2="124" y2="140" class="svg-line-thick" stroke="#dc2626" />
-                            </g>
-
-                            <!-- Mutual Inductance Concentric Solenoids -->
-                            <g transform="translate(300, 30)">
-                                <text x="110" y="20" class="svg-text-bold" text-anchor="middle">Mutual Inductance Coils</text>
-                                <!-- Outer Solenoid Primary -->
-                                <path d="M 20 80 Q 30 40 40 80 Q 50 120 60 80 Q 70 40 80 80 Q 90 120 100 80 Q 110 40 120 80 Q 130 120 140 80 Q 150 40 160 80 Q 170 120 180 80" class="svg-line-thick" stroke="#059669" />
-                                <!-- Inner Solenoid Secondary -->
-                                <path d="M 40 80 Q 48 60 56 80 Q 64 100 72 80 Q 80 60 88 80 Q 96 100 104 80 Q 112 60 120 80 Q 128 100 136 80" class="svg-line" stroke="#dc2626" />
-                                <text x="100" y="140" class="svg-text" font-size="11" text-anchor="middle"><tspan fill="#059669">Primary (N₁)</tspan> & <tspan fill="#dc2626">Secondary (N₂)</tspan></text>
-                            </g>
-
-                            <text x="275" y="205" class="svg-text-bold" text-anchor="middle">Fig 18.5: Self & Mutual Inductance Configurations</text>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 18.6: Energy Stored in Inductor -->
-            <section id="sec-18-6" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.6</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Energy Stored in an Inductor</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-800">
-                    <p class="text-sm">
-                        When current in an inductive circuit increases from zero to a steady value $I$, work must be done against the self-induced back EMF ($e = -L \frac{dI}{dt}$). This work done is stored as <strong>magnetic potential energy</strong> in the magnetic field surrounding the inductor.
-                    </p>
-
-                    <!-- Derivation -->
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 space-y-3">
-                        <h3 class="text-base font-bold text-slate-900 border-b pb-2">Calculus Derivation of Stored Energy</h3>
-                        <p class="text-sm">
-                            The rate of doing work against self-induced EMF at any instant $t$ is:
-                        </p>
-                        <div class="math-block text-center font-semibold">
-                            $$P = \frac{dW}{dt} = |e| \cdot I = \left( L \frac{dI}{dt} \right) I$$
-                        </div>
-                        <p class="text-sm">
-                            Small work done $dW$ in a small time interval $dt$:
-                        </p>
-                        <div class="math-block text-center font-semibold">
-                            $$dW = P \, dt = L I \, dI$$
-                        </div>
-                        <p class="text-sm">
-                            Total work done $W$ to build up current from $0$ to steady value $I_0$:
-                        </p>
-                        <div class="math-block text-center font-bold text-blue-900 text-lg my-2">
-                            $$W = \int_{0}^{I_0} L I \, dI = L \left[ \frac{I^2}{2} \right]_{0}^{I_0} = \frac{1}{2} L I_0^2$$
-                        </div>
-                        <p class="text-sm">
-                            Therefore, the energy stored in the magnetic field of the inductor is:
-                        </p>
-                        <div class="math-block text-center font-extrabold text-blue-950 text-xl bg-white p-2 rounded border border-blue-200">
-                            $$U = \frac{1}{2} L I^2$$
-                        </div>
-                    </div>
-
-                    <!-- Magnetic Energy Density -->
-                    <div class="border-t border-slate-200 pt-4 space-y-2">
-                        <h3 class="text-base font-bold text-slate-900">Magnetic Energy Density ($u_B$)</h3>
-                        <p class="text-sm text-slate-700">
-                            Energy density is defined as the magnetic energy stored per unit volume ($V = A l$) of a long solenoid.
-                        </p>
-                        <p class="text-sm text-slate-700">
-                            Substituting $L = \frac{\mu_0 N^2 A}{l}$ and $B = \frac{\mu_0 N I}{l} \implies I = \frac{B l}{\mu_0 N}$ into the energy formula:
-                        </p>
-                        <div class="math-block text-center font-bold text-slate-900">
-                            $$U = \frac{1}{2} \left( \frac{\mu_0 N^2 A}{l} \right) \left( \frac{B l}{\mu_0 N} \right)^2 = \frac{1}{2} \frac{B^2}{\mu_0} (A l)$$
-                        </div>
-                        <div class="math-block text-center font-bold text-blue-900 text-lg">
-                            $$u_B = \frac{U}{V} = \frac{U}{A l} = \frac{B^2}{2\mu_0}$$
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 18.7: Transformer -->
-            <section id="sec-18-7" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.7</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Transformer: Principle, Construction and Equations</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-800">
-                    <p class="text-sm">
-                        A <strong>Transformer</strong> is a static electrical device used to step up (increase) or step down (decrease) alternating voltages without changing the frequency of electrical power.
-                    </p>
-
-                    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
-                        <strong class="text-blue-950 font-bold block mb-1">Working Principle</strong>
-                        <p class="text-sm text-slate-800">
-                            Works on the principle of <strong>Mutual Induction</strong> between two insulated coils wound over a common laminated magnetic iron core.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold text-slate-900">Mathematical Derivation of Transformer Ratio</h3>
-                            <p class="text-sm">
-                                Let $N_p$ and $N_s$ be the number of turns in primary and secondary coils respectively. When alternating voltage $V_p$ is applied across primary, changing magnetic flux $\frac{d\Phi}{dt}$ links both coils.
-                            </p>
-                            <p class="text-sm">
-                                Induced EMF in Primary: $e_p = -N_p \frac{d\Phi}{dt}$
-                            </p>
-                            <p class="text-sm">
-                                Induced EMF in Secondary: $e_s = -N_s \frac{d\Phi}{dt}$
-                            </p>
-                            <p class="text-sm">
-                                For an ideal transformer with zero winding resistance ($V_p = e_p$ and $V_s = e_s$):
-                            </p>
-                            <div class="math-block text-center font-extrabold text-blue-900 text-lg bg-slate-50 p-3 rounded border">
-                                $$\frac{V_s}{V_p} = \frac{N_s}{N_p} = K$$
-                            </div>
-                            <p class="text-xs text-slate-600">
-                                Where $K$ is called the <strong>Transformation Ratio</strong>.
-                            </p>
-                            
-                            <ul class="list-disc list-inside text-sm space-y-1 text-slate-700">
-                                <li><strong>Step-Up Transformer:</strong> $N_s > N_p \implies K > 1 \implies V_s > V_p$ (Voltage increases, current decreases).</li>
-                                <li><strong>Step-Down Transformer:</strong> $N_s < N_p \implies K < 1 \implies V_s < V_p$ (Voltage decreases, current increases).</li>
-                            </ul>
-
-                            <h4 class="font-bold text-slate-900 text-sm mt-3">Ideal Current Relation (100% Efficiency)</h4>
-                            <p class="text-sm">
-                                $\text{Input Power } P_p = \text{Output Power } P_s \implies V_p I_p = V_s I_s$
-                            </p>
-                            <div class="math-block text-center font-bold">
-                                $$\frac{I_p}{I_s} = \frac{V_s}{V_p} = \frac{N_s}{N_p} = K$$
-                            </div>
-                        </div>
-
-                        <!-- Diagram 6: Transformer Construction -->
-                        <div class="flex flex-col items-center">
-                            <svg class="diagram-svg w-full h-80" viewBox="0 0 500 300">
-                                <!-- Soft Iron Core -->
-                                <rect x="100" y="40" width="300" height="200" fill="#e2e8f0" stroke="#0f172a" stroke-width="3" rx="6" />
-                                <rect x="170" y="90" width="160" height="100" fill="#ffffff" stroke="#0f172a" stroke-width="2" rx="3" />
-
-                                <!-- Core Laminations Lines -->
-                                <line x1="110" y1="40" x2="110" y2="240" stroke="#cbd5e1" stroke-width="1.5" />
-                                <line x1="120" y1="40" x2="120" y2="240" stroke="#cbd5e1" stroke-width="1.5" />
-                                <line x1="380" y1="40" x2="380" y2="240" stroke="#cbd5e1" stroke-width="1.5" />
-                                <line x1="390" y1="40" x2="390" y2="240" stroke="#cbd5e1" stroke-width="1.5" />
-
-                                <!-- Primary Winding -->
-                                <g transform="translate(85, 80)">
-                                    <path d="M 15 0 C 45 -10 45 30 15 20 C 45 10 45 50 15 40 C 45 30 45 70 15 60 C 45 50 45 90 15 80 C 45 70 45 110 15 100" fill="none" stroke="#2563eb" stroke-width="4" />
-                                    <text x="-40" y="55" class="svg-text-bold" fill="#2563eb">Primary (Nₚ)</text>
-                                    <line x1="15" y1="0" x2="-20" y2="0" class="svg-line" />
-                                    <line x1="15" y1="100" x2="-20" y2="100" class="svg-line" />
-                                    <circle cx="-25" cy="50" r="12" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
-                                    <text x="-25" y="54" class="svg-text" font-size="10" text-anchor="middle">AC</text>
-                                </g>
-
-                                <!-- Secondary Winding -->
-                                <g transform="translate(370, 70)">
-                                    <path d="M 30 0 C 0 -10 0 20 30 15 C 0 8 0 38 30 30 C 0 23 0 53 30 48 C 0 40 0 70 30 65 C 0 58 0 88 30 82 C 0 75 0 105 30 100 C 0 92 0 122 30 115" fill="none" stroke="#dc2626" stroke-width="3" />
-                                    <text x="40" y="60" class="svg-text-bold" fill="#dc2626">Secondary (Nₛ)</text>
-                                    <line x1="30" y1="0" x2="60" y2="0" class="svg-line" />
-                                    <line x1="30" y1="115" x2="60" y2="115" class="svg-line" />
-                                    <rect x="60" y="45" width="20" height="30" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
-                                    <text x="70" y="64" class="svg-text" font-size="9" text-anchor="middle">Load</text>
-                                </g>
-
-                                <!-- Magnetic Flux Arrow in Core -->
-                                <path d="M 250 65 L 300 65" class="svg-line-thick" stroke="#059669" marker-end="url(#arrow)" />
-                                <text x="250" y="58" class="svg-text" font-size="11" fill="#059669" text-anchor="middle">Magnetic Flux (Φ)</text>
-
-                                <text x="250" y="275" class="svg-text-bold" text-anchor="middle">Fig 18.6: Transformer Core and Windings Schematic</text>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <!-- Importance in Long Distance Transmission -->
-                    <div class="border-t border-slate-200 pt-4">
-                        <h3 class="text-base font-bold text-slate-900 mb-2">Importance of Transformer in Long-Distance Power Transmission</h3>
-                        <p class="text-sm text-slate-700">
-                            Power generated at hydroelectric stations (e.g., 11 kV) must be transmitted across long distances to cities.
-                        </p>
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-2 text-sm text-slate-800 my-2">
-                            <p>
-                                1. Power lost as heat in transmission cables of resistance $R$ is $P_{\text{loss}} = I^2 R$.
-                            </p>
-                            <p>
-                                2. By using a <strong>Step-Up Transformer</strong> at power plant stations, voltage is elevated to very high levels (e.g., 132 kV or 400 kV). Since $P = V I$, increasing voltage $V$ reduces current $I$ proportionately.
-                            </p>
-                            <p>
-                                3. Reducing current by a factor of 10 reduces transmission power loss $I^2 R$ by a factor of $10^2 = 100$ times!
-                            </p>
-                            <p>
-                                4. At city substations, <strong>Step-Down Transformers</strong> reduce high voltage safely down to 220 V for domestic consumption.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 18.8: Sources of Energy Loss -->
-            <section id="sec-18-8" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-                <div class="border-b border-slate-200 pb-3 mb-6">
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Section 18.8</span>
-                    <h2 class="text-2xl font-bold text-slate-900">Sources of Energy Loss in Practical Transformers</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-800">
-                    <p class="text-sm">
-                        In real-world practical transformers, the output power is always less than input power due to various energy losses ($\eta < 100\%$).
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                            <h3 class="font-bold text-red-700 text-base mb-1">1. Copper Loss ($I^2 R$ Loss)</h3>
-                            <p class="text-slate-700">
-                                Heat produced ($I^2 R$) in the primary and secondary copper windings due to finite electrical resistance.
-                            </p>
-                            <span class="text-xs font-semibold text-emerald-700 block mt-2">Minimization: Use thick, low-resistance copper wires for high-current windings.</span>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                            <h3 class="font-bold text-red-700 text-base mb-1">2. Eddy Current Loss</h3>
-                            <p class="text-slate-700">
-                                Alternating magnetic flux induces eddy currents in the solid iron core, dissipating energy as heat.
-                            </p>
-                            <span class="text-xs font-semibold text-emerald-700 block mt-2">Minimization: Use laminated core composed of thin iron sheets insulated by varnish.</span>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                            <h3 class="font-bold text-red-700 text-base mb-1">3. Hysteresis Loss</h3>
-                            <p class="text-slate-700">
-                                Repeated magnetization and demagnetization cycles of the iron core during AC cycle dissipate energy as heat.
-                            </p>
-                            <span class="text-xs font-semibold text-emerald-700 block mt-2">Minimization: Use soft iron core material with narrow hysteresis loop.</span>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                            <h3 class="font-bold text-red-700 text-base mb-1">4. Flux Leakage Loss</h3>
-                            <p class="text-slate-700">
-                                Not all magnetic flux generated by primary winding links completely with secondary winding.
-                            </p>
-                            <span class="text-xs font-semibold text-emerald-700 block mt-2">Minimization: Wind primary and secondary coils directly over each other on a shell-type core.</span>
-                        </div>
-                    </div>
-
-                    <div class="p-4 bg-slate-50 rounded-lg border border-slate-200 text-sm">
-                        <h3 class="font-bold text-slate-900 mb-1">5. Humming Loss (Acoustic Loss)</h3>
-                        <p class="text-slate-700">
-                            The alternating magnetic field causes magnetostriction (periodic contraction and expansion of iron core), producing continuous mechanical vibration and audible humming noise.
-                        </p>
-                    </div>
-
-                    <!-- Efficiency Formula -->
-                    <div class="bg-blue-900 text-white p-5 rounded-xl text-center space-y-2">
-                        <h3 class="text-lg font-bold">Transformer Efficiency ($\eta$) Formula</h3>
-                        <div class="math-block text-xl font-mono text-blue-200">
-                            $$\eta = \frac{\text{Output Power } (P_s)}{\text{Input Power } (P_p)} \times 100\% = \frac{V_s I_s \cos\phi_s}{V_p I_p \cos\phi_p} \times 100\%$$
-                        </div>
-                        <p class="text-xs text-blue-300">
-                            For standard practical transformers, efficiency ranges between 90% and 98%.
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- INTERACTIVE SIMULATORS & CALCULATORS SECTION -->
-        <section id="simulators" class="space-y-8 no-print">
-            <div class="border-b border-slate-200 pb-3">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Interactive Tools</span>
-                <h2 class="text-3xl font-extrabold text-slate-900">Physics Laboratory Simulators & Calculators</h2>
-                <p class="text-sm text-slate-600">Experiment with parameters to visualize induced EMF, inductance, and transformer parameters in real-time.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-                <!-- Interactive AC Generator Simulator -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        A.C. Generator Waveform Simulator
-                    </h3>
-                    
-                    <div class="space-y-3 text-sm">
-                        <div>
-                            <label class="flex justify-between font-semibold text-slate-700">
-                                Number of Turns ($N$): <span id="gen-n-val" class="text-blue-600 font-mono">100 turns</span>
-                            </label>
-                            <input type="range" id="gen-n" min="10" max="500" value="100" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
-                        </div>
-
-                        <div>
-                            <label class="flex justify-between font-semibold text-slate-700">
-                                Magnetic Field ($B$): <span id="gen-b-val" class="text-blue-600 font-mono">0.20 T</span>
-                            </label>
-                            <input type="range" id="gen-b" min="0.05" max="1.0" step="0.05" value="0.20" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
-                        </div>
-
-                        <div>
-                            <label class="flex justify-between font-semibold text-slate-700">
-                                Area of Coil ($A$): <span id="gen-a-val" class="text-blue-600 font-mono">0.05 m²</span>
-                            </label>
-                            <input type="range" id="gen-a" min="0.01" max="0.2" step="0.01" value="0.05" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
-                        </div>
-
-                        <div>
-                            <label class="flex justify-between font-semibold text-slate-700">
-                                Frequency ($f$): <span id="gen-f-val" class="text-blue-600 font-mono">50 Hz</span>
-                            </label>
-                            <input type="range" id="gen-f" min="10" max="100" step="5" value="50" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
-                        </div>
-                    </div>
-
-                    <!-- Computed Calculated Values -->
-                    <div class="grid grid-cols-3 gap-2 bg-slate-50 p-3 rounded-lg border border-slate-200 text-center font-mono text-xs">
-                        <div>
-                            <span class="text-slate-500 block">Angular Speed ($\omega$)</span>
-                            <strong id="calc-omega" class="text-slate-900">314.2 rad/s</strong>
-                        </div>
-                        <div>
-                            <span class="text-slate-500 block">Peak EMF ($e_0$)</span>
-                            <strong id="calc-e0" class="text-blue-600">314.16 V</strong>
-                        </div>
-                        <div>
-                            <span class="text-slate-500 block">RMS Voltage ($V_{rms}$)</span>
-                            <strong id="calc-vrms" class="text-emerald-600">222.14 V</strong>
-                        </div>
-                    </div>
-
-                    <!-- Realtime Canvas Waveform Plot -->
-                    <canvas id="gen-canvas" class="w-full h-44 bg-slate-900 rounded-lg border border-slate-800"></canvas>
-                </div>
-
-                <!-- Interactive Transformer & Inductance Calculator -->
-                <div class="space-y-6">
-                    <!-- Transformer Calculator -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
-                        <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                            Transformer Numerical Calculator
-                        </h3>
-
-                        <div class="grid grid-cols-2 gap-3 text-sm">
-                            <div>
-                                <label class="block font-semibold text-slate-700">Primary Voltage $V_p$ (V)</label>
-                                <input type="number" id="tf-vp" value="220" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                            <div>
-                                <label class="block font-semibold text-slate-700">Efficiency $\eta$ (%)</label>
-                                <input type="number" id="tf-eff" value="95" min="1" max="100" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                            <div>
-                                <label class="block font-semibold text-slate-700">Primary Turns $N_p$</label>
-                                <input type="number" id="tf-np" value="500" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                            <div>
-                                <label class="block font-semibold text-slate-700">Secondary Turns $N_s$</label>
-                                <input type="number" id="tf-ns" value="50" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                            <div class="col-span-2">
-                                <label class="block font-semibold text-slate-700">Load Resistance $R_L$ ($\Omega$)</label>
-                                <input type="number" id="tf-rl" value="10" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                        </div>
-
-                        <!-- Computed Results -->
-                        <div class="bg-blue-50/70 p-4 rounded-lg border border-blue-100 text-xs font-mono grid grid-cols-2 gap-2 text-slate-800">
-                            <div>Ratio ($K = N_s/N_p$): <strong id="res-k" class="text-blue-700">0.10</strong></div>
-                            <div>Transformer Type: <strong id="res-type" class="text-amber-700">Step-Down</strong></div>
-                            <div>Secondary Volt ($V_s$): <strong id="res-vs" class="text-blue-700">22.00 V</strong></div>
-                            <div>Secondary Current ($I_s$): <strong id="res-is" class="text-blue-700">2.20 A</strong></div>
-                            <div>Output Power ($P_s$): <strong id="res-ps" class="text-emerald-700">48.40 W</strong></div>
-                            <div>Input Power ($P_p$): <strong id="res-pp" class="text-slate-900">50.95 W</strong></div>
-                        </div>
-                    </div>
-
-                    <!-- Inductance & Stored Energy Calculator -->
-                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
-                        <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            Solenoid Inductance & Energy Calculator
-                        </h3>
-                        <div class="grid grid-cols-2 gap-3 text-sm">
-                            <div>
-                                <label class="block font-semibold text-slate-700">Turns $N$</label>
-                                <input type="number" id="sol-n" value="1000" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                            <div>
-                                <label class="block font-semibold text-slate-700">Length $l$ (m)</label>
-                                <input type="number" id="sol-l" value="0.5" step="0.05" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                            <div>
-                                <label class="block font-semibold text-slate-700">Area $A$ ($m^2$)</label>
-                                <input type="number" id="sol-a" value="0.002" step="0.0005" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                            <div>
-                                <label class="block font-semibold text-slate-700">Current $I$ (A)</label>
-                                <input type="number" id="sol-i" value="4.0" step="0.5" class="w-full mt-1 p-2 border border-slate-300 rounded font-mono">
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-50 p-3 rounded border border-slate-200 text-xs font-mono grid grid-cols-2 gap-2">
-                            <div>Self-Inductance ($L$): <strong id="sol-res-l" class="text-blue-600">5.03 mH</strong></div>
-                            <div>Stored Energy ($U$): <strong id="sol-res-u" class="text-emerald-600">0.040 J</strong></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- NEB PAST BOARD EXAM SOLVED NUMERICAL PROBLEMS -->
-        <section id="numericals" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-            <div class="border-b border-slate-200 pb-3 mb-6">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">NEB Exam Preparation</span>
-                <h2 class="text-2xl font-bold text-slate-900">Step-by-Step Solved Past Board Exam Numericals</h2>
-            </div>
-
-            <div class="space-y-6">
-
-                <!-- Numerical 1 -->
-                <div class="p-5 bg-slate-50 rounded-lg border border-slate-200 space-y-3">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-bold text-blue-700 bg-blue-100 px-2.5 py-0.5 rounded">NEB 2078 Board Exam Question</span>
-                        <span class="text-xs text-slate-500 font-mono">[5 Marks]</span>
-                    </div>
-                    <p class="text-sm font-semibold text-slate-900">
-                        <strong>Question 1:</strong> A coil of $500$ turns and radius $4\text{ cm}$ is rotated at $1200\text{ rpm}$ in a uniform magnetic field of $0.05\text{ T}$ perpendicular to the axis of rotation. Calculate: (i) the maximum EMF induced, (ii) the instantaneous EMF when the plane of coil makes an angle of $30^\circ$ with the magnetic field.
-                    </p>
-                    <div class="bg-white p-4 rounded border border-slate-200 text-sm space-y-2 text-slate-800">
-                        <strong class="text-emerald-700 block text-xs uppercase tracking-wider">Solution:</strong>
-                        <p><strong>Given Data:</strong></p>
-                        <p>Turns $N = 500$, Radius $r = 0.04\text{ m} \implies \text{Area } A = \pi r^2 = \pi (0.04)^2 = 5.026 \times 10^{-3}\text{ m}^2$</p>
-                        <p>Frequency of rotation $f = \frac{1200}{60} = 20\text{ rev/s} \implies \omega = 2\pi f = 2 \pi (20) = 40\pi \approx 125.66\text{ rad/s}$</p>
-                        <p>Magnetic field $B = 0.05\text{ T}$</p>
-
-                        <p class="pt-2 font-semibold text-blue-900">(i) Maximum (Peak) EMF ($e_0$):</p>
-                        <div class="math-block font-mono">
-                            $$e_0 = N B A \omega = 500 \times 0.05 \times (5.026 \times 10^{-3}) \times 125.66 = 15.79\text{ Volts}$$
-                        </div>
-
-                        <p class="pt-2 font-semibold text-blue-900">(ii) Instantaneous EMF when plane makes $30^\circ$ with $B$:</p>
-                        <p class="text-xs text-slate-600">Note: Angle $\theta$ in $e = e_0 \sin\theta$ is between magnetic field and normal vector to coil plane. Thus, $\theta = 90^\circ - 30^\circ = 60^\circ$.</p>
-                        <div class="math-block font-mono">
-                            $$e = e_0 \sin(60^\circ) = 15.79 \times \frac{\sqrt{3}}{2} = 15.79 \times 0.866 = 13.67\text{ Volts}$$
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Numerical 2 -->
-                <div class="p-5 bg-slate-50 rounded-lg border border-slate-200 space-y-3">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-bold text-blue-700 bg-blue-100 px-2.5 py-0.5 rounded">NEB 2076 Board Exam Question</span>
-                        <span class="text-xs text-slate-500 font-mono">[4 Marks]</span>
-                    </div>
-                    <p class="text-sm font-semibold text-slate-900">
-                        <strong>Question 2:</strong> A step-down transformer connected to $220\text{ V}$ AC line supplies $11\text{ V}$ to a load of resistance $2\ \Omega$. If the efficiency of the transformer is $90\%$, calculate: (i) secondary current, (ii) output power, (iii) primary current.
-                    </p>
-                    <div class="bg-white p-4 rounded border border-slate-200 text-sm space-y-2 text-slate-800">
-                        <strong class="text-emerald-700 block text-xs uppercase tracking-wider">Solution:</strong>
-                        <p><strong>Given:</strong> $V_p = 220\text{ V}$, $V_s = 11\text{ V}$, $R_L = 2\ \Omega$, Efficiency $\eta = 90\% = 0.90$</p>
-
-                        <p class="pt-1 font-semibold text-blue-900">(i) Secondary Current ($I_s$):</p>
-                        <div class="math-block font-mono">
-                            $$I_s = \frac{V_s}{R_L} = \frac{11}{2} = 5.5\text{ A}$$
-                        </div>
-
-                        <p class="pt-1 font-semibold text-blue-900">(ii) Output Power ($P_s$):</p>
-                        <div class="math-block font-mono">
-                            $$P_s = V_s \times I_s = 11 \times 5.5 = 60.5\text{ Watts}$$
-                        </div>
-
-                        <p class="pt-1 font-semibold text-blue-900">(iii) Primary Current ($I_p$):</p>
-                        <div class="math-block font-mono">
-                            $$\eta = \frac{P_s}{P_p} \implies P_p = \frac{P_s}{\eta} = \frac{60.5}{0.90} = 67.22\text{ Watts}$$
-                            $$P_p = V_p \times I_p \implies I_p = \frac{P_p}{V_p} = \frac{67.22}{220} = 0.305\text{ A}$$
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Numerical 3 -->
-                <div class="p-5 bg-slate-50 rounded-lg border border-slate-200 space-y-3">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-bold text-blue-700 bg-blue-100 px-2.5 py-0.5 rounded">NEB 2074 Board Exam Question</span>
-                        <span class="text-xs text-slate-500 font-mono">[3 Marks]</span>
-                    </div>
-                    <p class="text-sm font-semibold text-slate-900">
-                        <strong>Question 3:</strong> An air-cored solenoid of length $50\text{ cm}$ and radius $2\text{ cm}$ has $1000$ turns. Calculate its self-inductance and the energy stored in it when a current of $5\text{ A}$ flows through it. ($\mu_0 = 4\pi \times 10^{-7}\text{ H/m}$).
-                    </p>
-                    <div class="bg-white p-4 rounded border border-slate-200 text-sm space-y-2 text-slate-800">
-                        <strong class="text-emerald-700 block text-xs uppercase tracking-wider">Solution:</strong>
-                        <p><strong>Given:</strong> $l = 0.5\text{ m}$, $r = 0.02\text{ m} \implies A = \pi (0.02)^2 = 1.257 \times 10^{-3}\text{ m}^2$, $N = 1000$, $I = 5\text{ A}$</p>
-
-                        <p class="pt-1 font-semibold text-blue-900">Self-Inductance ($L$):</p>
-                        <div class="math-block font-mono">
-                            $$L = \frac{\mu_0 N^2 A}{l} = \frac{(4\pi \times 10^{-7}) \times (1000)^2 \times (1.257 \times 10^{-3})}{0.5} = 3.16 \times 10^{-3}\text{ H} = 3.16\text{ mH}$$
-                        </div>
-
-                        <p class="pt-1 font-semibold text-blue-900">Stored Energy ($U$):</p>
-                        <div class="math-block font-mono">
-                            $$U = \frac{1}{2} L I^2 = \frac{1}{2} \times (3.16 \times 10^{-3}) \times (5)^2 = 0.0395\text{ Joules}$$
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- CONCEPTUAL SHORT ANSWER QUESTIONS -->
-        <section id="conceptual" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card">
-            <div class="border-b border-slate-200 pb-3 mb-6">
-                <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">2-Mark NEB Conceptual Items</span>
-                <h2 class="text-2xl font-bold text-slate-900">High-Frequency Conceptual Short Answer Questions</h2>
-            </div>
-
-            <div class="space-y-4">
-                <!-- Q1 -->
-                <div class="border border-slate-200 rounded-lg overflow-hidden">
-                    <button onclick="toggleAccordion('qa1')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-900 flex justify-between items-center text-sm">
-                        <span>Q1: Why is a choke coil preferred over a resistor to control AC current in a circuit?</span>
-                        <span id="qa1-icon" class="text-blue-600 font-bold">+</span>
-                    </button>
-                    <div id="qa1" class="hidden p-4 bg-white text-sm text-slate-700 border-t border-slate-200 space-y-2">
-                        <p>
-                            A choke coil is a high-inductance coil with very low ohmic resistance. The average power consumed in an ideal inductor over a complete AC cycle is zero ($\Phi = 90^\circ \implies P = V I \cos 90^\circ = 0$). Thus, a choke coil reduces current without any significant loss of electrical energy as heat. In contrast, a resistor reduces current by dissipating electrical energy into heat ($I^2 R$), leading to continuous energy waste.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Q2 -->
-                <div class="border border-slate-200 rounded-lg overflow-hidden">
-                    <button onclick="toggleAccordion('qa2')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-900 flex justify-between items-center text-sm">
-                        <span>Q2: Why does a spark occur at the key when the circuit switch of an inductive load is turned off?</span>
-                        <span id="qa2-icon" class="text-blue-600 font-bold">+</span>
-                    </button>
-                    <div id="qa2" class="hidden p-4 bg-white text-sm text-slate-700 border-t border-slate-200 space-y-2">
-                        <p>
-                            When the switch is turned off, current drops rapidly to zero ($\frac{dI}{dt}$ is very large). Due to high self-inductance ($L$), a massive self-induced back EMF ($e = -L \frac{dI}{dt}$) is produced across the tiny air gap between switch contacts. This huge electric field ionizes the air molecules in the gap, causing electric breakdown visible as a spark.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Q3 -->
-                <div class="border border-slate-200 rounded-lg overflow-hidden">
-                    <button onclick="toggleAccordion('qa3')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-900 flex justify-between items-center text-sm">
-                        <span>Q3: Can a transformer step up or step down a direct current (DC) voltage? Explain.</span>
-                        <span id="qa3-icon" class="text-blue-600 font-bold">+</span>
-                    </button>
-                    <div id="qa3" class="hidden p-4 bg-white text-sm text-slate-700 border-t border-slate-200 space-y-2">
-                        <p>
-                            <strong>No.</strong> A transformer operates strictly on the principle of mutual induction, which requires a continuously changing magnetic flux ($\frac{dPhi}{dt} \neq 0$). Direct current (DC) produces a constant magnetic field, meaning $\frac{dPhi}{dt} = 0$. Consequently, no secondary EMF is induced. Connecting a steady DC voltage across primary turns may even burn out the winding due to high current.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Q4 -->
-                <div class="border border-slate-200 rounded-lg overflow-hidden">
-                    <button onclick="toggleAccordion('qa4')" class="w-full text-left p-4 bg-slate-50 hover:bg-slate-100 font-semibold text-slate-900 flex justify-between items-center text-sm">
-                        <span>Q4: Why is soft iron preferred over steel for making transformer cores?</span>
-                        <span id="qa4-icon" class="text-blue-600 font-bold">+</span>
-                    </button>
-                    <div id="qa4" class="hidden p-4 bg-white text-sm text-slate-700 border-t border-slate-200 space-y-2">
-                        <p>
-                            Soft iron has high magnetic permeability and low coercivity, resulting in a very narrow hysteresis loop area compared to steel. This ensures low hysteresis loss (energy lost as heat during magnetisation/demagnetisation cycles). Furthermore, soft iron demagnetizes easily, avoiding residual magnetic saturation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INTERACTIVE SELF-ASSESSMENT QUIZ -->
-        <section id="quiz" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8 page-card no-print">
-            <div class="border-b border-slate-200 pb-3 mb-6 flex justify-between items-center">
-                <div>
-                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Self Study Assessment</span>
-                    <h2 class="text-2xl font-bold text-slate-900">NEB Interactive Quiz Module</h2>
-                </div>
-                <div id="quiz-score-badge" class="bg-blue-50 text-blue-700 border border-blue-200 px-3 py-1 rounded-full text-sm font-bold">
-                    Score: 0 / 5
-                </div>
-            </div>
-
-            <div id="quiz-container" class="space-y-6">
-                <!-- Quiz Question 1 -->
-                <div class="quiz-q p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-3" data-correct="1">
-                    <p class="font-semibold text-slate-900 text-sm">1. Lenz's Law is a direct consequence of which conservation principle?</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                        <button onclick="checkAnswer(this, 0)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">A) Conservation of Charge</button>
-                        <button onclick="checkAnswer(this, 1)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">B) Conservation of Energy</button>
-                        <button onclick="checkAnswer(this, 2)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">C) Conservation of Momentum</button>
-                        <button onclick="checkAnswer(this, 3)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">D) Conservation of Flux</button>
-                    </div>
-                    <p class="feedback hidden text-xs font-semibold mt-2 p-2 rounded"></p>
-                </div>
-
-                <!-- Quiz Question 2 -->
-                <div class="quiz-q p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-3" data-correct="2">
-                    <p class="font-semibold text-slate-900 text-sm">2. If the speed of rotation of an AC generator coil is doubled, the peak induced EMF ($e_0$) becomes:</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                        <button onclick="checkAnswer(this, 0)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">A) Remains same</button>
-                        <button onclick="checkAnswer(this, 1)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">B) Halved</button>
-                        <button onclick="checkAnswer(this, 2)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">C) Doubled</button>
-                        <button onclick="checkAnswer(this, 3)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">D) Quadrupled</button>
-                    </div>
-                    <p class="feedback hidden text-xs font-semibold mt-2 p-2 rounded"></p>
-                </div>
-
-                <!-- Quiz Question 3 -->
-                <div class="quiz-q p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-3" data-correct="0">
-                    <p class="font-semibold text-slate-900 text-sm">3. How are eddy current heat losses in transformer cores effectively minimized?</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                        <button onclick="checkAnswer(this, 0)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">A) Using laminated iron sheets insulated with varnish</button>
-                        <button onclick="checkAnswer(this, 1)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">B) Using thick solid copper cores</button>
-                        <button onclick="checkAnswer(this, 2)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">C) Increasing primary current</button>
-                        <button onclick="checkAnswer(this, 3)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">D) Cooling with water</button>
-                    </div>
-                    <p class="feedback hidden text-xs font-semibold mt-2 p-2 rounded"></p>
-                </div>
-
-                <!-- Quiz Question 4 -->
-                <div class="quiz-q p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-3" data-correct="3">
-                    <p class="font-semibold text-slate-900 text-sm">4. The expression for magnetic energy density ($u_B$) stored inside a solenoid is:</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                        <button onclick="checkAnswer(this, 0)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">A) $\frac{1}{2} L I^2$</button>
-                        <button onclick="checkAnswer(this, 1)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">B) $\mu_0 B^2$</button>
-                        <button onclick="checkAnswer(this, 2)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">C) $\frac{B}{2\mu_0}$</button>
-                        <button onclick="checkAnswer(this, 3)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">D) $\frac{B^2}{2\mu_0}$</button>
-                    </div>
-                    <p class="feedback hidden text-xs font-semibold mt-2 p-2 rounded"></p>
-                </div>
-
-                <!-- Quiz Question 5 -->
-                <div class="quiz-q p-4 bg-slate-50 rounded-lg border border-slate-200 space-y-3" data-correct="1">
-                    <p class="font-semibold text-slate-900 text-sm">5. In long-distance AC electric power transmission, high voltages are used to:</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
-                        <button onclick="checkAnswer(this, 0)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">A) Increase current in wires</button>
-                        <button onclick="checkAnswer(this, 1)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">B) Minimize $I^2 R$ heat losses in transmission lines</button>
-                        <button onclick="checkAnswer(this, 2)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">C) Prevent eddy currents</button>
-                        <button onclick="checkAnswer(this, 3)" class="quiz-btn text-left p-2.5 bg-white border border-slate-300 rounded hover:bg-slate-100">D) Increase frequency of transmission</button>
-                    </div>
-                    <p class="feedback hidden text-xs font-semibold mt-2 p-2 rounded"></p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs border-t border-slate-800 no-print">
-        <p>NEB Grade XII Physics Module — Unit 18: Electromagnetic Induction</p>
-        <p class="mt-1 text-slate-500">Curriculum standard aligned with National Examinations Board, Nepal.</p>
-    </footer>
-
-    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
-    <script>
-        // Toggle Accordion Q&A
-        function toggleAccordion(id) {
-            const el = document.getElementById(id);
-            const icon = document.getElementById(id + '-icon');
-            if (el.classList.contains('hidden')) {
-                el.classList.remove('hidden');
-                icon.textContent = '−';
-            } else {
-                el.classList.add('hidden');
-                icon.textContent = '+';
-            }
-        }
-
-        // AC Generator Realtime Canvas Plotter
-        const genN = document.getElementById('gen-n');
-        const genB = document.getElementById('gen-b');
-        const genA = document.getElementById('gen-a');
-        const genF = document.getElementById('gen-f');
-
-        const genNVal = document.getElementById('gen-n-val');
-        const genBVal = document.getElementById('gen-b-val');
-        const genAVal = document.getElementById('gen-a-val');
-        const genFVal = document.getElementById('gen-f-val');
-
-        const calcOmega = document.getElementById('calc-omega');
-        const calcE0 = document.getElementById('calc-e0');
-        const calcVrms = document.getElementById('calc-vrms');
-
-        const canvas = document.getElementById('gen-canvas');
-        const ctx = canvas ? canvas.getContext('2d') : null;
-
-        function updateGenerator() {
-            const N = parseFloat(genN.value);
-            const B = parseFloat(genB.value);
-            const A = parseFloat(genA.value);
-            const f = parseFloat(genF.value);
-
-            genNVal.textContent = `${N} turns`;
-            genBVal.textContent = `${B.toFixed(2)} T`;
-            genAVal.textContent = `${A.toFixed(2)} m²`;
-            genFVal.textContent = `${f} Hz`;
-
-            const omega = 2 * Math.PI * f;
-            const e0 = N * B * A * omega;
-            const vrms = e0 / Math.SQRT2;
-
-            calcOmega.textContent = `${omega.toFixed(1)} rad/s`;
-            calcE0.textContent = `${e0.toFixed(2)} V`;
-            calcVrms.textContent = `${vrms.toFixed(2)} V`;
-
-            drawWaveform(f, e0);
-        }
-
-        function drawWaveform(f, e0) {
-            if (!canvas || !ctx) return;
-            
-            // Adjust canvas resolution
-            canvas.width = canvas.clientWidth;
-            canvas.height = canvas.clientHeight;
-
-            const w = canvas.width;
-            const h = canvas.height;
-            const centerY = h / 2;
-
-            ctx.clearRect(0, 0, w, h);
-
-            // Draw Axis Lines
-            ctx.strokeStyle = '#334155';
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(0, centerY);
-            ctx.lineTo(w, centerY);
-            ctx.stroke();
-
-            // Draw Sine Wave
-            ctx.strokeStyle = '#3b82f6';
-            ctx.lineWidth = 2.5;
-            ctx.beginPath();
-
-            const cycles = 2;
-            const amplitude = Math.min(centerY - 15, (e0 / 500) * (centerY - 15) + 20);
-
-            for (let x = 0; x < w; x++) {
-                const t = (x / w) * cycles * 2 * Math.PI;
-                const y = centerY - amplitude * Math.sin(t);
-                if (x === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
-            }
-            ctx.stroke();
-
-            // Voltage Text Labels
-            ctx.fillStyle = '#94a3b8';
-            ctx.font = '11px monospace';
-            ctx.fillText(`+e₀ (${e0.toFixed(1)}V)`, 10, 20);
-            ctx.fillText(`-e₀ (-${e0.toFixed(1)}V)`, 10, h - 10);
-            ctx.fillText('Time (t) ➔', w - 70, centerY - 8);
-        }
-
-        if (genN) {
-            [genN, genB, genA, genF].forEach(input => input.addEventListener('input', updateGenerator));
-        }
-
-        // Transformer Calculator
-        function updateTransformer() {
-            const vp = parseFloat(document.getElementById('tf-vp').value) || 0;
-            const eff = parseFloat(document.getElementById('tf-eff').value) || 100;
-            const np = parseFloat(document.getElementById('tf-np').value) || 1;
-            const ns = parseFloat(document.getElementById('tf-ns').value) || 1;
-            const rl = parseFloat(document.getElementById('tf-rl').value) || 1;
-
-            const K = ns / np;
-            const vs = vp * K;
-            const is = vs / rl;
-            const ps = vs * is;
-            const pp = ps / (eff / 100);
-            const ip = vp > 0 ? pp / vp : 0;
-
-            document.getElementById('res-k').textContent = K.toFixed(3);
-            document.getElementById('res-type').textContent = K > 1 ? 'Step-Up' : 'Step-Down';
-            document.getElementById('res-vs').textContent = `${vs.toFixed(2)} V`;
-            document.getElementById('res-is').textContent = `${is.toFixed(2)} A`;
-            document.getElementById('res-ps').textContent = `${ps.toFixed(2)} W`;
-            document.getElementById('res-pp').textContent = `${pp.toFixed(2)} W`;
-        }
-
-        ['tf-vp', 'tf-eff', 'tf-np', 'tf-ns', 'tf-rl'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.addEventListener('input', updateTransformer);
-        });
-
-        // Solenoid Calculator
-        function updateSolenoid() {
-            const N = parseFloat(document.getElementById('sol-n').value) || 0;
-            const l = parseFloat(document.getElementById('sol-l').value) || 1;
-            const A = parseFloat(document.getElementById('sol-a').value) || 0;
-            const I = parseFloat(document.getElementById('sol-i').value) || 0;
-
-            const mu0 = 4 * Math.PI * 1e-7;
-            const L = (mu0 * N * N * A) / l;
-            const U = 0.5 * L * I * I;
-
-            document.getElementById('sol-res-l').textContent = `${(L * 1000).toFixed(3)} mH`;
-            document.getElementById('sol-res-u').textContent = `${U.toFixed(4)} J`;
-        }
-
-        ['sol-n', 'sol-l', 'sol-a', 'sol-i'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.addEventListener('input', updateSolenoid);
-        });
-
-        // Interactive Quiz Logic
-        let userScore = 0;
-        const totalQuestions = 5;
-
-        function checkAnswer(btn, optionIndex) {
-            const parent = btn.closest('.quiz-q');
-            const correctIndex = parseInt(parent.getAttribute('data-correct'));
-            const feedback = parent.querySelector('.feedback');
-            const buttons = parent.querySelectorAll('.quiz-btn');
-
-            // Disable buttons in this question
-            buttons.forEach(b => b.disabled = true);
-
-            if (optionIndex === correctIndex) {
-                btn.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900', 'font-bold');
-                feedback.textContent = "✓ Correct Answer!";
-                feedback.classList.remove('hidden');
-                feedback.classList.add('bg-emerald-100', 'text-emerald-900');
-                userScore++;
-            } else {
-                btn.classList.add('bg-red-100', 'border-red-500', 'text-red-900');
-                buttons[correctIndex].classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-900', 'font-bold');
-                feedback.textContent = "✗ Incorrect. The highlighted option is correct.";
-                feedback.classList.remove('hidden');
-                feedback.classList.add('bg-red-100', 'text-red-900');
-            }
-
-            document.getElementById('quiz-score-badge').textContent = `Score: ${userScore} / ${totalQuestions}`;
-        }
-
-        // Window Onload Initialization
-        window.onload = function() {
-            updateGenerator();
-            updateTransformer();
-            updateSolenoid();
-            if (window.MathJax) {
-                MathJax.typesetPromise();
-            }
-        };
-
-        window.onresize = function() {
-            updateGenerator();
-        };
-    </script>
-</body>
-</html>
+
+<div class="box note" data-title="Learning objectives"><ul><li>18.1 Faraday’s laws of electromagnetic induction</li><li>18.2 Lenz’s law and conservation of energy</li><li>18.3 Construction and working of A.C. generator</li><li>18.4 Eddy currents: production, applications & nuisance</li><li>18.5 Self-inductance and Mutual inductance</li><li>18.6 Energy stored in an inductor</li><li>18.7 Transformer: construction, working principle & importance</li><li>18.8 Sources of energy loss in practical transformers</li></ul></div>
+<h2>Faraday’s Laws of Electromagnetic Induction</h2><p>
+<strong>Electromagnetic Induction</strong> is the phenomenon of generating an electromotive force (emf) and consequently an electric current in a closed circuit by changing the magnetic flux linked with that circuit.
+</p><div class="box definition" data-title="Magnetic Flux (\(\Phi\)) and Magnetic Flux Linkage"><p>
+The magnetic flux (\(\Phi\)) through a surface of area \(A\) placed in a uniform magnetic field \(B\) is defined as the total number of magnetic field lines passing normally through that area:
+</p>
+<p>\[\Phi = \vec{B} \cdot \vec{A} = B A \cos\theta\]</p>
+
+<p>
+Where \(\theta\) is the angle between the magnetic field vector \(\vec{B}\) and the normal area vector \(\vec{A}\).
+<strong>SI Unit:</strong> Weber (\(\text{Wb}\)) or \(\text{Tesla}\cdot\text{m}^2\). Dimensions: \([M L^2 T^{-2} A^{-1}]\).
+</p>
+<p>
+For a coil with \(N\) turns, the total <strong>magnetic flux linkage</strong> is given by \(N\Phi = N B A \cos\theta\).
+</p></div>
+<h3>Statements of Faraday's Laws</h3><h4>Faraday's First Law (Qualitative)</h4><p>
+Whenever there is a change in the magnetic flux linked with a closed circuit, an induced electromotive force (emf) is produced in the circuit. The induced emf lasts only as long as the change in magnetic flux continues.
+</p><h4>Faraday's Second Law (Quantitative)</h4><p>
+The magnitude of the induced emf in a circuit is directly proportional to the time rate of change of magnetic flux linked with the circuit.
+</p><p>\[e \propto \frac{d\Phi}{dt} \implies e = -N \frac{d\Phi}{dt}\]</p>
+<p>
+Where \(N\) is the number of turns in the coil, and the negative sign represents opposition according to Lenz's Law.
+</p><svg class="panel" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g>
+<path stroke="#2563eb" stroke-width="3.5" fill="none" d="M 220 100 Q 230 70 240 100 Q 250 130 260 100 Q 270 70 280 100 Q 290 130 300 100 Q 310 70 320 100 Q 330 130 340 100 Q 350 70 360 100 Q 370 130 380 100"/>
+
+<polyline stroke="currentColor" stroke-width="2" fill="none" points="220,100 220,180 270,180"/>
+<polyline stroke="currentColor" stroke-width="2" fill="none" points="380,100 380,180 330,180"/>
+
+<circle stroke="currentColor" stroke-width="2" fill="#ffffff" cx="300" cy="180" r="22"/>
+<text fill="currentColor" font-size="14" font-weight="700" x="300" y="175" text-anchor="middle">G</text>
+<line stroke="#dc2626" stroke-width="2" fill="none" x1="300" y1="180" x2="312" y2="166"/>
+</g>
+
+<g transform="translate(40, 75)">
+<rect x="0" y="0" width="120" height="40" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="3"/>
+<rect x="60" y="0" width="60" height="40" fill="#fca5a5" stroke="#0f172a" stroke-width="2" rx="3"/>
+<text fill="#0f172a" font-size="14" font-weight="700" x="30" y="25" text-anchor="middle">S</text>
+<text fill="#991b1b" font-size="14" font-weight="700" x="90" y="25" text-anchor="middle">N</text>
+
+<line stroke="#2563eb" stroke-width="3.5" fill="none" x1="130" y1="20" x2="165" y2="20"/>
+<polygon points="165,15 175,20 165,25" fill="#2563eb"/>
+<text fill="currentColor" font-size="11" x="148" y="12" text-anchor="middle">Motion (v)</text>
+</g>
+
+<path stroke="currentColor" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 4" fill="none" d="M 160 80 Q 210 50 260 80"/>
+<path stroke="currentColor" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 4" fill="none" d="M 160 110 Q 210 140 260 110"/>
+
+<text fill="currentColor" font-size="14" font-weight="700" x="250" y="225" text-anchor="middle">Fig 18.1: Faraday's Induction Experiment with Moving Magnet</text>
+</svg><h4>Factors Influencing the Magnitude of Induced EMF:</h4><ul>
+<li><strong>Number of turns (\(N\)):</strong> \(e \propto N\). Increasing turns increases total flux linkage.</li>
+<li><strong>Speed of relative motion (\(v\)):</strong> Faster movement causes a higher rate of flux change \(\frac{d\Phi}{dt}\).</li>
+<li><strong>Strength of magnetic field (\(B\)):</strong> Stronger magnets create higher flux density.</li>
+<li><strong>Area of the coil (\(A\)):</strong> Larger area encompasses more field lines.</li>
+</ul><h2>Lenz’s Law and Conservation of Energy</h2><div class="box example" data-title="Statement of Lenz&#x27;s Law"><p>
+"The direction of any induced current is always such that it opposes the change in magnetic flux that produces it."
+</p></div>
+<h3>Proof of Lenz's Law as Conservation of Energy</h3><p>
+Consider a bar magnet approaching a closed solenoid with its North pole facing the coil:
+</p><ol>
+<li>As the N-pole approaches, magnetic flux through the coil increases.</li>
+<li>According to Lenz's law, the induced current flows in a direction such that the front face of the coil becomes a <strong>North pole</strong>.</li>
+<li>Like magnetic poles repel. Thus, a repulsive magnetic force opposes the inward motion of the magnet.</li>
+<li>To keep moving the magnet forward, an <strong>external mechanical work</strong> must be performed against this repulsive force.</li>
+<li>This mechanical work done by the external agent is transformed into electrical energy in the coil, which eventually dissipates as Joule heat (\(I^2 R t\)).</li>
+</ol><p><strong>What if the opposite happened?</strong> If the approaching N-pole induced a South pole, it would attract the magnet, accelerating it automatically. This would generate electrical energy continuously without doing external mechanical work, violating the <em>Law of Conservation of Energy</em>. Hence, opposition is mandatory!</p>
+<svg class="panel" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(60, 80)">
+<rect x="0" y="0" width="100" height="35" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+<rect x="50" y="0" width="50" height="35" fill="#fca5a5" stroke="#0f172a" stroke-width="2"/>
+<text fill="currentColor" font-size="14" font-weight="700" x="25" y="22" text-anchor="middle">S</text>
+<text fill="#991b1b" font-size="14" font-weight="700" x="75" y="22" text-anchor="middle">N</text>
+
+<line stroke="#059669" stroke-width="3.5" fill="none" x1="110" y1="17.5" x2="140" y2="17.5"/>
+<polygon points="140,12.5 150,17.5 140,22.5" fill="#059669"/>
+<text fill="currentColor" font-size="10" x="130" y="8" text-anchor="middle">v</text>
+</g>
+
+<g transform="translate(240, 50)">
+
+<ellipse stroke="#2563eb" stroke-width="3.5" fill="none" cx="60" cy="50" rx="20" ry="45"/>
+
+<line stroke="#dc2626" stroke-width="3.5" fill="none" x1="35" y1="50" x2="5" y2="50"/>
+<polygon points="5,45 0,50 5,55" fill="#dc2626"/>
+<text fill="#dc2626" font-size="10" x="20" y="38" text-anchor="middle">Opposing Force</text>
+
+<path stroke="#dc2626" stroke-width="2" fill="none" d="M 52 35 L 52 65 M 52 35 L 68 65 M 68 35 L 68 65"/>
+<path stroke="#dc2626" stroke-width="2" fill="none" d="M 50 38 L 52 35 L 55 38"/>
+<path stroke="#dc2626" stroke-width="2" fill="none" d="M 65 62 L 68 65 L 70 62"/>
+<text fill="currentColor" font-size="14" font-weight="700" x="60" y="115" text-anchor="middle">Induced N-Pole Face</text>
+</g>
+
+<text fill="currentColor" font-size="14" font-weight="700" x="250" y="225" text-anchor="middle">Fig 18.2: Lenz's Law Opposition & Conservation of Energy</text>
+</svg><h3>Fleming's Right-Hand Rule (Generator Rule)</h3><p>
+Used to determine the direction of induced current in a straight conductor moving in a magnetic field:
+</p><p>Forefinger
+Direction of Magnetic Field (\(\vec{B}\))</p>
+<p>Thumb
+Direction of Motion / Force (\(\vec{v}\))</p>
+<p>Middle Finger
+Direction of Induced Current (\(I\))</p>
+<h2>Construction and Working of A.C. Generator (Alternator)</h2><p>
+An <strong>A.C. Generator</strong> (or Alternator) is an electrical machine that converts mechanical energy into alternating electrical energy based on the principle of <em>electromagnetic induction</em>.
+</p><h3>Main Construction Components</h3><p><strong>1. Armature Coil (ABCD)</strong>
+Consists of a rectangular coil of many turns of insulated copper wire wound over a soft iron core to concentrate magnetic lines.</p>
+<p><strong>2. Field Magnets (N-S)</strong>
+Strong permanent electromagnets with concave pole pieces creating a uniform magnetic field \(B\).</p>
+<p><strong>3. Slip Rings (\(R_1, R_2\))</strong>
+Two hollow metallic rings connected to the ends of the armature coil, rotating synchronously with the coil.</p>
+<p><strong>4. Carbon Brushes (\(B_1, B_2\))</strong>
+Two stationary flexible graphite blocks pressed against the slip rings to tap current to external load \(R\).</p>
+<svg class="panel" viewBox="0 0 650 300" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<path d="M 50 40 L 150 40 Q 170 120 150 200 L 50 200 Z" fill="#fca5a5" stroke="#0f172a" stroke-width="2"/>
+<text fill="#991b1b" font-size="20" font-weight="700" x="90" y="125">N</text>
+
+<path d="M 450 40 L 350 40 Q 330 120 350 200 L 450 200 Z" fill="#93c5fd" stroke="#0f172a" stroke-width="2"/>
+<text fill="#1e3a8a" font-size="20" font-weight="700" x="400" y="125">S</text>
+
+<g transform="translate(180, 60)">
+
+<polygon points="30,20 110,20 110,120 30,120" fill="none" stroke="#2563eb" stroke-width="3"/>
+<text fill="currentColor" font-size="14" font-weight="700" x="25" y="15">A</text>
+<text fill="currentColor" font-size="14" font-weight="700" x="115" y="15">B</text>
+<text fill="currentColor" font-size="14" font-weight="700" x="115" y="135">C</text>
+<text fill="currentColor" font-size="14" font-weight="700" x="25" y="135">D</text>
+
+<line stroke="#64748b" stroke-opacity=".7" stroke-width="1.5" stroke-dasharray="4 4" fill="none" x1="70" y1="-10" x2="70" y2="180"/>
+<path stroke="#059669" stroke-width="2" fill="none" d="M 55 -5 Q 70 -15 85 -5" marker-end="url(#arrow)"/>
+<text fill="#059669" font-size="11" x="90" y="-5">Rotation (ω)</text>
+
+<line stroke="#2563eb" stroke-width="3.5" fill="none" x1="50" y1="120" x2="50" y2="150"/>
+<line stroke="#2563eb" stroke-width="3.5" fill="none" x1="90" y1="120" x2="90" y2="180"/>
+
+<ellipse cx="50" cy="150" rx="12" ry="6" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
+<ellipse cx="90" cy="180" rx="12" ry="6" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
+
+<rect x="32" y="146" width="6" height="8" fill="#0f172a"/>
+<rect x="102" y="176" width="6" height="8" fill="#0f172a"/>
+
+<text fill="currentColor" font-size="10" x="10" y="152">B₁</text>
+<text fill="currentColor" font-size="10" x="115" y="182">B₂</text>
+
+<polyline stroke="currentColor" stroke-width="2" fill="none" points="32,150 0,150 0,210 140,210 140,180 108,180"/>
+<rect x="50" y="202" width="40" height="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<text fill="currentColor" font-size="10" x="70" y="214" text-anchor="middle">Load R</text>
+</g>
+
+<g transform="translate(480, 50)">
+<line x1="0" y1="80" x2="150" y2="80" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="10" y1="10" x2="10" y2="150" stroke="#0f172a" stroke-width="1.5"/>
+<path d="M 10 80 Q 45 10 80 80 Q 115 150 150 80" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+<text fill="currentColor" font-size="11" font-weight="700" x="80" y="170" text-anchor="middle">Induced EMF e(t)</text>
+<text fill="currentColor" font-size="10" x="5" y="20">+e₀</text>
+<text fill="currentColor" font-size="10" x="5" y="145">-e₀</text>
+</g>
+
+<text fill="currentColor" font-size="14" font-weight="700" x="325" y="285" text-anchor="middle">Fig 18.3: AC Generator Schematic Construction and Sinusoidal Output</text>
+</svg><h3>Mathematical Derivation of Induced EMF</h3><p>
+Let:
+</p><ul>
+<li>\(N\) = total number of turns in the rectangular armature coil</li>
+<li>\(A\) = area of the coil (\(A = \text{length} \times \text{breadth}\))</li>
+<li>\(B\) = uniform magnetic field intensity</li>
+<li>\(\omega\) = uniform angular velocity of rotation (\(2\pi f\))</li>
+</ul><p>
+At any instant \(t\), let \(\theta\) be the angle between magnetic field \(\vec{B}\) and normal to the coil plane area vector \(\vec{A}\). Since \(\theta = \omega t\), the magnetic flux linked with a single turn is:
+</p><p>\[\Phi = B A \cos\theta = B A \cos(\omega t)\]</p>
+<p>
+The total flux linkage for \(N\) turns is \(N\Phi = N B A \cos(\omega t)\).
+</p><p>
+According to Faraday's Law of electromagnetic induction, the induced instantaneous EMF \(e\) is:
+</p><p>\[e = -N \frac{d\Phi}{dt} = -N \frac{d}{dt} \left[ B A \cos(\omega t) \right]\]
+\[e = -N B A \left( -\omega \sin(\omega t) \right) = N B A \omega \sin(\omega t)\]
+\[e = e_0 \sin(\omega t)\]</p>
+<p>
+Where <strong>\(e_0 = N B A \omega\)</strong> represents the <strong>Peak (Maximum) EMF</strong> produced when \(\sin(\omega t) = 1\).
+</p><p>
+If \(R\) is the resistance of the circuit, the instantaneous induced current \(I\) is:
+</p><p>\[I = \frac{e}{R} = \frac{e_0}{R} \sin(\omega t) = I_0 \sin(\omega t)\]</p>
+<p><strong>Phase Cycle Values:</strong></p>
+<p>t=0 (\(\theta=0^\circ\))<br>e = 0</p>
+<p>t=T/4 (\(\theta=90^\circ\))<br>e = +e₀</p>
+<p>t=T/2 (\(\theta=180^\circ\))<br>e = 0</p>
+<p>t=3T/4 (\(\theta=270^\circ\))<br>e = -e₀</p>
+<p>t=T (\(\theta=360^\circ\))<br>e = 0</p>
+<h2>Eddy Currents (Foucault Currents)</h2><div class="box note" data-title="Definition"><p>
+<strong>Eddy currents</strong> (or Foucault currents) are loops of electrical current induced within bulk metallic conductors when subjected to a changing magnetic field or when moving through a non-uniform magnetic field.
+</p></div>
+<h3>Useful Applications of Eddy Currents</h3><ul>
+<li>
+<strong>1. Induction Furnace</strong>
+High-frequency alternating magnetic flux induces massive eddy currents in metals inside the furnace, producing intense heat (\(I^2 R\)) sufficient to melt high-temperature alloys.
+</li>
+<li>
+<strong>2. Electromagnetic Braking in Trains</strong>
+Electromagnets positioned directly above metallic train rails induce eddy currents opposing motion (Lenz's Law), providing smooth, frictionless braking without mechanical wear.
+</li>
+<li>
+<strong>3. Deadbeat Galvanometer</strong>
+The moving coil is wound on a light aluminum frame. Eddy currents induced in the frame quickly damp mechanical oscillations, bringing the needle to rest instantly without swinging.
+</li>
+<li>
+<strong>4. Electric Power Meters</strong>
+Traditional induction-type energy meters use a shiny aluminum disc rotated by torque produced by eddy currents induced from alternating power lines.
+</li>
+</ul><svg class="panel" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(30, 40)">
+<rect x="0" y="0" width="180" height="180" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="4"/>
+<text fill="currentColor" font-size="14" font-weight="700" x="90" y="25" text-anchor="middle">Solid Metallic Plate</text>
+
+<ellipse cx="90" cy="105" rx="55" ry="40" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+<path d="M 140 100 L 145 105 L 140 110" fill="#dc2626"/>
+<ellipse cx="90" cy="105" rx="30" ry="20" fill="none" stroke="#dc2626" stroke-width="2"/>
+<path d="M 118 102 L 120 105 L 118 108" fill="#dc2626"/>
+
+<text fill="#dc2626" font-size="11" x="90" y="210" text-anchor="middle">Large Eddy Currents (High Loss)</text>
+</g>
+
+<g transform="translate(280, 40)">
+<rect x="0" y="0" width="180" height="180" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" rx="4"/>
+
+<line x1="36" y1="40" x2="36" y2="160" stroke="#0f172a" stroke-width="2"/>
+<line x1="72" y1="40" x2="72" y2="160" stroke="#0f172a" stroke-width="2"/>
+<line x1="108" y1="40" x2="108" y2="160" stroke="#0f172a" stroke-width="2"/>
+<line x1="144" y1="40" x2="144" y2="160" stroke="#0f172a" stroke-width="2"/>
+
+<text fill="currentColor" font-size="14" font-weight="700" x="90" y="25" text-anchor="middle">Laminated Plate</text>
+
+<ellipse cx="18" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<ellipse cx="54" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<ellipse cx="90" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<ellipse cx="126" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<ellipse cx="162" cy="100" rx="10" ry="25" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+
+<text fill="#2563eb" font-size="11" x="90" y="210" text-anchor="middle">Restricted Loops (Minimized Heat)</text>
+</g>
+
+<text fill="currentColor" font-size="14" font-weight="700" x="250" y="285" text-anchor="middle">Fig 18.4: Eddy Currents in Solid Conductor vs. Laminated Sheets</text>
+</svg><h3>Eddy Current Nuisance & How to Minimize It</h3><p>
+In electrical transformers, motors, and dynamos, eddy currents cause significant energy loss in the form of heat (\(I^2 R\)), lowering overall efficiency and raising internal operating temperature.
+</p><p><strong>Minimization Method:</strong> Iron cores are built using thin laminated soft-iron sheets stacked together, insulated from one another by a layer of non-conducting lacquer or varnish. The laminations are arranged parallel to magnetic field lines to break potential large circular current loops into small, high-resistance paths.</p>
+<h2>Self-Inductance and Mutual Inductance</h2><h3>1. Self-Inductance (\(L\))</h3><p>SI Unit: Henry (H)</p>
+<p>
+<strong>Self-Inductance</strong> is the phenomenon by which an opposing induced electromotive force (back EMF) is produced in a coil when the electric current passing through the same coil changes.
+</p><p>
+The total magnetic flux linkage \(N\Phi\) through the coil is directly proportional to the current \(I\) flowing through it:
+</p><p>\[N\Phi \propto I \implies N\Phi = L I \implies L = \frac{N\Phi}{I}\]</p>
+<p>
+Where \(L\) is the <strong>Coefficient of Self-Inductance</strong>. Differentiation with respect to time yields:
+</p><p>\[e = -N\frac{d\Phi}{dt} = -L \frac{dI}{dt}\]</p>
+<p><strong>Definition of 1 Henry (\(\text{H}\)):</strong> Self-inductance of a coil is defined as \(1\text{ Henry}\) if an opposing back EMF of \(1\text{ Volt}\) is induced in it when current changes at a rate of \(1\text{ Ampere per second}\) (\(\frac{dI}{dt} = 1\text{ A/s}\)).</p>
+<h4>Derivation: Self-Inductance of a Long Solenoid</h4><p>
+Consider a solenoid of length \(l\), cross-sectional area \(A\), and total turns \(N\). Let \(n = \frac{N}{l}\) be turns per unit length.
+</p><p>
+1. Magnetic field inside solenoid due to current \(I\): \(B = \mu_0 n I = \frac{\mu_0 N I}{l}\).
+</p><p>
+2. Flux through 1 turn: \(\Phi = B A = \frac{\mu_0 N I A}{l}\).
+</p><p>
+3. Total flux linkage for \(N\) turns: \(N\Phi = N \left( \frac{\mu_0 N I A}{l} \right) = \frac{\mu_0 N^2 A I}{l}\).
+</p><p>
+4. Comparing with \(N\Phi = L I\):
+</p><p>\[L = \frac{\mu_0 N^2 A}{l} = \mu_0 n^2 A l\]</p>
+<p>
+If filled with a core of relative permeability \(\mu_r\): \(L = \frac{\mu_0 \mu_r N^2 A}{l}\).
+</p><h3>2. Mutual Inductance (\(M\))</h3><p>SI Unit: Henry (H)</p>
+<p>
+<strong>Mutual Inductance</strong> is the phenomenon where a changing current in one coil (primary) induces an electromotive force in a neighboring secondary coil.
+</p><p>
+Flux linkage in secondary coil \(N_2 \Phi_2\) is proportional to current in primary coil \(I_1\):
+</p><p>\[N_2 \Phi_2 \propto I_1 \implies N_2 \Phi_2 = M I_1 \implies M = \frac{N_2 \Phi_2}{I_1}\]</p>
+<p>
+Induced EMF in secondary coil:
+</p><p>\[e_2 = -M \frac{dI_1}{dt}\]</p>
+<h4>Derivation: Mutual Inductance of Two Coaxial Long Solenoids</h4><p>
+Consider two coaxial solenoids \(S_1\) and \(S_2\) of equal length \(l\) and common cross-sectional area \(A\), with total turns \(N_1\) and \(N_2\).
+</p><p>
+1. Current \(I_1\) in primary \(S_1\) sets up magnetic field: \(B_1 = \frac{\mu_0 N_1 I_1}{l}\).
+</p><p>
+2. Magnetic flux linked with single turn of secondary \(S_2\): \(\Phi_2 = B_1 A = \frac{\mu_0 N_1 I_1 A}{l}\).
+</p><p>
+3. Total flux linkage with secondary coil \(N_2\): \(N_2 \Phi_2 = N_2 \left( \frac{\mu_0 N_1 I_1 A}{l} \right) = \frac{\mu_0 N_1 N_2 A I_1}{l}\).
+</p><p>
+4. Comparing with \(N_2 \Phi_2 = M I_1\):
+</p><p>\[M = \frac{\mu_0 N_1 N_2 A}{l}\]</p>
+<p>
+<strong>Coupling Coefficient (\(k\)):</strong> \(M = k \sqrt{L_1 L_2}\), where \(0 \le k \le 1\). For ideal tight magnetic coupling, \(k = 1\).
+</p><svg class="panel" viewBox="0 0 550 220" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(30, 30)">
+<text fill="currentColor" font-size="14" font-weight="700" x="100" y="20" text-anchor="middle">Self-Inductance Circuit</text>
+<path stroke="#2563eb" stroke-width="3.5" fill="none" d="M 20 80 Q 30 50 40 80 Q 50 110 60 80 Q 70 50 80 80 Q 90 110 100 80 Q 110 50 120 80 Q 130 110 140 80 Q 150 50 160 80"/>
+<polyline stroke="currentColor" stroke-width="2" fill="none" points="20,80 20,150 80,150"/>
+<polyline stroke="currentColor" stroke-width="2" fill="none" points="160,80 160,150 120,150"/>
+
+<line stroke="currentColor" stroke-width="3.5" fill="none" x1="80" y1="140" x2="80" y2="160"/>
+<line stroke="currentColor" stroke-width="2" fill="none" x1="86" y1="145" x2="86" y2="155"/>
+<line stroke="currentColor" stroke-width="3.5" fill="none" x1="92" y1="140" x2="92" y2="160"/>
+<line stroke="currentColor" stroke-width="2" fill="none" x1="98" y1="145" x2="98" y2="155"/>
+
+<circle cx="112" cy="150" r="3" fill="#0f172a"/>
+<line stroke="#dc2626" stroke-width="3.5" fill="none" x1="112" y1="150" x2="124" y2="140"/>
+</g>
+
+<g transform="translate(300, 30)">
+<text fill="currentColor" font-size="14" font-weight="700" x="110" y="20" text-anchor="middle">Mutual Inductance Coils</text>
+
+<path stroke="#059669" stroke-width="3.5" fill="none" d="M 20 80 Q 30 40 40 80 Q 50 120 60 80 Q 70 40 80 80 Q 90 120 100 80 Q 110 40 120 80 Q 130 120 140 80 Q 150 40 160 80 Q 170 120 180 80"/>
+
+<path stroke="#dc2626" stroke-width="2" fill="none" d="M 40 80 Q 48 60 56 80 Q 64 100 72 80 Q 80 60 88 80 Q 96 100 104 80 Q 112 60 120 80 Q 128 100 136 80"/>
+<text fill="currentColor" font-size="11" x="100" y="140" text-anchor="middle"><tspan fill="#059669">Primary (N₁)</tspan> & <tspan fill="#dc2626">Secondary (N₂)</tspan></text>
+</g>
+
+<text fill="currentColor" font-size="14" font-weight="700" x="275" y="205" text-anchor="middle">Fig 18.5: Self & Mutual Inductance Configurations</text>
+</svg><h2>Energy Stored in an Inductor</h2><p>
+When current in an inductive circuit increases from zero to a steady value \(I\), work must be done against the self-induced back EMF (\(e = -L \frac{dI}{dt}\)). This work done is stored as <strong>magnetic potential energy</strong> in the magnetic field surrounding the inductor.
+</p><h3>Calculus Derivation of Stored Energy</h3><p>
+The rate of doing work against self-induced EMF at any instant \(t\) is:
+</p><p>\[P = \frac{dW}{dt} = |e| \cdot I = \left( L \frac{dI}{dt} \right) I\]</p>
+<p>
+Small work done \(dW\) in a small time interval \(dt\):
+</p><p>\[dW = P \, dt = L I \, dI\]</p>
+<p>
+Total work done \(W\) to build up current from \(0\) to steady value \(I_0\):
+</p><p>\[W = \int_{0}^{I_0} L I \, dI = L \left[ \frac{I^2}{2} \right]_{0}^{I_0} = \frac{1}{2} L I_0^2\]</p>
+<p>
+Therefore, the energy stored in the magnetic field of the inductor is:
+</p><p>\[U = \frac{1}{2} L I^2\]</p>
+<h3>Magnetic Energy Density (\(u_B\))</h3><p>
+Energy density is defined as the magnetic energy stored per unit volume (\(V = A l\)) of a long solenoid.
+</p><p>
+Substituting \(L = \frac{\mu_0 N^2 A}{l}\) and \(B = \frac{\mu_0 N I}{l} \implies I = \frac{B l}{\mu_0 N}\) into the energy formula:
+</p><p>\[U = \frac{1}{2} \left( \frac{\mu_0 N^2 A}{l} \right) \left( \frac{B l}{\mu_0 N} \right)^2 = \frac{1}{2} \frac{B^2}{\mu_0} (A l)\]</p>
+<p>\[u_B = \frac{U}{V} = \frac{U}{A l} = \frac{B^2}{2\mu_0}\]</p>
+<h2>Transformer: Principle, Construction and Equations</h2><p>
+A <strong>Transformer</strong> is a static electrical device used to step up (increase) or step down (decrease) alternating voltages without changing the frequency of electrical power.
+</p><div class="box definition"><strong>Working Principle</strong>
+<p>
+Works on the principle of <strong>Mutual Induction</strong> between two insulated coils wound over a common laminated magnetic iron core.
+</p></div>
+<h3>Mathematical Derivation of Transformer Ratio</h3><p>
+Let \(N_p\) and \(N_s\) be the number of turns in primary and secondary coils respectively. When alternating voltage \(V_p\) is applied across primary, changing magnetic flux \(\frac{d\Phi}{dt}\) links both coils.
+</p><p>
+Induced EMF in Primary: \(e_p = -N_p \frac{d\Phi}{dt}\)
+</p><p>
+Induced EMF in Secondary: \(e_s = -N_s \frac{d\Phi}{dt}\)
+</p><p>
+For an ideal transformer with zero winding resistance (\(V_p = e_p\) and \(V_s = e_s\)):
+</p><p>\[\frac{V_s}{V_p} = \frac{N_s}{N_p} = K\]</p>
+<p>
+Where \(K\) is called the <strong>Transformation Ratio</strong>.
+</p><ul>
+<li><strong>Step-Up Transformer:</strong> \(N_s > N_p \implies K > 1 \implies V_s > V_p\) (Voltage increases, current decreases).</li>
+<li><strong>Step-Down Transformer:</strong> \(N_s < N_p \implies K < 1 \implies V_s < V_p\) (Voltage decreases, current increases).</li>
+</ul><h4>Ideal Current Relation (100% Efficiency)</h4><p>
+\(\text{Input Power } P_p = \text{Output Power } P_s \implies V_p I_p = V_s I_s\)
+</p><p>\[\frac{I_p}{I_s} = \frac{V_s}{V_p} = \frac{N_s}{N_p} = K\]</p>
+<svg class="panel" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<rect x="100" y="40" width="300" height="200" fill="#e2e8f0" stroke="#0f172a" stroke-width="3" rx="6"/>
+<rect x="170" y="90" width="160" height="100" fill="#ffffff" stroke="#0f172a" stroke-width="2" rx="3"/>
+
+<line x1="110" y1="40" x2="110" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="120" y1="40" x2="120" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="380" y1="40" x2="380" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+<line x1="390" y1="40" x2="390" y2="240" stroke="#cbd5e1" stroke-width="1.5"/>
+
+<g transform="translate(85, 80)">
+<path d="M 15 0 C 45 -10 45 30 15 20 C 45 10 45 50 15 40 C 45 30 45 70 15 60 C 45 50 45 90 15 80 C 45 70 45 110 15 100" fill="none" stroke="#2563eb" stroke-width="4"/>
+<text fill="#2563eb" font-size="14" font-weight="700" x="-40" y="55">Primary (Nₚ)</text>
+<line stroke="currentColor" stroke-width="2" fill="none" x1="15" y1="0" x2="-20" y2="0"/>
+<line stroke="currentColor" stroke-width="2" fill="none" x1="15" y1="100" x2="-20" y2="100"/>
+<circle cx="-25" cy="50" r="12" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<text fill="currentColor" font-size="10" x="-25" y="54" text-anchor="middle">AC</text>
+</g>
+
+<g transform="translate(370, 70)">
+<path d="M 30 0 C 0 -10 0 20 30 15 C 0 8 0 38 30 30 C 0 23 0 53 30 48 C 0 40 0 70 30 65 C 0 58 0 88 30 82 C 0 75 0 105 30 100 C 0 92 0 122 30 115" fill="none" stroke="#dc2626" stroke-width="3"/>
+<text fill="#dc2626" font-size="14" font-weight="700" x="40" y="60">Secondary (Nₛ)</text>
+<line stroke="currentColor" stroke-width="2" fill="none" x1="30" y1="0" x2="60" y2="0"/>
+<line stroke="currentColor" stroke-width="2" fill="none" x1="30" y1="115" x2="60" y2="115"/>
+<rect x="60" y="45" width="20" height="30" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<text fill="currentColor" font-size="9" x="70" y="64" text-anchor="middle">Load</text>
+</g>
+
+<path stroke="#059669" stroke-width="3.5" fill="none" d="M 250 65 L 300 65" marker-end="url(#arrow)"/>
+<text fill="#059669" font-size="11" x="250" y="58" text-anchor="middle">Magnetic Flux (Φ)</text>
+
+<text fill="currentColor" font-size="14" font-weight="700" x="250" y="275" text-anchor="middle">Fig 18.6: Transformer Core and Windings Schematic</text>
+</svg><h3>Importance of Transformer in Long-Distance Power Transmission</h3><p>
+Power generated at hydroelectric stations (e.g., 11 kV) must be transmitted across long distances to cities.
+</p><p>
+1. Power lost as heat in transmission cables of resistance \(R\) is \(P_{\text{loss}} = I^2 R\).
+</p><p>
+2. By using a <strong>Step-Up Transformer</strong> at power plant stations, voltage is elevated to very high levels (e.g., 132 kV or 400 kV). Since \(P = V I\), increasing voltage \(V\) reduces current \(I\) proportionately.
+</p><p>
+3. Reducing current by a factor of 10 reduces transmission power loss \(I^2 R\) by a factor of \(10^2 = 100\) times!
+</p><p>
+4. At city substations, <strong>Step-Down Transformers</strong> reduce high voltage safely down to 220 V for domestic consumption.
+</p><h2>Sources of Energy Loss in Practical Transformers</h2><p>
+In real-world practical transformers, the output power is always less than input power due to various energy losses (\(\eta < 100\%\)).
+</p><h3>1. Copper Loss (\(I^2 R\) Loss)</h3><p>
+Heat produced (\(I^2 R\)) in the primary and secondary copper windings due to finite electrical resistance.
+</p><p>Minimization: Use thick, low-resistance copper wires for high-current windings.</p>
+<h3>2. Eddy Current Loss</h3><p>
+Alternating magnetic flux induces eddy currents in the solid iron core, dissipating energy as heat.
+</p><p>Minimization: Use laminated core composed of thin iron sheets insulated by varnish.</p>
+<h3>3. Hysteresis Loss</h3><p>
+Repeated magnetization and demagnetization cycles of the iron core during AC cycle dissipate energy as heat.
+</p><p>Minimization: Use soft iron core material with narrow hysteresis loop.</p>
+<h3>4. Flux Leakage Loss</h3><p>
+Not all magnetic flux generated by primary winding links completely with secondary winding.
+</p><p>Minimization: Wind primary and secondary coils directly over each other on a shell-type core.</p>
+<h3>5. Humming Loss (Acoustic Loss)</h3><p>
+The alternating magnetic field causes magnetostriction (periodic contraction and expansion of iron core), producing continuous mechanical vibration and audible humming noise.
+</p><h3>Transformer Efficiency (\(\eta\)) Formula</h3><p>\[\eta = \frac{\text{Output Power } (P_s)}{\text{Input Power } (P_p)} \times 100\% = \frac{V_s I_s \cos\phi_s}{V_p I_p \cos\phi_p} \times 100\%\]</p>
+<p>
+For standard practical transformers, efficiency ranges between 90% and 98%.
+</p><h2>Step-by-Step Solved Past Board Exam Numericals</h2><p>NEB 2078 Board Exam Question
+[5 Marks]</p>
+<p>
+<strong>Question 1:</strong> A coil of \(500\) turns and radius \(4\text{ cm}\) is rotated at \(1200\text{ rpm}\) in a uniform magnetic field of \(0.05\text{ T}\) perpendicular to the axis of rotation. Calculate: (i) the maximum EMF induced, (ii) the instantaneous EMF when the plane of coil makes an angle of \(30^\circ\) with the magnetic field.
+</p><p><strong>Solution:</strong></p>
+<p><strong>Given Data:</strong></p><p>Turns \(N = 500\), Radius \(r = 0.04\text{ m} \implies \text{Area } A = \pi r^2 = \pi (0.04)^2 = 5.026 \times 10^{-3}\text{ m}^2\)</p><p>Frequency of rotation \(f = \frac{1200}{60} = 20\text{ rev/s} \implies \omega = 2\pi f = 2 \pi (20) = 40\pi \approx 125.66\text{ rad/s}\)</p><p>Magnetic field \(B = 0.05\text{ T}\)</p><p>(i) Maximum (Peak) EMF (\(e_0\)):</p><p>\[e_0 = N B A \omega = 500 \times 0.05 \times (5.026 \times 10^{-3}) \times 125.66 = 15.79\text{ Volts}\]</p>
+<p>(ii) Instantaneous EMF when plane makes \(30^\circ\) with \(B\):</p><p>Note: Angle \(\theta\) in \(e = e_0 \sin\theta\) is between magnetic field and normal vector to coil plane. Thus, \(\theta = 90^\circ - 30^\circ = 60^\circ\).</p><p>\[e = e_0 \sin(60^\circ) = 15.79 \times \frac{\sqrt{3}}{2} = 15.79 \times 0.866 = 13.67\text{ Volts}\]</p>
+<p>NEB 2076 Board Exam Question
+[4 Marks]</p>
+<p>
+<strong>Question 2:</strong> A step-down transformer connected to \(220\text{ V}\) AC line supplies \(11\text{ V}\) to a load of resistance \(2\ \Omega\). If the efficiency of the transformer is \(90\%\), calculate: (i) secondary current, (ii) output power, (iii) primary current.
+</p><p><strong>Solution:</strong></p>
+<p><strong>Given:</strong> \(V_p = 220\text{ V}\), \(V_s = 11\text{ V}\), \(R_L = 2\ \Omega\), Efficiency \(\eta = 90\% = 0.90\)</p><p>(i) Secondary Current (\(I_s\)):</p><p>\[I_s = \frac{V_s}{R_L} = \frac{11}{2} = 5.5\text{ A}\]</p>
+<p>(ii) Output Power (\(P_s\)):</p><p>\[P_s = V_s \times I_s = 11 \times 5.5 = 60.5\text{ Watts}\]</p>
+<p>(iii) Primary Current (\(I_p\)):</p><p>\[\eta = \frac{P_s}{P_p} \implies P_p = \frac{P_s}{\eta} = \frac{60.5}{0.90} = 67.22\text{ Watts}\]
+\[P_p = V_p \times I_p \implies I_p = \frac{P_p}{V_p} = \frac{67.22}{220} = 0.305\text{ A}\]</p>
+<p>NEB 2074 Board Exam Question
+[3 Marks]</p>
+<p>
+<strong>Question 3:</strong> An air-cored solenoid of length \(50\text{ cm}\) and radius \(2\text{ cm}\) has \(1000\) turns. Calculate its self-inductance and the energy stored in it when a current of \(5\text{ A}\) flows through it. (\(\mu_0 = 4\pi \times 10^{-7}\text{ H/m}\)).
+</p><p><strong>Solution:</strong></p>
+<p><strong>Given:</strong> \(l = 0.5\text{ m}\), \(r = 0.02\text{ m} \implies A = \pi (0.02)^2 = 1.257 \times 10^{-3}\text{ m}^2\), \(N = 1000\), \(I = 5\text{ A}\)</p><p>Self-Inductance (\(L\)):</p><p>\[L = \frac{\mu_0 N^2 A}{l} = \frac{(4\pi \times 10^{-7}) \times (1000)^2 \times (1.257 \times 10^{-3})}{0.5} = 3.16 \times 10^{-3}\text{ H} = 3.16\text{ mH}\]</p>
+<p>Stored Energy (\(U\)):</p><p>\[U = \frac{1}{2} L I^2 = \frac{1}{2} \times (3.16 \times 10^{-3}) \times (5)^2 = 0.0395\text{ Joules}\]</p>
+<h2>High-Frequency Conceptual Short Answer Questions</h2><p>
+A choke coil is a high-inductance coil with very low ohmic resistance. The average power consumed in an ideal inductor over a complete AC cycle is zero (\(\Phi = 90^\circ \implies P = V I \cos 90^\circ = 0\)). Thus, a choke coil reduces current without any significant loss of electrical energy as heat. In contrast, a resistor reduces current by dissipating electrical energy into heat (\(I^2 R\)), leading to continuous energy waste.
+</p><p>
+When the switch is turned off, current drops rapidly to zero (\(\frac{dI}{dt}\) is very large). Due to high self-inductance (\(L\)), a massive self-induced back EMF (\(e = -L \frac{dI}{dt}\)) is produced across the tiny air gap between switch contacts. This huge electric field ionizes the air molecules in the gap, causing electric breakdown visible as a spark.
+</p><p>
+<strong>No.</strong> A transformer operates strictly on the principle of mutual induction, which requires a continuously changing magnetic flux (\(\frac{dPhi}{dt} \neq 0\)). Direct current (DC) produces a constant magnetic field, meaning \(\frac{dPhi}{dt} = 0\). Consequently, no secondary EMF is induced. Connecting a steady DC voltage across primary turns may even burn out the winding due to high current.
+</p><p>
+Soft iron has high magnetic permeability and low coercivity, resulting in a very narrow hysteresis loop area compared to steel. This ensures low hysteresis loss (energy lost as heat during magnetisation/demagnetisation cycles). Furthermore, soft iron demagnetizes easily, avoiding residual magnetic saturation.
+</p><p>Self Study Assessment</p>

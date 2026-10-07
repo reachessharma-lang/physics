@@ -1,0 +1,120 @@
+{
+  "title": "Magnetic Field and Properties of Materials — Quick Quiz",
+  "grade": "XII",
+  "chapters": [
+    13
+  ],
+  "date": "2026-10-02",
+  "questions": [
+    {
+      "q": "What is the trajectory of a charged particle entering a uniform magnetic field at an angle θ = 90°?",
+      "options": [
+        "Straight Line",
+        "Circular Orbit",
+        "Helical Path",
+        "Parabolic Path"
+      ],
+      "answer": 1,
+      "explanation": "When θ = 90°, magnetic force acts as a purely centripetal force perpendicular to velocity, producing a circular orbit."
+    },
+    {
+      "q": "The SI unit of Magnetic Flux Density (B) is:",
+      "options": [
+        "Weber (Wb)",
+        "Tesla (T)",
+        "Gauss (G)",
+        "Ampere-metre"
+      ],
+      "answer": 1,
+      "explanation": "Tesla (T) is the SI unit of magnetic field density, where 1 T = 1 Wb/m²."
+    },
+    {
+      "q": "To convert a galvanometer into an ammeter, one must connect:",
+      "options": [
+        "High resistance in series",
+        "Low resistance in parallel (Shunt)",
+        "High resistance in parallel",
+        "Low resistance in series"
+      ],
+      "answer": 1,
+      "explanation": "Connecting a low resistance shunt S in parallel bypasses excess current around the delicate galvanometer coil."
+    },
+    {
+      "q": "What is the magnetic field strength inside a toroid's central empty space?",
+      "options": [
+        "μ₀nI",
+        "μ₀NI / (2πr)",
+        "Zero",
+        "2μ₀nI"
+      ],
+      "answer": 2,
+      "explanation": "By Ampere's Law, no net current is enclosed by an Amperian loop inside the central hole, so B = 0."
+    },
+    {
+      "q": "Two parallel wires carrying currents in opposite directions will:",
+      "options": [
+        "Attract each other",
+        "Repel each other",
+        "Rotate clockwise",
+        "Exert zero mutual force"
+      ],
+      "answer": 1,
+      "explanation": "Anti-parallel currents produce repulsive magnetic forces by Fleming's Left-Hand Rule."
+    },
+    {
+      "q": "Which rule determines the direction of magnetic force on a moving positive charge?",
+      "options": [
+        "Fleming's Right-Hand Rule",
+        "Fleming's Left-Hand Rule",
+        "Lenz's Law",
+        "Faraday's Law"
+      ],
+      "answer": 1,
+      "explanation": "Fleming's Left-Hand Rule gives the force vector direction on moving charges/conductors."
+    },
+    {
+      "q": "The expression for Hall Voltage V_H across a sample of thickness t is:",
+      "options": [
+        "V_H = B I / (n t q)",
+        "V_H = B I n t / q",
+        "V_H = n q / (B I t)",
+        "V_H = B I t / (n q)"
+      ],
+      "answer": 0,
+      "explanation": "Derivation yields V_H = B I / (n t q)."
+    },
+    {
+      "q": "Work done by a magnetic field on a moving charged particle is always:",
+      "options": [
+        "Maximum",
+        "Negative",
+        "Zero",
+        "Proportional to mass"
+      ],
+      "answer": 2,
+      "explanation": "Since magnetic force is perpendicular to displacement (v·F = 0), work done is identically zero."
+    },
+    {
+      "q": "Soft iron core in a Moving Coil Galvanometer is used to:",
+      "options": [
+        "Increase electrical resistance",
+        "Produce a radial and strong magnetic field",
+        "Decrease current sensitivity",
+        "Eliminate hairspring friction"
+      ],
+      "answer": 1,
+      "explanation": "Soft iron core concentrates magnetic field lines, making the field radial and strongly enhancing sensitivity."
+    },
+    {
+      "q": "Two parallel conductors carrying currents 1 A each separated by 1 m in vacuum experience a force per unit length of:",
+      "options": [
+        "2 × 10⁻⁷ N/m",
+        "4π × 10⁻⁷ N/m",
+        "1.6 × 10⁻¹⁹ N/m",
+        "9 × 10⁹ N/m"
+      ],
+      "answer": 0,
+      "explanation": "By definition of 1 Ampere: f = μ₀ I₁ I₂ / (2π d) = (4π × 10⁻⁷ × 1 × 1)/(2π × 1) = 2 × 10⁻⁷ N/m."
+    }
+  ]
+}

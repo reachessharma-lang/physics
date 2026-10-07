@@ -4,866 +4,213 @@ grade: XI
 chapters: [2]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vectors — Laws of Addition, Resolution, Scalar and Vector Products - Grade XI Physics</title>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.65;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.97);
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-            margin-bottom: 30px;
-            text-align: center;
-            border-left: 5px solid #3498db;
-        }
-
-        h1 {
-            color: #1f3a5f;
-            margin-bottom: 10px;
-            font-size: 2.4em;
-        }
-
-        .subtitle {
-            color: #5d6d7e;
-            font-size: 1.1em;
-        }
-
-        .section {
-            background: rgba(255,255,255,0.97);
-            margin-bottom: 30px;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #1f3a5f;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 12px;
-            font-size: 1.8em;
-        }
-
-        h3 {
-            color: #2c5aa0;
-            margin: 24px 0 16px;
-            font-size: 1.3em;
-        }
-
-        h4 {
-            color: #34495e;
-            margin: 18px 0 12px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        ul, ol {
-            margin-left: 24px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .formula {
-            background: #f5f8fb;
-            padding: 20px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 1.05em;
-            border-radius: 6px;
-            overflow-x: auto;
-            line-height: 1.8;
-        }
-
-        .example {
-            background: #e8f7fc;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #16a085;
-        }
-
-        .derivation {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #2980b9;
-        }
-
-        .key-points {
-            background: #f0fff5;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #27ae60;
-        }
-
-        .key-points ul {
-            margin-left: 20px;
-        }
-
-        .numerical {
-            background: #fff7f3;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #e67e22;
-        }
-
-        .warning {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #f39c12;
-        }
-
-        .mcq-section {
-            background: #fff8e1;
-            padding: 18px;
-            border-radius: 8px;
-            margin: 16px 0;
-            border-left: 4px solid #f39c12;
-        }
-
-        .question {
-            margin-bottom: 12px;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-
-        .options {
-            margin-left: 20px;
-        }
-
-        .option {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .diagram {
-            text-align: center;
-            margin: 25px auto;
-            max-width: 800px;
-        }
-
-        .diagram pre {
-            white-space: pre-wrap;
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            line-height: 1.5;
-            font-size: 0.95em;
-            overflow-x: auto;
-            text-align: left;
-            color: #333;
-        }
-
-        .diagram-caption {
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            margin-top: 12px;
-            font-size: 0.95em;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid #bdc3c7;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background: #34495e;
-            color: white;
-            font-weight: 700;
-        }
-
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: 700;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: white;
-            font-size: 0.95em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            .section {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    
-        /* Line diagrams (SVG): black on white so they print cleanly */
-        .diagram svg { background: #fff; border: 1px solid #ddd; border-radius: 8px; margin: 6px 0; }
-
-        @media print {
-            body { background: #fff !important; }
-            .container { max-width: 100%; padding: 0; }
-            .section { box-shadow: none !important; page-break-inside: auto; }
-            .diagram { page-break-inside: avoid; break-inside: avoid; }
-            .diagram svg { border: none; max-width: 100% !important; }
-            h2, h3, h4 { page-break-after: avoid; }
-            .example, .derivation, .formula { page-break-inside: avoid; }
-            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        }
-</style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>➡️ Vectors — Laws of Addition, Resolution, Scalar and Vector Products</h1>
-            <div class="subtitle">Grade XI Physics - NEB Curriculum</div>
-        </div>
-
-        <div class="section">
-            <h2>Unit 2: Vectors</h2>
-
-            <p>Many physical quantities need a direction as well as a size. Vectors are the mathematical tool for handling them. This unit covers the triangle, parallelogram and polygon laws, the resolution of vectors with unit vectors, and the scalar (dot) and vector (cross) products.</p>
-
-            <h3>Scalars and Vectors</h3>
-            <table>
-                <tr><th>Scalar</th><th>Vector</th></tr>
-                <tr><td>Has magnitude only</td><td>Has magnitude <em>and</em> direction, and obeys the laws of vector addition</td></tr>
-                <tr><td>Added by ordinary algebra</td><td>Added by the triangle / parallelogram / polygon laws</td></tr>
-                <tr><td>Mass, time, distance, speed, work, energy, temperature</td><td>Displacement, velocity, acceleration, force, momentum, torque</td></tr>
-            </table>
-            <p>A vector is written in bold (<strong>A</strong>) or with an arrow (A⃗). Its magnitude is |<strong>A</strong>| = A. A vector is drawn as a directed line segment: the length (to scale) shows the magnitude, and the arrowhead shows the direction.</p>
-
-            <div class="key-points">
-                <h4>Some types of vectors:</h4>
-                <ul>
-                    <li><strong>Equal vectors:</strong> same magnitude and same direction.</li>
-                    <li><strong>Negative of a vector (−A):</strong> same magnitude, opposite direction.</li>
-                    <li><strong>Null (zero) vector:</strong> magnitude zero; direction undefined.</li>
-                    <li><strong>Unit vector:</strong> magnitude one; it shows direction only.</li>
-                    <li><strong>Position vector:</strong> locates a point relative to the origin.</li>
-                    <li><strong>Collinear vectors</strong> lie along the same line (or parallel lines); <strong>coplanar vectors</strong> lie in one plane.</li>
-                </ul>
-            </div>
-
-            <div class="warning">
-                <h4>⚠️ Not every quantity with a direction is a vector:</h4>
-                <p>Electric current has a direction but adds as a scalar, because it does not obey the vector addition laws. Whether a quantity is a vector depends on how it combines, not on whether an arrow can be drawn for it.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>2.1 Triangle, Parallelogram and Polygon Laws of Vectors</h2>
-
-            <h3>2.1(a) Triangle Law of Vector Addition</h3>
-            <p><strong>Statement:</strong> If two vectors are represented in magnitude and direction by the two sides of a triangle taken in the same order, their resultant is represented by the third side taken in the <em>opposite</em> order.</p>
-
-            <div class="diagram"><svg viewBox="0 0 460 250" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:690px;height:auto;background:#fff"><rect width="460" height="250" fill="#fff"/><line x1="60.0" y1="200.0" x2="193.1" y2="124.0" stroke="#000" stroke-width="2.4"/><polygon points="200.0,120.0 192.3,128.6 188.6,122.3" fill="#000"/><line x1="200.0" y1="120.0" x2="332.1" y2="96.4" stroke="#000" stroke-width="2.4"/><polygon points="340.0,95.0 329.8,100.5 328.5,93.4" fill="#000"/><line x1="60.0" y1="200.0" x2="332.5" y2="97.8" stroke="#000" stroke-width="3.2"/><polygon points="340.0,95.0 331.0,102.3 328.4,95.5" fill="#000"/><circle cx="60.0" cy="200.0" r="3" fill="#000"/><text x="48.0" y="218.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">O</text><text x="194.0" y="100.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A</text><text x="270.0" y="93.5" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">B</text><text x="205.0" y="185.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">R = A + B</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.1:</strong> Triangle law. The tail of B is placed at the head of A; R = A + B joins the tail of A to the head of B</div>
-            </div>
-
-            <h3>2.1(b) Parallelogram Law of Vector Addition</h3>
-            <p><strong>Statement:</strong> If two vectors acting at a point are represented in magnitude and direction by the two adjacent sides of a parallelogram drawn from that point, their resultant is represented by the <em>diagonal</em> of the parallelogram drawn from the same point.</p>
-
-            <div class="diagram"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;height:auto;background:#fff"><rect width="480" height="270" fill="#fff"/><line x1="70.0" y1="220.0" x2="393.6" y2="220.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><line x1="270.0" y1="220.0" x2="353.6" y2="120.4" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="153.6" y1="120.4" x2="353.6" y2="120.4" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="353.6" y1="120.4" x2="353.6" y2="220.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="70.0" y1="220.0" x2="262.0" y2="220.0" stroke="#000" stroke-width="2.4"/><polygon points="270.0,220.0 259.0,223.6 259.0,216.4" fill="#000"/><line x1="70.0" y1="220.0" x2="148.4" y2="126.5" stroke="#000" stroke-width="2.4"/><polygon points="153.6,120.4 149.3,131.2 143.7,126.5" fill="#000"/><line x1="70.0" y1="220.0" x2="346.0" y2="123.1" stroke="#000" stroke-width="3.2"/><polygon points="353.6,120.4 344.4,127.5 342.0,120.6" fill="#000"/><polyline points="344.6,220.0 344.6,211.0 353.6,211.0" fill="none" stroke="#000" stroke-width="1.1"/><path d="M108.0,220.0 A38,38 0 0 0 94.4,190.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="122.0" y="208.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><path d="M144.0,220.0 A74,74 0 0 0 139.8,195.5" fill="none" stroke="#000" stroke-width="1.2"/><text x="158.0" y="206.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">α</text><text x="56.0" y="236.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">O</text><text x="270.0" y="238.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">P</text><text x="141.6" y="114.4" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">Q</text><text x="363.6" y="112.4" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">C</text><text x="347.6" y="238.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">D</text><text x="170.0" y="238.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A  (= OP)</text><text x="97.8" y="174.2" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">B</text><text x="203.8" y="156.2" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">R</text><text x="345.8" y="254.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">AD = B cos θ</text><text x="361.6" y="174.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">CD = B sin θ</text><line x1="270.0" y1="226.0" x2="353.6" y2="226.0" stroke="#000" stroke-width="1"/></svg>
-                <div class="diagram-caption"><strong>Figure 2.2:</strong> Parallelogram law. Vectors A and B act at O with angle θ between them; R is the diagonal OC. CD is drawn perpendicular to OP extended</div>
-            </div>
-
-            <div class="derivation">
-                <h4>Magnitude and direction of the resultant</h4>
-                <p>In Fig 2.2, OP = A, OQ = B, ∠POQ = θ and the resultant is OC = R. Draw CD perpendicular to OP extended. In the right-angled triangle ADC (AC = OQ = B):</p>
-                <div class="formula">
-                    AD = B cos θ ,    CD = B sin θ
-                </div>
-                <p>In the right-angled triangle ODC:</p>
-                <div class="formula">
-                    OC² = OD² + CD² = (OA + AD)² + CD²
-                    <br>
-                    R² = (A + B cos θ)² + (B sin θ)²
-                    <br>
-                    R² = A² + 2AB cos θ + B² (cos²θ + sin²θ)
-                    <br>
-                    <strong>R = √(A² + B² + 2AB cos θ)</strong>
-                </div>
-                <p>If the resultant makes angle α with A:</p>
-                <div class="formula">
-                    tan α = CD / OD = <strong>B sin θ / (A + B cos θ)</strong>
-                </div>
-            </div>
-
-            <table>
-                <tr><th>Angle θ between A and B</th><th>Resultant R</th><th>Meaning</th></tr>
-                <tr><td>0° (same direction)</td><td>A + B</td><td>Maximum</td></tr>
-                <tr><td>90° (perpendicular)</td><td>√(A² + B²)</td><td>tan α = B / A</td></tr>
-                <tr><td>180° (opposite)</td><td>|A − B|</td><td>Minimum</td></tr>
-                <tr><td>Equal magnitudes, A = B</td><td>2A cos(θ/2)</td><td>Acts along the bisector, α = θ/2</td></tr>
-            </table>
-
-            <div class="key-points">
-                <h4>Properties of vector addition:</h4>
-                <ul>
-                    <li><strong>Commutative:</strong> A + B = B + A</li>
-                    <li><strong>Associative:</strong> (A + B) + C = A + (B + C)</li>
-                    <li>The magnitude of the resultant lies between |A − B| and A + B.</li>
-                </ul>
-            </div>
-
-            <h3>2.1(c) Polygon Law of Vector Addition</h3>
-            <p><strong>Statement:</strong> If a number of vectors are represented in magnitude and direction by the sides of a polygon taken in the same order, their resultant is represented by the closing side of the polygon taken in the <em>opposite</em> order.</p>
-
-            <div class="diagram"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;height:auto;background:#fff"><rect width="480" height="240" fill="#fff"/><line x1="40.0" y1="190.0" x2="132.6" y2="153.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,150.0 131.1,157.5 128.4,150.7" fill="#000"/><text x="86.0" y="158.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A</text><line x1="140.0" y1="150.0" x2="194.8" y2="86.1" stroke="#000" stroke-width="2.4"/><polygon points="200.0,80.0 195.6,90.7 190.1,86.0" fill="#000"/><text x="158.0" y="109.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">B</text><line x1="200.0" y1="80.0" x2="262.5" y2="102.3" stroke="#000" stroke-width="2.4"/><polygon points="270.0,105.0 258.4,104.7 260.9,97.9" fill="#000"/><text x="241.0" y="80.5" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">C</text><line x1="270.0" y1="105.0" x2="348.3" y2="155.7" stroke="#000" stroke-width="2.4"/><polygon points="355.0,160.0 343.8,157.1 347.7,151.0" fill="#000"/><text x="326.5" y="126.5" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">D</text><line x1="40.0" y1="190.0" x2="347.0" y2="160.8" stroke="#000" stroke-width="3.4"/><polygon points="355.0,160.0 344.4,164.7 343.7,157.4" fill="#000"/><circle cx="40.0" cy="190.0" r="3" fill="#000"/><text x="220.0" y="222.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">R = A + B + C + D  (closing side)</text><text x="34.0" y="206.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">O</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.3:</strong> Polygon law. Vectors A, B, C and D are placed head to tail; R joins the starting point to the end point</div>
-            </div>
-
-            <p>The polygon law is the triangle law applied repeatedly. If the vectors form a closed polygon (the head of the last vector returns to the tail of the first), the resultant is zero.</p>
-
-            <h3>2.1(d) Subtraction of Vectors</h3>
-            <p>Subtracting B from A means adding the negative of B to A: A − B = A + (−B).</p>
-
-            <div class="diagram"><svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:660px;height:auto;background:#fff"><rect width="440" height="250" fill="#fff"/><line x1="120.0" y1="130.0" x2="252.1" y2="106.4" stroke="#000" stroke-width="2.4"/><polygon points="260.0,105.0 249.8,110.5 248.5,103.4" fill="#000"/><line x1="120.0" y1="130.0" x2="175.4" y2="51.5" stroke="#000" stroke-width="2.4"/><polygon points="180.0,45.0 176.6,56.1 170.7,51.9" fill="#000"/><line x1="260.0" y1="105.0" x2="204.6" y2="183.5" stroke="#000" stroke-width="2.4" stroke-dasharray="6 4"/><polygon points="200.0,190.0 203.4,178.9 209.3,183.1" fill="#000"/><line x1="120.0" y1="130.0" x2="193.6" y2="185.2" stroke="#000" stroke-width="3.2"/><polygon points="200.0,190.0 189.0,186.3 193.4,180.5" fill="#000"/><line x1="180.0" y1="45.0" x2="260.0" y2="105.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><text x="270.0" y="99.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A</text><text x="172.0" y="39.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">B</text><text x="208.0" y="206.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">−B</text><text x="146.0" y="184.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">A − B</text><circle cx="120.0" cy="130.0" r="3" fill="#000"/><text x="112.0" y="148.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">O</text><text x="360.0" y="232.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A − B = A + (−B)</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.4:</strong> Subtraction. −B has the magnitude of B but opposite direction; A − B joins the head of B to the head of A</div>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.1</h4>
-                <p>Two forces of 3 N and 4 N act at a point at right angles. Find the resultant and its direction.</p>
-                <div class="formula">
-                    R = √(3² + 4² + 2×3×4×cos 90°) = √25 = <strong>5 N</strong>
-                    <br>
-                    tan α = 4 sin 90° / (3 + 4 cos 90°) = 4/3
-                    <br>
-                    α = <strong>53.1°</strong> from the 3 N force
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.2</h4>
-                <p>Two forces of 10 N each act at 120° to each other. Find the resultant.</p>
-                <div class="formula">
-                    R = √(100 + 100 + 2×10×10×cos 120°) = √(200 − 100) = <strong>10 N</strong>
-                    <br>
-                    α = θ/2 = <strong>60°</strong> from either force
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>2.2 Resolution of Vectors; Unit Vectors</h2>
-
-            <h3>2.2(a) Resolution of a Vector</h3>
-            <p>Splitting a vector into two or more vectors that together have the same effect is called <strong>resolution</strong>. It is the reverse of addition. The most useful split is into two <strong>rectangular components</strong>, along perpendicular axes.</p>
-
-            <div class="diagram"><svg viewBox="0 0 540 260" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:810px;height:auto;background:#fff"><rect width="540" height="260" fill="#fff"/><line x1="150.0" y1="215.0" x2="510.0" y2="215.0" stroke="#000" stroke-width="1"/><polygon points="510.0,215.0 501.0,218.0 501.0,212.0" fill="#000"/><line x1="160.0" y1="225.0" x2="160.0" y2="25.0" stroke="#000" stroke-width="1"/><polygon points="160.0,25.0 163.0,34.0 157.0,34.0" fill="#000"/><line x1="160.0" y1="100.3" x2="323.8" y2="100.3" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="323.8" y1="215.0" x2="323.8" y2="100.3" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="160.0" y1="215.0" x2="317.3" y2="104.9" stroke="#000" stroke-width="3.2"/><polygon points="323.8,100.3 316.9,109.6 312.7,103.6" fill="#000"/><line x1="160.0" y1="215.0" x2="315.8" y2="215.0" stroke="#000" stroke-width="2.2"/><polygon points="323.8,215.0 312.8,218.6 312.8,211.4" fill="#000"/><line x1="160.0" y1="215.0" x2="160.0" y2="108.3" stroke="#000" stroke-width="2.2"/><polygon points="160.0,100.3 163.6,111.3 156.4,111.3" fill="#000"/><path d="M202.0,215.0 A42,42 0 0 0 194.4,190.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="216.0" y="205.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><text x="520.0" y="231.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">x</text><text x="172.0" y="28.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">y</text><text x="146.0" y="231.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">O</text><text x="333.8" y="96.3" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">A</text><text x="200.0" y="235.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A<tspan dy="4" font-size="10">x</tspan><tspan dy="-4"> = A cos θ</tspan></text><text x="35.0" y="157.6" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A<tspan dy="4" font-size="10">y</tspan><tspan dy="-4"> = A sin θ</tspan></text></svg>
-                <div class="diagram-caption"><strong>Figure 2.5:</strong> Rectangular components of A along the x and y axes</div>
-            </div>
-
-            <div class="formula">
-                A<sub>x</sub> = A cos θ
-                <br>
-                A<sub>y</sub> = A sin θ
-                <br>
-                A = √(A<sub>x</sub>² + A<sub>y</sub>²) ,    tan θ = A<sub>y</sub> / A<sub>x</sub>
-            </div>
-            <p>θ is the angle <strong>between the vector and the x-axis</strong>. If the angle is measured from the y-axis instead, the sine and cosine swap.</p>
-
-            <h3>2.2(b) Unit Vectors</h3>
-            <p>A <strong>unit vector</strong> has magnitude 1 and no units. It gives only direction. The unit vector along A is:</p>
-            <div class="formula">
-                Â = A / |A|     so that     A = |A| Â
-            </div>
-            <p>Three special unit vectors point along the positive x, y and z axes of a right-handed system: <strong>i</strong>, <strong>j</strong> and <strong>k</strong>.</p>
-
-            <div class="diagram"><svg viewBox="0 0 440 260" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:660px;height:auto;background:#fff"><rect width="440" height="260" fill="#fff"/><line x1="190.0" y1="170.0" x2="95.0" y2="235.0" stroke="#000" stroke-width="1.1"/><polygon points="95.0,235.0 100.8,227.5 104.1,232.4" fill="#000"/><line x1="190.0" y1="170.0" x2="360.0" y2="170.0" stroke="#000" stroke-width="1.1"/><polygon points="360.0,170.0 351.0,173.0 351.0,167.0" fill="#000"/><line x1="190.0" y1="170.0" x2="190.0" y2="30.0" stroke="#000" stroke-width="1.1"/><polygon points="190.0,30.0 193.0,39.0 187.0,39.0" fill="#000"/><text x="87.0" y="249.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">X</text><text x="368.0" y="175.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">Y</text><text x="200.0" y="34.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">Z</text><line x1="190.0" y1="170.0" x2="145.4" y2="200.5" stroke="#000" stroke-width="3.2"/><polygon points="138.8,205.0 145.9,195.8 150.0,201.8" fill="#000"/><text x="124.8" y="213.0" text-anchor="middle" font-style="italic" font-weight="bold" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#000">i</text><line x1="190.0" y1="170.0" x2="244.0" y2="170.0" stroke="#000" stroke-width="3.2"/><polygon points="252.0,170.0 241.0,173.6 241.0,166.4" fill="#000"/><text x="254.0" y="188.0" text-anchor="middle" font-style="italic" font-weight="bold" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#000">j</text><line x1="190.0" y1="170.0" x2="190.0" y2="116.0" stroke="#000" stroke-width="3.2"/><polygon points="190.0,108.0 193.6,119.0 186.4,119.0" fill="#000"/><text x="204.0" y="110.0" text-anchor="middle" font-style="italic" font-weight="bold" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#000">k</text><circle cx="190.0" cy="170.0" r="3" fill="#000"/><text x="330.0" y="235.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">|i| = |j| = |k| = 1</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.6:</strong> Unit vectors i, j, k along the mutually perpendicular axes X, Y, Z</div>
-            </div>
-
-            <div class="formula">
-                A = A<sub>x</sub> <strong>i</strong> + A<sub>y</sub> <strong>j</strong> + A<sub>z</sub> <strong>k</strong>
-                <br>
-                |A| = √(A<sub>x</sub>² + A<sub>y</sub>² + A<sub>z</sub>²)
-            </div>
-
-            <h3>2.2(c) Addition and Subtraction Using Components</h3>
-            <p>For A = A<sub>x</sub>i + A<sub>y</sub>j + A<sub>z</sub>k and B = B<sub>x</sub>i + B<sub>y</sub>j + B<sub>z</sub>k, add or subtract the matching components:</p>
-            <div class="formula">
-                A ± B = (A<sub>x</sub> ± B<sub>x</sub>) i + (A<sub>y</sub> ± B<sub>y</sub>) j + (A<sub>z</sub> ± B<sub>z</sub>) k
-            </div>
-
-            <div class="key-points">
-                <h4>Direction cosines:</h4>
-                <p>If A makes angles α, β, γ with the x, y, z axes, then l = cos α = A<sub>x</sub>/A, m = cos β = A<sub>y</sub>/A, n = cos γ = A<sub>z</sub>/A, and</p>
-                <div class="formula">l² + m² + n² = 1</div>
-            </div>
-
-            <h3>2.2(d) Resolving a Weight on an Inclined Plane</h3>
-            <div class="diagram"><svg viewBox="0 0 460 270" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:690px;height:auto;background:#fff"><rect width="460" height="270" fill="#fff"/><line x1="40.0" y1="235.0" x2="380.0" y2="235.0" stroke="#000" stroke-width="2"/><line x1="380.0" y1="235.0" x2="380.0" y2="38.7" stroke="#000" stroke-width="2"/><line x1="40.0" y1="235.0" x2="380.0" y2="38.7" stroke="#000" stroke-width="2"/><path d="M100.0,235.0 A60,60 0 0 0 92.0,205.0" fill="none" stroke="#000" stroke-width="1.2"/><text x="115.0" y="227.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><polygon points="190.7,148.0 235.7,122.0 211.7,80.4 166.7,106.4" fill="#fff" stroke="#000" stroke-width="2"/><line x1="201.2" y1="114.2" x2="201.2" y2="202.2" stroke="#000" stroke-width="2.8"/><polygon points="201.2,210.2 197.6,199.2 204.8,199.2" fill="#000"/><line x1="201.2" y1="114.2" x2="166.6" y2="134.2" stroke="#000" stroke-width="2.4"/><polygon points="159.6,138.2 167.3,129.6 171.0,135.9" fill="#000"/><line x1="201.2" y1="114.2" x2="238.8" y2="179.3" stroke="#000" stroke-width="2.4"/><polygon points="242.8,186.2 234.1,178.5 240.4,174.8" fill="#000"/><line x1="159.6" y1="138.2" x2="201.2" y2="210.2" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="242.8" y1="186.2" x2="201.2" y2="210.2" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><circle cx="201.2" cy="114.2" r="3" fill="#000"/><text x="209.2" y="218.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">mg</text><text x="153.6" y="132.2" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">mg sin θ</text><text x="252.8" y="200.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">mg cos θ</text><text x="207.2" y="152.2" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">θ</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.7:</strong> Weight mg of a block on a plane inclined at θ, resolved along and perpendicular to the plane</div>
-            </div>
-            <div class="formula">
-                Component along the plane (down the slope) = mg sin θ
-                <br>
-                Component perpendicular to the plane = mg cos θ
-            </div>
-            <p>The angle between the weight and the perpendicular to the plane equals the angle θ of the incline.</p>
-
-            <div class="example">
-                <h4>Example 2.3</h4>
-                <p>A force of 50 N acts at 30° above the horizontal. Find its horizontal and vertical components.</p>
-                <div class="formula">
-                    F<sub>x</sub> = 50 cos 30° = <strong>43.3 N</strong>
-                    <br>
-                    F<sub>y</sub> = 50 sin 30° = <strong>25 N</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.4</h4>
-                <p>Find the magnitude and unit vector of A = 2i + 3j + 6k.</p>
-                <div class="formula">
-                    |A| = √(4 + 9 + 36) = <strong>7</strong>
-                    <br>
-                    Â = (2i + 3j + 6k) / 7
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.5</h4>
-                <p>If A = 2i + 3j and B = 4i − j, find A + B, A − B and |A + B|.</p>
-                <div class="formula">
-                    A + B = 6i + 2j
-                    <br>
-                    A − B = −2i + 4j
-                    <br>
-                    |A + B| = √(36 + 4) = <strong>6.32</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>2.3 Scalar and Vector Products</h2>
-
-            <h3>2.3(a) Scalar (Dot) Product</h3>
-            <p>The <strong>scalar product</strong> of two vectors A and B is a <em>scalar</em> equal to the product of their magnitudes and the cosine of the angle θ between them:</p>
-            <div class="formula">
-                <strong>A · B = AB cos θ</strong>
-            </div>
-
-            <div class="diagram"><svg viewBox="0 0 440 240" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:660px;height:auto;background:#fff"><rect width="440" height="240" fill="#fff"/><line x1="60.0" y1="190.0" x2="292.0" y2="190.0" stroke="#000" stroke-width="2.4"/><polygon points="300.0,190.0 289.0,193.6 289.0,186.4" fill="#000"/><line x1="60.0" y1="190.0" x2="184.1" y2="85.9" stroke="#000" stroke-width="2.4"/><polygon points="190.2,80.7 184.1,90.6 179.5,85.0" fill="#000"/><line x1="190.2" y1="80.7" x2="190.2" y2="190.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><polyline points="181.2,190.0 181.2,181.0 190.2,181.0" fill="none" stroke="#000" stroke-width="1.1"/><line x1="60.0" y1="212.0" x2="190.2" y2="212.0" stroke="#000" stroke-width="1.2"/><line x1="60.0" y1="206.0" x2="60.0" y2="218.0" stroke="#000" stroke-width="1.2"/><line x1="190.2" y1="206.0" x2="190.2" y2="218.0" stroke="#000" stroke-width="1.2"/><text x="125.1" y="230.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B cos θ  (component of B along A)</text><path d="M100.0,190.0 A40,40 0 0 0 90.6,164.3" fill="none" stroke="#000" stroke-width="1.2"/><text x="114.0" y="180.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><text x="308.0" y="194.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">A</text><text x="180.2" y="76.7" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">B</text><circle cx="60.0" cy="190.0" r="3" fill="#000"/><text x="300.0" y="60.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">A · B = A (B cos θ)</text><text x="300.0" y="82.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">= AB cos θ</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.8:</strong> A · B = A × (projection of B on A) = A (B cos θ)</div>
-            </div>
-
-            <div class="key-points">
-                <h4>Properties:</h4>
-                <ul>
-                    <li><strong>Commutative:</strong> A · B = B · A</li>
-                    <li><strong>Distributive:</strong> A · (B + C) = A · B + A · C</li>
-                    <li>If A ⊥ B (θ = 90°), then A · B = 0. If A ∥ B (θ = 0°), A · B = AB.</li>
-                    <li>A · A = A², and the dot product of any vector with itself is the square of its magnitude.</li>
-                    <li>Unit vectors: <strong>i · i = j · j = k · k = 1</strong> and <strong>i · j = j · k = k · i = 0</strong>.</li>
-                </ul>
-            </div>
-
-            <div class="derivation">
-                <h4>Scalar product in component form</h4>
-                <p>Expand (A<sub>x</sub>i + A<sub>y</sub>j + A<sub>z</sub>k) · (B<sub>x</sub>i + B<sub>y</sub>j + B<sub>z</sub>k) using the unit-vector results. Only the terms with i·i, j·j and k·k survive:</p>
-                <div class="formula">
-                    <strong>A · B = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub></strong>
-                    <br>
-                    <strong>cos θ = (A · B) / (AB)</strong>
-                </div>
-            </div>
-
-            <p><strong>Physical examples:</strong> Work done W = <strong>F · d</strong> = Fd cos θ; power P = <strong>F · v</strong>.</p>
-
-            <h3>2.3(b) Vector (Cross) Product</h3>
-            <p>The <strong>vector product</strong> of A and B is a <em>vector</em> C:</p>
-            <div class="formula">
-                <strong>A × B = AB sin θ  n̂</strong>
-            </div>
-            <p>where θ is the angle between A and B and n̂ is the unit vector perpendicular to the plane of A and B. Its magnitude is |A × B| = AB sin θ.</p>
-
-            <div class="key-points">
-                <h4>Direction: right-hand rule</h4>
-                <ul>
-                    <li><strong>Right-hand screw rule:</strong> rotate a right-handed screw from A towards B through the smaller angle; the direction in which the screw advances is the direction of A × B.</li>
-                    <li><strong>Right-hand fingers rule:</strong> curl the fingers of the right hand from A towards B; the thumb points along A × B.</li>
-                </ul>
-            </div>
-
-            <div class="diagram"><svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:780px;height:auto;background:#fff"><rect width="520" height="280" fill="#fff"/><polygon points="110.0,225.0 300.0,225.0 370.0,163.0 180.0,163.0" fill="#f0f0f0" stroke="none"/><line x1="300.0" y1="225.0" x2="370.0" y2="163.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="180.0" y1="163.0" x2="370.0" y2="163.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="110.0" y1="225.0" x2="292.0" y2="225.0" stroke="#000" stroke-width="2.4"/><polygon points="300.0,225.0 289.0,228.6 289.0,221.4" fill="#000"/><line x1="110.0" y1="225.0" x2="174.0" y2="168.3" stroke="#000" stroke-width="2.4"/><polygon points="180.0,163.0 174.2,173.0 169.4,167.6" fill="#000"/><line x1="110.0" y1="225.0" x2="110.0" y2="68.0" stroke="#000" stroke-width="3.2"/><polygon points="110.0,60.0 113.6,71.0 106.4,71.0" fill="#000"/><polyline points="110.0,215.0 120.0,215.0 120.0,225.0" fill="none" stroke="#000" stroke-width="1.1"/><path d="M146.0,225.0 A36,36 0 0 0 137.6,201.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="162.0" y="217.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><text x="205.0" y="245.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">A</text><text x="172.0" y="155.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">B</text><text x="120.0" y="66.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">C = A × B</text><text x="360.0" y="149.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">shaded area = |A × B|</text><circle cx="110.0" cy="225.0" r="3" fill="#000"/><text x="120.0" y="86.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#000">(perpendicular to the plane</text><text x="120.0" y="100.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#000">of A and B, upward)</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.9:</strong> C = A × B is perpendicular to the plane of A and B. Its magnitude equals the area of the parallelogram on A and B</div>
-            </div>
-
-            <div class="key-points">
-                <h4>Properties:</h4>
-                <ul>
-                    <li><strong>Not commutative:</strong> A × B = −(B × A)</li>
-                    <li><strong>Distributive:</strong> A × (B + C) = A × B + A × C</li>
-                    <li>If A ∥ B (θ = 0° or 180°), A × B = 0. In particular A × A = 0.</li>
-                    <li>If A ⊥ B, |A × B| = AB (maximum).</li>
-                    <li>|A × B| = area of the parallelogram on A and B; area of the triangle = ½ |A × B|.</li>
-                </ul>
-            </div>
-
-            <div class="diagram"><svg viewBox="0 0 420 330" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:630px;height:auto;background:#fff"><rect width="420" height="330" fill="#fff"/><circle cx="210.0" cy="35.0" r="19" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="210.0" y="41.0" text-anchor="middle" font-style="italic" font-weight="bold" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#000">i</text><circle cx="292.3" cy="177.5" r="19" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="292.3" y="183.5" text-anchor="middle" font-style="italic" font-weight="bold" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#000">j</text><circle cx="127.7" cy="177.5" r="19" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="127.7" y="183.5" text-anchor="middle" font-style="italic" font-weight="bold" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#000">k</text><path d="M245.6,41.9 A95,95 0 0 1 304.1,143.2" fill="none" stroke="#000" stroke-width="2"/><polygon points="304.1,143.2 302.2,132.9 308.7,133.8" fill="#000"/><path d="M268.5,204.9 A95,95 0 0 1 151.5,204.9" fill="none" stroke="#000" stroke-width="2"/><polygon points="151.5,204.9 161.4,208.4 157.4,213.6" fill="#000"/><path d="M115.9,143.2 A95,95 0 0 1 174.4,41.9" fill="none" stroke="#000" stroke-width="2"/><polygon points="174.4,41.9 166.4,48.7 163.9,42.6" fill="#000"/><text x="210.0" y="300.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">i × j = k ,  j × k = i ,  k × i = j</text><text x="210.0" y="320.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">(clockwise = +, anticlockwise = −)</text></svg>
-                <div class="diagram-caption"><strong>Figure 2.10:</strong> Cross products of unit vectors. Following the arrows gives a positive result; against them, negative (j × i = −k)</div>
-            </div>
-
-            <div class="formula">
-                i × i = j × j = k × k = 0
-                <br>
-                i × j = k ,  j × k = i ,  k × i = j
-                <br>
-                j × i = −k ,  k × j = −i ,  i × k = −j
-            </div>
-
-            <div class="derivation">
-                <h4>Vector product in component form (determinant)</h4>
-                <div class="formula">
-                    A × B = | i  j  k ; A<sub>x</sub>  A<sub>y</sub>  A<sub>z</sub> ; B<sub>x</sub>  B<sub>y</sub>  B<sub>z</sub> |
-                    <br>
-                    <strong>A × B = (A<sub>y</sub>B<sub>z</sub> − A<sub>z</sub>B<sub>y</sub>) i − (A<sub>x</sub>B<sub>z</sub> − A<sub>z</sub>B<sub>x</sub>) j + (A<sub>x</sub>B<sub>y</sub> − A<sub>y</sub>B<sub>x</sub>) k</strong>
-                </div>
-                <p>(The first line is the 3×3 determinant with rows i j k; A<sub>x</sub> A<sub>y</sub> A<sub>z</sub>; B<sub>x</sub> B<sub>y</sub> B<sub>z</sub>, expanded along the first row.)</p>
-            </div>
-
-            <p><strong>Physical examples:</strong> Torque <strong>τ = r × F</strong> (magnitude rF sin θ); angular momentum <strong>L = r × p</strong>; magnetic force on a moving charge <strong>F = q (v × B)</strong>.</p>
-
-            <table>
-                <tr><th></th><th>Scalar product</th><th>Vector product</th></tr>
-                <tr><td>Result</td><td>Scalar</td><td>Vector</td></tr>
-                <tr><td>Magnitude</td><td>AB cos θ</td><td>AB sin θ</td></tr>
-                <tr><td>Commutative?</td><td>Yes</td><td>No (A × B = −B × A)</td></tr>
-                <tr><td>Zero when</td><td>θ = 90° (perpendicular)</td><td>θ = 0° or 180° (parallel)</td></tr>
-                <tr><td>Maximum when</td><td>θ = 0°</td><td>θ = 90°</td></tr>
-                <tr><td>Example</td><td>Work = F · d</td><td>Torque = r × F</td></tr>
-            </table>
-
-            <div class="example">
-                <h4>Example 2.6</h4>
-                <p>Show that A = 2i + 3j + k and B = i − 2j + 4k are perpendicular.</p>
-                <div class="formula">
-                    A · B = (2)(1) + (3)(−2) + (1)(4) = 2 − 6 + 4 = <strong>0</strong>
-                </div>
-                <p>The dot product is zero, so the vectors are perpendicular.</p>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.7</h4>
-                <p>Find the angle between A = i + j and B = j + k.</p>
-                <div class="formula">
-                    A · B = 0 + 1 + 0 = 1 ;  |A| = |B| = √2
-                    <br>
-                    cos θ = 1 / (√2 × √2) = 1/2 ⇒ θ = <strong>60°</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.8</h4>
-                <p>A force F = (5i + 3j) N moves a body through d = (4i + 2j) m. Find the work done.</p>
-                <div class="formula">
-                    W = F · d = (5)(4) + (3)(2) = <strong>26 J</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.9</h4>
-                <p>Find A × B for A = 2i + 3j + k and B = i − j + 2k.</p>
-                <div class="formula">
-                    A × B = (3×2 − 1×(−1)) i − (2×2 − 1×1) j + (2×(−1) − 3×1) k
-                    <br>
-                    = <strong>7i − 3j − 5k</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 2.10</h4>
-                <p>A force of 10 N acts at the end of a 2 m spanner at 30° to the spanner. Find the torque.</p>
-                <div class="formula">
-                    τ = rF sin θ = 2 × 10 × sin 30° = <strong>10 N m</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Key Formulas and Summary</h2>
-
-            <div class="key-points">
-                <h4>Addition of Vectors:</h4>
-                <div class="formula">
-                    R = √(A² + B² + 2AB cos θ)
-                    <br>
-                    tan α = B sin θ / (A + B cos θ)    (α from A)
-                    <br>
-                    R<sub>max</sub> = A + B (θ = 0°) ,  R<sub>min</sub> = |A − B| (θ = 180°)
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Components and Unit Vectors:</h4>
-                <div class="formula">
-                    A<sub>x</sub> = A cos θ ,  A<sub>y</sub> = A sin θ
-                    <br>
-                    A = A<sub>x</sub>i + A<sub>y</sub>j + A<sub>z</sub>k ,  |A| = √(A<sub>x</sub>² + A<sub>y</sub>² + A<sub>z</sub>²)
-                    <br>
-                    Â = A / |A|
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Products:</h4>
-                <div class="formula">
-                    A · B = AB cos θ = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub>
-                    <br>
-                    |A × B| = AB sin θ
-                    <br>
-                    i · i = 1, i · j = 0 ;  i × j = k, j × k = i, k × i = j
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Practice Numerical Problems</h2>
-            <p>Attempt each problem before reading the answer.</p>
-
-            <div class="numerical">
-                <div class="question">1. Two forces of 6 N and 8 N act at a point at 90°. Find the resultant and its direction from the 6 N force.</div>
-                <p><strong>Answer:</strong> R = √(36 + 64) = <strong>10 N</strong>; tan α = 8/6, α = <strong>53.1°</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">2. Two vectors of equal magnitude A act at 60°. Find the magnitude and direction of the resultant.</div>
-                <p><strong>Answer:</strong> R = √(A² + A² + 2A² cos 60°) = <strong>√3 A</strong>; α = θ/2 = <strong>30°</strong> from either vector.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">3. Find the resultant of 5 N and 12 N forces when the angle between them is (a) 0°, (b) 180°, (c) 90°.</div>
-                <p><strong>Answer:</strong> (a) <strong>17 N</strong>; (b) <strong>7 N</strong>; (c) √(25 + 144) = <strong>13 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">4. Resolve a 100 N force acting at 37° above the horizontal into horizontal and vertical components (sin 37° = 0.6, cos 37° = 0.8).</div>
-                <p><strong>Answer:</strong> F<sub>x</sub> = 100 × 0.8 = <strong>80 N</strong>; F<sub>y</sub> = 100 × 0.6 = <strong>60 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">5. A 10 kg block rests on a smooth plane inclined at 30°. Find the components of its weight along and perpendicular to the plane (g = 9.8 m s⁻²).</div>
-                <p><strong>Answer:</strong> mg = 98 N. Along the plane: 98 sin 30° = <strong>49 N</strong>; perpendicular: 98 cos 30° ≈ <strong>84.9 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">6. Find the unit vector along A = 3i − 4j and verify that its magnitude is 1.</div>
-                <p><strong>Answer:</strong> |A| = 5; Â = (3i − 4j)/5 = <strong>0.6i − 0.8j</strong>; |Â| = √(0.36 + 0.64) = 1.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">7. Find the angle between A = 2i − 3j + k and B = i + j − k.</div>
-                <p><strong>Answer:</strong> A · B = 2 − 3 − 1 = −2; |A| = √14, |B| = √3; cos θ = −2/√42 ≈ −0.309, θ ≈ <strong>108°</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">8. Find A × B and its magnitude for A = i + 2j + 3k and B = 3i − j + 2k.</div>
-                <p><strong>Answer:</strong> A × B = (4 + 3) i − (2 − 9) j + (−1 − 6) k = <strong>7i + 7j − 7k</strong>; magnitude = 7√3 ≈ <strong>12.1</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">9. For what value of λ are A = 2i + λj + k and B = 4i − 2j − 2k perpendicular?</div>
-                <p><strong>Answer:</strong> A · B = 8 − 2λ − 2 = 0 ⇒ <strong>λ = 3</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">10. A force of 10 N acts at 60° to the displacement of 5 m of a body. Find the work done.</div>
-                <p><strong>Answer:</strong> W = Fd cos θ = 10 × 5 × 0.5 = <strong>25 J</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">11. Find the area of the parallelogram whose adjacent sides are A = 3i and B = 4j, and the area of the triangle on the same sides.</div>
-                <p><strong>Answer:</strong> A × B = 12k, so parallelogram area = <strong>12</strong> units; triangle area = <strong>6</strong> units.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Conceptual and Long Answer Questions</h2>
-
-            <div class="mcq-section">
-                <div class="question">1. Can the resultant of two vectors be smaller in magnitude than either of the vectors? Explain.</div>
-                <div class="options"><div class="option">Yes. For example, 5 N and 4 N acting in opposite directions give 1 N. The resultant lies between |A − B| and A + B.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">2. Is electric current a vector? Why?</div>
-                <div class="options"><div class="option">No. It has direction but does not obey the vector addition laws; currents add algebraically at a junction.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">3. Why is work a scalar product while torque is a vector product?</div>
-                <div class="options"><div class="option">Work has no direction (energy transferred), so F · d is a scalar. Torque has a direction (the axis of rotation), so r × F is a vector.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">4. When is A · B = 0 and when is A × B = 0, with both A and B non-zero?</div>
-                <div class="options"><div class="option">A · B = 0 when A ⊥ B; A × B = 0 when A ∥ B (θ = 0° or 180°).</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">5. A vector has non-zero magnitude. Can one of its rectangular components be larger than the vector itself?</div>
-                <div class="options"><div class="option">No. A<sub>x</sub> = A cos θ and A<sub>y</sub> = A sin θ never exceed A in magnitude.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">6. State the parallelogram law and derive the magnitude and direction of the resultant. (Section 2.1)</div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">7. Define the scalar and vector products with two examples each, and prove A × B = −B × A using the right-hand rule. (Section 2.3)</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Multiple Choice Questions</h2>
-
-            <div class="mcq-section">
-                <div class="question">1. The resultant of two vectors is maximum when the angle between them is:</div>
-                <div class="options">
-                    <div class="option">(a) 0° ✓</div>
-                    <div class="option">(b) 90°</div>
-                    <div class="option">(c) 120°</div>
-                    <div class="option">(d) 180°</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">2. Which of the following is a vector quantity?</div>
-                <div class="options">
-                    <div class="option">(a) Work</div>
-                    <div class="option">(b) Power</div>
-                    <div class="option">(c) Torque ✓</div>
-                    <div class="option">(d) Energy</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">3. i · j is equal to:</div>
-                <div class="options">
-                    <div class="option">(a) 1</div>
-                    <div class="option">(b) 0 ✓</div>
-                    <div class="option">(c) k</div>
-                    <div class="option">(d) −1</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">4. j × k is equal to:</div>
-                <div class="options">
-                    <div class="option">(a) −i</div>
-                    <div class="option">(b) 0</div>
-                    <div class="option">(c) i ✓</div>
-                    <div class="option">(d) 1</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">5. The magnitude of the vector 3i + 4j is:</div>
-                <div class="options">
-                    <div class="option">(a) 7</div>
-                    <div class="option">(b) 5 ✓</div>
-                    <div class="option">(c) 1</div>
-                    <div class="option">(d) 25</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">6. The component of a vector A making angle θ with the x-axis along the y-axis is:</div>
-                <div class="options">
-                    <div class="option">(a) A cos θ</div>
-                    <div class="option">(b) A tan θ</div>
-                    <div class="option">(c) A sin θ ✓</div>
-                    <div class="option">(d) A / sin θ</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">7. A · (A × B) equals:</div>
-                <div class="options">
-                    <div class="option">(a) A²B</div>
-                    <div class="option">(b) AB</div>
-                    <div class="option">(c) 1</div>
-                    <div class="option">(d) 0 ✓</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">8. Two forces of 3 N and 4 N cannot give a resultant of:</div>
-                <div class="options">
-                    <div class="option">(a) 1 N</div>
-                    <div class="option">(b) 5 N</div>
-                    <div class="option">(c) 7 N</div>
-                    <div class="option">(d) 9 N ✓</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Grade XI Physics - Vectors | NEB Curriculum</p>
-        </div>
-    </div>
-</body>
-</html>
+<h2>Unit 2: Vectors</h2><p>Many physical quantities need a direction as well as a size. Vectors are the mathematical tool for handling them. This unit covers the triangle, parallelogram and polygon laws, the resolution of vectors with unit vectors, and the scalar (dot) and vector (cross) products.</p><h3>Scalars and Vectors</h3><table>
+<tr><th>Scalar</th><th>Vector</th></tr>
+<tr><td>Has magnitude only</td><td>Has magnitude <em>and</em> direction, and obeys the laws of vector addition</td></tr>
+<tr><td>Added by ordinary algebra</td><td>Added by the triangle / parallelogram / polygon laws</td></tr>
+<tr><td>Mass, time, distance, speed, work, energy, temperature</td><td>Displacement, velocity, acceleration, force, momentum, torque</td></tr>
+</table><p>A vector is written in bold (<strong>A</strong>) or with an arrow (A⃗). Its magnitude is |<strong>A</strong>| = A. A vector is drawn as a directed line segment: the length (to scale) shows the magnitude, and the arrowhead shows the direction.</p><div class="box tip" data-title="Some types of vectors"><ul>
+<li><strong>Equal vectors:</strong> same magnitude and same direction.</li>
+<li><strong>Negative of a vector (−A):</strong> same magnitude, opposite direction.</li>
+<li><strong>Null (zero) vector:</strong> magnitude zero; direction undefined.</li>
+<li><strong>Unit vector:</strong> magnitude one; it shows direction only.</li>
+<li><strong>Position vector:</strong> locates a point relative to the origin.</li>
+<li><strong>Collinear vectors</strong> lie along the same line (or parallel lines); <strong>coplanar vectors</strong> lie in one plane.</li>
+</ul></div>
+<div class="box warning" data-title="⚠️ Not every quantity with a direction is a vector"><p>Electric current has a direction but adds as a scalar, because it does not obey the vector addition laws. Whether a quantity is a vector depends on how it combines, not on whether an arrow can be drawn for it.</p></div>
+<h2>2.1 Triangle, Parallelogram and Polygon Laws of Vectors</h2><h3>2.1(a) Triangle Law of Vector Addition</h3><p><strong>Statement:</strong> If two vectors are represented in magnitude and direction by the two sides of a triangle taken in the same order, their resultant is represented by the third side taken in the <em>opposite</em> order.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 250" fill="currentColor" role="img"><rect width="460" height="250" fill="#fff"/><line x1="60.0" y1="200.0" x2="193.1" y2="124.0" stroke="#000" stroke-width="2.4"/><polygon points="200.0,120.0 192.3,128.6 188.6,122.3" fill="#000"/><line x1="200.0" y1="120.0" x2="332.1" y2="96.4" stroke="#000" stroke-width="2.4"/><polygon points="340.0,95.0 329.8,100.5 328.5,93.4" fill="#000"/><line x1="60.0" y1="200.0" x2="332.5" y2="97.8" stroke="#000" stroke-width="3.2"/><polygon points="340.0,95.0 331.0,102.3 328.4,95.5" fill="#000"/><circle cx="60.0" cy="200.0" r="3" fill="#000"/><text x="48.0" y="218.0" text-anchor="middle" font-size="14" fill="#000">O</text><text x="194.0" y="100.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">A</text><text x="270.0" y="93.5" text-anchor="middle" font-style="italic" font-size="14" fill="#000">B</text><text x="205.0" y="185.0" text-anchor="middle" font-style="italic" font-size="15" fill="#000">R = A + B</text></svg><p><strong>Figure 2.1:</strong> Triangle law. The tail of B is placed at the head of A; R = A + B joins the tail of A to the head of B</p>
+<h3>2.1(b) Parallelogram Law of Vector Addition</h3><p><strong>Statement:</strong> If two vectors acting at a point are represented in magnitude and direction by the two adjacent sides of a parallelogram drawn from that point, their resultant is represented by the <em>diagonal</em> of the parallelogram drawn from the same point.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" fill="currentColor" role="img"><rect width="480" height="270" fill="#fff"/><line x1="70.0" y1="220.0" x2="393.6" y2="220.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><line x1="270.0" y1="220.0" x2="353.6" y2="120.4" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="153.6" y1="120.4" x2="353.6" y2="120.4" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="353.6" y1="120.4" x2="353.6" y2="220.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="70.0" y1="220.0" x2="262.0" y2="220.0" stroke="#000" stroke-width="2.4"/><polygon points="270.0,220.0 259.0,223.6 259.0,216.4" fill="#000"/><line x1="70.0" y1="220.0" x2="148.4" y2="126.5" stroke="#000" stroke-width="2.4"/><polygon points="153.6,120.4 149.3,131.2 143.7,126.5" fill="#000"/><line x1="70.0" y1="220.0" x2="346.0" y2="123.1" stroke="#000" stroke-width="3.2"/><polygon points="353.6,120.4 344.4,127.5 342.0,120.6" fill="#000"/><polyline points="344.6,220.0 344.6,211.0 353.6,211.0" fill="none" stroke="#000" stroke-width="1.1"/><path d="M108.0,220.0 A38,38 0 0 0 94.4,190.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="122.0" y="208.0" text-anchor="middle" font-size="14" fill="#000">θ</text><path d="M144.0,220.0 A74,74 0 0 0 139.8,195.5" fill="none" stroke="#000" stroke-width="1.2"/><text x="158.0" y="206.0" text-anchor="middle" font-size="14" fill="#000">α</text><text x="56.0" y="236.0" text-anchor="middle" font-size="14" fill="#000">O</text><text x="270.0" y="238.0" text-anchor="middle" font-size="14" fill="#000">P</text><text x="141.6" y="114.4" text-anchor="middle" font-size="14" fill="#000">Q</text><text x="363.6" y="112.4" text-anchor="middle" font-size="14" fill="#000">C</text><text x="347.6" y="238.0" text-anchor="middle" font-size="14" fill="#000">D</text><text x="170.0" y="238.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">A  (= OP)</text><text x="97.8" y="174.2" text-anchor="end" font-style="italic" font-size="14" fill="#000">B</text><text x="203.8" y="156.2" text-anchor="middle" font-style="italic" font-size="16" fill="#000">R</text><text x="345.8" y="254.0" text-anchor="middle" font-style="italic" font-size="12" fill="#000">AD = B cos θ</text><text x="361.6" y="174.2" text-anchor="start" font-style="italic" font-size="12" fill="#000">CD = B sin θ</text><line x1="270.0" y1="226.0" x2="353.6" y2="226.0" stroke="#000" stroke-width="1"/></svg><p><strong>Figure 2.2:</strong> Parallelogram law. Vectors A and B act at O with angle θ between them; R is the diagonal OC. CD is drawn perpendicular to OP extended</p>
+<div class="box note" data-title="Magnitude and direction of the resultant"><p>In Fig 2.2, OP = A, OQ = B, ∠POQ = θ and the resultant is OC = R. Draw CD perpendicular to OP extended. In the right-angled triangle ADC (AC = OQ = B):</p>
+<div class="formula">AD = B cos θ ,    CD = B sin θ</div>
+
+<p>In the right-angled triangle ODC:</p>
+<div class="formula">OC² = OD² + CD² = (OA + AD)² + CD²
+<br>
+R² = (A + B cos θ)² + (B sin θ)²
+<br>
+R² = A² + 2AB cos θ + B² (cos²θ + sin²θ)
+<br>
+<strong>R = √(A² + B² + 2AB cos θ)</strong></div>
+
+<p>If the resultant makes angle α with A:</p>
+<div class="formula">tan α = CD / OD = <strong>B sin θ / (A + B cos θ)</strong></div></div>
+<table>
+<tr><th>Angle θ between A and B</th><th>Resultant R</th><th>Meaning</th></tr>
+<tr><td>0° (same direction)</td><td>A + B</td><td>Maximum</td></tr>
+<tr><td>90° (perpendicular)</td><td>√(A² + B²)</td><td>tan α = B / A</td></tr>
+<tr><td>180° (opposite)</td><td>|A − B|</td><td>Minimum</td></tr>
+<tr><td>Equal magnitudes, A = B</td><td>2A cos(θ/2)</td><td>Acts along the bisector, α = θ/2</td></tr>
+</table><div class="box tip" data-title="Properties of vector addition"><ul>
+<li><strong>Commutative:</strong> A + B = B + A</li>
+<li><strong>Associative:</strong> (A + B) + C = A + (B + C)</li>
+<li>The magnitude of the resultant lies between |A − B| and A + B.</li>
+</ul></div>
+<h3>2.1(c) Polygon Law of Vector Addition</h3><p><strong>Statement:</strong> If a number of vectors are represented in magnitude and direction by the sides of a polygon taken in the same order, their resultant is represented by the closing side of the polygon taken in the <em>opposite</em> order.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="currentColor" role="img"><rect width="480" height="240" fill="#fff"/><line x1="40.0" y1="190.0" x2="132.6" y2="153.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,150.0 131.1,157.5 128.4,150.7" fill="#000"/><text x="86.0" y="158.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">A</text><line x1="140.0" y1="150.0" x2="194.8" y2="86.1" stroke="#000" stroke-width="2.4"/><polygon points="200.0,80.0 195.6,90.7 190.1,86.0" fill="#000"/><text x="158.0" y="109.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">B</text><line x1="200.0" y1="80.0" x2="262.5" y2="102.3" stroke="#000" stroke-width="2.4"/><polygon points="270.0,105.0 258.4,104.7 260.9,97.9" fill="#000"/><text x="241.0" y="80.5" text-anchor="middle" font-style="italic" font-size="14" fill="#000">C</text><line x1="270.0" y1="105.0" x2="348.3" y2="155.7" stroke="#000" stroke-width="2.4"/><polygon points="355.0,160.0 343.8,157.1 347.7,151.0" fill="#000"/><text x="326.5" y="126.5" text-anchor="middle" font-style="italic" font-size="14" fill="#000">D</text><line x1="40.0" y1="190.0" x2="347.0" y2="160.8" stroke="#000" stroke-width="3.4"/><polygon points="355.0,160.0 344.4,164.7 343.7,157.4" fill="#000"/><circle cx="40.0" cy="190.0" r="3" fill="#000"/><text x="220.0" y="222.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">R = A + B + C + D  (closing side)</text><text x="34.0" y="206.0" text-anchor="end" font-size="14" fill="#000">O</text></svg><p><strong>Figure 2.3:</strong> Polygon law. Vectors A, B, C and D are placed head to tail; R joins the starting point to the end point</p>
+<p>The polygon law is the triangle law applied repeatedly. If the vectors form a closed polygon (the head of the last vector returns to the tail of the first), the resultant is zero.</p><h3>2.1(d) Subtraction of Vectors</h3><p>Subtracting B from A means adding the negative of B to A: A − B = A + (−B).</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 250" fill="currentColor" role="img"><rect width="440" height="250" fill="#fff"/><line x1="120.0" y1="130.0" x2="252.1" y2="106.4" stroke="#000" stroke-width="2.4"/><polygon points="260.0,105.0 249.8,110.5 248.5,103.4" fill="#000"/><line x1="120.0" y1="130.0" x2="175.4" y2="51.5" stroke="#000" stroke-width="2.4"/><polygon points="180.0,45.0 176.6,56.1 170.7,51.9" fill="#000"/><line x1="260.0" y1="105.0" x2="204.6" y2="183.5" stroke="#000" stroke-width="2.4" stroke-dasharray="6 4"/><polygon points="200.0,190.0 203.4,178.9 209.3,183.1" fill="#000"/><line x1="120.0" y1="130.0" x2="193.6" y2="185.2" stroke="#000" stroke-width="3.2"/><polygon points="200.0,190.0 189.0,186.3 193.4,180.5" fill="#000"/><line x1="180.0" y1="45.0" x2="260.0" y2="105.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><text x="270.0" y="99.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">A</text><text x="172.0" y="39.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">B</text><text x="208.0" y="206.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">−B</text><text x="146.0" y="184.0" text-anchor="end" font-style="italic" font-size="15" fill="#000">A − B</text><circle cx="120.0" cy="130.0" r="3" fill="#000"/><text x="112.0" y="148.0" text-anchor="end" font-size="14" fill="#000">O</text><text x="360.0" y="232.0" text-anchor="end" font-size="13" fill="#000">A − B = A + (−B)</text></svg><p><strong>Figure 2.4:</strong> Subtraction. −B has the magnitude of B but opposite direction; A − B joins the head of B to the head of A</p>
+<div class="box example" data-title="Example 2.1"><p>Two forces of 3 N and 4 N act at a point at right angles. Find the resultant and its direction.</p>
+<div class="formula">R = √(3² + 4² + 2×3×4×cos 90°) = √25 = <strong>5 N</strong>
+<br>
+tan α = 4 sin 90° / (3 + 4 cos 90°) = 4/3
+<br>
+α = <strong>53.1°</strong> from the 3 N force</div></div>
+<div class="box example" data-title="Example 2.2"><p>Two forces of 10 N each act at 120° to each other. Find the resultant.</p>
+<div class="formula">R = √(100 + 100 + 2×10×10×cos 120°) = √(200 − 100) = <strong>10 N</strong>
+<br>
+α = θ/2 = <strong>60°</strong> from either force</div></div>
+<h2>2.2 Resolution of Vectors; Unit Vectors</h2><h3>2.2(a) Resolution of a Vector</h3><p>Splitting a vector into two or more vectors that together have the same effect is called <strong>resolution</strong>. It is the reverse of addition. The most useful split is into two <strong>rectangular components</strong>, along perpendicular axes.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" fill="currentColor" role="img"><rect width="540" height="260" fill="#fff"/><line x1="150.0" y1="215.0" x2="510.0" y2="215.0" stroke="#000" stroke-width="1"/><polygon points="510.0,215.0 501.0,218.0 501.0,212.0" fill="#000"/><line x1="160.0" y1="225.0" x2="160.0" y2="25.0" stroke="#000" stroke-width="1"/><polygon points="160.0,25.0 163.0,34.0 157.0,34.0" fill="#000"/><line x1="160.0" y1="100.3" x2="323.8" y2="100.3" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="323.8" y1="215.0" x2="323.8" y2="100.3" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="160.0" y1="215.0" x2="317.3" y2="104.9" stroke="#000" stroke-width="3.2"/><polygon points="323.8,100.3 316.9,109.6 312.7,103.6" fill="#000"/><line x1="160.0" y1="215.0" x2="315.8" y2="215.0" stroke="#000" stroke-width="2.2"/><polygon points="323.8,215.0 312.8,218.6 312.8,211.4" fill="#000"/><line x1="160.0" y1="215.0" x2="160.0" y2="108.3" stroke="#000" stroke-width="2.2"/><polygon points="160.0,100.3 163.6,111.3 156.4,111.3" fill="#000"/><path d="M202.0,215.0 A42,42 0 0 0 194.4,190.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="216.0" y="205.0" text-anchor="middle" font-size="14" fill="#000">θ</text><text x="520.0" y="231.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">x</text><text x="172.0" y="28.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">y</text><text x="146.0" y="231.0" text-anchor="end" font-size="14" fill="#000">O</text><text x="333.8" y="96.3" text-anchor="start" font-style="italic" font-size="16" fill="#000">A</text><text x="200.0" y="235.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">A<tspan dy="4" font-size="10">x</tspan><tspan dy="-4"> = A cos θ</tspan></text><text x="35.0" y="157.6" text-anchor="start" font-style="italic" font-size="14" fill="#000">A<tspan dy="4" font-size="10">y</tspan><tspan dy="-4"> = A sin θ</tspan></text></svg><p><strong>Figure 2.5:</strong> Rectangular components of A along the x and y axes</p>
+<div class="formula">A<sub>x</sub> = A cos θ
+<br>
+A<sub>y</sub> = A sin θ
+<br>
+A = √(A<sub>x</sub>² + A<sub>y</sub>²) ,    tan θ = A<sub>y</sub> / A<sub>x</sub></div>
+<p>θ is the angle <strong>between the vector and the x-axis</strong>. If the angle is measured from the y-axis instead, the sine and cosine swap.</p><h3>2.2(b) Unit Vectors</h3><p>A <strong>unit vector</strong> has magnitude 1 and no units. It gives only direction. The unit vector along A is:</p><div class="formula">Â = A / |A|     so that     A = |A| Â</div>
+<p>Three special unit vectors point along the positive x, y and z axes of a right-handed system: <strong>i</strong>, <strong>j</strong> and <strong>k</strong>.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 260" fill="currentColor" role="img"><rect width="440" height="260" fill="#fff"/><line x1="190.0" y1="170.0" x2="95.0" y2="235.0" stroke="#000" stroke-width="1.1"/><polygon points="95.0,235.0 100.8,227.5 104.1,232.4" fill="#000"/><line x1="190.0" y1="170.0" x2="360.0" y2="170.0" stroke="#000" stroke-width="1.1"/><polygon points="360.0,170.0 351.0,173.0 351.0,167.0" fill="#000"/><line x1="190.0" y1="170.0" x2="190.0" y2="30.0" stroke="#000" stroke-width="1.1"/><polygon points="190.0,30.0 193.0,39.0 187.0,39.0" fill="#000"/><text x="87.0" y="249.0" text-anchor="end" font-size="14" fill="#000">X</text><text x="368.0" y="175.0" text-anchor="start" font-size="14" fill="#000">Y</text><text x="200.0" y="34.0" text-anchor="start" font-size="14" fill="#000">Z</text><line x1="190.0" y1="170.0" x2="145.4" y2="200.5" stroke="#000" stroke-width="3.2"/><polygon points="138.8,205.0 145.9,195.8 150.0,201.8" fill="#000"/><text x="124.8" y="213.0" text-anchor="middle" font-style="italic" font-weight="bold" font-size="17" fill="#000">i</text><line x1="190.0" y1="170.0" x2="244.0" y2="170.0" stroke="#000" stroke-width="3.2"/><polygon points="252.0,170.0 241.0,173.6 241.0,166.4" fill="#000"/><text x="254.0" y="188.0" text-anchor="middle" font-style="italic" font-weight="bold" font-size="17" fill="#000">j</text><line x1="190.0" y1="170.0" x2="190.0" y2="116.0" stroke="#000" stroke-width="3.2"/><polygon points="190.0,108.0 193.6,119.0 186.4,119.0" fill="#000"/><text x="204.0" y="110.0" text-anchor="middle" font-style="italic" font-weight="bold" font-size="17" fill="#000">k</text><circle cx="190.0" cy="170.0" r="3" fill="#000"/><text x="330.0" y="235.0" text-anchor="middle" font-size="13" fill="#000">|i| = |j| = |k| = 1</text></svg><p><strong>Figure 2.6:</strong> Unit vectors i, j, k along the mutually perpendicular axes X, Y, Z</p>
+<div class="formula">A = A<sub>x</sub> <strong>i</strong> + A<sub>y</sub> <strong>j</strong> + A<sub>z</sub> <strong>k</strong>
+<br>
+|A| = √(A<sub>x</sub>² + A<sub>y</sub>² + A<sub>z</sub>²)</div>
+<h3>2.2(c) Addition and Subtraction Using Components</h3><p>For A = A<sub>x</sub>i + A<sub>y</sub>j + A<sub>z</sub>k and B = B<sub>x</sub>i + B<sub>y</sub>j + B<sub>z</sub>k, add or subtract the matching components:</p><div class="formula">A ± B = (A<sub>x</sub> ± B<sub>x</sub>) i + (A<sub>y</sub> ± B<sub>y</sub>) j + (A<sub>z</sub> ± B<sub>z</sub>) k</div>
+<div class="box tip" data-title="Direction cosines"><p>If A makes angles α, β, γ with the x, y, z axes, then l = cos α = A<sub>x</sub>/A, m = cos β = A<sub>y</sub>/A, n = cos γ = A<sub>z</sub>/A, and</p>
+<div class="formula">l² + m² + n² = 1</div></div>
+<h3>2.2(d) Resolving a Weight on an Inclined Plane</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" fill="currentColor" role="img"><rect width="460" height="270" fill="#fff"/><line x1="40.0" y1="235.0" x2="380.0" y2="235.0" stroke="#000" stroke-width="2"/><line x1="380.0" y1="235.0" x2="380.0" y2="38.7" stroke="#000" stroke-width="2"/><line x1="40.0" y1="235.0" x2="380.0" y2="38.7" stroke="#000" stroke-width="2"/><path d="M100.0,235.0 A60,60 0 0 0 92.0,205.0" fill="none" stroke="#000" stroke-width="1.2"/><text x="115.0" y="227.0" text-anchor="middle" font-size="14" fill="#000">θ</text><polygon points="190.7,148.0 235.7,122.0 211.7,80.4 166.7,106.4" fill="#fff" stroke="#000" stroke-width="2"/><line x1="201.2" y1="114.2" x2="201.2" y2="202.2" stroke="#000" stroke-width="2.8"/><polygon points="201.2,210.2 197.6,199.2 204.8,199.2" fill="#000"/><line x1="201.2" y1="114.2" x2="166.6" y2="134.2" stroke="#000" stroke-width="2.4"/><polygon points="159.6,138.2 167.3,129.6 171.0,135.9" fill="#000"/><line x1="201.2" y1="114.2" x2="238.8" y2="179.3" stroke="#000" stroke-width="2.4"/><polygon points="242.8,186.2 234.1,178.5 240.4,174.8" fill="#000"/><line x1="159.6" y1="138.2" x2="201.2" y2="210.2" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="242.8" y1="186.2" x2="201.2" y2="210.2" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><circle cx="201.2" cy="114.2" r="3" fill="#000"/><text x="209.2" y="218.2" text-anchor="start" font-style="italic" font-size="15" fill="#000">mg</text><text x="153.6" y="132.2" text-anchor="end" font-style="italic" font-size="13" fill="#000">mg sin θ</text><text x="252.8" y="200.2" text-anchor="start" font-style="italic" font-size="13" fill="#000">mg cos θ</text><text x="207.2" y="152.2" text-anchor="middle" font-size="13" fill="#000">θ</text></svg><p><strong>Figure 2.7:</strong> Weight mg of a block on a plane inclined at θ, resolved along and perpendicular to the plane</p>
+<div class="formula">Component along the plane (down the slope) = mg sin θ
+<br>
+Component perpendicular to the plane = mg cos θ</div>
+<p>The angle between the weight and the perpendicular to the plane equals the angle θ of the incline.</p><div class="box example" data-title="Example 2.3"><p>A force of 50 N acts at 30° above the horizontal. Find its horizontal and vertical components.</p>
+<div class="formula">F<sub>x</sub> = 50 cos 30° = <strong>43.3 N</strong>
+<br>
+F<sub>y</sub> = 50 sin 30° = <strong>25 N</strong></div></div>
+<div class="box example" data-title="Example 2.4"><p>Find the magnitude and unit vector of A = 2i + 3j + 6k.</p>
+<div class="formula">|A| = √(4 + 9 + 36) = <strong>7</strong>
+<br>
+Â = (2i + 3j + 6k) / 7</div></div>
+<div class="box example" data-title="Example 2.5"><p>If A = 2i + 3j and B = 4i − j, find A + B, A − B and |A + B|.</p>
+<div class="formula">A + B = 6i + 2j
+<br>
+A − B = −2i + 4j
+<br>
+|A + B| = √(36 + 4) = <strong>6.32</strong></div></div>
+<h2>2.3 Scalar and Vector Products</h2><h3>2.3(a) Scalar (Dot) Product</h3><p>The <strong>scalar product</strong> of two vectors A and B is a <em>scalar</em> equal to the product of their magnitudes and the cosine of the angle θ between them:</p><div class="formula"><strong>A · B = AB cos θ</strong></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 240" fill="currentColor" role="img"><rect width="440" height="240" fill="#fff"/><line x1="60.0" y1="190.0" x2="292.0" y2="190.0" stroke="#000" stroke-width="2.4"/><polygon points="300.0,190.0 289.0,193.6 289.0,186.4" fill="#000"/><line x1="60.0" y1="190.0" x2="184.1" y2="85.9" stroke="#000" stroke-width="2.4"/><polygon points="190.2,80.7 184.1,90.6 179.5,85.0" fill="#000"/><line x1="190.2" y1="80.7" x2="190.2" y2="190.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><polyline points="181.2,190.0 181.2,181.0 190.2,181.0" fill="none" stroke="#000" stroke-width="1.1"/><line x1="60.0" y1="212.0" x2="190.2" y2="212.0" stroke="#000" stroke-width="1.2"/><line x1="60.0" y1="206.0" x2="60.0" y2="218.0" stroke="#000" stroke-width="1.2"/><line x1="190.2" y1="206.0" x2="190.2" y2="218.0" stroke="#000" stroke-width="1.2"/><text x="125.1" y="230.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B cos θ  (component of B along A)</text><path d="M100.0,190.0 A40,40 0 0 0 90.6,164.3" fill="none" stroke="#000" stroke-width="1.2"/><text x="114.0" y="180.0" text-anchor="middle" font-size="14" fill="#000">θ</text><text x="308.0" y="194.0" text-anchor="start" font-style="italic" font-size="16" fill="#000">A</text><text x="180.2" y="76.7" text-anchor="end" font-style="italic" font-size="16" fill="#000">B</text><circle cx="60.0" cy="190.0" r="3" fill="#000"/><text x="300.0" y="60.0" text-anchor="middle" font-size="15" fill="#000">A · B = A (B cos θ)</text><text x="300.0" y="82.0" text-anchor="middle" font-size="15" fill="#000">= AB cos θ</text></svg><p><strong>Figure 2.8:</strong> A · B = A × (projection of B on A) = A (B cos θ)</p>
+<div class="box tip" data-title="Properties"><ul>
+<li><strong>Commutative:</strong> A · B = B · A</li>
+<li><strong>Distributive:</strong> A · (B + C) = A · B + A · C</li>
+<li>If A ⊥ B (θ = 90°), then A · B = 0. If A ∥ B (θ = 0°), A · B = AB.</li>
+<li>A · A = A², and the dot product of any vector with itself is the square of its magnitude.</li>
+<li>Unit vectors: <strong>i · i = j · j = k · k = 1</strong> and <strong>i · j = j · k = k · i = 0</strong>.</li>
+</ul></div>
+<div class="box note" data-title="Scalar product in component form"><p>Expand (A<sub>x</sub>i + A<sub>y</sub>j + A<sub>z</sub>k) · (B<sub>x</sub>i + B<sub>y</sub>j + B<sub>z</sub>k) using the unit-vector results. Only the terms with i·i, j·j and k·k survive:</p>
+<div class="formula"><strong>A · B = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub></strong>
+<br>
+<strong>cos θ = (A · B) / (AB)</strong></div></div>
+<p><strong>Physical examples:</strong> Work done W = <strong>F · d</strong> = Fd cos θ; power P = <strong>F · v</strong>.</p><h3>2.3(b) Vector (Cross) Product</h3><p>The <strong>vector product</strong> of A and B is a <em>vector</em> C:</p><div class="formula"><strong>A × B = AB sin θ  n̂</strong></div>
+<p>where θ is the angle between A and B and n̂ is the unit vector perpendicular to the plane of A and B. Its magnitude is |A × B| = AB sin θ.</p><div class="box tip" data-title="Direction: right-hand rule"><ul>
+<li><strong>Right-hand screw rule:</strong> rotate a right-handed screw from A towards B through the smaller angle; the direction in which the screw advances is the direction of A × B.</li>
+<li><strong>Right-hand fingers rule:</strong> curl the fingers of the right hand from A towards B; the thumb points along A × B.</li>
+</ul></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" fill="currentColor" role="img"><rect width="520" height="280" fill="#fff"/><polygon points="110.0,225.0 300.0,225.0 370.0,163.0 180.0,163.0" fill="#f0f0f0" stroke="none"/><line x1="300.0" y1="225.0" x2="370.0" y2="163.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="180.0" y1="163.0" x2="370.0" y2="163.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="110.0" y1="225.0" x2="292.0" y2="225.0" stroke="#000" stroke-width="2.4"/><polygon points="300.0,225.0 289.0,228.6 289.0,221.4" fill="#000"/><line x1="110.0" y1="225.0" x2="174.0" y2="168.3" stroke="#000" stroke-width="2.4"/><polygon points="180.0,163.0 174.2,173.0 169.4,167.6" fill="#000"/><line x1="110.0" y1="225.0" x2="110.0" y2="68.0" stroke="#000" stroke-width="3.2"/><polygon points="110.0,60.0 113.6,71.0 106.4,71.0" fill="#000"/><polyline points="110.0,215.0 120.0,215.0 120.0,225.0" fill="none" stroke="#000" stroke-width="1.1"/><path d="M146.0,225.0 A36,36 0 0 0 137.6,201.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="162.0" y="217.0" text-anchor="middle" font-size="14" fill="#000">θ</text><text x="205.0" y="245.0" text-anchor="middle" font-style="italic" font-size="16" fill="#000">A</text><text x="172.0" y="155.0" text-anchor="end" font-style="italic" font-size="16" fill="#000">B</text><text x="120.0" y="66.0" text-anchor="start" font-style="italic" font-size="15" fill="#000">C = A × B</text><text x="360.0" y="149.0" text-anchor="end" font-size="12" fill="#000">shaded area = |A × B|</text><circle cx="110.0" cy="225.0" r="3" fill="#000"/><text x="120.0" y="86.0" text-anchor="start" font-size="11" fill="#000">(perpendicular to the plane</text><text x="120.0" y="100.0" text-anchor="start" font-size="11" fill="#000">of A and B, upward)</text></svg><p><strong>Figure 2.9:</strong> C = A × B is perpendicular to the plane of A and B. Its magnitude equals the area of the parallelogram on A and B</p>
+<div class="box tip" data-title="Properties"><ul>
+<li><strong>Not commutative:</strong> A × B = −(B × A)</li>
+<li><strong>Distributive:</strong> A × (B + C) = A × B + A × C</li>
+<li>If A ∥ B (θ = 0° or 180°), A × B = 0. In particular A × A = 0.</li>
+<li>If A ⊥ B, |A × B| = AB (maximum).</li>
+<li>|A × B| = area of the parallelogram on A and B; area of the triangle = ½ |A × B|.</li>
+</ul></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 330" fill="currentColor" role="img"><rect width="420" height="330" fill="#fff"/><circle cx="210.0" cy="35.0" r="19" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="210.0" y="41.0" text-anchor="middle" font-style="italic" font-weight="bold" font-size="18" fill="#000">i</text><circle cx="292.3" cy="177.5" r="19" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="292.3" y="183.5" text-anchor="middle" font-style="italic" font-weight="bold" font-size="18" fill="#000">j</text><circle cx="127.7" cy="177.5" r="19" fill="#fff" stroke="#000" stroke-width="1.6"/><text x="127.7" y="183.5" text-anchor="middle" font-style="italic" font-weight="bold" font-size="18" fill="#000">k</text><path d="M245.6,41.9 A95,95 0 0 1 304.1,143.2" fill="none" stroke="#000" stroke-width="2"/><polygon points="304.1,143.2 302.2,132.9 308.7,133.8" fill="#000"/><path d="M268.5,204.9 A95,95 0 0 1 151.5,204.9" fill="none" stroke="#000" stroke-width="2"/><polygon points="151.5,204.9 161.4,208.4 157.4,213.6" fill="#000"/><path d="M115.9,143.2 A95,95 0 0 1 174.4,41.9" fill="none" stroke="#000" stroke-width="2"/><polygon points="174.4,41.9 166.4,48.7 163.9,42.6" fill="#000"/><text x="210.0" y="300.0" text-anchor="middle" font-size="14" fill="#000">i × j = k ,  j × k = i ,  k × i = j</text><text x="210.0" y="320.0" text-anchor="middle" font-size="12" fill="#000">(clockwise = +, anticlockwise = −)</text></svg><p><strong>Figure 2.10:</strong> Cross products of unit vectors. Following the arrows gives a positive result; against them, negative (j × i = −k)</p>
+<div class="formula">i × i = j × j = k × k = 0
+<br>
+i × j = k ,  j × k = i ,  k × i = j
+<br>
+j × i = −k ,  k × j = −i ,  i × k = −j</div>
+<div class="box note" data-title="Vector product in component form (determinant)"><div class="formula">A × B = | i  j  k ; A<sub>x</sub>  A<sub>y</sub>  A<sub>z</sub> ; B<sub>x</sub>  B<sub>y</sub>  B<sub>z</sub> |
+<br>
+<strong>A × B = (A<sub>y</sub>B<sub>z</sub> − A<sub>z</sub>B<sub>y</sub>) i − (A<sub>x</sub>B<sub>z</sub> − A<sub>z</sub>B<sub>x</sub>) j + (A<sub>x</sub>B<sub>y</sub> − A<sub>y</sub>B<sub>x</sub>) k</strong></div>
+
+<p>(The first line is the 3×3 determinant with rows i j k; A<sub>x</sub> A<sub>y</sub> A<sub>z</sub>; B<sub>x</sub> B<sub>y</sub> B<sub>z</sub>, expanded along the first row.)</p></div>
+<p><strong>Physical examples:</strong> Torque <strong>τ = r × F</strong> (magnitude rF sin θ); angular momentum <strong>L = r × p</strong>; magnetic force on a moving charge <strong>F = q (v × B)</strong>.</p><table>
+<tr><th>Scalar product</th><th>Vector product</th></tr>
+<tr><td>Result</td><td>Scalar</td><td>Vector</td></tr>
+<tr><td>Magnitude</td><td>AB cos θ</td><td>AB sin θ</td></tr>
+<tr><td>Commutative?</td><td>Yes</td><td>No (A × B = −B × A)</td></tr>
+<tr><td>Zero when</td><td>θ = 90° (perpendicular)</td><td>θ = 0° or 180° (parallel)</td></tr>
+<tr><td>Maximum when</td><td>θ = 0°</td><td>θ = 90°</td></tr>
+<tr><td>Example</td><td>Work = F · d</td><td>Torque = r × F</td></tr>
+</table><div class="box example" data-title="Example 2.6"><p>Show that A = 2i + 3j + k and B = i − 2j + 4k are perpendicular.</p>
+<div class="formula">A · B = (2)(1) + (3)(−2) + (1)(4) = 2 − 6 + 4 = <strong>0</strong></div>
+
+<p>The dot product is zero, so the vectors are perpendicular.</p></div>
+<div class="box example" data-title="Example 2.7"><p>Find the angle between A = i + j and B = j + k.</p>
+<div class="formula">A · B = 0 + 1 + 0 = 1 ;  |A| = |B| = √2
+<br>
+cos θ = 1 / (√2 × √2) = 1/2 ⇒ θ = <strong>60°</strong></div></div>
+<div class="box example" data-title="Example 2.8"><p>A force F = (5i + 3j) N moves a body through d = (4i + 2j) m. Find the work done.</p>
+<div class="formula">W = F · d = (5)(4) + (3)(2) = <strong>26 J</strong></div></div>
+<div class="box example" data-title="Example 2.9"><p>Find A × B for A = 2i + 3j + k and B = i − j + 2k.</p>
+<div class="formula">A × B = (3×2 − 1×(−1)) i − (2×2 − 1×1) j + (2×(−1) − 3×1) k
+<br>
+= <strong>7i − 3j − 5k</strong></div></div>
+<div class="box example" data-title="Example 2.10"><p>A force of 10 N acts at the end of a 2 m spanner at 30° to the spanner. Find the torque.</p>
+<div class="formula">τ = rF sin θ = 2 × 10 × sin 30° = <strong>10 N m</strong></div></div>
+<h2>Key Formulas and Summary</h2><div class="box tip" data-title="Addition of Vectors"><div class="formula">R = √(A² + B² + 2AB cos θ)
+<br>
+tan α = B sin θ / (A + B cos θ)    (α from A)
+<br>
+R<sub>max</sub> = A + B (θ = 0°) ,  R<sub>min</sub> = |A − B| (θ = 180°)</div></div>
+<div class="box tip" data-title="Components and Unit Vectors"><div class="formula">A<sub>x</sub> = A cos θ ,  A<sub>y</sub> = A sin θ
+<br>
+A = A<sub>x</sub>i + A<sub>y</sub>j + A<sub>z</sub>k ,  |A| = √(A<sub>x</sub>² + A<sub>y</sub>² + A<sub>z</sub>²)
+<br>
+Â = A / |A|</div></div>
+<div class="box tip" data-title="Products"><div class="formula">A · B = AB cos θ = A<sub>x</sub>B<sub>x</sub> + A<sub>y</sub>B<sub>y</sub> + A<sub>z</sub>B<sub>z</sub>
+<br>
+|A × B| = AB sin θ
+<br>
+i · i = 1, i · j = 0 ;  i × j = k, j × k = i, k × i = j</div></div>
+<h2>Practice Numerical Problems</h2><p>Attempt each problem before reading the answer.</p><div class="box example"><p>1. Two forces of 6 N and 8 N act at a point at 90°. Find the resultant and its direction from the 6 N force.</p>
+
+<p><strong>Answer:</strong> R = √(36 + 64) = <strong>10 N</strong>; tan α = 8/6, α = <strong>53.1°</strong>.</p></div>
+<div class="box example"><p>2. Two vectors of equal magnitude A act at 60°. Find the magnitude and direction of the resultant.</p>
+
+<p><strong>Answer:</strong> R = √(A² + A² + 2A² cos 60°) = <strong>√3 A</strong>; α = θ/2 = <strong>30°</strong> from either vector.</p></div>
+<div class="box example"><p>3. Find the resultant of 5 N and 12 N forces when the angle between them is (a) 0°, (b) 180°, (c) 90°.</p>
+
+<p><strong>Answer:</strong> (a) <strong>17 N</strong>; (b) <strong>7 N</strong>; (c) √(25 + 144) = <strong>13 N</strong>.</p></div>
+<div class="box example"><p>4. Resolve a 100 N force acting at 37° above the horizontal into horizontal and vertical components (sin 37° = 0.6, cos 37° = 0.8).</p>
+
+<p><strong>Answer:</strong> F<sub>x</sub> = 100 × 0.8 = <strong>80 N</strong>; F<sub>y</sub> = 100 × 0.6 = <strong>60 N</strong>.</p></div>
+<div class="box example"><p>5. A 10 kg block rests on a smooth plane inclined at 30°. Find the components of its weight along and perpendicular to the plane (g = 9.8 m s⁻²).</p>
+
+<p><strong>Answer:</strong> mg = 98 N. Along the plane: 98 sin 30° = <strong>49 N</strong>; perpendicular: 98 cos 30° ≈ <strong>84.9 N</strong>.</p></div>
+<div class="box example"><p>6. Find the unit vector along A = 3i − 4j and verify that its magnitude is 1.</p>
+
+<p><strong>Answer:</strong> |A| = 5; Â = (3i − 4j)/5 = <strong>0.6i − 0.8j</strong>; |Â| = √(0.36 + 0.64) = 1.</p></div>
+<div class="box example"><p>7. Find the angle between A = 2i − 3j + k and B = i + j − k.</p>
+
+<p><strong>Answer:</strong> A · B = 2 − 3 − 1 = −2; |A| = √14, |B| = √3; cos θ = −2/√42 ≈ −0.309, θ ≈ <strong>108°</strong>.</p></div>
+<div class="box example"><p>8. Find A × B and its magnitude for A = i + 2j + 3k and B = 3i − j + 2k.</p>
+
+<p><strong>Answer:</strong> A × B = (4 + 3) i − (2 − 9) j + (−1 − 6) k = <strong>7i + 7j − 7k</strong>; magnitude = 7√3 ≈ <strong>12.1</strong>.</p></div>
+<div class="box example"><p>9. For what value of λ are A = 2i + λj + k and B = 4i − 2j − 2k perpendicular?</p>
+
+<p><strong>Answer:</strong> A · B = 8 − 2λ − 2 = 0 ⇒ <strong>λ = 3</strong>.</p></div>
+<div class="box example"><p>10. A force of 10 N acts at 60° to the displacement of 5 m of a body. Find the work done.</p>
+
+<p><strong>Answer:</strong> W = Fd cos θ = 10 × 5 × 0.5 = <strong>25 J</strong>.</p></div>
+<div class="box example"><p>11. Find the area of the parallelogram whose adjacent sides are A = 3i and B = 4j, and the area of the triangle on the same sides.</p>
+
+<p><strong>Answer:</strong> A × B = 12k, so parallelogram area = <strong>12</strong> units; triangle area = <strong>6</strong> units.</p></div>
+<h2>Conceptual and Long Answer Questions</h2><div class="box example" data-title="MCQ"><p><strong>1. Can the resultant of two vectors be smaller in magnitude than either of the vectors? Explain.</strong></p><ul><li>Yes. For example, 5 N and 4 N acting in opposite directions give 1 N. The resultant lies between |A − B| and A + B.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>2. Is electric current a vector? Why?</strong></p><ul><li>No. It has direction but does not obey the vector addition laws; currents add algebraically at a junction.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>3. Why is work a scalar product while torque is a vector product?</strong></p><ul><li>Work has no direction (energy transferred), so F · d is a scalar. Torque has a direction (the axis of rotation), so r × F is a vector.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>4. When is A · B = 0 and when is A × B = 0, with both A and B non-zero?</strong></p><ul><li>A · B = 0 when A ⊥ B; A × B = 0 when A ∥ B (θ = 0° or 180°).</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>5. A vector has non-zero magnitude. Can one of its rectangular components be larger than the vector itself?</strong></p><ul><li>No. Ax = A cos θ and Ay = A sin θ never exceed A in magnitude.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>6. State the parallelogram law and derive the magnitude and direction of the resultant. (Section 2.1)</strong></p><ul></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>7. Define the scalar and vector products with two examples each, and prove A × B = −B × A using the right-hand rule. (Section 2.3)</strong></p><ul></ul></div>
+<h2>Multiple Choice Questions</h2><div class="box example" data-title="MCQ"><p><strong>1. The resultant of two vectors is maximum when the angle between them is:</strong></p><ul><li>(a) 0°</li><li>(b) 90°</li><li>(c) 120°</li><li>(d) 180°</li></ul><details class="solution"><summary>Show answer</summary><p>(a) 0°</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>2. Which of the following is a vector quantity?</strong></p><ul><li>(a) Work</li><li>(b) Power</li><li>(c) Torque</li><li>(d) Energy</li></ul><details class="solution"><summary>Show answer</summary><p>(c) Torque</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>3. i · j is equal to:</strong></p><ul><li>(a) 1</li><li>(b) 0</li><li>(c) k</li><li>(d) −1</li></ul><details class="solution"><summary>Show answer</summary><p>(b) 0</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>4. j × k is equal to:</strong></p><ul><li>(a) −i</li><li>(b) 0</li><li>(c) i</li><li>(d) 1</li></ul><details class="solution"><summary>Show answer</summary><p>(c) i</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>5. The magnitude of the vector 3i + 4j is:</strong></p><ul><li>(a) 7</li><li>(b) 5</li><li>(c) 1</li><li>(d) 25</li></ul><details class="solution"><summary>Show answer</summary><p>(b) 5</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>6. The component of a vector A making angle θ with the x-axis along the y-axis is:</strong></p><ul><li>(a) A cos θ</li><li>(b) A tan θ</li><li>(c) A sin θ</li><li>(d) A / sin θ</li></ul><details class="solution"><summary>Show answer</summary><p>(c) A sin θ</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>7. A · (A × B) equals:</strong></p><ul><li>(a) A²B</li><li>(b) AB</li><li>(c) 1</li><li>(d) 0</li></ul><details class="solution"><summary>Show answer</summary><p>(d) 0</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>8. Two forces of 3 N and 4 N cannot give a resultant of:</strong></p><ul><li>(a) 1 N</li><li>(b) 5 N</li><li>(c) 7 N</li><li>(d) 9 N</li></ul><details class="solution"><summary>Show answer</summary><p>(d) 9 N</p></details></div>

@@ -17,6 +17,11 @@
       "permanent": true
     },
     {
+      "source": "/posts/photon.html",
+      "destination": "/posts/photons.html",
+      "permanent": true
+    },
+    {
       "source": "/search/label/:label",
       "destination": "/search.html?q=:label",
       "permanent": true

@@ -23,9 +23,11 @@ description: <one sentence summary>
 
 Then the content as plain HTML fragments. The site provides all styling, so:
 - DO NOT write <html>, <head>, <body>, <style>, <script>, <link> or style="..." attributes.
+  Do not use Tailwind or any CSS framework, and do not add interactive simulators, calculators,
+  buttons, sliders or quizzes (MCQs go in a separate MCQ file).
 - Use <h2> for each main section (one per syllabus topic) and <h3> for sub-sections.
 - Use <p>, <ul>, <ol>, <table>, <strong>, <em> for text.
-- Maths in LaTeX: inline \( ... \), display formulas as
+- Maths in LaTeX: inline \( ... \) (never $...$), display formulas as
   <div class="formula">\[ ... \]<span class="where">where ... </span></div>
 - Use these ready-made boxes (and no other classes):
   <div class="box definition">...</div>   a definition

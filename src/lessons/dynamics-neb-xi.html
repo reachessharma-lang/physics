@@ -4,1074 +4,320 @@ grade: XI
 chapters: [4]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Momentum, Newton's Laws, Torque and Friction - Grade XI Physics</title>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.65;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.97);
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-            margin-bottom: 30px;
-            text-align: center;
-            border-left: 5px solid #3498db;
-        }
-
-        h1 {
-            color: #1f3a5f;
-            margin-bottom: 10px;
-            font-size: 2.4em;
-        }
-
-        .subtitle {
-            color: #5d6d7e;
-            font-size: 1.1em;
-        }
-
-        .section {
-            background: rgba(255,255,255,0.97);
-            margin-bottom: 30px;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #1f3a5f;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 12px;
-            font-size: 1.8em;
-        }
-
-        h3 {
-            color: #2c5aa0;
-            margin: 24px 0 16px;
-            font-size: 1.3em;
-        }
-
-        h4 {
-            color: #34495e;
-            margin: 18px 0 12px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        ul, ol {
-            margin-left: 24px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .formula {
-            background: #f5f8fb;
-            padding: 20px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 1.05em;
-            border-radius: 6px;
-            overflow-x: auto;
-            line-height: 1.8;
-        }
-
-        .example {
-            background: #e8f7fc;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #16a085;
-        }
-
-        .derivation {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #2980b9;
-        }
-
-        .key-points {
-            background: #f0fff5;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #27ae60;
-        }
-
-        .key-points ul {
-            margin-left: 20px;
-        }
-
-        .numerical {
-            background: #fff7f3;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #e67e22;
-        }
-
-        .warning {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #f39c12;
-        }
-
-        .mcq-section {
-            background: #fff8e1;
-            padding: 18px;
-            border-radius: 8px;
-            margin: 16px 0;
-            border-left: 4px solid #f39c12;
-        }
-
-        .question {
-            margin-bottom: 12px;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-
-        .options {
-            margin-left: 20px;
-        }
-
-        .option {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .diagram {
-            text-align: center;
-            margin: 25px auto;
-            max-width: 800px;
-        }
-
-        .diagram pre {
-            white-space: pre-wrap;
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            line-height: 1.5;
-            font-size: 0.95em;
-            overflow-x: auto;
-            text-align: left;
-            color: #333;
-        }
-
-        .diagram-caption {
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            margin-top: 12px;
-            font-size: 0.95em;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid #bdc3c7;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background: #34495e;
-            color: white;
-            font-weight: 700;
-        }
-
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: 700;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: white;
-            font-size: 0.95em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            .section {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    
-        /* Line diagrams (SVG): black on white so they print cleanly */
-        .diagram svg { background: #fff; border: 1px solid #ddd; border-radius: 8px; margin: 6px 0; }
-
-        @media print {
-            body { background: #fff !important; }
-            .container { max-width: 100%; padding: 0; }
-            .section { box-shadow: none !important; page-break-inside: auto; }
-            .diagram { page-break-inside: avoid; break-inside: avoid; }
-            .diagram svg { border: none; max-width: 100% !important; }
-            h2, h3, h4 { page-break-after: avoid; }
-            .example, .derivation, .formula { page-break-inside: avoid; }
-            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        }
-</style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>⚙️ Momentum, Newton's Laws, Torque and Friction</h1>
-            <div class="subtitle">Grade XI Physics - NEB Curriculum</div>
-        </div>
-
-        <div class="section">
-            <h2>Unit 4: Dynamics</h2>
-
-            <p>Dynamics studies the <strong>causes</strong> of motion: how forces change the motion of bodies. This unit builds on Newton's three laws to study momentum and impulse, the conservation of linear momentum, applications of Newton's laws, the turning effect of forces (torque) and equilibrium, and solid friction.</p>
-
-            <div class="key-points">
-                <h4>Newton's laws of motion (recap):</h4>
-                <ul>
-                    <li><strong>First law (inertia):</strong> A body stays at rest or in uniform motion in a straight line unless an external net force acts on it.</li>
-                    <li><strong>Second law:</strong> The rate of change of momentum of a body is proportional to the net force and takes place in the direction of the force: <strong>F = dp/dt</strong>; for constant mass, <strong>F = ma</strong>.</li>
-                    <li><strong>Third law:</strong> To every action there is an equal and opposite reaction. The two forces act on <em>different</em> bodies.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>4.1 Linear Momentum and Impulse</h2>
-
-            <h3>4.1(a) Linear Momentum</h3>
-            <p>The <strong>linear momentum</strong> of a body is the product of its mass and velocity:</p>
-            <div class="formula">
-                p = m v
-            </div>
-            <p>It is a vector in the direction of the velocity. SI unit: kg m s⁻¹ (equivalently N s); dimensions [MLT⁻¹]. A heavy lorry and a light car at the same speed have different momenta; the lorry is harder to stop.</p>
-
-            <div class="derivation">
-                <h4>Newton's second law in terms of momentum</h4>
-                <div class="formula">
-                    F ∝ rate of change of momentum = (p₂ − p₁)/Δt
-                    <br>
-                    <strong>F = Δp / Δt = d(mv)/dt</strong>
-                    <br>
-                    For constant mass: F = m (dv/dt) = <strong>ma</strong>
-                </div>
-            </div>
-
-            <h3>4.1(b) Impulse</h3>
-            <p>When a large force acts for a very short time (a bat striking a ball), the product of the force and the time of action is called <strong>impulse</strong>:</p>
-            <div class="formula">
-                J = F Δt    (constant force)
-                <br>
-                J = ∫ F dt    (variable force)
-            </div>
-            <p>Its SI unit is N s (the same as kg m s⁻¹), and it is a vector in the direction of the force.</p>
-
-            <div class="diagram"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;height:auto;background:#fff"><rect width="480" height="290" fill="#fff"/><line x1="70.0" y1="225.0" x2="450.0" y2="225.0" stroke="#000" stroke-width="1.2"/><polygon points="450.0,225.0 441.0,228.0 441.0,222.0" fill="#000"/><line x1="70.0" y1="225.0" x2="70.0" y2="30.0" stroke="#000" stroke-width="1.2"/><polygon points="70.0,30.0 73.0,39.0 67.0,39.0" fill="#000"/><text x="446.0" y="243.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">t</text><text x="60.0" y="36.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">F</text><text x="62.0" y="241.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">O</text><path d="M130,225 C160,225 180,75 230,75 C280,75 300,225 330,225 Z" fill="#ececec" stroke="none"/><path d="M130,225 C160,225 180,75 230,75 C280,75 300,225 330,225" fill="none" stroke="#000" stroke-width="2.4"/><line x1="130.0" y1="225.0" x2="130.0" y2="236.0" stroke="#000" stroke-width="1"/><line x1="330.0" y1="225.0" x2="330.0" y2="236.0" stroke="#000" stroke-width="1"/><text x="130.0" y="252.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">t<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><text x="330.0" y="252.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">t<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><line x1="70.0" y1="125.0" x2="330.0" y2="125.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><text x="58.0" y="129.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">F<tspan dy="4" font-size="10">av</tspan><tspan dy="-4"></tspan></text><text x="230.0" y="60.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">F(t)</text><text x="240.0" y="278.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">shaded area = impulse  J = ∫F dt = Δp</text><text x="380.0" y="112.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">F<tspan dy="4" font-size="10">av</tspan><tspan dy="-4"> (t₂ − t₁) = J</tspan></text></svg>
-                <div class="diagram-caption"><strong>Figure 4.1:</strong> Force–time graph of a collision. The area under the curve is the impulse. The dashed line is the average force F<sub>av</sub> that would give the same impulse</div>
-            </div>
-
-            <div class="derivation">
-                <h4>Impulse–momentum theorem</h4>
-                <p>From F = Δp/Δt:</p>
-                <div class="formula">
-                    F Δt = Δp = mv − mu
-                    <br>
-                    <strong>Impulse = change in momentum</strong>
-                </div>
-                <p>The average force is F<sub>av</sub> = Δp / Δt, so for a given change in momentum, a longer contact time means a smaller force.</p>
-            </div>
-
-            <div class="key-points">
-                <h4>Everyday applications:</h4>
-                <ul>
-                    <li>A cricketer pulls the hands back while catching a fast ball: the time of stopping increases, so the force on the hands decreases.</li>
-                    <li>Car airbags, padded helmets and crumple zones increase the stopping time.</li>
-                    <li>A person jumping onto sand or a mattress is safer than jumping onto concrete.</li>
-                    <li>Bending the knees on landing prolongs the stopping time.</li>
-                </ul>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.1</h4>
-                <p>A cricket ball of mass 0.15 kg moving at 30 m s⁻¹ is hit back along the same line at 40 m s⁻¹. The contact time is 0.01 s. Find the impulse and the average force.</p>
-                <div class="formula">
-                    Take the final direction as positive: u = −30 m s⁻¹, v = +40 m s⁻¹
-                    <br>
-                    Δp = m(v − u) = 0.15 × (40 + 30) = <strong>10.5 N s</strong>
-                    <br>
-                    F<sub>av</sub> = Δp / Δt = 10.5 / 0.01 = <strong>1050 N</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.2</h4>
-                <p>A constant force of 20 N acts for 0.5 s on a 2 kg body at rest. Find the impulse and the final speed.</p>
-                <div class="formula">
-                    J = F Δt = 20 × 0.5 = <strong>10 N s</strong>
-                    <br>
-                    J = mv ⇒ v = 10 / 2 = <strong>5 m s⁻¹</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>4.2 Conservation of Linear Momentum</h2>
-
-            <p><strong>Statement:</strong> If no external force acts on a system, the total linear momentum of the system remains constant.</p>
-
-            <div class="diagram"><svg viewBox="0 0 500 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:750px;height:auto;background:#fff"><rect width="500" height="290" fill="#fff"/><text x="10.0" y="59.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">Before</text><text x="10.0" y="149.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">During collision</text><text x="10.0" y="239.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">After</text><circle cx="170" cy="55" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="170.0" y="60.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><circle cx="300" cy="55" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="300.0" y="60.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><line x1="190.0" y1="55.0" x2="227.0" y2="55.0" stroke="#000" stroke-width="2.4"/><polygon points="235.0,55.0 224.0,58.6 224.0,51.4" fill="#000"/><text x="210.0" y="41.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">u<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><line x1="320.0" y1="55.0" x2="347.0" y2="55.0" stroke="#000" stroke-width="2.4"/><polygon points="355.0,55.0 344.0,58.6 344.0,51.4" fill="#000"/><text x="338.0" y="41.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">u<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><circle cx="250" cy="145" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="250.0" y="150.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><circle cx="290" cy="145" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="290.0" y="150.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><line x1="226.0" y1="110.0" x2="198.0" y2="110.0" stroke="#000" stroke-width="2.4"/><polygon points="190.0,110.0 201.0,106.4 201.0,113.6" fill="#000"/><text x="208.0" y="103.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">F</text><line x1="314.0" y1="110.0" x2="342.0" y2="110.0" stroke="#000" stroke-width="2.4"/><polygon points="350.0,110.0 339.0,113.6 339.0,106.4" fill="#000"/><text x="332.0" y="103.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">−F</text><text x="270.0" y="187.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">equal and opposite forces for a short time</text><circle cx="300" cy="235" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="300.0" y="240.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><circle cx="400" cy="235" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="400.0" y="240.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><line x1="322.0" y1="235.0" x2="344.0" y2="235.0" stroke="#000" stroke-width="2.4"/><polygon points="352.0,235.0 341.0,238.6 341.0,231.4" fill="#000"/><text x="336.0" y="221.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">v<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><line x1="422.0" y1="235.0" x2="462.0" y2="235.0" stroke="#000" stroke-width="2.4"/><polygon points="470.0,235.0 459.0,238.6 459.0,231.4" fill="#000"/><text x="446.0" y="221.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">v<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text></svg>
-                <div class="diagram-caption"><strong>Figure 4.2:</strong> Collision of two bodies on a smooth line: before, during and after. During the collision the forces are equal and opposite</div>
-            </div>
-
-            <div class="derivation">
-                <h4>Derivation from Newton's laws</h4>
-                <p>Two bodies of masses m₁ and m₂ with velocities u₁ and u₂ collide. During contact, body 1 exerts a force F on body 2, and by Newton's third law body 2 exerts −F on body 1 for the same time Δt. After the collision the velocities are v₁ and v₂.</p>
-                <div class="formula">
-                    Impulse on body 1: −F Δt = m₁(v₁ − u₁)
-                    <br>
-                    Impulse on body 2: +F Δt = m₂(v₂ − u₂)
-                    <br>
-                    Adding: m₁(v₁ − u₁) + m₂(v₂ − u₂) = 0
-                    <br>
-                    <strong>m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</strong>
-                </div>
-                <p>The total momentum before the collision equals the total momentum after it.</p>
-            </div>
-
-            <h3>4.2(a) Types of Collision</h3>
-            <table>
-                <tr><th>Type</th><th>Momentum</th><th>Kinetic energy</th><th>After collision</th></tr>
-                <tr><td>Elastic</td><td>Conserved</td><td>Conserved</td><td>Bodies separate</td></tr>
-                <tr><td>Inelastic</td><td>Conserved</td><td>Some lost (heat, sound, deformation)</td><td>Bodies separate</td></tr>
-                <tr><td>Perfectly inelastic</td><td>Conserved</td><td>Maximum loss</td><td>Bodies stick together</td></tr>
-            </table>
-            <p>Momentum is conserved in <strong>every</strong> collision where no external force acts; kinetic energy is conserved only in elastic ones.</p>
-
-            <div class="derivation">
-                <h4>Elastic collision in one dimension</h4>
-                <p>Conservation of momentum and of kinetic energy give</p>
-                <div class="formula">
-                    m₁(u₁ − v₁) = m₂(v₂ − u₂)    ... (1)
-                    <br>
-                    m₁(u₁² − v₁²) = m₂(v₂² − u₂²)    ... (2)
-                </div>
-                <p>Dividing (2) by (1):</p>
-                <div class="formula">
-                    u₁ + v₁ = v₂ + u₂ ⇒ <strong>u₁ − u₂ = v₂ − v₁</strong>
-                    <br>
-                    (relative speed of approach = relative speed of separation)
-                </div>
-                <p>Solving with (1):</p>
-                <div class="formula">
-                    <strong>v₁ = [(m₁ − m₂)u₁ + 2m₂u₂] / (m₁ + m₂)</strong>
-                    <br>
-                    <strong>v₂ = [(m₂ − m₁)u₂ + 2m₁u₁] / (m₁ + m₂)</strong>
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Special cases of an elastic collision (target at rest, u₂ = 0):</h4>
-                <ul>
-                    <li><strong>m₁ = m₂:</strong> v₁ = 0, v₂ = u₁. The velocities are exchanged.</li>
-                    <li><strong>m₁ ≫ m₂:</strong> v₁ ≈ u₁, v₂ ≈ 2u₁. The heavy body barely slows; the light body shoots ahead.</li>
-                    <li><strong>m₁ ≪ m₂:</strong> v₁ ≈ −u₁, v₂ ≈ 0. The light body bounces back; the heavy body stays nearly at rest.</li>
-                </ul>
-            </div>
-
-            <h3>4.2(b) Perfectly Inelastic Collision</h3>
-            <div class="formula">
-                m₁u₁ + m₂u₂ = (m₁ + m₂) v
-                <br>
-                <strong>v = (m₁u₁ + m₂u₂) / (m₁ + m₂)</strong>
-            </div>
-
-            <h3>4.2(c) Recoil of a Gun</h3>
-            <p>Before firing, the gun and bullet are at rest, so the total momentum is zero. After firing, the bullet (mass m) moves forward with velocity v and the gun (mass M) recoils with velocity V.</p>
-
-            <div class="diagram"><svg viewBox="0 0 500 270" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:750px;height:auto;background:#fff"><rect width="500" height="270" fill="#fff"/><text x="10.0" y="40.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">Before</text><text x="10.0" y="160.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">After</text><rect x="170" y="60" width="90" height="34" fill="#fff" stroke="#000" stroke-width="2"/><rect x="260" y="70" width="70" height="12" fill="#fff" stroke="#000" stroke-width="2"/><text x="215.0" y="82.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">gun (M)</text><text x="300.0" y="52.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">bullet (m) inside</text><text x="250.0" y="116.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">total momentum = 0 (at rest)</text><rect x="90" y="175" width="90" height="34" fill="#fff" stroke="#000" stroke-width="2"/><rect x="180" y="185" width="70" height="12" fill="#fff" stroke="#000" stroke-width="2"/><text x="135.0" y="197.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">gun (M)</text><circle cx="340" cy="191" r="7" fill="#000"/><text x="340.0" y="169.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">bullet (m)</text><line x1="85.0" y1="191.0" x2="38.0" y2="191.0" stroke="#000" stroke-width="2.4"/><polygon points="30.0,191.0 41.0,187.4 41.0,194.6" fill="#000"/><text x="55.0" y="179.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">V</text><line x1="355.0" y1="191.0" x2="432.0" y2="191.0" stroke="#000" stroke-width="2.4"/><polygon points="440.0,191.0 429.0,194.6 429.0,187.4" fill="#000"/><text x="400.0" y="179.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">v</text><text x="250.0" y="250.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">MV (backward) = mv (forward) , so recoil V = mv/M</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.3:</strong> Recoil of a gun. The total momentum stays zero</div>
-            </div>
-
-            <div class="formula">
-                0 = mv + MV ⇒ <strong>V = − mv / M</strong>
-            </div>
-            <p>The negative sign shows that the gun moves opposite to the bullet. The gun's recoil speed is small because its mass is large. The same principle explains the working of <strong>rockets</strong>: hot gas is expelled backward at high speed, and the rocket gains an equal forward momentum, so no air is needed for propulsion.</p>
-
-            <div class="example">
-                <h4>Example 4.3 — Gun recoil</h4>
-                <p>A 5 kg gun fires a 0.02 kg bullet at 400 m s⁻¹. Find the recoil velocity of the gun.</p>
-                <div class="formula">
-                    V = − mv / M = − (0.02 × 400) / 5 = <strong>−1.6 m s⁻¹</strong>
-                </div>
-                <p>The gun recoils at 1.6 m s⁻¹, opposite to the bullet.</p>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.4 — Perfectly inelastic collision</h4>
-                <p>A 2 kg body moving at 6 m s⁻¹ collides with a 4 kg body at rest and they stick together. Find the common velocity and the loss of kinetic energy.</p>
-                <div class="formula">
-                    v = (2 × 6 + 0) / (2 + 4) = <strong>2 m s⁻¹</strong>
-                    <br>
-                    K<sub>i</sub> = ½ × 2 × 6² = 36 J ;  K<sub>f</sub> = ½ × 6 × 2² = 12 J
-                    <br>
-                    Loss = <strong>24 J</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>4.3 Application of Newton's Laws</h2>
-
-            <div class="key-points">
-                <h4>Method for solving problems:</h4>
-                <ul>
-                    <li>Draw a clear <strong>free-body diagram</strong> for each body, showing only the forces acting <em>on</em> that body.</li>
-                    <li>Choose a positive direction for each body along its acceleration.</li>
-                    <li>Apply ΣF = ma to each body.</li>
-                    <li>Use the constraint: a rope that stays taut gives the same speed and acceleration to the bodies it connects, and an ideal (light, frictionless) pulley leaves the tension unchanged.</li>
-                </ul>
-            </div>
-
-            <h3>4.3(a) Atwood's Machine (Two Masses over a Pulley)</h3>
-            <div class="diagram"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;height:auto;background:#fff"><rect width="480" height="290" fill="#fff"/><line x1="170.0" y1="20.0" x2="310.0" y2="20.0" stroke="#000" stroke-width="2"/><line x1="179.0" y1="20.0" x2="170.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="191.0" y1="20.0" x2="182.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="203.0" y1="20.0" x2="194.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="215.0" y1="20.0" x2="206.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="227.0" y1="20.0" x2="218.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="239.0" y1="20.0" x2="230.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="251.0" y1="20.0" x2="242.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="263.0" y1="20.0" x2="254.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="275.0" y1="20.0" x2="266.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="287.0" y1="20.0" x2="278.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="299.0" y1="20.0" x2="290.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="310.0" y1="20.0" x2="302.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="240.0" y1="20.0" x2="240.0" y2="70.0" stroke="#000" stroke-width="1.6"/><circle cx="240" cy="70" r="30" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="240.0" cy="70.0" r="2.5" fill="#000"/><line x1="210.0" y1="70.0" x2="210.0" y2="150.0" stroke="#000" stroke-width="1.6"/><line x1="270.0" y1="70.0" x2="270.0" y2="100.0" stroke="#000" stroke-width="1.6"/><rect x="188" y="150" width="44" height="42" fill="#fff" stroke="#000" stroke-width="2"/><text x="210.0" y="176.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><rect x="248" y="100" width="44" height="42" fill="#fff" stroke="#000" stroke-width="2"/><text x="270.0" y="126.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><line x1="210.0" y1="192.0" x2="210.0" y2="228.0" stroke="#000" stroke-width="2.4"/><polygon points="210.0,236.0 206.4,225.0 213.6,225.0" fill="#000"/><text x="210.0" y="254.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan>g</text><line x1="270.0" y1="142.0" x2="270.0" y2="178.0" stroke="#000" stroke-width="2.4"/><polygon points="270.0,186.0 266.4,175.0 273.6,175.0" fill="#000"/><text x="270.0" y="204.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan>g</text><line x1="150.0" y1="150.0" x2="150.0" y2="188.0" stroke="#000" stroke-width="2.4"/><polygon points="150.0,196.0 146.4,185.0 153.6,185.0" fill="#000"/><text x="138.0" y="178.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">a</text><line x1="330.0" y1="150.0" x2="330.0" y2="112.0" stroke="#000" stroke-width="2.4"/><polygon points="330.0,104.0 333.6,115.0 326.4,115.0" fill="#000"/><text x="342.0" y="128.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">a</text><text x="198.0" y="112.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">T</text><text x="282.0" y="88.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">T</text><text x="240.0" y="278.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">m₁ > m₂ :  m₁ moves down, m₂ moves up with the same acceleration a</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.4:</strong> Atwood's machine with m₁ &gt; m₂</div>
-            </div>
-            <div class="derivation">
-                <h4>Acceleration and tension</h4>
-                <div class="formula">
-                    m₁: m₁g − T = m₁a
-                    <br>
-                    m₂: T − m₂g = m₂a
-                    <br>
-                    Adding: (m₁ − m₂) g = (m₁ + m₂) a
-                    <br>
-                    <strong>a = (m₁ − m₂) g / (m₁ + m₂)</strong>
-                    <br>
-                    <strong>T = 2 m₁ m₂ g / (m₁ + m₂)</strong>
-                </div>
-            </div>
-
-            <h3>4.3(b) Block on a Smooth Table Connected to a Hanging Mass</h3>
-            <div class="diagram"><svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:690px;height:auto;background:#fff"><rect width="460" height="300" fill="#fff"/><line x1="30.0" y1="130.0" x2="315.0" y2="130.0" stroke="#000" stroke-width="2"/><line x1="315.0" y1="130.0" x2="315.0" y2="175.0" stroke="#000" stroke-width="2"/><line x1="40.0" y1="130.0" x2="31.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="52.0" y1="130.0" x2="43.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="64.0" y1="130.0" x2="55.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="76.0" y1="130.0" x2="67.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="88.0" y1="130.0" x2="79.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="100.0" y1="130.0" x2="91.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="112.0" y1="130.0" x2="103.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="124.0" y1="130.0" x2="115.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="136.0" y1="130.0" x2="127.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="148.0" y1="130.0" x2="139.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="160.0" y1="130.0" x2="151.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="172.0" y1="130.0" x2="163.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="184.0" y1="130.0" x2="175.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="196.0" y1="130.0" x2="187.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="208.0" y1="130.0" x2="199.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="220.0" y1="130.0" x2="211.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="232.0" y1="130.0" x2="223.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="244.0" y1="130.0" x2="235.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="256.0" y1="130.0" x2="247.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="268.0" y1="130.0" x2="259.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="130.0" x2="271.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="292.0" y1="130.0" x2="283.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="304.0" y1="130.0" x2="295.0" y2="139.0" stroke="#000" stroke-width="1"/><rect x="110" y="90" width="60" height="40" fill="#fff" stroke="#000" stroke-width="2"/><text x="140.0" y="115.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><circle cx="330" cy="118" r="18" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="330.0" cy="118.0" r="2.5" fill="#000"/><line x1="170.0" y1="100.0" x2="330.0" y2="100.0" stroke="#000" stroke-width="1.6"/><path d="M330,100 A18,18 0 0 1 348,118" fill="none" stroke="#000" stroke-width="1.6"/><line x1="348.0" y1="118.0" x2="348.0" y2="205.0" stroke="#000" stroke-width="1.6"/><rect x="326" y="205" width="44" height="38" fill="#fff" stroke="#000" stroke-width="2"/><text x="348.0" y="229.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><line x1="348.0" y1="243.0" x2="348.0" y2="274.0" stroke="#000" stroke-width="2.4"/><polygon points="348.0,282.0 344.4,271.0 351.6,271.0" fill="#000"/><text x="362.0" y="270.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan>g</text><text x="358.0" y="168.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">T</text><text x="250.0" y="92.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">T</text><line x1="140.0" y1="90.0" x2="140.0" y2="60.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,52.0 143.6,63.0 136.4,63.0" fill="#000"/><text x="152.0" y="64.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">N</text><line x1="140.0" y1="130.0" x2="140.0" y2="162.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,170.0 136.4,159.0 143.6,159.0" fill="#000"/><text x="152.0" y="160.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan>g</text><line x1="40.0" y1="60.0" x2="82.0" y2="60.0" stroke="#000" stroke-width="2.4"/><polygon points="90.0,60.0 79.0,63.6 79.0,56.4" fill="#000"/><text x="65.0" y="48.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">a</text><line x1="392.0" y1="205.0" x2="392.0" y2="237.0" stroke="#000" stroke-width="2.4"/><polygon points="392.0,245.0 388.4,234.0 395.6,234.0" fill="#000"/><text x="404.0" y="230.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">a</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.5:</strong> Mass m₁ on a smooth horizontal table pulled by a hanging mass m₂ through a light string over a pulley</div>
-            </div>
-            <div class="derivation">
-                <h4>Acceleration and tension</h4>
-                <div class="formula">
-                    m₁ (horizontal): T = m₁a
-                    <br>
-                    m₂ (vertical): m₂g − T = m₂a
-                    <br>
-                    <strong>a = m₂ g / (m₁ + m₂)</strong>
-                    <br>
-                    <strong>T = m₁ m₂ g / (m₁ + m₂)</strong>
-                </div>
-            </div>
-
-            <h3>4.3(c) Body on a Smooth Inclined Plane</h3>
-            <div class="diagram"><svg viewBox="0 0 470 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:705px;height:auto;background:#fff"><rect width="470" height="290" fill="#fff"/><line x1="40.0" y1="245.0" x2="390.0" y2="245.0" stroke="#000" stroke-width="2"/><line x1="390.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2"/><line x1="40.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2.4"/><path d="M100.0,245.0 A60,60 0 0 0 92.0,215.0" fill="none" stroke="#000" stroke-width="1.2"/><text x="116.0" y="237.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><polygon points="190.7,158.0 235.7,132.0 211.7,90.4 166.7,116.4" fill="#fff" stroke="#000" stroke-width="2"/><line x1="201.2" y1="124.2" x2="201.2" y2="212.2" stroke="#000" stroke-width="2.8"/><polygon points="201.2,220.2 197.6,209.2 204.8,209.2" fill="#000"/><line x1="201.2" y1="124.2" x2="163.7" y2="59.2" stroke="#000" stroke-width="2.8"/><polygon points="159.7,52.2 168.3,60.0 162.0,63.6" fill="#000"/><line x1="201.2" y1="124.2" x2="166.6" y2="144.2" stroke="#000" stroke-width="1.6"/><polygon points="159.6,148.2 167.3,139.6 171.0,145.9" fill="#000"/><line x1="201.2" y1="124.2" x2="238.8" y2="189.3" stroke="#000" stroke-width="1.6"/><polygon points="242.8,196.2 234.1,188.5 240.4,184.8" fill="#000"/><line x1="159.6" y1="148.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="242.8" y1="196.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><circle cx="201.2" cy="124.2" r="3" fill="#000"/><text x="209.2" y="230.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">mg</text><text x="149.7" y="48.2" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">N</text><text x="153.6" y="144.2" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">mg sin θ</text><text x="252.8" y="210.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">mg cos θ</text><line x1="248.2" y1="55.5" x2="211.8" y2="76.5" stroke="#000" stroke-width="2.4"/><polygon points="204.9,80.5 212.6,71.9 216.2,78.2" fill="#000"/><text x="198.9" y="74.5" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">a</text><text x="235.0" y="278.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">frictionless plane: a = g sin θ</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.6:</strong> Free-body diagram of a block on a smooth plane inclined at θ</div>
-            </div>
-            <div class="formula">
-                Perpendicular to the plane: N = mg cos θ
-                <br>
-                Along the plane (down the slope): mg sin θ = ma
-                <br>
-                <strong>a = g sin θ</strong>
-            </div>
-            <p>The acceleration does not depend on the mass. For θ = 90° the plane becomes vertical and a = g (free fall).</p>
-
-            <h3>4.3(d) Apparent Weight in a Lift</h3>
-            <div class="diagram"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;height:auto;background:#fff"><rect width="480" height="270" fill="#fff"/><line x1="110.0" y1="28.0" x2="110.0" y2="50.0" stroke="#000" stroke-width="1.6"/><rect x="60" y="50" width="100" height="150" fill="#fff" stroke="#000" stroke-width="2.4"/><rect x="90" y="160" width="40" height="34" fill="#fff" stroke="#000" stroke-width="2"/><text x="110.0" y="182.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m</text><line x1="110.0" y1="160.0" x2="110.0" y2="113.0" stroke="#000" stroke-width="2.4"/><polygon points="110.0,105.0 113.6,116.0 106.4,116.0" fill="#000"/><text x="118.0" y="109.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">N</text><line x1="110.0" y1="194.0" x2="110.0" y2="226.0" stroke="#000" stroke-width="2.4"/><polygon points="110.0,234.0 106.4,223.0 113.6,223.0" fill="#000"/><text x="118.0" y="232.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">mg</text><line x1="185.0" y1="150.0" x2="185.0" y2="108.0" stroke="#000" stroke-width="2.4"/><polygon points="185.0,100.0 188.6,111.0 181.4,111.0" fill="#000"/><text x="195.0" y="128.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">a</text><text x="110.0" y="258.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">lift accelerating UPWARD</text><line x1="340.0" y1="28.0" x2="340.0" y2="50.0" stroke="#000" stroke-width="1.6"/><rect x="290" y="50" width="100" height="150" fill="#fff" stroke="#000" stroke-width="2.4"/><rect x="320" y="160" width="40" height="34" fill="#fff" stroke="#000" stroke-width="2"/><text x="340.0" y="182.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">m</text><line x1="340.0" y1="160.0" x2="340.0" y2="143.0" stroke="#000" stroke-width="2.4"/><polygon points="340.0,135.0 343.6,146.0 336.4,146.0" fill="#000"/><text x="348.0" y="139.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">N</text><line x1="340.0" y1="194.0" x2="340.0" y2="226.0" stroke="#000" stroke-width="2.4"/><polygon points="340.0,234.0 336.4,223.0 343.6,223.0" fill="#000"/><text x="348.0" y="232.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">mg</text><line x1="415.0" y1="100.0" x2="415.0" y2="142.0" stroke="#000" stroke-width="2.4"/><polygon points="415.0,150.0 411.4,139.0 418.6,139.0" fill="#000"/><text x="425.0" y="128.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">a</text><text x="340.0" y="258.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">lift accelerating DOWNWARD</text><text x="110.0" y="16.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">N = m(g + a)</text><text x="340.0" y="16.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">N = m(g − a)</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.7:</strong> Forces on a body inside a lift. The reading of a weighing scale is the normal reaction N</div>
-            </div>
-            <table>
-                <tr><th>Motion of the lift</th><th>Equation</th><th>Apparent weight N</th></tr>
-                <tr><td>At rest or at constant velocity</td><td>N − mg = 0</td><td>mg</td></tr>
-                <tr><td>Accelerating upward (a)</td><td>N − mg = ma</td><td><strong>m(g + a)</strong> (greater)</td></tr>
-                <tr><td>Accelerating downward (a)</td><td>mg − N = ma</td><td><strong>m(g − a)</strong> (smaller)</td></tr>
-                <tr><td>Free fall (a = g), e.g. cable breaks</td><td>mg − N = mg</td><td><strong>0</strong> (weightlessness)</td></tr>
-            </table>
-
-            <div class="example">
-                <h4>Example 4.5 — Atwood's machine</h4>
-                <p>Masses of 5 kg and 3 kg hang over a light pulley (g = 9.8 m s⁻²). Find a and T.</p>
-                <div class="formula">
-                    a = (5 − 3)(9.8)/(5 + 3) = <strong>2.45 m s⁻²</strong>
-                    <br>
-                    T = 2(5)(3)(9.8)/8 = <strong>36.75 N</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.6 — Block and hanging mass</h4>
-                <p>A 4 kg block on a smooth table is joined by a string over a pulley to a 1 kg mass hanging at the edge. Find a and T.</p>
-                <div class="formula">
-                    a = (1)(9.8)/(4 + 1) = <strong>1.96 m s⁻²</strong>
-                    <br>
-                    T = (4)(1)(9.8)/5 = <strong>7.84 N</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.7 — Lift</h4>
-                <p>A 60 kg man stands on a weighing scale in a lift accelerating at 2 m s⁻². What does the scale read when the lift (a) goes up, (b) goes down? (g = 9.8 m s⁻²)</p>
-                <div class="formula">
-                    (a) N = m(g + a) = 60 × 11.8 = <strong>708 N</strong>
-                    <br>
-                    (b) N = m(g − a) = 60 × 7.8 = <strong>468 N</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>4.4 Moment, Torque and Equilibrium</h2>
-
-            <h3>4.4(a) Moment of a Force (Torque)</h3>
-            <p>The <strong>moment of a force</strong> (torque) about a point is the turning effect of the force about that point. Its magnitude is the force times the <strong>perpendicular distance</strong> from the point to the line of action of the force:</p>
-
-            <div class="diagram"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;height:auto;background:#fff"><rect width="480" height="300" fill="#fff"/><line x1="70.0" y1="170.0" x2="250.0" y2="170.0" stroke="#000" stroke-width="2.2"/><circle cx="70.0" cy="170.0" r="4" fill="#000"/><line x1="49.0" y1="174.0" x2="43.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="56.0" y1="174.0" x2="50.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="63.0" y1="174.0" x2="57.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="70.0" y1="174.0" x2="64.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="77.0" y1="174.0" x2="71.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="84.0" y1="174.0" x2="78.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="91.0" y1="174.0" x2="85.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="175.6" y1="258.6" x2="250.0" y2="170.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="250.0" y1="170.0" x2="275.7" y2="139.4" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="250.0" y1="170.0" x2="318.8" y2="88.0" stroke="#000" stroke-width="2.4"/><polygon points="323.9,81.9 319.6,92.7 314.1,88.0" fill="#000"/><line x1="70.0" y1="170.0" x2="175.6" y2="258.6" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><polyline points="168.7,252.8 174.5,246.0 181.4,251.7" fill="none" stroke="#000" stroke-width="1.1"/><path d="M288.0,170.0 A38,38 0 0 0 274.4,140.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="302.0" y="160.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><line x1="250.0" y1="170.0" x2="310.0" y2="170.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><text x="60.0" y="160.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">O (pivot)</text><text x="160.0" y="158.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">r</text><text x="331.9" y="77.9" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">F</text><text x="100.8" y="218.3" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">d</text><text x="420.0" y="238.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">d = r sin θ</text><text x="420.0" y="260.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">τ = F × d = rF sin θ</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.8:</strong> Torque about the pivot O. The perpendicular distance d = r sin θ is measured to the line of action of F</div>
-            </div>
-
-            <div class="formula">
-                τ = F × d = rF sin θ
-                <br>
-                In vector form: <strong>τ = r × F</strong>
-            </div>
-            <p>SI unit: N m; dimensions [ML²T⁻²]. By convention, anticlockwise torque is positive and clockwise torque is negative. The torque is zero if the line of action passes through the pivot (d = 0) or if F ∥ r (θ = 0° or 180°). The torque is maximum when F ⊥ r. This is why a door is easier to open when pushed far from the hinge, and at right angles to the door.</p>
-
-            <h3>4.4(b) Couple</h3>
-            <p>Two equal and opposite parallel forces whose lines of action do not coincide form a <strong>couple</strong>. It produces rotation without translation, because the net force is zero.</p>
-
-            <div class="diagram"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:720px;height:auto;background:#fff"><rect width="480" height="290" fill="#fff"/><line x1="150.0" y1="150.0" x2="330.0" y2="150.0" stroke="#000" stroke-width="2.2"/><circle cx="150.0" cy="150.0" r="4" fill="#000"/><circle cx="330.0" cy="150.0" r="4" fill="#000"/><line x1="150.0" y1="150.0" x2="150.0" y2="78.0" stroke="#000" stroke-width="2.4"/><polygon points="150.0,70.0 153.6,81.0 146.4,81.0" fill="#000"/><line x1="330.0" y1="150.0" x2="330.0" y2="222.0" stroke="#000" stroke-width="2.4"/><polygon points="330.0,230.0 326.4,219.0 333.6,219.0" fill="#000"/><line x1="150.0" y1="150.0" x2="150.0" y2="255.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><line x1="330.0" y1="150.0" x2="330.0" y2="255.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><text x="138.0" y="78.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">F</text><text x="342.0" y="236.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#000">F</text><text x="136.0" y="170.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A</text><text x="330.0" y="132.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">B</text><line x1="150.0" y1="250.0" x2="330.0" y2="250.0" stroke="#000" stroke-width="1"/><polygon points="150.0,250.0 158.0,247.4 158.0,252.6" fill="#000"/><polygon points="330.0,250.0 322.0,252.6 322.0,247.4" fill="#000"/><line x1="150.0" y1="245.0" x2="150.0" y2="255.0" stroke="#000" stroke-width="1"/><line x1="330.0" y1="245.0" x2="330.0" y2="255.0" stroke="#000" stroke-width="1"/><text x="240.0" y="244.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">d</text><path d="M205,115 A45,45 0 0 1 275,115" fill="none" stroke="#000" stroke-width="1.6"/><polygon points="276.0,116.0 264.6,113.7 268.3,107.4" fill="#000"/><text x="240.0" y="80.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">turning effect</text><text x="240.0" y="285.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">Moment of couple = F × d</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.9:</strong> A couple: equal and opposite forces F separated by perpendicular distance d</div>
-            </div>
-
-            <div class="formula">
-                Moment of a couple = F × d
-            </div>
-            <p>The moment of a couple is the same about <em>any</em> point. Examples: turning a steering wheel with both hands, opening a tap, turning a key.</p>
-
-            <h3>4.4(c) Equilibrium of a Rigid Body</h3>
-            <p>A rigid body is in <strong>equilibrium</strong> when it has no linear acceleration and no angular acceleration:</p>
-            <div class="key-points">
-                <h4>Conditions of equilibrium:</h4>
-                <ul>
-                    <li><strong>Translational:</strong> the vector sum of all external forces is zero, ΣF = 0.</li>
-                    <li><strong>Rotational:</strong> the sum of the torques about any point is zero, Στ = 0. This is the <strong>principle of moments</strong>: the total clockwise moment equals the total anticlockwise moment about any point.</li>
-                </ul>
-            </div>
-
-            <div class="diagram"><svg viewBox="0 0 500 330" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:750px;height:auto;background:#fff"><rect width="500" height="330" fill="#fff"/><rect x="60" y="110" width="380" height="16" fill="#fff" stroke="#000" stroke-width="2.2"/><polygon points="100,126 88,152 112,152" fill="#fff" stroke="#000" stroke-width="2"/><polygon points="400,126 388,152 412,152" fill="#fff" stroke="#000" stroke-width="2"/><line x1="70.0" y1="152.0" x2="430.0" y2="152.0" stroke="#000" stroke-width="2"/><line x1="79.0" y1="152.0" x2="70.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="91.0" y1="152.0" x2="82.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="103.0" y1="152.0" x2="94.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="115.0" y1="152.0" x2="106.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="127.0" y1="152.0" x2="118.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="139.0" y1="152.0" x2="130.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="151.0" y1="152.0" x2="142.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="163.0" y1="152.0" x2="154.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="175.0" y1="152.0" x2="166.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="187.0" y1="152.0" x2="178.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="199.0" y1="152.0" x2="190.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="211.0" y1="152.0" x2="202.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="223.0" y1="152.0" x2="214.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="235.0" y1="152.0" x2="226.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="247.0" y1="152.0" x2="238.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="259.0" y1="152.0" x2="250.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="271.0" y1="152.0" x2="262.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="283.0" y1="152.0" x2="274.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="295.0" y1="152.0" x2="286.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="307.0" y1="152.0" x2="298.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="319.0" y1="152.0" x2="310.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="331.0" y1="152.0" x2="322.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="343.0" y1="152.0" x2="334.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="355.0" y1="152.0" x2="346.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="367.0" y1="152.0" x2="358.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="379.0" y1="152.0" x2="370.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="391.0" y1="152.0" x2="382.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="403.0" y1="152.0" x2="394.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="415.0" y1="152.0" x2="406.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="427.0" y1="152.0" x2="418.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="430.0" y1="152.0" x2="430.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="170.0" y1="58.0" x2="170.0" y2="102.0" stroke="#000" stroke-width="2.4"/><polygon points="170.0,110.0 166.4,99.0 173.6,99.0" fill="#000"/><text x="178.0" y="76.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">W<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><line x1="250.0" y1="58.0" x2="250.0" y2="102.0" stroke="#000" stroke-width="2.4"/><polygon points="250.0,110.0 246.4,99.0 253.6,99.0" fill="#000"/><text x="258.0" y="76.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">W</text><line x1="100.0" y1="208.0" x2="100.0" y2="168.0" stroke="#000" stroke-width="2.4"/><polygon points="100.0,160.0 103.6,171.0 96.4,171.0" fill="#000"/><text x="110.0" y="200.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">R<tspan dy="4" font-size="10">A</tspan><tspan dy="-4"></tspan></text><line x1="400.0" y1="208.0" x2="400.0" y2="168.0" stroke="#000" stroke-width="2.4"/><polygon points="400.0,160.0 403.6,171.0 396.4,171.0" fill="#000"/><text x="410.0" y="200.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">R<tspan dy="4" font-size="10">B</tspan><tspan dy="-4"></tspan></text><text x="100.0" y="234.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">A</text><text x="400.0" y="234.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">B</text><line x1="100.0" y1="258.0" x2="170.0" y2="258.0" stroke="#000" stroke-width="1"/><polygon points="100.0,258.0 108.0,255.4 108.0,260.6" fill="#000"/><polygon points="170.0,258.0 162.0,260.6 162.0,255.4" fill="#000"/><line x1="100.0" y1="253.0" x2="100.0" y2="263.0" stroke="#000" stroke-width="1"/><line x1="170.0" y1="253.0" x2="170.0" y2="263.0" stroke="#000" stroke-width="1"/><text x="135.0" y="252.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">x<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"></tspan></text><line x1="100.0" y1="278.0" x2="250.0" y2="278.0" stroke="#000" stroke-width="1"/><polygon points="100.0,278.0 108.0,275.4 108.0,280.6" fill="#000"/><polygon points="250.0,278.0 242.0,280.6 242.0,275.4" fill="#000"/><line x1="100.0" y1="273.0" x2="100.0" y2="283.0" stroke="#000" stroke-width="1"/><line x1="250.0" y1="273.0" x2="250.0" y2="283.0" stroke="#000" stroke-width="1"/><text x="175.0" y="272.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">x<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"></tspan></text><line x1="100.0" y1="298.0" x2="400.0" y2="298.0" stroke="#000" stroke-width="1"/><polygon points="100.0,298.0 108.0,295.4 108.0,300.6" fill="#000"/><polygon points="400.0,298.0 392.0,300.6 392.0,295.4" fill="#000"/><line x1="100.0" y1="293.0" x2="100.0" y2="303.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="293.0" x2="400.0" y2="303.0" stroke="#000" stroke-width="1"/><text x="310.0" y="292.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">L</text><text x="250.0" y="20.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">W = weight of beam acting at its centre</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.10:</strong> A uniform beam of weight W resting on two supports A and B and carrying a load W₁</div>
-            </div>
-
-            <div class="derivation">
-                <h4>Reactions at the supports</h4>
-                <p>For equilibrium of the beam in Fig 4.10 (weight W at the middle, load W₁ at distance x₁ from A):</p>
-                <div class="formula">
-                    Translational: R<sub>A</sub> + R<sub>B</sub> = W₁ + W
-                    <br>
-                    Torques about A: R<sub>B</sub> L = W₁ x₁ + W x₂   (x₂ = L/2 for a uniform beam)
-                    <br>
-                    <strong>R<sub>B</sub> = (W₁ x₁ + W x₂) / L</strong> ,   R<sub>A</sub> = W₁ + W − R<sub>B</sub>
-                </div>
-                <p>Taking moments about the point where an unknown force acts removes that force from the equation. That is why A was chosen as the pivot.</p>
-            </div>
-
-            <div class="key-points">
-                <h4>Centre of gravity and stability:</h4>
-                <ul>
-                    <li>The <strong>centre of gravity</strong> is the point where the whole weight of a body can be taken to act. For a uniform regular body it is the geometric centre.</li>
-                    <li><strong>Stable equilibrium:</strong> the body returns to its position after a small disturbance (centre of gravity rises).</li>
-                    <li><strong>Unstable equilibrium:</strong> the body moves further away (centre of gravity falls).</li>
-                    <li><strong>Neutral equilibrium:</strong> the body stays in its new position (centre of gravity stays at the same height), e.g. a ball on a level table.</li>
-                    <li>A body with a low centre of gravity and a wide base is more stable.</li>
-                </ul>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.8 — Torque</h4>
-                <p>A force of 20 N acts perpendicular to a spanner at 0.25 m from the nut. Find the torque.</p>
-                <div class="formula">
-                    τ = F d = 20 × 0.25 = <strong>5 N m</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.9 — Couple</h4>
-                <p>Two forces of 10 N each, equal and opposite, act on a wheel at points 0.3 m apart. Find the moment of the couple.</p>
-                <div class="formula">
-                    Moment = F × d = 10 × 0.3 = <strong>3 N m</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.10 — Beam on two supports</h4>
-                <p>A uniform beam of length 4 m and weight 100 N rests on supports at its two ends. A load of 200 N hangs 1 m from end A. Find the reactions at A and B.</p>
-                <div class="formula">
-                    Moments about A: R<sub>B</sub> × 4 = 200 × 1 + 100 × 2 = 400 ⇒ R<sub>B</sub> = <strong>100 N</strong>
-                    <br>
-                    R<sub>A</sub> + R<sub>B</sub> = 300 ⇒ R<sub>A</sub> = <strong>200 N</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>4.5 Solid Friction: Laws of Solid Friction and Their Verification</h2>
-
-            <p><strong>Friction</strong> is the force that opposes the relative motion, or the tendency of relative motion, between two surfaces in contact. It acts <em>along</em> the surfaces and arises from the roughness (and molecular adhesion) of the surfaces.</p>
-
-            <h3>4.5(a) Types of Friction</h3>
-            <div class="key-points">
-                <ul>
-                    <li><strong>Static friction (f<sub>s</sub>):</strong> acts when there is no relative motion. It adjusts itself to equal the applied force, up to a maximum value.</li>
-                    <li><strong>Limiting friction (f<sub>s,max</sub>):</strong> the maximum static friction, just when the body is about to slide.</li>
-                    <li><strong>Kinetic (sliding) friction (f<sub>k</sub>):</strong> acts when one surface slides over the other. It is slightly less than limiting friction.</li>
-                    <li><strong>Rolling friction:</strong> acts when a body rolls over a surface; it is much smaller than sliding friction.</li>
-                </ul>
-            </div>
-
-            <div class="diagram"><svg viewBox="0 0 520 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:780px;height:auto;background:#fff"><rect width="520" height="290" fill="#fff"/><line x1="70.0" y1="230.0" x2="490.0" y2="230.0" stroke="#000" stroke-width="1.2"/><polygon points="490.0,230.0 481.0,233.0 481.0,227.0" fill="#000"/><line x1="70.0" y1="230.0" x2="70.0" y2="30.0" stroke="#000" stroke-width="1.2"/><polygon points="70.0,30.0 73.0,39.0 67.0,39.0" fill="#000"/><text x="486.0" y="248.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">F</text><text x="60.0" y="36.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">f</text><text x="62.0" y="246.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">O</text><text x="465.0" y="252.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">applied force</text><line x1="70.0" y1="230.0" x2="230.0" y2="70.0" stroke="#000" stroke-width="2.4"/><line x1="230.0" y1="70.0" x2="262.0" y2="120.0" stroke="#000" stroke-width="2.4"/><line x1="262.0" y1="120.0" x2="430.0" y2="120.0" stroke="#000" stroke-width="2.4"/><line x1="230.0" y1="70.0" x2="230.0" y2="230.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="70.0" y1="70.0" x2="230.0" y2="70.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><circle cx="230.0" cy="70.0" r="4" fill="#000"/><text x="60.0" y="74.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">f<tspan dy="4" font-size="10">s</tspan><tspan dy="-4"></tspan></text><text x="238.0" y="58.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">limiting friction (just about to slide)</text><line x1="70.0" y1="120.0" x2="262.0" y2="120.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><text x="60.0" y="124.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">f<tspan dy="4" font-size="10">k</tspan><tspan dy="-4"></tspan></text><text x="346.0" y="108.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">kinetic friction f  (constant)</text><text x="160.0" y="200.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">static friction</text><text x="160.0" y="216.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">f = F  (body at rest)</text><text x="346.0" y="150.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">body sliding</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.11:</strong> Friction against applied force. Static friction rises equal to F up to the limiting value; once the body slides, friction drops to a smaller, nearly constant kinetic value</div>
-            </div>
-
-            <h3>4.5(b) Laws of Solid Friction</h3>
-            <div class="key-points">
-                <ol>
-                    <li>Friction acts tangentially to the surfaces in contact and opposes the (impending) relative motion.</li>
-                    <li>The limiting friction is <strong>independent of the apparent area of contact</strong>, as long as the normal reaction stays the same.</li>
-                    <li>The limiting friction is <strong>directly proportional to the normal reaction</strong> N between the surfaces.</li>
-                    <li>Kinetic friction is less than limiting friction, and is nearly independent of the speed of sliding (for moderate speeds).</li>
-                    <li>Friction depends on the nature (material and roughness) of the two surfaces.</li>
-                </ol>
-            </div>
-
-            <h3>4.5(c) Coefficient of Friction</h3>
-            <p>From law 3, the ratio of limiting friction to the normal reaction is a constant for a given pair of surfaces. It has no unit:</p>
-            <div class="formula">
-                Coefficient of static friction:  μ<sub>s</sub> = f<sub>s,max</sub> / N
-                <br>
-                Coefficient of kinetic friction:  μ<sub>k</sub> = f<sub>k</sub> / N     (μ<sub>k</sub> &lt; μ<sub>s</sub>)
-                <br>
-                <strong>f ≤ μ N</strong> for static friction ;   <strong>f = μ<sub>k</sub> N</strong> when sliding
-            </div>
-
-            <h3>4.5(d) Angle of Friction and Angle of Repose</h3>
-            <p>The <strong>angle of friction</strong> λ is the angle between the normal reaction and the resultant of the normal reaction and limiting friction: tan λ = f/N = μ. The <strong>angle of repose</strong> α is the maximum angle of an inclined plane at which a body placed on it just remains at rest.</p>
-
-            <div class="diagram"><svg viewBox="0 0 470 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:705px;height:auto;background:#fff"><rect width="470" height="290" fill="#fff"/><line x1="40.0" y1="245.0" x2="390.0" y2="245.0" stroke="#000" stroke-width="2"/><line x1="390.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2"/><line x1="40.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2.4"/><path d="M100.0,245.0 A60,60 0 0 0 92.0,215.0" fill="none" stroke="#000" stroke-width="1.2"/><text x="116.0" y="237.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">θ</text><polygon points="190.7,158.0 235.7,132.0 211.7,90.4 166.7,116.4" fill="#fff" stroke="#000" stroke-width="2"/><line x1="201.2" y1="124.2" x2="201.2" y2="212.2" stroke="#000" stroke-width="2.8"/><polygon points="201.2,220.2 197.6,209.2 204.8,209.2" fill="#000"/><line x1="201.2" y1="124.2" x2="163.7" y2="59.2" stroke="#000" stroke-width="2.8"/><polygon points="159.7,52.2 168.3,60.0 162.0,63.6" fill="#000"/><line x1="201.2" y1="124.2" x2="166.6" y2="144.2" stroke="#000" stroke-width="1.6"/><polygon points="159.6,148.2 167.3,139.6 171.0,145.9" fill="#000"/><line x1="201.2" y1="124.2" x2="238.8" y2="189.3" stroke="#000" stroke-width="1.6"/><polygon points="242.8,196.2 234.1,188.5 240.4,184.8" fill="#000"/><line x1="159.6" y1="148.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="242.8" y1="196.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><circle cx="201.2" cy="124.2" r="3" fill="#000"/><text x="209.2" y="230.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">mg</text><text x="149.7" y="48.2" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">N</text><text x="153.6" y="144.2" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">mg sin θ</text><text x="252.8" y="210.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">mg cos θ</text><line x1="201.2" y1="124.2" x2="235.8" y2="104.2" stroke="#000" stroke-width="2.8"/><polygon points="242.8,100.2 235.1,108.9 231.4,102.6" fill="#000"/><text x="250.8" y="94.2" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#000">f</text><text x="235.0" y="278.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">limiting equilibrium: f = mg sin θ ,  N = mg cos θ</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.12:</strong> A block on a rough inclined plane at the angle of repose: friction f acts up the slope</div>
-            </div>
-
-            <div class="derivation">
-                <h4>Angle of repose equals angle of friction</h4>
-                <p>At the limiting angle α the block is about to slide, so friction takes its maximum value:</p>
-                <div class="formula">
-                    Along the plane: f = mg sin α
-                    <br>
-                    Perpendicular to the plane: N = mg cos α
-                    <br>
-                    μ = f / N = mg sin α / mg cos α
-                    <br>
-                    <strong>μ = tan α</strong>   (so α = λ)
-                </div>
-            </div>
-
-            <h3>4.5(e) Verification of the Laws of Friction</h3>
-
-            <h4>Method 1: Inclined plane (angle of repose)</h4>
-            <div class="key-points">
-                <ul>
-                    <li>Place a rectangular wooden block on a plane whose inclination can be changed. Raise the plane slowly until the block just begins to slide. Measure the angle α (from the height and length of the plane); then μ = tan α.</li>
-                    <li><strong>Law 2:</strong> Repeat with the block resting on a smaller face (different area). The angle α, hence μ, is almost unchanged.</li>
-                    <li><strong>Law 3:</strong> Add weights on the block (N increases). The block still slides at the same α, so μ = f/N stays constant, which shows f ∝ N.</li>
-                    <li><strong>Law 5:</strong> Change the surface (rubber, glass, wood) and α changes.</li>
-                </ul>
-            </div>
-
-            <h4>Method 2: Horizontal surface with a pulley</h4>
-            <div class="diagram"><svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:690px;height:auto;background:#fff"><rect width="460" height="300" fill="#fff"/><line x1="30.0" y1="130.0" x2="315.0" y2="130.0" stroke="#000" stroke-width="2"/><line x1="315.0" y1="130.0" x2="315.0" y2="175.0" stroke="#000" stroke-width="2"/><line x1="40.0" y1="130.0" x2="31.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="52.0" y1="130.0" x2="43.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="64.0" y1="130.0" x2="55.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="76.0" y1="130.0" x2="67.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="88.0" y1="130.0" x2="79.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="100.0" y1="130.0" x2="91.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="112.0" y1="130.0" x2="103.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="124.0" y1="130.0" x2="115.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="136.0" y1="130.0" x2="127.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="148.0" y1="130.0" x2="139.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="160.0" y1="130.0" x2="151.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="172.0" y1="130.0" x2="163.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="184.0" y1="130.0" x2="175.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="196.0" y1="130.0" x2="187.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="208.0" y1="130.0" x2="199.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="220.0" y1="130.0" x2="211.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="232.0" y1="130.0" x2="223.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="244.0" y1="130.0" x2="235.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="256.0" y1="130.0" x2="247.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="268.0" y1="130.0" x2="259.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="130.0" x2="271.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="292.0" y1="130.0" x2="283.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="304.0" y1="130.0" x2="295.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="40.0" y1="130.0" x2="31.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="52.0" y1="130.0" x2="43.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="64.0" y1="130.0" x2="55.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="76.0" y1="130.0" x2="67.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="88.0" y1="130.0" x2="79.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="100.0" y1="130.0" x2="91.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="112.0" y1="130.0" x2="103.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="124.0" y1="130.0" x2="115.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="136.0" y1="130.0" x2="127.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="148.0" y1="130.0" x2="139.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="160.0" y1="130.0" x2="151.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="172.0" y1="130.0" x2="163.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="184.0" y1="130.0" x2="175.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="196.0" y1="130.0" x2="187.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="208.0" y1="130.0" x2="199.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="220.0" y1="130.0" x2="211.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="232.0" y1="130.0" x2="223.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="244.0" y1="130.0" x2="235.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="256.0" y1="130.0" x2="247.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="268.0" y1="130.0" x2="259.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="280.0" y1="130.0" x2="271.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="292.0" y1="130.0" x2="283.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="304.0" y1="130.0" x2="295.0" y2="139.0" stroke="#000" stroke-width="1.6"/><rect x="110" y="90" width="60" height="40" fill="#fff" stroke="#000" stroke-width="2"/><text x="140.0" y="115.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">M</text><circle cx="330" cy="118" r="18" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="330.0" cy="118.0" r="2.5" fill="#000"/><line x1="170.0" y1="100.0" x2="330.0" y2="100.0" stroke="#000" stroke-width="1.6"/><path d="M330,100 A18,18 0 0 1 348,118" fill="none" stroke="#000" stroke-width="1.6"/><line x1="348.0" y1="118.0" x2="348.0" y2="205.0" stroke="#000" stroke-width="1.6"/><rect x="318" y="205" width="60" height="38" fill="#fff" stroke="#000" stroke-width="2"/><text x="348.0" y="229.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">pan + m</text><line x1="348.0" y1="243.0" x2="348.0" y2="274.0" stroke="#000" stroke-width="2.4"/><polygon points="348.0,282.0 344.4,271.0 351.6,271.0" fill="#000"/><text x="362.0" y="270.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">mg</text><text x="358.0" y="168.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">T</text><text x="250.0" y="92.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">T</text><line x1="108.0" y1="110.0" x2="68.0" y2="110.0" stroke="#000" stroke-width="2.4"/><polygon points="60.0,110.0 71.0,106.4 71.0,113.6" fill="#000"/><text x="84.0" y="102.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">f</text><line x1="140.0" y1="90.0" x2="140.0" y2="60.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,52.0 143.6,63.0 136.4,63.0" fill="#000"/><text x="152.0" y="64.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">N</text><line x1="140.0" y1="130.0" x2="140.0" y2="162.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,170.0 136.4,159.0 143.6,159.0" fill="#000"/><text x="152.0" y="160.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#000">Mg</text><text x="60.0" y="200.0" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#000">rough horizontal surface</text></svg>
-                <div class="diagram-caption"><strong>Figure 4.13:</strong> Block of mass M on a rough horizontal surface pulled by a pan loaded with weights through a string over a pulley</div>
-            </div>
-            <div class="key-points">
-                <ul>
-                    <li>Put weights on the pan until the block just begins to move (limiting friction), or gives a small push and moves with uniform velocity (kinetic friction).</li>
-                    <li>Then the tension T = mg balances friction: <strong>f = mg</strong>, and N = Mg.</li>
-                    <li><strong>μ = f / N = m / M</strong>.</li>
-                    <li><strong>Law 3:</strong> Place extra masses on the block (M increases) and find the new m. A graph of m against M is a straight line through the origin, so f ∝ N.</li>
-                    <li><strong>Law 2:</strong> Turn the block on a different face; m remains almost the same.</li>
-                </ul>
-            </div>
-
-            <h3>4.5(f) Advantages, Disadvantages and Reduction of Friction</h3>
-            <div class="key-points">
-                <ul>
-                    <li><strong>Useful:</strong> walking, braking, holding objects, nails and screws gripping, belts on pulleys.</li>
-                    <li><strong>Harmful:</strong> wear and tear, heat loss and waste of energy in machines.</li>
-                    <li><strong>Reduced by:</strong> lubricants (oil, grease), ball and roller bearings (rolling in place of sliding), polishing surfaces, streamlining.</li>
-                </ul>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.11 — Static and kinetic friction</h4>
-                <p>A 5 kg block rests on a horizontal floor with μ<sub>s</sub> = 0.4 and μ<sub>k</sub> = 0.3 (g = 9.8 m s⁻²). Find the friction if the block is pushed with (a) 15 N, (b) 25 N, and the acceleration in case (b).</p>
-                <div class="formula">
-                    N = mg = 49 N ;  f<sub>s,max</sub> = 0.4 × 49 = 19.6 N
-                    <br>
-                    (a) 15 N &lt; 19.6 N: the block stays at rest and f = <strong>15 N</strong> (static)
-                    <br>
-                    (b) 25 N &gt; 19.6 N: the block slides; f<sub>k</sub> = 0.3 × 49 = <strong>14.7 N</strong>
-                    <br>
-                    a = (25 − 14.7) / 5 = <strong>2.06 m s⁻²</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.12 — Angle of repose</h4>
-                <p>A block just begins to slide when a plane is tilted to 25°. Find the coefficient of static friction.</p>
-                <div class="formula">
-                    μ = tan 25° = <strong>0.466</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 4.13 — Horizontal method</h4>
-                <p>A 2 kg block moves with uniform velocity when the pan with weights has mass 0.6 kg. Find μ<sub>k</sub>.</p>
-                <div class="formula">
-                    μ<sub>k</sub> = m / M = 0.6 / 2 = <strong>0.3</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Key Formulas and Summary</h2>
-
-            <div class="key-points">
-                <h4>Momentum and Impulse:</h4>
-                <div class="formula">
-                    p = mv ,  F = dp/dt
-                    <br>
-                    J = F Δt = Δp = mv − mu
-                    <br>
-                    m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂    (no external force)
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Collisions and Recoil:</h4>
-                <div class="formula">
-                    Elastic: u₁ − u₂ = v₂ − v₁
-                    <br>
-                    Perfectly inelastic: v = (m₁u₁ + m₂u₂)/(m₁ + m₂)
-                    <br>
-                    Gun recoil: V = −mv/M
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Applications of Newton's Laws:</h4>
-                <div class="formula">
-                    Atwood: a = (m₁ − m₂)g/(m₁ + m₂) ,  T = 2m₁m₂g/(m₁ + m₂)
-                    <br>
-                    Table + hanging mass: a = m₂g/(m₁ + m₂) ,  T = m₁m₂g/(m₁ + m₂)
-                    <br>
-                    Smooth incline: a = g sin θ
-                    <br>
-                    Lift: N = m(g ± a)
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Torque, Equilibrium and Friction:</h4>
-                <div class="formula">
-                    τ = rF sin θ = F d ,  couple = F d
-                    <br>
-                    ΣF = 0 ,  Στ = 0
-                    <br>
-                    f = μN ,  μ = tan α (angle of repose)
-                    <br>
-                    Horizontal method: μ = m/M
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Practice Numerical Problems</h2>
-            <p>Take g = 9.8 m s⁻² unless stated otherwise. Attempt each problem before reading the answer.</p>
-
-            <div class="numerical">
-                <div class="question">1. Find the momentum of a 1000 kg car moving at 72 km h⁻¹.</div>
-                <p><strong>Answer:</strong> v = 20 m s⁻¹; p = <strong>2 × 10⁴ kg m s⁻¹</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">2. A force of 50 N acts for 0.2 s on a 0.5 kg ball at rest. Find the impulse and the final speed.</div>
-                <p><strong>Answer:</strong> J = 50 × 0.2 = <strong>10 N s</strong>; v = J/m = <strong>20 m s⁻¹</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">3. A 0.2 kg ball strikes a wall at 10 m s⁻¹ and rebounds at 10 m s⁻¹. The contact time is 0.02 s. Find the average force on the ball.</div>
-                <p><strong>Answer:</strong> Δp = 0.2 × (10 + 10) = 4 N s; F = 4/0.02 = <strong>200 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">4. A rifle of mass 3 kg fires a 10 g bullet at 300 m s⁻¹. Find the recoil velocity of the rifle.</div>
-                <p><strong>Answer:</strong> V = 0.01 × 300/3 = <strong>1 m s⁻¹</strong> (opposite to the bullet).</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">5. A 3 kg body moving at 4 m s⁻¹ collides with a 1 kg body at rest and they stick together. Find the common velocity and the loss of kinetic energy.</div>
-                <p><strong>Answer:</strong> v = 12/4 = <strong>3 m s⁻¹</strong>; K<sub>i</sub> = 24 J, K<sub>f</sub> = ½(4)(9) = 18 J; loss = <strong>6 J</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">6. A 2 kg ball moving at 5 m s⁻¹ collides elastically head-on with a stationary 2 kg ball. Find the velocities after the collision.</div>
-                <p><strong>Answer:</strong> Equal masses exchange velocities: v₁ = <strong>0</strong>, v₂ = <strong>5 m s⁻¹</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">7. In an Atwood machine the masses are 6 kg and 4 kg. Find the acceleration and the tension.</div>
-                <p><strong>Answer:</strong> a = 2 × 9.8/10 = <strong>1.96 m s⁻²</strong>; T = 2(6)(4)(9.8)/10 = <strong>47.04 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">8. A 2 kg block on a smooth table is pulled by a 3 kg mass hanging over a pulley. Find a and T.</div>
-                <p><strong>Answer:</strong> a = 3 × 9.8/5 = <strong>5.88 m s⁻²</strong>; T = 2 × 3 × 9.8/5 = <strong>11.76 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">9. A 50 kg person stands on a scale in a lift accelerating at 1.5 m s⁻². Find the reading when the lift goes up and when it goes down.</div>
-                <p><strong>Answer:</strong> Up: 50 × (9.8 + 1.5) = <strong>565 N</strong>; down: 50 × (9.8 − 1.5) = <strong>415 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">10. A 5 kg block slides down a smooth plane inclined at 37° (sin 37° = 0.6). Find its acceleration and the normal reaction.</div>
-                <p><strong>Answer:</strong> a = g sin θ = <strong>5.88 m s⁻²</strong>; N = mg cos θ = 5 × 9.8 × 0.8 = <strong>39.2 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">11. A force of 40 N acts at 30° to a 0.5 m rod, at its end, about the other end. Find the torque.</div>
-                <p><strong>Answer:</strong> τ = rF sin θ = 0.5 × 40 × 0.5 = <strong>10 N m</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">12. A uniform plank 6 m long weighing 120 N rests on supports at its ends. A 180 N child stands 2 m from the left end. Find the reactions.</div>
-                <p><strong>Answer:</strong> About the left end: R<sub>B</sub> × 6 = 180 × 2 + 120 × 3 = 720 ⇒ R<sub>B</sub> = <strong>120 N</strong>; R<sub>A</sub> = 300 − 120 = <strong>180 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">13. A 20 kg box rests on a floor with μ<sub>s</sub> = 0.3. What force just starts it moving?</div>
-                <p><strong>Answer:</strong> f<sub>s,max</sub> = 0.3 × 20 × 9.8 = <strong>58.8 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">14. A block just slides on a plane when it is tilted at 30°. Find μ and the friction force on a 2 kg block at that angle.</div>
-                <p><strong>Answer:</strong> μ = tan 30° ≈ <strong>0.577</strong>; f = mg sin 30° = 2 × 9.8 × 0.5 = <strong>9.8 N</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">15. In the horizontal friction experiment a 4 kg block moves uniformly when the pan and weights total 1.2 kg. Find μ<sub>k</sub> and the friction force.</div>
-                <p><strong>Answer:</strong> μ<sub>k</sub> = 1.2/4 = <strong>0.3</strong>; f = mg = 1.2 × 9.8 = <strong>11.76 N</strong>.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Conceptual and Long Answer Questions</h2>
-
-            <div class="mcq-section">
-                <div class="question">1. Why does a cricketer move the hands backward while catching a fast ball?</div>
-                <div class="options"><div class="option">The same change of momentum takes place over a longer time, so the average force on the hands (F = Δp/Δt) is smaller.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">2. Is momentum conserved in an inelastic collision? Is kinetic energy?</div>
-                <div class="options"><div class="option">Momentum is conserved (no external force); kinetic energy is not, as some is converted to heat, sound and deformation.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">3. Why does a gun recoil when it fires a bullet?</div>
-                <div class="options"><div class="option">Momentum is conserved. The bullet gains forward momentum, so the gun gains an equal and opposite momentum. Its recoil speed is small because its mass is large.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">4. A person standing on a weighing scale in a lift feels lighter in a downward-accelerating lift. Explain.</div>
-                <div class="options"><div class="option">N = m(g − a) &lt; mg, so the scale reading (apparent weight) is less than the true weight. The true weight mg does not change.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">5. Why is it easier to open a door by pushing at the handle than near the hinge?</div>
-                <div class="options"><div class="option">The torque τ = F d increases with the perpendicular distance d from the hinge, so less force gives the same torque.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">6. A couple has zero resultant force. Why does it still turn a body?</div>
-                <div class="options"><div class="option">The two forces have different lines of action, so their torques add and the net torque F × d is not zero; there is rotation without translation.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">7. Why is kinetic friction less than limiting static friction?</div>
-                <div class="options"><div class="option">Once sliding begins, the surface irregularities have less time to interlock and bond, so the resisting force decreases (Fig 4.11).</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">8. State the laws of limiting friction. How would you verify that friction is independent of the area of contact? (Section 4.5)</div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">9. Prove that the angle of repose is equal to the angle of friction. (Section 4.5)</div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">10. Derive the law of conservation of linear momentum from Newton's laws, and obtain the velocities after an elastic collision. (Section 4.2)</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Multiple Choice Questions</h2>
-
-            <div class="mcq-section">
-                <div class="question">1. The SI unit of impulse is:</div>
-                <div class="options">
-                    <div class="option">(a) N</div>
-                    <div class="option">(b) N s ✓</div>
-                    <div class="option">(c) N m</div>
-                    <div class="option">(d) J</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">2. In every collision, if no external force acts, which quantity is conserved?</div>
-                <div class="options">
-                    <div class="option">(a) Kinetic energy</div>
-                    <div class="option">(b) Total linear momentum ✓</div>
-                    <div class="option">(c) Velocity of each body</div>
-                    <div class="option">(d) Speed of each body</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">3. A 2 kg ball at 3 m s⁻¹ hits an identical stationary ball elastically head-on. After the collision, the first ball:</div>
-                <div class="options">
-                    <div class="option">(a) Moves at 3 m s⁻¹</div>
-                    <div class="option">(b) Moves at 1.5 m s⁻¹</div>
-                    <div class="option">(c) Comes to rest ✓</div>
-                    <div class="option">(d) Rebounds at 3 m s⁻¹</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">4. The apparent weight of a person in a lift moving upward with acceleration a is:</div>
-                <div class="options">
-                    <div class="option">(a) mg</div>
-                    <div class="option">(b) m(g − a)</div>
-                    <div class="option">(c) m(g + a) ✓</div>
-                    <div class="option">(d) zero</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">5. The torque is zero when the angle between r and F is:</div>
-                <div class="options">
-                    <div class="option">(a) 90°</div>
-                    <div class="option">(b) 45°</div>
-                    <div class="option">(c) 60°</div>
-                    <div class="option">(d) 0° ✓</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">6. A rigid body is in equilibrium when:</div>
-                <div class="options">
-                    <div class="option">(a) ΣF = 0 only</div>
-                    <div class="option">(b) Στ = 0 only</div>
-                    <div class="option">(c) ΣF = 0 and Στ = 0 ✓</div>
-                    <div class="option">(d) Its velocity is zero</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">7. Limiting friction between two surfaces is directly proportional to:</div>
-                <div class="options">
-                    <div class="option">(a) The area of contact</div>
-                    <div class="option">(b) The normal reaction ✓</div>
-                    <div class="option">(c) The speed of sliding</div>
-                    <div class="option">(d) The volume of the body</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">8. A block just slides on a plane inclined at 45°. The coefficient of static friction is:</div>
-                <div class="options">
-                    <div class="option">(a) 0.5</div>
-                    <div class="option">(b) 0.707</div>
-                    <div class="option">(c) 1 ✓</div>
-                    <div class="option">(d) 1.414</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Grade XI Physics - Momentum, Newton's Laws, Torque and Friction | NEB Curriculum</p>
-        </div>
-    </div>
-</body>
-</html>
+<h2>Unit 4: Dynamics</h2><p>Dynamics studies the <strong>causes</strong> of motion: how forces change the motion of bodies. This unit builds on Newton's three laws to study momentum and impulse, the conservation of linear momentum, applications of Newton's laws, the turning effect of forces (torque) and equilibrium, and solid friction.</p><div class="box tip" data-title="Newton&#x27;s laws of motion (recap)"><ul>
+<li><strong>First law (inertia):</strong> A body stays at rest or in uniform motion in a straight line unless an external net force acts on it.</li>
+<li><strong>Second law:</strong> The rate of change of momentum of a body is proportional to the net force and takes place in the direction of the force: <strong>F = dp/dt</strong>; for constant mass, <strong>F = ma</strong>.</li>
+<li><strong>Third law:</strong> To every action there is an equal and opposite reaction. The two forces act on <em>different</em> bodies.</li>
+</ul></div>
+<h2>4.1 Linear Momentum and Impulse</h2><h3>4.1(a) Linear Momentum</h3><p>The <strong>linear momentum</strong> of a body is the product of its mass and velocity:</p><div class="formula">p = m v</div>
+<p>It is a vector in the direction of the velocity. SI unit: kg m s⁻¹ (equivalently N s); dimensions [MLT⁻¹]. A heavy lorry and a light car at the same speed have different momenta; the lorry is harder to stop.</p><div class="box note" data-title="Newton&#x27;s second law in terms of momentum"><div class="formula">F ∝ rate of change of momentum = (p₂ − p₁)/Δt
+<br>
+<strong>F = Δp / Δt = d(mv)/dt</strong>
+<br>
+For constant mass: F = m (dv/dt) = <strong>ma</strong></div></div>
+<h3>4.1(b) Impulse</h3><p>When a large force acts for a very short time (a bat striking a ball), the product of the force and the time of action is called <strong>impulse</strong>:</p><div class="formula">J = F Δt    (constant force)
+<br>
+J = ∫ F dt    (variable force)</div>
+<p>Its SI unit is N s (the same as kg m s⁻¹), and it is a vector in the direction of the force.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" fill="currentColor" role="img"><rect width="480" height="290" fill="#fff"/><line x1="70.0" y1="225.0" x2="450.0" y2="225.0" stroke="#000" stroke-width="1.2"/><polygon points="450.0,225.0 441.0,228.0 441.0,222.0" fill="#000"/><line x1="70.0" y1="225.0" x2="70.0" y2="30.0" stroke="#000" stroke-width="1.2"/><polygon points="70.0,30.0 73.0,39.0 67.0,39.0" fill="#000"/><text x="446.0" y="243.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">t</text><text x="60.0" y="36.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">F</text><text x="62.0" y="241.0" text-anchor="end" font-size="14" fill="#000">O</text><path d="M130,225 C160,225 180,75 230,75 C280,75 300,225 330,225 Z" fill="#ececec" stroke="none"/><path d="M130,225 C160,225 180,75 230,75 C280,75 300,225 330,225" fill="none" stroke="#000" stroke-width="2.4"/><line x1="130.0" y1="225.0" x2="130.0" y2="236.0" stroke="#000" stroke-width="1"/><line x1="330.0" y1="225.0" x2="330.0" y2="236.0" stroke="#000" stroke-width="1"/><text x="130.0" y="252.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">t<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><text x="330.0" y="252.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">t<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><line x1="70.0" y1="125.0" x2="330.0" y2="125.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><text x="58.0" y="129.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">F<tspan dy="4" font-size="10">av</tspan><tspan dy="-4"/></text><text x="230.0" y="60.0" text-anchor="middle" font-style="italic" font-size="15" fill="#000">F(t)</text><text x="240.0" y="278.0" text-anchor="middle" font-size="13" fill="#000">shaded area = impulse  J = ∫F dt = Δp</text><text x="380.0" y="112.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">F<tspan dy="4" font-size="10">av</tspan><tspan dy="-4"> (t₂ − t₁) = J</tspan></text></svg><p><strong>Figure 4.1:</strong> Force–time graph of a collision. The area under the curve is the impulse. The dashed line is the average force F<sub>av</sub> that would give the same impulse</p>
+<div class="box note" data-title="Impulse–momentum theorem"><p>From F = Δp/Δt:</p>
+<div class="formula">F Δt = Δp = mv − mu
+<br>
+<strong>Impulse = change in momentum</strong></div>
+
+<p>The average force is F<sub>av</sub> = Δp / Δt, so for a given change in momentum, a longer contact time means a smaller force.</p></div>
+<div class="box tip" data-title="Everyday applications"><ul>
+<li>A cricketer pulls the hands back while catching a fast ball: the time of stopping increases, so the force on the hands decreases.</li>
+<li>Car airbags, padded helmets and crumple zones increase the stopping time.</li>
+<li>A person jumping onto sand or a mattress is safer than jumping onto concrete.</li>
+<li>Bending the knees on landing prolongs the stopping time.</li>
+</ul></div>
+<div class="box example" data-title="Example 4.1"><p>A cricket ball of mass 0.15 kg moving at 30 m s⁻¹ is hit back along the same line at 40 m s⁻¹. The contact time is 0.01 s. Find the impulse and the average force.</p>
+<div class="formula">Take the final direction as positive: u = −30 m s⁻¹, v = +40 m s⁻¹
+<br>
+Δp = m(v − u) = 0.15 × (40 + 30) = <strong>10.5 N s</strong>
+<br>
+F<sub>av</sub> = Δp / Δt = 10.5 / 0.01 = <strong>1050 N</strong></div></div>
+<div class="box example" data-title="Example 4.2"><p>A constant force of 20 N acts for 0.5 s on a 2 kg body at rest. Find the impulse and the final speed.</p>
+<div class="formula">J = F Δt = 20 × 0.5 = <strong>10 N s</strong>
+<br>
+J = mv ⇒ v = 10 / 2 = <strong>5 m s⁻¹</strong></div></div>
+<h2>4.2 Conservation of Linear Momentum</h2><p><strong>Statement:</strong> If no external force acts on a system, the total linear momentum of the system remains constant.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 290" fill="currentColor" role="img"><rect width="500" height="290" fill="#fff"/><text x="10.0" y="59.0" text-anchor="start" font-size="13" fill="#000">Before</text><text x="10.0" y="149.0" text-anchor="start" font-size="13" fill="#000">During collision</text><text x="10.0" y="239.0" text-anchor="start" font-size="13" fill="#000">After</text><circle cx="170" cy="55" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="170.0" y="60.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><circle cx="300" cy="55" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="300.0" y="60.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><line x1="190.0" y1="55.0" x2="227.0" y2="55.0" stroke="#000" stroke-width="2.4"/><polygon points="235.0,55.0 224.0,58.6 224.0,51.4" fill="#000"/><text x="210.0" y="41.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">u<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><line x1="320.0" y1="55.0" x2="347.0" y2="55.0" stroke="#000" stroke-width="2.4"/><polygon points="355.0,55.0 344.0,58.6 344.0,51.4" fill="#000"/><text x="338.0" y="41.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">u<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><circle cx="250" cy="145" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="250.0" y="150.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><circle cx="290" cy="145" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="290.0" y="150.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><line x1="226.0" y1="110.0" x2="198.0" y2="110.0" stroke="#000" stroke-width="2.4"/><polygon points="190.0,110.0 201.0,106.4 201.0,113.6" fill="#000"/><text x="208.0" y="103.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">F</text><line x1="314.0" y1="110.0" x2="342.0" y2="110.0" stroke="#000" stroke-width="2.4"/><polygon points="350.0,110.0 339.0,113.6 339.0,106.4" fill="#000"/><text x="332.0" y="103.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">−F</text><text x="270.0" y="187.0" text-anchor="middle" font-size="12" fill="#000">equal and opposite forces for a short time</text><circle cx="300" cy="235" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="300.0" y="240.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><circle cx="400" cy="235" r="20" fill="#fff" stroke="#000" stroke-width="2"/><text x="400.0" y="240.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><line x1="322.0" y1="235.0" x2="344.0" y2="235.0" stroke="#000" stroke-width="2.4"/><polygon points="352.0,235.0 341.0,238.6 341.0,231.4" fill="#000"/><text x="336.0" y="221.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">v<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><line x1="422.0" y1="235.0" x2="462.0" y2="235.0" stroke="#000" stroke-width="2.4"/><polygon points="470.0,235.0 459.0,238.6 459.0,231.4" fill="#000"/><text x="446.0" y="221.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">v<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text></svg><p><strong>Figure 4.2:</strong> Collision of two bodies on a smooth line: before, during and after. During the collision the forces are equal and opposite</p>
+<div class="box note" data-title="Derivation from Newton&#x27;s laws"><p>Two bodies of masses m₁ and m₂ with velocities u₁ and u₂ collide. During contact, body 1 exerts a force F on body 2, and by Newton's third law body 2 exerts −F on body 1 for the same time Δt. After the collision the velocities are v₁ and v₂.</p>
+<div class="formula">Impulse on body 1: −F Δt = m₁(v₁ − u₁)
+<br>
+Impulse on body 2: +F Δt = m₂(v₂ − u₂)
+<br>
+Adding: m₁(v₁ − u₁) + m₂(v₂ − u₂) = 0
+<br>
+<strong>m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</strong></div>
+
+<p>The total momentum before the collision equals the total momentum after it.</p></div>
+<h3>4.2(a) Types of Collision</h3><table>
+<tr><th>Type</th><th>Momentum</th><th>Kinetic energy</th><th>After collision</th></tr>
+<tr><td>Elastic</td><td>Conserved</td><td>Conserved</td><td>Bodies separate</td></tr>
+<tr><td>Inelastic</td><td>Conserved</td><td>Some lost (heat, sound, deformation)</td><td>Bodies separate</td></tr>
+<tr><td>Perfectly inelastic</td><td>Conserved</td><td>Maximum loss</td><td>Bodies stick together</td></tr>
+</table><p>Momentum is conserved in <strong>every</strong> collision where no external force acts; kinetic energy is conserved only in elastic ones.</p><div class="box note" data-title="Elastic collision in one dimension"><p>Conservation of momentum and of kinetic energy give</p>
+<div class="formula">m₁(u₁ − v₁) = m₂(v₂ − u₂)    ... (1)
+<br>
+m₁(u₁² − v₁²) = m₂(v₂² − u₂²)    ... (2)</div>
+
+<p>Dividing (2) by (1):</p>
+<div class="formula">u₁ + v₁ = v₂ + u₂ ⇒ <strong>u₁ − u₂ = v₂ − v₁</strong>
+<br>
+(relative speed of approach = relative speed of separation)</div>
+
+<p>Solving with (1):</p>
+<div class="formula"><strong>v₁ = [(m₁ − m₂)u₁ + 2m₂u₂] / (m₁ + m₂)</strong>
+<br>
+<strong>v₂ = [(m₂ − m₁)u₂ + 2m₁u₁] / (m₁ + m₂)</strong></div></div>
+<div class="box tip" data-title="Special cases of an elastic collision (target at rest, u₂ = 0)"><ul>
+<li><strong>m₁ = m₂:</strong> v₁ = 0, v₂ = u₁. The velocities are exchanged.</li>
+<li><strong>m₁ ≫ m₂:</strong> v₁ ≈ u₁, v₂ ≈ 2u₁. The heavy body barely slows; the light body shoots ahead.</li>
+<li><strong>m₁ ≪ m₂:</strong> v₁ ≈ −u₁, v₂ ≈ 0. The light body bounces back; the heavy body stays nearly at rest.</li>
+</ul></div>
+<h3>4.2(b) Perfectly Inelastic Collision</h3><div class="formula">m₁u₁ + m₂u₂ = (m₁ + m₂) v
+<br>
+<strong>v = (m₁u₁ + m₂u₂) / (m₁ + m₂)</strong></div>
+<h3>4.2(c) Recoil of a Gun</h3><p>Before firing, the gun and bullet are at rest, so the total momentum is zero. After firing, the bullet (mass m) moves forward with velocity v and the gun (mass M) recoils with velocity V.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 270" fill="currentColor" role="img"><rect width="500" height="270" fill="#fff"/><text x="10.0" y="40.0" text-anchor="start" font-size="13" fill="#000">Before</text><text x="10.0" y="160.0" text-anchor="start" font-size="13" fill="#000">After</text><rect x="170" y="60" width="90" height="34" fill="#fff" stroke="#000" stroke-width="2"/><rect x="260" y="70" width="70" height="12" fill="#fff" stroke="#000" stroke-width="2"/><text x="215.0" y="82.0" text-anchor="middle" font-size="13" fill="#000">gun (M)</text><text x="300.0" y="52.0" text-anchor="middle" font-size="12" fill="#000">bullet (m) inside</text><text x="250.0" y="116.0" text-anchor="middle" font-size="12" fill="#000">total momentum = 0 (at rest)</text><rect x="90" y="175" width="90" height="34" fill="#fff" stroke="#000" stroke-width="2"/><rect x="180" y="185" width="70" height="12" fill="#fff" stroke="#000" stroke-width="2"/><text x="135.0" y="197.0" text-anchor="middle" font-size="13" fill="#000">gun (M)</text><circle cx="340" cy="191" r="7" fill="#000"/><text x="340.0" y="169.0" text-anchor="middle" font-size="12" fill="#000">bullet (m)</text><line x1="85.0" y1="191.0" x2="38.0" y2="191.0" stroke="#000" stroke-width="2.4"/><polygon points="30.0,191.0 41.0,187.4 41.0,194.6" fill="#000"/><text x="55.0" y="179.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">V</text><line x1="355.0" y1="191.0" x2="432.0" y2="191.0" stroke="#000" stroke-width="2.4"/><polygon points="440.0,191.0 429.0,194.6 429.0,187.4" fill="#000"/><text x="400.0" y="179.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">v</text><text x="250.0" y="250.0" text-anchor="middle" font-size="13" fill="#000">MV (backward) = mv (forward) , so recoil V = mv/M</text></svg><p><strong>Figure 4.3:</strong> Recoil of a gun. The total momentum stays zero</p>
+<div class="formula">0 = mv + MV ⇒ <strong>V = − mv / M</strong></div>
+<p>The negative sign shows that the gun moves opposite to the bullet. The gun's recoil speed is small because its mass is large. The same principle explains the working of <strong>rockets</strong>: hot gas is expelled backward at high speed, and the rocket gains an equal forward momentum, so no air is needed for propulsion.</p><div class="box example" data-title="Example 4.3 — Gun recoil"><p>A 5 kg gun fires a 0.02 kg bullet at 400 m s⁻¹. Find the recoil velocity of the gun.</p>
+<div class="formula">V = − mv / M = − (0.02 × 400) / 5 = <strong>−1.6 m s⁻¹</strong></div>
+
+<p>The gun recoils at 1.6 m s⁻¹, opposite to the bullet.</p></div>
+<div class="box example" data-title="Example 4.4 — Perfectly inelastic collision"><p>A 2 kg body moving at 6 m s⁻¹ collides with a 4 kg body at rest and they stick together. Find the common velocity and the loss of kinetic energy.</p>
+<div class="formula">v = (2 × 6 + 0) / (2 + 4) = <strong>2 m s⁻¹</strong>
+<br>
+K<sub>i</sub> = ½ × 2 × 6² = 36 J ;  K<sub>f</sub> = ½ × 6 × 2² = 12 J
+<br>
+Loss = <strong>24 J</strong></div></div>
+<h2>4.3 Application of Newton's Laws</h2><div class="box tip" data-title="Method for solving problems"><ul>
+<li>Draw a clear <strong>free-body diagram</strong> for each body, showing only the forces acting <em>on</em> that body.</li>
+<li>Choose a positive direction for each body along its acceleration.</li>
+<li>Apply ΣF = ma to each body.</li>
+<li>Use the constraint: a rope that stays taut gives the same speed and acceleration to the bodies it connects, and an ideal (light, frictionless) pulley leaves the tension unchanged.</li>
+</ul></div>
+<h3>4.3(a) Atwood's Machine (Two Masses over a Pulley)</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" fill="currentColor" role="img"><rect width="480" height="290" fill="#fff"/><line x1="170.0" y1="20.0" x2="310.0" y2="20.0" stroke="#000" stroke-width="2"/><line x1="179.0" y1="20.0" x2="170.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="191.0" y1="20.0" x2="182.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="203.0" y1="20.0" x2="194.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="215.0" y1="20.0" x2="206.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="227.0" y1="20.0" x2="218.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="239.0" y1="20.0" x2="230.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="251.0" y1="20.0" x2="242.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="263.0" y1="20.0" x2="254.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="275.0" y1="20.0" x2="266.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="287.0" y1="20.0" x2="278.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="299.0" y1="20.0" x2="290.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="310.0" y1="20.0" x2="302.0" y2="11.0" stroke="#000" stroke-width="1"/><line x1="240.0" y1="20.0" x2="240.0" y2="70.0" stroke="#000" stroke-width="1.6"/><circle cx="240" cy="70" r="30" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="240.0" cy="70.0" r="2.5" fill="#000"/><line x1="210.0" y1="70.0" x2="210.0" y2="150.0" stroke="#000" stroke-width="1.6"/><line x1="270.0" y1="70.0" x2="270.0" y2="100.0" stroke="#000" stroke-width="1.6"/><rect x="188" y="150" width="44" height="42" fill="#fff" stroke="#000" stroke-width="2"/><text x="210.0" y="176.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><rect x="248" y="100" width="44" height="42" fill="#fff" stroke="#000" stroke-width="2"/><text x="270.0" y="126.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><line x1="210.0" y1="192.0" x2="210.0" y2="228.0" stroke="#000" stroke-width="2.4"/><polygon points="210.0,236.0 206.4,225.0 213.6,225.0" fill="#000"/><text x="210.0" y="254.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/>g</text><line x1="270.0" y1="142.0" x2="270.0" y2="178.0" stroke="#000" stroke-width="2.4"/><polygon points="270.0,186.0 266.4,175.0 273.6,175.0" fill="#000"/><text x="270.0" y="204.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/>g</text><line x1="150.0" y1="150.0" x2="150.0" y2="188.0" stroke="#000" stroke-width="2.4"/><polygon points="150.0,196.0 146.4,185.0 153.6,185.0" fill="#000"/><text x="138.0" y="178.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">a</text><line x1="330.0" y1="150.0" x2="330.0" y2="112.0" stroke="#000" stroke-width="2.4"/><polygon points="330.0,104.0 333.6,115.0 326.4,115.0" fill="#000"/><text x="342.0" y="128.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">a</text><text x="198.0" y="112.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">T</text><text x="282.0" y="88.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">T</text><text x="240.0" y="278.0" text-anchor="middle" font-size="12" fill="#000">m₁ > m₂ :  m₁ moves down, m₂ moves up with the same acceleration a</text></svg><p><strong>Figure 4.4:</strong> Atwood's machine with m₁ &gt; m₂</p>
+<div class="box note" data-title="Acceleration and tension"><div class="formula">m₁: m₁g − T = m₁a
+<br>
+m₂: T − m₂g = m₂a
+<br>
+Adding: (m₁ − m₂) g = (m₁ + m₂) a
+<br>
+<strong>a = (m₁ − m₂) g / (m₁ + m₂)</strong>
+<br>
+<strong>T = 2 m₁ m₂ g / (m₁ + m₂)</strong></div></div>
+<h3>4.3(b) Block on a Smooth Table Connected to a Hanging Mass</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" fill="currentColor" role="img"><rect width="460" height="300" fill="#fff"/><line x1="30.0" y1="130.0" x2="315.0" y2="130.0" stroke="#000" stroke-width="2"/><line x1="315.0" y1="130.0" x2="315.0" y2="175.0" stroke="#000" stroke-width="2"/><line x1="40.0" y1="130.0" x2="31.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="52.0" y1="130.0" x2="43.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="64.0" y1="130.0" x2="55.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="76.0" y1="130.0" x2="67.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="88.0" y1="130.0" x2="79.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="100.0" y1="130.0" x2="91.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="112.0" y1="130.0" x2="103.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="124.0" y1="130.0" x2="115.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="136.0" y1="130.0" x2="127.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="148.0" y1="130.0" x2="139.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="160.0" y1="130.0" x2="151.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="172.0" y1="130.0" x2="163.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="184.0" y1="130.0" x2="175.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="196.0" y1="130.0" x2="187.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="208.0" y1="130.0" x2="199.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="220.0" y1="130.0" x2="211.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="232.0" y1="130.0" x2="223.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="244.0" y1="130.0" x2="235.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="256.0" y1="130.0" x2="247.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="268.0" y1="130.0" x2="259.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="130.0" x2="271.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="292.0" y1="130.0" x2="283.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="304.0" y1="130.0" x2="295.0" y2="139.0" stroke="#000" stroke-width="1"/><rect x="110" y="90" width="60" height="40" fill="#fff" stroke="#000" stroke-width="2"/><text x="140.0" y="115.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><circle cx="330" cy="118" r="18" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="330.0" cy="118.0" r="2.5" fill="#000"/><line x1="170.0" y1="100.0" x2="330.0" y2="100.0" stroke="#000" stroke-width="1.6"/><path d="M330,100 A18,18 0 0 1 348,118" fill="none" stroke="#000" stroke-width="1.6"/><line x1="348.0" y1="118.0" x2="348.0" y2="205.0" stroke="#000" stroke-width="1.6"/><rect x="326" y="205" width="44" height="38" fill="#fff" stroke="#000" stroke-width="2"/><text x="348.0" y="229.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><line x1="348.0" y1="243.0" x2="348.0" y2="274.0" stroke="#000" stroke-width="2.4"/><polygon points="348.0,282.0 344.4,271.0 351.6,271.0" fill="#000"/><text x="362.0" y="270.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/>g</text><text x="358.0" y="168.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">T</text><text x="250.0" y="92.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">T</text><line x1="140.0" y1="90.0" x2="140.0" y2="60.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,52.0 143.6,63.0 136.4,63.0" fill="#000"/><text x="152.0" y="64.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">N</text><line x1="140.0" y1="130.0" x2="140.0" y2="162.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,170.0 136.4,159.0 143.6,159.0" fill="#000"/><text x="152.0" y="160.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">m<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/>g</text><line x1="40.0" y1="60.0" x2="82.0" y2="60.0" stroke="#000" stroke-width="2.4"/><polygon points="90.0,60.0 79.0,63.6 79.0,56.4" fill="#000"/><text x="65.0" y="48.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">a</text><line x1="392.0" y1="205.0" x2="392.0" y2="237.0" stroke="#000" stroke-width="2.4"/><polygon points="392.0,245.0 388.4,234.0 395.6,234.0" fill="#000"/><text x="404.0" y="230.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">a</text></svg><p><strong>Figure 4.5:</strong> Mass m₁ on a smooth horizontal table pulled by a hanging mass m₂ through a light string over a pulley</p>
+<div class="box note" data-title="Acceleration and tension"><div class="formula">m₁ (horizontal): T = m₁a
+<br>
+m₂ (vertical): m₂g − T = m₂a
+<br>
+<strong>a = m₂ g / (m₁ + m₂)</strong>
+<br>
+<strong>T = m₁ m₂ g / (m₁ + m₂)</strong></div></div>
+<h3>4.3(c) Body on a Smooth Inclined Plane</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 290" fill="currentColor" role="img"><rect width="470" height="290" fill="#fff"/><line x1="40.0" y1="245.0" x2="390.0" y2="245.0" stroke="#000" stroke-width="2"/><line x1="390.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2"/><line x1="40.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2.4"/><path d="M100.0,245.0 A60,60 0 0 0 92.0,215.0" fill="none" stroke="#000" stroke-width="1.2"/><text x="116.0" y="237.0" text-anchor="middle" font-size="14" fill="#000">θ</text><polygon points="190.7,158.0 235.7,132.0 211.7,90.4 166.7,116.4" fill="#fff" stroke="#000" stroke-width="2"/><line x1="201.2" y1="124.2" x2="201.2" y2="212.2" stroke="#000" stroke-width="2.8"/><polygon points="201.2,220.2 197.6,209.2 204.8,209.2" fill="#000"/><line x1="201.2" y1="124.2" x2="163.7" y2="59.2" stroke="#000" stroke-width="2.8"/><polygon points="159.7,52.2 168.3,60.0 162.0,63.6" fill="#000"/><line x1="201.2" y1="124.2" x2="166.6" y2="144.2" stroke="#000" stroke-width="1.6"/><polygon points="159.6,148.2 167.3,139.6 171.0,145.9" fill="#000"/><line x1="201.2" y1="124.2" x2="238.8" y2="189.3" stroke="#000" stroke-width="1.6"/><polygon points="242.8,196.2 234.1,188.5 240.4,184.8" fill="#000"/><line x1="159.6" y1="148.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="242.8" y1="196.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><circle cx="201.2" cy="124.2" r="3" fill="#000"/><text x="209.2" y="230.2" text-anchor="start" font-style="italic" font-size="15" fill="#000">mg</text><text x="149.7" y="48.2" text-anchor="end" font-style="italic" font-size="15" fill="#000">N</text><text x="153.6" y="144.2" text-anchor="end" font-style="italic" font-size="12" fill="#000">mg sin θ</text><text x="252.8" y="210.2" text-anchor="start" font-style="italic" font-size="12" fill="#000">mg cos θ</text><line x1="248.2" y1="55.5" x2="211.8" y2="76.5" stroke="#000" stroke-width="2.4"/><polygon points="204.9,80.5 212.6,71.9 216.2,78.2" fill="#000"/><text x="198.9" y="74.5" text-anchor="end" font-style="italic" font-size="14" fill="#000">a</text><text x="235.0" y="278.0" text-anchor="middle" font-size="13" fill="#000">frictionless plane: a = g sin θ</text></svg><p><strong>Figure 4.6:</strong> Free-body diagram of a block on a smooth plane inclined at θ</p>
+<div class="formula">Perpendicular to the plane: N = mg cos θ
+<br>
+Along the plane (down the slope): mg sin θ = ma
+<br>
+<strong>a = g sin θ</strong></div>
+<p>The acceleration does not depend on the mass. For θ = 90° the plane becomes vertical and a = g (free fall).</p><h3>4.3(d) Apparent Weight in a Lift</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" fill="currentColor" role="img"><rect width="480" height="270" fill="#fff"/><line x1="110.0" y1="28.0" x2="110.0" y2="50.0" stroke="#000" stroke-width="1.6"/><rect x="60" y="50" width="100" height="150" fill="#fff" stroke="#000" stroke-width="2.4"/><rect x="90" y="160" width="40" height="34" fill="#fff" stroke="#000" stroke-width="2"/><text x="110.0" y="182.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m</text><line x1="110.0" y1="160.0" x2="110.0" y2="113.0" stroke="#000" stroke-width="2.4"/><polygon points="110.0,105.0 113.6,116.0 106.4,116.0" fill="#000"/><text x="118.0" y="109.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">N</text><line x1="110.0" y1="194.0" x2="110.0" y2="226.0" stroke="#000" stroke-width="2.4"/><polygon points="110.0,234.0 106.4,223.0 113.6,223.0" fill="#000"/><text x="118.0" y="232.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">mg</text><line x1="185.0" y1="150.0" x2="185.0" y2="108.0" stroke="#000" stroke-width="2.4"/><polygon points="185.0,100.0 188.6,111.0 181.4,111.0" fill="#000"/><text x="195.0" y="128.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">a</text><text x="110.0" y="258.0" text-anchor="middle" font-size="12" fill="#000">lift accelerating UPWARD</text><line x1="340.0" y1="28.0" x2="340.0" y2="50.0" stroke="#000" stroke-width="1.6"/><rect x="290" y="50" width="100" height="150" fill="#fff" stroke="#000" stroke-width="2.4"/><rect x="320" y="160" width="40" height="34" fill="#fff" stroke="#000" stroke-width="2"/><text x="340.0" y="182.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">m</text><line x1="340.0" y1="160.0" x2="340.0" y2="143.0" stroke="#000" stroke-width="2.4"/><polygon points="340.0,135.0 343.6,146.0 336.4,146.0" fill="#000"/><text x="348.0" y="139.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">N</text><line x1="340.0" y1="194.0" x2="340.0" y2="226.0" stroke="#000" stroke-width="2.4"/><polygon points="340.0,234.0 336.4,223.0 343.6,223.0" fill="#000"/><text x="348.0" y="232.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">mg</text><line x1="415.0" y1="100.0" x2="415.0" y2="142.0" stroke="#000" stroke-width="2.4"/><polygon points="415.0,150.0 411.4,139.0 418.6,139.0" fill="#000"/><text x="425.0" y="128.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">a</text><text x="340.0" y="258.0" text-anchor="middle" font-size="12" fill="#000">lift accelerating DOWNWARD</text><text x="110.0" y="16.0" text-anchor="middle" font-size="13" fill="#000">N = m(g + a)</text><text x="340.0" y="16.0" text-anchor="middle" font-size="13" fill="#000">N = m(g − a)</text></svg><p><strong>Figure 4.7:</strong> Forces on a body inside a lift. The reading of a weighing scale is the normal reaction N</p>
+<table>
+<tr><th>Motion of the lift</th><th>Equation</th><th>Apparent weight N</th></tr>
+<tr><td>At rest or at constant velocity</td><td>N − mg = 0</td><td>mg</td></tr>
+<tr><td>Accelerating upward (a)</td><td>N − mg = ma</td><td><strong>m(g + a)</strong> (greater)</td></tr>
+<tr><td>Accelerating downward (a)</td><td>mg − N = ma</td><td><strong>m(g − a)</strong> (smaller)</td></tr>
+<tr><td>Free fall (a = g), e.g. cable breaks</td><td>mg − N = mg</td><td><strong>0</strong> (weightlessness)</td></tr>
+</table><div class="box example" data-title="Example 4.5 — Atwood&#x27;s machine"><p>Masses of 5 kg and 3 kg hang over a light pulley (g = 9.8 m s⁻²). Find a and T.</p>
+<div class="formula">a = (5 − 3)(9.8)/(5 + 3) = <strong>2.45 m s⁻²</strong>
+<br>
+T = 2(5)(3)(9.8)/8 = <strong>36.75 N</strong></div></div>
+<div class="box example" data-title="Example 4.6 — Block and hanging mass"><p>A 4 kg block on a smooth table is joined by a string over a pulley to a 1 kg mass hanging at the edge. Find a and T.</p>
+<div class="formula">a = (1)(9.8)/(4 + 1) = <strong>1.96 m s⁻²</strong>
+<br>
+T = (4)(1)(9.8)/5 = <strong>7.84 N</strong></div></div>
+<div class="box example" data-title="Example 4.7 — Lift"><p>A 60 kg man stands on a weighing scale in a lift accelerating at 2 m s⁻². What does the scale read when the lift (a) goes up, (b) goes down? (g = 9.8 m s⁻²)</p>
+<div class="formula">(a) N = m(g + a) = 60 × 11.8 = <strong>708 N</strong>
+<br>
+(b) N = m(g − a) = 60 × 7.8 = <strong>468 N</strong></div></div>
+<h2>4.4 Moment, Torque and Equilibrium</h2><h3>4.4(a) Moment of a Force (Torque)</h3><p>The <strong>moment of a force</strong> (torque) about a point is the turning effect of the force about that point. Its magnitude is the force times the <strong>perpendicular distance</strong> from the point to the line of action of the force:</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" fill="currentColor" role="img"><rect width="480" height="300" fill="#fff"/><line x1="70.0" y1="170.0" x2="250.0" y2="170.0" stroke="#000" stroke-width="2.2"/><circle cx="70.0" cy="170.0" r="4" fill="#000"/><line x1="49.0" y1="174.0" x2="43.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="56.0" y1="174.0" x2="50.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="63.0" y1="174.0" x2="57.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="70.0" y1="174.0" x2="64.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="77.0" y1="174.0" x2="71.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="84.0" y1="174.0" x2="78.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="91.0" y1="174.0" x2="85.0" y2="184.0" stroke="#000" stroke-width="1"/><line x1="175.6" y1="258.6" x2="250.0" y2="170.0" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="250.0" y1="170.0" x2="275.7" y2="139.4" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><line x1="250.0" y1="170.0" x2="318.8" y2="88.0" stroke="#000" stroke-width="2.4"/><polygon points="323.9,81.9 319.6,92.7 314.1,88.0" fill="#000"/><line x1="70.0" y1="170.0" x2="175.6" y2="258.6" stroke="#000" stroke-width="1.2" stroke-dasharray="6 4"/><polyline points="168.7,252.8 174.5,246.0 181.4,251.7" fill="none" stroke="#000" stroke-width="1.1"/><path d="M288.0,170.0 A38,38 0 0 0 274.4,140.9" fill="none" stroke="#000" stroke-width="1.2"/><text x="302.0" y="160.0" text-anchor="middle" font-size="14" fill="#000">θ</text><line x1="250.0" y1="170.0" x2="310.0" y2="170.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><text x="60.0" y="160.0" text-anchor="end" font-size="12" fill="#000">O (pivot)</text><text x="160.0" y="158.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">r</text><text x="331.9" y="77.9" text-anchor="start" font-style="italic" font-size="16" fill="#000">F</text><text x="100.8" y="218.3" text-anchor="end" font-style="italic" font-size="15" fill="#000">d</text><text x="420.0" y="238.0" text-anchor="end" font-size="14" fill="#000">d = r sin θ</text><text x="420.0" y="260.0" text-anchor="end" font-size="14" fill="#000">τ = F × d = rF sin θ</text></svg><p><strong>Figure 4.8:</strong> Torque about the pivot O. The perpendicular distance d = r sin θ is measured to the line of action of F</p>
+<div class="formula">τ = F × d = rF sin θ
+<br>
+In vector form: <strong>τ = r × F</strong></div>
+<p>SI unit: N m; dimensions [ML²T⁻²]. By convention, anticlockwise torque is positive and clockwise torque is negative. The torque is zero if the line of action passes through the pivot (d = 0) or if F ∥ r (θ = 0° or 180°). The torque is maximum when F ⊥ r. This is why a door is easier to open when pushed far from the hinge, and at right angles to the door.</p><h3>4.4(b) Couple</h3><p>Two equal and opposite parallel forces whose lines of action do not coincide form a <strong>couple</strong>. It produces rotation without translation, because the net force is zero.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" fill="currentColor" role="img"><rect width="480" height="290" fill="#fff"/><line x1="150.0" y1="150.0" x2="330.0" y2="150.0" stroke="#000" stroke-width="2.2"/><circle cx="150.0" cy="150.0" r="4" fill="#000"/><circle cx="330.0" cy="150.0" r="4" fill="#000"/><line x1="150.0" y1="150.0" x2="150.0" y2="78.0" stroke="#000" stroke-width="2.4"/><polygon points="150.0,70.0 153.6,81.0 146.4,81.0" fill="#000"/><line x1="330.0" y1="150.0" x2="330.0" y2="222.0" stroke="#000" stroke-width="2.4"/><polygon points="330.0,230.0 326.4,219.0 333.6,219.0" fill="#000"/><line x1="150.0" y1="150.0" x2="150.0" y2="255.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><line x1="330.0" y1="150.0" x2="330.0" y2="255.0" stroke="#000" stroke-width="1.1" stroke-dasharray="6 4"/><text x="138.0" y="78.0" text-anchor="end" font-style="italic" font-size="16" fill="#000">F</text><text x="342.0" y="236.0" text-anchor="start" font-style="italic" font-size="16" fill="#000">F</text><text x="136.0" y="170.0" text-anchor="middle" font-size="14" fill="#000">A</text><text x="330.0" y="132.0" text-anchor="middle" font-size="14" fill="#000">B</text><line x1="150.0" y1="250.0" x2="330.0" y2="250.0" stroke="#000" stroke-width="1"/><polygon points="150.0,250.0 158.0,247.4 158.0,252.6" fill="#000"/><polygon points="330.0,250.0 322.0,252.6 322.0,247.4" fill="#000"/><line x1="150.0" y1="245.0" x2="150.0" y2="255.0" stroke="#000" stroke-width="1"/><line x1="330.0" y1="245.0" x2="330.0" y2="255.0" stroke="#000" stroke-width="1"/><text x="240.0" y="244.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">d</text><path d="M205,115 A45,45 0 0 1 275,115" fill="none" stroke="#000" stroke-width="1.6"/><polygon points="276.0,116.0 264.6,113.7 268.3,107.4" fill="#000"/><text x="240.0" y="80.0" text-anchor="middle" font-size="12" fill="#000">turning effect</text><text x="240.0" y="285.0" text-anchor="middle" font-size="14" fill="#000">Moment of couple = F × d</text></svg><p><strong>Figure 4.9:</strong> A couple: equal and opposite forces F separated by perpendicular distance d</p>
+<div class="formula">Moment of a couple = F × d</div>
+<p>The moment of a couple is the same about <em>any</em> point. Examples: turning a steering wheel with both hands, opening a tap, turning a key.</p><h3>4.4(c) Equilibrium of a Rigid Body</h3><p>A rigid body is in <strong>equilibrium</strong> when it has no linear acceleration and no angular acceleration:</p><div class="box tip" data-title="Conditions of equilibrium"><ul>
+<li><strong>Translational:</strong> the vector sum of all external forces is zero, ΣF = 0.</li>
+<li><strong>Rotational:</strong> the sum of the torques about any point is zero, Στ = 0. This is the <strong>principle of moments</strong>: the total clockwise moment equals the total anticlockwise moment about any point.</li>
+</ul></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 330" fill="currentColor" role="img"><rect width="500" height="330" fill="#fff"/><rect x="60" y="110" width="380" height="16" fill="#fff" stroke="#000" stroke-width="2.2"/><polygon points="100,126 88,152 112,152" fill="#fff" stroke="#000" stroke-width="2"/><polygon points="400,126 388,152 412,152" fill="#fff" stroke="#000" stroke-width="2"/><line x1="70.0" y1="152.0" x2="430.0" y2="152.0" stroke="#000" stroke-width="2"/><line x1="79.0" y1="152.0" x2="70.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="91.0" y1="152.0" x2="82.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="103.0" y1="152.0" x2="94.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="115.0" y1="152.0" x2="106.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="127.0" y1="152.0" x2="118.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="139.0" y1="152.0" x2="130.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="151.0" y1="152.0" x2="142.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="163.0" y1="152.0" x2="154.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="175.0" y1="152.0" x2="166.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="187.0" y1="152.0" x2="178.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="199.0" y1="152.0" x2="190.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="211.0" y1="152.0" x2="202.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="223.0" y1="152.0" x2="214.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="235.0" y1="152.0" x2="226.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="247.0" y1="152.0" x2="238.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="259.0" y1="152.0" x2="250.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="271.0" y1="152.0" x2="262.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="283.0" y1="152.0" x2="274.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="295.0" y1="152.0" x2="286.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="307.0" y1="152.0" x2="298.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="319.0" y1="152.0" x2="310.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="331.0" y1="152.0" x2="322.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="343.0" y1="152.0" x2="334.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="355.0" y1="152.0" x2="346.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="367.0" y1="152.0" x2="358.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="379.0" y1="152.0" x2="370.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="391.0" y1="152.0" x2="382.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="403.0" y1="152.0" x2="394.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="415.0" y1="152.0" x2="406.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="427.0" y1="152.0" x2="418.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="430.0" y1="152.0" x2="430.0" y2="161.0" stroke="#000" stroke-width="1"/><line x1="170.0" y1="58.0" x2="170.0" y2="102.0" stroke="#000" stroke-width="2.4"/><polygon points="170.0,110.0 166.4,99.0 173.6,99.0" fill="#000"/><text x="178.0" y="76.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">W<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><line x1="250.0" y1="58.0" x2="250.0" y2="102.0" stroke="#000" stroke-width="2.4"/><polygon points="250.0,110.0 246.4,99.0 253.6,99.0" fill="#000"/><text x="258.0" y="76.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">W</text><line x1="100.0" y1="208.0" x2="100.0" y2="168.0" stroke="#000" stroke-width="2.4"/><polygon points="100.0,160.0 103.6,171.0 96.4,171.0" fill="#000"/><text x="110.0" y="200.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">R<tspan dy="4" font-size="10">A</tspan><tspan dy="-4"/></text><line x1="400.0" y1="208.0" x2="400.0" y2="168.0" stroke="#000" stroke-width="2.4"/><polygon points="400.0,160.0 403.6,171.0 396.4,171.0" fill="#000"/><text x="410.0" y="200.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">R<tspan dy="4" font-size="10">B</tspan><tspan dy="-4"/></text><text x="100.0" y="234.0" text-anchor="middle" font-size="14" fill="#000">A</text><text x="400.0" y="234.0" text-anchor="middle" font-size="14" fill="#000">B</text><line x1="100.0" y1="258.0" x2="170.0" y2="258.0" stroke="#000" stroke-width="1"/><polygon points="100.0,258.0 108.0,255.4 108.0,260.6" fill="#000"/><polygon points="170.0,258.0 162.0,260.6 162.0,255.4" fill="#000"/><line x1="100.0" y1="253.0" x2="100.0" y2="263.0" stroke="#000" stroke-width="1"/><line x1="170.0" y1="253.0" x2="170.0" y2="263.0" stroke="#000" stroke-width="1"/><text x="135.0" y="252.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">x<tspan dy="4" font-size="10">1</tspan><tspan dy="-4"/></text><line x1="100.0" y1="278.0" x2="250.0" y2="278.0" stroke="#000" stroke-width="1"/><polygon points="100.0,278.0 108.0,275.4 108.0,280.6" fill="#000"/><polygon points="250.0,278.0 242.0,280.6 242.0,275.4" fill="#000"/><line x1="100.0" y1="273.0" x2="100.0" y2="283.0" stroke="#000" stroke-width="1"/><line x1="250.0" y1="273.0" x2="250.0" y2="283.0" stroke="#000" stroke-width="1"/><text x="175.0" y="272.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">x<tspan dy="4" font-size="10">2</tspan><tspan dy="-4"/></text><line x1="100.0" y1="298.0" x2="400.0" y2="298.0" stroke="#000" stroke-width="1"/><polygon points="100.0,298.0 108.0,295.4 108.0,300.6" fill="#000"/><polygon points="400.0,298.0 392.0,300.6 392.0,295.4" fill="#000"/><line x1="100.0" y1="293.0" x2="100.0" y2="303.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="293.0" x2="400.0" y2="303.0" stroke="#000" stroke-width="1"/><text x="310.0" y="292.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">L</text><text x="250.0" y="20.0" text-anchor="middle" font-size="12" fill="#000">W = weight of beam acting at its centre</text></svg><p><strong>Figure 4.10:</strong> A uniform beam of weight W resting on two supports A and B and carrying a load W₁</p>
+<div class="box note" data-title="Reactions at the supports"><p>For equilibrium of the beam in Fig 4.10 (weight W at the middle, load W₁ at distance x₁ from A):</p>
+<div class="formula">Translational: R<sub>A</sub> + R<sub>B</sub> = W₁ + W
+<br>
+Torques about A: R<sub>B</sub> L = W₁ x₁ + W x₂   (x₂ = L/2 for a uniform beam)
+<br>
+<strong>R<sub>B</sub> = (W₁ x₁ + W x₂) / L</strong> ,   R<sub>A</sub> = W₁ + W − R<sub>B</sub></div>
+
+<p>Taking moments about the point where an unknown force acts removes that force from the equation. That is why A was chosen as the pivot.</p></div>
+<div class="box tip" data-title="Centre of gravity and stability"><ul>
+<li>The <strong>centre of gravity</strong> is the point where the whole weight of a body can be taken to act. For a uniform regular body it is the geometric centre.</li>
+<li><strong>Stable equilibrium:</strong> the body returns to its position after a small disturbance (centre of gravity rises).</li>
+<li><strong>Unstable equilibrium:</strong> the body moves further away (centre of gravity falls).</li>
+<li><strong>Neutral equilibrium:</strong> the body stays in its new position (centre of gravity stays at the same height), e.g. a ball on a level table.</li>
+<li>A body with a low centre of gravity and a wide base is more stable.</li>
+</ul></div>
+<div class="box example" data-title="Example 4.8 — Torque"><p>A force of 20 N acts perpendicular to a spanner at 0.25 m from the nut. Find the torque.</p>
+<div class="formula">τ = F d = 20 × 0.25 = <strong>5 N m</strong></div></div>
+<div class="box example" data-title="Example 4.9 — Couple"><p>Two forces of 10 N each, equal and opposite, act on a wheel at points 0.3 m apart. Find the moment of the couple.</p>
+<div class="formula">Moment = F × d = 10 × 0.3 = <strong>3 N m</strong></div></div>
+<div class="box example" data-title="Example 4.10 — Beam on two supports"><p>A uniform beam of length 4 m and weight 100 N rests on supports at its two ends. A load of 200 N hangs 1 m from end A. Find the reactions at A and B.</p>
+<div class="formula">Moments about A: R<sub>B</sub> × 4 = 200 × 1 + 100 × 2 = 400 ⇒ R<sub>B</sub> = <strong>100 N</strong>
+<br>
+R<sub>A</sub> + R<sub>B</sub> = 300 ⇒ R<sub>A</sub> = <strong>200 N</strong></div></div>
+<h2>4.5 Solid Friction: Laws of Solid Friction and Their Verification</h2><p><strong>Friction</strong> is the force that opposes the relative motion, or the tendency of relative motion, between two surfaces in contact. It acts <em>along</em> the surfaces and arises from the roughness (and molecular adhesion) of the surfaces.</p><h3>4.5(a) Types of Friction</h3><div class="box tip" data-title="Key points"><ul>
+<li><strong>Static friction (f<sub>s</sub>):</strong> acts when there is no relative motion. It adjusts itself to equal the applied force, up to a maximum value.</li>
+<li><strong>Limiting friction (f<sub>s,max</sub>):</strong> the maximum static friction, just when the body is about to slide.</li>
+<li><strong>Kinetic (sliding) friction (f<sub>k</sub>):</strong> acts when one surface slides over the other. It is slightly less than limiting friction.</li>
+<li><strong>Rolling friction:</strong> acts when a body rolls over a surface; it is much smaller than sliding friction.</li>
+</ul></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 290" fill="currentColor" role="img"><rect width="520" height="290" fill="#fff"/><line x1="70.0" y1="230.0" x2="490.0" y2="230.0" stroke="#000" stroke-width="1.2"/><polygon points="490.0,230.0 481.0,233.0 481.0,227.0" fill="#000"/><line x1="70.0" y1="230.0" x2="70.0" y2="30.0" stroke="#000" stroke-width="1.2"/><polygon points="70.0,30.0 73.0,39.0 67.0,39.0" fill="#000"/><text x="486.0" y="248.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">F</text><text x="60.0" y="36.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">f</text><text x="62.0" y="246.0" text-anchor="end" font-size="14" fill="#000">O</text><text x="465.0" y="252.0" text-anchor="end" font-size="12" fill="#000">applied force</text><line x1="70.0" y1="230.0" x2="230.0" y2="70.0" stroke="#000" stroke-width="2.4"/><line x1="230.0" y1="70.0" x2="262.0" y2="120.0" stroke="#000" stroke-width="2.4"/><line x1="262.0" y1="120.0" x2="430.0" y2="120.0" stroke="#000" stroke-width="2.4"/><line x1="230.0" y1="70.0" x2="230.0" y2="230.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="70.0" y1="70.0" x2="230.0" y2="70.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><circle cx="230.0" cy="70.0" r="4" fill="#000"/><text x="60.0" y="74.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">f<tspan dy="4" font-size="10">s</tspan><tspan dy="-4"/></text><text x="238.0" y="58.0" text-anchor="start" font-size="12" fill="#000">limiting friction (just about to slide)</text><line x1="70.0" y1="120.0" x2="262.0" y2="120.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><text x="60.0" y="124.0" text-anchor="end" font-style="italic" font-size="14" fill="#000">f<tspan dy="4" font-size="10">k</tspan><tspan dy="-4"/></text><text x="346.0" y="108.0" text-anchor="middle" font-size="12" fill="#000">kinetic friction f  (constant)</text><text x="160.0" y="200.0" text-anchor="start" font-size="12" fill="#000">static friction</text><text x="160.0" y="216.0" text-anchor="start" font-size="12" fill="#000">f = F  (body at rest)</text><text x="346.0" y="150.0" text-anchor="middle" font-size="12" fill="#000">body sliding</text></svg><p><strong>Figure 4.11:</strong> Friction against applied force. Static friction rises equal to F up to the limiting value; once the body slides, friction drops to a smaller, nearly constant kinetic value</p>
+<h3>4.5(b) Laws of Solid Friction</h3><div class="box tip" data-title="Key points"><ol>
+<li>Friction acts tangentially to the surfaces in contact and opposes the (impending) relative motion.</li>
+<li>The limiting friction is <strong>independent of the apparent area of contact</strong>, as long as the normal reaction stays the same.</li>
+<li>The limiting friction is <strong>directly proportional to the normal reaction</strong> N between the surfaces.</li>
+<li>Kinetic friction is less than limiting friction, and is nearly independent of the speed of sliding (for moderate speeds).</li>
+<li>Friction depends on the nature (material and roughness) of the two surfaces.</li>
+</ol></div>
+<h3>4.5(c) Coefficient of Friction</h3><p>From law 3, the ratio of limiting friction to the normal reaction is a constant for a given pair of surfaces. It has no unit:</p><div class="formula">Coefficient of static friction:  μ<sub>s</sub> = f<sub>s,max</sub> / N
+<br>
+Coefficient of kinetic friction:  μ<sub>k</sub> = f<sub>k</sub> / N     (μ<sub>k</sub> &lt; μ<sub>s</sub>)
+<br>
+<strong>f ≤ μ N</strong> for static friction ;   <strong>f = μ<sub>k</sub> N</strong> when sliding</div>
+<h3>4.5(d) Angle of Friction and Angle of Repose</h3><p>The <strong>angle of friction</strong> λ is the angle between the normal reaction and the resultant of the normal reaction and limiting friction: tan λ = f/N = μ. The <strong>angle of repose</strong> α is the maximum angle of an inclined plane at which a body placed on it just remains at rest.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 290" fill="currentColor" role="img"><rect width="470" height="290" fill="#fff"/><line x1="40.0" y1="245.0" x2="390.0" y2="245.0" stroke="#000" stroke-width="2"/><line x1="390.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2"/><line x1="40.0" y1="245.0" x2="390.0" y2="42.9" stroke="#000" stroke-width="2.4"/><path d="M100.0,245.0 A60,60 0 0 0 92.0,215.0" fill="none" stroke="#000" stroke-width="1.2"/><text x="116.0" y="237.0" text-anchor="middle" font-size="14" fill="#000">θ</text><polygon points="190.7,158.0 235.7,132.0 211.7,90.4 166.7,116.4" fill="#fff" stroke="#000" stroke-width="2"/><line x1="201.2" y1="124.2" x2="201.2" y2="212.2" stroke="#000" stroke-width="2.8"/><polygon points="201.2,220.2 197.6,209.2 204.8,209.2" fill="#000"/><line x1="201.2" y1="124.2" x2="163.7" y2="59.2" stroke="#000" stroke-width="2.8"/><polygon points="159.7,52.2 168.3,60.0 162.0,63.6" fill="#000"/><line x1="201.2" y1="124.2" x2="166.6" y2="144.2" stroke="#000" stroke-width="1.6"/><polygon points="159.6,148.2 167.3,139.6 171.0,145.9" fill="#000"/><line x1="201.2" y1="124.2" x2="238.8" y2="189.3" stroke="#000" stroke-width="1.6"/><polygon points="242.8,196.2 234.1,188.5 240.4,184.8" fill="#000"/><line x1="159.6" y1="148.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="242.8" y1="196.2" x2="201.2" y2="220.2" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><circle cx="201.2" cy="124.2" r="3" fill="#000"/><text x="209.2" y="230.2" text-anchor="start" font-style="italic" font-size="15" fill="#000">mg</text><text x="149.7" y="48.2" text-anchor="end" font-style="italic" font-size="15" fill="#000">N</text><text x="153.6" y="144.2" text-anchor="end" font-style="italic" font-size="12" fill="#000">mg sin θ</text><text x="252.8" y="210.2" text-anchor="start" font-style="italic" font-size="12" fill="#000">mg cos θ</text><line x1="201.2" y1="124.2" x2="235.8" y2="104.2" stroke="#000" stroke-width="2.8"/><polygon points="242.8,100.2 235.1,108.9 231.4,102.6" fill="#000"/><text x="250.8" y="94.2" text-anchor="start" font-style="italic" font-size="15" fill="#000">f</text><text x="235.0" y="278.0" text-anchor="middle" font-size="13" fill="#000">limiting equilibrium: f = mg sin θ ,  N = mg cos θ</text></svg><p><strong>Figure 4.12:</strong> A block on a rough inclined plane at the angle of repose: friction f acts up the slope</p>
+<div class="box note" data-title="Angle of repose equals angle of friction"><p>At the limiting angle α the block is about to slide, so friction takes its maximum value:</p>
+<div class="formula">Along the plane: f = mg sin α
+<br>
+Perpendicular to the plane: N = mg cos α
+<br>
+μ = f / N = mg sin α / mg cos α
+<br>
+<strong>μ = tan α</strong>   (so α = λ)</div></div>
+<h3>4.5(e) Verification of the Laws of Friction</h3><h4>Method 1: Inclined plane (angle of repose)</h4><div class="box tip" data-title="Key points"><ul>
+<li>Place a rectangular wooden block on a plane whose inclination can be changed. Raise the plane slowly until the block just begins to slide. Measure the angle α (from the height and length of the plane); then μ = tan α.</li>
+<li><strong>Law 2:</strong> Repeat with the block resting on a smaller face (different area). The angle α, hence μ, is almost unchanged.</li>
+<li><strong>Law 3:</strong> Add weights on the block (N increases). The block still slides at the same α, so μ = f/N stays constant, which shows f ∝ N.</li>
+<li><strong>Law 5:</strong> Change the surface (rubber, glass, wood) and α changes.</li>
+</ul></div>
+<h4>Method 2: Horizontal surface with a pulley</h4><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" fill="currentColor" role="img"><rect width="460" height="300" fill="#fff"/><line x1="30.0" y1="130.0" x2="315.0" y2="130.0" stroke="#000" stroke-width="2"/><line x1="315.0" y1="130.0" x2="315.0" y2="175.0" stroke="#000" stroke-width="2"/><line x1="40.0" y1="130.0" x2="31.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="52.0" y1="130.0" x2="43.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="64.0" y1="130.0" x2="55.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="76.0" y1="130.0" x2="67.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="88.0" y1="130.0" x2="79.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="100.0" y1="130.0" x2="91.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="112.0" y1="130.0" x2="103.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="124.0" y1="130.0" x2="115.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="136.0" y1="130.0" x2="127.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="148.0" y1="130.0" x2="139.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="160.0" y1="130.0" x2="151.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="172.0" y1="130.0" x2="163.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="184.0" y1="130.0" x2="175.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="196.0" y1="130.0" x2="187.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="208.0" y1="130.0" x2="199.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="220.0" y1="130.0" x2="211.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="232.0" y1="130.0" x2="223.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="244.0" y1="130.0" x2="235.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="256.0" y1="130.0" x2="247.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="268.0" y1="130.0" x2="259.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="130.0" x2="271.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="292.0" y1="130.0" x2="283.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="304.0" y1="130.0" x2="295.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="40.0" y1="130.0" x2="31.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="52.0" y1="130.0" x2="43.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="64.0" y1="130.0" x2="55.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="76.0" y1="130.0" x2="67.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="88.0" y1="130.0" x2="79.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="100.0" y1="130.0" x2="91.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="112.0" y1="130.0" x2="103.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="124.0" y1="130.0" x2="115.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="136.0" y1="130.0" x2="127.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="148.0" y1="130.0" x2="139.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="160.0" y1="130.0" x2="151.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="172.0" y1="130.0" x2="163.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="184.0" y1="130.0" x2="175.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="196.0" y1="130.0" x2="187.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="208.0" y1="130.0" x2="199.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="220.0" y1="130.0" x2="211.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="232.0" y1="130.0" x2="223.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="244.0" y1="130.0" x2="235.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="256.0" y1="130.0" x2="247.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="268.0" y1="130.0" x2="259.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="280.0" y1="130.0" x2="271.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="292.0" y1="130.0" x2="283.0" y2="139.0" stroke="#000" stroke-width="1.6"/><line x1="304.0" y1="130.0" x2="295.0" y2="139.0" stroke="#000" stroke-width="1.6"/><rect x="110" y="90" width="60" height="40" fill="#fff" stroke="#000" stroke-width="2"/><text x="140.0" y="115.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">M</text><circle cx="330" cy="118" r="18" fill="#fff" stroke="#000" stroke-width="2"/><circle cx="330.0" cy="118.0" r="2.5" fill="#000"/><line x1="170.0" y1="100.0" x2="330.0" y2="100.0" stroke="#000" stroke-width="1.6"/><path d="M330,100 A18,18 0 0 1 348,118" fill="none" stroke="#000" stroke-width="1.6"/><line x1="348.0" y1="118.0" x2="348.0" y2="205.0" stroke="#000" stroke-width="1.6"/><rect x="318" y="205" width="60" height="38" fill="#fff" stroke="#000" stroke-width="2"/><text x="348.0" y="229.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">pan + m</text><line x1="348.0" y1="243.0" x2="348.0" y2="274.0" stroke="#000" stroke-width="2.4"/><polygon points="348.0,282.0 344.4,271.0 351.6,271.0" fill="#000"/><text x="362.0" y="270.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">mg</text><text x="358.0" y="168.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">T</text><text x="250.0" y="92.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">T</text><line x1="108.0" y1="110.0" x2="68.0" y2="110.0" stroke="#000" stroke-width="2.4"/><polygon points="60.0,110.0 71.0,106.4 71.0,113.6" fill="#000"/><text x="84.0" y="102.0" text-anchor="middle" font-style="italic" font-size="14" fill="#000">f</text><line x1="140.0" y1="90.0" x2="140.0" y2="60.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,52.0 143.6,63.0 136.4,63.0" fill="#000"/><text x="152.0" y="64.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">N</text><line x1="140.0" y1="130.0" x2="140.0" y2="162.0" stroke="#000" stroke-width="2.4"/><polygon points="140.0,170.0 136.4,159.0 143.6,159.0" fill="#000"/><text x="152.0" y="160.0" text-anchor="start" font-style="italic" font-size="14" fill="#000">Mg</text><text x="60.0" y="200.0" text-anchor="start" font-size="12" fill="#000">rough horizontal surface</text></svg><p><strong>Figure 4.13:</strong> Block of mass M on a rough horizontal surface pulled by a pan loaded with weights through a string over a pulley</p>
+<div class="box tip" data-title="Key points"><ul>
+<li>Put weights on the pan until the block just begins to move (limiting friction), or gives a small push and moves with uniform velocity (kinetic friction).</li>
+<li>Then the tension T = mg balances friction: <strong>f = mg</strong>, and N = Mg.</li>
+<li><strong>μ = f / N = m / M</strong>.</li>
+<li><strong>Law 3:</strong> Place extra masses on the block (M increases) and find the new m. A graph of m against M is a straight line through the origin, so f ∝ N.</li>
+<li><strong>Law 2:</strong> Turn the block on a different face; m remains almost the same.</li>
+</ul></div>
+<h3>4.5(f) Advantages, Disadvantages and Reduction of Friction</h3><div class="box tip" data-title="Key points"><ul>
+<li><strong>Useful:</strong> walking, braking, holding objects, nails and screws gripping, belts on pulleys.</li>
+<li><strong>Harmful:</strong> wear and tear, heat loss and waste of energy in machines.</li>
+<li><strong>Reduced by:</strong> lubricants (oil, grease), ball and roller bearings (rolling in place of sliding), polishing surfaces, streamlining.</li>
+</ul></div>
+<div class="box example" data-title="Example 4.11 — Static and kinetic friction"><p>A 5 kg block rests on a horizontal floor with μ<sub>s</sub> = 0.4 and μ<sub>k</sub> = 0.3 (g = 9.8 m s⁻²). Find the friction if the block is pushed with (a) 15 N, (b) 25 N, and the acceleration in case (b).</p>
+<div class="formula">N = mg = 49 N ;  f<sub>s,max</sub> = 0.4 × 49 = 19.6 N
+<br>
+(a) 15 N &lt; 19.6 N: the block stays at rest and f = <strong>15 N</strong> (static)
+<br>
+(b) 25 N &gt; 19.6 N: the block slides; f<sub>k</sub> = 0.3 × 49 = <strong>14.7 N</strong>
+<br>
+a = (25 − 14.7) / 5 = <strong>2.06 m s⁻²</strong></div></div>
+<div class="box example" data-title="Example 4.12 — Angle of repose"><p>A block just begins to slide when a plane is tilted to 25°. Find the coefficient of static friction.</p>
+<div class="formula">μ = tan 25° = <strong>0.466</strong></div></div>
+<div class="box example" data-title="Example 4.13 — Horizontal method"><p>A 2 kg block moves with uniform velocity when the pan with weights has mass 0.6 kg. Find μ<sub>k</sub>.</p>
+<div class="formula">μ<sub>k</sub> = m / M = 0.6 / 2 = <strong>0.3</strong></div></div>
+<h2>Key Formulas and Summary</h2><div class="box tip" data-title="Momentum and Impulse"><div class="formula">p = mv ,  F = dp/dt
+<br>
+J = F Δt = Δp = mv − mu
+<br>
+m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂    (no external force)</div></div>
+<div class="box tip" data-title="Collisions and Recoil"><div class="formula">Elastic: u₁ − u₂ = v₂ − v₁
+<br>
+Perfectly inelastic: v = (m₁u₁ + m₂u₂)/(m₁ + m₂)
+<br>
+Gun recoil: V = −mv/M</div></div>
+<div class="box tip" data-title="Applications of Newton&#x27;s Laws"><div class="formula">Atwood: a = (m₁ − m₂)g/(m₁ + m₂) ,  T = 2m₁m₂g/(m₁ + m₂)
+<br>
+Table + hanging mass: a = m₂g/(m₁ + m₂) ,  T = m₁m₂g/(m₁ + m₂)
+<br>
+Smooth incline: a = g sin θ
+<br>
+Lift: N = m(g ± a)</div></div>
+<div class="box tip" data-title="Torque, Equilibrium and Friction"><div class="formula">τ = rF sin θ = F d ,  couple = F d
+<br>
+ΣF = 0 ,  Στ = 0
+<br>
+f = μN ,  μ = tan α (angle of repose)
+<br>
+Horizontal method: μ = m/M</div></div>
+<h2>Practice Numerical Problems</h2><p>Take g = 9.8 m s⁻² unless stated otherwise. Attempt each problem before reading the answer.</p><div class="box example"><p>1. Find the momentum of a 1000 kg car moving at 72 km h⁻¹.</p>
+
+<p><strong>Answer:</strong> v = 20 m s⁻¹; p = <strong>2 × 10⁴ kg m s⁻¹</strong>.</p></div>
+<div class="box example"><p>2. A force of 50 N acts for 0.2 s on a 0.5 kg ball at rest. Find the impulse and the final speed.</p>
+
+<p><strong>Answer:</strong> J = 50 × 0.2 = <strong>10 N s</strong>; v = J/m = <strong>20 m s⁻¹</strong>.</p></div>
+<div class="box example"><p>3. A 0.2 kg ball strikes a wall at 10 m s⁻¹ and rebounds at 10 m s⁻¹. The contact time is 0.02 s. Find the average force on the ball.</p>
+
+<p><strong>Answer:</strong> Δp = 0.2 × (10 + 10) = 4 N s; F = 4/0.02 = <strong>200 N</strong>.</p></div>
+<div class="box example"><p>4. A rifle of mass 3 kg fires a 10 g bullet at 300 m s⁻¹. Find the recoil velocity of the rifle.</p>
+
+<p><strong>Answer:</strong> V = 0.01 × 300/3 = <strong>1 m s⁻¹</strong> (opposite to the bullet).</p></div>
+<div class="box example"><p>5. A 3 kg body moving at 4 m s⁻¹ collides with a 1 kg body at rest and they stick together. Find the common velocity and the loss of kinetic energy.</p>
+
+<p><strong>Answer:</strong> v = 12/4 = <strong>3 m s⁻¹</strong>; K<sub>i</sub> = 24 J, K<sub>f</sub> = ½(4)(9) = 18 J; loss = <strong>6 J</strong>.</p></div>
+<div class="box example"><p>6. A 2 kg ball moving at 5 m s⁻¹ collides elastically head-on with a stationary 2 kg ball. Find the velocities after the collision.</p>
+
+<p><strong>Answer:</strong> Equal masses exchange velocities: v₁ = <strong>0</strong>, v₂ = <strong>5 m s⁻¹</strong>.</p></div>
+<div class="box example"><p>7. In an Atwood machine the masses are 6 kg and 4 kg. Find the acceleration and the tension.</p>
+
+<p><strong>Answer:</strong> a = 2 × 9.8/10 = <strong>1.96 m s⁻²</strong>; T = 2(6)(4)(9.8)/10 = <strong>47.04 N</strong>.</p></div>
+<div class="box example"><p>8. A 2 kg block on a smooth table is pulled by a 3 kg mass hanging over a pulley. Find a and T.</p>
+
+<p><strong>Answer:</strong> a = 3 × 9.8/5 = <strong>5.88 m s⁻²</strong>; T = 2 × 3 × 9.8/5 = <strong>11.76 N</strong>.</p></div>
+<div class="box example"><p>9. A 50 kg person stands on a scale in a lift accelerating at 1.5 m s⁻². Find the reading when the lift goes up and when it goes down.</p>
+
+<p><strong>Answer:</strong> Up: 50 × (9.8 + 1.5) = <strong>565 N</strong>; down: 50 × (9.8 − 1.5) = <strong>415 N</strong>.</p></div>
+<div class="box example"><p>10. A 5 kg block slides down a smooth plane inclined at 37° (sin 37° = 0.6). Find its acceleration and the normal reaction.</p>
+
+<p><strong>Answer:</strong> a = g sin θ = <strong>5.88 m s⁻²</strong>; N = mg cos θ = 5 × 9.8 × 0.8 = <strong>39.2 N</strong>.</p></div>
+<div class="box example"><p>11. A force of 40 N acts at 30° to a 0.5 m rod, at its end, about the other end. Find the torque.</p>
+
+<p><strong>Answer:</strong> τ = rF sin θ = 0.5 × 40 × 0.5 = <strong>10 N m</strong>.</p></div>
+<div class="box example"><p>12. A uniform plank 6 m long weighing 120 N rests on supports at its ends. A 180 N child stands 2 m from the left end. Find the reactions.</p>
+
+<p><strong>Answer:</strong> About the left end: R<sub>B</sub> × 6 = 180 × 2 + 120 × 3 = 720 ⇒ R<sub>B</sub> = <strong>120 N</strong>; R<sub>A</sub> = 300 − 120 = <strong>180 N</strong>.</p></div>
+<div class="box example"><p>13. A 20 kg box rests on a floor with μ<sub>s</sub> = 0.3. What force just starts it moving?</p>
+
+<p><strong>Answer:</strong> f<sub>s,max</sub> = 0.3 × 20 × 9.8 = <strong>58.8 N</strong>.</p></div>
+<div class="box example"><p>14. A block just slides on a plane when it is tilted at 30°. Find μ and the friction force on a 2 kg block at that angle.</p>
+
+<p><strong>Answer:</strong> μ = tan 30° ≈ <strong>0.577</strong>; f = mg sin 30° = 2 × 9.8 × 0.5 = <strong>9.8 N</strong>.</p></div>
+<div class="box example"><p>15. In the horizontal friction experiment a 4 kg block moves uniformly when the pan and weights total 1.2 kg. Find μ<sub>k</sub> and the friction force.</p>
+
+<p><strong>Answer:</strong> μ<sub>k</sub> = 1.2/4 = <strong>0.3</strong>; f = mg = 1.2 × 9.8 = <strong>11.76 N</strong>.</p></div>
+<h2>Conceptual and Long Answer Questions</h2><div class="box example" data-title="MCQ"><p><strong>1. Why does a cricketer move the hands backward while catching a fast ball?</strong></p><ul><li>The same change of momentum takes place over a longer time, so the average force on the hands (F = Δp/Δt) is smaller.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>2. Is momentum conserved in an inelastic collision? Is kinetic energy?</strong></p><ul><li>Momentum is conserved (no external force); kinetic energy is not, as some is converted to heat, sound and deformation.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>3. Why does a gun recoil when it fires a bullet?</strong></p><ul><li>Momentum is conserved. The bullet gains forward momentum, so the gun gains an equal and opposite momentum. Its recoil speed is small because its mass is large.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>4. A person standing on a weighing scale in a lift feels lighter in a downward-accelerating lift. Explain.</strong></p><ul><li>N = m(g − a) &lt; mg, so the scale reading (apparent weight) is less than the true weight. The true weight mg does not change.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>5. Why is it easier to open a door by pushing at the handle than near the hinge?</strong></p><ul><li>The torque τ = F d increases with the perpendicular distance d from the hinge, so less force gives the same torque.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>6. A couple has zero resultant force. Why does it still turn a body?</strong></p><ul><li>The two forces have different lines of action, so their torques add and the net torque F × d is not zero; there is rotation without translation.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>7. Why is kinetic friction less than limiting static friction?</strong></p><ul><li>Once sliding begins, the surface irregularities have less time to interlock and bond, so the resisting force decreases (Fig 4.11).</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>8. State the laws of limiting friction. How would you verify that friction is independent of the area of contact? (Section 4.5)</strong></p><ul></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>9. Prove that the angle of repose is equal to the angle of friction. (Section 4.5)</strong></p><ul></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>10. Derive the law of conservation of linear momentum from Newton's laws, and obtain the velocities after an elastic collision. (Section 4.2)</strong></p><ul></ul></div>
+<h2>Multiple Choice Questions</h2><div class="box example" data-title="MCQ"><p><strong>1. The SI unit of impulse is:</strong></p><ul><li>(a) N</li><li>(b) N s</li><li>(c) N m</li><li>(d) J</li></ul><details class="solution"><summary>Show answer</summary><p>(b) N s</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>2. In every collision, if no external force acts, which quantity is conserved?</strong></p><ul><li>(a) Kinetic energy</li><li>(b) Total linear momentum</li><li>(c) Velocity of each body</li><li>(d) Speed of each body</li></ul><details class="solution"><summary>Show answer</summary><p>(b) Total linear momentum</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>3. A 2 kg ball at 3 m s⁻¹ hits an identical stationary ball elastically head-on. After the collision, the first ball:</strong></p><ul><li>(a) Moves at 3 m s⁻¹</li><li>(b) Moves at 1.5 m s⁻¹</li><li>(c) Comes to rest</li><li>(d) Rebounds at 3 m s⁻¹</li></ul><details class="solution"><summary>Show answer</summary><p>(c) Comes to rest</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>4. The apparent weight of a person in a lift moving upward with acceleration a is:</strong></p><ul><li>(a) mg</li><li>(b) m(g − a)</li><li>(c) m(g + a)</li><li>(d) zero</li></ul><details class="solution"><summary>Show answer</summary><p>(c) m(g + a)</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>5. The torque is zero when the angle between r and F is:</strong></p><ul><li>(a) 90°</li><li>(b) 45°</li><li>(c) 60°</li><li>(d) 0°</li></ul><details class="solution"><summary>Show answer</summary><p>(d) 0°</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>6. A rigid body is in equilibrium when:</strong></p><ul><li>(a) ΣF = 0 only</li><li>(b) Στ = 0 only</li><li>(c) ΣF = 0 and Στ = 0</li><li>(d) Its velocity is zero</li></ul><details class="solution"><summary>Show answer</summary><p>(c) ΣF = 0 and Στ = 0</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>7. Limiting friction between two surfaces is directly proportional to:</strong></p><ul><li>(a) The area of contact</li><li>(b) The normal reaction</li><li>(c) The speed of sliding</li><li>(d) The volume of the body</li></ul><details class="solution"><summary>Show answer</summary><p>(b) The normal reaction</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>8. A block just slides on a plane inclined at 45°. The coefficient of static friction is:</strong></p><ul><li>(a) 0.5</li><li>(b) 0.707</li><li>(c) 1</li><li>(d) 1.414</li></ul><details class="solution"><summary>Show answer</summary><p>(c) 1</p></details></div>

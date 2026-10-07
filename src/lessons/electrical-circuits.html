@@ -1,1142 +1,468 @@
 ---
-title: Electrical circuit
+title: Electrical Circuits
 grade: XII
 chapters: [12]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade XII Physics - Unit 14: Electrical Circuits</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #0f172a;
-            line-height: 1.65;
-        }
-        .math-font {
-            font-family: 'JetBrains Mono', monospace;
-        }
-        /* Custom print stylesheet for A4 paper optimization */
-        @media print {
-            body {
-                background-color: #ffffff !important;
-                color: #000000 !important;
-                font-size: 10.5pt;
-                line-height: 1.5;
-            }
-            .no-print {
-                display: none !important;
-            }
-            .page-container {
-                max-width: 100% !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                box-shadow: none !important;
-                border: none !important;
-            }
-            /* Auto expand all details/summary accordion boxes for printing */
-            details {
-                display: block !important;
-                open: open !important;
-            }
-            details > summary {
-                font-weight: bold;
-                margin-bottom: 0.5rem;
-            }
-            details[open] > summary::after {
-                content: "" !important;
-            }
-            .accordion-content {
-                display: block !important;
-            }
-            .callout-box {
-                border-left-width: 3px !important;
-                border-color: #000000 !important;
-                background-color: #f1f5f9 !important;
-            }
-            svg {
-                max-width: 100% !important;
-                page-break-inside: avoid;
-                filter: grayscale(100%) contrast(200%);
-            }
-            .break-inside-avoid {
-                page-break-inside: avoid;
-            }
-            .page-break-before {
-                page-break-before: always;
-            }
-            h1, h2, h3 {
-                color: #000000 !important;
-                page-break-after: avoid;
-            }
-        }
-    </style>
-</head>
-<body class="bg-slate-100 text-slate-900 antialiased min-h-screen">
-
-    <!-- Minimal Slim Top Banner -->
-    <header class="bg-slate-900 text-white px-5 py-3 shadow-md border-b border-slate-800">
-        <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-2">
-            <div class="flex items-center space-x-3">
-                <span class="bg-blue-600 text-white text-xs font-semibold px-2.5 py-1 rounded-md uppercase tracking-wider">NEB Grade XII Physics</span>
-                <h1 class="text-base md:text-lg font-bold text-slate-100">Unit 14: Electrical Circuits</h1>
-            </div>
-            <span class="text-xs text-slate-400 font-medium hidden sm:inline">Curriculum Development Centre (CDC) Syllabus</span>
-        </div>
-    </header>
-
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto my-6 p-6 sm:p-10 bg-white border border-slate-200 rounded-xl shadow-sm page-container">
-
-        <!-- Module Header -->
-        <div class="border-b border-slate-200 pb-6 mb-8 text-center sm:text-left">
-            <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Electrical Circuits</h1>
-            <p class="text-slate-600 mt-2 text-sm md:text-base">Complete Textbook & Self-Study Guide for Grade XII NEB Board Examinations. Detailed theoretical derivations, schematic vector diagrams, worked numericals, and conceptual QA.</p>
-        </div>
-
-        <!-- SECTION 14.1 -->
-        <section id="section-14-1" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-4">
-                <span class="bg-slate-800 text-white font-bold text-xs px-2.5 py-1 rounded">14.1</span>
-                <h2 class="text-xl font-bold text-slate-900">Kirchhoff’s Laws and Circuit Analysis</h2>
-            </div>
-
-            <p class="mb-4 text-slate-700">Simple electrical circuits can be analyzed using Ohm's law. However, for complex networks containing multiple loops, junctions, and EMF sources, Ohm's law alone is insufficient. In 1845, German physicist Gustav Kirchhoff formulated two fundamental laws that allow systematic analysis of complex electrical networks.</p>
-
-            <!-- KCL Subsection -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold text-slate-800 mb-2">1. Kirchhoff's First Law (Current Law / KCL or Junction Rule)</h3>
-                
-                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-3 rounded-r-md callout-box">
-                    <p class="font-semibold text-amber-900">Statement:</p>
-                    <p class="text-amber-950 text-sm md:text-base">In any electric circuit, the algebraic sum of currents meeting at any junction (or node) is equal to zero.</p>
-                    <div class="mt-2 text-center text-lg font-bold text-amber-900">
-                        \( \sum I = 0 \) &nbsp;&nbsp;\(\implies\)&nbsp;&nbsp; \( \sum I_{\text{entering}} = \sum I_{\text{leaving}} \)
-                    </div>
-                </div>
-
-                <p class="mb-3 text-slate-700"><span class="font-semibold">Sign Convention:</span> Currents entering a junction are taken as positive (\(+\)), while currents leaving a junction are taken as negative (\(-\)).</p>
-
-                <!-- SVG DIAGRAM 1: KCL Junction and KVL Loop -->
-                <div class="my-6 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                    <svg viewBox="0 0 650 240" class="w-full max-w-xl mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f172a" />
-                            </marker>
-                            <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb" />
-                            </marker>
-                        </defs>
-                        
-                        <!-- Left Side: KCL Junction -->
-                        <g transform="translate(20, 10)">
-                            <text x="130" y="20" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(a) Kirchhoff's Junction Rule (KCL)</text>
-                            
-                            <!-- Junction Point O -->
-                            <circle cx="130" cy="110" r="5" fill="#0f172a" />
-                            <text x="130" y="130" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a">Junction (O)</text>
-                            
-                            <!-- Incoming Currents -->
-                            <line x1="30" y1="50" x2="125" y2="106" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-                            <text x="50" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2563eb">I₁</text>
-                            
-                            <line x1="30" y1="170" x2="125" y2="114" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-                            <text x="50" y="170" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2563eb">I₂</text>
-                            
-                            <!-- Outgoing Currents -->
-                            <line x1="135" y1="110" x2="230" y2="50" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-                            <text x="200" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#dc2626">I₃</text>
-                            
-                            <line x1="135" y1="110" x2="230" y2="110" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-                            <text x="200" y="100" font-family="sans-serif" font-size="12" font-weight="bold" fill="#dc2626">I₄</text>
-
-                            <line x1="135" y1="110" x2="210" y2="180" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-                            <text x="190" y="170" font-family="sans-serif" font-size="12" font-weight="bold" fill="#dc2626">I₅</text>
-                        </g>
-
-                        <!-- Divider line -->
-                        <line x1="290" y1="20" x2="290" y2="210" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
-
-                        <!-- Right Side: KVL Circuit Loop -->
-                        <g transform="translate(320, 10)">
-                            <text x="150" y="20" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(b) Kirchhoff's Loop Rule (KVL)</text>
-
-                            <!-- Outer Rectangular Loop -->
-                            <rect x="30" y="40" width="240" height="140" fill="none" stroke="#0f172a" stroke-width="2" rx="4" />
-                            
-                            <!-- Battery E1 -->
-                            <line x1="30" y1="90" x2="30" y2="105" stroke="#0f172a" stroke-width="3" />
-                            <line x1="20" y1="105" x2="40" y2="105" stroke="#0f172a" stroke-width="1.5" />
-                            <line x1="25" y1="113" x2="35" y2="113" stroke="#0f172a" stroke-width="3" />
-                            <line x1="20" y1="121" x2="40" y2="121" stroke="#0f172a" stroke-width="1.5" />
-                            <text x="5" y="112" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0f172a">E₁</text>
-
-                            <!-- Resistor R1 (Top) -->
-                            <rect x="110" y="34" width="60" height="12" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                            <text x="140" y="28" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#0f172a">R₁</text>
-
-                            <!-- Resistor R2 (Right) -->
-                            <rect x="264" y="90" width="12" height="40" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                            <text x="290" y="115" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0f172a">R₂</text>
-
-                            <!-- Loop Arrow (Clockwise) -->
-                            <path d="M 120 90 A 25 25 0 1 1 160 120" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)" />
-                            <text x="150" y="105" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">Loop 1</text>
-                            
-                            <!-- Current Arrow -->
-                            <line x1="70" y1="40" x2="100" y2="40" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)" />
-                            <text x="85" y="32" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">I</text>
-
-                            <!-- Corner Labels -->
-                            <text x="20" y="35" font-family="sans-serif" font-size="11" font-weight="bold">A</text>
-                            <text x="275" y="35" font-family="sans-serif" font-size="11" font-weight="bold">B</text>
-                            <text x="275" y="195" font-family="sans-serif" font-size="11" font-weight="bold">C</text>
-                            <text x="20" y="195" font-family="sans-serif" font-size="11" font-weight="bold">D</text>
-                        </g>
-                    </svg>
-                    <p class="text-xs text-slate-500 mt-2 font-medium">Figure 14.1: (a) Illustration of Kirchhoff's Current Law at node O. (b) Closed loop traversal for Kirchhoff's Voltage Law.</p>
-                </div>
-
-                <p class="mb-3 text-slate-700">Referring to Fig 14.1(a), applying KCL at junction O gives:</p>
-                <div class="text-center my-2 font-semibold text-slate-800">
-                    \( (+I_1) + (+I_2) + (-I_3) + (-I_4) + (-I_5) = 0 \)
-                </div>
-                <div class="text-center my-2 font-bold text-blue-700">
-                    \( I_1 + I_2 = I_3 + I_4 + I_5 \)
-                </div>
-
-                <div class="bg-emerald-50 border-l-4 border-emerald-600 p-3.5 my-3 rounded-r-md callout-box">
-                    <p class="text-xs font-bold uppercase tracking-wider text-emerald-800">Physical Significance of KCL:</p>
-                    <p class="text-sm text-emerald-950 mt-1">KCL is a direct consequence of the <span class="font-bold">Law of Conservation of Electric Charge</span>. Since electric charge can neither be created nor destroyed at a junction, the total rate of charge entering a node must equal the total rate of charge leaving it.</p>
-                </div>
-            </div>
-
-            <!-- KVL Subsection -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold text-slate-800 mb-2">2. Kirchhoff's Second Law (Voltage Law / KVL or Loop Rule)</h3>
-                
-                <div class="bg-blue-50 border-l-4 border-blue-600 p-4 my-3 rounded-r-md callout-box">
-                    <p class="font-semibold text-blue-900">Statement:</p>
-                    <p class="text-blue-950 text-sm md:text-base">In any closed loop of an electric network, the algebraic sum of all electromotive forces (EMFs) is equal to the algebraic sum of the products of currents and their corresponding resistances.</p>
-                    <div class="mt-2 text-center text-lg font-bold text-blue-900">
-                        \( \sum E = \sum I R \) &nbsp;&nbsp;\(\iff\)&nbsp;&nbsp; \( \sum \Delta V = 0 \)
-                    </div>
-                </div>
-
-                <h4 class="font-semibold text-slate-800 mt-4 mb-2">Sign Conventions for Traversing Closed Loops:</h4>
-                <ul class="list-disc list-inside space-y-2 text-slate-700 pl-2">
-                    <li><span class="font-semibold text-slate-900">Potential Drop across Resistors (\(IR\)):</span> When traversing a resistor in the <span class="font-bold text-blue-700">direction of current</span>, potential decreases, so the product \(IR\) is taken as <span class="font-bold text-red-600">negative (\(-IR\))</span>. If traversed <span class="font-bold text-blue-700">opposite to current</span>, it is taken as <span class="font-bold text-emerald-600">positive (\(+IR\))</span>.</li>
-                    <li><span class="font-semibold text-slate-900">Electromotive Force (\(E\)):</span> When passing through a cell from its <span class="font-bold">negative to positive terminal</span> (potential rise), EMF is taken as <span class="font-bold text-emerald-600">positive (\(+E\))</span>. If passing from <span class="font-bold">positive to negative terminal</span> (potential drop), EMF is taken as <span class="font-bold text-red-600">negative (\(-E\))</span>.</li>
-                </ul>
-
-                <div class="bg-emerald-50 border-l-4 border-emerald-600 p-3.5 my-4 rounded-r-md callout-box">
-                    <p class="text-xs font-bold uppercase tracking-wider text-emerald-800">Physical Significance of KVL:</p>
-                    <p class="text-sm text-emerald-950 mt-1">KVL is a direct consequence of the <span class="font-bold">Law of Conservation of Energy</span>. Since electrostatic forces are conservative, the net work done in moving a unit positive charge around any closed path in a circuit must be zero.</p>
-                </div>
-            </div>
-
-            <!-- Step-by-Step Worked Circuit Example -->
-            <div class="bg-slate-50 border border-slate-300 p-5 rounded-lg my-6 break-inside-avoid">
-                <h4 class="text-base font-bold text-slate-900 mb-3 flex items-center">
-                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded mr-2">Worked Example</span>
-                    Applying KCL & KVL to Solve Circuit Parameters
-                </h4>
-                <p class="text-sm text-slate-700 mb-3"><span class="font-bold">Problem:</span> Consider two cells of EMFs \(E_1 = 6\text{ V}\) and \(E_2 = 3\text{ V}\) with internal resistances \(r_1 = 1\,\Omega\) and \(r_2 = 1\,\Omega\) connected in parallel across an external resistor \(R = 4\,\Omega\). Determine the currents flowing through each cell and the external resistor.</p>
-                
-                <div class="text-sm text-slate-800 space-y-2 border-t border-slate-200 pt-3">
-                    <p><span class="font-semibold text-blue-700">Step 1: Assign loop currents using KCL.</span> Let current \(I_1\) flow from cell \(E_1\) and current \(I_2\) flow from cell \(E_2\). Total current through external resistor \(R\) is \(I = I_1 + I_2\).</p>
-                    
-                    <p><span class="font-semibold text-blue-700">Step 2: Apply KVL to Loop 1 (containing \(E_1\) and \(R\)):</span></p>
-                    <div class="pl-4 font-mono text-xs bg-white p-2 rounded border border-slate-200">
-                        \( E_1 - I_1 r_1 - (I_1 + I_2) R = 0 \)<br>
-                        \( 6 - I_1(1) - 4(I_1 + I_2) = 0 \implies 5I_1 + 4I_2 = 6 \) &nbsp;--- (Equation 1)
-                    </div>
-
-                    <p><span class="font-semibold text-blue-700">Step 3: Apply KVL to Loop 2 (containing \(E_2\) and \(R\)):</span></p>
-                    <div class="pl-4 font-mono text-xs bg-white p-2 rounded border border-slate-200">
-                        \( E_2 - I_2 r_2 - (I_1 + I_2) R = 0 \)<br>
-                        \( 3 - I_2(1) - 4(I_1 + I_2) = 0 \implies 4I_1 + 5I_2 = 3 \) &nbsp;--- (Equation 2)
-                    </div>
-
-                    <p><span class="font-semibold text-blue-700">Step 4: Solve equations simultaneously:</span></p>
-                    <p class="pl-4">Multiplying Eq (1) by 5 and Eq (2) by 4:</p>
-                    <div class="pl-4 font-mono text-xs bg-white p-2 rounded border border-slate-200">
-                        \( 25I_1 + 20I_2 = 30 \)<br>
-                        \( 16I_1 + 20I_2 = 12 \)<br>
-                        Subtracting gives: \( 9I_1 = 18 \implies \mathbf{I_1 = 2\text{ A}} \)
-                    </div>
-                    <p class="pl-4">Substituting \(I_1 = 2\text{ A}\) into Eq (1):</p>
-                    <div class="pl-4 font-mono text-xs bg-white p-2 rounded border border-slate-200">
-                        \( 5(2) + 4I_2 = 6 \implies 4I_2 = -4 \implies \mathbf{I_2 = -1\text{ A}} \)
-                    </div>
-                    <p class="pl-4"><span class="font-semibold">Conclusion:</span> Current from $E_1$ is $2\text{ A}$, cell $E_2$ is actually being charged with current $1\text{ A}$ (indicated by negative sign), and total current through $R$ is $I = 2 + (-1) = \mathbf{1\text{ A}}$.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 14.2 -->
-        <section id="section-14-2" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-4">
-                <span class="bg-slate-800 text-white font-bold text-xs px-2.5 py-1 rounded">14.2</span>
-                <h2 class="text-xl font-bold text-slate-900">Wheatstone Bridge Circuit</h2>
-            </div>
-
-            <p class="mb-4 text-slate-700">The Wheatstone bridge is an accurate electrical arrangement designed by Sir Charles Wheatstone for measuring an unknown electrical resistance by comparison with known standard resistances.</p>
-
-            <h3 class="text-lg font-semibold text-slate-800 mb-2">Circuit Construction & Working Principle</h3>
-            <p class="mb-3 text-slate-700">It consists of four resistances \(P\), \(Q\), \(R\), and \(S\) connected along the four arms of a quadrilateral network ABCD. A sensitive Galvanometer \(G\) with plug key \(K_g\) is connected across diagonal BD, while a cell \(E\) with key \(K\) is connected across diagonal AC.</p>
-
-            <!-- SVG DIAGRAM 2: Wheatstone Bridge -->
-            <div class="my-6 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                <svg viewBox="0 0 500 360" class="w-full max-w-md mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <marker id="arr" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                            <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f172a" />
-                        </marker>
-                    </defs>
-
-                    <!-- Quadrilateral Bridge Lines -->
-                    <line x1="250" y1="50" x2="100" y2="180" stroke="#0f172a" stroke-width="2" />
-                    <line x1="250" y1="50" x2="400" y2="180" stroke="#0f172a" stroke-width="2" />
-                    <line x1="100" y1="180" x2="250" y2="310" stroke="#0f172a" stroke-width="2" />
-                    <line x1="400" y1="180" x2="250" y2="310" stroke="#0f172a" stroke-width="2" />
-
-                    <!-- Resistor Arms Boxes -->
-                    <!-- Arm AB (P) -->
-                    <g transform="translate(160, 100) rotate(-40)">
-                        <rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="0" y="4" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">P</text>
-                    </g>
-                    <!-- Arm BC (Q) -->
-                    <g transform="translate(340, 100) rotate(40)">
-                        <rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="0" y="4" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Q</text>
-                    </g>
-                    <!-- Arm AD (R) -->
-                    <g transform="translate(160, 260) rotate(40)">
-                        <rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="0" y="4" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">R</text>
-                    </g>
-                    <!-- Arm DC (S) -->
-                    <g transform="translate(340, 260) rotate(-40)">
-                        <rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="0" y="4" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">S</text>
-                    </g>
-
-                    <!-- Galvanometer Arm BD -->
-                    <line x1="250" y1="50" x2="250" y2="310" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="3,3" />
-                    <circle cx="250" cy="180" r="22" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                    <text x="250" y="185" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
-
-                    <!-- Nodes -->
-                    <circle cx="250" cy="50" r="5" fill="#0f172a" /> <!-- B -->
-                    <circle cx="100" cy="180" r="5" fill="#0f172a" /> <!-- A -->
-                    <circle cx="400" cy="180" r="5" fill="#0f172a" /> <!-- C -->
-                    <circle cx="250" cy="310" r="5" fill="#0f172a" /> <!-- D -->
-
-                    <!-- Node Labels -->
-                    <text x="250" y="32" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">B</text>
-                    <text x="75" y="185" font-family="sans-serif" font-size="14" font-weight="bold">A</text>
-                    <text x="415" y="185" font-family="sans-serif" font-size="14" font-weight="bold">C</text>
-                    <text x="250" y="330" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">D</text>
-
-                    <!-- Battery and Key Circuit (External Path from A to C) -->
-                    <path d="M 100 180 L 100 350 L 400 350 L 400 180" fill="none" stroke="#0f172a" stroke-width="2" />
-                    
-                    <!-- Battery symbol in external branch -->
-                    <g transform="translate(220, 350)">
-                        <line x1="0" y1="-12" x2="0" y2="12" stroke="#0f172a" stroke-width="3" />
-                        <line x1="10" y1="-20" x2="10" y2="20" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="5" y="-25" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">E</text>
-                    </g>
-                    <!-- Switch Key K -->
-                    <g transform="translate(300, 350)">
-                        <circle cx="-10" cy="0" r="3" fill="#0f172a" />
-                        <circle cx="10" cy="0" r="3" fill="#0f172a" />
-                        <line x1="-10" y1="0" x2="8" y2="-10" stroke="#0f172a" stroke-width="2" />
-                        <text x="0" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">K</text>
-                    </g>
-
-                    <!-- Current Labels -->
-                    <text x="140" y="100" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">I₁</text>
-                    <text x="140" y="250" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">I₂</text>
-                    <text x="260" y="130" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626">I_g</text>
-                    <text x="330" y="100" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">I₁ - I_g</text>
-                    <text x="330" y="250" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">I₂ + I_g</text>
-                </svg>
-                <p class="text-xs text-slate-500 mt-2 font-medium">Figure 14.2: Wheatstone Bridge Circuit Network with Galvanometer and Battery connections.</p>
-            </div>
-
-            <!-- Mathematical Derivation -->
-            <div class="bg-slate-50 border border-slate-300 p-5 rounded-lg my-4">
-                <h3 class="text-base font-bold text-slate-900 mb-2">Derivation of Balanced Bridge Condition</h3>
-                <p class="text-sm text-slate-700 mb-3">Let main current \(I\) from battery split at junction A into \(I_1\) along arm AB and \(I_2\) along arm AD. At junction B, current \(I_g\) passes through Galvanometer branch BD. Therefore, current along arm BC becomes \((I_1 - I_g)\) and along arm DC becomes \((I_2 + I_g)\).</p>
-
-                <p class="text-sm font-semibold text-slate-800">Applying KVL to closed loop ABDA:</p>
-                <div class="my-2 font-mono text-xs md:text-sm bg-white p-2.5 rounded border border-slate-200">
-                    \( -I_1 P - I_g G + I_2 R = 0 \) &nbsp;&nbsp;\(\implies\)&nbsp;&nbsp; \( I_1 P + I_g G = I_2 R \) &nbsp;--- (Equation 1)
-                </div>
-
-                <p class="text-sm font-semibold text-slate-800">Applying KVL to closed loop BCDB:</p>
-                <div class="my-2 font-mono text-xs md:text-sm bg-white p-2.5 rounded border border-slate-200">
-                    \( -(I_1 - I_g) Q + (I_2 + I_g) S + I_g G = 0 \) &nbsp;&nbsp;\(\implies\)&nbsp;&nbsp; \( (I_1 - I_g) Q - I_g G = (I_2 + I_g) S \) &nbsp;--- (Equation 2)
-                </div>
-
-                <div class="p-3 my-3 bg-amber-50 border-l-4 border-amber-500 rounded-r-md">
-                    <p class="text-xs font-bold text-amber-900 uppercase">Balanced Condition (Null Deflection):</p>
-                    <p class="text-sm text-amber-950">The bridge is said to be balanced when potentials at points B and D are equal (\(V_B = V_D\)). Under this state, no current flows through Galvanometer (\(\mathbf{I_g = 0}\)).</p>
-                </div>
-
-                <p class="text-sm text-slate-700">Substituting \(I_g = 0\) into Equations (1) and (2):</p>
-                <div class="my-2 font-mono text-xs md:text-sm bg-white p-2.5 rounded border border-slate-200">
-                    From Eq (1): &nbsp; \( I_1 P = I_2 R \) &nbsp;--- (Equation 3)<br>
-                    From Eq (2): &nbsp; \( I_1 Q = I_2 S \) &nbsp;--- (Equation 4)
-                </div>
-
-                <p class="text-sm text-slate-700">Dividing Equation (3) by Equation (4):</p>
-                <div class="my-3 text-center text-base font-bold text-blue-800 bg-blue-50 py-3 rounded-lg border border-blue-200">
-                    \( \frac{I_1 P}{I_1 Q} = \frac{I_2 R}{I_2 S} \implies \mathbf{\frac{P}{Q} = \frac{R}{S}} \)
-                </div>
-                <p class="text-sm text-slate-600">This is the fundamental principle of the Wheatstone bridge. If three resistances are known, the unknown resistance can be accurately determined.</p>
-            </div>
-
-            <!-- Sensitivity & Applications -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
-                    <h4 class="font-bold text-slate-900 text-sm mb-1">Condition for Maximum Sensitivity</h4>
-                    <p class="text-xs text-slate-700">A Wheatstone bridge is most sensitive (produces maximum deflection in galvanometer for small changes in resistance) when <span class="font-bold">all four resistances P, Q, R, and S are of the same order of magnitude</span>.</p>
-                </div>
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
-                    <h4 class="font-bold text-slate-900 text-sm mb-1">Practical Real-World Significance</h4>
-                    <p class="text-xs text-slate-700">Forms the operating foundation for laboratory instruments such as <span class="font-bold">Meter Bridge</span> and <span class="font-bold">Post Office Box</span>, as well as industrial sensor bridges (strain gauges and thermistors).</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 14.3 -->
-        <section id="section-14-3" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-4">
-                <span class="bg-slate-800 text-white font-bold text-xs px-2.5 py-1 rounded">14.3</span>
-                <h2 class="text-xl font-bold text-slate-900">Meter Bridge (Slide Wire Bridge)</h2>
-            </div>
-
-            <p class="mb-4 text-slate-700">The Meter Bridge is the practical laboratory form of Wheatstone's bridge. It is used to measure an unknown resistance of a wire precisely and to verify the laws of series and parallel resistance combinations.</p>
-
-            <h3 class="text-lg font-semibold text-slate-800 mb-2">Construction & Setup</h3>
-            <p class="mb-3 text-slate-700">It consists of a 1-meter long uniform wire AB (made of constantan or manganin, high resistivity and low temperature coefficient) stretched tightly over a meter scale on a wooden board. Three thick L-shaped copper strips are fixed on the board creating two gaps:</p>
-            <ul class="list-disc list-inside text-sm text-slate-700 mb-4 pl-2 space-y-1">
-                <li><span class="font-semibold">Left Gap:</span> Connected to unknown resistance \(X\).</li>
-                <li><span class="font-semibold">Right Gap:</span> Connected to a standard Resistance Box \(R\).</li>
-                <li><span class="font-semibold">Central Strip:</span> Connected to a sensitive Galvanometer \(G\) and a sliding contact Jockey \(J\).</li>
-            </ul>
-
-            <!-- SVG DIAGRAM 3: Meter Bridge -->
-            <div class="my-6 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                <svg viewBox="0 0 620 280" class="w-full max-w-lg mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <pattern id="strip" width="10" height="10" patternUnits="userSpaceOnUse">
-                            <path d="M 0 10 L 10 0 M 0 0 L 10 10" stroke="#cbd5e1" stroke-width="0.5"/>
-                        </pattern>
-                    </defs>
-
-                    <!-- Wooden Board Outline -->
-                    <rect x="10" y="10" width="600" height="260" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" rx="6" />
-
-                    <!-- Thick Copper Strips (L-shaped Left, Middle, L-shaped Right) -->
-                    <!-- Left Strip -->
-                    <path d="M 30 30 L 110 30 L 110 60 L 60 60 L 60 180 L 30 180 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" />
-                    <!-- Middle Strip -->
-                    <path d="M 190 30 L 430 30 L 430 60 L 190 60 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" />
-                    <!-- Right Strip -->
-                    <path d="M 510 30 L 590 30 L 590 180 L 560 180 L 560 60 L 510 60 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" />
-
-                    <!-- Meter Scale and Wire AB -->
-                    <rect x="40" y="195" width="540" height="20" fill="#ffffff" stroke="#64748b" stroke-width="1" />
-                    <!-- Scale Markings -->
-                    <line x1="40" y1="195" x2="580" y2="195" stroke="#0f172a" stroke-width="1" />
-                    <text x="40" y="210" font-family="sans-serif" font-size="9" text-anchor="middle">0</text>
-                    <text x="310" y="210" font-family="sans-serif" font-size="9" text-anchor="middle">50 cm</text>
-                    <text x="580" y="210" font-family="sans-serif" font-size="9" text-anchor="middle">100 cm</text>
-
-                    <!-- Meter Bridge Wire AB -->
-                    <line x1="40" y1="180" x2="580" y2="180" stroke="#0f172a" stroke-width="3" />
-                    <!-- Terminals A and B -->
-                    <circle cx="40" cy="180" r="4" fill="#0f172a" />
-                    <text x="25" y="185" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
-                    <circle cx="580" cy="180" r="4" fill="#0f172a" />
-                    <text x="590" y="185" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
-
-                    <!-- Left Gap Component: Unknown Resistance X -->
-                    <rect x="125" y="20" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                    <text x="150" y="34" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">X</text>
-                    <line x1="100" y1="45" x2="125" y2="30" stroke="#0f172a" stroke-width="1.5" />
-                    <line x1="200" y1="45" x2="175" y2="30" stroke="#0f172a" stroke-width="1.5" />
-
-                    <!-- Right Gap Component: Standard Resistance R -->
-                    <rect x="445" y="20" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                    <text x="470" y="34" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">R</text>
-                    <line x1="420" y1="45" x2="445" y2="30" stroke="#0f172a" stroke-width="1.5" />
-                    <line x1="520" y1="45" x2="495" y2="30" stroke="#0f172a" stroke-width="1.5" />
-
-                    <!-- Galvanometer & Jockey Connection from Middle Strip -->
-                    <circle cx="310" cy="45" r="4" fill="#0f172a" />
-                    <line x1="310" y1="45" x2="310" y2="90" stroke="#0f172a" stroke-width="1.5" />
-                    <circle cx="310" cy="110" r="16" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                    <text x="310" y="115" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
-                    
-                    <!-- Jockey Line to Wire -->
-                    <line x1="310" y1="126" x2="250" y2="180" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="3,3" />
-                    <!-- Arrowhead resting on wire at point D -->
-                    <polygon points="250,180 245,170 255,170" fill="#0f172a" />
-                    <text x="250" y="165" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">J (D)</text>
-
-                    <!-- Balancing Length Annotations -->
-                    <line x1="40" y1="235" x2="250" y2="235" stroke="#2563eb" stroke-width="1.5" />
-                    <text x="145" y="250" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">l cm</text>
-                    
-                    <line x1="250" y1="235" x2="580" y2="235" stroke="#dc2626" stroke-width="1.5" />
-                    <text x="415" y="250" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#dc2626">(100 - l) cm</text>
-                </svg>
-                <p class="text-xs text-slate-500 mt-2 font-medium">Figure 14.3: Meter Bridge schematic setup for measuring unknown resistance X.</p>
-            </div>
-
-            <!-- Derivation -->
-            <div class="bg-slate-50 border border-slate-300 p-5 rounded-lg my-4">
-                <h3 class="text-base font-bold text-slate-900 mb-2">Derivation of Unknown Resistance Formula</h3>
-                <p class="text-sm text-slate-700 mb-2">Let \(r\) be the resistance per unit length (\(\text{cm}\)) of wire AB. When the jockey is slid to point D such that Galvanometer shows null deflection (\(I_g = 0\)):</p>
-                <ul class="list-disc list-inside text-sm text-slate-700 mb-3 pl-2">
-                    <li>Resistance of wire segment AD (\(l\text{ cm}\)) = \(P = r \cdot l\)</li>
-                    <li>Resistance of wire segment DB (\((100 - l)\text{ cm}\)) = \(Q = r \cdot (100 - l)\)</li>
-                </ul>
-
-                <p class="text-sm text-slate-700">According to Wheatstone's bridge principle:</p>
-                <div class="my-2 font-mono text-xs md:text-sm bg-white p-2.5 rounded border border-slate-200 text-center">
-                    \( \frac{X}{R} = \frac{P}{Q} = \frac{r \cdot l}{r \cdot (100 - l)} \)
-                </div>
-
-                <div class="my-3 text-center text-base font-bold text-blue-800 bg-blue-50 py-3 rounded-lg border border-blue-200">
-                    \( \mathbf{X = R \left( \frac{l}{100 - l} \right)} \)
-                </div>
-            </div>
-
-            <!-- Sources of Error & End Corrections -->
-            <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-md my-4 callout-box">
-                <h4 class="font-bold text-amber-900 text-sm mb-1">Sources of Error & End Corrections</h4>
-                <p class="text-xs text-amber-950 mb-2">The resistance of thick copper strips at ends A and B is not strictly zero. These are called <span class="font-bold">End Resistances</span> (\(\alpha\) at end A, \(\beta\) at end B in equivalent wire lengths).</p>
-                <p class="text-xs font-semibold text-amber-950">Corrected Meter Bridge Formula:</p>
-                <div class="text-center font-mono text-xs md:text-sm my-1 font-bold text-amber-900">
-                    \( X = R \left( \frac{l + \alpha}{100 - l + \beta} \right) \)
-                </div>
-                <p class="text-xs text-amber-950 mt-2"><span class="font-bold">Precaution:</span> To minimize errors, adjust resistance \(R\) such that balancing length \(l\) lies near the middle of the wire (\(40\text{ cm}\) to \(60\text{ cm}\)).</p>
-            </div>
-        </section>
-
-        <!-- SECTION 14.4 -->
-        <section id="section-14-4" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-4">
-                <span class="bg-slate-800 text-white font-bold text-xs px-2.5 py-1 rounded">14.4</span>
-                <h2 class="text-xl font-bold text-slate-900">Potentiometer</h2>
-            </div>
-
-            <p class="mb-4 text-slate-700">A potentiometer is a high-precision instrument used to measure electromotive force (EMF) of a cell, compare EMFs of two cells, and determine the internal resistance of a primary cell without drawing any current from the circuit.</p>
-
-            <div class="bg-blue-50 border-l-4 border-blue-600 p-4 my-4 rounded-r-md callout-box">
-                <h3 class="font-bold text-blue-900 text-base mb-1">Working Principle of Potentiometer</h3>
-                <p class="text-blue-950 text-sm">When a constant current flows through a wire of uniform cross-sectional area and composition, the potential drop across any length of the wire is directly proportional to that length.</p>
-                <div class="text-center text-lg font-bold text-blue-900 my-2">
-                    \( V \propto l \implies \mathbf{V = k \cdot l} \)
-                </div>
-                <p class="text-xs text-blue-900"><span class="font-bold">Potential Gradient (\(k\)):</span> Fall of potential per unit length of wire: \( k = \frac{V}{l} = \frac{I \rho}{A} \), where \(\rho\) is resistivity and \(A\) is cross-sectional area.</p>
-            </div>
-
-            <!-- Why preferred over ideal voltmeter -->
-            <div class="bg-emerald-50 border-l-4 border-emerald-600 p-4 my-4 rounded-r-md callout-box">
-                <h4 class="font-bold text-emerald-900 text-sm mb-1">Why Potentiometer is Preferred over an Ideal Voltmeter?</h4>
-                <p class="text-xs text-emerald-950">A voltmeter requires a finite current to produce deflection, thereby measuring terminal potential difference rather than actual EMF. Conversely, a potentiometer operates on the <span class="font-bold">null deflection method</span> where no current is drawn from the measured cell at balance point (\(I = 0\)). Thus, it acts as an <span class="font-bold">ideal voltmeter with infinite effective resistance</span>.</p>
-            </div>
-
-            <!-- Application 1: Comparing EMFs -->
-            <div class="my-6">
-                <h3 class="text-lg font-semibold text-slate-800 mb-2">1. Comparison of EMFs of Two Primary Cells</h3>
-                
-                <!-- SVG DIAGRAM 4: Potentiometer EMF Comparison -->
-                <div class="my-4 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                    <svg viewBox="0 0 580 260" class="w-full max-w-lg mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Primary Driver Circuit -->
-                        <line x1="60" y1="50" x2="520" y2="50" stroke="#0f172a" stroke-width="3" />
-                        <text x="45" y="55" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
-                        <text x="530" y="55" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
-
-                        <!-- Primary Battery & Key Top Branch -->
-                        <path d="M 60 50 L 60 15 L 520 15 L 520 50" fill="none" stroke="#0f172a" stroke-width="1.5" />
-                        <!-- Battery E_driver -->
-                        <g transform="translate(230, 15)">
-                            <line x1="0" y1="-8" x2="0" y2="8" stroke="#0f172a" stroke-width="3" />
-                            <line x1="8" y1="-14" x2="8" y2="14" stroke="#0f172a" stroke-width="1.5" />
-                            <text x="4" y="-18" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">E (Driver)</text>
-                        </g>
-                        <!-- Key K1 -->
-                        <circle cx="340" cy="15" r="3" fill="#0f172a" />
-                        <text x="340" y="-2" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">K₁</text>
-
-                        <!-- Secondary Circuit Cells E1 and E2 -->
-                        <path d="M 60 50 L 60 120" stroke="#0f172a" stroke-width="1.5" />
-                        
-                        <!-- Cell E1 branch -->
-                        <path d="M 60 100 L 140 100" stroke="#0f172a" stroke-width="1.5" />
-                        <line x1="140" y1="92" x2="140" y2="108" stroke="#0f172a" stroke-width="3" />
-                        <line x1="148" y1="86" x2="148" y2="114" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="144" y="80" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">E₁</text>
-                        <line x1="148" y1="100" x2="230" y2="100" stroke="#0f172a" stroke-width="1.5" />
-
-                        <!-- Cell E2 branch -->
-                        <path d="M 60 140 L 140 140" stroke="#0f172a" stroke-width="1.5" />
-                        <line x1="140" y1="132" x2="140" y2="148" stroke="#0f172a" stroke-width="3" />
-                        <line x1="148" y1="126" x2="148" y2="154" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="144" y="170" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">E₂</text>
-                        <line x1="148" y1="140" x2="230" y2="140" stroke="#0f172a" stroke-width="1.5" />
-
-                        <!-- Two-Way Switch Terminals (1, 2, 3) -->
-                        <rect x="230" y="90" width="40" height="60" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" rx="3" />
-                        <circle cx="240" cy="100" r="3" fill="#0f172a" /> <text x="248" y="103" font-family="sans-serif" font-size="9">1</text>
-                        <circle cx="240" cy="140" r="3" fill="#0f172a" /> <text x="248" y="143" font-family="sans-serif" font-size="9">2</text>
-                        <circle cx="260" cy="120" r="3" fill="#0f172a" /> <text x="252" y="123" font-family="sans-serif" font-size="9">3</text>
-
-                        <!-- Galvanometer & Jockey line from terminal 3 -->
-                        <line x1="260" y1="120" x2="330" y2="120" stroke="#0f172a" stroke-width="1.5" />
-                        <circle cx="350" cy="120" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="350" y="124" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
-                        
-                        <!-- Jockey arrow to point J1 and J2 -->
-                        <line x1="364" y1="120" x2="280" y2="50" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3" />
-                        <polygon points="280,50 275,40 285,40" fill="#2563eb" />
-                        <text x="280" y="38" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">J₁ (l₁)</text>
-
-                        <line x1="364" y1="120" x2="380" y2="50" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3" />
-                        <polygon points="380,50 375,40 385,40" fill="#dc2626" />
-                        <text x="380" y="38" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626">J₂ (l₂)</text>
-                    </svg>
-                    <p class="text-xs text-slate-500 mt-1 font-medium">Figure 14.4: Potentiometer setup for comparing EMFs of two cells E₁ and E₂.</p>
-                </div>
-
-                <p class="text-sm text-slate-700 mb-2"><span class="font-semibold">Derivation:</span> Connect terminal 1 and 3 (cell \(E_1\) in circuit). Slide jockey to obtain balance point \(J_1\) at length \(l_1\):</p>
-                <div class="my-1 font-mono text-xs md:text-sm bg-white p-2 rounded border border-slate-200 text-center">
-                    \( E_1 = k \cdot l_1 \) &nbsp;--- (Equation 1)
-                </div>
-
-                <p class="text-sm text-slate-700 my-2">Next, connect terminal 2 and 3 (cell \(E_2\) in circuit). Slide jockey to obtain balance point \(J_2\) at length \(l_2\):</p>
-                <div class="my-1 font-mono text-xs md:text-sm bg-white p-2 rounded border border-slate-200 text-center">
-                    \( E_2 = k \cdot l_2 \) &nbsp;--- (Equation 2)
-                </div>
-
-                <p class="text-sm text-slate-700 my-2">Dividing Eq (1) by Eq (2):</p>
-                <div class="my-2 text-center text-base font-bold text-blue-800 bg-blue-50 py-2 rounded.md border border-blue-200">
-                    \( \mathbf{\frac{E_1}{E_2} = \frac{l_1}{l_2}} \)
-                </div>
-            </div>
-
-            <!-- Application 2: Internal Resistance -->
-            <div class="my-6">
-                <h3 class="text-lg font-semibold text-slate-800 mb-2">2. Determination of Internal Resistance (\(r\)) of a Primary Cell</h3>
-                
-                <!-- SVG DIAGRAM 5: Potentiometer Internal Resistance -->
-                <div class="my-4 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                    <svg viewBox="0 0 580 240" class="w-full max-w-lg mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Potentiometer Wire AB -->
-                        <line x1="60" y1="40" x2="520" y2="40" stroke="#0f172a" stroke-width="3" />
-                        <text x="45" y="45" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
-                        <text x="530" y="45" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
-
-                        <!-- Primary Circuit -->
-                        <path d="M 60 40 L 60 10 L 520 10 L 520 40" fill="none" stroke="#0f172a" stroke-width="1.5" />
-                        <circle cx="290" cy="10" r="3" fill="#0f172a" />
-                        <text x="290" y="-2" font-family="sans-serif" font-size="11" text-anchor="middle">Driver Cell E</text>
-
-                        <!-- Secondary Circuit Cell with internal resistance r -->
-                        <line x1="60" y1="40" x2="60" y2="120" stroke="#0f172a" stroke-width="1.5" />
-                        <line x1="60" y1="120" x2="160" y2="120" stroke="#0f172a" stroke-width="1.5" />
-                        
-                        <!-- Cell E' -->
-                        <line x1="160" y1="112" x2="160" y2="128" stroke="#0f172a" stroke-width="3" />
-                        <line x1="168" y1="106" x2="168" y2="134" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="164" y="100" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">E'</text>
-
-                        <!-- Internal Resistance r representation -->
-                        <rect x="190" y="113" width="30" height="14" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="205" y="124" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">r</text>
-
-                        <line x1="220" y1="120" x2="300" y2="120" stroke="#0f172a" stroke-width="1.5" />
-
-                        <!-- Parallel Shunt Resistance Box R with Key K2 -->
-                        <path d="M 120 120 L 120 180 L 180 180" fill="none" stroke="#0f172a" stroke-width="1.5" />
-                        <rect x="180" y="172" width="40" height="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="200" y="184" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">R</text>
-                        <line x1="220" y1="180" x2="260" y2="180" stroke="#0f172a" stroke-width="1.5" />
-                        <!-- Switch K2 -->
-                        <circle cx="265" cy="180" r="3" fill="#0f172a" />
-                        <circle cx="285" cy="180" r="3" fill="#0f172a" />
-                        <text x="275" y="198" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">K₂</text>
-                        <path d="M 285 180 L 300 180 L 300 120" fill="none" stroke="#0f172a" stroke-width="1.5" />
-
-                        <!-- Galvanometer & Jockey -->
-                        <line x1="300" y1="120" x2="350" y2="120" stroke="#0f172a" stroke-width="1.5" />
-                        <circle cx="365" cy="120" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="365" y="124" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
-
-                        <!-- Jockey arrow to point J -->
-                        <line x1="379" y1="120" x2="310" y2="40" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3" />
-                        <polygon points="310,40 305,30 315,30" fill="#2563eb" />
-                        <text x="310" y="25" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">J (l)</text>
-                    </svg>
-                    <p class="text-xs text-slate-500 mt-1 font-medium">Figure 14.5: Potentiometer setup for determining cell internal resistance r.</p>
-                </div>
-
-                <div class="bg-slate-50 border border-slate-300 p-4 rounded-lg">
-                    <p class="text-sm text-slate-700 mb-2"><span class="font-semibold">Step 1:</span> Keep key \(K_2\) open (open circuit). Balance length \(l_1\) corresponds to cell EMF \(E'\):</p>
-                    <div class="my-1 font-mono text-xs bg-white p-2 rounded border border-slate-200 text-center">\( E' = k \cdot l_1 \)</div>
-
-                    <p class="text-sm text-slate-700 my-2"><span class="font-semibold">Step 2:</span> Close key \(K_2\) (closed circuit with shunt resistance \(R\)). Balance length \(l_2\) corresponds to terminal voltage \(V\):</p>
-                    <div class="my-1 font-mono text-xs bg-white p-2 rounded border border-slate-200 text-center">\( V = k \cdot l_2 \)</div>
-
-                    <p class="text-sm text-slate-700 my-2">Ratio of EMF to terminal voltage:</p>
-                    <div class="my-1 font-mono text-xs bg-white p-2 rounded border border-slate-200 text-center">\( \frac{E'}{V} = \frac{l_1}{l_2} \)</div>
-
-                    <p class="text-sm text-slate-700 my-2">Since internal resistance \(r = \left( \frac{E' - V}{V} \right) R = \left( \frac{E'}{V} - 1 \right) R\):</p>
-                    <div class="my-3 text-center text-base font-bold text-blue-800 bg-blue-50 py-2.5 rounded-md border border-blue-200">
-                        \( \mathbf{r = R \left( \frac{l_1 - l_2}{l_2} \right)} \)
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 14.5 -->
-        <section id="section-14-5" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-4">
-                <span class="bg-slate-800 text-white font-bold text-xs px-2.5 py-1 rounded">14.5</span>
-                <h2 class="text-xl font-bold text-slate-900">Superconductors</h2>
-            </div>
-
-            <p class="mb-4 text-slate-700">Superconductivity is a phenomenon of quantum physics where certain materials exhibit exactly zero electrical resistance and complete expulsion of magnetic flux fields when cooled below a characteristic critical temperature.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
-                    <h3 class="font-bold text-slate-900 text-sm mb-1">Discovery & Critical Temperature (\(T_c\))</h3>
-                    <p class="text-xs text-slate-700">Discovered in <span class="font-bold">1911 by Heike Kamerlingh Onnes</span> while cooling Mercury (Hg) in liquid helium to <span class="font-bold text-blue-700">4.2 K</span>. Below \(T_c\), electrical resistivity abruptly drops to strictly zero (\(\rho = 0\)).</p>
-                </div>
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg">
-                    <h3 class="font-bold text-slate-900 text-sm mb-1">Critical Magnetic Field (\(H_c\))</h3>
-                    <p class="text-xs text-slate-700">Superconductivity vanishes if an external magnetic field exceeds a critical value \(H_c(T) = H_0\left[1 - (T/T_c)^2\right]\), restoring normal electrical resistance.</p>
-                </div>
-            </div>
-
-            <!-- Meissner Effect Subsection -->
-            <div class="mb-6">
-                <h3 class="text-lg font-semibold text-slate-800 mb-2">The Meissner Effect</h3>
-                <p class="mb-3 text-slate-700">When a superconducting material is cooled below its critical temperature \(T_c\) inside an external magnetic field, it <span class="font-semibold text-slate-900">completely expels all magnetic flux lines</span> from its interior.</p>
-
-                <div class="bg-blue-50 border-l-4 border-blue-600 p-3.5 my-3 rounded-r-md callout-box">
-                    <p class="text-xs font-bold uppercase tracking-wider text-blue-800">Perfect Diamagnetism Condition:</p>
-                    <p class="text-sm text-blue-950 mt-1">Inside a superconductor (\(T < T_c\)): &nbsp;&nbsp;\(\mathbf{B = 0}\) &nbsp;&nbsp;\(\iff\)&nbsp;&nbsp; \( \mu_r = 0 \), &nbsp; Magnetic Susceptibility \( \chi = -1 \).</p>
-                </div>
-
-                <!-- SVG DIAGRAM 6: Meissner Effect -->
-                <div class="my-6 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                    <svg viewBox="0 0 550 200" class="w-full max-w-md mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Left Diagram: Normal Conductor T > Tc -->
-                        <g transform="translate(20, 10)">
-                            <text x="110" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(a) Normal State (T &gt; T_c)</text>
-                            
-                            <!-- Magnetic field lines passing straight through -->
-                            <line x1="20" y1="50" x2="200" y2="50" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-                            <line x1="20" y1="80" x2="200" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-                            <line x1="20" y1="110" x2="200" y2="110" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-                            <line x1="20" y1="140" x2="200" y2="140" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-
-                            <!-- Material Circle -->
-                            <circle cx="110" cy="95" r="35" fill="#f1f5f9" stroke="#0f172a" stroke-width="2" />
-                            <text x="110" y="98" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">B ≠ 0</text>
-                        </g>
-
-                        <!-- Right Diagram: Superconductor T < Tc -->
-                        <g transform="translate(290, 10)">
-                            <text x="110" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(b) Superconducting State (T &lt; T_c)</text>
-                            
-                            <!-- Bent magnetic field lines expelled around circle -->
-                            <path d="M 20 40 Q 110 10 200 40" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-                            <path d="M 20 60 Q 110 30 200 60" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-                            <path d="M 20 130 Q 110 160 200 130" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-                            <path d="M 20 150 Q 110 180 200 150" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)" />
-
-                            <!-- Material Circle -->
-                            <circle cx="110" cy="95" r="35" fill="#e2e8f0" stroke="#0f172a" stroke-width="2" />
-                            <text x="110" y="98" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#dc2626">B = 0</text>
-                        </g>
-                    </svg>
-                    <p class="text-xs text-slate-500 mt-2 font-medium">Figure 14.6: Expulsion of magnetic flux lines in a superconductor (Meissner Effect).</p>
-                </div>
-            </div>
-
-            <!-- Practical Applications -->
-            <div class="bg-slate-50 border border-slate-200 p-4 rounded-lg">
-                <h4 class="font-bold text-slate-900 text-sm mb-2">Key Applications of Superconductors</h4>
-                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
-                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Magnetic Resonance Imaging (MRI) scanners</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Maglev trains (Magnetic Levitation)</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>SQUIDs (Sensitive Magnetometers)</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Zero-loss power transmission cables</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- SECTION 14.6 -->
-        <section id="section-14-6" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-4">
-                <span class="bg-slate-800 text-white font-bold text-xs px-2.5 py-1 rounded">14.6</span>
-                <h2 class="text-xl font-bold text-slate-900">Perfect Conductors vs. Superconductors</h2>
-            </div>
-
-            <p class="mb-4 text-slate-700">While both perfect conductors and superconductors exhibit zero electrical resistance (\(R = 0\)), they are <span class="font-bold">fundamentally different thermodynamic states</span> distinguished by their magnetic behavior.</p>
-
-            <p class="mb-4 text-slate-700"><span class="font-semibold">Theoretical Difference:</span> In a perfect conductor, Maxwell's equation gives \(\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}\). Since \(\mathbf{E} = 0\), it implies \(\frac{\partial \mathbf{B}}{\partial t} = 0\), meaning magnetic flux inside is <span class="font-bold">frozen/trapped</span>. In contrast, a true superconductor actively expels magnetic flux, enforcing \(\mathbf{B = 0}\) regardless of magnetic history.</p>
-
-            <!-- Comprehensive Comparison Table -->
-            <div class="overflow-x-auto my-6 break-inside-avoid">
-                <table class="w-full text-left text-xs md:text-sm border-collapse border border-slate-300">
-                    <thead>
-                        <tr class="bg-slate-800 text-white">
-                            <th class="p-3 border border-slate-600">Property / Feature</th>
-                            <th class="p-3 border border-slate-600">Perfect Conductor</th>
-                            <th class="p-3 border border-slate-600">Superconductor</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-200 bg-white">
-                        <tr>
-                            <td class="p-3 font-semibold text-slate-900 border border-slate-300 bg-slate-50">Electrical Resistance (\(R\))</td>
-                            <td class="p-3 border border-slate-300 text-slate-700">Zero (\(R = 0\))</td>
-                            <td class="p-3 border border-slate-300 text-slate-700 font-semibold text-blue-700">Zero (\(R = 0\))</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold text-slate-900 border border-slate-300 bg-slate-50">Internal Magnetic Field (\(B\))</td>
-                            <td class="p-3 border border-slate-300 text-slate-700">Trapped/Constant (\(\frac{dB}{dt} = 0\))</td>
-                            <td class="p-3 border border-slate-300 text-slate-700 font-semibold text-blue-700">Strictly Zero (\(B = 0\))</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold text-slate-900 border border-slate-300 bg-slate-50">Meissner Effect</td>
-                            <td class="p-3 border border-slate-300 text-red-600 font-medium">Does NOT exhibit Meissner Effect</td>
-                            <td class="p-3 border border-slate-300 text-emerald-600 font-medium">Exhibits Meissner Effect</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold text-slate-900 border border-slate-300 bg-slate-50">Magnetic State</td>
-                            <td class="p-3 border border-slate-300 text-slate-700">Normal magnetic response</td>
-                            <td class="p-3 border border-slate-300 text-slate-700 font-semibold">Perfect Diamagnet (\(\chi = -1\))</td>
-                        </tr>
-                        <tr>
-                            <td class="p-3 font-semibold text-slate-900 border border-slate-300 bg-slate-50">Reversibility</td>
-                            <td class="p-3 border border-slate-300 text-slate-700">State depends on cooling sequence path</td>
-                            <td class="p-3 border border-slate-300 text-slate-700">Thermodynamically reversible transition</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- EXTRA SECTION: GALVANOMETER CONVERSION -->
-        <section id="section-galvanometer" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-4">
-                <span class="bg-blue-600 text-white font-bold text-xs px-2.5 py-1 rounded">EXTRA</span>
-                <h2 class="text-xl font-bold text-slate-900">Conversion of Galvanometer into Ammeter and Voltmeter</h2>
-            </div>
-
-            <p class="mb-4 text-slate-700">A Moving Coil Galvanometer (MCG) is a highly sensitive instrument that measures small electric currents (order of \(\mu\text{A}\)). It has internal resistance \(G\) and full-scale deflection current \(I_g\).</p>
-
-            <!-- Ammeter Conversion -->
-            <div class="mb-8">
-                <h3 class="text-lg font-semibold text-slate-800 mb-2">1. Conversion of Galvanometer into an Ammeter</h3>
-                <p class="text-sm text-slate-700 mb-3">To convert a galvanometer into an ammeter capable of measuring large current \(I\) (\(I > I_g\)), a very small resistance called a <span class="font-bold text-blue-700">Shunt (\(S\))</span> is connected in <span class="font-bold">PARALLEL</span> with the galvanometer.</p>
-
-                <!-- SVG DIAGRAM 7: Ammeter Conversion -->
-                <div class="my-4 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                    <svg viewBox="0 0 480 180" class="w-full max-w-md mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Main Line Entrance -->
-                        <line x1="20" y1="90" x2="80" y2="90" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-                        <text x="45" y="80" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2563eb">I</text>
-
-                        <!-- Parallel Branches Junctions -->
-                        <circle cx="80" cy="90" r="4" fill="#0f172a" />
-                        <circle cx="400" cy="90" r="4" fill="#0f172a" />
-
-                        <!-- Top Branch: Galvanometer G -->
-                        <path d="M 80 90 L 80 40 L 180 40" stroke="#0f172a" stroke-width="1.5" />
-                        <circle cx="210" cy="40" r="18" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="210" y="45" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
-                        <path d="M 240 40 L 400 40 L 400 90" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="130" y="32" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">I_g</text>
-
-                        <!-- Bottom Branch: Shunt Resistance S -->
-                        <path d="M 80 90 L 80 140 L 180 140" stroke="#0f172a" stroke-width="1.5" />
-                        <rect x="180" y="130" width="60" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="210" y="144" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">S (Shunt)</text>
-                        <path d="M 240 140 L 400 140 L 400 90" stroke="#0f172a" stroke-width="1.5" />
-                        <text x="120" y="158" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626">I - I_g</text>
-
-                        <!-- Exit Wire -->
-                        <line x1="400" y1="90" x2="460" y2="90" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-
-                        <!-- Ammeter Dashed Enclosure Box -->
-                        <rect x="60" y="10" width="360" height="160" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,4" rx="6" />
-                        <text x="240" y="25" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">AMMETER (Low Resistance)</text>
-                    </svg>
-                    <p class="text-xs text-slate-500 mt-1 font-medium">Figure 14.7: Shunt resistance S connected in parallel with Galvanometer G.</p>
-                </div>
-
-                <div class="bg-slate-50 border border-slate-300 p-4 rounded-lg text-sm text-slate-800">
-                    <p class="font-semibold mb-2">Mathematical Derivation:</p>
-                    <p>Since Galvanometer and Shunt are in parallel, potential difference across both is equal:</p>
-                    <div class="my-2 font-mono text-xs md:text-sm bg-white p-2 rounded border border-slate-200 text-center">
-                        \( V_G = V_S \implies I_g \cdot G = (I - I_g) \cdot S \)
-                    </div>
-                    <div class="my-3 text-center text-base font-bold text-blue-800 bg-blue-50 py-2.5 rounded-md border border-blue-200">
-                        \( \mathbf{S = \frac{I_g \cdot G}{I - I_g}} \)
-                    </div>
-                    <p class="text-xs text-slate-600 mt-2"><span class="font-bold">Effective Ammeter Resistance (\(R_A\)):</span> \( R_A = \frac{G \cdot S}{G + S} \approx S \) (extremely low resistance. An ideal ammeter has zero resistance).</p>
-                </div>
-            </div>
-
-            <!-- Voltmeter Conversion -->
-            <div>
-                <h3 class="text-lg font-semibold text-slate-800 mb-2">2. Conversion of Galvanometer into a Voltmeter</h3>
-                <p class="text-sm text-slate-700 mb-3">To convert a galvanometer into a voltmeter capable of measuring potential difference \(V\), a very high resistance called a <span class="font-bold text-blue-700">Multiplier (\(R\))</span> is connected in <span class="font-bold">SERIES</span> with the galvanometer.</p>
-
-                <!-- SVG DIAGRAM 8: Voltmeter Conversion -->
-                <div class="my-4 p-4 bg-slate-50 border border-slate-200 rounded-lg text-center break-inside-avoid">
-                    <svg viewBox="0 0 480 140" class="w-full max-w-md mx-auto overflow-visible" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Terminals A and B -->
-                        <circle cx="30" cy="70" r="4" fill="#0f172a" />
-                        <text x="25" y="60" font-family="sans-serif" font-size="12" font-weight="bold">A</text>
-                        <circle cx="450" cy="70" r="4" fill="#0f172a" />
-                        <text x="450" y="60" font-family="sans-serif" font-size="12" font-weight="bold">B</text>
-
-                        <!-- Series Path -->
-                        <line x1="30" y1="70" x2="110" y2="70" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)" />
-                        <text x="70" y="60" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">I_g</text>
-
-                        <!-- Galvanometer G -->
-                        <circle cx="140" cy="70" r="20" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="140" y="75" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
-
-                        <line x1="160" y1="70" x2="240" y2="70" stroke="#0f172a" stroke-width="2" />
-
-                        <!-- Series High Resistance R -->
-                        <rect x="240" y="58" width="90" height="24" fill="#ffffff" stroke="#0f172a" stroke-width="2" />
-                        <text x="285" y="74" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">R (High)</text>
-
-                        <line x1="330" y1="70" x2="450" y2="70" stroke="#0f172a" stroke-width="2" />
-
-                        <!-- Voltmeter Dashed Enclosure Box -->
-                        <rect x="90" y="20" width="280" height="100" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,4" rx="6" />
-                        <text x="230" y="35" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">VOLTMETER (High Resistance)</text>
-
-                        <!-- Voltage Label V -->
-                        <path d="M 30 110 L 450 110" stroke="#0f172a" stroke-width="1" stroke-dasharray="2,2" />
-                        <text x="240" y="128" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">Total Potential Difference (V)</text>
-                    </svg>
-                    <p class="text-xs text-slate-500 mt-1 font-medium">Figure 14.8: High resistance R connected in series with Galvanometer G.</p>
-                </div>
-
-                <div class="bg-slate-50 border border-slate-300 p-4 rounded-lg text-sm text-slate-800">
-                    <p class="font-semibold mb-2">Mathematical Derivation:</p>
-                    <p>Total resistance of series combination = \(G + R\). Applying Ohm's law across terminals A and B:</p>
-                    <div class="my-2 font-mono text-xs md:text-sm bg-white p-2 rounded border border-slate-200 text-center">
-                        \( V = I_g (G + R) \implies \frac{V}{I_g} = G + R \)
-                    </div>
-                    <div class="my-3 text-center text-base font-bold text-blue-800 bg-blue-50 py-2.5 rounded-md border border-blue-200">
-                        \( \mathbf{R = \frac{V}{I_g} - G} \)
-                    </div>
-                    <p class="text-xs text-slate-600 mt-2"><span class="font-bold">Effective Voltmeter Resistance (\(R_V\)):</span> \( R_V = G + R \approx R \) (extremely high resistance. An ideal voltmeter has infinite resistance).</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: SOLVED NEB BOARD NUMERICALS -->
-        <section id="section-numericals" class="mb-12 break-inside-avoid">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-6">
-                <span class="bg-emerald-600 text-white font-bold text-xs px-2.5 py-1 rounded">SOLVED</span>
-                <h2 class="text-xl font-bold text-slate-900">NEB Board Exam Solved Numericals</h2>
-            </div>
-
-            <div class="space-y-6">
-                <!-- Numerical 1 -->
-                <div class="p-5 bg-slate-50 border border-slate-300 rounded-lg">
-                    <h3 class="font-bold text-slate-900 text-sm mb-2">Numerical 1: Wheatstone Bridge Unknown Resistance</h3>
-                    <p class="text-xs text-slate-700 mb-3"><span class="font-semibold">Question:</span> Four resistances \(P = 10\,\Omega\), \(Q = 20\,\Omega\), \(R = 15\,\Omega\), and \(S = 25\,\Omega\) form a Wheatstone bridge network. Calculate the value of additional resistance that must be connected in parallel with \(S\) to balance the bridge.</p>
-                    
-                    <div class="text-xs space-y-1.5 font-mono bg-white p-3 rounded border border-slate-200 text-slate-800">
-                        <p><span class="font-bold text-blue-700">Given:</span> \(P = 10\,\Omega\), \(Q = 20\,\Omega\), \(R = 15\,\Omega\). Let \(S'\) be required balanced resistance in arm 4.</p>
-                        <p><span class="font-bold text-blue-700">Formula:</span> Balanced bridge condition: \(\frac{P}{Q} = \frac{R}{S'}\)</p>
-                        <p><span class="font-bold text-blue-700">Calculation:</span></p>
-                        <p class="pl-3">\(\frac{10}{20} = \frac{15}{S'} \implies \frac{1}{2} = \frac{15}{S'} \implies S' = 30\,\Omega\)</p>
-                        <p>Since existing resistance \(S = 25\,\Omega\) is less than $30\,\Omega$, let parallel resistance needed be \(x\):</p>
-                        <p class="pl-3">\(\frac{1}{S'} = \frac{1}{S} + \frac{1}{x} \implies \frac{1}{30} = \frac{1}{25} + \frac{1}{x} \implies \frac{1}{x} = \frac{1}{30} - \frac{1}{25} = \frac{5 - 6}{150} = -\frac{1}{150}\)</p>
-                        <p class="text-emerald-700 font-bold mt-1">Result: To increase resistance to $30\,\Omega$, a $5\,\Omega$ resistor should be added in SERIES, or if $S=40\,\Omega$, $x = 120\,\Omega$ in parallel.</p>
-                    </div>
-                </div>
-
-                <!-- Numerical 2 -->
-                <div class="p-5 bg-slate-50 border border-slate-300 rounded-lg">
-                    <h3 class="font-bold text-slate-900 text-sm mb-2">Numerical 2: Meter Bridge with End Corrections</h3>
-                    <p class="text-xs text-slate-700 mb-3"><span class="font-semibold">Question:</span> In a meter bridge experiment, null point is found at distance \(l = 40.0\text{ cm}\) when standard resistance box \(R = 12\,\Omega\) is used. If end corrections at ends A and B are \(\alpha = 0.2\text{ cm}\) and \(\beta = 0.3\text{ cm}\) respectively, calculate the exact unknown resistance \(X\).</p>
-                    
-                    <div class="text-xs space-y-1.5 font-mono bg-white p-3 rounded border border-slate-200 text-slate-800">
-                        <p><span class="font-bold text-blue-700">Given:</span> \(R = 12\,\Omega\), \(l = 40.0\text{ cm}\), \(\alpha = 0.2\text{ cm}\), \(\beta = 0.3\text{ cm}\)</p>
-                        <p><span class="font-bold text-blue-700">Formula:</span> \(X = R \left( \frac{l + \alpha}{100 - l + \beta} \right)\)</p>
-                        <p><span class="font-bold text-blue-700">Substitution:</span></p>
-                        <p class="pl-3">\(X = 12 \left( \frac{40.0 + 0.2}{100 - 40.0 + 0.3} \right) = 12 \left( \frac{40.2}{60.3} \right) = 12 \left( \frac{2}{3} \right) = 8.0\,\Omega\)</p>
-                        <p class="text-emerald-700 font-bold mt-1">Result: Unknown resistance X = 8.0 Ω</p>
-                    </div>
-                </div>
-
-                <!-- Numerical 3 -->
-                <div class="p-5 bg-slate-50 border border-slate-300 rounded-lg">
-                    <h3 class="font-bold text-slate-900 text-sm mb-2">Numerical 3: Potentiometer Internal Resistance Determination</h3>
-                    <p class="text-xs text-slate-700 mb-3"><span class="font-semibold">Question:</span> A cell gives a balance length of \(250\text{ cm}\) on a potentiometer wire when in open circuit. When a resistance box of \(10\,\Omega\) is shunted across the cell, balance length shifts to \(200\text{ cm}\). Calculate internal resistance \(r\) of the cell.</p>
-                    
-                    <div class="text-xs space-y-1.5 font-mono bg-white p-3 rounded border border-slate-200 text-slate-800">
-                        <p><span class="font-bold text-blue-700">Given:</span> \(l_1 = 250\text{ cm}\), \(l_2 = 200\text{ cm}\), \(R = 10\,\Omega\)</p>
-                        <p><span class="font-bold text-blue-700">Formula:</span> \(r = R \left( \frac{l_1 - l_2}{l_2} \right)\)</p>
-                        <p><span class="font-bold text-blue-700">Substitution:</span></p>
-                        <p class="pl-3">\(r = 10 \left( \frac{250 - 200}{200} \right) = 10 \left( \frac{50}{200} \right) = 10 \times 0.25 = 2.5\,\Omega\)</p>
-                        <p class="text-emerald-700 font-bold mt-1">Result: Internal resistance of cell r = 2.5 Ω</p>
-                    </div>
-                </div>
-
-                <!-- Numerical 4 -->
-                <div class="p-5 bg-slate-50 border border-slate-300 rounded-lg">
-                    <h3 class="font-bold text-slate-900 text-sm mb-2">Numerical 4: Galvanometer Conversion to Ammeter and Voltmeter</h3>
-                    <p class="text-xs text-slate-700 mb-3"><span class="font-semibold">Question:</span> A galvanometer has a resistance of \(G = 50\,\Omega\) and gives full scale deflection for a current \(I_g = 2\text{ mA}\) (\(0.002\text{ A}\)). How can it be converted into: (a) An ammeter reading up to \(5\text{ A}\)? (b) A voltmeter reading up to \(10\text{ V}\)?</p>
-                    
-                    <div class="text-xs space-y-1.5 font-mono bg-white p-3 rounded border border-slate-200 text-slate-800">
-                        <p><span class="font-bold text-blue-700">Part (a) Ammeter Conversion:</span></p>
-                        <p class="pl-3">\(S = \frac{I_g \cdot G}{I - I_g} = \frac{0.002 \times 50}{5 - 0.002} = \frac{0.1}{4.998} \approx \mathbf{0.020\,\Omega}\)</p>
-                        <p class="pl-3 text-emerald-700 font-bold">Ans: Connect a shunt resistance of 0.020 Ω in PARALLEL with Galvanometer.</p>
-                        
-                        <p class="mt-2"><span class="font-bold text-blue-700">Part (b) Voltmeter Conversion:</span></p>
-                        <p class="pl-3">\(R = \frac{V}{I_g} - G = \frac{10}{0.002} - 50 = 5000 - 50 = \mathbf{4950\,\Omega}\)</p>
-                        <p class="pl-3 text-emerald-700 font-bold">Ans: Connect a multiplier resistance of 4950 Ω in SERIES with Galvanometer.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: CONCEPTUAL QUESTIONS -->
-        <section id="section-conceptual" class="mb-12">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-6">
-                <span class="bg-indigo-600 text-white font-bold text-xs px-2.5 py-1 rounded">CONCEPTUAL</span>
-                <h2 class="text-xl font-bold text-slate-900">Short Answer Conceptual Q&amp;A</h2>
-            </div>
-
-            <div class="space-y-4">
-                <!-- Q1 -->
-                <details class="bg-slate-50 border border-slate-200 rounded-lg p-4 cursor-pointer hover:bg-slate-100 transition-colors">
-                    <summary class="font-semibold text-slate-900 text-sm flex justify-between items-center">
-                        <span>Q1: Why is Kirchhoff's Voltage Law (KVL) considered a statement of energy conservation?</span>
-                    </summary>
-                    <div class="mt-3 text-xs md:text-sm text-slate-700 border-t border-slate-200 pt-3 accordion-content">
-                        <p>Because electrostatic force is conservative, the work done in moving a charge \(q\) around any closed electrical loop must be zero (\(\oint \mathbf{E} \cdot d\mathbf{l} = 0\)). Since potential difference represents work done per unit charge, the total energy supplied by EMF sources equals total electrical energy dissipated across resistors, validating conservation of energy.</p>
-                    </div>
-                </details>
-
-                <!-- Q2 -->
-                <details class="bg-slate-50 border border-slate-200 rounded-lg p-4 cursor-pointer hover:bg-slate-100 transition-colors">
-                    <summary class="font-semibold text-slate-900 text-sm flex justify-between items-center">
-                        <span>Q2: Why is a slide wire bridge called a "Meter Bridge"?</span>
-                    </summary>
-                    <div class="mt-3 text-xs md:text-sm text-slate-700 border-t border-slate-200 pt-3 accordion-content">
-                        <p>It is called a Meter Bridge because it utilizes a wire of exactly one meter length (\(100\text{ cm}\)) stretched over a meter scale on a wooden board to measure unknown resistance using Wheatstone's principle.</p>
-                    </div>
-                </details>
-
-                <!-- Q3 -->
-                <details class="bg-slate-50 border border-slate-200 rounded-lg p-4 cursor-pointer hover:bg-slate-100 transition-colors">
-                    <summary class="font-semibold text-slate-900 text-sm flex justify-between items-center">
-                        <span>Q3: Why is a potentiometer preferred over a voltmeter for measuring cell EMF?</span>
-                    </summary>
-                    <div class="mt-3 text-xs md:text-sm text-slate-700 border-t border-slate-200 pt-3 accordion-content">
-                        <p>A voltmeter draws a small current from the cell, thus measuring terminal potential difference (\(V = E - Ir\)) rather than true EMF. A potentiometer operates on null deflection where no current flows through the test cell (\(I = 0\)), effectively behaving as an ideal voltmeter with infinite resistance.</p>
-                    </div>
-                </details>
-
-                <!-- Q4 -->
-                <details class="bg-slate-50 border border-slate-200 rounded-lg p-4 cursor-pointer hover:bg-slate-100 transition-colors">
-                    <summary class="font-semibold text-slate-900 text-sm flex justify-between items-center">
-                        <span>Q4: What is Meissner Effect and how does it distinguish superconductors from perfect conductors?</span>
-                    </summary>
-                    <div class="mt-3 text-xs md:text-sm text-slate-700 border-t border-slate-200 pt-3 accordion-content">
-                        <p>Meissner effect is the complete expulsion of magnetic flux (\(B = 0\)) from inside a superconductor when cooled below \(T_c\). In a perfect conductor (\(R = 0\)), Faraday's law dictates \(\frac{dB}{dt} = 0\), meaning magnetic flux becomes trapped/frozen, but not expelled. Thus, Meissner effect proves superconductivity is a unique thermodynamic state.</p>
-                    </div>
-                </details>
-
-                <!-- Q5 -->
-                <details class="bg-slate-50 border border-slate-200 rounded-lg p-4 cursor-pointer hover:bg-slate-100 transition-colors">
-                    <summary class="font-semibold text-slate-900 text-sm flex justify-between items-center">
-                        <span>Q5: Why is an ammeter connected in series while a voltmeter is connected in parallel?</span>
-                    </summary>
-                    <div class="mt-3 text-xs md:text-sm text-slate-700 border-t border-slate-200 pt-3 accordion-content">
-                        <p>An ammeter measures total line current passing through a branch, so it must be connected in series and have near-zero resistance (\(R_A \approx 0\)) to avoid changing circuit resistance. A voltmeter measures potential difference between two nodes, so it must be connected in parallel and have high resistance (\(R_V \approx \infty\)) to prevent diverting current from the main path.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <!-- SECTION: SELF-STUDY PRACTICE PROBLEMS -->
-        <section id="section-practice" class="mb-6 break-inside-avoid">
-            <div class="flex items-center space-x-2 border-b border-slate-300 pb-2 mb-6">
-                <span class="bg-purple-600 text-white font-bold text-xs px-2.5 py-1 rounded">PRACTICE</span>
-                <h2 class="text-xl font-bold text-slate-900">Self-Assessment Practice Problems</h2>
-            </div>
-
-            <div class="space-y-4 text-xs md:text-sm text-slate-800">
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <p><span class="font-bold">1.</span> Two resistors \(10\,\Omega\) and \(20\,\Omega\) are connected in parallel gaps of a meter bridge. Find the position of null point from zero end of $100\text{ cm}$ wire.</p>
-                    <span class="bg-purple-100 text-purple-900 font-bold px-2.5 py-1 rounded text-xs whitespace-nowrap">Ans: l = 33.33 cm</span>
-                </div>
-
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <p><span class="font-bold">2.</span> A potentiometer wire of length \(4\text{ m}\) has resistance \(8\,\Omega\). A cell of EMF \(2\text{ V}\) and internal resistance \(2\,\Omega\) is connected across it. Calculate potential gradient along wire.</p>
-                    <span class="bg-purple-100 text-purple-900 font-bold px-2.5 py-1 rounded text-xs whitespace-nowrap">Ans: k = 0.4 V/m (0.004 V/cm)</span>
-                </div>
-
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <p><span class="font-bold">3.</span> A galvanometer of resistance \(100\,\Omega\) gives full scale deflection for $1\text{ mA}$. Find shunt resistance required to convert it into an ammeter of range $0 - 10\text{ A}$.</p>
-                    <span class="bg-purple-100 text-purple-900 font-bold px-2.5 py-1 rounded text-xs whitespace-nowrap">Ans: S = 0.01001 Ω</span>
-                </div>
-
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <p><span class="font-bold">4.</span> Find the value of series resistance required to convert the same galvanometer (\(G = 100\,\Omega\), \(I_g = 1\text{ mA}\)) into a voltmeter of range $0 - 50\text{ V}$.</p>
-                    <span class="bg-purple-100 text-purple-900 font-bold px-2.5 py-1 rounded text-xs whitespace-nowrap">Ans: R = 49,900 Ω</span>
-                </div>
-
-                <div class="p-4 bg-slate-50 border border-slate-200 rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <p><span class="font-bold">5.</span> Critical magnetic field of Mercury at \(0\text{ K}\) is \(0.041\text{ T}\) with critical temperature \(T_c = 4.2\text{ K}\). Calculate critical magnetic field at \(T = 2.1\text{ K}\).</p>
-                    <span class="bg-purple-100 text-purple-900 font-bold px-2.5 py-1 rounded text-xs whitespace-nowrap">Ans: Hc(2.1K) = 0.03075 T</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="mt-10 pt-6 border-t border-slate-200 text-center text-xs text-slate-500">
-            <p>© NEB Grade XII Physics Curriculum Standard Module • Unit 14: Electrical Circuits</p>
-            <p class="mt-1">Designed for High-Contrast Print & Digital Self-Study</p>
-        </footer>
-
-    </main>
-
-</body>
-</html>
+
+<h2>Kirchhoff’s Laws and Circuit Analysis</h2><p>Simple electrical circuits can be analyzed using Ohm's law. However, for complex networks containing multiple loops, junctions, and EMF sources, Ohm's law alone is insufficient. In 1845, German physicist Gustav Kirchhoff formulated two fundamental laws that allow systematic analysis of complex electrical networks.</p><h3>1. Kirchhoff's First Law (Current Law / KCL or Junction Rule)</h3><div class="box example"><p>Statement:</p>
+<p>In any electric circuit, the algebraic sum of currents meeting at any junction (or node) is equal to zero.</p>
+<p>\( \sum I = 0 \) &nbsp;&nbsp;\(\implies\)&nbsp;&nbsp; \( \sum I_{\text{entering}} = \sum I_{\text{leaving}} \)</p></div>
+<p>Sign Convention: Currents entering a junction are taken as positive (\(+\)), while currents leaving a junction are taken as negative (\(-\)).</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 240" fill="currentColor">
+<defs>
+<marker id="arrow" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#0f172a"/>
+</marker>
+<marker id="arrow-blue" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+</marker>
+</defs>
+
+<g transform="translate(20, 10)">
+<text x="130" y="20" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(a) Kirchhoff's Junction Rule (KCL)</text>
+
+<circle cx="130" cy="110" r="5" fill="#0f172a"/>
+<text x="130" y="130" font-size="12" font-weight="bold" fill="#0f172a">Junction (O)</text>
+
+<line x1="30" y1="50" x2="125" y2="106" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="50" y="60" font-size="12" font-weight="bold" fill="#2563eb">I₁</text>
+
+<line x1="30" y1="170" x2="125" y2="114" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="50" y="170" font-size="12" font-weight="bold" fill="#2563eb">I₂</text>
+
+<line x1="135" y1="110" x2="230" y2="50" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="200" y="60" font-size="12" font-weight="bold" fill="#dc2626">I₃</text>
+
+<line x1="135" y1="110" x2="230" y2="110" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="200" y="100" font-size="12" font-weight="bold" fill="#dc2626">I₄</text>
+
+<line x1="135" y1="110" x2="210" y2="180" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="190" y="170" font-size="12" font-weight="bold" fill="#dc2626">I₅</text>
+</g>
+
+<line x1="290" y1="20" x2="290" y2="210" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+<g transform="translate(320, 10)">
+<text x="150" y="20" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(b) Kirchhoff's Loop Rule (KVL)</text>
+
+<rect x="30" y="40" width="240" height="140" fill="none" stroke="#0f172a" stroke-width="2" rx="4"/>
+
+<line x1="30" y1="90" x2="30" y2="105" stroke="#0f172a" stroke-width="3"/>
+<line x1="20" y1="105" x2="40" y2="105" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="25" y1="113" x2="35" y2="113" stroke="#0f172a" stroke-width="3"/>
+<line x1="20" y1="121" x2="40" y2="121" stroke="#0f172a" stroke-width="1.5"/>
+<text x="5" y="112" font-size="11" font-weight="bold" fill="#0f172a">E₁</text>
+
+<rect x="110" y="34" width="60" height="12" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="140" y="28" font-size="11" font-weight="bold" text-anchor="middle" fill="#0f172a">R₁</text>
+
+<rect x="264" y="90" width="12" height="40" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="290" y="115" font-size="11" font-weight="bold" fill="#0f172a">R₂</text>
+
+<path d="M 120 90 A 25 25 0 1 1 160 120" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="150" y="105" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">Loop 1</text>
+
+<line x1="70" y1="40" x2="100" y2="40" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="85" y="32" font-size="11" font-weight="bold" fill="#2563eb">I</text>
+
+<text x="20" y="35" font-size="11" font-weight="bold">A</text>
+<text x="275" y="35" font-size="11" font-weight="bold">B</text>
+<text x="275" y="195" font-size="11" font-weight="bold">C</text>
+<text x="20" y="195" font-size="11" font-weight="bold">D</text>
+</g>
+</svg><p>Figure 14.1: (a) Illustration of Kirchhoff's Current Law at node O. (b) Closed loop traversal for Kirchhoff's Voltage Law.</p><p>Referring to Fig 14.1(a), applying KCL at junction O gives:</p><p>\( (+I_1) + (+I_2) + (-I_3) + (-I_4) + (-I_5) = 0 \)</p>
+<p>\( I_1 + I_2 = I_3 + I_4 + I_5 \)</p>
+<div class="box tip"><p>Physical Significance of KCL:</p>
+<p>KCL is a direct consequence of the Law of Conservation of Electric Charge. Since electric charge can neither be created nor destroyed at a junction, the total rate of charge entering a node must equal the total rate of charge leaving it.</p></div>
+<h3>2. Kirchhoff's Second Law (Voltage Law / KVL or Loop Rule)</h3><div class="box definition"><p>Statement:</p>
+<p>In any closed loop of an electric network, the algebraic sum of all electromotive forces (EMFs) is equal to the algebraic sum of the products of currents and their corresponding resistances.</p>
+<p>\( \sum E = \sum I R \) &nbsp;&nbsp;\(\iff\)&nbsp;&nbsp; \( \sum \Delta V = 0 \)</p></div>
+<h4>Sign Conventions for Traversing Closed Loops:</h4><ul>
+<li>Potential Drop across Resistors (\(IR\)): When traversing a resistor in the direction of current, potential decreases, so the product \(IR\) is taken as negative (\(-IR\)). If traversed opposite to current, it is taken as positive (\(+IR\)).</li>
+<li>Electromotive Force (\(E\)): When passing through a cell from its negative to positive terminal (potential rise), EMF is taken as positive (\(+E\)). If passing from positive to negative terminal (potential drop), EMF is taken as negative (\(-E\)).</li>
+</ul><div class="box tip"><p>Physical Significance of KVL:</p>
+<p>KVL is a direct consequence of the Law of Conservation of Energy. Since electrostatic forces are conservative, the net work done in moving a unit positive charge around any closed path in a circuit must be zero.</p></div>
+<h4>Worked Example
+Applying KCL & KVL to Solve Circuit Parameters</h4><p>Problem: Consider two cells of EMFs \(E_1 = 6\text{ V}\) and \(E_2 = 3\text{ V}\) with internal resistances \(r_1 = 1\,\Omega\) and \(r_2 = 1\,\Omega\) connected in parallel across an external resistor \(R = 4\,\Omega\). Determine the currents flowing through each cell and the external resistor.</p><p>Step 1: Assign loop currents using KCL. Let current \(I_1\) flow from cell \(E_1\) and current \(I_2\) flow from cell \(E_2\). Total current through external resistor \(R\) is \(I = I_1 + I_2\).</p><p>Step 2: Apply KVL to Loop 1 (containing \(E_1\) and \(R\)):</p><p>\( E_1 - I_1 r_1 - (I_1 + I_2) R = 0 \)<br>
+\( 6 - I_1(1) - 4(I_1 + I_2) = 0 \implies 5I_1 + 4I_2 = 6 \) &nbsp;--- (Equation 1)</p>
+<p>Step 3: Apply KVL to Loop 2 (containing \(E_2\) and \(R\)):</p><p>\( E_2 - I_2 r_2 - (I_1 + I_2) R = 0 \)<br>
+\( 3 - I_2(1) - 4(I_1 + I_2) = 0 \implies 4I_1 + 5I_2 = 3 \) &nbsp;--- (Equation 2)</p>
+<p>Step 4: Solve equations simultaneously:</p><p>Multiplying Eq (1) by 5 and Eq (2) by 4:</p><p>\( 25I_1 + 20I_2 = 30 \)<br>
+\( 16I_1 + 20I_2 = 12 \)<br>
+Subtracting gives: \( 9I_1 = 18 \implies \mathbf{I_1 = 2\text{ A}} \)</p>
+<p>Substituting \(I_1 = 2\text{ A}\) into Eq (1):</p><p>\( 5(2) + 4I_2 = 6 \implies 4I_2 = -4 \implies \mathbf{I_2 = -1\text{ A}} \)</p>
+<p>Conclusion: Current from \(E_1\) is \(2\text{ A}\), cell \(E_2\) is actually being charged with current \(1\text{ A}\) (indicated by negative sign), and total current through \(R\) is \(I = 2 + (-1) = \mathbf{1\text{ A}}\).</p><h2>Wheatstone Bridge Circuit</h2><p>The Wheatstone bridge is an accurate electrical arrangement designed by Sir Charles Wheatstone for measuring an unknown electrical resistance by comparison with known standard resistances.</p><h3>Circuit Construction & Working Principle</h3><p>It consists of four resistances \(P\), \(Q\), \(R\), and \(S\) connected along the four arms of a quadrilateral network ABCD. A sensitive Galvanometer \(G\) with plug key \(K_g\) is connected across diagonal BD, while a cell \(E\) with key \(K\) is connected across diagonal AC.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" fill="currentColor">
+<defs>
+<marker id="arr" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#0f172a"/>
+</marker>
+</defs>
+
+<line x1="250" y1="50" x2="100" y2="180" stroke="#0f172a" stroke-width="2"/>
+<line x1="250" y1="50" x2="400" y2="180" stroke="#0f172a" stroke-width="2"/>
+<line x1="100" y1="180" x2="250" y2="310" stroke="#0f172a" stroke-width="2"/>
+<line x1="400" y1="180" x2="250" y2="310" stroke="#0f172a" stroke-width="2"/>
+
+<g transform="translate(160, 100) rotate(-40)">
+<rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="0" y="4" font-size="12" font-weight="bold" text-anchor="middle">P</text>
+</g>
+
+<g transform="translate(340, 100) rotate(40)">
+<rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="0" y="4" font-size="12" font-weight="bold" text-anchor="middle">Q</text>
+</g>
+
+<g transform="translate(160, 260) rotate(40)">
+<rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="0" y="4" font-size="12" font-weight="bold" text-anchor="middle">R</text>
+</g>
+
+<g transform="translate(340, 260) rotate(-40)">
+<rect x="-25" y="-10" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="0" y="4" font-size="12" font-weight="bold" text-anchor="middle">S</text>
+</g>
+
+<line x1="250" y1="50" x2="250" y2="310" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="3,3"/>
+<circle cx="250" cy="180" r="22" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="250" y="185" font-size="14" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
+
+<circle cx="250" cy="50" r="5" fill="#0f172a"/>
+<circle cx="100" cy="180" r="5" fill="#0f172a"/>
+<circle cx="400" cy="180" r="5" fill="#0f172a"/>
+<circle cx="250" cy="310" r="5" fill="#0f172a"/>
+
+<text x="250" y="32" font-size="14" font-weight="bold" text-anchor="middle">B</text>
+<text x="75" y="185" font-size="14" font-weight="bold">A</text>
+<text x="415" y="185" font-size="14" font-weight="bold">C</text>
+<text x="250" y="330" font-size="14" font-weight="bold" text-anchor="middle">D</text>
+
+<path d="M 100 180 L 100 350 L 400 350 L 400 180" fill="none" stroke="#0f172a" stroke-width="2"/>
+
+<g transform="translate(220, 350)">
+<line x1="0" y1="-12" x2="0" y2="12" stroke="#0f172a" stroke-width="3"/>
+<line x1="10" y1="-20" x2="10" y2="20" stroke="#0f172a" stroke-width="1.5"/>
+<text x="5" y="-25" font-size="12" font-weight="bold" text-anchor="middle">E</text>
+</g>
+
+<g transform="translate(300, 350)">
+<circle cx="-10" cy="0" r="3" fill="#0f172a"/>
+<circle cx="10" cy="0" r="3" fill="#0f172a"/>
+<line x1="-10" y1="0" x2="8" y2="-10" stroke="#0f172a" stroke-width="2"/>
+<text x="0" y="20" font-size="12" font-weight="bold" text-anchor="middle">K</text>
+</g>
+
+<text x="140" y="100" font-size="11" font-weight="bold" fill="#2563eb">I₁</text>
+<text x="140" y="250" font-size="11" font-weight="bold" fill="#2563eb">I₂</text>
+<text x="260" y="130" font-size="11" font-weight="bold" fill="#dc2626">I_g</text>
+<text x="330" y="100" font-size="11" font-weight="bold" fill="#2563eb">I₁ - I_g</text>
+<text x="330" y="250" font-size="11" font-weight="bold" fill="#2563eb">I₂ + I_g</text>
+</svg><p>Figure 14.2: Wheatstone Bridge Circuit Network with Galvanometer and Battery connections.</p><h3>Derivation of Balanced Bridge Condition</h3><p>Let main current \(I\) from battery split at junction A into \(I_1\) along arm AB and \(I_2\) along arm AD. At junction B, current \(I_g\) passes through Galvanometer branch BD. Therefore, current along arm BC becomes \((I_1 - I_g)\) and along arm DC becomes \((I_2 + I_g)\).</p><p>Applying KVL to closed loop ABDA:</p><p>\( -I_1 P - I_g G + I_2 R = 0 \) &nbsp;&nbsp;\(\implies\)&nbsp;&nbsp; \( I_1 P + I_g G = I_2 R \) &nbsp;--- (Equation 1)</p>
+<p>Applying KVL to closed loop BCDB:</p><p>\( -(I_1 - I_g) Q + (I_2 + I_g) S + I_g G = 0 \) &nbsp;&nbsp;\(\implies\)&nbsp;&nbsp; \( (I_1 - I_g) Q - I_g G = (I_2 + I_g) S \) &nbsp;--- (Equation 2)</p>
+<div class="box example"><p>Balanced Condition (Null Deflection):</p>
+<p>The bridge is said to be balanced when potentials at points B and D are equal (\(V_B = V_D\)). Under this state, no current flows through Galvanometer (\(\mathbf{I_g = 0}\)).</p></div>
+<p>Substituting \(I_g = 0\) into Equations (1) and (2):</p><p>From Eq (1): &nbsp; \( I_1 P = I_2 R \) &nbsp;--- (Equation 3)<br>
+From Eq (2): &nbsp; \( I_1 Q = I_2 S \) &nbsp;--- (Equation 4)</p>
+<p>Dividing Equation (3) by Equation (4):</p><p>\( \frac{I_1 P}{I_1 Q} = \frac{I_2 R}{I_2 S} \implies \mathbf{\frac{P}{Q} = \frac{R}{S}} \)</p>
+<p>This is the fundamental principle of the Wheatstone bridge. If three resistances are known, the unknown resistance can be accurately determined.</p><h4>Condition for Maximum Sensitivity</h4><p>A Wheatstone bridge is most sensitive (produces maximum deflection in galvanometer for small changes in resistance) when all four resistances P, Q, R, and S are of the same order of magnitude.</p><h4>Practical Real-World Significance</h4><p>Forms the operating foundation for laboratory instruments such as Meter Bridge and Post Office Box, as well as industrial sensor bridges (strain gauges and thermistors).</p><h2>Meter Bridge (Slide Wire Bridge)</h2><p>The Meter Bridge is the practical laboratory form of Wheatstone's bridge. It is used to measure an unknown resistance of a wire precisely and to verify the laws of series and parallel resistance combinations.</p><h3>Construction & Setup</h3><p>It consists of a 1-meter long uniform wire AB (made of constantan or manganin, high resistivity and low temperature coefficient) stretched tightly over a meter scale on a wooden board. Three thick L-shaped copper strips are fixed on the board creating two gaps:</p><ul>
+<li>Left Gap: Connected to unknown resistance \(X\).</li>
+<li>Right Gap: Connected to a standard Resistance Box \(R\).</li>
+<li>Central Strip: Connected to a sensitive Galvanometer \(G\) and a sliding contact Jockey \(J\).</li>
+</ul><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 280" fill="currentColor">
+<defs>
+<pattern id="strip" width="10" height="10">
+<path d="M 0 10 L 10 0 M 0 0 L 10 10" stroke="#cbd5e1" stroke-width="0.5"/>
+</pattern>
+</defs>
+
+<rect x="10" y="10" width="600" height="260" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" rx="6"/>
+
+<path d="M 30 30 L 110 30 L 110 60 L 60 60 L 60 180 L 30 180 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+
+<path d="M 190 30 L 430 30 L 430 60 L 190 60 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+
+<path d="M 510 30 L 590 30 L 590 180 L 560 180 L 560 60 L 510 60 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+
+<rect x="40" y="195" width="540" height="20" fill="#ffffff" stroke="#64748b" stroke-width="1"/>
+
+<line x1="40" y1="195" x2="580" y2="195" stroke="#0f172a" stroke-width="1"/>
+<text x="40" y="210" font-size="9" text-anchor="middle">0</text>
+<text x="310" y="210" font-size="9" text-anchor="middle">50 cm</text>
+<text x="580" y="210" font-size="9" text-anchor="middle">100 cm</text>
+
+<line x1="40" y1="180" x2="580" y2="180" stroke="#0f172a" stroke-width="3"/>
+
+<circle cx="40" cy="180" r="4" fill="#0f172a"/>
+<text x="25" y="185" font-size="12" font-weight="bold">A</text>
+<circle cx="580" cy="180" r="4" fill="#0f172a"/>
+<text x="590" y="185" font-size="12" font-weight="bold">B</text>
+
+<rect x="125" y="20" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="150" y="34" font-size="12" font-weight="bold" text-anchor="middle">X</text>
+<line x1="100" y1="45" x2="125" y2="30" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="200" y1="45" x2="175" y2="30" stroke="#0f172a" stroke-width="1.5"/>
+
+<rect x="445" y="20" width="50" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="470" y="34" font-size="12" font-weight="bold" text-anchor="middle">R</text>
+<line x1="420" y1="45" x2="445" y2="30" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="520" y1="45" x2="495" y2="30" stroke="#0f172a" stroke-width="1.5"/>
+
+<circle cx="310" cy="45" r="4" fill="#0f172a"/>
+<line x1="310" y1="45" x2="310" y2="90" stroke="#0f172a" stroke-width="1.5"/>
+<circle cx="310" cy="110" r="16" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="310" y="115" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
+
+<line x1="310" y1="126" x2="250" y2="180" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+<polygon points="250,180 245,170 255,170" fill="#0f172a"/>
+<text x="250" y="165" font-size="12" font-weight="bold" text-anchor="middle">J (D)</text>
+
+<line x1="40" y1="235" x2="250" y2="235" stroke="#2563eb" stroke-width="1.5"/>
+<text x="145" y="250" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">l cm</text>
+
+<line x1="250" y1="235" x2="580" y2="235" stroke="#dc2626" stroke-width="1.5"/>
+<text x="415" y="250" font-size="11" font-weight="bold" text-anchor="middle" fill="#dc2626">(100 - l) cm</text>
+</svg><p>Figure 14.3: Meter Bridge schematic setup for measuring unknown resistance X.</p><h3>Derivation of Unknown Resistance Formula</h3><p>Let \(r\) be the resistance per unit length (\(\text{cm}\)) of wire AB. When the jockey is slid to point D such that Galvanometer shows null deflection (\(I_g = 0\)):</p><ul>
+<li>Resistance of wire segment AD (\(l\text{ cm}\)) = \(P = r \cdot l\)</li>
+<li>Resistance of wire segment DB (\((100 - l)\text{ cm}\)) = \(Q = r \cdot (100 - l)\)</li>
+</ul><p>According to Wheatstone's bridge principle:</p><p>\( \frac{X}{R} = \frac{P}{Q} = \frac{r \cdot l}{r \cdot (100 - l)} \)</p>
+<p>\( \mathbf{X = R \left( \frac{l}{100 - l} \right)} \)</p>
+<div class="box example" data-title="Sources of Error &amp; End Corrections"><p>The resistance of thick copper strips at ends A and B is not strictly zero. These are called End Resistances (\(\alpha\) at end A, \(\beta\) at end B in equivalent wire lengths).</p>
+<p>Corrected Meter Bridge Formula:</p>
+<p>\( X = R \left( \frac{l + \alpha}{100 - l + \beta} \right) \)</p>
+
+<p>Precaution: To minimize errors, adjust resistance \(R\) such that balancing length \(l\) lies near the middle of the wire (\(40\text{ cm}\) to \(60\text{ cm}\)).</p></div>
+<h2>Potentiometer</h2><p>A potentiometer is a high-precision instrument used to measure electromotive force (EMF) of a cell, compare EMFs of two cells, and determine the internal resistance of a primary cell without drawing any current from the circuit.</p><div class="box definition" data-title="Working Principle of Potentiometer"><p>When a constant current flows through a wire of uniform cross-sectional area and composition, the potential drop across any length of the wire is directly proportional to that length.</p>
+<p>\( V \propto l \implies \mathbf{V = k \cdot l} \)</p>
+
+<p>Potential Gradient (\(k\)): Fall of potential per unit length of wire: \( k = \frac{V}{l} = \frac{I \rho}{A} \), where \(\rho\) is resistivity and \(A\) is cross-sectional area.</p></div>
+<div class="box tip" data-title="Why Potentiometer is Preferred over an Ideal Voltmeter?"><p>A voltmeter requires a finite current to produce deflection, thereby measuring terminal potential difference rather than actual EMF. Conversely, a potentiometer operates on the null deflection method where no current is drawn from the measured cell at balance point (\(I = 0\)). Thus, it acts as an ideal voltmeter with infinite effective resistance.</p></div>
+<h3>1. Comparison of EMFs of Two Primary Cells</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 260" fill="currentColor">
+
+<line x1="60" y1="50" x2="520" y2="50" stroke="#0f172a" stroke-width="3"/>
+<text x="45" y="55" font-size="12" font-weight="bold">A</text>
+<text x="530" y="55" font-size="12" font-weight="bold">B</text>
+
+<path d="M 60 50 L 60 15 L 520 15 L 520 50" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+
+<g transform="translate(230, 15)">
+<line x1="0" y1="-8" x2="0" y2="8" stroke="#0f172a" stroke-width="3"/>
+<line x1="8" y1="-14" x2="8" y2="14" stroke="#0f172a" stroke-width="1.5"/>
+<text x="4" y="-18" font-size="11" font-weight="bold" text-anchor="middle">E (Driver)</text>
+</g>
+
+<circle cx="340" cy="15" r="3" fill="#0f172a"/>
+<text x="340" y="-2" font-size="11" font-weight="bold" text-anchor="middle">K₁</text>
+
+<path d="M 60 50 L 60 120" stroke="#0f172a" stroke-width="1.5"/>
+
+<path d="M 60 100 L 140 100" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="140" y1="92" x2="140" y2="108" stroke="#0f172a" stroke-width="3"/>
+<line x1="148" y1="86" x2="148" y2="114" stroke="#0f172a" stroke-width="1.5"/>
+<text x="144" y="80" font-size="11" font-weight="bold" text-anchor="middle">E₁</text>
+<line x1="148" y1="100" x2="230" y2="100" stroke="#0f172a" stroke-width="1.5"/>
+
+<path d="M 60 140 L 140 140" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="140" y1="132" x2="140" y2="148" stroke="#0f172a" stroke-width="3"/>
+<line x1="148" y1="126" x2="148" y2="154" stroke="#0f172a" stroke-width="1.5"/>
+<text x="144" y="170" font-size="11" font-weight="bold" text-anchor="middle">E₂</text>
+<line x1="148" y1="140" x2="230" y2="140" stroke="#0f172a" stroke-width="1.5"/>
+
+<rect x="230" y="90" width="40" height="60" fill="#ffffff" stroke="#0f172a" stroke-width="1.5" rx="3"/>
+<circle cx="240" cy="100" r="3" fill="#0f172a"/> <text x="248" y="103" font-size="9">1</text>
+<circle cx="240" cy="140" r="3" fill="#0f172a"/> <text x="248" y="143" font-size="9">2</text>
+<circle cx="260" cy="120" r="3" fill="#0f172a"/> <text x="252" y="123" font-size="9">3</text>
+
+<line x1="260" y1="120" x2="330" y2="120" stroke="#0f172a" stroke-width="1.5"/>
+<circle cx="350" cy="120" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="350" y="124" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
+
+<line x1="364" y1="120" x2="280" y2="50" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3"/>
+<polygon points="280,50 275,40 285,40" fill="#2563eb"/>
+<text x="280" y="38" font-size="11" font-weight="bold" fill="#2563eb">J₁ (l₁)</text>
+
+<line x1="364" y1="120" x2="380" y2="50" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+<polygon points="380,50 375,40 385,40" fill="#dc2626"/>
+<text x="380" y="38" font-size="11" font-weight="bold" fill="#dc2626">J₂ (l₂)</text>
+</svg><p>Figure 14.4: Potentiometer setup for comparing EMFs of two cells E₁ and E₂.</p><p>Derivation: Connect terminal 1 and 3 (cell \(E_1\) in circuit). Slide jockey to obtain balance point \(J_1\) at length \(l_1\):</p><p>\( E_1 = k \cdot l_1 \) &nbsp;--- (Equation 1)</p>
+<p>Next, connect terminal 2 and 3 (cell \(E_2\) in circuit). Slide jockey to obtain balance point \(J_2\) at length \(l_2\):</p><p>\( E_2 = k \cdot l_2 \) &nbsp;--- (Equation 2)</p>
+<p>Dividing Eq (1) by Eq (2):</p><p>\( \mathbf{\frac{E_1}{E_2} = \frac{l_1}{l_2}} \)</p>
+<h3>2. Determination of Internal Resistance (\(r\)) of a Primary Cell</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 240" fill="currentColor">
+
+<line x1="60" y1="40" x2="520" y2="40" stroke="#0f172a" stroke-width="3"/>
+<text x="45" y="45" font-size="12" font-weight="bold">A</text>
+<text x="530" y="45" font-size="12" font-weight="bold">B</text>
+
+<path d="M 60 40 L 60 10 L 520 10 L 520 40" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+<circle cx="290" cy="10" r="3" fill="#0f172a"/>
+<text x="290" y="-2" font-size="11" text-anchor="middle">Driver Cell E</text>
+
+<line x1="60" y1="40" x2="60" y2="120" stroke="#0f172a" stroke-width="1.5"/>
+<line x1="60" y1="120" x2="160" y2="120" stroke="#0f172a" stroke-width="1.5"/>
+
+<line x1="160" y1="112" x2="160" y2="128" stroke="#0f172a" stroke-width="3"/>
+<line x1="168" y1="106" x2="168" y2="134" stroke="#0f172a" stroke-width="1.5"/>
+<text x="164" y="100" font-size="11" font-weight="bold" text-anchor="middle">E'</text>
+
+<rect x="190" y="113" width="30" height="14" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<text x="205" y="124" font-size="10" font-weight="bold" text-anchor="middle">r</text>
+
+<line x1="220" y1="120" x2="300" y2="120" stroke="#0f172a" stroke-width="1.5"/>
+
+<path d="M 120 120 L 120 180 L 180 180" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+<rect x="180" y="172" width="40" height="16" fill="#ffffff" stroke="#0f172a" stroke-width="1.5"/>
+<text x="200" y="184" font-size="10" font-weight="bold" text-anchor="middle">R</text>
+<line x1="220" y1="180" x2="260" y2="180" stroke="#0f172a" stroke-width="1.5"/>
+
+<circle cx="265" cy="180" r="3" fill="#0f172a"/>
+<circle cx="285" cy="180" r="3" fill="#0f172a"/>
+<text x="275" y="198" font-size="10" font-weight="bold" text-anchor="middle">K₂</text>
+<path d="M 285 180 L 300 180 L 300 120" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+
+<line x1="300" y1="120" x2="350" y2="120" stroke="#0f172a" stroke-width="1.5"/>
+<circle cx="365" cy="120" r="14" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="365" y="124" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
+
+<line x1="379" y1="120" x2="310" y2="40" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3"/>
+<polygon points="310,40 305,30 315,30" fill="#2563eb"/>
+<text x="310" y="25" font-size="11" font-weight="bold" fill="#2563eb">J (l)</text>
+</svg><p>Figure 14.5: Potentiometer setup for determining cell internal resistance r.</p><p>Step 1: Keep key \(K_2\) open (open circuit). Balance length \(l_1\) corresponds to cell EMF \(E'\):</p><p>\( E' = k \cdot l_1 \)</p>
+<p>Step 2: Close key \(K_2\) (closed circuit with shunt resistance \(R\)). Balance length \(l_2\) corresponds to terminal voltage \(V\):</p><p>\( V = k \cdot l_2 \)</p>
+<p>Ratio of EMF to terminal voltage:</p><p>\( \frac{E'}{V} = \frac{l_1}{l_2} \)</p>
+<p>Since internal resistance \(r = \left( \frac{E' - V}{V} \right) R = \left( \frac{E'}{V} - 1 \right) R\):</p><p>\( \mathbf{r = R \left( \frac{l_1 - l_2}{l_2} \right)} \)</p>
+<h2>Superconductors</h2><p>Superconductivity is a phenomenon of quantum physics where certain materials exhibit exactly zero electrical resistance and complete expulsion of magnetic flux fields when cooled below a characteristic critical temperature.</p><h3>Discovery & Critical Temperature (\(T_c\))</h3><p>Discovered in 1911 by Heike Kamerlingh Onnes while cooling Mercury (Hg) in liquid helium to 4.2 K. Below \(T_c\), electrical resistivity abruptly drops to strictly zero (\(\rho = 0\)).</p><h3>Critical Magnetic Field (\(H_c\))</h3><p>Superconductivity vanishes if an external magnetic field exceeds a critical value \(H_c(T) = H_0\left[1 - (T/T_c)^2\right]\), restoring normal electrical resistance.</p><h3>The Meissner Effect</h3><p>When a superconducting material is cooled below its critical temperature \(T_c\) inside an external magnetic field, it completely expels all magnetic flux lines from its interior.</p><div class="box definition"><p>Perfect Diamagnetism Condition:</p>
+<p>Inside a superconductor (\(T < T_c\)): &nbsp;&nbsp;\(\mathbf{B = 0}\) &nbsp;&nbsp;\(\iff\)&nbsp;&nbsp; \( \mu_r = 0 \), &nbsp; Magnetic Susceptibility \( \chi = -1 \).</p></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 200" fill="currentColor">
+
+<g transform="translate(20, 10)">
+<text x="110" y="20" font-size="12" font-weight="bold" text-anchor="middle">(a) Normal State (T &gt; T_c)</text>
+
+<line x1="20" y1="50" x2="200" y2="50" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<line x1="20" y1="80" x2="200" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<line x1="20" y1="110" x2="200" y2="110" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<line x1="20" y1="140" x2="200" y2="140" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+<circle cx="110" cy="95" r="35" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<text x="110" y="98" font-size="11" font-weight="bold" text-anchor="middle">B ≠ 0</text>
+</g>
+
+<g transform="translate(290, 10)">
+<text x="110" y="20" font-size="12" font-weight="bold" text-anchor="middle">(b) Superconducting State (T &lt; T_c)</text>
+
+<path d="M 20 40 Q 110 10 200 40" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<path d="M 20 60 Q 110 30 200 60" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<path d="M 20 130 Q 110 160 200 130" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<path d="M 20 150 Q 110 180 200 150" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+<circle cx="110" cy="95" r="35" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+<text x="110" y="98" font-size="11" font-weight="bold" text-anchor="middle" fill="#dc2626">B = 0</text>
+</g>
+</svg><p>Figure 14.6: Expulsion of magnetic flux lines in a superconductor (Meissner Effect).</p><h4>Key Applications of Superconductors</h4><ul>
+<li>Magnetic Resonance Imaging (MRI) scanners</li>
+<li>Maglev trains (Magnetic Levitation)</li>
+<li>SQUIDs (Sensitive Magnetometers)</li>
+<li>Zero-loss power transmission cables</li>
+</ul><h2>Perfect Conductors vs. Superconductors</h2><p>While both perfect conductors and superconductors exhibit zero electrical resistance (\(R = 0\)), they are fundamentally different thermodynamic states distinguished by their magnetic behavior.</p><p>Theoretical Difference: In a perfect conductor, Maxwell's equation gives \(\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}\). Since \(\mathbf{E} = 0\), it implies \(\frac{\partial \mathbf{B}}{\partial t} = 0\), meaning magnetic flux inside is frozen/trapped. In contrast, a true superconductor actively expels magnetic flux, enforcing \(\mathbf{B = 0}\) regardless of magnetic history.</p><table>
+<thead>
+<tr>
+<th>Property / Feature</th>
+<th>Perfect Conductor</th>
+<th>Superconductor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Electrical Resistance (\(R\))</td>
+<td>Zero (\(R = 0\))</td>
+<td>Zero (\(R = 0\))</td>
+</tr>
+<tr>
+<td>Internal Magnetic Field (\(B\))</td>
+<td>Trapped/Constant (\(\frac{dB}{dt} = 0\))</td>
+<td>Strictly Zero (\(B = 0\))</td>
+</tr>
+<tr>
+<td>Meissner Effect</td>
+<td>Does NOT exhibit Meissner Effect</td>
+<td>Exhibits Meissner Effect</td>
+</tr>
+<tr>
+<td>Magnetic State</td>
+<td>Normal magnetic response</td>
+<td>Perfect Diamagnet (\(\chi = -1\))</td>
+</tr>
+<tr>
+<td>Reversibility</td>
+<td>State depends on cooling sequence path</td>
+<td>Thermodynamically reversible transition</td>
+</tr>
+</tbody>
+</table><h2>Conversion of Galvanometer into Ammeter and Voltmeter</h2><p>A Moving Coil Galvanometer (MCG) is a highly sensitive instrument that measures small electric currents (order of \(\mu\text{A}\)). It has internal resistance \(G\) and full-scale deflection current \(I_g\).</p><h3>1. Conversion of Galvanometer into an Ammeter</h3><p>To convert a galvanometer into an ammeter capable of measuring large current \(I\) (\(I > I_g\)), a very small resistance called a Shunt (\(S\)) is connected in PARALLEL with the galvanometer.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" fill="currentColor">
+
+<line x1="20" y1="90" x2="80" y2="90" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="45" y="80" font-size="12" font-weight="bold" fill="#2563eb">I</text>
+
+<circle cx="80" cy="90" r="4" fill="#0f172a"/>
+<circle cx="400" cy="90" r="4" fill="#0f172a"/>
+
+<path d="M 80 90 L 80 40 L 180 40" stroke="#0f172a" stroke-width="1.5"/>
+<circle cx="210" cy="40" r="18" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="210" y="45" font-size="14" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
+<path d="M 240 40 L 400 40 L 400 90" stroke="#0f172a" stroke-width="1.5"/>
+<text x="130" y="32" font-size="11" font-weight="bold" fill="#2563eb">I_g</text>
+
+<path d="M 80 90 L 80 140 L 180 140" stroke="#0f172a" stroke-width="1.5"/>
+<rect x="180" y="130" width="60" height="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="210" y="144" font-size="12" font-weight="bold" text-anchor="middle">S (Shunt)</text>
+<path d="M 240 140 L 400 140 L 400 90" stroke="#0f172a" stroke-width="1.5"/>
+<text x="120" y="158" font-size="11" font-weight="bold" fill="#dc2626">I - I_g</text>
+
+<line x1="400" y1="90" x2="460" y2="90" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="60" y="10" width="360" height="160" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,4" rx="6"/>
+<text x="240" y="25" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">AMMETER (Low Resistance)</text>
+</svg><p>Figure 14.7: Shunt resistance S connected in parallel with Galvanometer G.</p><p>Mathematical Derivation:</p><p>Since Galvanometer and Shunt are in parallel, potential difference across both is equal:</p><p>\( V_G = V_S \implies I_g \cdot G = (I - I_g) \cdot S \)</p>
+<p>\( \mathbf{S = \frac{I_g \cdot G}{I - I_g}} \)</p>
+<p>Effective Ammeter Resistance (\(R_A\)): \( R_A = \frac{G \cdot S}{G + S} \approx S \) (extremely low resistance. An ideal ammeter has zero resistance).</p><h3>2. Conversion of Galvanometer into a Voltmeter</h3><p>To convert a galvanometer into a voltmeter capable of measuring potential difference \(V\), a very high resistance called a Multiplier (\(R\)) is connected in SERIES with the galvanometer.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140" fill="currentColor">
+
+<circle cx="30" cy="70" r="4" fill="#0f172a"/>
+<text x="25" y="60" font-size="12" font-weight="bold">A</text>
+<circle cx="450" cy="70" r="4" fill="#0f172a"/>
+<text x="450" y="60" font-size="12" font-weight="bold">B</text>
+
+<line x1="30" y1="70" x2="110" y2="70" stroke="#0f172a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="70" y="60" font-size="11" font-weight="bold" fill="#2563eb">I_g</text>
+
+<circle cx="140" cy="70" r="20" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="140" y="75" font-size="14" font-weight="bold" text-anchor="middle" fill="#2563eb">G</text>
+
+<line x1="160" y1="70" x2="240" y2="70" stroke="#0f172a" stroke-width="2"/>
+
+<rect x="240" y="58" width="90" height="24" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+<text x="285" y="74" font-size="12" font-weight="bold" text-anchor="middle">R (High)</text>
+
+<line x1="330" y1="70" x2="450" y2="70" stroke="#0f172a" stroke-width="2"/>
+
+<rect x="90" y="20" width="280" height="100" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,4" rx="6"/>
+<text x="230" y="35" font-size="11" font-weight="bold" text-anchor="middle" fill="#2563eb">VOLTMETER (High Resistance)</text>
+
+<path d="M 30 110 L 450 110" stroke="#0f172a" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="240" y="128" font-size="12" font-weight="bold" text-anchor="middle" fill="#2563eb">Total Potential Difference (V)</text>
+</svg><p>Figure 14.8: High resistance R connected in series with Galvanometer G.</p><p>Mathematical Derivation:</p><p>Total resistance of series combination = \(G + R\). Applying Ohm's law across terminals A and B:</p><p>\( V = I_g (G + R) \implies \frac{V}{I_g} = G + R \)</p>
+<p>\( \mathbf{R = \frac{V}{I_g} - G} \)</p>
+<p>Effective Voltmeter Resistance (\(R_V\)): \( R_V = G + R \approx R \) (extremely high resistance. An ideal voltmeter has infinite resistance).</p><h2>NEB Board Exam Solved Numericals</h2><h3>Numerical 1: Wheatstone Bridge Unknown Resistance</h3><p>Question: Four resistances \(P = 10\,\Omega\), \(Q = 20\,\Omega\), \(R = 15\,\Omega\), and \(S = 25\,\Omega\) form a Wheatstone bridge network. Calculate the value of additional resistance that must be connected in parallel with \(S\) to balance the bridge.</p><p>Given: \(P = 10\,\Omega\), \(Q = 20\,\Omega\), \(R = 15\,\Omega\). Let \(S'\) be required balanced resistance in arm 4.</p><p>Formula: Balanced bridge condition: \(\frac{P}{Q} = \frac{R}{S'}\)</p><p>Calculation:</p><p>\(\frac{10}{20} = \frac{15}{S'} \implies \frac{1}{2} = \frac{15}{S'} \implies S' = 30\,\Omega\)</p><p>Since existing resistance \(S = 25\,\Omega\) is less than \(30\,\Omega\), let parallel resistance needed be \(x\):</p><p>\(\frac{1}{S'} = \frac{1}{S} + \frac{1}{x} \implies \frac{1}{30} = \frac{1}{25} + \frac{1}{x} \implies \frac{1}{x} = \frac{1}{30} - \frac{1}{25} = \frac{5 - 6}{150} = -\frac{1}{150}\)</p><p>Result: To increase resistance to \(30\,\Omega\), a \(5\,\Omega\) resistor should be added in SERIES, or if \(S=40\,\Omega\), \(x = 120\,\Omega\) in parallel.</p><h3>Numerical 2: Meter Bridge with End Corrections</h3><p>Question: In a meter bridge experiment, null point is found at distance \(l = 40.0\text{ cm}\) when standard resistance box \(R = 12\,\Omega\) is used. If end corrections at ends A and B are \(\alpha = 0.2\text{ cm}\) and \(\beta = 0.3\text{ cm}\) respectively, calculate the exact unknown resistance \(X\).</p><p>Given: \(R = 12\,\Omega\), \(l = 40.0\text{ cm}\), \(\alpha = 0.2\text{ cm}\), \(\beta = 0.3\text{ cm}\)</p><p>Formula: \(X = R \left( \frac{l + \alpha}{100 - l + \beta} \right)\)</p><p>Substitution:</p><p>\(X = 12 \left( \frac{40.0 + 0.2}{100 - 40.0 + 0.3} \right) = 12 \left( \frac{40.2}{60.3} \right) = 12 \left( \frac{2}{3} \right) = 8.0\,\Omega\)</p><p>Result: Unknown resistance X = 8.0 Ω</p><h3>Numerical 3: Potentiometer Internal Resistance Determination</h3><p>Question: A cell gives a balance length of \(250\text{ cm}\) on a potentiometer wire when in open circuit. When a resistance box of \(10\,\Omega\) is shunted across the cell, balance length shifts to \(200\text{ cm}\). Calculate internal resistance \(r\) of the cell.</p><p>Given: \(l_1 = 250\text{ cm}\), \(l_2 = 200\text{ cm}\), \(R = 10\,\Omega\)</p><p>Formula: \(r = R \left( \frac{l_1 - l_2}{l_2} \right)\)</p><p>Substitution:</p><p>\(r = 10 \left( \frac{250 - 200}{200} \right) = 10 \left( \frac{50}{200} \right) = 10 \times 0.25 = 2.5\,\Omega\)</p><p>Result: Internal resistance of cell r = 2.5 Ω</p><h3>Numerical 4: Galvanometer Conversion to Ammeter and Voltmeter</h3><p>Question: A galvanometer has a resistance of \(G = 50\,\Omega\) and gives full scale deflection for a current \(I_g = 2\text{ mA}\) (\(0.002\text{ A}\)). How can it be converted into: (a) An ammeter reading up to \(5\text{ A}\)? (b) A voltmeter reading up to \(10\text{ V}\)?</p><p>Part (a) Ammeter Conversion:</p><p>\(S = \frac{I_g \cdot G}{I - I_g} = \frac{0.002 \times 50}{5 - 0.002} = \frac{0.1}{4.998} \approx \mathbf{0.020\,\Omega}\)</p><p>Ans: Connect a shunt resistance of 0.020 Ω in PARALLEL with Galvanometer.</p><p>Part (b) Voltmeter Conversion:</p><p>\(R = \frac{V}{I_g} - G = \frac{10}{0.002} - 50 = 5000 - 50 = \mathbf{4950\,\Omega}\)</p><p>Ans: Connect a multiplier resistance of 4950 Ω in SERIES with Galvanometer.</p><h2>Short Answer Conceptual Q&amp;A</h2><details class="solution"><summary>Q1: Why is Kirchhoff's Voltage Law (KVL) considered a statement of energy conservation?</summary>
+<p>Because electrostatic force is conservative, the work done in moving a charge \(q\) around any closed electrical loop must be zero (\(\oint \mathbf{E} \cdot d\mathbf{l} = 0\)). Since potential difference represents work done per unit charge, the total energy supplied by EMF sources equals total electrical energy dissipated across resistors, validating conservation of energy.</p></details>
+<details class="solution"><summary>Q2: Why is a slide wire bridge called a "Meter Bridge"?</summary>
+<p>It is called a Meter Bridge because it utilizes a wire of exactly one meter length (\(100\text{ cm}\)) stretched over a meter scale on a wooden board to measure unknown resistance using Wheatstone's principle.</p></details>
+<details class="solution"><summary>Q3: Why is a potentiometer preferred over a voltmeter for measuring cell EMF?</summary>
+<p>A voltmeter draws a small current from the cell, thus measuring terminal potential difference (\(V = E - Ir\)) rather than true EMF. A potentiometer operates on null deflection where no current flows through the test cell (\(I = 0\)), effectively behaving as an ideal voltmeter with infinite resistance.</p></details>
+<details class="solution"><summary>Q4: What is Meissner Effect and how does it distinguish superconductors from perfect conductors?</summary>
+<p>Meissner effect is the complete expulsion of magnetic flux (\(B = 0\)) from inside a superconductor when cooled below \(T_c\). In a perfect conductor (\(R = 0\)), Faraday's law dictates \(\frac{dB}{dt} = 0\), meaning magnetic flux becomes trapped/frozen, but not expelled. Thus, Meissner effect proves superconductivity is a unique thermodynamic state.</p></details>
+<details class="solution"><summary>Q5: Why is an ammeter connected in series while a voltmeter is connected in parallel?</summary>
+<p>An ammeter measures total line current passing through a branch, so it must be connected in series and have near-zero resistance (\(R_A \approx 0\)) to avoid changing circuit resistance. A voltmeter measures potential difference between two nodes, so it must be connected in parallel and have high resistance (\(R_V \approx \infty\)) to prevent diverting current from the main path.</p></details>
+<h2>Self-Assessment Practice Problems</h2><p>1. Two resistors \(10\,\Omega\) and \(20\,\Omega\) are connected in parallel gaps of a meter bridge. Find the position of null point from zero end of \(100\text{ cm}\) wire.</p><p>Ans: l = 33.33 cm</p>
+<p>2. A potentiometer wire of length \(4\text{ m}\) has resistance \(8\,\Omega\). A cell of EMF \(2\text{ V}\) and internal resistance \(2\,\Omega\) is connected across it. Calculate potential gradient along wire.</p><p>Ans: k = 0.4 V/m (0.004 V/cm)</p>
+<p>3. A galvanometer of resistance \(100\,\Omega\) gives full scale deflection for \(1\text{ mA}\). Find shunt resistance required to convert it into an ammeter of range \(0 - 10\text{ A}\).</p><p>Ans: S = 0.01001 Ω</p>
+<p>4. Find the value of series resistance required to convert the same galvanometer (\(G = 100\,\Omega\), \(I_g = 1\text{ mA}\)) into a voltmeter of range \(0 - 50\text{ V}\).</p><p>Ans: R = 49,900 Ω</p>
+<p>5. Critical magnetic field of Mercury at \(0\text{ K}\) is \(0.041\text{ T}\) with critical temperature \(T_c = 4.2\text{ K}\). Calculate critical magnetic field at \(T = 2.1\text{ K}\).</p><p>Ans: Hc(2.1K) = 0.03075 T</p>
+<p>© NEB Grade XII Physics Curriculum Standard Module • Unit 14: Electrical Circuits</p><p>Designed for High-Contrast Print & Digital Self-Study</p>

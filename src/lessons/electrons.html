@@ -4,1435 +4,320 @@ grade: XII
 chapters: [16]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEB Grade XII Physics - Chapter 20: ELECTRONS</title>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    brand: {
-                        50: '#f0f9ff',
-                        100: '#e0f2fe',
-                        600: '#0284c7',
-                        700: '#0369a1',
-                        800: '#075985',
-                        900: '#0c4a6e',
-                    },
-                    neb: {
-                        red: '#991b1b',
-                        gold: '#b45309',
-                        dark: '#0f172a'
-                    }
-                },
-                fontFamily: {
-                    sans: ['Inter', 'sans-serif'],
-                    serif: ['Merriweather', 'serif']
-                }
-            }
-        }
-    }
-</script>
-<!-- KaTeX for math typesetting -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {
-        delimiters: [
-          {left: '$$', right: '$$', display: true},
-          {left: '$', right: '$', display: false},
-          {left: '\\[', right: '\\]', display: true},
-          {left: '\\(', right: '\\)', display: false}
-        ],
-        throwOnError: false
-      });"></script>
-<!-- FontAwesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-    .formula-card {
-        background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
-        border-left: 4px solid #0284c7;
-    }
-
-    .tip-box {
-        background-color: #fffbeb;
-        border-left: 4px solid #d97706;
-    }
-
-    .pitfall-box {
-        background-color: #fef2f2;
-        border-left: 4px solid #dc2626;
-    }
-
-    canvas {
-        touch-action: none;
-    }
-</style>
-</head>
-
-<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed">
-
-    <!-- Top Header -->
-    <header class="bg-slate-900 text-white sticky top-0 z-50 shadow-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <span class="bg-brand-600 text-white text-xs font-bold px-2.5 py-1 rounded-md uppercase tracking-wider">NEB Class 12</span>
-                <h1 class="text-lg md:text-xl font-bold tracking-tight text-white">Physics — Unit 18 / Chapter 20: ELECTRONS</h1>
-            </div>
-            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                <a href="#section-20-1" class="hover:text-brand-100 transition-colors">20.1 Millikan's Oil Drop</a>
-                <a href="#section-20-2" class="hover:text-brand-100 transition-colors">20.2 Motion in Fields</a>
-                <a href="#section-20-3" class="hover:text-brand-100 transition-colors">20.3 Thomson e/m</a>
-                <a href="#numericals" class="hover:text-brand-100 transition-colors">Numericals</a>
-                <a href="#simulations" class="hover:text-brand-100 transition-colors">Simulations</a>
-                <a href="#practice" class="hover:text-brand-100 transition-colors">Practice QB</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8">
-
-        <!-- Sidebar Navigation / TOC -->
-        <aside class="lg:w-64 flex-shrink-0">
-            <div class="sticky top-20 bg-white p-4 rounded-xl shadow-sm border border-slate-200 space-y-4">
-                <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 border-b pb-2">Table of Contents</h2>
-                <nav class="space-y-1 text-sm font-medium">
-                    <a href="#section-20-1" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-all">20.1 Millikan's Experiment</a>
-                    <a href="#section-20-2" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-all">20.2 Motion in E & B Fields</a>
-                    <a href="#section-20-3" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-all">20.3 Thomson $e/m$ Experiment</a>
-                    <a href="#numericals" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-all">NEB Solved Numericals</a>
-                    <a href="#simulations" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-all">Interactive Simulators</a>
-                    <a href="#practice" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-all">Exam Question Bank</a>
-                    <a href="#constants" class="block px-3 py-2 rounded-lg text-slate-700 hover:bg-brand-50 hover:text-brand-600 transition-all">Physical Constants Table</a>
-                </nav>
-
-                <div class="pt-4 border-t border-slate-100 text-xs text-slate-500">
-                    <p class="font-semibold text-slate-700 mb-1"><i class="fa-solid fa-graduation-cap text-brand-600 mr-1"></i> Syllabus Alignment</p>
-                    <p>Strictly prepared for NEB Nepal Grade 12 Physics syllabus & Board Exam standards.</p>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Content Column -->
-        <main class="flex-1 space-y-12">
-
-            <!-- Title & Overview Card -->
-            <section class="bg-gradient-to-r from-slate-900 via-brand-900 to-slate-900 text-white rounded-2xl p-6 md:p-8 shadow-xl">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-700 pb-6 mb-6">
-                    <div>
-                        <span class="text-brand-100 text-sm font-semibold tracking-wider uppercase">NEB Grade XII • Modern Physics</span>
-                        <h1 class="text-3xl md:text-4xl font-extrabold mt-1 text-white">CHAPTER 20: ELECTRONS</h1>
-                        <p class="text-slate-300 mt-2 max-w-2xl text-sm md:text-base">
-                            Comprehensive study of subatomic charge carrier discovery, quantization of charge, parabolic & circular trajectories in electric and magnetic fields, and specific charge measurement ($e/m$).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-3">
-                        <span class="block text-xs text-slate-300 uppercase">Elementary Charge $e$</span>
-                        <span class="text-sm md:text-lg font-bold text-white">$1.602 \times 10^{-19}\,\mathrm{C}$</span>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-3">
-                        <span class="block text-xs text-slate-300 uppercase">Electron Mass $m_e$</span>
-                        <span class="text-sm md:text-lg font-bold text-white">$9.109 \times 10^{-31}\text{ kg}$</span>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-3">
-                        <span class="block text-xs text-slate-300 uppercase">Specific Charge $e/m$</span>
-                        <span class="text-sm md:text-lg font-bold text-white">$1.7588 \times 10^{11}\mathrm{C\,kg^{-1}}$</span>
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-3">
-                        <span class="block text-xs text-slate-300 uppercase">Viscosity of Air $\eta$</span>
-                        <span class="text-sm md:text-lg font-bold text-white">$1.81 \times 10^{-5}\mathrm{N\,s\,m^{-2}}$</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 20.1 -->
-            <section id="section-20-1" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Section 20.1</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">Millikan’s Oil Drop Experiment & Charge Quantization</h2>
-                </div>
-
-                <p class="text-slate-700 leading-relaxed">
-                    Performed by **Robert A. Millikan** in 1909, this landmark experiment directly measured the fundamental unit of electric charge ($e$) and proved that electric charge is **quantized** (exists only in discrete integer multiples of a fundamental unit $e$).
-                </p>
-
-                <!-- Experimental Setup Description & Vector SVG Diagram -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center my-6">
-                    <div class="space-y-3">
-                        <h3 class="text-lg font-bold text-slate-900 flex items-center">
-                            <i class="fa-solid fa-microscope text-brand-600 mr-2"></i> Experimental Setup Details
-                        </h3>
-                        <ul class="list-disc list-inside text-sm text-slate-700 space-y-2">
-                            <li><strong>Atomizer:</strong> Produces a fine spray of tiny oil drops into the upper chamber. Friction during spraying imparts a static charge onto drops.</li>
-                            <li><strong>Parallel Metal Plates ($A$ & $B$):</strong> Highly polished brass plates separated by distance $d$, connected to a high-voltage DC supply ($0-10\text{ kV}$) to create a uniform electric field $E = V/d$.</li>
-                            <li><strong>X-ray Beam / Ionization Source:</strong> Ionizes air molecules between the plates. The falling oil droplets capture these free electrons or ions, acquiring negative charge $q$.</li>
-                            <li><strong>Viewing Microscope:</strong> Fitted with a calibrated micrometer eyepiece scale to measure terminal velocities of droplets.</li>
-                            <li><strong>Illumination Lamp:</strong> Provides intense light at right angles to light up droplets (scattered Light effect / Tyndall effect).</li>
-                        </ul>
-                    </div>
-
-                    <!-- Clean SVG Diagram for Millikan Setup -->
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
-                        <p class="text-xs font-semibold text-slate-500 mb-2 uppercase tracking-wide">Figure 20.1: Millikan's Oil Drop Experimental Setup (Line Schematic)</p>
-                        <svg viewBox="0 0 500 320" class="w-full h-auto mx-auto" style="max-height: 280px;" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Outer Enclosure -->
-                            <rect x="50" y="20" width="400" height="260" fill="none" stroke="#334155" stroke-width="2.5" rx="8" />
-                            <text x="60" y="40" font-size="12" fill="#475569" font-weight="bold">Double-Walled Constant Temp Chamber</text>
-
-                            <!-- Top Plate A -->
-                            <rect x="120" y="90" width="260" height="12" fill="#cbd5e1" stroke="#334155" stroke-width="2" />
-                            <!-- Hole in Top Plate -->
-                            <rect x="245" y="90" width="10" height="12" fill="#f8fafc" />
-                            <text x="390" y="98" font-size="11" fill="#0284c7" font-weight="bold">Plate A (+)</text>
-
-                            <!-- Bottom Plate B -->
-                            <rect x="120" y="200" width="260" height="12" fill="#cbd5e1" stroke="#334155" stroke-width="2" />
-                            <text x="390" y="208" font-size="11" fill="#0284c7" font-weight="bold">Plate B (-)</text>
-
-                            <!-- Distance d dimension -->
-                            <line x1="110" y1="102" x2="110" y2="200" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3,3" />
-                            <text x="95" y="155" font-size="12" fill="#0284c7" font-weight="bold">d</text>
-
-                            <!-- Atomizer -->
-                            <path d="M 60 70 L 90 70 L 105 85 L 105 95 L 90 95 Z" fill="#94a3b8" stroke="#1e293b" stroke-width="1.5" />
-                            <circle cx="50" cy="70" r="12" fill="#e2e8f0" stroke="#1e293b" stroke-width="1.5" />
-                            <!-- Oil Spray -->
-                            <circle cx="130" cy="80" r="1.5" fill="#d97706" />
-                            <circle cx="150" cy="85" r="2" fill="#d97706" />
-                            <circle cx="180" cy="88" r="1.5" fill="#d97706" />
-                            <circle cx="250" cy="110" r="3" fill="#d97706" />
-                            <circle cx="250" cy="150" r="3.5" fill="#d97706" />
-                            <circle cx="250" cy="180" r="2.5" fill="#d97706" />
-
-                            <!-- Rays -->
-                            <!-- X-ray Beam -->
-                            <line x1="60" y1="150" x2="220" y2="150" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,2" />
-                            <polygon points="220,147 228,150 220,153" fill="#dc2626" />
-                            <text x="65" y="142" font-size="10" fill="#dc2626" font-weight="bold">Ionizing X-Ray Beam</text>
-
-                            <!-- Microscope -->
-                            <polygon points="380,150 440,135 440,165" fill="#cbd5e1" stroke="#1e293b" stroke-width="1.5" />
-                            <rect x="440" y="130" width="30" height="40" fill="#94a3b8" stroke="#1e293b" stroke-width="1.5" />
-                            <text x="390" y="178" font-size="10" fill="#1e293b" font-weight="bold">Microscope</text>
-
-                            <!-- High Voltage Battery -->
-                            <line x1="250" y1="212" x2="250" y2="250" stroke="#1e293b" stroke-width="1.5" />
-                            <line x1="250" y1="250" x2="310" y2="250" stroke="#1e293b" stroke-width="1.5" />
-                            <line x1="250" y1="90" x2="250" y2="60" stroke="#1e293b" stroke-width="1.5" />
-                            <line x1="250" y1="60" x2="310" y2="60" stroke="#1e293b" stroke-width="1.5" />
-                            <!-- Battery Symbol -->
-                            <line x1="310" y1="50" x2="310" y2="260" stroke="#1e293b" stroke-width="1.5" />
-                            <rect x="295" y="140" width="30" height="30" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" />
-                            <text x="302" y="160" font-size="12" fill="#0284c7" font-weight="bold">HV</text>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Comprehensive Mathematical Derivation -->
-                <div class="space-y-4 border-t border-slate-200 pt-6">
-                    <h3 class="text-xl font-bold text-slate-900">Comprehensive Mathematical Derivation</h3>
-
-                    <!-- Case 1: Motion Under Gravity Alone -->
-                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
-                        <h4 class="font-bold text-brand-700 text-lg">Case 1: Motion under gravity alone (Electric Field $E = 0$)</h4>
-                        <p class="text-sm text-slate-700">
-                            When an oil droplet of radius $r$ and density $\rho$ falls through air of density $\sigma$ and viscosity $\eta$ under gravity alone, it quickly reaches a constant downward terminal velocity $v_{1}$.
-                        </p>
-
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs md:text-sm">
-                            <div class="bg-white p-3 rounded-lg border">
-                                <span class="font-bold text-slate-800">1. Weight of droplet ($W$):</span>
-                                <p class="mt-1">$W = m g = \frac{4}{3} \pi r^3 \rho g$</p>
-                            </div>
-                            <div class="bg-white p-3 rounded-lg border">
-                                <span class="font-bold text-slate-800">2. Upward Buoyant Force ($U$):</span>
-                                <p class="mt-1">$U = \text{Vol} \times \sigma g = \frac{4}{3} \pi r^3 \sigma g$</p>
-                            </div>
-                            <div class="bg-white p-3 rounded-lg border">
-                                <span class="font-bold text-slate-800">3. Viscous Drag ($F_v$ - Stokes' Law):</span>
-                                <p class="mt-1">$F_v = 6 \pi \eta r v_{1}$</p>
-                            </div>
-                        </div>
-
-                        <p class="text-sm text-slate-800 font-semibold">At terminal equilibrium (Downward forces = Upward forces):</p>
-                        <div class="p-3 bg-white rounded-lg border font-mono text-sm text-center">
-                            $$W = U + F_v \implies \frac{4}{3} \pi r^3 \rho g = \frac{4}{3} \pi r^3 \sigma g + 6 \pi \eta r v_{1}$$
-                            $$\frac{4}{3} \pi r^3 (\rho - \sigma) g = 6 \pi \eta r v_{1} \quad \text{--- (Equation 1)}$$
-                        </div>
-
-                        <p class="text-sm text-slate-700">Solving Eq. (1) for droplet radius $r$ gives:</p>
-                        <div class="p-3 bg-brand-50 rounded-lg border border-brand-200 font-mono text-center font-bold text-brand-900">
-                            $$r = \sqrt{\frac{9 \eta v_{1}}{2 (\rho - \sigma) g}}$$
-                        </div>
-                    </div>
-
-                    <!-- Case 2: Motion Under Electric Field -->
-                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
-                        <h4 class="font-bold text-brand-700 text-lg">Case 2: Motion under Uniform Electric Field $E$</h4>
-
-                        <!-- Method A: Upward Motion -->
-                        <div class="space-y-2">
-                            <h5 class="font-semibold text-slate-900">Method A: Upward Motion with Terminal Speed $v_{2}$</h5>
-                            <p class="text-sm text-slate-700">
-                                Apply a potential difference $V$ across plates $d$ apart so top plate $A$ is positive. The upward electric force $F_e = qE = q \frac{V}{d}$ pulls the negatively charged droplet upward with terminal velocity $v_{2}$. Since motion is upward, viscous drag $F_v' = 6 \pi \eta r v_{2}$ acts downward.
-                            </p>
-                            <div class="p-3 bg-white rounded-lg border font-mono text-sm text-center">
-                                $$\text{Upward Forces} = \text{Downward Forces}$$
-                                $$F_e + U = W + F_v' \implies q E + U = W + 6 \pi \eta r v_{2}$$
-                                $$q E = (W - U) + 6 \pi \eta r v_{2}$$
-                            </div>
-                            <p class="text-sm text-slate-700">From Equation (1), we know $W - U = \frac{4}{3}\pi r^3(\rho - \sigma)g = 6\pi \eta r v_{1}$. Substituting this:</p>
-                            <div class="p-3 bg-white rounded-lg border font-mono text-sm text-center">
-                                $$q E = 6 \pi \eta r v_{1} + 6 \pi \eta r v_{2} = 6 \pi \eta r (v_{1} + v_{2})$$
-                                $$q = \frac{6 \pi \eta r (v_{1} + v_{2})}{E} = \frac{6 \pi \eta r d (v_{1} + v_{2})}{V} \quad \text{--- (Equation 2)}$$
-                            </div>
-                        </div>
-
-                        <!-- Method B: Stationary Drop Method -->
-                        <div class="space-y-2 pt-3 border-t">
-                            <h5 class="font-semibold text-slate-900">Method B: Alternative Stationary Drop Method ($v_{2} = 0$)</h5>
-                            <p class="text-sm text-slate-700">
-                                If the electric field is precisely adjusted so the droplet remains perfectly stationary in mid-air ($v_{2} = 0$, viscous force $F_v' = 0$):
-                            </p>
-                            <div class="p-3 bg-white rounded-lg border font-mono text-sm text-center">
-                                $$q E + U = W \implies q E = W - U = \frac{4}{3} \pi r^3 (\rho - \sigma) g$$
-                                $$q = \frac{\frac{4}{3} \pi r^3 (\rho - \sigma) g}{E} = \frac{W_{\mathrm{apparent}} \cdot d}{V}$$
-                            </div>
-                        </div>
-
-                        <!-- Full Charge Formula Substitution -->
-                        <div class="p-4 bg-brand-50 border border-brand-300 rounded-xl space-y-2">
-                            <span class="font-bold text-brand-900 text-sm">Full Explicit Expression for Charge $q$:</span>
-                            <p class="text-xs text-brand-800">Substituting $r = \sqrt{\frac{9 \eta v_{1}}{2(\rho-\sigma)g}}$ into Eq. (2):</p>
-                            <div class="font-mono text-center text-sm font-bold text-brand-900">
-                                $$q = \frac{6 \pi \eta (v_{1} + v_{2}) d}{V} \cdot \left[ \frac{9 \eta v_{1}}{2 (\rho - \sigma) g} \right]^{1/2}$$
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Quantization of Charge -->
-                    <div class="p-5 bg-gradient-to-r from-slate-900 to-brand-900 text-white rounded-xl space-y-3">
-                        <h4 class="text-xl font-bold text-white flex items-center">
-                            <i class="fa-solid fa-atom text-brand-400 mr-2"></i> Principle of Quantization of Charge
-                        </h4>
-                        <p class="text-sm text-slate-200 leading-relaxed">
-                            Millikan repeated the experiment thousands of times for various droplets and with different degrees of ionization. He discovered that every measured charge $q$ was always an integer multiple of a fundamental unit charge $e$:
-                        </p>
-                        <div class="text-center font-mono text-xl text-yellow-300 font-bold bg-white/10 py-2 rounded-lg">
-                            $$q = \pm n e \quad \text{where } n = 1, 2, 3, 4, \dots$$
-                        </div>
-                        <ul class="list-disc list-inside text-xs text-slate-300 space-y-1">
-                            <li>The minimum basic charge step observed was $e = 1.602 \times 10^{-19}\,\mathrm{C}$.</li>
-                            <li>Electric charge cannot exist in arbitrary fractional amounts (like $0.5e$ or $1.7e$) under free conditions.</li>
-                            <li>This conclusively proved the granular/particle nature of electric charge.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Exam Tip Box -->
-                    <div class="tip-box p-4 rounded-xl text-sm">
-                        <strong class="text-amber-900 font-bold"><i class="fa-solid fa-lightbulb mr-1"></i> NEB Board Exam Note (Stokes' Law Correction):</strong>
-                        <p class="text-amber-800 mt-1">
-                            In highly precise calculations, when the drop radius $r$ is comparable to the mean free path of air molecules, Stokes' law requires air viscosity correction $\eta' = \eta / (1 + b/pr)$. However, for NEB Grade XII theory and numericals, standard Stokes' law $\eta$ without correction is used unless explicitly specified in the question.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 20.2 -->
-            <section id="section-20-2" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-8">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Section 20.2</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">Motion of Electrons in Electric and Magnetic Fields</h2>
-                </div>
-
-                <!-- Part A: Uniform Electric Field -->
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center">
-                        <span class="w-7 h-7 bg-brand-600 text-white rounded-full inline-flex items-center justify-center text-sm mr-2">A</span>
-                        Motion of Electron in a Uniform Electric Field (Parabolic Path)
-                    </h3>
-                    <p class="text-sm text-slate-700 leading-relaxed">
-                        Consider an electron of mass $m$ and charge $-e$ entering perpendicularly into a uniform electric field $E$ directed vertically downwards (between two parallel plates of length $L$ and separation $d$) with initial horizontal velocity $v_x = v_0$.
-                    </p>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                        <!-- SVG Diagram Parabola in E Field -->
-                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
-                            <p class="text-xs font-semibold text-slate-500 mb-2 uppercase">Figure 20.2: Parabolic Path in Uniform Electric Field</p>
-                            <svg viewBox="0 0 450 240" class="w-full h-auto" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Top Positive Plate -->
-                                <rect x="80" y="30" width="260" height="12" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
-                                <text x="190" y="24" font-size="11" fill="#dc2626" font-weight="bold">+ + + + Plate A (+V) + + + +</text>
-
-                                <!-- Bottom Negative Plate -->
-                                <rect x="80" y="190" width="260" height="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" />
-                                <text x="190" y="218" font-size="11" fill="#2563eb" font-weight="bold">- - - - Plate B (0V) - - - -</text>
-
-                                <!-- Electric Field Lines (Downward) -->
-                                <g stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2">
-                                    <line x1="120" y1="42" x2="120" y2="190" />
-                                    <line x1="180" y1="42" x2="180" y2="190" />
-                                    <line x1="240" y1="42" x2="240" y2="190" />
-                                    <line x1="300" y1="42" x2="300" y2="190" />
-                                </g>
-
-                                <!-- Electron Beam Vector -->
-                                <!-- Path inside plates: parabola curved UPWARDS towards positive plate -->
-                                <path d="M 20 110 L 80 110 Q 210 110 340 50 L 420 15" fill="none" stroke="#0284c7" stroke-width="2.5" />
-                                <circle cx="80" cy="110" r="4" fill="#0284c7" />
-                                <text x="30" y="102" font-size="11" fill="#0284c7" font-weight="bold">e⁻ (vₓ)</text>
-
-                                <!-- Plate length L -->
-                                <line x1="80" y1="225" x2="340" y2="225" stroke="#475569" stroke-width="1.5" />
-                                <text x="200" y="238" font-size="11" fill="#475569" font-weight="bold">Plate Length L</text>
-
-                                <!-- Deflection y -->
-                                <line x1="340" y1="110" x2="340" y2="50" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3" />
-                                <text x="348" y="85" font-size="12" fill="#dc2626" font-weight="bold">y</text>
-                            </svg>
-                        </div>
-
-                        <!-- Derivation steps for E field -->
-                        <div class="space-y-3 text-sm">
-                            <div class="bg-slate-50 p-3 rounded-lg border">
-                                <strong>1. Horizontal Motion (No force in x-direction):</strong>
-                                <p class="text-xs text-slate-600 mt-1">Acceleration $a_x = 0$, velocity $v_x = v_0$ (constant).</p>
-                                <p class="font-mono text-slate-900 mt-1">$$x = v_x t \implies t = \frac{x}{v_x}$$</p>
-                            </div>
-                            <div class="bg-slate-50 p-3 rounded-lg border">
-                                <strong>2. Vertical Motion (Upward force towards positive plate):</strong>
-                                <p class="text-xs text-slate-600 mt-1">Electric force $F_y = eE$ upwards. Acceleration $a_y = \frac{eE}{m}$.</p>
-                                <p class="font-mono text-slate-900 mt-1">$$y = \frac{1}{2} a_y t^2 = \frac{1}{2} \left(\frac{eE}{m}\right) \left(\frac{x}{v_x}\right)^2$$</p>
-                            </div>
-                            <div class="p-3 bg-brand-50 border border-brand-200 rounded-lg text-center font-mono font-bold text-brand-900">
-                                $$y = \left( \frac{eE}{2m v_x^2} \right) x^2 = K x^2 \quad \text{(Equation of Parabola)}$$
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Additional Kinematic Quantities in E-field -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm pt-2">
-                        <div class="bg-slate-50 p-4 rounded-xl border">
-                            <span class="font-bold text-slate-900 block border-b pb-1">Exit Velocity & Angle of Deflection $\theta$:</span>
-                            <ul class="list-disc list-inside text-xs space-y-1.5 mt-2 text-slate-700">
-                                <li>Horizontal speed: $v_x = v_0$</li>
-                                <li>Vertical speed at exit ($x = L$): $v_y = a_y t = \frac{e E L}{m v_x}$</li>
-                                <li>Resultant velocity magnitude: $v = \sqrt{v_x^2 + v_y^2}$</li>
-                                <li>Deflection angle: $\tan \theta = \frac{v_y}{v_x} = \frac{e E L}{m v_x^2}$</li>
-                            </ul>
-                        </div>
-                        <div class="bg-slate-50 p-4 rounded-xl border">
-                            <span class="font-bold text-slate-900 block border-b pb-1">Kinetic Energy Gained:</span>
-                            <p class="text-xs text-slate-700 mt-2">
-                                If electron is accelerated from rest through potential difference $V_{acc}$:
-                            </p>
-                            <p class="font-mono text-center font-bold text-brand-800 text-sm mt-2">
-                                $$\mathrm{KE} = e V_{acc} = \frac{1}{2} m v^2 \implies v = \sqrt{\frac{2 e V_{acc}}{m}}$$
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Part B: Uniform Magnetic Field -->
-                <div class="space-y-4 pt-6 border-t border-slate-200">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center">
-                        <span class="w-7 h-7 bg-brand-600 text-white rounded-full inline-flex items-center justify-center text-sm mr-2">B</span>
-                        Motion of Electron in a Uniform Magnetic Field (Circular & Helical Paths)
-                    </h3>
-                    <p class="text-sm text-slate-700 leading-relaxed">
-                        The magnetic Lorentz force on a moving electron with velocity $\mathbf{v}$ in magnetic field $\mathbf{B}$ is given by:
-                    </p>
-                    <div class="p-3 bg-slate-100 rounded-lg text-center font-mono font-bold text-slate-900">
-                        $$\mathbf{F}_m = -e (\mathbf{v} \times \mathbf{B}) \implies F_m = e v B \sin\theta$$
-                    </div>
-
-                    <!-- Case 1 & Case 2 Comparison -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <!-- Perpendicular Entry (Circular Path) -->
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
-                            <h4 class="font-bold text-slate-900 text-base border-b pb-2 flex items-center">
-                                <i class="fa-solid fa-circle-notch text-brand-600 mr-2"></i> Case 1: Perpendicular Entry ($\theta = 90^\circ$)
-                            </h4>
-                            <p class="text-xs text-slate-700">
-                                Magnetic force is perpendicular to velocity at all points, providing the required **centripetal force** for a circular path of radius $r$.
-                            </p>
-                            <div class="p-3 bg-white rounded-lg border font-mono text-xs text-center">
-                                $$F_m = F_c \implies e v B = \frac{m v^2}{r}$$
-                                $$r = \frac{m v}{e B} = \frac{\sqrt{2 m (\mathrm{KE})}}{e B}$$
-                            </div>
-                            <div class="space-y-1 text-xs text-slate-800 font-semibold">
-                                <p>• Time Period ($T$): $T = \frac{2\pi r}{v} = \frac{2\pi m}{e B}$</p>
-                                <p>• Cyclotron Frequency ($f$): $f = \frac{1}{T} = \frac{e B}{2\pi m}$</p>
-                            </div>
-                            <div class="pitfall-box p-3 rounded-lg text-xs text-red-900">
-                                <strong>Crucial Insight:</strong> Period $T$ and Frequency $f$ are completely <em>independent</em> of velocity $v$ and path radius $r$!
-                            </div>
-                        </div>
-
-                        <!-- Oblique Entry (Helical Path) -->
-                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
-                            <h4 class="font-bold text-slate-900 text-base border-b pb-2 flex items-center">
-                                <i class="fa-solid fa-dna text-brand-600 mr-2"></i> Case 2: Oblique Entry ($\theta \neq 0^\circ, 90^\circ, 180^\circ$)
-                            </h4>
-                            <p class="text-xs text-slate-700">
-                                Resolve velocity into components parallel and perpendicular to $\mathbf{B}$:
-                            </p>
-                            <ul class="list-disc list-inside text-xs text-slate-700 space-y-1">
-                                <li>$v_\parallel = v \cos\theta$ (Unchanged by $\mathbf{B}$, causes linear displacement along field)</li>
-                                <li>$v_\perp = v \sin\theta$ (Provides centripetal force, causes circular motion)</li>
-                            </ul>
-                            <p class="text-xs font-semibold text-slate-800">Resulting trajectory is a <strong>HELIX</strong>:</p>
-                            <div class="p-3 bg-white rounded-lg border font-mono text-xs text-center space-y-2">
-                                <p>Radius: $$r = \frac{m v_\perp}{e B} = \frac{m v \sin\theta}{e B}$$</p>
-                                <p>Pitch ($P$ = distance advanced along field in one full turn $T$):</p>
-                                <p>$$P = v_\parallel \times T = (v \cos\theta) \left( \frac{2\pi m}{e B} \right) = \frac{2\pi m v \cos\theta}{e B}$$</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Clean SVG Vector Diagram for Circular vs Helical -->
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
-                        <p class="text-xs font-semibold text-slate-500 mb-2 uppercase">Figure 20.3: Circular Path ($\theta=90^\circ$) vs Helical Trajectory ($\theta \neq 90^\circ$)</p>
-                        <svg viewBox="0 0 500 160" class="w-full h-auto mx-auto" style="max-height: 160px;" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Circular Motion Left Side -->
-                            <g transform="translate(20,0)">
-                                <circle cx="100" cy="80" r="50" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4,2" />
-                                <!-- Crosses for B into page -->
-                                <g fill="#94a3b8" font-size="12">
-                                    <text x="70" y="60">×</text><text x="100" y="60">×</text><text x="130" y="60">×</text>
-                                    <text x="70" y="90">×</text><text x="100" y="90">×</text><text x="130" y="90">×</text>
-                                    <text x="70" y="110">×</text><text x="100" y="110">×</text><text x="130" y="110">×</text>
-                                </g>
-                                <circle cx="100" cy="30" r="4" fill="#dc2626" />
-                                <!-- Velocity Vector -->
-                                <line x1="100" y1="30" x2="135" y2="30" stroke="#dc2626" stroke-width="2" />
-                                <polygon points="135,27 142,30 135,33" fill="#dc2626" />
-                                <text x="145" y="34" font-size="11" fill="#dc2626" font-weight="bold">v</text>
-                                <text x="65" y="150" font-size="11" fill="#0284c7" font-weight="bold">(a) Circular Path (θ = 90°)</text>
-                            </g>
-
-                            <!-- Helical Motion Right Side -->
-                            <g transform="translate(250,0)">
-                                <!-- Axis B field arrows -->
-                                <line x1="20" y1="80" x2="220" y2="80" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3" />
-                                <text x="180" y="70" font-size="11" fill="#64748b" font-weight="bold">B field →</text>
-                                <!-- Helix sine wave pattern -->
-                                <path d="M 20 80 Q 35 30 50 80 Q 65 130 80 80 Q 95 30 110 80 Q 125 130 140 80 Q 155 30 170 80" fill="none" stroke="#0284c7" stroke-width="2.5" />
-                                <!-- Pitch P label -->
-                                <line x1="50" y1="120" x2="110" y2="120" stroke="#d97706" stroke-width="1.5" />
-                                <text x="72" y="135" font-size="11" fill="#d97706" font-weight="bold">Pitch (P)</text>
-                                <text x="50" y="150" font-size="11" fill="#0284c7" font-weight="bold">(b) Helical Path (Oblique)</text>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Part C: Crossed Fields & Velocity Selector -->
-                <div class="space-y-4 pt-6 border-t border-slate-200">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center">
-                        <span class="w-7 h-7 bg-brand-600 text-white rounded-full inline-flex items-center justify-center text-sm mr-2">C</span>
-                        Crossed Electric and Magnetic Fields (Velocity Selector / Filter)
-                    </h3>
-                    <p class="text-sm text-slate-700 leading-relaxed">
-                        When an electric field $\mathbf{E}$ (directed vertically downward) and a magnetic field $\mathbf{B}$ (directed perpendicularly into the page) are applied simultaneously in the same region, they exert opposite vertical forces on a moving electron:
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                        <div class="bg-slate-50 p-4 rounded-xl border">
-                            <span class="font-bold text-slate-800">Electric Force ($F_e$):</span>
-                            <p class="text-xs text-slate-600 mt-1">Acts <strong>UPWARD</strong> towards the positive electric plate: $F_e = e E$.</p>
-                        </div>
-                        <div class="bg-slate-50 p-4 rounded-xl border">
-                            <span class="font-bold text-slate-800">Magnetic Force ($F_m$):</span>
-                            <p class="text-xs text-slate-600 mt-1">By Fleming's Left Hand Rule, acts <strong>DOWNWARD</strong>: $F_m = e v B$.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-4 bg-brand-50 border border-brand-300 rounded-xl text-center space-y-2">
-                        <span class="font-bold text-brand-900 text-base">Condition for Undeflected Straight Motion ($F_e = F_m$):</span>
-                        <div class="font-mono text-lg font-bold text-brand-900">
-                            $$e E = e v B \implies v = \frac{E}{B}$$
-                        </div>
-                        <p class="text-xs text-brand-800">
-                            Only electrons possessing exactly this velocity $v = E/B$ pass straight through without bending, regardless of their charge or mass!
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 20.3 -->
-            <section id="section-20-3" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Section 20.3</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">J.J. Thomson’s Experiment: Determination of Specific Charge ($e/m$)</h2>
-                </div>
-
-                <p class="text-slate-700 leading-relaxed">
-                    In 1897, **Sir J.J. Thomson** conducted his famous cathode ray tube experiment, determining the specific charge ($e/m$) of cathode rays. This led to the fundamental discovery of the **electron** as a universal constituent particle of all matter.
-                </p>
-
-                <!-- Thomson Apparatus Diagram -->
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center">
-                    <p class="text-xs font-semibold text-slate-500 mb-2 uppercase">Figure 20.4: J.J. Thomson Cathode Ray Tube Apparatus Schematic</p>
-                    <svg viewBox="0 0 520 220" class="w-full h-auto mx-auto" style="max-height: 220px;" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Glass Tube Outline -->
-                        <path d="M 30 90 L 80 90 L 120 70 L 320 70 L 480 30 L 480 170 L 320 130 L 120 130 L 80 110 L 30 110 Z" fill="#f8fafc" stroke="#334155" stroke-width="2" />
-
-                        <!-- Cathode C & Anode A -->
-                        <rect x="40" y="85" width="6" height="30" fill="#dc2626" />
-                        <text x="35" y="130" font-size="10" fill="#dc2626" font-weight="bold">Cathode C</text>
-
-                        <rect x="100" y="80" width="8" height="40" fill="#0284c7" />
-                        <line x1="104" y1="98" x2="104" y2="102" stroke="#f8fafc" stroke-width="3" />
-                        <text x="95" y="135" font-size="10" fill="#0284c7" font-weight="bold">Anodes (Slits)</text>
-
-                        <!-- Electric Deflection Plates -->
-                        <rect x="180" y="75" width="80" height="6" fill="#cbd5e1" stroke="#1e293b" />
-                        <text x="210" y="68" font-size="10" fill="#dc2626" font-weight="bold">+ Plate P1</text>
-                        <rect x="180" y="119" width="80" height="6" fill="#cbd5e1" stroke="#1e293b" />
-                        <text x="210" y="138" font-size="10" fill="#2563eb" font-weight="bold">- Plate P2</text>
-
-                        <!-- Helmholtz Coils Circle -->
-                        <circle cx="220" cy="100" r="35" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="4,2" />
-                        <text x="200" y="152" font-size="10" fill="#d97706" font-weight="bold">Helmholtz Coils (B)</text>
-
-                        <!-- Fluorescent Screen Z_n S -->
-                        <line x1="480" y1="30" x2="480" y2="170" stroke="#16a34a" stroke-width="4" />
-                        <text x="440" y="185" font-size="10" fill="#16a34a" font-weight="bold">ZnS Screen</text>
-
-                        <!-- Beam Paths -->
-                        <!-- Undeflected Beam to P1 -->
-                        <line x1="46" y1="100" x2="480" y2="100" stroke="#0284c7" stroke-width="2" />
-                        <circle cx="480" cy="100" r="3" fill="#16a34a" />
-                        <text x="488" y="104" font-size="11" fill="#1e293b" font-weight="bold">P1 (Undeflected: B & E on/off balanced)</text>
-
-                        <!-- Deflected Beam E only to P2 -->
-                        <path d="M 46 100 L 180 100 Q 260 100 480 50" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3" />
-                        <circle cx="480" cy="50" r="3" fill="#dc2626" />
-                        <text x="488" y="54" font-size="11" fill="#dc2626" font-weight="bold">P2 (Electric field E alone)</text>
-
-                        <!-- Deflected Beam B only to P3 -->
-                        <path d="M 46 100 L 180 100 Q 260 100 480 150" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3" />
-                        <circle cx="480" cy="150" r="3" fill="#2563eb" />
-                        <text x="488" y="154" font-size="11" fill="#2563eb" font-weight="bold">P3 (Magnetic field B alone)</text>
-                    </svg>
-                </div>
-
-                <!-- Theory and Derivation for Thomson e/m -->
-                <div class="space-y-4 pt-4">
-                    <h3 class="text-xl font-bold text-slate-900">Step-by-Step Specific Charge Derivation</h3>
-
-                    <div class="space-y-3">
-                        <div class="bg-slate-50 p-4 rounded-xl border space-y-2">
-                            <span class="font-bold text-slate-800 text-sm">Step 1: Velocity Determination via Crossed Fields</span>
-                            <p class="text-xs text-slate-700">
-                                Both electric field $E$ and magnetic field $B$ are switched on simultaneously and adjusted until the spot returns to its original undeflected position $P_1$.
-                            </p>
-                            <p class="font-mono text-center font-bold text-slate-900 text-sm">
-                                $$e E = e v B \implies v = \frac{E}{B}$$
-                            </p>
-                        </div>
-
-                        <div class="bg-slate-50 p-4 rounded-xl border space-y-2">
-                            <span class="font-bold text-slate-800 text-sm">Step 2: Deflection with Electric Field Alone</span>
-                            <p class="text-xs text-slate-700">
-                                Switch off magnetic field $B$, keeping $E$ on. The spot shifts to $P_2$ by vertical distance $y$.
-                            </p>
-                            <p class="text-xs text-slate-700">
-                                Inside plates of length $L$, vertical acceleration is $a_y = \frac{eE}{m}$ for time $t = \frac{L}{v}$.
-                                Vertical velocity at exit of plates: $v_y = a_y t = \left(\frac{eE}{m}\right) \left(\frac{L}{v}\right)$.
-                            </p>
-                            <p class="text-xs text-slate-700">
-                                If screen is at distance $D$ from the center of electric plates, total screen deflection $y$ is:
-                            </p>
-                            <p class="font-mono text-center font-bold text-slate-900 text-sm">
-                                $$y = \frac{e E L D}{m v^2}$$
-                            </p>
-                        </div>
-
-                        <div class="bg-brand-50 p-5 rounded-xl border border-brand-300 space-y-2 text-center">
-                            <span class="font-bold text-brand-900 text-base">Step 3: Combining Equations for $e/m$</span>
-                            <p class="text-xs text-brand-800">Substitute $v = E/B$ into $y = \frac{e E L D}{m v^2}$:</p>
-                            <div class="font-mono text-lg font-bold text-brand-900">
-                                $$y = \frac{e E L D}{m (E/B)^2} = \frac{e L D B^2}{m E}$$
-                                $$\implies \frac{e}{m} = \frac{y E}{B^2 L D}$$
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-50 p-4 rounded-xl border space-y-2">
-                            <span class="font-bold text-slate-800 text-sm">Alternative Formula using Accelerating Voltage $V_{acc}$:</span>
-                            <p class="text-xs text-slate-700">
-                                If electrons are accelerated by anode voltage $V_{acc}$ before entering fields: $\frac{1}{2} m v^2 = e V_{acc} \implies v^2 = \frac{2 e V_{acc}}{m}$.
-                                Substituting $v = E/B$:
-                            </p>
-                            <div class="font-mono text-center font-bold text-slate-900 text-sm">
-                                $$\left(\frac{E}{B}\right)^2 = \frac{2 e V_{acc}}{m} \implies \frac{e}{m} = \frac{E^2}{2 V_{acc} B^2}$$
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Verified Experimental Value & Historical Significance -->
-                    <div class="p-5 bg-slate-900 text-white rounded-xl space-y-2">
-                        <span class="font-bold text-brand-400 text-sm uppercase tracking-wider">Experimental Constant & Significance</span>
-                        <div class="text-2xl font-bold font-mono text-yellow-300">
-                            $$\frac{e}{m_e} \approx 1.7588 \times 10^{11} \mathrm{C\,kg^{-1}}$$
-                        </div>
-                        <ul class="list-disc list-inside text-xs text-slate-300 space-y-1 pt-1">
-                            <li>Thomson found $e/m$ was <strong>identical</strong> regardless of the gas in the cathode tube or the metal used for cathode electrodes.</li>
-                            <li>This proved that cathode rays consist of identical negatively charged universal subatomic particles — <strong>electrons</strong>.</li>
-                            <li>The extremely high $e/m$ value (compared to $H^+$ ion $e/m \approx 9.58 \times 10^7\mathrm{C\,kg^{-1}}$) proved electrons have negligible mass ($\approx 1/1836$ of hydrogen atom).</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SOLVED NUMERICAL EXAMPLES -->
-            <section id="numericals" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-8">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">NEB Exam Preparation</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">6 Solved Standard Textbook Numerical Examples</h2>
-                    <p class="text-sm text-slate-600 mt-1">Fully worked step-by-step solutions with exact physical constants verified.</p>
-                </div>
-
-                <div class="space-y-6">
-
-                    <!-- Numerical 1 -->
-                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 space-y-3">
-                        <div class="flex justify-between items-center border-b pb-2">
-                            <span class="font-bold text-brand-700 text-sm">Example 1: Millikan Oil Drop & Quantization</span>
-                            <span class="text-xs bg-brand-100 text-brand-800 font-semibold px-2 py-0.5 rounded">Millikan</span>
-                        </div>
-                        <p class="text-sm text-slate-800">
-                            <strong>Problem:</strong> In a Millikan oil drop experiment, an oil drop of density $875\mathrm{kg\,m^{-3}}$ is held stationary between two horizontal parallel plates separated by $1.2\,\mathrm{cm}$ when a potential difference of $2400\,\mathrm{V}$ is applied. If the radius of the drop is $1.5 \times 10^{-6}\text{ m}$, calculate:
-                            (a) Mass of the drop (neglecting air buoyancy),
-                            (b) Charge $q$ on the drop, and
-                            (c) Number of excess electrons on the drop.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border space-y-2 text-xs md:text-sm">
-                            <p class="font-bold text-slate-900">Solution:</p>
-                            <p><strong>Given:</strong> Density $\rho = 875\mathrm{kg\,m^{-3}}$, Distance $d = 1.2\,\mathrm{cm} = 0.012\text{ m}$, Voltage $V = 2400\,\mathrm{V}$, Radius $r = 1.5 \times 10^{-6}\text{ m}$, $g = 9.8\mathrm{m\,s^{-2}}$, $e = 1.602 \times 10^{-19}\,\mathrm{C}$.</p>
-                            <p><strong>(a) Mass of droplet ($m$):</strong></p>
-                            <p class="font-mono text-slate-800">$$m = \frac{4}{3} \pi r^3 \rho = \frac{4}{3} \times 3.1416 \times (1.5 \times 10^{-6})^3 \times 875 = 1.237 \times 10^{-14}\text{ kg}$$</p>
-                            <p><strong>(b) Charge on droplet ($q$):</strong></p>
-                            <p class="text-slate-700">For stationary drop: $q E = m g \implies q \left(\frac{V}{d}\right) = m g \implies q = \frac{m g d}{V}$</p>
-                            <p class="font-mono text-slate-800">$$q = \frac{(1.237 \times 10^{-14}) \times 9.8 \times 0.012}{2400} = 6.06 \times 10^{-19}\,\mathrm{C}$$</p>
-                            <p><strong>(c) Number of excess electrons ($n$):</strong></p>
-                            <p class="font-mono text-slate-800">$$n = \frac{q}{e} = \frac{6.06 \times 10^{-19}}{1.602 \times 10^{-19}} \approx 3.78 \approx 4 \text{ electrons}$$</p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 2 -->
-                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 space-y-3">
-                        <div class="flex justify-between items-center border-b pb-2">
-                            <span class="font-bold text-brand-700 text-sm">Example 2: Electron Deflection in Electric Field</span>
-                            <span class="text-xs bg-brand-100 text-brand-800 font-semibold px-2 py-0.5 rounded">Electric Field</span>
-                        </div>
-                        <p class="text-sm text-slate-800">
-                            <strong>Problem:</strong> An electron accelerated through a potential difference of $1000\,\mathrm{V}$ enters perpendicularly into a uniform electric field of $2000\text{ V/m}$ between two horizontal plates of length $4\,\mathrm{cm}$. Find the vertical deflection $y$ of the electron as it emerges from the plates. ($e/m = 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}$).
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border space-y-2 text-xs md:text-sm">
-                            <p class="font-bold text-slate-900">Solution:</p>
-                            <p><strong>Given:</strong> $V_{acc} = 1000\,\mathrm{V}$, $E = 2000\text{ V/m}$, Plate length $L = 0.04\text{ m}$, $e/m = 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}$.</p>
-                            <p><strong>Step 1: Horizontal velocity $v_x$:</strong></p>
-                            <p class="font-mono text-slate-800">$$\frac{1}{2} m v_x^2 = e V_{acc} \implies v_x^2 = \frac{2 e V_{acc}}{m} = 2 \times (1.76 \times 10^{11}) \times 1000 = 3.52 \times 10^{14}\mathrm{m^2\,s^{-2}}$$</p>
-                            <p>$$v_x = 1.876 \times 10^7\mathrm{m\,s^{-1}}$$</p>
-                            <p><strong>Step 2: Deflection $y$:</strong></p>
-                            <p class="font-mono text-slate-800">$$y = \frac{e E L^2}{2 m v_x^2} = \frac{1}{2} \left(\frac{e}{m}\right) \frac{E L^2}{v_x^2} = \frac{1}{2} \times (1.76 \times 10^{11}) \times \frac{2000 \times (0.04)^2}{3.52 \times 10^{14}}$$</p>
-                            <p class="font-mono font-bold text-brand-800">$$y = 0.0008\text{ m} = 0.8\,\mathrm{mm}$$</p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 3 -->
-                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 space-y-3">
-                        <div class="flex justify-between items-center border-b pb-2">
-                            <span class="font-bold text-brand-700 text-sm">Example 3: Circular Trajectory in Magnetic Field</span>
-                            <span class="text-xs bg-brand-100 text-brand-800 font-semibold px-2 py-0.5 rounded">Magnetic Field</span>
-                        </div>
-                        <p class="text-sm text-slate-800">
-                            <strong>Problem:</strong> An electron is accelerated from rest through $500\,\mathrm{V}$ and then enters a uniform magnetic field $B = 2.0 \times 10^{-3}\text{ T}$ perpendicular to its direction of motion. Calculate:
-                            (a) Speed of the electron,
-                            (b) Radius of the circular path, and
-                            (c) Time period of revolution. ($m_e = 9.11 \times 10^{-31}\text{ kg}$, $e = 1.6 \times 10^{-19}\,\mathrm{C}$).
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border space-y-2 text-xs md:text-sm">
-                            <p class="font-bold text-slate-900">Solution:</p>
-                            <p><strong>(a) Speed $v$:</strong> $v = \sqrt{\frac{2 e V}{m}} = \sqrt{\frac{2 \times 1.6 \times 10^{-19} \times 500}{9.11 \times 10^{-31}}} = 1.326 \times 10^7\mathrm{m\,s^{-1}}$.</p>
-                            <p><strong>(b) Radius $r$:</strong> $r = \frac{m v}{e B} = \frac{9.11 \times 10^{-31} \times 1.326 \times 10^7}{1.6 \times 10^{-19} \times 2.0 \times 10^{-3}} = 0.0377\text{ m} = 3.77\,\mathrm{cm}$.</p>
-                            <p><strong>(c) Period $T$:</strong> $T = \frac{2\pi m}{e B} = \frac{2 \times 3.1416 \times 9.11 \times 10^{-31}}{1.6 \times 10^{-19} \times 2.0 \times 10^{-3}} = 1.788 \times 10^{-8}\,\mathrm{s} = 17.88\text{ ns}$.</p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 4 -->
-                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 space-y-3">
-                        <div class="flex justify-between items-center border-b pb-2">
-                            <span class="font-bold text-brand-700 text-sm">Example 4: Velocity Selector & Crossed Fields</span>
-                            <span class="text-xs bg-brand-100 text-brand-800 font-semibold px-2 py-0.5 rounded">Crossed Fields</span>
-                        </div>
-                        <p class="text-sm text-slate-800">
-                            <strong>Problem:</strong> In a velocity selector, an electric field $E = 1.5 \times 10^4\text{ V/m}$ and a magnetic field $B = 0.03\text{ T}$ act perpendicularly to each other and to the electron beam.
-                            (a) What velocity will allow electrons to pass through undeflected?
-                            (b) If the magnetic field is turned off, what will be the initial acceleration of the electron?
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border space-y-2 text-xs md:text-sm">
-                            <p class="font-bold text-slate-900">Solution:</p>
-                            <p><strong>(a) Undeflected velocity $v$:</strong> $v = \frac{E}{B} = \frac{1.5 \times 10^4}{0.03} = 5.0 \times 10^5\mathrm{m\,s^{-1}}$.</p>
-                            <p><strong>(b) Acceleration with $E$ field alone:</strong></p>
-                            <p class="font-mono text-slate-800">$$a = \frac{e E}{m} = (1.76 \times 10^{11}) \times 1.5 \times 10^4 = 2.64 \times 10^{15}\mathrm{m\,s^{-2}}$$</p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 5 -->
-                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 space-y-3">
-                        <div class="flex justify-between items-center border-b pb-2">
-                            <span class="font-bold text-brand-700 text-sm">Example 5: Thomson Specific Charge Calculation</span>
-                            <span class="text-xs bg-brand-100 text-brand-800 font-semibold px-2 py-0.5 rounded">Thomson e/m</span>
-                        </div>
-                        <p class="text-sm text-slate-800">
-                            <strong>Problem:</strong> In a J.J. Thomson $e/m$ experiment, electric plates are $5\,\mathrm{cm}$ long ($L$) with potential difference $150\,\mathrm{V}$ across plates separated by $1.5\,\mathrm{cm}$. When a magnetic field $B = 1.2 \times 10^{-3}\text{ T}$ is applied simultaneously, the electron beam spot is undeflected. When magnetic field is turned off, the beam spot on screen (located $20\,\mathrm{cm}$ from plate center) shifts by $1.18\,\mathrm{cm}$. Calculate specific charge $e/m$.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border space-y-2 text-xs md:text-sm">
-                            <p class="font-bold text-slate-900">Solution:</p>
-                            <p><strong>Given:</strong> $L = 0.05\text{ m}$, $V_p = 150\,\mathrm{V}$, $d = 0.015\text{ m}$, $E = V_p/d = 150/0.015 = 10,000\text{ V/m}$, $B = 1.2 \times 10^{-3}\text{ T}$, $D = 0.20\text{ m}$, $y = 0.0118\text{ m}$.</p>
-                            <p><strong>Formula:</strong> $\frac{e}{m} = \frac{y E}{B^2 L D}$</p>
-                            <p class="font-mono text-slate-800 font-bold">$$\frac{e}{m} = \frac{0.0118 \times 10000}{(1.2 \times 10^{-3})^2 \times 0.05 \times 0.20} = \frac{118}{1.44 \times 10^{-8} \times 0.01} = 1.763 \times 10^{11}\mathrm{C\,kg^{-1}}$$</p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 6 -->
-                    <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 space-y-3">
-                        <div class="flex justify-between items-center border-b pb-2">
-                            <span class="font-bold text-brand-700 text-sm">Example 6: Helical Trajectory at Oblique Angle</span>
-                            <span class="text-xs bg-brand-100 text-brand-800 font-semibold px-2 py-0.5 rounded">Helical Path</span>
-                        </div>
-                        <p class="text-sm text-slate-800">
-                            <strong>Problem:</strong> An electron with velocity $v = 4.0 \times 10^6\mathrm{m\,s^{-1}}$ enters a uniform magnetic field $B = 0.02\text{ T}$ at an angle $\theta = 30^\circ$ to the field lines. Calculate:
-                            (a) Radius of helical path, and (b) Pitch of the helix.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border space-y-2 text-xs md:text-sm">
-                            <p class="font-bold text-slate-900">Solution:</p>
-                            <p><strong>Given:</strong> $v = 4 \times 10^6\mathrm{m\,s^{-1}}$, $B = 0.02\text{ T}$, $\theta = 30^\circ$, $e/m = 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}$.</p>
-                            <p><strong>Velocity components:</strong> $v_\perp = v \sin 30^\circ = 2.0 \times 10^6\mathrm{m\,s^{-1}}$, $v_\parallel = v \cos 30^\circ = 3.464 \times 10^6\mathrm{m\,s^{-1}}$.</p>
-                            <p><strong>(a) Radius $r$:</strong> $r = \frac{m v_\perp}{e B} = \frac{2.0 \times 10^6}{(1.76 \times 10^{11}) \times 0.02} = 5.68 \times 10^{-4}\text{ m} = 0.568\,\mathrm{mm}$.</p>
-                            <p><strong>(b) Period $T$:</strong> $T = \frac{2\pi m}{e B} = \frac{2\times 3.1416}{1.76 \times 10^{11} \times 0.02} = 1.785 \times 10^{-9}\,\mathrm{s}$.</p>
-                            <p><strong>(c) Pitch $P$:</strong> $P = v_\parallel \times T = (3.464 \times 10^6) \times (1.785 \times 10^{-9}) = 6.18 \times 10^{-3}\text{ m} = 6.18\,\mathrm{mm}$.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- INTERACTIVE SIMULATORS SECTION -->
-            <section id="simulations" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-8">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-brand-600 font-bold text-sm tracking-wider uppercase"><i class="fa-solid fa-laptop-code mr-1"></i> Self-Study Interactive Tools</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">Interactive Physics Simulators</h2>
-                    <p class="text-sm text-slate-600 mt-1">Adjust physical parameters in real-time to observe beam deflection, helical motion, and charge quantization.</p>
-                </div>
-
-                <!-- Simulation Tab Buttons -->
-                <div class="flex flex-wrap gap-2 border-b border-slate-200 pb-3">
-                    <button id="tab-btn-1" onclick="switchSimTab(1)" class="px-4 py-2 text-sm font-bold rounded-lg bg-brand-600 text-white transition-all">
-                        1. Thomson $e/m$ Tube Visualizer
-                    </button>
-                    <button id="tab-btn-2" onclick="switchSimTab(2)" class="px-4 py-2 text-sm font-bold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
-                        2. Trajectory Simulator ($E$, $B$, Helical)
-                    </button>
-                    <button id="tab-btn-3" onclick="switchSimTab(3)" class="px-4 py-2 text-sm font-bold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all">
-                        3. Millikan Quantization Calculator
-                    </button>
-                </div>
-
-                <!-- SIMULATOR 1: THOMSON E/M -->
-                <div id="sim-tab-1" class="space-y-6">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <!-- Canvas Display -->
-                        <div class="lg:col-span-2 bg-slate-900 rounded-xl p-3 border border-slate-800 shadow-inner">
-                            <div class="flex justify-between items-center text-xs text-slate-400 mb-2 px-2">
-                                <span><i class="fa-solid fa-tv text-green-400 mr-1"></i> Cathode Ray Beam Output</span>
-                                <span id="sim1-status-badge" class="text-yellow-400 font-mono">Status: Deflected</span>
-                            </div>
-                            <canvas id="canvas-thomson" width="600" height="260" class="w-full h-auto bg-slate-950 rounded-lg border border-slate-800"></canvas>
-                        </div>
-
-                        <!-- Controls Column -->
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4 text-xs">
-                            <h3 class="font-bold text-slate-900 text-sm border-b pb-2">Apparatus Controls</h3>
-
-                            <div>
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Accelerating Voltage ($V_{acc}$):</span>
-                                    <span id="val-vacc">1000 V</span>
-                                </label>
-                                <input type="range" id="slider-vacc" min="200" max="3000" step="50" value="1000" class="w-full mt-1">
-                            </div>
-
-                            <div>
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Electric Field Voltage ($V_E$):</span>
-                                    <span id="val-ve">100 V</span>
-                                </label>
-                                <input type="range" id="slider-ve" min="-300" max="300" step="10" value="100" class="w-full mt-1">
-                            </div>
-
-                            <div>
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Magnetic Field ($B$):</span>
-                                    <span id="val-b">0.50 mT</span>
-                                </label>
-                                <input type="range" id="slider-b" min="-2.0" max="2.0" step="0.05" value="0.5" class="w-full mt-1">
-                            </div>
-
-                            <button onclick="autoZeroThomson()" class="w-full py-2 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-lg transition-colors">
-                                <i class="fa-solid fa-scale-balanced mr-1"></i> Auto-Balance Fields ($v = E/B$)
-                            </button>
-
-                            <div class="bg-white p-3 rounded-lg border space-y-1 font-mono text-[11px] text-slate-800">
-                                <p>• Electron Speed $v$: <span id="calc-v" class="font-bold text-brand-700">1.87 × 10⁷ m/s</span></p>
-                                <p>• Electric Force $F_e$: <span id="calc-fe" class="font-bold text-red-600">--</span></p>
-                                <p>• Magnetic Force $F_m$: <span id="calc-fm" class="font-bold text-blue-600">--</span></p>
-                                <p>• Estimated $e/m$: <span id="calc-em" class="font-bold text-green-700">1.76 × 10¹¹ C/kg</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SIMULATOR 2: TRAJECTORY SIMULATOR -->
-                <div id="sim-tab-2" class="space-y-6 hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <div class="lg:col-span-2 bg-slate-900 rounded-xl p-3 border border-slate-800 shadow-inner">
-                            <div class="flex justify-between items-center text-xs text-slate-400 mb-2 px-2">
-                                <span><i class="fa-solid fa-atom text-blue-400 mr-1"></i> 2D Field Trajectory Canvas</span>
-                                <span id="sim2-mode-badge" class="text-brand-400 font-mono">Mode: Electric Parabola</span>
-                            </div>
-                            <canvas id="canvas-trajectory" width="600" height="280" class="w-full h-auto bg-slate-950 rounded-lg border border-slate-800"></canvas>
-                        </div>
-
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4 text-xs">
-                            <h3 class="font-bold text-slate-900 text-sm border-b pb-2">Field Environment Select</h3>
-
-                            <div>
-                                <label class="font-semibold text-slate-700 block mb-1">Select Field Mode:</label>
-                                <select id="sim2-mode-select" class="w-full p-2 border rounded-lg bg-white font-medium" onchange="updateSim2Mode()">
-                                    <option value="electric">1. Pure Electric Field (Parabola)</option>
-                                    <option value="magnetic">2. Pure Magnetic Field (Circle / Arc)</option>
-                                    <option value="helical">3. Magnetic Field at Angle (Helical)</option>
-                                    <option value="crossed">4. Velocity Selector (Crossed Fields)</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Initial Energy ($E_k$):</span>
-                                    <span id="val-sim2-ek">500 eV</span>
-                                </label>
-                                <input type="range" id="slider-sim2-ek" min="100" max="2000" step="50" value="500" class="w-full mt-1">
-                            </div>
-
-                            <div id="sim2-angle-group">
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Entry Angle ($\theta$):</span>
-                                    <span id="val-sim2-angle">90°</span>
-                                </label>
-                                <input type="range" id="slider-sim2-angle" min="15" max="90" step="5" value="90" class="w-full mt-1">
-                            </div>
-
-                            <div class="bg-white p-3 rounded-lg border space-y-1 font-mono text-[11px] text-slate-800">
-                                <p>• Trajectory Radius $r$: <span id="calc-sim2-r" class="font-bold text-brand-700">3.77 cm</span></p>
-                                <p>• Helical Pitch $P$: <span id="calc-sim2-p" class="font-bold text-yellow-700">N/A</span></p>
-                                <p>• Cyclotron Freq $f$: <span id="calc-sim2-f" class="font-bold text-green-700">56 MHz</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SIMULATOR 3: MILLIKAN QUANTIZATION CALCULATOR -->
-                <div id="sim-tab-3" class="space-y-6 hidden">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <!-- Controls Panel -->
-                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4 text-xs">
-                            <h3 class="font-bold text-slate-900 text-sm border-b pb-2">Drop Parameters</h3>
-
-                            <div>
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Plate Voltage ($V$):</span>
-                                    <span id="val-m-v">2000 V</span>
-                                </label>
-                                <input type="range" id="slider-m-v" min="500" max="4000" step="50" value="2000" class="w-full mt-1">
-                            </div>
-
-                            <div>
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Freefall Speed ($v_{1}$):</span>
-                                    <span id="val-m-v1">0.12 mm/s</span>
-                                </label>
-                                <input type="range" id="slider-m-v1" min="0.05" max="0.50" step="0.01" value="0.12" class="w-full mt-1">
-                            </div>
-
-                            <div>
-                                <label class="flex justify-between font-semibold text-slate-700">
-                                    <span>Upward Speed ($v_{2}$):</span>
-                                    <span id="val-m-v2">0.08 mm/s</span>
-                                </label>
-                                <input type="range" id="slider-m-v2" min="0.00" max="0.40" step="0.01" value="0.08" class="w-full mt-1">
-                            </div>
-
-                            <div class="bg-white p-3 rounded-lg border space-y-1.5 font-mono text-[11px] text-slate-800">
-                                <p>• Drop Radius $r$: <span id="calc-m-r" class="font-bold text-brand-700">--</span></p>
-                                <p>• Calculated Charge $q$: <span id="calc-m-q" class="font-bold text-purple-700">--</span></p>
-                                <p>• Ratio $q / e$: <span id="calc-m-n" class="font-bold text-green-700">--</span></p>
-                            </div>
-                        </div>
-
-                        <!-- Quantization Canvas Graph -->
-                        <div class="lg:col-span-2 bg-slate-900 rounded-xl p-3 border border-slate-800 shadow-inner">
-                            <div class="flex justify-between items-center text-xs text-slate-400 mb-2 px-2">
-                                <span><i class="fa-solid fa-chart-line text-purple-400 mr-1"></i> Charge Quantization Ladder ($q = n e$)</span>
-                                <span class="text-xs text-slate-400">Step Multiples of $1.602 \times 10^{-19}\,\mathrm{C}$</span>
-                            </div>
-                            <canvas id="canvas-millikan" width="600" height="260" class="w-full h-auto bg-slate-950 rounded-lg border border-slate-800"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- PRACTICE QUESTION BANK FOR NEB STUDENTS -->
-            <section id="practice" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-8">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Exam Bank</span>
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1">NEB Grade XII Question Bank</h2>
-                    <p class="text-sm text-slate-600 mt-1">High-frequency Board Exam conceptual short questions, long derivations, and unsolved practice numericals.</p>
-                </div>
-
-                <!-- Short Answer Questions with Collapsible Model Answers -->
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center">
-                        <i class="fa-solid fa-circle-question text-brand-600 mr-2"></i> Conceptual Short Answer Questions
-                    </h3>
-
-                    <!-- Q1 -->
-                    <div class="border rounded-xl p-4 bg-slate-50 space-y-2">
-                        <div class="flex justify-between items-start cursor-pointer" onclick="toggleAnswer('ans-1')">
-                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Q1. Why are oil drops preferred over water drops in Millikan’s experiment?</h4>
-                            <span class="text-brand-600 text-xs font-bold bg-brand-50 px-2 py-1 rounded">Model Answer <i class="fa-solid fa-chevron-down ml-1"></i></span>
-                        </div>
-                        <div id="ans-1" class="hidden text-xs md:text-sm text-slate-700 border-t pt-2 mt-2 leading-relaxed">
-                            <strong>Model Answer:</strong> Water drops evaporate rapidly during observation, causing their mass, volume, and density to continually change, which renders Stokes' law and terminal velocity calculations inaccurate. Oil (like clock oil or paraffin oil) has an extremely low vapor pressure, ensuring constant drop mass and radius throughout the experiment.
-                        </div>
-                    </div>
-
-                    <!-- Q2 -->
-                    <div class="border rounded-xl p-4 bg-slate-50 space-y-2">
-                        <div class="flex justify-between items-start cursor-pointer" onclick="toggleAnswer('ans-2')">
-                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Q2. An electron moving horizontally enters a uniform magnetic field directed vertically downwards. What is the shape of its trajectory?</h4>
-                            <span class="text-brand-600 text-xs font-bold bg-brand-50 px-2 py-1 rounded">Model Answer <i class="fa-solid fa-chevron-down ml-1"></i></span>
-                        </div>
-                        <div id="ans-2" class="hidden text-xs md:text-sm text-slate-700 border-t pt-2 mt-2 leading-relaxed">
-                            <strong>Model Answer:</strong> The trajectory is a horizontal <strong>circle</strong>. Since velocity $\mathbf{v}$ is perpendicular to magnetic field $\mathbf{B}$ ($\theta = 90^\circ$), the magnetic Lorentz force $F = e v B$ acts perpendicular to motion at all times, providing the required centripetal force without changing the speed.
-                        </div>
-                    </div>
-
-                    <!-- Q3 -->
-                    <div class="border rounded-xl p-4 bg-slate-50 space-y-2">
-                        <div class="flex justify-between items-start cursor-pointer" onclick="toggleAnswer('ans-3')">
-                            <h4 class="font-bold text-slate-900 text-sm md:text-base">Q3. Does the specific charge ($e/m$) of an electron depend on its velocity at relativistic speeds?</h4>
-                            <span class="text-brand-600 text-xs font-bold bg-brand-50 px-2 py-1 rounded">Model Answer <i class="fa-solid fa-chevron-down ml-1"></i></span>
-                        </div>
-                        <div id="ans-3" class="hidden text-xs md:text-sm text-slate-700 border-t pt-2 mt-2 leading-relaxed">
-                            <strong>Model Answer:</strong> Yes. According to Einstein's Theory of Relativity, mass increases with velocity $m = \frac{m_0}{\sqrt{1 - v^2/c^2}}$. As speed $v$ approaches speed of light $c$, relativistic mass $m$ increases, causing the specific charge ratio $e/m$ to <strong>decrease</strong>.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Long Answer Questions for Board Practice -->
-                <div class="space-y-4 pt-4 border-t">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center">
-                        <i class="fa-solid fa-file-pen text-brand-600 mr-2"></i> NEB Board Exam Long Answer Derivations [5 Marks]
-                    </h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
-                        <div class="p-4 bg-slate-50 border rounded-xl space-y-2">
-                            <span class="font-bold text-slate-900 block">1. Millikan's Experiment Derivation:</span>
-                            <p class="text-slate-700">Describe Millikan's oil drop experiment. Derive mathematical expressions for droplet radius $r$ and charge $q$ under downward free fall and upward electric field motion. Explain charge quantization.</p>
-                        </div>
-                        <div class="p-4 bg-slate-50 border rounded-xl space-y-2">
-                            <span class="font-bold text-slate-900 block">2. Thomson Specific Charge ($e/m$):</span>
-                            <p class="text-slate-700">Describe J.J. Thomson's experiment with a neat labeled diagram to determine $e/m$ of an electron. Explain velocity selection using crossed fields and derive the deflection formula.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Unsolved Numerical Practice Set with Hints -->
-                <div class="space-y-4 pt-4 border-t">
-                    <h3 class="text-xl font-bold text-slate-900 flex items-center">
-                        <i class="fa-solid fa-calculator text-brand-600 mr-2"></i> Unsolved Numerical Practice Set (With Answers & Hints)
-                    </h3>
-                    <div class="space-y-3 text-xs md:text-sm">
-
-                        <div class="p-4 bg-slate-50 rounded-xl border">
-                            <p class="font-semibold text-slate-900">P1. An oil drop carrying 10 excess electrons is held stationary between plates separated by $1\,\mathrm{cm}$ at a potential difference of $1200\,\mathrm{V}$. Find the radius of the oil droplet. ($\rho_{oil} = 900\mathrm{kg\,m^{-3}}, g = 9.8\mathrm{m\,s^{-2}}$).</p>
-                            <p class="text-brand-700 font-mono mt-1"><strong>Ans:</strong> $r = 1.98 \times 10^{-6}\text{ m} = 1.98\ \mu\text{m}$. [Hint: $q E = m g \implies n e (V/d) = \frac{4}{3}\pi r^3 \rho g$].</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 rounded-xl border">
-                            <p class="font-semibold text-slate-900">P2. An electron beam passes undeflected through crossed fields $E = 3.2 \times 10^4\text{ V/m}$ and $B = 2.0 \times 10^{-3}\text{ T}$. If electric field is removed, calculate the radius of the circular path traversed by the electron in the magnetic field.</p>
-                            <p class="text-brand-700 font-mono mt-1"><strong>Ans:</strong> $r = 0.0455\text{ m} = 4.55\,\mathrm{cm}$. [Hint: Find $v = E/B = 1.6 \times 10^7\mathrm{m\,s^{-1}}$, then $r = mv / eB$].</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 rounded-xl border">
-                            <p class="font-semibold text-slate-900">P3. An electron with kinetic energy $2.0\text{ keV}$ enters a magnetic field $B = 0.1\text{ T}$ at an angle of $45^\circ$ to field lines. Calculate the helical path radius and pitch.</p>
-                            <p class="text-brand-700 font-mono mt-1"><strong>Ans:</strong> Radius $r = 1.07\,\mathrm{mm}$, Pitch $P = 6.72\,\mathrm{mm}$. [Hint: $\mathrm{KE} = 2000 \times 1.6 \times 10^{-19}\text{ J}$, $v_\perp = v \sin 45^\circ$, $v_\parallel = v \cos 45^\circ$].</p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- PHYSICAL CONSTANTS REFERENCE TABLE -->
-            <section id="constants" class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 space-y-4">
-                <div class="border-b border-slate-200 pb-3">
-                    <h2 class="text-xl font-bold text-slate-900">Standard Physical Constants Reference (NEB Syllabus)</h2>
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-xs md:text-sm text-left text-slate-700 border border-slate-200">
-                        <thead class="bg-slate-100 text-slate-900 font-bold border-b">
-                            <tr>
-                                <th class="p-3">Physical Quantity</th>
-                                <th class="p-3">Symbol</th>
-                                <th class="p-3">Standard SI Value</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-200 font-mono">
-                            <tr>
-                                <td class="p-3 font-sans font-semibold">Elementary Charge</td>
-                                <td class="p-3">$e$</td>
-                                <td class="p-3">$1.60217663 \times 10^{-19}\,\mathrm{C} \approx 1.602 \times 10^{-19}\,\mathrm{C}$</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-sans font-semibold">Electron Rest Mass</td>
-                                <td class="p-3">$m_e$</td>
-                                <td class="p-3">$9.109383 \times 10^{-31}\text{ kg} \approx 9.11 \times 10^{-31}\text{ kg}$</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-sans font-semibold">Specific Charge of Electron</td>
-                                <td class="p-3">$e/m_e$</td>
-                                <td class="p-3">$1.75882 \times 10^{11}\mathrm{C\,kg^{-1}} \approx 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}$</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-sans font-semibold">Dynamic Viscosity of Air ($20^\circ\text{C}$)</td>
-                                <td class="p-3">$\eta$</td>
-                                <td class="p-3">$1.81 \times 10^{-5}\mathrm{N\,s\,m^{-2}} \text{ (or kg/m}\cdot\text{s)}$</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-sans font-semibold">Acceleration due to Gravity</td>
-                                <td class="p-3">$g$</td>
-                                <td class="p-3">$9.80665\mathrm{m\,s^{-2}} \approx 9.8\mathrm{m\,s^{-2}} \text{ or } 9.81\mathrm{m\,s^{-2}}$</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-    <!-- JAVASCRIPT LOGIC FOR SIMULATORS AND UI INTERACTION -->
-    <script>
-        // Physical Constants
-        const CONST_E = 1.60217663e-19;
-        const CONST_ME = 9.109383e-31;
-        const CONST_EM = 1.75882e11;
-        const CONST_G = 9.8;
-        const CONST_ETA = 1.81e-5;
-
-        // UI Collapsible Answers
-        function toggleAnswer(id) {
-            const el = document.getElementById(id);
-            if (el) {
-                el.classList.toggle('hidden');
-            }
-        }
-
-        // Tab Switcher for Simulators
-        function switchSimTab(tabIndex) {
-            for (let i = 1; i <= 3; i++) {
-                const tab = document.getElementById(`sim-tab-${i}`);
-                const btn = document.getElementById(`tab-btn-${i}`);
-                if (i === tabIndex) {
-                    tab.classList.remove('hidden');
-                    btn.classList.add('bg-brand-600', 'text-white');
-                    btn.classList.remove('bg-slate-100', 'text-slate-700');
-                } else {
-                    tab.classList.add('hidden');
-                    btn.classList.remove('bg-brand-600', 'text-white');
-                    btn.classList.add('bg-slate-100', 'text-slate-700');
-                }
-            }
-            if (tabIndex === 1) drawThomsonSim();
-            if (tabIndex === 2) drawTrajectorySim();
-            if (tabIndex === 3) drawMillikanSim();
-        }
-
-        // --- SIMULATOR 1: THOMSON E/M ---
-        const c1 = document.getElementById('canvas-thomson');
-        const ctx1 = c1 ? c1.getContext('2d') : null;
-
-        function drawThomsonSim() {
-            if (!ctx1) return;
-
-            const Vacc = parseFloat(document.getElementById('slider-vacc').value);
-            const Ve = parseFloat(document.getElementById('slider-ve').value);
-            const B_mT = parseFloat(document.getElementById('slider-b').value);
-
-            document.getElementById('val-vacc').innerText = `${Vacc} V`;
-            document.getElementById('val-ve').innerText = `${Ve} V`;
-            document.getElementById('val-b').innerText = `${B_mT.toFixed(2)} mT`;
-
-            const B = B_mT * 1e-3; // Tesla
-            const v = Math.sqrt((2 * CONST_E * Vacc) / CONST_ME);
-            const E = Ve / 0.02; // Assuming 2 cm plate gap
-
-            const Fe = CONST_E * E;
-            const Fm = CONST_E * v * B;
-
-            document.getElementById('calc-v').innerText = `${(v / 1e7).toFixed(2)} × 10⁷ m/s`;
-            document.getElementById('calc-fe').innerText = `${Fe.toExponential(2)} N`;
-            document.getElementById('calc-fm').innerText = `${Fm.toExponential(2)} N`;
-
-            // Canvas Clear
-            ctx1.clearRect(0, 0, c1.width, c1.height);
-
-            // Draw CRT Outline
-            ctx1.strokeStyle = '#334155';
-            ctx1.lineWidth = 2;
-            ctx1.beginPath();
-            ctx1.moveTo(20, 100);
-            ctx1.lineTo(150, 100);
-            ctx1.lineTo(400, 40);
-            ctx1.lineTo(550, 40);
-            ctx1.lineTo(550, 220);
-            ctx1.lineTo(400, 220);
-            ctx1.lineTo(150, 160);
-            ctx1.lineTo(20, 160);
-            ctx1.closePath();
-            ctx1.stroke();
-
-            // Draw Screen
-            ctx1.strokeStyle = '#22c55e';
-            ctx1.lineWidth = 4;
-            ctx1.beginPath();
-            ctx1.moveTo(550, 40);
-            ctx1.lineTo(550, 220);
-            ctx1.stroke();
-
-            // Draw Electric Deflection Plates
-            ctx1.fillStyle = '#cbd5e1';
-            ctx1.fillRect(200, 80, 120, 8); // Top Plate
-            ctx1.fillRect(200, 170, 120, 8); // Bottom Plate
-
-            ctx1.fillStyle = Ve >= 0 ? '#ef4444' : '#3b82f6';
-            ctx1.fillText(Ve >= 0 ? '+ Plate' : '- Plate', 235, 75);
-
-            // Draw Beam Path
-            ctx1.beginPath();
-            ctx1.moveTo(20, 130);
-            ctx1.lineTo(200, 130);
-
-            // Trajectory calculation inside plates and drift region
-            const netForce = Fe - Fm; // Net upward force
-            const y_deflect = (netForce * 0.005) / (CONST_ME * v * 1e-12); // scale factor for visual
-            const finalY = Math.max(50, Math.min(210, 130 - y_deflect));
-
-            ctx1.quadraticCurveTo(320, 130, 550, finalY);
-            ctx1.strokeStyle = '#38bdf8';
-            ctx1.lineWidth = 2.5;
-            ctx1.stroke();
-
-            // Glowing Spot on Screen
-            ctx1.fillStyle = '#4ade80';
-            ctx1.beginPath();
-            ctx1.arc(550, finalY, 5, 0, Math.PI * 2);
-            ctx1.fill();
-
-            // Status Badge
-            const badge = document.getElementById('sim1-status-badge');
-            if (Math.abs(finalY - 130) < 3) {
-                badge.innerText = 'Status: UNDEFLECTED (v = E/B Balanced)';
-                badge.className = 'text-green-400 font-bold font-mono';
-            } else {
-                badge.innerText = 'Status: DEFLECTED';
-                badge.className = 'text-yellow-400 font-mono';
-            }
-        }
-
-        function autoZeroThomson() {
-            const Vacc = parseFloat(document.getElementById('slider-vacc').value);
-            const v = Math.sqrt((2 * CONST_E * Vacc) / CONST_ME);
-            const Ve = parseFloat(document.getElementById('slider-ve').value);
-            const E = Ve / 0.02;
-
-            const reqB = (E / v) * 1000; // in mT
-            document.getElementById('slider-b').value = reqB.toFixed(2);
-            drawThomsonSim();
-        }
-
-        // --- SIMULATOR 2: TRAJECTORY SIMULATOR ---
-        const c2 = document.getElementById('canvas-trajectory');
-        const ctx2 = c2 ? c2.getContext('2d') : null;
-
-        function updateSim2Mode() {
-            const mode = document.getElementById('sim2-mode-select').value;
-            const angleGroup = document.getElementById('sim2-angle-group');
-            if (mode === 'helical') {
-                angleGroup.classList.remove('hidden');
-            } else {
-                angleGroup.classList.add('hidden');
-            }
-            drawTrajectorySim();
-        }
-
-        function drawTrajectorySim() {
-            if (!ctx2) return;
-
-            const mode = document.getElementById('sim2-mode-select').value;
-            const Ek_eV = parseFloat(document.getElementById('slider-sim2-ek').value);
-            const theta_deg = parseFloat(document.getElementById('slider-sim2-angle').value);
-
-            document.getElementById('val-sim2-ek').innerText = `${Ek_eV} eV`;
-            document.getElementById('val-sim2-angle').innerText = `${theta_deg}°`;
-
-            const Ek = Ek_eV * CONST_E;
-            const v = Math.sqrt((2 * Ek) / CONST_ME);
-            const theta = (theta_deg * Math.PI) / 180;
-
-            const B = 0.01; // 10 mT
-            const r = (CONST_ME * v * Math.sin(theta)) / (CONST_E * B);
-            const P = (2 * Math.PI * CONST_ME * v * Math.cos(theta)) / (CONST_E * B);
-            const f = (CONST_E * B) / (2 * Math.PI * CONST_ME);
-
-            document.getElementById('calc-sim2-r').innerText = `${(r * 100).toFixed(2)} cm`;
-            document.getElementById('calc-sim2-p').innerText = mode === 'helical' ? `${(P * 100).toFixed(2)} cm` : 'N/A';
-            document.getElementById('calc-sim2-f').innerText = `${(f / 1e6).toFixed(1)} MHz`;
-
-            ctx2.clearRect(0, 0, c2.width, c2.height);
-
-            ctx2.beginPath();
-            ctx2.strokeStyle = '#38bdf8';
-            ctx2.lineWidth = 2.5;
-
-            if (mode === 'electric') {
-                // Parabola
-                ctx2.moveTo(30, 140);
-                for (let x = 30; x < 570; x += 2) {
-                    const t = (x - 30) / 200;
-                    const y = 140 - 80 * t * t;
-                    ctx2.lineTo(x, y);
-                }
-            } else if (mode === 'magnetic') {
-                // Circular arc
-                ctx2.arc(150, 140, 90, 0, Math.PI * 1.5, true);
-            } else if (mode === 'helical') {
-                // Helical sine wave projection
-                ctx2.moveTo(30, 140);
-                for (let x = 30; x < 570; x += 2) {
-                    const y = 140 + 40 * Math.sin((x - 30) * 0.08);
-                    ctx2.lineTo(x, y);
-                }
-            } else if (mode === 'crossed') {
-                // Undeflected Straight path
-                ctx2.moveTo(30, 140);
-                ctx2.lineTo(570, 140);
-            }
-
-            ctx2.stroke();
-        }
-
-        // --- SIMULATOR 3: MILLIKAN QUANTIZATION ---
-        const c3 = document.getElementById('canvas-millikan');
-        const ctx3 = c3 ? c3.getContext('2d') : null;
-
-        function drawMillikanSim() {
-            if (!ctx3) return;
-
-            const V = parseFloat(document.getElementById('slider-m-v').value);
-            const v1_mm = parseFloat(document.getElementById('slider-m-v1').value);
-            const v2_mm = parseFloat(document.getElementById('slider-m-v2').value);
-
-            document.getElementById('val-m-v').innerText = `${V} V`;
-            document.getElementById('val-m-v1').innerText = `${v1_mm.toFixed(2)} mm/s`;
-            document.getElementById('val-m-v2').innerText = `${v2_mm.toFixed(2)} mm/s`;
-
-            const v1 = v1_mm * 1e-3;
-            const v2 = v2_mm * 1e-3;
-            const d = 0.01; // 1 cm
-
-            const r = Math.sqrt((9 * CONST_ETA * v1) / (2 * 875 * CONST_G));
-            const E = V / d;
-            const q = (6 * Math.PI * CONST_ETA * r * (v1 + v2)) / E;
-            const n = q / CONST_E;
-
-            document.getElementById('calc-m-r').innerText = `${(r * 1e6).toFixed(2)} μm`;
-            document.getElementById('calc-m-q').innerText = `${q.toExponential(2)} C`;
-            document.getElementById('calc-m-n').innerText = `${n.toFixed(2)} e`;
-
-            // Draw Quantization Ladder Chart
-            ctx3.clearRect(0, 0, c3.width, c3.height);
-
-            // Draw Steps n=1,2,3,4,5
-            ctx3.strokeStyle = '#475569';
-            ctx3.lineWidth = 1;
-            ctx3.font = '11px sans-serif';
-            ctx3.fillStyle = '#94a3b8';
-
-            for (let step = 1; step <= 5; step++) {
-                const y = 230 - step * 38;
-                ctx3.beginPath();
-                ctx3.moveTo(50, y);
-                ctx3.lineTo(550, y);
-                ctx3.stroke();
-                ctx3.fillText(`q = ${step}e (${(step * 1.6).toFixed(1)}×10⁻¹⁹ C)`, 60, y - 5);
-            }
-
-            // Draw Calculated Point
-            const ptY = 230 - n * 38;
-            ctx3.fillStyle = '#c084fc';
-            ctx3.beginPath();
-            ctx3.arc(300, ptY, 7, 0, Math.PI * 2);
-            ctx3.fill();
-
-            ctx3.fillStyle = '#ffffff';
-            ctx3.fillText(`Measured Drop Charge: n = ${n.toFixed(2)}`, 320, ptY + 4);
-        }
-
-        // Add Event Listeners for Sliders
-        window.onload = function() {
-            ['slider-vacc', 'slider-ve', 'slider-b'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.addEventListener('input', drawThomsonSim);
-            });
-
-            ['slider-sim2-ek', 'slider-sim2-angle'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.addEventListener('input', drawTrajectorySim);
-            });
-
-            ['slider-m-v', 'slider-m-v1', 'slider-m-v2'].forEach(id => {
-                const el = document.getElementById(id);
-                if (el) el.addEventListener('input', drawMillikanSim);
-            });
-
-            // Initial Render
-            drawThomsonSim();
-            drawTrajectorySim();
-            drawMillikanSim();
-        };
-    </script>
-</body>
-
-</html>
+
+<h2>Millikan’s Oil Drop Experiment & Charge Quantization</h2><p>
+Performed by <strong>Robert A. Millikan</strong> in 1909, this landmark experiment directly measured the fundamental unit of electric charge (\(e\)) and proved that electric charge is <strong>quantized</strong> (exists only in discrete integer multiples of a fundamental unit \(e\)).
+</p><h3><i></i> Experimental Setup Details</h3><ul>
+<li><strong>Atomizer:</strong> Produces a fine spray of tiny oil drops into the upper chamber. Friction during spraying imparts a static charge onto drops.</li>
+<li><strong>Parallel Metal Plates (\(A\) & \(B\)):</strong> Highly polished brass plates separated by distance \(d\), connected to a high-voltage DC supply (\(0-10\text{ kV}\)) to create a uniform electric field \(E = V/d\).</li>
+<li><strong>X-ray Beam / Ionization Source:</strong> Ionizes air molecules between the plates. The falling oil droplets capture these free electrons or ions, acquiring negative charge \(q\).</li>
+<li><strong>Viewing Microscope:</strong> Fitted with a calibrated micrometer eyepiece scale to measure terminal velocities of droplets.</li>
+<li><strong>Illumination Lamp:</strong> Provides intense light at right angles to light up droplets (scattered Light effect / Tyndall effect).</li>
+</ul><p>Figure 20.1: Millikan's Oil Drop Experimental Setup (Line Schematic)</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" fill="currentColor">
+
+<rect x="50" y="20" width="400" height="260" fill="none" stroke="#334155" stroke-width="2.5" rx="8"/>
+<text x="60" y="40" font-size="12" fill="#475569" font-weight="bold">Double-Walled Constant Temp Chamber</text>
+
+<rect x="120" y="90" width="260" height="12" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+
+<rect x="245" y="90" width="10" height="12" fill="#f8fafc"/>
+<text x="390" y="98" font-size="11" fill="#0284c7" font-weight="bold">Plate A (+)</text>
+
+<rect x="120" y="200" width="260" height="12" fill="#cbd5e1" stroke="#334155" stroke-width="2"/>
+<text x="390" y="208" font-size="11" fill="#0284c7" font-weight="bold">Plate B (-)</text>
+
+<line x1="110" y1="102" x2="110" y2="200" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="95" y="155" font-size="12" fill="#0284c7" font-weight="bold">d</text>
+
+<path d="M 60 70 L 90 70 L 105 85 L 105 95 L 90 95 Z" fill="#94a3b8" stroke="#1e293b" stroke-width="1.5"/>
+<circle cx="50" cy="70" r="12" fill="#e2e8f0" stroke="#1e293b" stroke-width="1.5"/>
+
+<circle cx="130" cy="80" r="1.5" fill="#d97706"/>
+<circle cx="150" cy="85" r="2" fill="#d97706"/>
+<circle cx="180" cy="88" r="1.5" fill="#d97706"/>
+<circle cx="250" cy="110" r="3" fill="#d97706"/>
+<circle cx="250" cy="150" r="3.5" fill="#d97706"/>
+<circle cx="250" cy="180" r="2.5" fill="#d97706"/>
+
+<line x1="60" y1="150" x2="220" y2="150" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,2"/>
+<polygon points="220,147 228,150 220,153" fill="#dc2626"/>
+<text x="65" y="142" font-size="10" fill="#dc2626" font-weight="bold">Ionizing X-Ray Beam</text>
+
+<polygon points="380,150 440,135 440,165" fill="#cbd5e1" stroke="#1e293b" stroke-width="1.5"/>
+<rect x="440" y="130" width="30" height="40" fill="#94a3b8" stroke="#1e293b" stroke-width="1.5"/>
+<text x="390" y="178" font-size="10" fill="#1e293b" font-weight="bold">Microscope</text>
+
+<line x1="250" y1="212" x2="250" y2="250" stroke="#1e293b" stroke-width="1.5"/>
+<line x1="250" y1="250" x2="310" y2="250" stroke="#1e293b" stroke-width="1.5"/>
+<line x1="250" y1="90" x2="250" y2="60" stroke="#1e293b" stroke-width="1.5"/>
+<line x1="250" y1="60" x2="310" y2="60" stroke="#1e293b" stroke-width="1.5"/>
+
+<line x1="310" y1="50" x2="310" y2="260" stroke="#1e293b" stroke-width="1.5"/>
+<rect x="295" y="140" width="30" height="30" fill="#ffffff" stroke="#0284c7" stroke-width="1.5"/>
+<text x="302" y="160" font-size="12" fill="#0284c7" font-weight="bold">HV</text>
+</svg><h3>Comprehensive Mathematical Derivation</h3><h4>Case 1: Motion under gravity alone (Electric Field \(E = 0\))</h4><p>
+When an oil droplet of radius \(r\) and density \(\rho\) falls through air of density \(\sigma\) and viscosity \(\eta\) under gravity alone, it quickly reaches a constant downward terminal velocity \(v_{1}\).
+</p><p>1. Weight of droplet (\(W\)):</p>
+<p>\(W = m g = \frac{4}{3} \pi r^3 \rho g\)</p><p>2. Upward Buoyant Force (\(U\)):</p>
+<p>\(U = \text{Vol} \times \sigma g = \frac{4}{3} \pi r^3 \sigma g\)</p><p>3. Viscous Drag (\(F_v\) - Stokes' Law):</p>
+<p>\(F_v = 6 \pi \eta r v_{1}\)</p><p>At terminal equilibrium (Downward forces = Upward forces):</p><p>\[W = U + F_v \implies \frac{4}{3} \pi r^3 \rho g = \frac{4}{3} \pi r^3 \sigma g + 6 \pi \eta r v_{1}\]
+\[\frac{4}{3} \pi r^3 (\rho - \sigma) g = 6 \pi \eta r v_{1} \quad \text{--- (Equation 1)}\]</p>
+<p>Solving Eq. (1) for droplet radius \(r\) gives:</p><p>\[r = \sqrt{\frac{9 \eta v_{1}}{2 (\rho - \sigma) g}}\]</p>
+<h4>Case 2: Motion under Uniform Electric Field \(E\)</h4><h5>Method A: Upward Motion with Terminal Speed \(v_{2}\)</h5><p>
+Apply a potential difference \(V\) across plates \(d\) apart so top plate \(A\) is positive. The upward electric force \(F_e = qE = q \frac{V}{d}\) pulls the negatively charged droplet upward with terminal velocity \(v_{2}\). Since motion is upward, viscous drag \(F_v' = 6 \pi \eta r v_{2}\) acts downward.
+</p><p>\[\text{Upward Forces} = \text{Downward Forces}\]
+\[F_e + U = W + F_v' \implies q E + U = W + 6 \pi \eta r v_{2}\]
+\[q E = (W - U) + 6 \pi \eta r v_{2}\]</p>
+<p>From Equation (1), we know \(W - U = \frac{4}{3}\pi r^3(\rho - \sigma)g = 6\pi \eta r v_{1}\). Substituting this:</p><p>\[q E = 6 \pi \eta r v_{1} + 6 \pi \eta r v_{2} = 6 \pi \eta r (v_{1} + v_{2})\]
+\[q = \frac{6 \pi \eta r (v_{1} + v_{2})}{E} = \frac{6 \pi \eta r d (v_{1} + v_{2})}{V} \quad \text{--- (Equation 2)}\]</p>
+<h5>Method B: Alternative Stationary Drop Method (\(v_{2} = 0\))</h5><p>
+If the electric field is precisely adjusted so the droplet remains perfectly stationary in mid-air (\(v_{2} = 0\), viscous force \(F_v' = 0\)):
+</p><p>\[q E + U = W \implies q E = W - U = \frac{4}{3} \pi r^3 (\rho - \sigma) g\]
+\[q = \frac{\frac{4}{3} \pi r^3 (\rho - \sigma) g}{E} = \frac{W_{\mathrm{apparent}} \cdot d}{V}\]</p>
+<p>Full Explicit Expression for Charge \(q\):</p>
+<p>Substituting \(r = \sqrt{\frac{9 \eta v_{1}}{2(\rho-\sigma)g}}\) into Eq. (2):</p><p>\[q = \frac{6 \pi \eta (v_{1} + v_{2}) d}{V} \cdot \left[ \frac{9 \eta v_{1}}{2 (\rho - \sigma) g} \right]^{1/2}\]</p>
+<h4><i></i> Principle of Quantization of Charge</h4><p>
+Millikan repeated the experiment thousands of times for various droplets and with different degrees of ionization. He discovered that every measured charge \(q\) was always an integer multiple of a fundamental unit charge \(e\):
+</p><p>\[q = \pm n e \quad \text{where } n = 1, 2, 3, 4, \dots\]</p>
+<ul>
+<li>The minimum basic charge step observed was \(e = 1.602 \times 10^{-19}\,\mathrm{C}\).</li>
+<li>Electric charge cannot exist in arbitrary fractional amounts (like \(0.5e\) or \(1.7e\)) under free conditions.</li>
+<li>This conclusively proved the granular/particle nature of electric charge.</li>
+</ul><p><strong><i></i> NEB Board Exam Note (Stokes' Law Correction):</strong></p>
+<p>
+In highly precise calculations, when the drop radius \(r\) is comparable to the mean free path of air molecules, Stokes' law requires air viscosity correction \(\eta' = \eta / (1 + b/pr)\). However, for NEB Grade XII theory and numericals, standard Stokes' law \(\eta\) without correction is used unless explicitly specified in the question.
+</p><h2>Motion of Electrons in Electric and Magnetic Fields</h2><h3>A
+Motion of Electron in a Uniform Electric Field (Parabolic Path)</h3><p>
+Consider an electron of mass \(m\) and charge \(-e\) entering perpendicularly into a uniform electric field \(E\) directed vertically downwards (between two parallel plates of length \(L\) and separation \(d\)) with initial horizontal velocity \(v_x = v_0\).
+</p><p>Figure 20.2: Parabolic Path in Uniform Electric Field</p><svg class="panel" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 240" fill="currentColor">
+
+<rect x="80" y="30" width="260" height="12" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="190" y="24" font-size="11" fill="#dc2626" font-weight="bold">+ + + + Plate A (+V) + + + +</text>
+
+<rect x="80" y="190" width="260" height="12" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+<text x="190" y="218" font-size="11" fill="#2563eb" font-weight="bold">- - - - Plate B (0V) - - - -</text>
+
+<g stroke="#94a3b8" stroke-width="1" stroke-dasharray="2,2">
+<line x1="120" y1="42" x2="120" y2="190"/>
+<line x1="180" y1="42" x2="180" y2="190"/>
+<line x1="240" y1="42" x2="240" y2="190"/>
+<line x1="300" y1="42" x2="300" y2="190"/>
+</g>
+
+<path d="M 20 110 L 80 110 Q 210 110 340 50 L 420 15" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<circle cx="80" cy="110" r="4" fill="#0284c7"/>
+<text x="30" y="102" font-size="11" fill="#0284c7" font-weight="bold">e⁻ (vₓ)</text>
+
+<line x1="80" y1="225" x2="340" y2="225" stroke="#475569" stroke-width="1.5"/>
+<text x="200" y="238" font-size="11" fill="#475569" font-weight="bold">Plate Length L</text>
+
+<line x1="340" y1="110" x2="340" y2="50" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="348" y="85" font-size="12" fill="#dc2626" font-weight="bold">y</text>
+</svg><p><strong>1. Horizontal Motion (No force in x-direction):</strong></p>
+<p>Acceleration \(a_x = 0\), velocity \(v_x = v_0\) (constant).</p><p>\[x = v_x t \implies t = \frac{x}{v_x}\]</p><p><strong>2. Vertical Motion (Upward force towards positive plate):</strong></p>
+<p>Electric force \(F_y = eE\) upwards. Acceleration \(a_y = \frac{eE}{m}\).</p><p>\[y = \frac{1}{2} a_y t^2 = \frac{1}{2} \left(\frac{eE}{m}\right) \left(\frac{x}{v_x}\right)^2\]</p><p>\[y = \left( \frac{eE}{2m v_x^2} \right) x^2 = K x^2 \quad \text{(Equation of Parabola)}\]</p>
+<p>Exit Velocity & Angle of Deflection \(\theta\):</p>
+<ul>
+<li>Horizontal speed: \(v_x = v_0\)</li>
+<li>Vertical speed at exit (\(x = L\)): \(v_y = a_y t = \frac{e E L}{m v_x}\)</li>
+<li>Resultant velocity magnitude: \(v = \sqrt{v_x^2 + v_y^2}\)</li>
+<li>Deflection angle: \(\tan \theta = \frac{v_y}{v_x} = \frac{e E L}{m v_x^2}\)</li>
+</ul><p>Kinetic Energy Gained:</p>
+<p>
+If electron is accelerated from rest through potential difference \(V_{acc}\):
+</p><p>
+\[\mathrm{KE} = e V_{acc} = \frac{1}{2} m v^2 \implies v = \sqrt{\frac{2 e V_{acc}}{m}}\]
+</p><h3>B
+Motion of Electron in a Uniform Magnetic Field (Circular & Helical Paths)</h3><p>
+The magnetic Lorentz force on a moving electron with velocity \(\mathbf{v}\) in magnetic field \(\mathbf{B}\) is given by:
+</p><p>\[\mathbf{F}_m = -e (\mathbf{v} \times \mathbf{B}) \implies F_m = e v B \sin\theta\]</p>
+<h4><i></i> Case 1: Perpendicular Entry (\(\theta = 90^\circ\))</h4><p>
+Magnetic force is perpendicular to velocity at all points, providing the required <strong>centripetal force</strong> for a circular path of radius \(r\).
+</p><p>\[F_m = F_c \implies e v B = \frac{m v^2}{r}\]
+\[r = \frac{m v}{e B} = \frac{\sqrt{2 m (\mathrm{KE})}}{e B}\]</p>
+<p>• Time Period (\(T\)): \(T = \frac{2\pi r}{v} = \frac{2\pi m}{e B}\)</p><p>• Cyclotron Frequency (\(f\)): \(f = \frac{1}{T} = \frac{e B}{2\pi m}\)</p><p><strong>Crucial Insight:</strong> Period \(T\) and Frequency \(f\) are completely <em>independent</em> of velocity \(v\) and path radius \(r\)!</p>
+<h4><i></i> Case 2: Oblique Entry (\(\theta \neq 0^\circ, 90^\circ, 180^\circ\))</h4><p>
+Resolve velocity into components parallel and perpendicular to \(\mathbf{B}\):
+</p><ul>
+<li>\(v_\parallel = v \cos\theta\) (Unchanged by \(\mathbf{B}\), causes linear displacement along field)</li>
+<li>\(v_\perp = v \sin\theta\) (Provides centripetal force, causes circular motion)</li>
+</ul><p>Resulting trajectory is a <strong>HELIX</strong>:</p><p>Radius: \[r = \frac{m v_\perp}{e B} = \frac{m v \sin\theta}{e B}\]</p><p>Pitch (\(P\) = distance advanced along field in one full turn \(T\)):</p><p>\[P = v_\parallel \times T = (v \cos\theta) \left( \frac{2\pi m}{e B} \right) = \frac{2\pi m v \cos\theta}{e B}\]</p><p>Figure 20.3: Circular Path (\(\theta=90^\circ\)) vs Helical Trajectory (\(\theta \neq 90^\circ\))</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" fill="currentColor">
+
+<g transform="translate(20,0)">
+<circle cx="100" cy="80" r="50" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4,2"/>
+
+<g fill="#94a3b8" font-size="12">
+<text x="70" y="60">×</text><text x="100" y="60">×</text><text x="130" y="60">×</text>
+<text x="70" y="90">×</text><text x="100" y="90">×</text><text x="130" y="90">×</text>
+<text x="70" y="110">×</text><text x="100" y="110">×</text><text x="130" y="110">×</text>
+</g>
+<circle cx="100" cy="30" r="4" fill="#dc2626"/>
+
+<line x1="100" y1="30" x2="135" y2="30" stroke="#dc2626" stroke-width="2"/>
+<polygon points="135,27 142,30 135,33" fill="#dc2626"/>
+<text x="145" y="34" font-size="11" fill="#dc2626" font-weight="bold">v</text>
+<text x="65" y="150" font-size="11" fill="#0284c7" font-weight="bold">(a) Circular Path (θ = 90°)</text>
+</g>
+
+<g transform="translate(250,0)">
+
+<line x1="20" y1="80" x2="220" y2="80" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="180" y="70" font-size="11" fill="#64748b" font-weight="bold">B field →</text>
+
+<path d="M 20 80 Q 35 30 50 80 Q 65 130 80 80 Q 95 30 110 80 Q 125 130 140 80 Q 155 30 170 80" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+
+<line x1="50" y1="120" x2="110" y2="120" stroke="#d97706" stroke-width="1.5"/>
+<text x="72" y="135" font-size="11" fill="#d97706" font-weight="bold">Pitch (P)</text>
+<text x="50" y="150" font-size="11" fill="#0284c7" font-weight="bold">(b) Helical Path (Oblique)</text>
+</g>
+</svg><h3>C
+Crossed Electric and Magnetic Fields (Velocity Selector / Filter)</h3><p>
+When an electric field \(\mathbf{E}\) (directed vertically downward) and a magnetic field \(\mathbf{B}\) (directed perpendicularly into the page) are applied simultaneously in the same region, they exert opposite vertical forces on a moving electron:
+</p><p>Electric Force (\(F_e\)):</p>
+<p>Acts <strong>UPWARD</strong> towards the positive electric plate: \(F_e = e E\).</p><p>Magnetic Force (\(F_m\)):</p>
+<p>By Fleming's Left Hand Rule, acts <strong>DOWNWARD</strong>: \(F_m = e v B\).</p><p>Condition for Undeflected Straight Motion (\(F_e = F_m\)):</p>
+<p>\[e E = e v B \implies v = \frac{E}{B}\]</p>
+<p>
+Only electrons possessing exactly this velocity \(v = E/B\) pass straight through without bending, regardless of their charge or mass!
+</p><h2>J.J. Thomson’s Experiment: Determination of Specific Charge (\(e/m\))</h2><p>
+In 1897, <strong>Sir J.J. Thomson</strong> conducted his famous cathode ray tube experiment, determining the specific charge (\(e/m\)) of cathode rays. This led to the fundamental discovery of the <strong>electron</strong> as a universal constituent particle of all matter.
+</p><p>Figure 20.4: J.J. Thomson Cathode Ray Tube Apparatus Schematic</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" fill="currentColor">
+
+<path d="M 30 90 L 80 90 L 120 70 L 320 70 L 480 30 L 480 170 L 320 130 L 120 130 L 80 110 L 30 110 Z" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+
+<rect x="40" y="85" width="6" height="30" fill="#dc2626"/>
+<text x="35" y="130" font-size="10" fill="#dc2626" font-weight="bold">Cathode C</text>
+
+<rect x="100" y="80" width="8" height="40" fill="#0284c7"/>
+<line x1="104" y1="98" x2="104" y2="102" stroke="#f8fafc" stroke-width="3"/>
+<text x="95" y="135" font-size="10" fill="#0284c7" font-weight="bold">Anodes (Slits)</text>
+
+<rect x="180" y="75" width="80" height="6" fill="#cbd5e1" stroke="#1e293b"/>
+<text x="210" y="68" font-size="10" fill="#dc2626" font-weight="bold">+ Plate P1</text>
+<rect x="180" y="119" width="80" height="6" fill="#cbd5e1" stroke="#1e293b"/>
+<text x="210" y="138" font-size="10" fill="#2563eb" font-weight="bold">- Plate P2</text>
+
+<circle cx="220" cy="100" r="35" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="200" y="152" font-size="10" fill="#d97706" font-weight="bold">Helmholtz Coils (B)</text>
+
+<line x1="480" y1="30" x2="480" y2="170" stroke="#16a34a" stroke-width="4"/>
+<text x="440" y="185" font-size="10" fill="#16a34a" font-weight="bold">ZnS Screen</text>
+
+<line x1="46" y1="100" x2="480" y2="100" stroke="#0284c7" stroke-width="2"/>
+<circle cx="480" cy="100" r="3" fill="#16a34a"/>
+<text x="488" y="104" font-size="11" fill="#1e293b" font-weight="bold">P1 (Undeflected: B & E on/off balanced)</text>
+
+<path d="M 46 100 L 180 100 Q 260 100 480 50" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+<circle cx="480" cy="50" r="3" fill="#dc2626"/>
+<text x="488" y="54" font-size="11" fill="#dc2626" font-weight="bold">P2 (Electric field E alone)</text>
+
+<path d="M 46 100 L 180 100 Q 260 100 480 150" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3"/>
+<circle cx="480" cy="150" r="3" fill="#2563eb"/>
+<text x="488" y="154" font-size="11" fill="#2563eb" font-weight="bold">P3 (Magnetic field B alone)</text>
+</svg><h3>Step-by-Step Specific Charge Derivation</h3><p>Step 1: Velocity Determination via Crossed Fields</p>
+<p>
+Both electric field \(E\) and magnetic field \(B\) are switched on simultaneously and adjusted until the spot returns to its original undeflected position \(P_1\).
+</p><p>
+\[e E = e v B \implies v = \frac{E}{B}\]
+</p><p>Step 2: Deflection with Electric Field Alone</p>
+<p>
+Switch off magnetic field \(B\), keeping \(E\) on. The spot shifts to \(P_2\) by vertical distance \(y\).
+</p><p>
+Inside plates of length \(L\), vertical acceleration is \(a_y = \frac{eE}{m}\) for time \(t = \frac{L}{v}\).
+Vertical velocity at exit of plates: \(v_y = a_y t = \left(\frac{eE}{m}\right) \left(\frac{L}{v}\right)\).
+</p><p>
+If screen is at distance \(D\) from the center of electric plates, total screen deflection \(y\) is:
+</p><p>
+\[y = \frac{e E L D}{m v^2}\]
+</p><p>Step 3: Combining Equations for \(e/m\)</p>
+<p>Substitute \(v = E/B\) into \(y = \frac{e E L D}{m v^2}\):</p><p>\[y = \frac{e E L D}{m (E/B)^2} = \frac{e L D B^2}{m E}\]
+\[\implies \frac{e}{m} = \frac{y E}{B^2 L D}\]</p>
+<p>Alternative Formula using Accelerating Voltage \(V_{acc}\):</p>
+<p>
+If electrons are accelerated by anode voltage \(V_{acc}\) before entering fields: \(\frac{1}{2} m v^2 = e V_{acc} \implies v^2 = \frac{2 e V_{acc}}{m}\).
+Substituting \(v = E/B\):
+</p><p>\[\left(\frac{E}{B}\right)^2 = \frac{2 e V_{acc}}{m} \implies \frac{e}{m} = \frac{E^2}{2 V_{acc} B^2}\]</p>
+<p>Experimental Constant & Significance</p>
+<p>\[\frac{e}{m_e} \approx 1.7588 \times 10^{11} \mathrm{C\,kg^{-1}}\]</p>
+<ul>
+<li>Thomson found \(e/m\) was <strong>identical</strong> regardless of the gas in the cathode tube or the metal used for cathode electrodes.</li>
+<li>This proved that cathode rays consist of identical negatively charged universal subatomic particles — <strong>electrons</strong>.</li>
+<li>The extremely high \(e/m\) value (compared to \(H^+\) ion \(e/m \approx 9.58 \times 10^7\mathrm{C\,kg^{-1}}\)) proved electrons have negligible mass (\(\approx 1/1836\) of hydrogen atom).</li>
+</ul><h2>6 Solved Standard Textbook Numerical Examples</h2><p>Fully worked step-by-step solutions with exact physical constants verified.</p><p>Example 1: Millikan Oil Drop & Quantization
+Millikan</p>
+<p>
+<strong>Problem:</strong> In a Millikan oil drop experiment, an oil drop of density \(875\mathrm{kg\,m^{-3}}\) is held stationary between two horizontal parallel plates separated by \(1.2\,\mathrm{cm}\) when a potential difference of \(2400\,\mathrm{V}\) is applied. If the radius of the drop is \(1.5 \times 10^{-6}\text{ m}\), calculate:
+(a) Mass of the drop (neglecting air buoyancy),
+(b) Charge \(q\) on the drop, and
+(c) Number of excess electrons on the drop.
+</p><p>Solution:</p><p><strong>Given:</strong> Density \(\rho = 875\mathrm{kg\,m^{-3}}\), Distance \(d = 1.2\,\mathrm{cm} = 0.012\text{ m}\), Voltage \(V = 2400\,\mathrm{V}\), Radius \(r = 1.5 \times 10^{-6}\text{ m}\), \(g = 9.8\mathrm{m\,s^{-2}}\), \(e = 1.602 \times 10^{-19}\,\mathrm{C}\).</p><p><strong>(a) Mass of droplet (\(m\)):</strong></p><p>\[m = \frac{4}{3} \pi r^3 \rho = \frac{4}{3} \times 3.1416 \times (1.5 \times 10^{-6})^3 \times 875 = 1.237 \times 10^{-14}\text{ kg}\]</p><p><strong>(b) Charge on droplet (\(q\)):</strong></p><p>For stationary drop: \(q E = m g \implies q \left(\frac{V}{d}\right) = m g \implies q = \frac{m g d}{V}\)</p><p>\[q = \frac{(1.237 \times 10^{-14}) \times 9.8 \times 0.012}{2400} = 6.06 \times 10^{-19}\,\mathrm{C}\]</p><p><strong>(c) Number of excess electrons (\(n\)):</strong></p><p>\[n = \frac{q}{e} = \frac{6.06 \times 10^{-19}}{1.602 \times 10^{-19}} \approx 3.78 \approx 4 \text{ electrons}\]</p><p>Example 2: Electron Deflection in Electric Field
+Electric Field</p>
+<p>
+<strong>Problem:</strong> An electron accelerated through a potential difference of \(1000\,\mathrm{V}\) enters perpendicularly into a uniform electric field of \(2000\text{ V/m}\) between two horizontal plates of length \(4\,\mathrm{cm}\). Find the vertical deflection \(y\) of the electron as it emerges from the plates. (\(e/m = 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}\)).
+</p><p>Solution:</p><p><strong>Given:</strong> \(V_{acc} = 1000\,\mathrm{V}\), \(E = 2000\text{ V/m}\), Plate length \(L = 0.04\text{ m}\), \(e/m = 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}\).</p><p><strong>Step 1: Horizontal velocity \(v_x\):</strong></p><p>\[\frac{1}{2} m v_x^2 = e V_{acc} \implies v_x^2 = \frac{2 e V_{acc}}{m} = 2 \times (1.76 \times 10^{11}) \times 1000 = 3.52 \times 10^{14}\mathrm{m^2\,s^{-2}}\]</p><p>\[v_x = 1.876 \times 10^7\mathrm{m\,s^{-1}}\]</p><p><strong>Step 2: Deflection \(y\):</strong></p><p>\[y = \frac{e E L^2}{2 m v_x^2} = \frac{1}{2} \left(\frac{e}{m}\right) \frac{E L^2}{v_x^2} = \frac{1}{2} \times (1.76 \times 10^{11}) \times \frac{2000 \times (0.04)^2}{3.52 \times 10^{14}}\]</p><p>\[y = 0.0008\text{ m} = 0.8\,\mathrm{mm}\]</p><p>Example 3: Circular Trajectory in Magnetic Field
+Magnetic Field</p>
+<p>
+<strong>Problem:</strong> An electron is accelerated from rest through \(500\,\mathrm{V}\) and then enters a uniform magnetic field \(B = 2.0 \times 10^{-3}\text{ T}\) perpendicular to its direction of motion. Calculate:
+(a) Speed of the electron,
+(b) Radius of the circular path, and
+(c) Time period of revolution. (\(m_e = 9.11 \times 10^{-31}\text{ kg}\), \(e = 1.6 \times 10^{-19}\,\mathrm{C}\)).
+</p><p>Solution:</p><p><strong>(a) Speed \(v\):</strong> \(v = \sqrt{\frac{2 e V}{m}} = \sqrt{\frac{2 \times 1.6 \times 10^{-19} \times 500}{9.11 \times 10^{-31}}} = 1.326 \times 10^7\mathrm{m\,s^{-1}}\).</p><p><strong>(b) Radius \(r\):</strong> \(r = \frac{m v}{e B} = \frac{9.11 \times 10^{-31} \times 1.326 \times 10^7}{1.6 \times 10^{-19} \times 2.0 \times 10^{-3}} = 0.0377\text{ m} = 3.77\,\mathrm{cm}\).</p><p><strong>(c) Period \(T\):</strong> \(T = \frac{2\pi m}{e B} = \frac{2 \times 3.1416 \times 9.11 \times 10^{-31}}{1.6 \times 10^{-19} \times 2.0 \times 10^{-3}} = 1.788 \times 10^{-8}\,\mathrm{s} = 17.88\text{ ns}\).</p><p>Example 4: Velocity Selector & Crossed Fields
+Crossed Fields</p>
+<p>
+<strong>Problem:</strong> In a velocity selector, an electric field \(E = 1.5 \times 10^4\text{ V/m}\) and a magnetic field \(B = 0.03\text{ T}\) act perpendicularly to each other and to the electron beam.
+(a) What velocity will allow electrons to pass through undeflected?
+(b) If the magnetic field is turned off, what will be the initial acceleration of the electron?
+</p><p>Solution:</p><p><strong>(a) Undeflected velocity \(v\):</strong> \(v = \frac{E}{B} = \frac{1.5 \times 10^4}{0.03} = 5.0 \times 10^5\mathrm{m\,s^{-1}}\).</p><p><strong>(b) Acceleration with \(E\) field alone:</strong></p><p>\[a = \frac{e E}{m} = (1.76 \times 10^{11}) \times 1.5 \times 10^4 = 2.64 \times 10^{15}\mathrm{m\,s^{-2}}\]</p><p>Example 5: Thomson Specific Charge Calculation
+Thomson e/m</p>
+<p>
+<strong>Problem:</strong> In a J.J. Thomson \(e/m\) experiment, electric plates are \(5\,\mathrm{cm}\) long (\(L\)) with potential difference \(150\,\mathrm{V}\) across plates separated by \(1.5\,\mathrm{cm}\). When a magnetic field \(B = 1.2 \times 10^{-3}\text{ T}\) is applied simultaneously, the electron beam spot is undeflected. When magnetic field is turned off, the beam spot on screen (located \(20\,\mathrm{cm}\) from plate center) shifts by \(1.18\,\mathrm{cm}\). Calculate specific charge \(e/m\).
+</p><p>Solution:</p><p><strong>Given:</strong> \(L = 0.05\text{ m}\), \(V_p = 150\,\mathrm{V}\), \(d = 0.015\text{ m}\), \(E = V_p/d = 150/0.015 = 10,000\text{ V/m}\), \(B = 1.2 \times 10^{-3}\text{ T}\), \(D = 0.20\text{ m}\), \(y = 0.0118\text{ m}\).</p><p><strong>Formula:</strong> \(\frac{e}{m} = \frac{y E}{B^2 L D}\)</p><p>\[\frac{e}{m} = \frac{0.0118 \times 10000}{(1.2 \times 10^{-3})^2 \times 0.05 \times 0.20} = \frac{118}{1.44 \times 10^{-8} \times 0.01} = 1.763 \times 10^{11}\mathrm{C\,kg^{-1}}\]</p><p>Example 6: Helical Trajectory at Oblique Angle
+Helical Path</p>
+<p>
+<strong>Problem:</strong> An electron with velocity \(v = 4.0 \times 10^6\mathrm{m\,s^{-1}}\) enters a uniform magnetic field \(B = 0.02\text{ T}\) at an angle \(\theta = 30^\circ\) to the field lines. Calculate:
+(a) Radius of helical path, and (b) Pitch of the helix.
+</p><p>Solution:</p><p><strong>Given:</strong> \(v = 4 \times 10^6\mathrm{m\,s^{-1}}\), \(B = 0.02\text{ T}\), \(\theta = 30^\circ\), \(e/m = 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}\).</p><p><strong>Velocity components:</strong> \(v_\perp = v \sin 30^\circ = 2.0 \times 10^6\mathrm{m\,s^{-1}}\), \(v_\parallel = v \cos 30^\circ = 3.464 \times 10^6\mathrm{m\,s^{-1}}\).</p><p><strong>(a) Radius \(r\):</strong> \(r = \frac{m v_\perp}{e B} = \frac{2.0 \times 10^6}{(1.76 \times 10^{11}) \times 0.02} = 5.68 \times 10^{-4}\text{ m} = 0.568\,\mathrm{mm}\).</p><p><strong>(b) Period \(T\):</strong> \(T = \frac{2\pi m}{e B} = \frac{2\times 3.1416}{1.76 \times 10^{11} \times 0.02} = 1.785 \times 10^{-9}\,\mathrm{s}\).</p><p><strong>(c) Pitch \(P\):</strong> \(P = v_\parallel \times T = (3.464 \times 10^6) \times (1.785 \times 10^{-9}) = 6.18 \times 10^{-3}\text{ m} = 6.18\,\mathrm{mm}\).</p><p><i></i> Self-Study Interactive Tools</p>
+<h2>NEB Grade XII Question Bank</h2><p>High-frequency Board Exam conceptual short questions, long derivations, and unsolved practice numericals.</p><h3><i></i> Conceptual Short Answer Questions</h3><h4>Q1. Why are oil drops preferred over water drops in Millikan’s experiment?</h4><p>Model Answer <i></i></p>
+<p><strong>Model Answer:</strong> Water drops evaporate rapidly during observation, causing their mass, volume, and density to continually change, which renders Stokes' law and terminal velocity calculations inaccurate. Oil (like clock oil or paraffin oil) has an extremely low vapor pressure, ensuring constant drop mass and radius throughout the experiment.</p>
+<h4>Q2. An electron moving horizontally enters a uniform magnetic field directed vertically downwards. What is the shape of its trajectory?</h4><p>Model Answer <i></i></p>
+<p><strong>Model Answer:</strong> The trajectory is a horizontal <strong>circle</strong>. Since velocity \(\mathbf{v}\) is perpendicular to magnetic field \(\mathbf{B}\) (\(\theta = 90^\circ\)), the magnetic Lorentz force \(F = e v B\) acts perpendicular to motion at all times, providing the required centripetal force without changing the speed.</p>
+<h4>Q3. Does the specific charge (\(e/m\)) of an electron depend on its velocity at relativistic speeds?</h4><p>Model Answer <i></i></p>
+<p><strong>Model Answer:</strong> Yes. According to Einstein's Theory of Relativity, mass increases with velocity \(m = \frac{m_0}{\sqrt{1 - v^2/c^2}}\). As speed \(v\) approaches speed of light \(c\), relativistic mass \(m\) increases, causing the specific charge ratio \(e/m\) to <strong>decrease</strong>.</p>
+<h3><i></i> NEB Board Exam Long Answer Derivations [5 Marks]</h3><p>1. Millikan's Experiment Derivation:</p>
+<p>Describe Millikan's oil drop experiment. Derive mathematical expressions for droplet radius \(r\) and charge \(q\) under downward free fall and upward electric field motion. Explain charge quantization.</p><p>2. Thomson Specific Charge (\(e/m\)):</p>
+<p>Describe J.J. Thomson's experiment with a neat labeled diagram to determine \(e/m\) of an electron. Explain velocity selection using crossed fields and derive the deflection formula.</p><h3><i></i> Unsolved Numerical Practice Set (With Answers & Hints)</h3><p>P1. An oil drop carrying 10 excess electrons is held stationary between plates separated by \(1\,\mathrm{cm}\) at a potential difference of \(1200\,\mathrm{V}\). Find the radius of the oil droplet. (\(\rho_{oil} = 900\mathrm{kg\,m^{-3}}, g = 9.8\mathrm{m\,s^{-2}}\)).</p><p><strong>Ans:</strong> \(r = 1.98 \times 10^{-6}\text{ m} = 1.98\ \mu\text{m}\). [Hint: \(q E = m g \implies n e (V/d) = \frac{4}{3}\pi r^3 \rho g\)].</p><p>P2. An electron beam passes undeflected through crossed fields \(E = 3.2 \times 10^4\text{ V/m}\) and \(B = 2.0 \times 10^{-3}\text{ T}\). If electric field is removed, calculate the radius of the circular path traversed by the electron in the magnetic field.</p><p><strong>Ans:</strong> \(r = 0.0455\text{ m} = 4.55\,\mathrm{cm}\). [Hint: Find \(v = E/B = 1.6 \times 10^7\mathrm{m\,s^{-1}}\), then \(r = mv / eB\)].</p><p>P3. An electron with kinetic energy \(2.0\text{ keV}\) enters a magnetic field \(B = 0.1\text{ T}\) at an angle of \(45^\circ\) to field lines. Calculate the helical path radius and pitch.</p><p><strong>Ans:</strong> Radius \(r = 1.07\,\mathrm{mm}\), Pitch \(P = 6.72\,\mathrm{mm}\). [Hint: \(\mathrm{KE} = 2000 \times 1.6 \times 10^{-19}\text{ J}\), \(v_\perp = v \sin 45^\circ\), \(v_\parallel = v \cos 45^\circ\)].</p><h2>Standard Physical Constants Reference (NEB Syllabus)</h2><table>
+<thead>
+<tr>
+<th>Physical Quantity</th>
+<th>Symbol</th>
+<th>Standard SI Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elementary Charge</td>
+<td>\(e\)</td>
+<td>\(1.60217663 \times 10^{-19}\,\mathrm{C} \approx 1.602 \times 10^{-19}\,\mathrm{C}\)</td>
+</tr>
+<tr>
+<td>Electron Rest Mass</td>
+<td>\(m_e\)</td>
+<td>\(9.109383 \times 10^{-31}\text{ kg} \approx 9.11 \times 10^{-31}\text{ kg}\)</td>
+</tr>
+<tr>
+<td>Specific Charge of Electron</td>
+<td>\(e/m_e\)</td>
+<td>\(1.75882 \times 10^{11}\mathrm{C\,kg^{-1}} \approx 1.76 \times 10^{11}\mathrm{C\,kg^{-1}}\)</td>
+</tr>
+<tr>
+<td>Dynamic Viscosity of Air (\(20^\circ\text{C}\))</td>
+<td>\(\eta\)</td>
+<td>\(1.81 \times 10^{-5}\mathrm{N\,s\,m^{-2}} \text{ (or kg/m}\cdot\text{s)}\)</td>
+</tr>
+<tr>
+<td>Acceleration due to Gravity</td>
+<td>\(g\)</td>
+<td>\(9.80665\mathrm{m\,s^{-2}} \approx 9.8\mathrm{m\,s^{-2}} \text{ or } 9.81\mathrm{m\,s^{-2}}\)</td>
+</tr>
+</tbody>
+</table>

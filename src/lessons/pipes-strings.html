@@ -1,1414 +1,415 @@
 ---
-title: waves in pipes and strings
+title: Waves in Pipes and Strings
 grade: XII
 chapters: [4]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade XII Physics - Unit 8: Waves in Pipes and Strings</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- KaTeX for LaTeX Math Rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1e293b;
-            background-color: #f8fafc;
-        }
-
-        .textbook-font {
-            font-family: 'Merriweather', serif;
-        }
-
-        .formula-card {
-            background: #f1f5f9;
-            border-left: 4px solid #0284c7;
-        }
-
-        .derivation-step {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-bottom: 0.75rem;
-        }
-
-        /* Vector Diagram Styles */
-        .diagram-box {
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 0.5rem;
-            padding: 1rem;
-        }
-
-        /* CSS Print Formatting for Crisp A4 Printing */
-        @media print {
-            body {
-                background: #ffffff !important;
-                color: #000000 !important;
-                font-size: 11pt;
-            }
-            .no-print, .interactive-controls, nav, button, input, select {
-                display: none !important;
-            }
-            .page-break {
-                page-break-before: always;
-            }
-            .diagram-box {
-                border: 1px solid #000 !important;
-                box-shadow: none !important;
-            }
-            .border-slate-300, .border-sky-200 {
-                border-color: #000 !important;
-            }
-            .bg-slate-50, .bg-sky-50, .bg-amber-50, .bg-indigo-50 {
-                background-color: #fff !important;
-            }
-            .shadow-lg, .shadow-md, .shadow-sm {
-                box-shadow: none !important;
-            }
-        }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-200">
-
-    <!-- Top Header -->
-    <header class="bg-slate-900 text-white border-b-4 border-sky-500 sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div>
-                <span class="bg-sky-600 text-xs font-semibold px-2.5 py-1 rounded text-white tracking-wide uppercase">NEB Grade XII Physics</span>
-                <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-1">Unit 8: Waves in Pipes and Strings</h1>
-                <p class="text-xs md:text-sm text-slate-300 font-light">Complete Textbook Reference, Mathematical Derivations & Interactive Lab</p>
-            </div>
-            <div class="no-print flex items-center gap-2 text-xs">
-                <a href="#theory" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 rounded text-slate-200 font-medium transition">Theory & Derivations</a>
-                <a href="#lab" class="px-3 py-1.5 bg-sky-700 hover:bg-sky-600 rounded text-white font-medium transition">Interactive Lab</a>
-                <a href="#numericals" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 rounded text-slate-200 font-medium transition">Solved Board Problems</a>
-                <a href="#quiz" class="px-3 py-1.5 bg-indigo-700 hover:bg-indigo-600 rounded text-white font-medium transition">Self-Assessment</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
-
-        <!-- Syllabus Checklist Header -->
-        <section class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-            <h2 class="text-xl font-bold text-slate-900 mb-3 border-b pb-2 flex items-center gap-2">
-                <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                NEB Curriculum Objectives Checklist (Unit 8)
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-slate-700">
-                <div class="flex items-start gap-2"><span class="text-sky-600 font-bold">8.1</span> Stationary waves in open & closed pipes</div>
-                <div class="flex items-start gap-2"><span class="text-sky-600 font-bold">8.2</span> Harmonics vs Overtones definition & comparison</div>
-                <div class="flex items-start gap-2"><span class="text-sky-600 font-bold">8.3</span> Modes & frequency derivations in organ pipes</div>
-                <div class="flex items-start gap-2"><span class="text-sky-600 font-bold">8.4</span> End correction ($e = 0.6r$) & Resonance Tube method</div>
-                <div class="flex items-start gap-2"><span class="text-sky-600 font-bold">8.5</span> Wave velocity along stretched string ($v = \sqrt{T/\mu}$)</div>
-                <div class="flex items-start gap-2"><span class="text-sky-600 font-bold">8.6</span> Laws of transverse vibration & Sonometer experiment</div>
-            </div>
-        </section>
-
-        <!-- SECTION 8.1 -->
-        <section id="theory" class="space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Section 8.1</span>
-                <h2 class="text-2xl font-bold text-slate-900">Formation of Stationary Waves in Pipes</h2>
-            </div>
-            
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 text-slate-700 leading-relaxed space-y-4">
-                <p>
-                    When a sound wave (longitudinal wave) travels through an air column enclosed inside a pipe, it undergoes reflection at the boundary end. The incident sound wave and the reflected sound wave—having the same amplitude, frequency, and speed, traveling in opposite directions along the same line—superimpose according to the <strong>Principle of Superposition</strong>. This superposition creates a <strong>longitudinal stationary (standing) wave</strong> inside the pipe.
-                </p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
-                    <div class="bg-sky-50 rounded-lg p-4 border border-sky-200">
-                        <h3 class="font-bold text-sky-900 text-base mb-2">1. Reflection at a Closed Boundary</h3>
-                        <p class="text-xs md:text-sm text-sky-950">
-                            At a rigid or closed end, air molecules are physically restricted from moving back and forth. Therefore, a <strong>Displacement Node</strong> (zero particle displacement) and a <strong>Pressure Antinode</strong> (maximum pressure variation) are formed at the closed boundary. Phase changes by $\pi$ radians ($180^\circ$).
-                        </p>
-                    </div>
-                    <div class="bg-indigo-50 rounded-lg p-4 border border-indigo-200">
-                        <h3 class="font-bold text-indigo-900 text-base mb-2">2. Reflection at an Open Boundary</h3>
-                        <p class="text-xs md:text-sm text-indigo-950">
-                            At an open end, air molecules are free to vibrate with maximum amplitude into the atmosphere. Therefore, a <strong>Displacement Antinode</strong> (maximum particle displacement) and a <strong>Pressure Node</strong> (zero pressure variation) are formed near the open boundary.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 8.2 -->
-        <section class="space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Section 8.2</span>
-                <h2 class="text-2xl font-bold text-slate-900">Harmonics and Overtones</h2>
-            </div>
-
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="formula-card p-4 rounded-r-lg">
-                        <h3 class="font-bold text-slate-900 text-lg mb-1">Fundamental Frequency / Fundamental Tone</h3>
-                        <p class="text-sm text-slate-700">
-                            The lowest possible frequency produced by a vibrating body or air column is called the <strong>fundamental frequency ($f_1$)</strong> or fundamental tone.
-                        </p>
-                    </div>
-                    <div class="formula-card p-4 rounded-r-lg border-indigo-500">
-                        <h3 class="font-bold text-slate-900 text-lg mb-1">Overtones</h3>
-                        <p class="text-sm text-slate-700">
-                            All frequencies higher than the fundamental frequency actually emitted by the vibrating system are called <strong>overtones</strong> ($f_2, f_3, f_4, \dots$).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
-                    <h3 class="font-bold text-slate-900 mb-2">Harmonics Definition</h3>
-                    <p class="text-sm text-slate-700">
-                        <strong>Harmonics</strong> are integral multiples of the fundamental frequency ($1f_1, 2f_1, 3f_1, 4f_1, \dots$).
-                        <br>
-                        • $1f_1$ is the 1st harmonic (Fundamental frequency).<br>
-                        • $2f_1$ is the 2nd harmonic.<br>
-                        • $3f_1$ is the 3rd harmonic, and so on.
-                    </p>
-                </div>
-
-                <!-- Comparison Table -->
-                <div>
-                    <h3 class="font-bold text-slate-900 text-base mb-3">Distinction Matrix: Harmonics vs Overtones</h3>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left text-sm border-collapse border border-slate-300">
-                            <thead>
-                                <tr class="bg-slate-200 text-slate-800">
-                                    <th class="border border-slate-300 p-3">Parameter / Aspect</th>
-                                    <th class="border border-slate-300 p-3">Harmonics</th>
-                                    <th class="border border-slate-300 p-3">Overtones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="border border-slate-300 p-3 font-semibold">Definition</td>
-                                    <td class="border border-slate-300 p-3">Integral multiples of fundamental frequency ($n f_1$).</td>
-                                    <td class="border border-slate-300 p-3">Higher frequencies produced above fundamental tone.</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="border border-slate-300 p-3 font-semibold">Inclusion of Fundamental</td>
-                                    <td class="border border-slate-300 p-3">Includes the fundamental frequency ($1st \text{ Harmonic} = f_1$).</td>
-                                    <td class="border border-slate-300 p-3">Excludes fundamental frequency ($1st \text{ Overtone} > f_1$).</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="border border-slate-300 p-3 font-semibold">Presence in Instruments</td>
-                                    <td class="border border-slate-300 p-3">May or may not be physically present in a system (e.g., closed pipe lacks even harmonics).</td>
-                                    <td class="border border-slate-300 p-3">Always represents actual physically present higher frequencies.</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="border border-slate-300 p-3 font-semibold">Numbering Sequence</td>
-                                    <td class="border border-slate-300 p-3">1st, 2nd, 3rd, 4th Harmonic... ($f_1, 2f_1, 3f_1, 4f_1 \dots$)</td>
-                                    <td class="border border-slate-300 p-3">1st, 2nd, 3rd Overtone... (1st present, 2nd present, etc.)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 8.3 -->
-        <section class="space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Section 8.3</span>
-                <h2 class="text-2xl font-bold text-slate-900">Harmonics and Overtones in Closed and Open Organ Pipes</h2>
-            </div>
-
-            <!-- Subsection A: Closed Organ Pipe -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-6">
-                <div class="border-b pb-3">
-                    <h3 class="text-xl font-bold text-slate-900">A. Closed Organ Pipe</h3>
-                    <p class="text-sm text-slate-600">A pipe open at one end and closed at the other end of length $L$.</p>
-                </div>
-
-                <!-- SVG Vector Diagram: Closed Organ Pipe Modes -->
-                <div class="diagram-box flex flex-col items-center">
-                    <h4 class="font-bold text-sm text-slate-800 mb-3 uppercase tracking-wide">Vibration Modes in Closed Organ Pipe</h4>
-                    <svg viewBox="0 0 750 280" class="w-full max-w-3xl h-auto font-sans">
-                        <!-- Mode 1: Fundamental -->
-                        <g transform="translate(30, 20)">
-                            <!-- Outer Pipe -->
-                            <rect x="30" y="20" width="120" height="180" fill="none" stroke="#334155" stroke-width="3"/>
-                            <line x1="30" y1="200" x2="150" y2="200" stroke="#0f172a" stroke-width="6"/> <!-- Closed Base -->
-                            <!-- Wave Envelope -->
-                            <path d="M 30,20 Q 90,110 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
-                            <path d="M 150,20 Q 90,110 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                            <!-- Node/Antinode -->
-                            <circle cx="90" cy="200" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="20" r="4" fill="#10b981"/>
-                            <text x="98" y="204" font-size="12" fill="#ef4444" font-weight="bold">N</text>
-                            <text x="98" y="24" font-size="12" fill="#10b981" font-weight="bold">A</text>
-                            <!-- Title -->
-                            <text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(a) Fundamental Mode</text>
-                            <text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = λ₁/4 ⇒ f₁ = v/4L</text>
-                        </g>
-
-                        <!-- Mode 2: First Overtone -->
-                        <g transform="translate(270, 20)">
-                            <rect x="30" y="20" width="120" height="180" fill="none" stroke="#334155" stroke-width="3"/>
-                            <line x1="30" y1="200" x2="150" y2="200" stroke="#0f172a" stroke-width="6"/>
-                            <!-- Wave Envelope -->
-                            <path d="M 30,20 Q 150,80 90,140 T 150,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                            <path d="M 150,20 Q 30,80 90,140 T 30,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
-                            <!-- Nodes & Antinodes -->
-                            <circle cx="90" cy="200" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="140" r="4" fill="#10b981"/>
-                            <circle cx="90" cy="80" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="20" r="4" fill="#10b981"/>
-                            <text x="98" y="204" font-size="11" fill="#ef4444">N₁</text>
-                            <text x="98" y="144" font-size="11" fill="#10b981">A₁</text>
-                            <text x="98" y="84" font-size="11" fill="#ef4444">N₂</text>
-                            <text x="98" y="24" font-size="11" fill="#10b981">A₂</text>
-                            <text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(b) First Overtone (3rd Harm.)</text>
-                            <text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = 3λ₂/4 ⇒ f₂ = 3f₁</text>
-                        </g>
-
-                        <!-- Mode 3: Second Overtone -->
-                        <g transform="translate(510, 20)">
-                            <rect x="30" y="20" width="120" height="180" fill="none" stroke="#334155" stroke-width="3"/>
-                            <line x1="30" y1="200" x2="150" y2="200" stroke="#0f172a" stroke-width="6"/>
-                            <!-- Wave Envelope -->
-                            <path d="M 30,20 C 150,56 150,92 90,128 C 30,164 30,190 90,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                            <path d="M 150,20 C 30,56 30,92 90,128 C 150,164 150,190 90,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
-                            <!-- Nodes & Antinodes -->
-                            <circle cx="90" cy="200" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="160" r="4" fill="#10b981"/>
-                            <circle cx="90" cy="120" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="80" r="4" fill="#10b981"/>
-                            <circle cx="90" cy="48" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="20" r="4" fill="#10b981"/>
-                            <text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(c) Second Overtone (5th Harm.)</text>
-                            <text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = 5λ₃/4 ⇒ f₃ = 5f₁</text>
-                        </g>
-                    </svg>
-                </div>
-
-                <!-- Mathematical Derivation Steps -->
-                <div class="space-y-4 text-sm">
-                    <h4 class="font-bold text-slate-900 text-base">Mathematical Derivations for Closed Pipe:</h4>
-                    
-                    <div class="derivation-step">
-                        <h5 class="font-bold text-sky-800">1. Mode 1: Fundamental Mode (1st Harmonic)</h5>
-                        <p class="mt-1">In the simplest mode, one Node (N) forms at the closed end and one Antinode (A) forms at the open mouth.</p>
-                        <p class="mt-2 font-mono text-slate-800">
-                            Length of pipe, \( L = \frac{\lambda_1}{4} \implies \lambda_1 = 4L \)
-                        </p>
-                        <p class="mt-1 font-mono text-sky-900 font-bold">
-                            Fundamental Frequency, \( f_1 = \frac{v}{\lambda_1} = \frac{v}{4L} \) \quad ---(Equation 1)
-                        </p>
-                    </div>
-
-                    <div class="derivation-step">
-                        <h5 class="font-bold text-sky-800">2. Mode 2: First Overtone (3rd Harmonic)</h5>
-                        <p class="mt-1">In this mode, two Nodes and two Antinodes are formed inside the pipe.</p>
-                        <p class="mt-2 font-mono text-slate-800">
-                            Length of pipe, \( L = \frac{3\lambda_2}{4} \implies \lambda_2 = \frac{4L}{3} \)
-                        </p>
-                        <p class="mt-1 font-mono text-sky-900 font-bold">
-                            Frequency, \( f_2 = \frac{v}{\lambda_2} = \frac{3v}{4L} = 3 f_1 \) \quad ---(Equation 2)
-                        </p>
-                        <p class="text-xs text-slate-600 mt-1">Thus, the 1st overtone is equal to the 3rd harmonic.</p>
-                    </div>
-
-                    <div class="derivation-step">
-                        <h5 class="font-bold text-sky-800">3. Mode 3: Second Overtone (5th Harmonic)</h5>
-                        <p class="mt-1">In this mode, three Nodes and three Antinodes are formed.</p>
-                        <p class="mt-2 font-mono text-slate-800">
-                            Length of pipe, \( L = \frac{5\lambda_3}{4} \implies \lambda_3 = \frac{4L}{5} \)
-                        </p>
-                        <p class="mt-1 font-mono text-sky-900 font-bold">
-                            Frequency, \( f_3 = \frac{v}{\lambda_3} = \frac{5v}{4L} = 5 f_1 \) \quad ---(Equation 3)
-                        </p>
-                    </div>
-
-                    <div class="bg-amber-50 border border-amber-300 rounded-lg p-4 text-amber-950 font-semibold">
-                        <p>Conclusion for Closed Organ Pipe:</p>
-                        <p class="text-sm font-normal mt-1">
-                            Frequency ratio: \( f_1 : f_2 : f_3 : \dots = 1 : 3 : 5 : \dots \)
-                        </p>
-                        <p class="text-xs text-slate-700 mt-1">
-                            <strong>Key Result:</strong> Only <em>ODD harmonics</em> are present in a closed organ pipe. Even harmonics ($2f_1, 4f_1, \dots$) are absent.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Subsection B: Open Organ Pipe -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-6">
-                <div class="border-b pb-3">
-                    <h3 class="text-xl font-bold text-slate-900">B. Open Organ Pipe</h3>
-                    <p class="text-sm text-slate-600">A pipe open at both ends of length $L$.</p>
-                </div>
-
-                <!-- SVG Vector Diagram: Open Organ Pipe Modes -->
-                <div class="diagram-box flex flex-col items-center">
-                    <h4 class="font-bold text-sm text-slate-800 mb-3 uppercase tracking-wide">Vibration Modes in Open Organ Pipe</h4>
-                    <svg viewBox="0 0 750 280" class="w-full max-w-3xl h-auto font-sans">
-                        <!-- Mode 1: Fundamental -->
-                        <g transform="translate(30, 20)">
-                            <!-- Pipe Body -->
-                            <line x1="30" y1="20" x2="30" y2="200" stroke="#334155" stroke-width="3"/>
-                            <line x1="150" y1="20" x2="150" y2="200" stroke="#334155" stroke-width="3"/>
-                            <!-- Wave Envelope -->
-                            <path d="M 30,20 Q 90,110 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                            <path d="M 150,20 Q 90,110 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
-                            <!-- Nodes & Antinodes -->
-                            <circle cx="90" cy="110" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="20" r="4" fill="#10b981"/>
-                            <circle cx="90" cy="200" r="4" fill="#10b981"/>
-                            <text x="98" y="114" font-size="11" fill="#ef4444">N</text>
-                            <text x="98" y="24" font-size="11" fill="#10b981">A₁</text>
-                            <text x="98" y="204" font-size="11" fill="#10b981">A₂</text>
-                            <text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(a) Fundamental Mode</text>
-                            <text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = λ₁/2 ⇒ f₁ = v/2L</text>
-                        </g>
-
-                        <!-- Mode 2: First Overtone -->
-                        <g transform="translate(270, 20)">
-                            <line x1="30" y1="20" x2="30" y2="200" stroke="#334155" stroke-width="3"/>
-                            <line x1="150" y1="20" x2="150" y2="200" stroke="#334155" stroke-width="3"/>
-                            <!-- Wave Envelope -->
-                            <path d="M 30,20 Q 150,65 90,110 T 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                            <path d="M 150,20 Q 30,65 90,110 T 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
-                            <!-- Nodes & Antinodes -->
-                            <circle cx="90" cy="20" r="4" fill="#10b981"/>
-                            <circle cx="90" cy="65" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="110" r="4" fill="#10b981"/>
-                            <circle cx="90" cy="155" r="4" fill="#ef4444"/>
-                            <circle cx="90" cy="200" r="4" fill="#10b981"/>
-                            <text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(b) First Overtone (2nd Harm.)</text>
-                            <text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = λ₂ ⇒ f₂ = 2f₁</text>
-                        </g>
-
-                        <!-- Mode 3: Second Overtone -->
-                        <g transform="translate(510, 20)">
-                            <line x1="30" y1="20" x2="30" y2="200" stroke="#334155" stroke-width="3"/>
-                            <line x1="150" y1="20" x2="150" y2="200" stroke="#334155" stroke-width="3"/>
-                            <!-- Wave Envelope -->
-                            <path d="M 30,20 Q 150,50 90,80 Q 30,110 90,140 Q 150,170 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                            <path d="M 150,20 Q 30,50 90,80 Q 150,110 90,140 Q 30,170 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
-                            <!-- Text Title -->
-                            <text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(c) Second Overtone (3rd Harm.)</text>
-                            <text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = 3λ₃/2 ⇒ f₃ = 3f₁</text>
-                        </g>
-                    </svg>
-                </div>
-
-                <!-- Mathematical Derivation Steps -->
-                <div class="space-y-4 text-sm">
-                    <h4 class="font-bold text-slate-900 text-base">Mathematical Derivations for Open Pipe:</h4>
-                    
-                    <div class="derivation-step">
-                        <h5 class="font-bold text-sky-800">1. Mode 1: Fundamental Mode (1st Harmonic)</h5>
-                        <p class="mt-1">Antinodes form at both open ends with one Node at the center.</p>
-                        <p class="mt-2 font-mono text-slate-800">
-                            Length of pipe, \( L = \frac{\lambda_1}{2} \implies \lambda_1 = 2L \)
-                        </p>
-                        <p class="mt-1 font-mono text-sky-900 font-bold">
-                            Fundamental Frequency, \( f_1' = \frac{v}{\lambda_1} = \frac{v}{2L} \) \quad ---(Equation 4)
-                        </p>
-                    </div>
-
-                    <div class="derivation-step">
-                        <h5 class="font-bold text-sky-800">2. Mode 2: First Overtone (2nd Harmonic)</h5>
-                        <p class="mt-1">Three antinodes and two nodes are formed.</p>
-                        <p class="mt-2 font-mono text-slate-800">
-                            Length of pipe, \( L = \lambda_2 \implies \lambda_2 = L \)
-                        </p>
-                        <p class="mt-1 font-mono text-sky-900 font-bold">
-                            Frequency, \( f_2' = \frac{v}{\lambda_2} = \frac{v}{L} = 2 \left(\frac{v}{2L}\right) = 2 f_1' \) \quad ---(Equation 5)
-                        </p>
-                    </div>
-
-                    <div class="derivation-step">
-                        <h5 class="font-bold text-sky-800">3. Mode 3: Second Overtone (3rd Harmonic)</h5>
-                        <p class="mt-1">Four antinodes and three nodes are formed.</p>
-                        <p class="mt-2 font-mono text-slate-800">
-                            Length of pipe, \( L = \frac{3\lambda_3}{2} \implies \lambda_3 = \frac{2L}{3} \)
-                        </p>
-                        <p class="mt-1 font-mono text-sky-900 font-bold">
-                            Frequency, \( f_3' = \frac{v}{\lambda_3} = \frac{3v}{2L} = 3 f_1' \) \quad ---(Equation 6)
-                        </p>
-                    </div>
-
-                    <div class="bg-emerald-50 border border-emerald-300 rounded-lg p-4 text-emerald-950 font-semibold">
-                        <p>Conclusion for Open Organ Pipe:</p>
-                        <p class="text-sm font-normal mt-1">
-                            Frequency ratio: \( f_1' : f_2' : f_3' : \dots = 1 : 2 : 3 : 4 : \dots \)
-                        </p>
-                        <p class="text-xs text-slate-700 mt-1">
-                            <strong>Key Result:</strong> BOTH <em>EVEN AND ODD harmonics</em> are present in an open organ pipe. Therefore, sound from an open organ pipe is richer and more musical than a closed organ pipe of the same length.
-                        </p>
-                        <p class="text-xs text-slate-800 mt-2 font-bold">
-                            Note: For equal physical lengths, \( f_{open} = 2 \times f_{closed} \).
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 8.4 -->
-        <section class="space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Section 8.4</span>
-                <h2 class="text-2xl font-bold text-slate-900">End Correction in Pipes and Resonance Tube Experiment</h2>
-            </div>
-
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-6">
-                <!-- Concept & Physical Cause -->
-                <div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">1. Concept and Physical Cause of End Correction</h3>
-                    <p class="text-sm text-slate-700 leading-relaxed">
-                        In actual practice, air particles at the open boundary of an organ pipe are not completely confined laterally. Due to inertia, the air particles outside the brim of the pipe also participate in vibration. Consequently, the displacement antinode is not formed exactly at the open end plane, but at a small distance <strong>\( e \)</strong> outside the boundary brim.
-                    </p>
-                    <p class="text-sm text-slate-700 mt-2">
-                        This additional distance \( e \) added to the physical length of the pipe is called <strong>End Correction</strong>.
-                    </p>
-                </div>
-
-                <!-- Lord Rayleigh Formula & Diagrams -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-3">
-                        <h4 class="font-bold text-slate-900 text-sm">Lord Rayleigh's Formula</h4>
-                        <p class="text-sm text-slate-700">
-                            Lord Rayleigh demonstrated theoretically and experimentally that end correction depends directly on the internal radius \( r \) of the pipe:
-                        </p>
-                        <div class="bg-white p-3 rounded border text-center font-bold text-sky-900">
-                            \( e \approx 0.6 r \)
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc pl-4">
-                            <li>For a <strong>Closed Pipe</strong> (1 open end): Effective length \( L_{eff} = L + e = L + 0.6r \)</li>
-                            <li>For an <strong>Open Pipe</strong> (2 open ends): Effective length \( L_{eff} = L + 2e = L + 1.2r \)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Diagram for End Correction -->
-                    <div class="diagram-box flex flex-col items-center">
-                        <h4 class="font-bold text-xs text-slate-700 mb-2">End Correction Diagram</h4>
-                        <svg viewBox="0 0 260 200" class="w-full max-w-xs h-auto font-sans">
-                            <!-- Pipe brim -->
-                            <rect x="70" y="50" width="120" height="130" fill="none" stroke="#334155" stroke-width="3"/>
-                            <line x1="70" y1="180" x2="190" y2="180" stroke="#0f172a" stroke-width="5"/>
-                            <!-- Extended Antinode line -->
-                            <line x1="40" y1="20" x2="220" y2="20" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3"/>
-                            <line x1="40" y1="50" x2="220" y2="50" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
-                            <!-- Wave Envelope -->
-                            <path d="M 70,20 Q 130,100 190,180" fill="none" stroke="#0284c7" stroke-width="2"/>
-                            <path d="M 190,20 Q 130,100 70,180" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4,4"/>
-                            <!-- Labels -->
-                            <circle cx="130" cy="20" r="3.5" fill="#10b981"/>
-                            <text x="138" y="24" font-size="11" fill="#10b981" font-weight="bold">Antinode (A)</text>
-                            <text x="195" y="40" font-size="11" fill="#ef4444" font-weight="bold">e = 0.6r</text>
-                            <!-- Dimension arrows -->
-                            <line x1="205" y1="20" x2="205" y2="50" stroke="#ef4444" stroke-width="1"/>
-                            <line x1="210" y1="50" x2="210" y2="180" stroke="#334155" stroke-width="1"/>
-                            <text x="215" y="120" font-size="11" fill="#334155" font-weight="bold">L</text>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Corrected Equations -->
-                <div class="bg-sky-50 p-4 rounded-lg border border-sky-200 text-sm space-y-2">
-                    <h4 class="font-bold text-sky-900">Corrected Frequency Formulas</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="bg-white p-3 rounded border border-sky-200">
-                            <strong>Closed Pipe Fundamental:</strong>
-                            <p class="font-mono text-sky-900 mt-1">\( f = \frac{v}{4(L + e)} = \frac{v}{4(L + 0.6r)} \)</p>
-                        </div>
-                        <div class="bg-white p-3 rounded border border-sky-200">
-                            <strong>Open Pipe Fundamental:</strong>
-                            <p class="font-mono text-sky-900 mt-1">\( f = \frac{v}{2(L + 2e)} = \frac{v}{2(L + 1.2r)} \)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Resonance Tube Experiment -->
-                <div class="border-t pt-6 space-y-4">
-                    <h3 class="text-lg font-bold text-slate-900">2. Determination of Speed of Sound using Resonance Tube Apparatus</h3>
-                    <p class="text-sm text-slate-700">
-                        The <strong>Resonance Tube</strong> is an experimental setup consisting of a vertical glass tube open at the top and connected to a water reservoir. By raising or lowering the water reservoir, the length of the air column inside the tube (which acts as a closed organ pipe) is adjusted.
-                    </p>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-                        <!-- Resonance Tube SVG -->
-                        <div class="diagram-box flex flex-col items-center lg:col-span-1">
-                            <h4 class="font-bold text-xs text-slate-700 mb-2">Resonance Tube Setup</h4>
-                            <svg viewBox="0 0 220 280" class="w-full max-w-xs h-auto font-sans">
-                                <!-- Tuning Fork -->
-                                <path d="M 90,15 L 90,30 M 110,15 L 110,30 M 90,30 Q 100,38 110,30 M 100,35 L 100,45" stroke="#0284c7" stroke-width="3" fill="none"/>
-                                <!-- Sound Waves -->
-                                <path d="M 80,10 Q 100,2 120,10" fill="none" stroke="#0284c7" stroke-width="1.5"/>
-                                <!-- Glass Tube -->
-                                <rect x="75" y="50" width="50" height="200" fill="none" stroke="#334155" stroke-width="2.5"/>
-                                <!-- Water Column -->
-                                <rect x="76.5" y="160" width="47" height="89.5" fill="#bae6fd" opacity="0.8"/>
-                                <line x1="76.5" y1="160" x2="123.5" y2="160" stroke="#0284c7" stroke-width="2"/>
-                                <!-- Standing wave pattern in air column -->
-                                <path d="M 75,50 Q 100,105 125,160" fill="none" stroke="#ef4444" stroke-width="2"/>
-                                <path d="M 125,50 Q 100,105 75,160" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3"/>
-                                <!-- Labels -->
-                                <text x="135" y="105" font-size="11" fill="#0284c7" font-weight="bold">Air (l₁)</text>
-                                <text x="135" y="195" font-size="11" fill="#0369a1">Water</text>
-                                <line x1="50" y1="35" x2="50" y2="50" stroke="#ef4444" stroke-width="1"/>
-                                <text x="35" y="45" font-size="10" fill="#ef4444">e</text>
-                            </svg>
-                        </div>
-
-                        <!-- Derivation & Equations -->
-                        <div class="lg:col-span-2 space-y-3 text-sm">
-                            <p class="font-bold text-slate-800">Experimental Step-by-Step Derivation:</p>
-                            
-                            <p>Let a tuning fork of known frequency \( f \) be vibrated over the mouth of the tube.</p>
-
-                            <div class="bg-slate-50 p-3 rounded border border-slate-200">
-                                <strong>1st Resonance Position (\( l_1 \)):</strong>
-                                <p class="font-mono text-slate-800 mt-1">\( l_1 + e = \frac{\lambda}{4} \) \quad ---(1)</p>
-                            </div>
-
-                            <div class="bg-slate-50 p-3 rounded border border-slate-200">
-                                <strong>2nd Resonance Position (\( l_2 \)):</strong>
-                                <p class="font-mono text-slate-800 mt-1">\( l_2 + e = \frac{3\lambda}{4} \) \quad ---(2)</p>
-                            </div>
-
-                            <p>Subtracting Equation (1) from Equation (2):</p>
-                            <div class="bg-sky-50 p-3 rounded border border-sky-300 font-mono font-bold text-sky-900">
-                                \( (l_2 + e) - (l_1 + e) = \frac{3\lambda}{4} - \frac{\lambda}{4} \implies l_2 - l_1 = \frac{\lambda}{2} \implies \lambda = 2(l_2 - l_1) \)
-                            </div>
-
-                            <p>Therefore, the velocity of sound in air at room temperature \( t\,^\circ\text{C} \) is:</p>
-                            <div class="bg-sky-600 text-white p-3 rounded font-mono font-bold text-center text-base">
-                                \( v = f \lambda = 2 f (l_2 - l_1) \)
-                            </div>
-
-                            <p class="text-xs text-slate-600 mt-2">
-                                <strong>Determining End Correction from Experiment:</strong><br>
-                                Multiplying equation (1) by 3 and subtracting equation (2):
-                                <br>
-                                \( 3(l_1 + e) - (l_2 + e) = \frac{3\lambda}{4} - \frac{3\lambda}{4} = 0 \implies 3l_1 + 3e - l_2 - e = 0 \implies 2e = l_2 - 3l_1 \)
-                                <br>
-                                \( \mathbf{e = \frac{l_2 - 3l_1}{2}} \)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 8.5 & 8.6 -->
-        <section class="space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Sections 8.5 & 8.6</span>
-                <h2 class="text-2xl font-bold text-slate-900">Transverse Waves in Stretched Strings & Vibration Laws</h2>
-            </div>
-
-            <!-- Subsection 8.5: Wave Velocity Formula -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-6">
-                <div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">1. Velocity of Transverse Waves along a Stretched String</h3>
-                    <p class="text-sm text-slate-700 leading-relaxed">
-                        When a stretched string is plucked transversely, transverse stationary waves are set up. The speed \( v \) of the transverse wave depends on the tension \( T \) in the string and its linear mass density \( \mu \) (mass per unit length):
-                    </p>
-                    <div class="my-3 p-4 bg-sky-50 border-l-4 border-sky-600 rounded-r text-center font-mono font-bold text-xl text-sky-950">
-                        \( v = \sqrt{\frac{T}{\mu}} \)
-                    </div>
-                    
-                    <!-- Expressing Linear Mass Density -->
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-sm space-y-2">
-                        <h4 class="font-bold text-slate-900">Expressing Linear Mass Density (\( \mu \)) in terms of Radius and Density:</h4>
-                        <p class="font-mono text-slate-800">
-                            \( \mu = \frac{\text{Mass}}{\text{Length}} = \frac{\text{Volume} \times \text{Density}}{\text{Length}} = \frac{(\pi r^2 L) \times \rho}{L} = \pi r^2 \rho \)
-                        </p>
-                        <p class="text-xs text-slate-600">
-                            Where \( r = \) radius of wire cross-section, \( \rho = \) density of wire material.
-                        </p>
-                        <p class="font-mono text-sky-900 font-bold mt-2">
-                            \( \therefore v = \sqrt{\frac{T}{\pi r^2 \rho}} = \frac{1}{r} \sqrt{\frac{T}{\pi \rho}} \)
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Modes of Vibration in Stretched String -->
-                <div class="border-t pt-6 space-y-4">
-                    <h3 class="text-lg font-bold text-slate-900">2. Modes of Vibration and Overtones in Stretched String</h3>
-                    <p class="text-sm text-slate-700">
-                        Since both ends of a fixed string of length \( L \) are clamped rigid, <strong>Nodes (N)</strong> are always formed at both boundaries \( x = 0 \) and \( x = L \).
-                    </p>
-
-                    <!-- SVG Vector Diagram: Stretched String Modes -->
-                    <div class="diagram-box flex flex-col items-center">
-                        <h4 class="font-bold text-xs text-slate-700 mb-2 uppercase">Vibration Modes of Fixed String</h4>
-                        <svg viewBox="0 0 700 240" class="w-full max-w-3xl h-auto font-sans">
-                            <!-- Mode 1: Fundamental -->
-                            <g transform="translate(20, 20)">
-                                <!-- Fixed Walls -->
-                                <rect x="10" y="10" width="10" height="80" fill="#475569"/>
-                                <rect x="190" y="10" width="10" height="80" fill="#475569"/>
-                                <line x1="20" y1="50" x2="190" y2="50" stroke="#94a3b8" stroke-width="1"/>
-                                <!-- Wave Envelope -->
-                                <path d="M 20,50 Q 105,10 190,50" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                                <path d="M 20,50 Q 105,90 190,50" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="3,3"/>
-                                <!-- Node/Antinode -->
-                                <circle cx="20" cy="50" r="3.5" fill="#ef4444"/>
-                                <circle cx="190" cy="50" r="3.5" fill="#ef4444"/>
-                                <circle cx="105" cy="50" r="3.5" fill="#10b981"/>
-                                <text x="105" y="115" font-size="11" text-anchor="middle" font-weight="bold" fill="#0f172a">(a) Fundamental Mode (n=1)</text>
-                                <text x="105" y="130" font-size="10" text-anchor="middle" fill="#475569">f₁ = (1/2L)√(T/μ)</text>
-                            </g>
-
-                            <!-- Mode 2: 2nd Harmonic -->
-                            <g transform="translate(250, 20)">
-                                <rect x="10" y="10" width="10" height="80" fill="#475569"/>
-                                <rect x="190" y="10" width="10" height="80" fill="#475569"/>
-                                <path d="M 20,50 Q 62.5,10 105,50 Q 147.5,90 190,50" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                                <path d="M 20,50 Q 62.5,90 105,50 Q 147.5,10 190,50" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="3,3"/>
-                                <text x="105" y="115" font-size="11" text-anchor="middle" font-weight="bold" fill="#0f172a">(b) 1st Overtone (2nd Harm.)</text>
-                                <text x="105" y="130" font-size="10" text-anchor="middle" fill="#475569">f₂ = 2 f₁</text>
-                            </g>
-
-                            <!-- Mode 3: 3rd Harmonic -->
-                            <g transform="translate(480, 20)">
-                                <rect x="10" y="10" width="10" height="80" fill="#475569"/>
-                                <rect x="190" y="10" width="10" height="80" fill="#475569"/>
-                                <path d="M 20,50 Q 48,10 76,50 Q 105,90 133,50 Q 161,10 190,50" fill="none" stroke="#0284c7" stroke-width="2.5"/>
-                                <path d="M 20,50 Q 48,90 76,50 Q 105,10 133,50 Q 161,90 190,50" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="3,3"/>
-                                <text x="105" y="115" font-size="11" text-anchor="middle" font-weight="bold" fill="#0f172a">(c) 2nd Overtone (3rd Harm.)</text>
-                                <text x="105" y="130" font-size="10" text-anchor="middle" fill="#475569">f₃ = 3 f₁</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <!-- General Formula -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mt-4">
-                        <div class="derivation-step">
-                            <h5 class="font-bold text-sky-800">Fundamental Mode (n=1)</h5>
-                            <p class="font-mono mt-1 text-xs">\( L = \frac{\lambda_1}{2} \implies \lambda_1 = 2L \)</p>
-                            <p class="font-mono text-sky-900 font-bold mt-1">\( f_1 = \frac{1}{2L}\sqrt{\frac{T}{\mu}} \)</p>
-                        </div>
-                        <div class="derivation-step">
-                            <h5 class="font-bold text-sky-800">1st Overtone (n=2)</h5>
-                            <p class="font-mono mt-1 text-xs">\( L = \lambda_2 \implies \lambda_2 = L \)</p>
-                            <p class="font-mono text-sky-900 font-bold mt-1">\( f_2 = \frac{2}{2L}\sqrt{\frac{T}{\mu}} = 2f_1 \)</p>
-                        </div>
-                        <div class="derivation-step">
-                            <h5 class="font-bold text-sky-800">2nd Overtone (n=3)</h5>
-                            <p class="font-mono mt-1 text-xs">\( L = \frac{3\lambda_3}{2} \implies \lambda_3 = \frac{2L}{3} \)</p>
-                            <p class="font-mono text-sky-900 font-bold mt-1">\( f_3 = \frac{3}{2L}\sqrt{\frac{T}{\mu}} = 3f_1 \)</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-sky-900 text-white p-4 rounded-lg font-mono text-center text-base">
-                        General Formula for $n$-th Harmonic: \( f_n = \frac{n}{2L}\sqrt{\frac{T}{\mu}} = n f_1 \)
-                        <br>
-                        <span class="text-xs text-sky-200 font-sans mt-1 block">
-                            Frequency ratio: \( f_1 : f_2 : f_3 : \dots = 1 : 2 : 3 : 4 : \dots \) (All harmonics present)
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Laws of Transverse Vibration of Fixed String -->
-                <div class="border-t pt-6 space-y-4">
-                    <h3 class="text-lg font-bold text-slate-900">3. Laws of Transverse Vibration of Fixed String</h3>
-                    <p class="text-sm text-slate-700">
-                        From the fundamental frequency equation \( f = \frac{1}{2L}\sqrt{\frac{T}{\mu}} = \frac{1}{2L r}\sqrt{\frac{T}{\pi \rho}} \), the following five laws are derived:
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
-                            <strong class="text-sky-900">1. Law of Length:</strong>
-                            <p class="text-xs text-slate-700 mt-1">
-                                Fundamental frequency is inversely proportional to resonating length when \( T \) and \( \mu \) are constant.
-                            </p>
-                            <p class="font-mono font-bold text-sky-800 text-xs mt-1">\( f \propto \frac{1}{L} \implies f L = \text{constant} \)</p>
-                        </div>
-
-                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
-                            <strong class="text-sky-900">2. Law of Tension:</strong>
-                            <p class="text-xs text-slate-700 mt-1">
-                                Fundamental frequency is directly proportional to the square root of tension when \( L \) and \( \mu \) are constant.
-                            </p>
-                            <p class="font-mono font-bold text-sky-800 text-xs mt-1">\( f \propto \sqrt{T} \implies \frac{f}{\sqrt{T}} = \text{constant} \)</p>
-                        </div>
-
-                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
-                            <strong class="text-sky-900">3. Law of Linear Mass Density:</strong>
-                            <p class="text-xs text-slate-700 mt-1">
-                                Fundamental frequency is inversely proportional to square root of linear mass density when \( L \) and \( T \) are constant.
-                            </p>
-                            <p class="font-mono font-bold text-sky-800 text-xs mt-1">\( f \propto \frac{1}{\sqrt{\mu}} \)</p>
-                        </div>
-
-                        <div class="bg-slate-50 p-3 rounded border border-slate-200">
-                            <strong class="text-sky-900">4. Law of Radius:</strong>
-                            <p class="text-xs text-slate-700 mt-1">
-                                Fundamental frequency is inversely proportional to radius of wire when \( L, T, \rho \) are constant.
-                            </p>
-                            <p class="font-mono font-bold text-sky-800 text-xs mt-1">\( f \propto \frac{1}{r} \)</p>
-                        </div>
-
-                        <div class="bg-slate-50 p-3 rounded border border-slate-200 md:col-span-2">
-                            <strong class="text-sky-900">5. Law of Material Density:</strong>
-                            <p class="text-xs text-slate-700 mt-1">
-                                Fundamental frequency is inversely proportional to square root of wire material density when \( L, T, r \) are constant.
-                            </p>
-                            <p class="font-mono font-bold text-sky-800 text-xs mt-1">\( f \propto \frac{1}{\sqrt{\rho}} \)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Sonometer Apparatus Vector Diagram -->
-                <div class="border-t pt-6 space-y-4">
-                    <h3 class="text-lg font-bold text-slate-900">4. Sonometer Apparatus Experimental Verification</h3>
-                    <p class="text-sm text-slate-700">
-                        A <strong>Sonometer</strong> consists of a hollow rectangular wooden soundbox (to amplify sound by forced vibration) with a fixed pulley at one end. A uniform metallic wire fixed at one end passes over two movable knife-edge wooden bridges ($A$ and $B$) and a smooth pulley, carrying a hanger with weights ($M$) to provide tension $T = M g$.
-                    </p>
-
-                    <div class="diagram-box flex flex-col items-center">
-                        <h4 class="font-bold text-xs text-slate-700 mb-2 uppercase">Sonometer Experimental Setup</h4>
-                        <svg viewBox="0 0 700 220" class="w-full max-w-3xl h-auto font-sans">
-                            <!-- Wooden Soundbox -->
-                            <rect x="50" y="90" width="500" height="70" fill="#fde68a" stroke="#b45309" stroke-width="2.5" rx="4"/>
-                            <!-- Sound Holes -->
-                            <circle cx="180" cy="125" r="12" fill="#78350f"/>
-                            <circle cx="420" cy="125" r="12" fill="#78350f"/>
-                            
-                            <!-- Wire Peg Fixed End -->
-                            <rect x="35" y="80" width="15" height="20" fill="#475569"/>
-                            
-                            <!-- Movable Knife Edge Bridges -->
-                            <polygon points="150,90 160,65 170,90" fill="#92400e"/>
-                            <polygon points="450,90 460,65 470,90" fill="#92400e"/>
-                            <text x="160" y="105" font-size="10" text-anchor="middle" font-weight="bold">Bridge A</text>
-                            <text x="460" y="105" font-size="10" text-anchor="middle" font-weight="bold">Bridge B</text>
-
-                            <!-- Paper Rider -->
-                            <polygon points="300,58 305,65 295,65" fill="#ef4444"/>
-                            <text x="300" y="48" font-size="10" text-anchor="middle" fill="#ef4444" font-weight="bold">Paper Rider</text>
-
-                            <!-- Pulley -->
-                            <circle cx="570" cy="90" r="18" fill="#64748b" stroke="#334155" stroke-width="2"/>
-                            <circle cx="570" cy="90" r="4" fill="#0f172a"/>
-
-                            <!-- Wire -->
-                            <line x1="45" y1="85" x2="160" y2="65" stroke="#0284c7" stroke-width="2.5"/>
-                            <line x1="160" y1="65" x2="460" y2="65" stroke="#0284c7" stroke-width="2.5"/>
-                            <line x1="460" y1="65" x2="570" y2="72" stroke="#0284c7" stroke-width="2.5"/>
-                            <!-- Hanging wire & Mass -->
-                            <line x1="588" y1="90" x2="588" y2="160" stroke="#0284c7" stroke-width="2.5"/>
-                            <rect x="573" y="160" width="30" height="8" fill="#334155"/>
-                            <rect x="578" y="168" width="20" height="30" fill="#64748b" rx="2"/>
-                            <text x="588" y="188" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">M</text>
-
-                            <!-- Dimension arrow for resonating length L -->
-                            <line x1="160" y1="35" x2="460" y2="35" stroke="#0284c7" stroke-width="1.5"/>
-                            <text x="310" y="30" font-size="11" fill="#0284c7" text-anchor="middle" font-weight="bold">Resonating Length (L)</text>
-                        </svg>
-                    </div>
-
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs text-slate-700 space-y-2">
-                        <strong>Paper Rider Resonance Detection Method:</strong>
-                        <p>
-                            A light inverted 'V' shaped paper rider is placed at the center of wire segment $AB$. A vibrating tuning fork of known frequency $f$ is touched to the soundbox. The bridge $B$ is moved slowly until the paper rider violently flutter and falls off. This indicates maximum resonance amplitude, confirming that the fundamental frequency of string segment $AB$ matches the frequency of the tuning fork.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- INTERACTIVE LAB SECTION -->
-        <section id="lab" class="no-print space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Interactive Simulation & Calculation Engine</span>
-                <h2 class="text-2xl font-bold text-slate-900">Waves in Pipes & Strings Laboratory</h2>
-            </div>
-
-            <!-- Visual Standing Wave Canvas Animator -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-4">
-                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-                    <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    1. Real-Time Standing Wave Mode Visualizer
-                </h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm bg-slate-50 p-4 rounded-lg border border-slate-200">
-                    <div>
-                        <label class="block font-semibold text-slate-700 mb-1">Select System Type:</label>
-                        <select id="simSystem" class="w-full p-2 border border-slate-300 rounded focus:ring-2 focus:ring-sky-500">
-                            <option value="string">Stretched String (Fixed Both Ends)</option>
-                            <option value="closed">Closed Organ Pipe (Node @ Left, Antinode @ Right)</option>
-                            <option value="open">Open Organ Pipe (Antinodes @ Both Ends)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-700 mb-1">Select Harmonic / Mode (n):</label>
-                        <select id="simMode" class="w-full p-2 border border-slate-300 rounded focus:ring-2 focus:ring-sky-500">
-                            <option value="1">Fundamental Mode (n = 1)</option>
-                            <option value="2">2nd Harmonic / 1st Overtone (n = 2)</option>
-                            <option value="3">3rd Harmonic / 2nd Overtone (n = 3)</option>
-                            <option value="4">4th Harmonic / 3rd Overtone (n = 4)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block font-semibold text-slate-700 mb-1">Oscillation Speed:</label>
-                        <input type="range" id="simSpeed" min="0.1" max="2" step="0.1" value="1" class="w-full mt-2">
-                    </div>
-                </div>
-
-                <!-- Canvas Display -->
-                <div class="bg-slate-900 rounded-lg p-3 overflow-hidden shadow-inner flex flex-col items-center">
-                    <canvas id="waveCanvas" width="800" height="220" class="w-full h-auto bg-slate-900 rounded"></canvas>
-                    <div class="text-slate-400 text-xs mt-2 flex justify-between w-full max-w-3xl">
-                        <span id="leftLabel">Left End: Node</span>
-                        <span id="centerInfo" class="text-sky-400 font-bold">Mode Info</span>
-                        <span id="rightLabel">Right End: Antinode</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Calculators Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <!-- Calculator 1: Organ Pipe Frequency & End Correction -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-4">
-                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        2. Organ Pipe Frequency & End Correction Calculator
-                    </h3>
-
-                    <div class="grid grid-cols-2 gap-3 text-sm">
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">Pipe Type:</label>
-                            <select id="calcPipeType" class="w-full p-2 border rounded border-slate-300">
-                                <option value="closed">Closed Pipe</option>
-                                <option value="open">Open Pipe</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">Physical Length L (cm):</label>
-                            <input type="number" id="calcPipeL" value="25" step="0.1" class="w-full p-2 border rounded border-slate-300">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">Internal Radius r (cm):</label>
-                            <input type="number" id="calcPipeR" value="2.0" step="0.1" class="w-full p-2 border rounded border-slate-300">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">Air Temp t (°C):</label>
-                            <input type="number" id="calcPipeT" value="20" step="1" class="w-full p-2 border rounded border-slate-300">
-                        </div>
-                    </div>
-
-                    <button onclick="calculateOrganPipe()" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 rounded text-sm transition">Calculate Frequencies</button>
-
-                    <div id="pipeCalcResult" class="bg-sky-50 p-4 rounded-lg border border-sky-200 text-xs text-sky-950 space-y-1">
-                        <!-- Dynamic output -->
-                        Click Calculate to view results.
-                    </div>
-                </div>
-
-                <!-- Calculator 2: Stretched String Calculator -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-4">
-                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        3. Stretched String & Sonometer Calculator
-                    </h3>
-
-                    <div class="grid grid-cols-2 gap-3 text-sm">
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">String Length L (cm):</label>
-                            <input type="number" id="calcStringL" value="50" step="0.5" class="w-full p-2 border rounded border-slate-300">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">Tension T (N) or Mass (kg):</label>
-                            <input type="number" id="calcStringT" value="49" step="0.1" class="w-full p-2 border rounded border-slate-300">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">Wire Radius r (mm):</label>
-                            <input type="number" id="calcStringR" value="0.5" step="0.05" class="w-full p-2 border rounded border-slate-300">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold text-slate-700">Material Density ρ (kg/m³):</label>
-                            <input type="number" id="calcStringRho" value="7800" step="100" class="w-full p-2 border rounded border-slate-300">
-                        </div>
-                    </div>
-
-                    <button onclick="calculateString()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded text-sm transition">Calculate String Frequencies</button>
-
-                    <div id="stringCalcResult" class="bg-indigo-50 p-4 rounded-lg border border-indigo-200 text-xs text-indigo-950 space-y-1">
-                        Click Calculate to view results.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SOLVED NUMERICAL BOARD EXAMPLES -->
-        <section id="numericals" class="space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">NEB Board Examination Repository</span>
-                <h2 class="text-2xl font-bold text-slate-900">Solved Numerical Examples</h2>
-            </div>
-
-            <div class="space-y-6">
-                <!-- Solved Numerical 1 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-3">
-                    <div class="flex justify-between items-start">
-                        <span class="bg-sky-100 text-sky-800 text-xs font-bold px-2.5 py-1 rounded">NEB Board Exam High Yield</span>
-                        <span class="text-xs text-slate-500 font-semibold">Resonance Tube Numerical</span>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-base">
-                        Numerical 1: Resonance Tube Speed of Sound & End Correction
-                    </h3>
-                    <p class="text-sm text-slate-700 italic bg-slate-50 p-3 rounded">
-                        "In a resonance tube experiment, a tuning fork of frequency $512\text{ Hz}$ produces first resonance at length $15.8\text{ cm}$ and second resonance at length $48.2\text{ cm}$. Calculate: (a) Speed of sound in air, (b) End correction of the tube, and (c) Internal radius of the tube."
-                    </p>
-
-                    <div class="text-sm space-y-2 border-t pt-3">
-                        <p class="font-bold text-slate-800">Step-by-Step Solution:</p>
-                        <p><strong>Given Data:</strong></p>
-                        <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1">
-                            <li>Frequency of tuning fork, $f = 512\text{ Hz}$</li>
-                            <li>First resonating length, $l_1 = 15.8\text{ cm} = 0.158\text{ m}$</li>
-                            <li>Second resonating length, $l_2 = 48.2\text{ cm} = 0.482\text{ m}$</li>
-                        </ul>
-
-                        <p class="pt-2"><strong>(a) Speed of Sound ($v$):</strong></p>
-                        <p class="font-mono text-xs text-sky-900">
-                            \( v = 2 f (l_2 - l_1) = 2 \times 512 \times (0.482 - 0.158) \)
-                        </p>
-                        <p class="font-mono text-xs text-sky-900">
-                            \( v = 1024 \times 0.324 = \mathbf{331.78\text{ m/s}} \)
-                        </p>
-
-                        <p class="pt-2"><strong>(b) End Correction ($e$):</strong></p>
-                        <p class="font-mono text-xs text-sky-900">
-                            \( e = \frac{l_2 - 3 l_1}{2} = \frac{48.2 - 3(15.8)}{2} = \frac{48.2 - 47.4}{2} = \frac{0.8}{2} = \mathbf{0.4\text{ cm}} = 0.004\text{ m} \)
-                        </p>
-
-                        <p class="pt-2"><strong>(c) Internal Radius ($r$):</strong></p>
-                        <p class="font-mono text-xs text-sky-900">
-                            Using Rayleigh formula \( e = 0.6 r \implies r = \frac{e}{0.6} = \frac{0.4}{0.6} = \mathbf{0.67\text{ cm}} \)
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Solved Numerical 2 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-3">
-                    <div class="flex justify-between items-start">
-                        <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-2.5 py-1 rounded">NEB Board Exam High Yield</span>
-                        <span class="text-xs text-slate-500 font-semibold">Open vs Closed Pipe Comparison</span>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-base">
-                        Numerical 2: Equal Frequency Pipe Length Relation
-                    </h3>
-                    <p class="text-sm text-slate-700 italic bg-slate-50 p-3 rounded">
-                        "An open organ pipe has a fundamental frequency equal to the third harmonic (1st overtone) of a closed organ pipe. If the length of the closed pipe is $60\text{ cm}$, calculate the length of the open pipe (neglecting end correction)."
-                    </p>
-
-                    <div class="text-sm space-y-2 border-t pt-3">
-                        <p class="font-bold text-slate-800">Step-by-Step Solution:</p>
-                        <p><strong>Given Data:</strong></p>
-                        <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1">
-                            <li>Length of closed pipe, $L_c = 60\text{ cm} = 0.60\text{ m}$</li>
-                            <li>Fundamental frequency of open pipe, $f_{1,open} = \frac{v}{2 L_o}$</li>
-                            <li>Third harmonic of closed pipe, $f_{3,closed} = \frac{3 v}{4 L_c}$</li>
-                        </ul>
-
-                        <p class="pt-2">According to the problem condition: $f_{1,open} = f_{3,closed}$</p>
-                        <p class="font-mono text-xs text-sky-900">
-                            \( \frac{v}{2 L_o} = \frac{3 v}{4 L_c} \)
-                        </p>
-                        <p class="font-mono text-xs text-sky-900">
-                            Canceling $v$ from both sides: \( \frac{1}{2 L_o} = \frac{3}{4 L_c} \implies 3 \times 2 L_o = 4 L_c \implies L_o = \frac{2}{3} L_c \)
-                        </p>
-                        <p class="font-mono text-xs font-bold text-sky-900">
-                            \( L_o = \frac{2}{3} \times 60\text{ cm} = \mathbf{40\text{ cm}} = 0.40\text{ m} \)
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Solved Numerical 3 -->
-                <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-3">
-                    <div class="flex justify-between items-start">
-                        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded">NEB Board Exam High Yield</span>
-                        <span class="text-xs text-slate-500 font-semibold">Sonometer Wire Frequency</span>
-                    </div>
-                    <h3 class="font-bold text-slate-900 text-base">
-                        Numerical 3: Sonometer Wire Frequency & Mass
-                    </h3>
-                    <p class="text-sm text-slate-700 italic bg-slate-50 p-3 rounded">
-                        "A steel wire of length $1\text{ m}$ and mass $5\text{ g}$ is stretched with a tension of $400\text{ N}$. Find: (a) Speed of transverse wave on wire, (b) Fundamental frequency, and (c) Frequency of its 2nd overtone."
-                    </p>
-
-                    <div class="text-sm space-y-2 border-t pt-3">
-                        <p class="font-bold text-slate-800">Step-by-Step Solution:</p>
-                        <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1">
-                            <li>Length $L = 1\text{ m}$, Mass $m = 5\text{ g} = 0.005\text{ kg}$</li>
-                            <li>Linear mass density \( \mu = \frac{m}{L} = \frac{0.005\text{ kg}}{1\text{ m}} = 0.005\text{ kg/m} \)</li>
-                            <li>Tension $T = 400\text{ N}$</li>
-                        </ul>
-
-                        <p class="pt-2"><strong>(a) Wave Speed ($v$):</strong></p>
-                        <p class="font-mono text-xs text-sky-900">
-                            \( v = \sqrt{\frac{T}{\mu}} = \sqrt{\frac{400}{0.005}} = \sqrt{80000} = \mathbf{282.84\text{ m/s}} \)
-                        </p>
-
-                        <p class="pt-2"><strong>(b) Fundamental Frequency ($f_1$):</strong></p>
-                        <p class="font-mono text-xs text-sky-900">
-                            \( f_1 = \frac{v}{2L} = \frac{282.84}{2 \times 1} = \mathbf{141.42\text{ Hz}} \)
-                        </p>
-
-                        <p class="pt-2"><strong>(c) Frequency of 2nd Overtone ($f_3 = 3rd\text{ harmonic}$):</strong></p>
-                        <p class="font-mono text-xs text-sky-900">
-                            \( f_3 = 3 f_1 = 3 \times 141.42 = \mathbf{424.26\text{ Hz}} \)
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONCEPT CHECK & PRACTICE EXERCISES -->
-        <section class="space-y-6">
-            <div class="border-l-4 border-sky-600 pl-4 py-1">
-                <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Self Study & Revision</span>
-                <h2 class="text-2xl font-bold text-slate-900">Conceptual Questions & Practice Problems</h2>
-            </div>
-
-            <!-- Conceptual Accordions -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-4">
-                <h3 class="font-bold text-slate-900 text-lg">NEB Conceptual Short Questions (With Answers)</h3>
-
-                <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200">
-                    <summary class="font-semibold text-sm cursor-pointer text-slate-800 flex justify-between items-center">
-                        <span>Q1: Why is sound produced by an open organ pipe richer than that by a closed organ pipe?</span>
-                        <span class="text-sky-600 font-bold group-open:rotate-180 transition">↓</span>
-                    </summary>
-                    <p class="text-xs text-slate-700 mt-2 leading-relaxed">
-                        <strong>NEB Board Answer:</strong> In an open organ pipe, all harmonics (both even and odd: $1f_1, 2f_1, 3f_1, 4f_1 \dots$) are generated. In contrast, a closed organ pipe produces only odd harmonics ($1f_1, 3f_1, 5f_1 \dots$). Because the presence of a greater number of harmonic overtones enriches the quality and timbre of sound, an open organ pipe produces a richer and more pleasing musical sound.
-                    </p>
-                </details>
-
-                <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200">
-                    <summary class="font-semibold text-sm cursor-pointer text-slate-800 flex justify-between items-center">
-                        <span>Q2: What happens to the fundamental frequency of an organ pipe if temperature increases?</span>
-                        <span class="text-sky-600 font-bold group-open:rotate-180 transition">↓</span>
-                    </summary>
-                    <p class="text-xs text-slate-700 mt-2 leading-relaxed">
-                        <strong>NEB Board Answer:</strong> The velocity of sound in air increases with temperature ($v \propto \sqrt{T_K}$). Since fundamental frequency $f = \frac{v}{2L}$ (open) or $f = \frac{v}{4L}$ (closed) is directly proportional to speed of sound $v$, as temperature rises, speed of sound increases, and consequently the fundamental frequency of the organ pipe increases (pitch becomes higher).
-                    </p>
-                </details>
-
-                <details class="group bg-slate-50 p-4 rounded-lg border border-slate-200">
-                    <summary class="font-semibold text-sm cursor-pointer text-slate-800 flex justify-between items-center">
-                        <span>Q3: Why are sound holes provided in the wooden soundbox of a sonometer?</span>
-                        <span class="text-sky-600 font-bold group-open:rotate-180 transition">↓</span>
-                    </summary>
-                    <p class="text-xs text-slate-700 mt-2 leading-relaxed">
-                        <strong>NEB Board Answer:</strong> Sound holes allow the air inside the hollow wooden soundbox to communicate with the outside atmosphere and set a larger volume of air into forced vibrations, significantly amplifying the loudness of the sound produced by the vibrating string.
-                    </p>
-                </details>
-            </div>
-        </section>
-
-        <!-- SELF-ASSESSMENT INTERACTIVE QUIZ -->
-        <section id="quiz" class="no-print space-y-6">
-            <div class="border-l-4 border-indigo-600 pl-4 py-1">
-                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Instant Feedback Quiz</span>
-                <h2 class="text-2xl font-bold text-slate-900">Interactive Self-Assessment Test</h2>
-            </div>
-
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-6">
-                <!-- Question 1 -->
-                <div class="space-y-2 border-b pb-4">
-                    <p class="font-semibold text-sm text-slate-900">1. In a closed organ pipe of length $L$, the ratio of frequencies of fundamental note, 1st overtone, and 2nd overtone is:</p>
-                    <div class="space-y-1 text-xs text-slate-700 pl-2">
-                        <label class="flex items-center gap-2"><input type="radio" name="q1" value="a"> (A) 1 : 2 : 3</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q1" value="b"> (B) 1 : 3 : 5</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q1" value="c"> (C) 1 : 4 : 9</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q1" value="d"> (D) 1 : 2 : 4</label>
-                    </div>
-                </div>
-
-                <!-- Question 2 -->
-                <div class="space-y-2 border-b pb-4">
-                    <p class="font-semibold text-sm text-slate-900">2. Rayleigh end correction formula for an organ pipe of internal radius $r$ is approximately:</p>
-                    <div class="space-y-1 text-xs text-slate-700 pl-2">
-                        <label class="flex items-center gap-2"><input type="radio" name="q2" value="a"> (A) $e = 0.3 r$</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q2" value="b"> (B) $e = 0.6 r$</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q2" value="c"> (C) $e = 1.2 r$</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q2" value="d"> (D) $e = 2.0 r$</label>
-                    </div>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="space-y-2 border-b pb-4">
-                    <p class="font-semibold text-sm text-slate-900">3. In a resonance tube experiment, if $l_1$ and $l_2$ are first and second resonating lengths, speed of sound is:</p>
-                    <div class="space-y-1 text-xs text-slate-700 pl-2">
-                        <label class="flex items-center gap-2"><input type="radio" name="q3" value="a"> (A) $v = f (l_2 - l_1)$</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q3" value="b"> (B) $v = 2 f (l_2 - l_1)$</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q3" value="c"> (C) $v = \frac{f}{2}(l_2 - l_1)$</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q3" value="d"> (D) $v = 4 f (l_2 - l_1)$</label>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="space-y-2 border-b pb-4">
-                    <p class="font-semibold text-sm text-slate-900">4. If tension in a stretched sonometer wire is quadrupled (4x), keeping length and wire density constant, fundamental frequency will:</p>
-                    <div class="space-y-1 text-xs text-slate-700 pl-2">
-                        <label class="flex items-center gap-2"><input type="radio" name="q4" value="a"> (A) Double (2x)</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q4" value="b"> (B) Become 4 times</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q4" value="c"> (C) Be halved</label>
-                        <label class="flex items-center gap-2"><input type="radio" name="q4" value="d"> (D) Remain unchanged</label>
-                    </div>
-                </div>
-
-                <button onclick="checkQuiz()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-2 rounded text-sm transition">Submit Quiz</button>
-
-                <div id="quizResult" class="hidden p-4 rounded-lg text-sm font-semibold"></div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>NEB Grade XII Physics Module — Unit 8: Waves in Pipes and Strings</p>
-            <p class="mt-1 text-slate-500">Prepared according to Curriculum Development Centre (CDC) Nepal syllabus standards.</p>
-        </div>
-    </footer>
-
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (window.renderMathInElement) {
-                renderMathInElement(document.body, {
-                    delimiters: [
-                        {left: "$$", right: "$$", display: true},
-                        {left: "$", right: "$", display: false},
-                        {left: "\\[", right: "\\]", display: true},
-                        {left: "\\(", right: "\\)", display: false}
-                    ]
-                });
-            }
-            initCanvas();
-            calculateOrganPipe();
-            calculateString();
-        });
-
-        let canvas, ctx;
-        let animFrame;
-        let time = 0;
-
-        function initCanvas() {
-            canvas = document.getElementById('waveCanvas');
-            if (!canvas) return;
-            ctx = canvas.getContext('2d');
-            
-            document.getElementById('simSystem').addEventListener('change', animate);
-            document.getElementById('simMode').addEventListener('change', animate);
-            document.getElementById('simSpeed').addEventListener('input', function(){});
-
-            animate();
-        }
-
-        function animate() {
-            if (!ctx) return;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            const system = document.getElementById('simSystem').value;
-            const mode = parseInt(document.getElementById('simMode').value);
-            const speed = parseFloat(document.getElementById('simSpeed').value);
-
-            time += 0.05 * speed;
-
-            const w = canvas.width;
-            const h = canvas.height;
-            const midY = h / 2;
-            const padX = 60;
-            const waveWidth = w - 2 * padX;
-
-            // Draw boundaries
-            ctx.strokeStyle = '#64748b';
-            ctx.lineWidth = 2;
-
-            if (system === 'string') {
-                document.getElementById('leftLabel').innerText = 'Left Fixed Clamp (Node)';
-                document.getElementById('rightLabel').innerText = 'Right Fixed Clamp (Node)';
-                document.getElementById('centerInfo').innerText = `Stretched String: Mode n = ${mode} (${mode} harmonic)`;
-
-                // Draw end walls
-                ctx.fillStyle = '#334155';
-                ctx.fillRect(padX - 10, midY - 60, 10, 120);
-                ctx.fillRect(w - padX, midY - 60, 10, 120);
-
-                // Draw oscillating string profile
-                ctx.beginPath();
-                ctx.strokeStyle = '#38bdf8';
-                ctx.lineWidth = 3;
-                for (let x = 0; x <= waveWidth; x++) {
-                    let k = (mode * Math.PI) / waveWidth;
-                    let y = midY + Math.sin(k * x) * Math.cos(time) * 50;
-                    if (x === 0) ctx.moveTo(padX + x, y);
-                    else ctx.lineTo(padX + x, y);
-                }
-                ctx.stroke();
-
-            } else if (system === 'closed') {
-                document.getElementById('leftLabel').innerText = 'Closed Bottom End (Node)';
-                document.getElementById('rightLabel').innerText = 'Open Mouth End (Antinode)';
-                let harmonic = 2 * mode - 1;
-                document.getElementById('centerInfo').innerText = `Closed Pipe: Mode n = ${mode} (${harmonic}th harmonic)`;
-
-                // Pipe outline
-                ctx.strokeRect(padX, midY - 50, waveWidth, 100);
-                ctx.fillStyle = '#1e293b';
-                ctx.fillRect(padX - 8, midY - 50, 8, 100); // Closed wall left
-
-                // Wave envelopes inside pipe
-                let k = (harmonic * Math.PI / 2) / waveWidth;
-                
-                ctx.beginPath();
-                ctx.strokeStyle = '#38bdf8';
-                ctx.lineWidth = 2.5;
-                for (let x = 0; x <= waveWidth; x++) {
-                    let y = midY + Math.sin(k * x) * Math.cos(time) * 40;
-                    if (x === 0) ctx.moveTo(padX + x, y);
-                    else ctx.lineTo(padX + x, y);
-                }
-                ctx.stroke();
-
-            } else if (system === 'open') {
-                document.getElementById('leftLabel').innerText = 'Left Open End (Antinode)';
-                document.getElementById('rightLabel').innerText = 'Right Open End (Antinode)';
-                document.getElementById('centerInfo').innerText = `Open Pipe: Mode n = ${mode} (${mode} harmonic)`;
-
-                // Top & Bottom pipe walls
-                ctx.beginPath();
-                ctx.moveTo(padX, midY - 50);
-                ctx.lineTo(w - padX, midY - 50);
-                ctx.moveTo(padX, midY + 50);
-                ctx.lineTo(w - padX, midY + 50);
-                ctx.stroke();
-
-                // Wave profile
-                let k = (mode * Math.PI) / waveWidth;
-                ctx.beginPath();
-                ctx.strokeStyle = '#38bdf8';
-                ctx.lineWidth = 2.5;
-                for (let x = 0; x <= waveWidth; x++) {
-                    let y = midY + Math.cos(k * x) * Math.cos(time) * 40;
-                    if (x === 0) ctx.moveTo(padX + x, y);
-                    else ctx.lineTo(padX + x, y);
-                }
-                ctx.stroke();
-            }
-
-            animFrame = requestAnimationFrame(animate);
-        }
-
-        function calculateOrganPipe() {
-            const type = document.getElementById('calcPipeType').value;
-            const L_cm = parseFloat(document.getElementById('calcPipeL').value);
-            const r_cm = parseFloat(document.getElementById('calcPipeR').value);
-            const temp_c = parseFloat(document.getElementById('calcPipeT').value);
-
-            if (isNaN(L_cm) || isNaN(r_cm) || isNaN(temp_c)) return;
-
-            const L = L_cm / 100;
-            const r = r_cm / 100;
-
-            // Speed of sound at temp t: v = 332 + 0.61 * t
-            const v = 332 + 0.61 * temp_c;
-
-            const e = 0.6 * r;
-            let Leff, f1, f2, f3;
-
-            if (type === 'closed') {
-                Leff = L + e;
-                f1 = v / (4 * Leff);
-                f2 = 3 * f1;
-                f3 = 5 * f1;
-            } else {
-                Leff = L + 2 * e;
-                f1 = v / (2 * Leff);
-                f2 = 2 * f1;
-                f3 = 3 * f1;
-            }
-
-            const res = document.getElementById('pipeCalcResult');
-            res.innerHTML = `
-                <p><strong>Calculated Results (${type.toUpperCase()} PIPE):</strong></p>
-                <p>• Speed of sound in air at ${temp_c}°C ($v$): <strong>${v.toFixed(2)} m/s</strong></p>
-                <p>• End Correction ($e = 0.6r$): <strong>${(e * 100).toFixed(2)} cm</strong></p>
-                <p>• Effective Length ($L_{eff}$): <strong>${(Leff * 100).toFixed(2)} cm</strong></p>
-                <p class="text-sky-900 font-bold mt-1">• Fundamental Frequency ($f_1$): ${f1.toFixed(2)} Hz</p>
-                <p>• 1st Overtone Frequency ($f_2$): ${f2.toFixed(2)} Hz</p>
-                <p>• 2nd Overtone Frequency ($f_3$): ${f3.toFixed(2)} Hz</p>
-            `;
-        }
-
-        function calculateString() {
-            const L_cm = parseFloat(document.getElementById('calcStringL').value);
-            const T_input = parseFloat(document.getElementById('calcStringT').value);
-            const r_mm = parseFloat(document.getElementById('calcStringR').value);
-            const rho = parseFloat(document.getElementById('calcStringRho').value);
-
-            if (isNaN(L_cm) || isNaN(T_input) || isNaN(r_mm) || isNaN(rho)) return;
-
-            const L = L_cm / 100;
-            const r = r_mm / 1000;
-            const T = T_input; // Assuming Newton
-
-            const area = Math.PI * r * r;
-            const mu = area * rho; // Linear mass density (kg/m)
-            const v = Math.sqrt(T / mu);
-
-            const f1 = v / (2 * L);
-            const f2 = 2 * f1;
-            const f3 = 3 * f1;
-
-            const res = document.getElementById('stringCalcResult');
-            res.innerHTML = `
-                <p><strong>Calculated Results (STRETCHED STRING):</strong></p>
-                <p>• Linear Mass Density ($\mu$): <strong>${(mu * 1000).toFixed(4)} g/m</strong> (${mu.toExponential(3)} kg/m)</p>
-                <p>• Wave Velocity ($v = \\sqrt{T/\\mu}$): <strong>${v.toFixed(2)} m/s</strong></p>
-                <p class="text-indigo-900 font-bold mt-1">• Fundamental Frequency ($f_1$): ${f1.toFixed(2)} Hz</p>
-                <p>• 2nd Harmonic / 1st Overtone ($f_2$): ${f2.toFixed(2)} Hz</p>
-                <p>• 3rd Harmonic / 2nd Overtone ($f_3$): ${f3.toFixed(2)} Hz</p>
-            `;
-        }
-
-        function checkQuiz() {
-            const answers = { q1: 'b', q2: 'b', q3: 'b', q4: 'a' };
-            let score = 0;
-            let total = 4;
-
-            for (let q in answers) {
-                const sel = document.querySelector(`input[name="${q}"]:checked`);
-                if (sel && sel.value === answers[q]) {
-                    score++;
-                }
-            }
-
-            const resDiv = document.getElementById('quizResult');
-            resDiv.classList.remove('hidden');
-            if (score === total) {
-                resDiv.className = 'p-4 rounded-lg text-sm font-semibold bg-emerald-100 text-emerald-900 border border-emerald-300';
-                resDiv.innerHTML = `🎉 Outstanding! You scored ${score}/${total} (100%). Mastery of NEB Unit 8 concept confirmed!`;
-            } else {
-                resDiv.className = 'p-4 rounded-lg text-sm font-semibold bg-amber-100 text-amber-900 border border-amber-300';
-                resDiv.innerHTML = ` You scored ${score}/${total}. Review the derivations and solved numericals above and try again!`;
-            }
-        }
-    </script>
-</body>
-</html>
+
+<div class="box note" data-title="Learning objectives"><ul><li>8.1 Stationary waves in open & closed pipes</li><li>8.2 Harmonics vs Overtones definition & comparison</li><li>8.3 Modes & frequency derivations in organ pipes</li><li>8.4 End correction (\(e = 0.6r\)) & Resonance Tube method</li><li>8.5 Wave velocity along stretched string (\(v = \sqrt{T/\mu}\))</li><li>8.6 Laws of transverse vibration & Sonometer experiment</li></ul></div>
+<h2>Formation of Stationary Waves in Pipes</h2>
+<p>
+When a sound wave (longitudinal wave) travels through an air column enclosed inside a pipe, it undergoes reflection at the boundary end. The incident sound wave and the reflected sound wave—having the same amplitude, frequency, and speed, traveling in opposite directions along the same line—superimpose according to the <strong>Principle of Superposition</strong>. This superposition creates a <strong>longitudinal stationary (standing) wave</strong> inside the pipe.
+</p><h3>1. Reflection at a Closed Boundary</h3><p>
+At a rigid or closed end, air molecules are physically restricted from moving back and forth. Therefore, a <strong>Displacement Node</strong> (zero particle displacement) and a <strong>Pressure Antinode</strong> (maximum pressure variation) are formed at the closed boundary. Phase changes by \(\pi\) radians (\(180^\circ\)).
+</p><h3>2. Reflection at an Open Boundary</h3><p>
+At an open end, air molecules are free to vibrate with maximum amplitude into the atmosphere. Therefore, a <strong>Displacement Antinode</strong> (maximum particle displacement) and a <strong>Pressure Node</strong> (zero pressure variation) are formed near the open boundary.
+</p><h2>Harmonics and Overtones</h2>
+<h3>Fundamental Frequency / Fundamental Tone</h3><p>
+The lowest possible frequency produced by a vibrating body or air column is called the <strong>fundamental frequency (\(f_1\))</strong> or fundamental tone.
+</p><h3>Overtones</h3><p>
+All frequencies higher than the fundamental frequency actually emitted by the vibrating system are called <strong>overtones</strong> (\(f_2, f_3, f_4, \dots\)).
+</p><h3>Harmonics Definition</h3><p>
+<strong>Harmonics</strong> are integral multiples of the fundamental frequency (\(1f_1, 2f_1, 3f_1, 4f_1, \dots\)).
+<br>
+• \(1f_1\) is the 1st harmonic (Fundamental frequency).<br>
+• \(2f_1\) is the 2nd harmonic.<br>
+• \(3f_1\) is the 3rd harmonic, and so on.
+</p><h3>Distinction Matrix: Harmonics vs Overtones</h3><table>
+<thead>
+<tr>
+<th>Parameter / Aspect</th>
+<th>Harmonics</th>
+<th>Overtones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definition</td>
+<td>Integral multiples of fundamental frequency (\(n f_1\)).</td>
+<td>Higher frequencies produced above fundamental tone.</td>
+</tr>
+<tr>
+<td>Inclusion of Fundamental</td>
+<td>Includes the fundamental frequency (\(1st \text{ Harmonic} = f_1\)).</td>
+<td>Excludes fundamental frequency (\(1st \text{ Overtone} > f_1\)).</td>
+</tr>
+<tr>
+<td>Presence in Instruments</td>
+<td>May or may not be physically present in a system (e.g., closed pipe lacks even harmonics).</td>
+<td>Always represents actual physically present higher frequencies.</td>
+</tr>
+<tr>
+<td>Numbering Sequence</td>
+<td>1st, 2nd, 3rd, 4th Harmonic... (\(f_1, 2f_1, 3f_1, 4f_1 \dots\))</td>
+<td>1st, 2nd, 3rd Overtone... (1st present, 2nd present, etc.)</td>
+</tr>
+</tbody>
+</table><h2>Harmonics and Overtones in Closed and Open Organ Pipes</h2>
+<h3>A. Closed Organ Pipe</h3><p>A pipe open at one end and closed at the other end of length \(L\).</p><h4>Vibration Modes in Closed Organ Pipe</h4><svg class="panel" viewBox="0 0 750 280" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(30, 20)">
+
+<rect x="30" y="20" width="120" height="180" fill="none" stroke="#334155" stroke-width="3"/>
+<line x1="30" y1="200" x2="150" y2="200" stroke="#0f172a" stroke-width="6"/>
+
+<path d="M 30,20 Q 90,110 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
+<path d="M 150,20 Q 90,110 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+
+<circle cx="90" cy="200" r="4" fill="#ef4444"/>
+<circle cx="90" cy="20" r="4" fill="#10b981"/>
+<text x="98" y="204" font-size="12" fill="#ef4444" font-weight="bold">N</text>
+<text x="98" y="24" font-size="12" fill="#10b981" font-weight="bold">A</text>
+
+<text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(a) Fundamental Mode</text>
+<text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = λ₁/4 ⇒ f₁ = v/4L</text>
+</g>
+
+<g transform="translate(270, 20)">
+<rect x="30" y="20" width="120" height="180" fill="none" stroke="#334155" stroke-width="3"/>
+<line x1="30" y1="200" x2="150" y2="200" stroke="#0f172a" stroke-width="6"/>
+
+<path d="M 30,20 Q 150,80 90,140 T 150,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 150,20 Q 30,80 90,140 T 30,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+<circle cx="90" cy="200" r="4" fill="#ef4444"/>
+<circle cx="90" cy="140" r="4" fill="#10b981"/>
+<circle cx="90" cy="80" r="4" fill="#ef4444"/>
+<circle cx="90" cy="20" r="4" fill="#10b981"/>
+<text x="98" y="204" font-size="11" fill="#ef4444">N₁</text>
+<text x="98" y="144" font-size="11" fill="#10b981">A₁</text>
+<text x="98" y="84" font-size="11" fill="#ef4444">N₂</text>
+<text x="98" y="24" font-size="11" fill="#10b981">A₂</text>
+<text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(b) First Overtone (3rd Harm.)</text>
+<text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = 3λ₂/4 ⇒ f₂ = 3f₁</text>
+</g>
+
+<g transform="translate(510, 20)">
+<rect x="30" y="20" width="120" height="180" fill="none" stroke="#334155" stroke-width="3"/>
+<line x1="30" y1="200" x2="150" y2="200" stroke="#0f172a" stroke-width="6"/>
+
+<path d="M 30,20 C 150,56 150,92 90,128 C 30,164 30,190 90,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 150,20 C 30,56 30,92 90,128 C 150,164 150,190 90,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+<circle cx="90" cy="200" r="4" fill="#ef4444"/>
+<circle cx="90" cy="160" r="4" fill="#10b981"/>
+<circle cx="90" cy="120" r="4" fill="#ef4444"/>
+<circle cx="90" cy="80" r="4" fill="#10b981"/>
+<circle cx="90" cy="48" r="4" fill="#ef4444"/>
+<circle cx="90" cy="20" r="4" fill="#10b981"/>
+<text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(c) Second Overtone (5th Harm.)</text>
+<text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = 5λ₃/4 ⇒ f₃ = 5f₁</text>
+</g>
+</svg><h4>Mathematical Derivations for Closed Pipe:</h4><h5>1. Mode 1: Fundamental Mode (1st Harmonic)</h5><p>In the simplest mode, one Node (N) forms at the closed end and one Antinode (A) forms at the open mouth.</p><p>
+Length of pipe, \( L = \frac{\lambda_1}{4} \implies \lambda_1 = 4L \)
+</p><p>
+Fundamental Frequency, \( f_1 = \frac{v}{\lambda_1} = \frac{v}{4L} \) (Equation 1)
+</p><h5>2. Mode 2: First Overtone (3rd Harmonic)</h5><p>In this mode, two Nodes and two Antinodes are formed inside the pipe.</p><p>
+Length of pipe, \( L = \frac{3\lambda_2}{4} \implies \lambda_2 = \frac{4L}{3} \)
+</p><p>
+Frequency, \( f_2 = \frac{v}{\lambda_2} = \frac{3v}{4L} = 3 f_1 \) (Equation 2)
+</p><p>Thus, the 1st overtone is equal to the 3rd harmonic.</p><h5>3. Mode 3: Second Overtone (5th Harmonic)</h5><p>In this mode, three Nodes and three Antinodes are formed.</p><p>
+Length of pipe, \( L = \frac{5\lambda_3}{4} \implies \lambda_3 = \frac{4L}{5} \)
+</p><p>
+Frequency, \( f_3 = \frac{v}{\lambda_3} = \frac{5v}{4L} = 5 f_1 \) (Equation 3)
+</p><p>Conclusion for Closed Organ Pipe:</p><p>
+Frequency ratio: \( f_1 : f_2 : f_3 : \dots = 1 : 3 : 5 : \dots \)
+</p><p>
+<strong>Key Result:</strong> Only <em>ODD harmonics</em> are present in a closed organ pipe. Even harmonics (\(2f_1, 4f_1, \dots\)) are absent.
+</p><h3>B. Open Organ Pipe</h3><p>A pipe open at both ends of length \(L\).</p><h4>Vibration Modes in Open Organ Pipe</h4><svg class="panel" viewBox="0 0 750 280" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(30, 20)">
+
+<line x1="30" y1="20" x2="30" y2="200" stroke="#334155" stroke-width="3"/>
+<line x1="150" y1="20" x2="150" y2="200" stroke="#334155" stroke-width="3"/>
+
+<path d="M 30,20 Q 90,110 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 150,20 Q 90,110 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+<circle cx="90" cy="110" r="4" fill="#ef4444"/>
+<circle cx="90" cy="20" r="4" fill="#10b981"/>
+<circle cx="90" cy="200" r="4" fill="#10b981"/>
+<text x="98" y="114" font-size="11" fill="#ef4444">N</text>
+<text x="98" y="24" font-size="11" fill="#10b981">A₁</text>
+<text x="98" y="204" font-size="11" fill="#10b981">A₂</text>
+<text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(a) Fundamental Mode</text>
+<text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = λ₁/2 ⇒ f₁ = v/2L</text>
+</g>
+
+<g transform="translate(270, 20)">
+<line x1="30" y1="20" x2="30" y2="200" stroke="#334155" stroke-width="3"/>
+<line x1="150" y1="20" x2="150" y2="200" stroke="#334155" stroke-width="3"/>
+
+<path d="M 30,20 Q 150,65 90,110 T 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 150,20 Q 30,65 90,110 T 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+<circle cx="90" cy="20" r="4" fill="#10b981"/>
+<circle cx="90" cy="65" r="4" fill="#ef4444"/>
+<circle cx="90" cy="110" r="4" fill="#10b981"/>
+<circle cx="90" cy="155" r="4" fill="#ef4444"/>
+<circle cx="90" cy="200" r="4" fill="#10b981"/>
+<text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(b) First Overtone (2nd Harm.)</text>
+<text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = λ₂ ⇒ f₂ = 2f₁</text>
+</g>
+
+<g transform="translate(510, 20)">
+<line x1="30" y1="20" x2="30" y2="200" stroke="#334155" stroke-width="3"/>
+<line x1="150" y1="20" x2="150" y2="200" stroke="#334155" stroke-width="3"/>
+
+<path d="M 30,20 Q 150,50 90,80 Q 30,110 90,140 Q 150,170 30,200" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 150,20 Q 30,50 90,80 Q 150,110 90,140 Q 30,170 150,200" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+<text x="90" y="235" font-size="12" text-anchor="middle" font-weight="bold" fill="#0f172a">(c) Second Overtone (3rd Harm.)</text>
+<text x="90" y="252" font-size="11" text-anchor="middle" fill="#475569">L = 3λ₃/2 ⇒ f₃ = 3f₁</text>
+</g>
+</svg><h4>Mathematical Derivations for Open Pipe:</h4><h5>1. Mode 1: Fundamental Mode (1st Harmonic)</h5><p>Antinodes form at both open ends with one Node at the center.</p><p>
+Length of pipe, \( L = \frac{\lambda_1}{2} \implies \lambda_1 = 2L \)
+</p><p>
+Fundamental Frequency, \( f_1' = \frac{v}{\lambda_1} = \frac{v}{2L} \) (Equation 4)
+</p><h5>2. Mode 2: First Overtone (2nd Harmonic)</h5><p>Three antinodes and two nodes are formed.</p><p>
+Length of pipe, \( L = \lambda_2 \implies \lambda_2 = L \)
+</p><p>
+Frequency, \( f_2' = \frac{v}{\lambda_2} = \frac{v}{L} = 2 \left(\frac{v}{2L}\right) = 2 f_1' \) (Equation 5)
+</p><h5>3. Mode 3: Second Overtone (3rd Harmonic)</h5><p>Four antinodes and three nodes are formed.</p><p>
+Length of pipe, \( L = \frac{3\lambda_3}{2} \implies \lambda_3 = \frac{2L}{3} \)
+</p><p>
+Frequency, \( f_3' = \frac{v}{\lambda_3} = \frac{3v}{2L} = 3 f_1' \) (Equation 6)
+</p><p>Conclusion for Open Organ Pipe:</p><p>
+Frequency ratio: \( f_1' : f_2' : f_3' : \dots = 1 : 2 : 3 : 4 : \dots \)
+</p><p>
+<strong>Key Result:</strong> BOTH <em>EVEN AND ODD harmonics</em> are present in an open organ pipe. Therefore, sound from an open organ pipe is richer and more musical than a closed organ pipe of the same length.
+</p><p>
+Note: For equal physical lengths, \( f_{open} = 2 \times f_{closed} \).
+</p><h2>End Correction in Pipes and Resonance Tube Experiment</h2>
+<h3>1. Concept and Physical Cause of End Correction</h3><p>
+In actual practice, air particles at the open boundary of an organ pipe are not completely confined laterally. Due to inertia, the air particles outside the brim of the pipe also participate in vibration. Consequently, the displacement antinode is not formed exactly at the open end plane, but at a small distance <strong>\( e \)</strong> outside the boundary brim.
+</p><p>
+This additional distance \( e \) added to the physical length of the pipe is called <strong>End Correction</strong>.
+</p><h4>Lord Rayleigh's Formula</h4><p>
+Lord Rayleigh demonstrated theoretically and experimentally that end correction depends directly on the internal radius \( r \) of the pipe:
+</p><p>\( e \approx 0.6 r \)</p>
+<ul>
+<li>For a <strong>Closed Pipe</strong> (1 open end): Effective length \( L_{eff} = L + e = L + 0.6r \)</li>
+<li>For an <strong>Open Pipe</strong> (2 open ends): Effective length \( L_{eff} = L + 2e = L + 1.2r \)</li>
+</ul><h4>End Correction Diagram</h4><svg class="panel" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<rect x="70" y="50" width="120" height="130" fill="none" stroke="#334155" stroke-width="3"/>
+<line x1="70" y1="180" x2="190" y2="180" stroke="#0f172a" stroke-width="5"/>
+
+<line x1="40" y1="20" x2="220" y2="20" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+<line x1="40" y1="50" x2="220" y2="50" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+<path d="M 70,20 Q 130,100 190,180" fill="none" stroke="#0284c7" stroke-width="2"/>
+<path d="M 190,20 Q 130,100 70,180" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="4,4"/>
+
+<circle cx="130" cy="20" r="3.5" fill="#10b981"/>
+<text x="138" y="24" font-size="11" fill="#10b981" font-weight="bold">Antinode (A)</text>
+<text x="195" y="40" font-size="11" fill="#ef4444" font-weight="bold">e = 0.6r</text>
+
+<line x1="205" y1="20" x2="205" y2="50" stroke="#ef4444" stroke-width="1"/>
+<line x1="210" y1="50" x2="210" y2="180" stroke="#334155" stroke-width="1"/>
+<text x="215" y="120" font-size="11" fill="#334155" font-weight="bold">L</text>
+</svg><h4>Corrected Frequency Formulas</h4><p><strong>Closed Pipe Fundamental:</strong></p>
+<p>\( f = \frac{v}{4(L + e)} = \frac{v}{4(L + 0.6r)} \)</p><p><strong>Open Pipe Fundamental:</strong></p>
+<p>\( f = \frac{v}{2(L + 2e)} = \frac{v}{2(L + 1.2r)} \)</p><h3>2. Determination of Speed of Sound using Resonance Tube Apparatus</h3><p>
+The <strong>Resonance Tube</strong> is an experimental setup consisting of a vertical glass tube open at the top and connected to a water reservoir. By raising or lowering the water reservoir, the length of the air column inside the tube (which acts as a closed organ pipe) is adjusted.
+</p><h4>Resonance Tube Setup</h4><svg class="panel" viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<path d="M 90,15 L 90,30 M 110,15 L 110,30 M 90,30 Q 100,38 110,30 M 100,35 L 100,45" stroke="#0284c7" stroke-width="3" fill="none"/>
+
+<path d="M 80,10 Q 100,2 120,10" fill="none" stroke="#0284c7" stroke-width="1.5"/>
+
+<rect x="75" y="50" width="50" height="200" fill="none" stroke="#334155" stroke-width="2.5"/>
+
+<rect x="76.5" y="160" width="47" height="89.5" fill="#bae6fd" opacity="0.8"/>
+<line x1="76.5" y1="160" x2="123.5" y2="160" stroke="#0284c7" stroke-width="2"/>
+
+<path d="M 75,50 Q 100,105 125,160" fill="none" stroke="#ef4444" stroke-width="2"/>
+<path d="M 125,50 Q 100,105 75,160" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3"/>
+
+<text x="135" y="105" font-size="11" fill="#0284c7" font-weight="bold">Air (l₁)</text>
+<text x="135" y="195" font-size="11" fill="#0369a1">Water</text>
+<line x1="50" y1="35" x2="50" y2="50" stroke="#ef4444" stroke-width="1"/>
+<text x="35" y="45" font-size="10" fill="#ef4444">e</text>
+</svg><p>Experimental Step-by-Step Derivation:</p><p>Let a tuning fork of known frequency \( f \) be vibrated over the mouth of the tube.</p><p><strong>1st Resonance Position (\( l_1 \)):</strong></p>
+<p>\( l_1 + e = \frac{\lambda}{4} \qquad (1) \)</p><p><strong>2nd Resonance Position (\( l_2 \)):</strong></p>
+<p>\( l_2 + e = \frac{3\lambda}{4} \qquad (2) \)</p><p>Subtracting Equation (1) from Equation (2):</p><p>\( (l_2 + e) - (l_1 + e) = \frac{3\lambda}{4} - \frac{\lambda}{4} \implies l_2 - l_1 = \frac{\lambda}{2} \implies \lambda = 2(l_2 - l_1) \)</p>
+<p>Therefore, the velocity of sound in air at room temperature \( t\,{}^\circ\text{C} \) is:</p><p>\( v = f \lambda = 2 f (l_2 - l_1) \)</p>
+<p>
+<strong>Determining End Correction from Experiment:</strong><br>
+Multiplying equation (1) by 3 and subtracting equation (2):
+<br>
+\( 3(l_1 + e) - (l_2 + e) = \frac{3\lambda}{4} - \frac{3\lambda}{4} = 0 \implies 3l_1 + 3e - l_2 - e = 0 \implies 2e = l_2 - 3l_1 \)
+<br>
+\( \mathbf{e = \frac{l_2 - 3l_1}{2}} \)
+</p><h2>Transverse Waves in Stretched Strings & Vibration Laws</h2>
+<h3>1. Velocity of Transverse Waves along a Stretched String</h3><p>
+When a stretched string is plucked transversely, transverse stationary waves are set up. The speed \( v \) of the transverse wave depends on the tension \( T \) in the string and its linear mass density \( \mu \) (mass per unit length):
+</p><div class="box definition">\( v = \sqrt{\frac{T}{\mu}} \)</div>
+<h4>Expressing Linear Mass Density (\( \mu \)) in terms of Radius and Density:</h4><p>
+\( \mu = \frac{\text{Mass}}{\text{Length}} = \frac{\text{Volume} \times \text{Density}}{\text{Length}} = \frac{(\pi r^2 L) \times \rho}{L} = \pi r^2 \rho \)
+</p><p>
+Where \( r = \) radius of wire cross-section, \( \rho = \) density of wire material.
+</p><p>
+\( \therefore v = \sqrt{\frac{T}{\pi r^2 \rho}} = \frac{1}{r} \sqrt{\frac{T}{\pi \rho}} \)
+</p><h3>2. Modes of Vibration and Overtones in Stretched String</h3><p>
+Since both ends of a fixed string of length \( L \) are clamped rigid, <strong>Nodes (N)</strong> are always formed at both boundaries \( x = 0 \) and \( x = L \).
+</p><h4>Vibration Modes of Fixed String</h4><svg class="panel" viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(20, 20)">
+
+<rect x="10" y="10" width="10" height="80" fill="#475569"/>
+<rect x="190" y="10" width="10" height="80" fill="#475569"/>
+<line x1="20" y1="50" x2="190" y2="50" stroke="#94a3b8" stroke-width="1"/>
+
+<path d="M 20,50 Q 105,10 190,50" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 20,50 Q 105,90 190,50" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="3,3"/>
+
+<circle cx="20" cy="50" r="3.5" fill="#ef4444"/>
+<circle cx="190" cy="50" r="3.5" fill="#ef4444"/>
+<circle cx="105" cy="50" r="3.5" fill="#10b981"/>
+<text x="105" y="115" font-size="11" text-anchor="middle" font-weight="bold" fill="#0f172a">(a) Fundamental Mode (n=1)</text>
+<text x="105" y="130" font-size="10" text-anchor="middle" fill="#475569">f₁ = (1/2L)√(T/μ)</text>
+</g>
+
+<g transform="translate(250, 20)">
+<rect x="10" y="10" width="10" height="80" fill="#475569"/>
+<rect x="190" y="10" width="10" height="80" fill="#475569"/>
+<path d="M 20,50 Q 62.5,10 105,50 Q 147.5,90 190,50" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 20,50 Q 62.5,90 105,50 Q 147.5,10 190,50" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="3,3"/>
+<text x="105" y="115" font-size="11" text-anchor="middle" font-weight="bold" fill="#0f172a">(b) 1st Overtone (2nd Harm.)</text>
+<text x="105" y="130" font-size="10" text-anchor="middle" fill="#475569">f₂ = 2 f₁</text>
+</g>
+
+<g transform="translate(480, 20)">
+<rect x="10" y="10" width="10" height="80" fill="#475569"/>
+<rect x="190" y="10" width="10" height="80" fill="#475569"/>
+<path d="M 20,50 Q 48,10 76,50 Q 105,90 133,50 Q 161,10 190,50" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+<path d="M 20,50 Q 48,90 76,50 Q 105,10 133,50 Q 161,90 190,50" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-dasharray="3,3"/>
+<text x="105" y="115" font-size="11" text-anchor="middle" font-weight="bold" fill="#0f172a">(c) 2nd Overtone (3rd Harm.)</text>
+<text x="105" y="130" font-size="10" text-anchor="middle" fill="#475569">f₃ = 3 f₁</text>
+</g>
+</svg><h5>Fundamental Mode (n=1)</h5><p>\( L = \frac{\lambda_1}{2} \implies \lambda_1 = 2L \)</p><p>\( f_1 = \frac{1}{2L}\sqrt{\frac{T}{\mu}} \)</p><h5>1st Overtone (n=2)</h5><p>\( L = \lambda_2 \implies \lambda_2 = L \)</p><p>\( f_2 = \frac{2}{2L}\sqrt{\frac{T}{\mu}} = 2f_1 \)</p><h5>2nd Overtone (n=3)</h5><p>\( L = \frac{3\lambda_3}{2} \implies \lambda_3 = \frac{2L}{3} \)</p><p>\( f_3 = \frac{3}{2L}\sqrt{\frac{T}{\mu}} = 3f_1 \)</p><p>General Formula for \(n\)-th Harmonic: \( f_n = \frac{n}{2L}\sqrt{\frac{T}{\mu}} = n f_1 \)
+<br>
+
+Frequency ratio: \( f_1 : f_2 : f_3 : \dots = 1 : 2 : 3 : 4 : \dots \) (All harmonics present)</p>
+<h3>3. Laws of Transverse Vibration of Fixed String</h3><p>
+From the fundamental frequency equation \( f = \frac{1}{2L}\sqrt{\frac{T}{\mu}} = \frac{1}{2L r}\sqrt{\frac{T}{\pi \rho}} \), the following five laws are derived:
+</p><p><strong>1. Law of Length:</strong></p>
+<p>
+Fundamental frequency is inversely proportional to resonating length when \( T \) and \( \mu \) are constant.
+</p><p>\( f \propto \frac{1}{L} \implies f L = \text{constant} \)</p><p><strong>2. Law of Tension:</strong></p>
+<p>
+Fundamental frequency is directly proportional to the square root of tension when \( L \) and \( \mu \) are constant.
+</p><p>\( f \propto \sqrt{T} \implies \frac{f}{\sqrt{T}} = \text{constant} \)</p><p><strong>3. Law of Linear Mass Density:</strong></p>
+<p>
+Fundamental frequency is inversely proportional to square root of linear mass density when \( L \) and \( T \) are constant.
+</p><p>\( f \propto \frac{1}{\sqrt{\mu}} \)</p><p><strong>4. Law of Radius:</strong></p>
+<p>
+Fundamental frequency is inversely proportional to radius of wire when \( L, T, \rho \) are constant.
+</p><p>\( f \propto \frac{1}{r} \)</p><p><strong>5. Law of Material Density:</strong></p>
+<p>
+Fundamental frequency is inversely proportional to square root of wire material density when \( L, T, r \) are constant.
+</p><p>\( f \propto \frac{1}{\sqrt{\rho}} \)</p><h3>4. Sonometer Apparatus Experimental Verification</h3><p>
+A <strong>Sonometer</strong> consists of a hollow rectangular wooden soundbox (to amplify sound by forced vibration) with a fixed pulley at one end. A uniform metallic wire fixed at one end passes over two movable knife-edge wooden bridges (\(A\) and \(B\)) and a smooth pulley, carrying a hanger with weights (\(M\)) to provide tension \(T = M g\).
+</p><h4>Sonometer Experimental Setup</h4><svg class="panel" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<rect x="50" y="90" width="500" height="70" fill="#fde68a" stroke="#b45309" stroke-width="2.5" rx="4"/>
+
+<circle cx="180" cy="125" r="12" fill="#78350f"/>
+<circle cx="420" cy="125" r="12" fill="#78350f"/>
+
+<rect x="35" y="80" width="15" height="20" fill="#475569"/>
+
+<polygon points="150,90 160,65 170,90" fill="#92400e"/>
+<polygon points="450,90 460,65 470,90" fill="#92400e"/>
+<text x="160" y="105" font-size="10" text-anchor="middle" font-weight="bold">Bridge A</text>
+<text x="460" y="105" font-size="10" text-anchor="middle" font-weight="bold">Bridge B</text>
+
+<polygon points="300,58 305,65 295,65" fill="#ef4444"/>
+<text x="300" y="48" font-size="10" text-anchor="middle" fill="#ef4444" font-weight="bold">Paper Rider</text>
+
+<circle cx="570" cy="90" r="18" fill="#64748b" stroke="#334155" stroke-width="2"/>
+<circle cx="570" cy="90" r="4" fill="#0f172a"/>
+
+<line x1="45" y1="85" x2="160" y2="65" stroke="#0284c7" stroke-width="2.5"/>
+<line x1="160" y1="65" x2="460" y2="65" stroke="#0284c7" stroke-width="2.5"/>
+<line x1="460" y1="65" x2="570" y2="72" stroke="#0284c7" stroke-width="2.5"/>
+
+<line x1="588" y1="90" x2="588" y2="160" stroke="#0284c7" stroke-width="2.5"/>
+<rect x="573" y="160" width="30" height="8" fill="#334155"/>
+<rect x="578" y="168" width="20" height="30" fill="#64748b" rx="2"/>
+<text x="588" y="188" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">M</text>
+
+<line x1="160" y1="35" x2="460" y2="35" stroke="#0284c7" stroke-width="1.5"/>
+<text x="310" y="30" font-size="11" fill="#0284c7" text-anchor="middle" font-weight="bold">Resonating Length (L)</text>
+</svg><p><strong>Paper Rider Resonance Detection Method:</strong></p>
+<p>
+A light inverted 'V' shaped paper rider is placed at the center of wire segment \(AB\). A vibrating tuning fork of known frequency \(f\) is touched to the soundbox. The bridge \(B\) is moved slowly until the paper rider violently flutter and falls off. This indicates maximum resonance amplitude, confirming that the fundamental frequency of string segment \(AB\) matches the frequency of the tuning fork.
+</p><h2>Solved Numerical Examples</h2>
+<p>NEB Board Exam High Yield
+Resonance Tube Numerical</p>
+<h3>Numerical 1: Resonance Tube Speed of Sound & End Correction</h3><p>
+"In a resonance tube experiment, a tuning fork of frequency \(512\text{ Hz}\) produces first resonance at length \(15.8\text{ cm}\) and second resonance at length \(48.2\text{ cm}\). Calculate: (a) Speed of sound in air, (b) End correction of the tube, and (c) Internal radius of the tube."
+</p><p>Step-by-Step Solution:</p><p><strong>Given Data:</strong></p><ul>
+<li>Frequency of tuning fork, \(f = 512\text{ Hz}\)</li>
+<li>First resonating length, \(l_1 = 15.8\text{ cm} = 0.158\text{ m}\)</li>
+<li>Second resonating length, \(l_2 = 48.2\text{ cm} = 0.482\text{ m}\)</li>
+</ul><p><strong>(a) Speed of Sound (\(v\)):</strong></p><p>
+\( v = 2 f (l_2 - l_1) = 2 \times 512 \times (0.482 - 0.158) \)
+</p><p>
+\( v = 1024 \times 0.324 = \mathbf{331.78\text{ m/s}} \)
+</p><p><strong>(b) End Correction (\(e\)):</strong></p><p>
+\( e = \frac{l_2 - 3 l_1}{2} = \frac{48.2 - 3(15.8)}{2} = \frac{48.2 - 47.4}{2} = \frac{0.8}{2} = \mathbf{0.4\text{ cm}} = 0.004\text{ m} \)
+</p><p><strong>(c) Internal Radius (\(r\)):</strong></p><p>
+Using Rayleigh formula \( e = 0.6 r \implies r = \frac{e}{0.6} = \frac{0.4}{0.6} = \mathbf{0.67\text{ cm}} \)
+</p><p>NEB Board Exam High Yield
+Open vs Closed Pipe Comparison</p>
+<h3>Numerical 2: Equal Frequency Pipe Length Relation</h3><p>
+"An open organ pipe has a fundamental frequency equal to the third harmonic (1st overtone) of a closed organ pipe. If the length of the closed pipe is \(60\text{ cm}\), calculate the length of the open pipe (neglecting end correction)."
+</p><p>Step-by-Step Solution:</p><p><strong>Given Data:</strong></p><ul>
+<li>Length of closed pipe, \(L_c = 60\text{ cm} = 0.60\text{ m}\)</li>
+<li>Fundamental frequency of open pipe, \(f_{1,open} = \frac{v}{2 L_o}\)</li>
+<li>Third harmonic of closed pipe, \(f_{3,closed} = \frac{3 v}{4 L_c}\)</li>
+</ul><p>According to the problem condition: \(f_{1,open} = f_{3,closed}\)</p><p>
+\( \frac{v}{2 L_o} = \frac{3 v}{4 L_c} \)
+</p><p>
+Canceling \(v\) from both sides: \( \frac{1}{2 L_o} = \frac{3}{4 L_c} \implies 3 \times 2 L_o = 4 L_c \implies L_o = \frac{2}{3} L_c \)
+</p><p>
+\( L_o = \frac{2}{3} \times 60\text{ cm} = \mathbf{40\text{ cm}} = 0.40\text{ m} \)
+</p><p>NEB Board Exam High Yield
+Sonometer Wire Frequency</p>
+<h3>Numerical 3: Sonometer Wire Frequency & Mass</h3><p>
+"A steel wire of length \(1\text{ m}\) and mass \(5\text{ g}\) is stretched with a tension of \(400\text{ N}\). Find: (a) Speed of transverse wave on wire, (b) Fundamental frequency, and (c) Frequency of its 2nd overtone."
+</p><p>Step-by-Step Solution:</p><ul>
+<li>Length \(L = 1\text{ m}\), Mass \(m = 5\text{ g} = 0.005\text{ kg}\)</li>
+<li>Linear mass density \( \mu = \frac{m}{L} = \frac{0.005\text{ kg}}{1\text{ m}} = 0.005\text{ kg/m} \)</li>
+<li>Tension \(T = 400\text{ N}\)</li>
+</ul><p><strong>(a) Wave Speed (\(v\)):</strong></p><p>
+\( v = \sqrt{\frac{T}{\mu}} = \sqrt{\frac{400}{0.005}} = \sqrt{80000} = \mathbf{282.84\text{ m/s}} \)
+</p><p><strong>(b) Fundamental Frequency (\(f_1\)):</strong></p><p>
+\( f_1 = \frac{v}{2L} = \frac{282.84}{2 \times 1} = \mathbf{141.42\text{ Hz}} \)
+</p><p><strong>(c) Frequency of 2nd Overtone (\(f_3 = 3rd\text{ harmonic}\)):</strong></p><p>
+\( f_3 = 3 f_1 = 3 \times 141.42 = \mathbf{424.26\text{ Hz}} \)
+</p><h2>Conceptual Questions & Practice Problems</h2>
+<h3>NEB Conceptual Short Questions (With Answers)</h3><details class="solution"><summary>Q1: Why is sound produced by an open organ pipe richer than that by a closed organ pipe?</summary>
+<p>
+<strong>NEB Board Answer:</strong> In an open organ pipe, all harmonics (both even and odd: \(1f_1, 2f_1, 3f_1, 4f_1 \dots\)) are generated. In contrast, a closed organ pipe produces only odd harmonics (\(1f_1, 3f_1, 5f_1 \dots\)). Because the presence of a greater number of harmonic overtones enriches the quality and timbre of sound, an open organ pipe produces a richer and more pleasing musical sound.
+</p></details>
+<details class="solution"><summary>Q2: What happens to the fundamental frequency of an organ pipe if temperature increases?</summary>
+<p>
+<strong>NEB Board Answer:</strong> The velocity of sound in air increases with temperature (\(v \propto \sqrt{T_K}\)). Since fundamental frequency \(f = \frac{v}{2L}\) (open) or \(f = \frac{v}{4L}\) (closed) is directly proportional to speed of sound \(v\), as temperature rises, speed of sound increases, and consequently the fundamental frequency of the organ pipe increases (pitch becomes higher).
+</p></details>
+<details class="solution"><summary>Q3: Why are sound holes provided in the wooden soundbox of a sonometer?</summary>
+<p>
+<strong>NEB Board Answer:</strong> Sound holes allow the air inside the hollow wooden soundbox to communicate with the outside atmosphere and set a larger volume of air into forced vibrations, significantly amplifying the loudness of the sound produced by the vibrating string.
+</p></details>

@@ -23,9 +23,9 @@ File names: lowercase words joined by hyphens, e.g. `lenses-mcq.json`, `refracti
 1. Open the repository on GitHub → `src/lessons` → **Add file → Create new file**.
 2. Name it (e.g. `alternating-current-mcq.json`) and paste the content.
 3. Click **Commit changes**. Vercel rebuilds the site within about a minute.
-4. If something is wrong in the file, the Vercel build fails. The live site then **stays as
-   it was**, and the build log lists every problem in plain English
-   (e.g. `question 12: two options are identical`).
+4. If something is wrong in the file, **that lesson is left off the site** (everything else still
+   updates). The Vercel build log and the red ✗ on the GitHub commit list every problem in plain
+   English (e.g. `question 12: two options are identical`). Fix the file and it appears on the next build.
 
 To check files on your own computer first, run `python build.py --check`.
 

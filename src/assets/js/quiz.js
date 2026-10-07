@@ -10,7 +10,8 @@
   const bar = quiz.querySelector('.progress span');
   const filter = quiz.querySelector('[data-filter]');
   const result = quiz.querySelector('.result');
-  const key = 'pd-quiz:' + quiz.dataset.quiz;
+  // v2: options are shown in a shuffled order since 2026-10-07, so answers saved before then no longer line up
+  const key = 'pd-quiz-v2:' + quiz.dataset.quiz;
 
   // state[i] = index of the chosen option, or undefined
   let state = {};
@@ -83,7 +84,11 @@
   });
 
   quiz.querySelector('[data-action="shuffle"]').addEventListener('click', () => {
-    const order = items.slice().sort(() => Math.random() - 0.5);
+    const order = items.slice();
+    for (let i = order.length - 1; i > 0; i--) {  // Fisher–Yates: every order equally likely
+      const j = Math.floor(Math.random() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
     order.forEach((li, n) => { li.querySelector('.q-num').textContent = (n + 1) + '.'; list.appendChild(li); });
   });
 

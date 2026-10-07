@@ -13,4 +13,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Validate and build the site
-        run: python build.py
+        run: python build.py --strict

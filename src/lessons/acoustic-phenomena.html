@@ -1,844 +1,249 @@
 ---
-title: Acoustioc Phenomena
+title: Acoustic Phenomena
 grade: XII
 chapters: [5]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade XII Physics - Unit 9: Acoustic Phenomena</title>
-    
-    <!-- MathJax Configuration for Crisp LaTeX Equations -->
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-
-    <style>
-        /* Base Reset & Core Layout Styles */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            color: #1e293b;
-            background-color: #f8fafc;
-            line-height: 1.6;
-            font-size: 15px;
-            padding-bottom: 40px;
-        }
-
-        /* Compact Top Banner */
-        .top-banner {
-            background-color: #0f172a;
-            color: #f8fafc;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 3px solid #2563eb;
-            font-family: system-ui, -apple-system, sans-serif;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .top-banner-title {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            color: #38bdf8;
-        }
-
-        .top-banner-subtitle {
-            font-size: 13px;
-            color: #cbd5e1;
-            font-weight: 500;
-        }
-
-        .badge {
-            background-color: #2563eb;
-            color: #ffffff;
-            font-size: 11px;
-            font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 900px;
-            margin: 24px auto;
-            background: #ffffff;
-            padding: 32px 40px;
-            border-radius: 6px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Typography & Section Titles */
-        h1.document-title {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 22px;
-            font-weight: 800;
-            color: #0f172a;
-            border-bottom: 2px solid #0f172a;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: -0.01em;
-        }
-
-        h2.section-header {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            color: #1e3a8a;
-            background: #eff6ff;
-            border-left: 4px solid #2563eb;
-            padding: 8px 12px;
-            margin: 28px 0 14px 0;
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
-        }
-
-        h3.subsection-header {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 18px 0 8px 0;
-            border-bottom: 1px solid #cbd5e1;
-            padding-bottom: 3px;
-        }
-
-        p {
-            margin-bottom: 12px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-
-        ul, ol {
-            margin: 0 0 14px 24px;
-        }
-
-        li {
-            margin-bottom: 4px;
-        }
-
-        /* Formula & Concept Callouts */
-        .law-box {
-            background-color: #f8fafc;
-            border: 1px solid #cbd5e1;
-            border-left: 4px solid #0284c7;
-            padding: 12px 16px;
-            margin: 14px 0;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .law-title {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 700;
-            font-size: 13px;
-            color: #0369a1;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        .formula-box {
-            background-color: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            border-radius: 6px;
-            padding: 12px;
-            text-align: center;
-            margin: 14px 0;
-            color: #14532d;
-            font-weight: 600;
-        }
-
-        .derivation-step {
-            background-color: #fafafa;
-            border: 1px dashed #cbd5e1;
-            padding: 12px 16px;
-            margin: 12px 0;
-            border-radius: 4px;
-        }
-
-        /* High-Contrast SVG Diagram Containers */
-        .diagram-container {
-            background-color: #ffffff;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            padding: 16px;
-            margin: 18px 0;
-            text-align: center;
-        }
-
-        .diagram-caption {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-size: 12px;
-            color: #475569;
-            margin-top: 8px;
-            font-style: italic;
-            font-weight: 500;
-        }
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-            font-size: 13.5px;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
-
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 8px 12px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f1f5f9;
-            color: #0f172a;
-            font-weight: 700;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        /* Solved Example Cards */
-        .example-card {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-top: 3px solid #2563eb;
-            border-radius: 4px;
-            padding: 14px 18px;
-            margin: 16px 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .example-title {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 700;
-            font-size: 13.5px;
-            color: #1e3a8a;
-            margin-bottom: 6px;
-        }
-
-        /* Interactive Accordions for Practice Questions */
-        details {
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            padding: 8px 12px;
-            margin: 8px 0;
-        }
-
-        summary {
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 600;
-            font-size: 13.5px;
-            color: #0f172a;
-            cursor: pointer;
-            outline: none;
-        }
-
-        summary:hover {
-            color: #2563eb;
-        }
-
-        .solution-content {
-            margin-top: 8px;
-            padding-top: 8px;
-            border-top: 1px solid #cbd5e1;
-            font-size: 13.5px;
-        }
-
-        /* Print Media Styling for A4 Output */
-        @media print {
-            body {
-                background: #ffffff !important;
-                color: #000000 !important;
-                padding: 0 !important;
-                font-size: 12pt !important;
-            }
-
-            .top-banner {
-                background: #ffffff !important;
-                color: #000000 !important;
-                border-bottom: 2px solid #000000 !important;
-                position: static !important;
-                padding: 5px 0 !important;
-            }
-
-            .top-banner-title { color: #000000 !important; }
-            .top-banner-subtitle { color: #333333 !important; }
-            .badge { border: 1px solid #000000; color: #000; background: none; }
-
-            .container {
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                border: none !important;
-                box-shadow: none !important;
-            }
-
-            .section-header {
-                background: none !important;
-                border-left: 3px solid #000 !important;
-                color: #000 !important;
-                padding: 4px 8px !important;
-            }
-
-            .law-box, .formula-box, .example-card, .diagram-container {
-                border: 1px solid #000 !important;
-                background: none !important;
-                box-shadow: none !important;
-            }
-
-            details {
-                border: 1px solid #000 !important;
-                background: none !important;
-            }
-
-            details > * {
-                display: block !important;
-            }
-
-            summary {
-                font-weight: bold;
-            }
-
-            svg {
-                max-width: 100% !important;
-                page-break-inside: avoid;
-            }
-
-            .page-break {
-                page-break-before: always;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Compact Top Banner -->
-    <header class="top-banner">
-        <div>
-            <div class="top-banner-title">NEB Grade XII Physics </div>
-            <div class="top-banner-subtitle">Unit 9: Acoustic Phenomena (Complete Theoretical & Mathematical Content)</div>
-        </div>
-        <span class="badge"></span>
-    </header>
-
-    <div class="container">
-        <!-- Main Document Header -->
-        <h1 class="document-title">Unit 9: Acoustic Phenomena</h1>
-
-        <!-- ==========================================
-             SECTION 9.1: SOUND WAVES AS PRESSURE WAVES
-             ========================================== -->
-        <h2 class="section-header">9.1 Sound Waves as Pressure Waves in a Medium</h2>
-        
-        <p>A sound wave is a mechanical, longitudinal wave that propagates through an elastic medium (such as air, liquids, or solids) via periodic compressions and rarefactions. As the wave travels through the medium, the individual particles oscillate parallel to the direction of wave propagation about their equilibrium positions.</p>
-
-        <p>While sound waves are frequently characterized by particle <em>displacement</em> $y(x,t)$, human ears and acoustic sensors respond directly to fluctuations in <em>pressure</em> $p(x,t)$ relative to atmospheric pressure $P_0$. Consequently, sound waves are fundamentally analyzed as <strong>pressure waves</strong> in fluid mechanics and acoustics.</p>
-
-        <h3 class="subsection-header">Mathematical Derivation of the Pressure Wave Equation</h3>
-        <p>Consider a long, cylindrical tube of cross-sectional area $A$ containing a fluid medium of undisturbed density $\rho$ and Bulk Modulus $B$. Suppose a longitudinal sound wave travels along the positive $x$-axis through the fluid.</p>
-
-        <div class="diagram-container">
-            <!-- High-Contrast SVG Vector Diagram: Fluid Element & Waveform Alignment -->
-            <svg width="800" height="280" viewBox="0 0 800 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Background Grid Lines -->
-                <line x1="50" y1="40" x2="750" y2="40" stroke="#cbd5e1" stroke-dasharray="4 4" />
-                <line x1="50" y1="120" x2="750" y2="120" stroke="#cbd5e1" stroke-dasharray="4 4" />
-                <line x1="50" y1="200" x2="750" y2="200" stroke="#cbd5e1" stroke-dasharray="4 4" />
-
-                <!-- Cylinder / Pipe Diagram showing Air Particle Density -->
-                <rect x="50" y="20" width="700" height="40" rx="3" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
-                
-                <!-- Compressions & Rarefactions Shading -->
-                <!-- Compression 1 around x=225 -->
-                <rect x="180" y="21" width="90" height="38" fill="#94a3b8" fill-opacity="0.6"/>
-                <!-- Compression 2 around x=575 -->
-                <rect x="530" y="21" width="90" height="38" fill="#94a3b8" fill-opacity="0.6"/>
-
-                <text x="225" y="44" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">COMPRESSION (C)</text>
-                <text x="400" y="44" font-family="sans-serif" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle">RAREFACTION (R)</text>
-                <text x="575" y="44" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">COMPRESSION (C)</text>
-
-                <!-- Displacement Wave Curve y(x) -->
-                <!-- Sine wave: y(x) = A sin(kx) -->
-                <path d="M 50,120 Q 137.5,60 225,120 T 400,120 T 575,120 T 750,120" stroke="#2563eb" stroke-width="2.5" fill="none"/>
-                <text x="760" y="124" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2563eb">y(x)</text>
-                
-                <!-- Pressure Fluctuation Curve p(x) -->
-                <!-- Cosine wave: p(x) = -p_m cos(kx) -> leads/lags by 90 deg -->
-                <path d="M 50,240 Q 137.5,200 225,160 T 400,240 T 575,160 T 750,240" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 3" fill="none"/>
-                <text x="760" y="204" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626">p(x)</text>
-
-                <!-- Reference Vertical Alignment Lines -->
-                <line x1="225" y1="20" x2="225" y2="250" stroke="#dc2626" stroke-width="1" stroke-dasharray="2 2"/>
-                <line x1="400" y1="20" x2="400" y2="250" stroke="#2563eb" stroke-width="1" stroke-dasharray="2 2"/>
-                <line x1="575" y1="20" x2="575" y2="250" stroke="#dc2626" stroke-width="1" stroke-dasharray="2 2"/>
-
-                <!-- Labels for Nodes and Antinodes -->
-                <circle cx="225" cy="120" r="4" fill="#2563eb"/>
-                <text x="225" y="110" font-family="sans-serif" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="bold">Displacement Node (y=0)</text>
-                
-                <circle cx="225" cy="160" r="4" fill="#dc2626"/>
-                <text x="225" y="152" font-family="sans-serif" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="bold">Pressure Antinode (+p_m)</text>
-
-                <circle cx="400" cy="120" r="4" fill="#2563eb"/>
-                <text x="400" y="110" font-family="sans-serif" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="bold">Displacement Node (y=0)</text>
-
-                <circle cx="400" cy="240" r="4" fill="#dc2626"/>
-                <text x="400" y="255" font-family="sans-serif" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="bold">Pressure Antinode (−p_m)</text>
-            </svg>
-            <div class="diagram-caption">Figure 9.1: Spatial distribution of particle displacement $y(x)$, excess pressure $p(x)$, and corresponding compressions and rarefactions in a fluid pipe. Note the $90^\circ$ ($\pi/2\text{ rad}$) phase difference.</div>
-        </div>
-
-        <div class="derivation-step">
-            <p><strong>Step 1: Volumetric Strain of a Fluid Element</strong></p>
-            <p>Consider an undisturbed slice of fluid between position $x$ and $x + \Delta x$. The initial volume of this slice is:</p>
-            $$V = A \cdot \Delta x$$
-            <p>When the displacement wave passes through, the boundary at $x$ moves by $y(x,t)$, and the boundary at $x + \Delta x$ moves by $y(x + \Delta x, t)$. Using Taylor series expansion for small $\Delta x$:</p>
-            $$y(x + \Delta x, t) \approx y(x,t) + \frac{\partial y}{\partial x} \Delta x$$
-            <p>The new thickness of the fluid slice becomes $\Delta x' = \Delta x + \left(y + \frac{\partial y}{\partial x} \Delta x\right) - y = \Delta x + \frac{\partial y}{\partial x} \Delta x$.</p>
-            <p>Therefore, the change in volume $\Delta V$ is given by:</p>
-            $$\Delta V = A \cdot \left(\frac{\partial y}{\partial x} \Delta x\right)$$
-            <p>The fractional volumetric strain is:</p>
-            $$\text{Volumetric Strain} = \frac{\Delta V}{V} = \frac{A \frac{\partial y}{\partial x} \Delta x}{A \Delta x} = \frac{\partial y}{\partial x}$$
-        </div>
-
-        <div class="derivation-step">
-            <p><strong>Step 2: Linking Bulk Modulus to Pressure Fluctuation</strong></p>
-            <p>By definition, the <strong>Bulk Modulus ($B$)</strong> of a medium is the ratio of volumetric stress (excess pressure $p$) to volumetric strain:</p>
-            $$B = -\frac{p}{\Delta V / V} = -\frac{p}{\left(\frac{\partial y}{\partial x}\right)}$$
-            <p>Rearranging this yields the fundamental relation between excess pressure $p(x,t)$ and the displacement gradient:</p>
-            <div class="formula-box">
-                $$p(x,t) = -B \frac{\partial y}{\partial x}$$
-            </div>
-            <p><em>Physical Significance of the Negative Sign:</em> When $\frac{\partial y}{\partial x} < 0$, adjacent fluid particles converge, volume decreases ($\Delta V < 0$), causing a positive pressure spike ($p > 0$, Compression). Conversely, when $\frac{\partial y}{\partial x} > 0$, volume increases, causing pressure to drop ($p < 0$, Rarefaction).</p>
-        </div>
-
-        <div class="derivation-step">
-            <p><strong>Step 3: Deriving Pressure Wave Equation and Peak Pressure Amplitude ($p_m$)</strong></p>
-            <p>Assume a simple harmonic displacement wave propagating along the $+x$-direction:</p>
-            $$y(x,t) = A \sin(kx - \omega t)$$
-            <p>where $A$ is displacement amplitude, $k = \frac{2\pi}{\lambda}$ is wave number, and $\omega = 2\pi f$ is angular frequency.</p>
-            <p>Differentiating $y(x,t)$ partially with respect to $x$:</p>
-            $$\frac{\partial y}{\partial x} = A k \cos(kx - \omega t)$$
-            <p>Substituting into the excess pressure equation:</p>
-            $$p(x,t) = -B A k \cos(kx - \omega t)$$
-            <p>Using trigonometric identity $-\cos(\theta) = \sin\left(\theta - \frac{\pi}{2}\right)$, we rewrite the pressure wave as:</p>
-            $$p(x,t) = p_m \sin\left(kx - \omega t - \frac{\pi}{2}\right)$$
-            <p>where the <strong>Maximum Pressure Amplitude ($p_m$)</strong> is defined as:</p>
-            $$p_m = B k A$$
-            <p>Since wave velocity $v = \sqrt{\frac{B}{\rho}} \implies B = \rho v^2$, and $k = \frac{\omega}{v}$, we can express $p_m$ directly in terms of density $\rho$ and wave speed $v$:</p>
-            <div class="formula-box">
-                $$p_m = (\rho v^2) \left(\frac{\omega}{v}\right) A = \rho v \omega A$$
-            </div>
-        </div>
-
-        <div class="law-box">
-            <div class="law-title">Summary of Phase Relationship</div>
-            <ul>
-                <li>The pressure wave $p(x,t)$ is $\frac{\pi}{2}\text{ radians } (90^\circ)$ out of phase with the displacement wave $y(x,t)$.</li>
-                <li><strong>Displacement Nodes ($y = 0$):</strong> Occur where $\frac{\partial y}{\partial x}$ is maximum. At these points, pressure variation is maximum ($\pm p_m$), representing <strong>Pressure Antinodes</strong>.</li>
-                <li><strong>Displacement Antinodes ($y = \pm A$):</strong> Occur where $\frac{\partial y}{\partial x} = 0$. At these points, excess pressure is zero ($p = 0$), representing <strong>Pressure Nodes</strong>.</li>
-            </ul>
-        </div>
-
-        <!-- ==========================================
-             SECTION 9.2: CHARACTERISTICS OF SOUND WAVES
-             ========================================== -->
-        <h2 class="section-header">9.2 Characteristics of Sound Waves</h2>
-        <p>A acoustic wave is physically characterized by three distinct perceptual properties: <strong>Loudness</strong> (related to intensity), <strong>Pitch</strong> (related to frequency), and <strong>Quality or Timbre</strong> (related to harmonic content).</p>
-
-        <h3 class="subsection-header">1. Sound Intensity ($I$) and Derivation</h3>
-        <p><strong>Sound Intensity ($I$)</strong> is defined as the average rate of sound energy transported by a wave per unit area perpendicular to the direction of wave propagation.</p>
-        $$\text{Intensity } (I) = \frac{\text{Energy}}{\text{Area} \times \text{Time}} = \frac{\text{Power } (P)}{\text{Area } (A)}$$
-        <p>SI Unit: $\text{W/m}^2$ (Watts per square meter). Dimensional Formula: $[M^1 L^0 T^{-3}]$.</p>
-
-        <div class="derivation-step">
-            <p><strong>Mathematical Derivation of Intensity Expression:</strong></p>
-            <p>Consider a volume element of fluid of density $\rho$, area $A$, and length $\Delta x = v \cdot \Delta t$. The mass of fluid in this volume is $m = \rho A v \Delta t$.</p>
-            <p>Each fluid particle executes Simple Harmonic Motion with angular frequency $\omega$ and amplitude $A_{disp}$. The total mechanical energy $E$ of SHM is:</p>
-            $$E = \frac{1}{2} m \omega^2 A_{disp}^2 = \frac{1}{2} (\rho A v \Delta t) \omega^2 A_{disp}^2$$
-            <p>Dividing total energy $E$ by area $A$ and time interval $\Delta t$ yields the sound intensity:</p>
-            $$I = \frac{E}{A \Delta t} = \frac{1}{2} \rho v \omega^2 A_{disp}^2$$
-            <p>Using the pressure amplitude formula derived earlier ($p_m = \rho v \omega A_{disp} \implies A_{disp} = \frac{p_m}{\rho v \omega}$), we substitute $A_{disp}$ into the intensity formula:</p>
-            $$I = \frac{1}{2} \rho v \omega^2 \left(\frac{p_m}{\rho v \omega}\right)^2$$
-            <div class="formula-box">
-                $$I = \frac{p_m^2}{2 \rho v}$$
-            </div>
-            <p>This shows that <em>sound intensity is directly proportional to the square of pressure amplitude</em> ($I \propto p_m^2$). The product $Z = \rho v$ is known as the <strong>Specific Acoustic Impedance</strong> of the medium.</p>
-        </div>
-
-        <h3 class="subsection-header">The Inverse Square Law</h3>
-        <p>For an isotropic point source emitting sound power $P$ uniformly in all directions in a lossless medium, the energy spreads over concentric spherical surfaces of area $A = 4\pi r^2$:</p>
-        $$I = \frac{P}{4\pi r^2} \implies I \propto \frac{1}{r^2}$$
-        <p>Hence, sound intensity decreases inversely as the square of the distance from a point source.</p>
-
-        <div class="diagram-container">
-            <!-- High-Contrast SVG Diagram: Inverse Square Law & Waveform Timbre -->
-            <svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Left Side: Inverse Square Law Geometry -->
-                <g transform="translate(20, 10)">
-                    <circle cx="40" cy="90" r="6" fill="#dc2626"/>
-                    <text x="40" y="112" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">Source (S)</text>
-
-                    <!-- Spherical Wavefront Arcs -->
-                    <path d="M 120,30 A 90 90 0 0 1 120,150" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 2" fill="none"/>
-                    <path d="M 220,10 A 180 180 0 0 1 220,170" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 2" fill="none"/>
-
-                    <!-- Rays -->
-                    <line x1="40" y1="90" x2="250" y2="20" stroke="#64748b" stroke-width="1.5"/>
-                    <line x1="40" y1="90" x2="250" y2="160" stroke="#64748b" stroke-width="1.5"/>
-
-                    <!-- Surface Areas -->
-                    <rect x="115" y="65" width="10" height="50" fill="#bfdbfe" stroke="#0284c7" stroke-width="1.5"/>
-                    <text x="120" y="58" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0369a1" text-anchor="middle">A₁ (r₁)</text>
-
-                    <rect x="215" y="40" width="10" height="100" fill="#bfdbfe" stroke="#0284c7" stroke-width="1.5"/>
-                    <text x="220" y="32" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0369a1" text-anchor="middle">A₂ = 4A₁ (r₂=2r₁)</text>
-                    
-                    <text x="140" y="180" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Intensity I ∝ 1/r²</text>
-                </g>
-
-                <!-- Vertical Divider -->
-                <line x1="380" y1="10" x2="380" y2="190" stroke="#cbd5e1" stroke-width="2"/>
-
-                <!-- Right Side: Waveforms for Timbre / Quality -->
-                <g transform="translate(410, 10)">
-                    <text x="0" y="18" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0f172a">Waveforms (Quality / Timbre):</text>
-                    
-                    <!-- Tuning Fork Pure Sine -->
-                    <path d="M 20,45 Q 45,25 70,45 T 120,45 T 170,45 T 220,45" stroke="#16a34a" stroke-width="2" fill="none"/>
-                    <text x="235" y="48" font-family="sans-serif" font-size="10" fill="#16a34a" font-weight="bold">Tuning Fork (Pure Tone)</text>
-
-                    <!-- Flute Fundamental + Overtones -->
-                    <path d="M 20,105 Q 35,75 50,105 T 80,105 T 110,105 T 140,105 T 170,105 T 200,105" stroke="#2563eb" stroke-width="2" fill="none"/>
-                    <text x="235" y="108" font-family="sans-serif" font-size="10" fill="#2563eb" font-weight="bold">Flute (Few Harmonics)</text>
-
-                    <!-- Violin Rich Waveform -->
-                    <path d="M 20,165 L 35,140 L 45,175 L 60,165 L 75,140 L 85,175 L 100,165 L 115,140 L 125,175 L 140,165" stroke="#dc2626" stroke-width="2" fill="none"/>
-                    <text x="235" y="168" font-family="sans-serif" font-size="10" fill="#dc2626" font-weight="bold">Violin (Rich Complex Harmonics)</text>
-                </g>
-            </svg>
-            <div class="diagram-caption">Figure 9.2: Left: Geometric spreading of sound energy illustrating the Inverse Square Law. Right: Comparison of acoustic waveforms produced by different instruments playing the same fundamental pitch.</div>
-        </div>
-
-        <h3 class="subsection-header">2. Loudness ($L$), Weber-Fechner Law, and the Decibel Scale</h3>
-        <p><strong>Loudness ($L$)</strong> is the subjective human physiological sensation of sound magnitude. Unlike objective physical intensity ($I$), loudness depends on the ear's sensitivity to specific frequencies.</p>
-
-        <div class="law-box">
-            <div class="law-title">Weber-Fechner Law</div>
-            The sensation of loudness ($L$) is directly proportional to the logarithm of the physical intensity ($I$) above the threshold of hearing:
-            $$L \propto \log_{10} I \implies L = k \log_{10} I$$
-            where $k$ is a constant depending on sound frequency and individual ear response.
-        </div>
-
-        <p><strong>Sound Intensity Level ($\beta$):</strong> To handle the vast dynamic range of human hearing ($10^{-12}\text{ W/m}^2$ to $10^2\text{ W/m}^2$), sound levels are measured on a logarithmic scale in <strong>Decibels (dB)</strong>:</p>
-        <div class="formula-box">
-            $$\beta = 10 \log_{10} \left(\frac{I}{I_0}\right) \text{ dB}$$
-        </div>
-        <p>where $I_0 = 10^{-12} \text{ W/m}^2 = 1 \text{ pW/m}^2$ is the standard reference <strong>Threshold of Hearing</strong> at $1000\text{ Hz}$.</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Sound Source / Environment</th>
-                    <th>Intensity ($I$ in $\text{W/m}^2$)</th>
-                    <th>Sound Level ($\beta$ in dB)</th>
-                    <th>Sensation / Effect</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Threshold of Hearing</td>
-                    <td>$10^{-12}$</td>
-                    <td>0 dB</td>
-                    <td>Barely Audible</td>
-                </tr>
-                <tr>
-                    <td>Whisper at 1 m</td>
-                    <td>$10^{-10}$</td>
-                    <td>20 dB</td>
-                    <td>Very Quiet</td>
-                </tr>
-                <tr>
-                    <td>Normal Classroom Conversation</td>
-                    <td>$10^{-6}$</td>
-                    <td>60 dB</td>
-                    <td>Moderate / Comfortable</td>
-                </tr>
-                <tr>
-                    <td>Heavy City Street Traffic</td>
-                    <td>$10^{-4}$</td>
-                    <td>80 dB</td>
-                    <td>Loud / Hearing Protection Needed (>85 dB)</td>
-                </tr>
-                <tr>
-                    <td>Siren at 30 m / Rock Concert</td>
-                    <td>$10^{-1}$</td>
-                    <td>110 dB</td>
-                    <td>Extremely Loud</td>
-                </tr>
-                <tr>
-                    <td>Threshold of Pain (Jet Engine at 30 m)</td>
-                    <td>$10^1 - 10^2$</td>
-                    <td>130 - 140 dB</td>
-                    <td>Immediate Ear Damage / Pain</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3 class="subsection-header">3. Pitch and Quality (Timbre)</h3>
-        <ul>
-            <li><strong>Pitch:</strong> The subjective perceptual attribute that allows sounds to be ordered on a musical frequency scale. Pitch is primarily governed by fundamental frequency $f$. Higher frequency corresponds to a higher pitch (shrill/sharp sound), whereas lower frequency corresponds to a lower pitch (grave/flat sound). Pitch is independent of amplitude.</li>
-            <li><strong>Quality (Timbre):</strong> The characteristic of sound that enables a listener to distinguish between two sounds having the exact same fundamental frequency and loudness when produced by different musical instruments. Quality is determined by the number, relative intensities, and order of accompanying <em>overtones and harmonics</em> in the acoustic wave.</li>
-        </ul>
-
-        <!-- ==========================================
-             SECTION 9.3: DOPPLER'S EFFECT
-             ========================================== -->
-        <h2 class="section-header">9.3 Doppler's Effect</h2>
-        <p><strong>Doppler's Effect</strong> is defined as the apparent change in the observed frequency (or pitch) of a wave resulting from relative motion between the source of sound waves and the observer.</p>
-
-        <div class="diagram-container">
-            <!-- High-Contrast SVG Diagram: Doppler Effect Wavefront Compression -->
-            <svg width="800" height="220" viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Moving Source Wavefront Geometry -->
-                <g transform="translate(100, 10)">
-                    <!-- Compressed Spherical Wavefronts moving right -->
-                    <circle cx="280" cy="100" r="90" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
-                    <circle cx="310" cy="100" r="65" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
-                    <circle cx="335" cy="100" r="40" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
-                    <circle cx="355" cy="100" r="18" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
-
-                    <!-- Source Position & Velocity Arrow -->
-                    <circle cx="365" cy="100" r="5" fill="#dc2626"/>
-                    <line x1="365" y1="100" x2="410" y2="100" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
-                    <polygon points="410,96 420,100 410,104" fill="#dc2626"/>
-                    <text x="380" y="90" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626">Source (v_s)</text>
-
-                    <!-- Stationary Observer AHEAD (Right) -->
-                    <rect x="520" y="80" width="30" height="40" rx="4" fill="#1e293b"/>
-                    <text x="535" y="135" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Observer O₁</text>
-                    <text x="535" y="150" font-family="sans-serif" font-size="10" font-weight="bold" fill="#16a34a" text-anchor="middle">Higher Pitch (f' > f)</text>
-                    <text x="535" y="165" font-family="sans-serif" font-size="10" fill="#0284c7" text-anchor="middle">λ' = λ − v_s T</text>
-
-                    <!-- Stationary Observer BEHIND (Left) -->
-                    <rect x="50" y="80" width="30" height="40" rx="4" fill="#1e293b"/>
-                    <text x="65" y="135" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Observer O₂</text>
-                    <text x="65" y="150" font-family="sans-serif" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">Lower Pitch (f'' < f)</text>
-                    <text x="65" y="165" font-family="sans-serif" font-size="10" fill="#0284c7" text-anchor="middle">λ'' = λ + v_s T</text>
-                </g>
-            </svg>
-            <div class="diagram-caption">Figure 9.3: As the source moves to the right with velocity $v_s$, acoustic wavefronts compress ahead of the source ($\lambda' < \lambda$) and expand behind it ($\lambda'' > \lambda$).</div>
-        </div>
-
-        <h3 class="subsection-header">Comprehensive Derivations for Relative Motion Scenarios</h3>
-        <p>Let $v$ = speed of sound in medium, $f$ = original frequency emitted by source, $\lambda = \frac{v}{f}$ = original wavelength, and $T = \frac{1}{f}$ = time period.</p>
-
-        <div class="derivation-step">
-            <p><strong>Case I: Source Moving Towards Stationary Observer ($v_s > 0, v_o = 0$)</strong></p>
-            <p>During one period $T$, the source moves forward by distance $v_s T$. Thus, the wavelength ahead of the source is compressed to:</p>
-            $$\lambda' = \lambda - v_s T = \frac{v}{f} - \frac{v_s}{f} = \frac{v - v_s}{f}$$
-            <p>The apparent frequency $f'$ registered by the stationary observer is:</p>
-            $$f' = \frac{v}{\lambda'} = \frac{v}{\left(\frac{v - v_s}{f}\right)}$$
-            <div class="formula-box">
-                $$f' = f \left(\frac{v}{v - v_s}\right) > f \quad \text{(Apparent Pitch Increases)}$$
-            </div>
-        </div>
-
-        <div class="derivation-step">
-            <p><strong>Case II: Source Moving Away from Stationary Observer ($v_s > 0, v_o = 0$)</strong></p>
-            <p>The wavefronts behind the receding source are stretched out over distance $\lambda'' = \lambda + v_s T = \frac{v + v_s}{f}$. The apparent frequency is:</p>
-            <div class="formula-box">
-                $$f'' = f \left(\frac{v}{v + v_s}\right) < f \quad \text{(Apparent Pitch Decreases)}$$
-            </div>
-        </div>
-
-        <div class="derivation-step">
-            <p><strong>Case III: Observer Moving Towards Stationary Source ($v_o > 0, v_s = 0$)</strong></p>
-            <p>The sound wavelength in the medium remains completely unchanged ($\lambda = \frac{v}{f}$). However, because the observer moves towards the arriving waves, the relative speed of sound with respect to the observer becomes $v' = v + v_o$.</p>
-            <p>The number of wave crests intercepted per unit time yields the apparent frequency:</p>
-            $$f' = \frac{v'}{\lambda} = \frac{v + v_o}{\left(\frac{v}{f}\right)}$$
-            <div class="formula-box">
-                $$f' = f \left(\frac{v + v_o}{v}\right) > f \quad \text{(Apparent Pitch Increases)}$$
-            </div>
-        </div>
-
-        <div class="derivation-step">
-            <p><strong>Case IV: Observer Moving Away from Stationary Source ($v_o > 0, v_s = 0$)</strong></p>
-            <p>The relative wave speed with respect to the retreating observer decreases to $v' = v - v_o$. Thus:</p>
-            <div class="formula-box">
-                $$f'' = f \left(\frac{v - v_o}{v}\right) < f \quad \text{(Apparent Pitch Decreases)}$$
-            </div>
-        </div>
-
-        <h3 class="subsection-header">General Doppler Formula &amp; Wind Velocity Effect</h3>
-        <p>When both the source and the observer are moving along the same line of sight, the generalized Doppler expression combining both relative wave speed and compressed wavelength is:</p>
-        <div class="formula-box" style="background-color: #eef2ff; border-color: #c7d2fe; color: #1e1b4b;">
-            $$f' = f \left( \frac{v \pm v_o}{v \mp v_s} \right)$$
-        </div>
-
-        <div class="law-box">
-            <div class="law-title">Universal Sign Convention Rules</div>
-            <ul>
-                <li><strong>Numerator ($v \pm v_o$):</strong> Use <strong>$+v_o$</strong> when observer moves TOWARDS source (increases $f'$); use <strong>$-v_o$</strong> when observer moves AWAY from source (decreases $f'$).</li>
-                <li><strong>Denominator ($v \mp v_s$):</strong> Use <strong>$-v_s$</strong> when source moves TOWARDS observer (increases $f'$); use <strong>$+v_s$</strong> when source moves AWAY from observer (decreases $f'$).</li>
-            </ul>
-        </div>
-
-        <p><strong>Effect of Wind Medium Velocity ($w$):</strong> If the medium (wind) moves with speed $w$ along the line joining source and observer:</p>
-        <ul>
-            <li>If wind blows <em>in the direction of sound propagation</em> (from source to observer), effective sound velocity is $v_{eff} = v + w$.</li>
-            <li>If wind blows <em>against sound propagation</em>, effective sound velocity is $v_{eff} = v - w$.</li>
-        </ul>
-        $$\text{Master Formula with Wind: } f' = f \left[ \frac{(v \pm w) \pm v_o}{(v \pm w) \mp v_s} \right]$$
-
-        <h3 class="subsection-header">Practical Applications of Doppler Effect</h3>
-        <ul>
-            <li><strong>Police Speed Radar Guns:</strong> Emit microwave signals of known frequency $f$. Reflections from moving vehicles exhibit a Doppler frequency shift $\Delta f$, allowing instant calculation of vehicle speed.</li>
-            <li><strong>Medical Doppler Echocardiography &amp; Ultrasound:</strong> Measures blood flow velocity in blood vessels and assesses heart valve movement non-invasively by detecting frequency shifts in reflected ultrasonic waves.</li>
-            <li><strong>Acoustic Doppler Velocimeter (ADV):</strong> Measures 3D water current velocities in hydrology, oceanography, and open-channel environmental engineering.</li>
-            <li><strong>Astrophysics &amp; Cosmology (Redshift / Blueshift):</strong> Light from distant galaxies exhibits optical Doppler shift. A shift toward longer wavelengths (<strong>Redshift</strong>) proves the expansion of the universe (Hubble's Law). A shift toward shorter wavelengths (<strong>Blueshift</strong>) indicates stars approaching Earth.</li>
-        </ul>
-
-        <!-- ==========================================
-             SECTION 4: SOLVED BOARD NUMERICALS
-             ========================================== -->
-        <h2 class="section-header">9.4 Solved NEB Board Numerical Examples</h2>
-
-        <div class="example-card">
-            <div class="example-title">Example 9.1: Sound Intensity Level and Distance Scaling</div>
-            <p><strong>Problem:</strong> A point acoustic source emits sound isotropically. The sound intensity level measured at a distance of $5.0\text{ m}$ from the source is $80\text{ dB}$. Calculate: (a) the acoustic intensity $I_1$ at $5.0\text{ m}$, (b) total acoustic power $P$ emitted by the source, and (c) the sound level $\beta_2$ at a distance of $20.0\text{ m}$. (Given $I_0 = 10^{-12} \text{ W/m}^2$).</p>
-            
-            <p><strong>Solution:</strong></p>
-            <p><strong>(a) Acoustic Intensity $I_1$ at $r_1 = 5.0\text{ m}$:</strong></p>
-            $$\beta_1 = 10 \log_{10}\left(\frac{I_1}{I_0}\right) \implies 80 = 10 \log_{10}\left(\frac{I_1}{10^{-12}}\right)$$
-            $$8 = \log_{10}\left(\frac{I_1}{10^{-12}}\right) \implies \frac{I_1}{10^{-12}} = 10^8 \implies I_1 = 10^{-4} \text{ W/m}^2$$
-
-            <p><strong>(b) Total Acoustic Power ($P$):</strong></p>
-            $$P = I_1 \times (4\pi r_1^2) = (10^{-4} \text{ W/m}^2) \times 4\pi (5.0)^2 = 100\pi \times 10^{-4} = 0.0314\text{ W} = 31.4\text{ mW}$$
-
-            <p><strong>(c) Sound Level $\beta_2$ at $r_2 = 20.0\text{ m}$:</strong></p>
-            <p>Using the inverse square law $I_2 = I_1 \left(\frac{r_1}{r_2}\right)^2$:</p>
-            $$I_2 = 10^{-4} \times \left(\frac{5.0}{20.0}\right)^2 = 10^{-4} \times \frac{1}{16} = 6.25 \times 10^{-6} \text{ W/m}^2$$
-            $$\beta_2 = 10 \log_{10}\left(\frac{6.25 \times 10^{-6}}{10^{-12}}\right) = 10 \log_{10}(6.25 \times 10^6) = 10 \times (6.796) = 67.96\text{ dB}$$
-        </div>
-
-        <div class="example-card">
-            <div class="example-title">Example 9.2: Train Whistle Doppler Shift</div>
-            <p><strong>Problem:</strong> A train engine blowing a whistle of frequency $400\text{ Hz}$ approaches a stationary station platform at a uniform speed of $36\text{ km/h}$ ($10\text{ m/s}$), passes through, and recedes away at the same speed. Speed of sound in air = $340\text{ m/s}$. Find: (a) apparent frequency heard on platform during approach, (b) apparent frequency heard during recession, and (c) total change in frequency heard.</p>
-
-            <p><strong>Solution:</strong></p>
-            <p>Given: $f = 400\text{ Hz}$, $v = 340\text{ m/s}$, $v_s = 10\text{ m/s}$, $v_o = 0$.</p>
-
-            <p><strong>(a) During Approach ($v_s$ towards stationary observer):</strong></p>
-            $$f' = f \left(\frac{v}{v - v_s}\right) = 400 \left(\frac{340}{340 - 10}\right) = 400 \times \frac{340}{330} \approx 412.12\text{ Hz}$$
-
-            <p><strong>(b) During Recession ($v_s$ away from stationary observer):</strong></p>
-            $$f'' = f \left(\frac{v}{v + v_s}\right) = 400 \left(\frac{340}{340 + 10}\right) = 400 \times \frac{340}{350} \approx 388.57\text{ Hz}$$
-
-            <p><strong>(c) Frequency Change:</strong></p>
-            $$\Delta f = f' - f'' = 412.12\text{ Hz} - 388.57\text{ Hz} = 23.55\text{ Hz}$$
-        </div>
-
-        <div class="example-card">
-            <div class="example-title">Example 9.3: Moving Source, Moving Observer, and Wind Effect</div>
-            <p><strong>Problem:</strong> A siren emitting sound at $600\text{ Hz}$ and an observer are moving TOWARDS each other with speeds of $20\text{ m/s}$ and $10\text{ m/s}$ respectively. A wind blows at $15\text{ m/s}$ from the source toward the observer. Speed of sound in still air = $330\text{ m/s}$. Calculate the apparent frequency registered by the observer.</p>
-
-            <p><strong>Solution:</strong></p>
-            <p>Given: $f = 600\text{ Hz}$, $v = 330\text{ m/s}$, $v_s = 20\text{ m/s}$, $v_o = 10\text{ m/s}$, wind $w = +15\text{ m/s}$ (in direction of sound).</p>
-            <p>Effective sound speed: $v' = v + w = 330 + 15 = 345\text{ m/s}$.</p>
-            <p>Since both are moving towards each other, numerator uses $+v_o$ and denominator uses $-v_s$:</p>
-            $$f' = f \left( \frac{v' + v_o}{v' - v_s} \right) = 600 \left( \frac{345 + 10}{345 - 20} \right) = 600 \times \left( \frac{355}{325} \right) \approx 655.38\text{ Hz}$$
-        </div>
-
-        <!-- ==========================================
-             SECTION 5: PRACTICE TOOLKIT & CONCEPTUAL Q&A
-             ========================================== -->
-        <h2 class="section-header">9.5 Self-Study Practice Toolkit</h2>
-
-        <h3 class="subsection-header">Part A: Conceptual Short-Answer Questions (NEB 2 Marks Pattern)</h3>
-
-        <details>
-            <summary>Q1: Why is a sound wave referred to as a pressure wave? Explain why pressure variation is maximum at a displacement node.</summary>
-            <div class="solution-content">
-                <p><strong>Answer:</strong> Sound waves propagate via compressions and rarefactions, creating local fluctuations in fluid pressure above and below static atmospheric pressure. By the relation $p = -B \frac{\partial y}{\partial x}$, excess pressure depends on the displacement gradient. At a displacement node ($y=0$), adjacent fluid particles on opposite sides move in opposite directions toward or away from the node, creating maximum volume change and maximum particle congestion ($\frac{\partial y}{\partial x}$ is maximum). Thus, displacement nodes correspond to pressure antinodes ($p = \pm p_m$).</p>
-            </div>
-        </details>
-
-        <details>
-            <summary>Q2: Why does sound travel significantly faster in solid steel than in air, even though steel has a much higher density?</summary>
-            <div class="solution-content">
-                <p><strong>Answer:</strong> Wave velocity in a elastic medium is given by $v = \sqrt{\frac{E}{\rho}}$, where $E$ is elastic modulus and $\rho$ is density. Although steel is roughly 6000 times denser than air ($\rho_{steel} \gg \rho_{air}$), steel's Young's Modulus is nearly 2,000,000 times greater than air's bulk modulus ($E_{steel} \gg B_{air}$). The enormous elastic stiffness of steel far outweighs its density, making sound speed in steel ($\approx 5100\text{ m/s}$) over 15 times faster than in air ($\approx 340\text{ m/s}$).</p>
-            </div>
-        </details>
-
-        <details>
-            <summary>Q3: Does the pitch or frequency of a sound wave change when it passes from air into water? Explain.</summary>
-            <div class="solution-content">
-                <p><strong>Answer:</strong> No, the frequency and pitch remain completely unchanged. Frequency is an intrinsic property determined exclusively by the vibrating source producing the wave. When sound enters water, its speed $v$ increases significantly ($\approx 1480\text{ m/s}$), causing the wavelength $\lambda = \frac{v}{f}$ to expand proportionally while frequency $f$ remains strictly constant.</p>
-            </div>
-        </details>
-
-        <details>
-            <summary>Q4: Distinguish clearly between sound Intensity and Loudness.</summary>
-            <div class="solution-content">
-                <p><strong>Answer:</strong></p>
-                <ul>
-                    <li><strong>Intensity ($I$):</strong> An objective, physical quantity defined as acoustic power per unit area ($\text{W/m}^2$). It depends solely on wave amplitude and medium properties, measurable by instruments.</li>
-                    <li><strong>Loudness ($L$):</strong> A subjective, physiological sensation experienced by the human ear. It depends on both physical intensity and the non-linear frequency sensitivity of the ear (governed by Weber-Fechner Law $L \propto \log I$).</li>
-                </ul>
-            </div>
-        </details>
-
-        <h3 class="subsection-header">Part B: Practice Numerical Exercises for Self-Assessment</h3>
-
-        <div class="example-card">
-            <p><strong>P1 (Combined Decibels):</strong> Two independent sound sources produce sound levels of $60.0\text{ dB}$ and $65.0\text{ dB}$ at a specific location. Calculate the combined total sound intensity level in decibels when both sources operate simultaneously.</p>
-            <p style="color: #2563eb; font-weight: bold; margin-top: 4px;">[Answer: $\approx 66.19\text{ dB}$]</p>
-        </div>
-
-        <div class="example-card">
-            <p><strong>P2 (Moving Source towards Wall):</strong> A musician blowing a pipe of frequency $500\text{ Hz}$ walks directly towards a flat vertical wall at $2.0\text{ m/s}$. Speed of sound in air = $340\text{ m/s}$. Calculate the beat frequency heard by the musician due to the superposition of direct sound and sound reflected from the wall.</p>
-            <p style="color: #2563eb; font-weight: bold; margin-top: 4px;">[Answer: $5.92\text{ beats/s} \approx 6\text{ Hz}$]</p>
-        </div>
-
-        <div class="example-card">
-            <p><strong>P3 (Pressure Amplitude &amp; dB Level):</strong> An acoustic sensor measures a peak pressure amplitude of $p_m = 0.02\text{ Pa}$ in air at $20^\circ\text{C}$ ($\rho = 1.21\text{ kg/m}^3, v = 343\text{ m/s}$). Calculate: (a) sound intensity $I$, and (b) sound level in decibels.</p>
-            <p style="color: #2563eb; font-weight: bold; margin-top: 4px;">[Answer: (a) $4.82 \times 10^{-7}\text{ W/m}^2$, (b) $\approx 56.83\text{ dB}$]</p>
-        </div>
-
-    </div>
-
-</body>
-</html>
+
+<h2>9.1 Sound Waves as Pressure Waves in a Medium</h2><p>A sound wave is a mechanical, longitudinal wave that propagates through an elastic medium (such as air, liquids, or solids) via periodic compressions and rarefactions. As the wave travels through the medium, the individual particles oscillate parallel to the direction of wave propagation about their equilibrium positions.</p><p>While sound waves are frequently characterized by particle <em>displacement</em> \(y(x,t)\), human ears and acoustic sensors respond directly to fluctuations in <em>pressure</em> \(p(x,t)\) relative to atmospheric pressure \(P_0\). Consequently, sound waves are fundamentally analyzed as <strong>pressure waves</strong> in fluid mechanics and acoustics.</p><h3>Mathematical Derivation of the Pressure Wave Equation</h3><p>Consider a long, cylindrical tube of cross-sectional area \(A\) containing a fluid medium of undisturbed density \(\rho\) and Bulk Modulus \(B\). Suppose a longitudinal sound wave travels along the positive \(x\)-axis through the fluid.</p><figure>
+
+<svg class="panel" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280">
+
+<line x1="50" y1="40" x2="750" y2="40" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="50" y1="120" x2="750" y2="120" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="50" y1="200" x2="750" y2="200" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+
+<rect x="50" y="20" width="700" height="40" rx="3" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+
+<rect x="180" y="21" width="90" height="38" fill="#94a3b8" fill-opacity="0.6"/>
+
+<rect x="530" y="21" width="90" height="38" fill="#94a3b8" fill-opacity="0.6"/>
+
+<text x="225" y="44" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">COMPRESSION (C)</text>
+<text x="400" y="44" font-size="11" font-weight="bold" fill="#475569" text-anchor="middle">RAREFACTION (R)</text>
+<text x="575" y="44" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">COMPRESSION (C)</text>
+
+<path d="M 50,120 Q 137.5,60 225,120 T 400,120 T 575,120 T 750,120" stroke="#2563eb" stroke-width="2.5" fill="none"/>
+<text x="760" y="124" font-size="11" font-weight="bold" fill="#2563eb">y(x)</text>
+
+<path d="M 50,240 Q 137.5,200 225,160 T 400,240 T 575,160 T 750,240" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 3" fill="none"/>
+<text x="760" y="204" font-size="11" font-weight="bold" fill="#dc2626">p(x)</text>
+
+<line x1="225" y1="20" x2="225" y2="250" stroke="#dc2626" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="400" y1="20" x2="400" y2="250" stroke="#2563eb" stroke-width="1" stroke-dasharray="2 2"/>
+<line x1="575" y1="20" x2="575" y2="250" stroke="#dc2626" stroke-width="1" stroke-dasharray="2 2"/>
+
+<circle cx="225" cy="120" r="4" fill="#2563eb"/>
+<text x="225" y="110" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="bold">Displacement Node (y=0)</text>
+
+<circle cx="225" cy="160" r="4" fill="#dc2626"/>
+<text x="225" y="152" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="bold">Pressure Antinode (+p_m)</text>
+
+<circle cx="400" cy="120" r="4" fill="#2563eb"/>
+<text x="400" y="110" font-size="10" fill="#2563eb" text-anchor="middle" font-weight="bold">Displacement Node (y=0)</text>
+
+<circle cx="400" cy="240" r="4" fill="#dc2626"/>
+<text x="400" y="255" font-size="10" fill="#dc2626" text-anchor="middle" font-weight="bold">Pressure Antinode (−p_m)</text>
+</svg>
+<p>Figure 9.1: Spatial distribution of particle displacement \(y(x)\), excess pressure \(p(x)\), and corresponding compressions and rarefactions in a fluid pipe. Note the \(90^\circ\) (\(\pi/2\text{ rad}\)) phase difference.</p>
+
+</figure>
+<p><strong>Step 1: Volumetric Strain of a Fluid Element</strong></p><p>Consider an undisturbed slice of fluid between position \(x\) and \(x + \Delta x\). The initial volume of this slice is:</p><p>\[V = A \cdot \Delta x\]</p>
+<p>When the displacement wave passes through, the boundary at \(x\) moves by \(y(x,t)\), and the boundary at \(x + \Delta x\) moves by \(y(x + \Delta x, t)\). Using Taylor series expansion for small \(\Delta x\):</p><p>\[y(x + \Delta x, t) \approx y(x,t) + \frac{\partial y}{\partial x} \Delta x\]</p>
+<p>The new thickness of the fluid slice becomes \(\Delta x' = \Delta x + \left(y + \frac{\partial y}{\partial x} \Delta x\right) - y = \Delta x + \frac{\partial y}{\partial x} \Delta x\).</p><p>Therefore, the change in volume \(\Delta V\) is given by:</p><p>\[\Delta V = A \cdot \left(\frac{\partial y}{\partial x} \Delta x\right)\]</p>
+<p>The fractional volumetric strain is:</p><p>\[\text{Volumetric Strain} = \frac{\Delta V}{V} = \frac{A \frac{\partial y}{\partial x} \Delta x}{A \Delta x} = \frac{\partial y}{\partial x}\]</p>
+<p><strong>Step 2: Linking Bulk Modulus to Pressure Fluctuation</strong></p><p>By definition, the <strong>Bulk Modulus (\(B\))</strong> of a medium is the ratio of volumetric stress (excess pressure \(p\)) to volumetric strain:</p><p>\[B = -\frac{p}{\Delta V / V} = -\frac{p}{\left(\frac{\partial y}{\partial x}\right)}\]</p>
+<p>Rearranging this yields the fundamental relation between excess pressure \(p(x,t)\) and the displacement gradient:</p><div class="formula">\[p(x,t) = -B \frac{\partial y}{\partial x}\]</div>
+<p><em>Physical Significance of the Negative Sign:</em> When \(\frac{\partial y}{\partial x} < 0\), adjacent fluid particles converge, volume decreases (\(\Delta V < 0\)), causing a positive pressure spike (\(p > 0\), Compression). Conversely, when \(\frac{\partial y}{\partial x} > 0\), volume increases, causing pressure to drop (\(p < 0\), Rarefaction).</p><p><strong>Step 3: Deriving Pressure Wave Equation and Peak Pressure Amplitude (\(p_m\))</strong></p><p>Assume a simple harmonic displacement wave propagating along the \(+x\)-direction:</p><p>\[y(x,t) = A \sin(kx - \omega t)\]</p>
+<p>where \(A\) is displacement amplitude, \(k = \frac{2\pi}{\lambda}\) is wave number, and \(\omega = 2\pi f\) is angular frequency.</p><p>Differentiating \(y(x,t)\) partially with respect to \(x\):</p><p>\[\frac{\partial y}{\partial x} = A k \cos(kx - \omega t)\]</p>
+<p>Substituting into the excess pressure equation:</p><p>\[p(x,t) = -B A k \cos(kx - \omega t)\]</p>
+<p>Using trigonometric identity \(-\cos(\theta) = \sin\left(\theta - \frac{\pi}{2}\right)\), we rewrite the pressure wave as:</p><p>\[p(x,t) = p_m \sin\left(kx - \omega t - \frac{\pi}{2}\right)\]</p>
+<p>where the <strong>Maximum Pressure Amplitude (\(p_m\))</strong> is defined as:</p><p>\[p_m = B k A\]</p>
+<p>Since wave velocity \(v = \sqrt{\frac{B}{\rho}} \implies B = \rho v^2\), and \(k = \frac{\omega}{v}\), we can express \(p_m\) directly in terms of density \(\rho\) and wave speed \(v\):</p><div class="formula">\[p_m = (\rho v^2) \left(\frac{\omega}{v}\right) A = \rho v \omega A\]</div>
+<div class="box law"><p>Summary of Phase Relationship</p>
+
+<ul>
+<li>The pressure wave \(p(x,t)\) is \(\frac{\pi}{2}\text{ radians } (90^\circ)\) out of phase with the displacement wave \(y(x,t)\).</li>
+<li><strong>Displacement Nodes (\(y = 0\)):</strong> Occur where \(\frac{\partial y}{\partial x}\) is maximum. At these points, pressure variation is maximum (\(\pm p_m\)), representing <strong>Pressure Antinodes</strong>.</li>
+<li><strong>Displacement Antinodes (\(y = \pm A\)):</strong> Occur where \(\frac{\partial y}{\partial x} = 0\). At these points, excess pressure is zero (\(p = 0\)), representing <strong>Pressure Nodes</strong>.</li>
+</ul></div>
+<h2>9.2 Characteristics of Sound Waves</h2><p>A acoustic wave is physically characterized by three distinct perceptual properties: <strong>Loudness</strong> (related to intensity), <strong>Pitch</strong> (related to frequency), and <strong>Quality or Timbre</strong> (related to harmonic content).</p><h3>1. Sound Intensity (\(I\)) and Derivation</h3><p><strong>Sound Intensity (\(I\))</strong> is defined as the average rate of sound energy transported by a wave per unit area perpendicular to the direction of wave propagation.</p><p>\[\text{Intensity } (I) = \frac{\text{Energy}}{\text{Area} \times \text{Time}} = \frac{\text{Power } (P)}{\text{Area } (A)}\]</p>
+<p>SI Unit: \(\text{W/m}^2\) (Watts per square meter). Dimensional Formula: \([M^1 L^0 T^{-3}]\).</p><p><strong>Mathematical Derivation of Intensity Expression:</strong></p><p>Consider a volume element of fluid of density \(\rho\), area \(A\), and length \(\Delta x = v \cdot \Delta t\). The mass of fluid in this volume is \(m = \rho A v \Delta t\).</p><p>Each fluid particle executes Simple Harmonic Motion with angular frequency \(\omega\) and amplitude \(A_{disp}\). The total mechanical energy \(E\) of SHM is:</p><p>\[E = \frac{1}{2} m \omega^2 A_{disp}^2 = \frac{1}{2} (\rho A v \Delta t) \omega^2 A_{disp}^2\]</p>
+<p>Dividing total energy \(E\) by area \(A\) and time interval \(\Delta t\) yields the sound intensity:</p><p>\[I = \frac{E}{A \Delta t} = \frac{1}{2} \rho v \omega^2 A_{disp}^2\]</p>
+<p>Using the pressure amplitude formula derived earlier (\(p_m = \rho v \omega A_{disp} \implies A_{disp} = \frac{p_m}{\rho v \omega}\)), we substitute \(A_{disp}\) into the intensity formula:</p><p>\[I = \frac{1}{2} \rho v \omega^2 \left(\frac{p_m}{\rho v \omega}\right)^2\]</p>
+<div class="formula">\[I = \frac{p_m^2}{2 \rho v}\]</div>
+<p>This shows that <em>sound intensity is directly proportional to the square of pressure amplitude</em> (\(I \propto p_m^2\)). The product \(Z = \rho v\) is known as the <strong>Specific Acoustic Impedance</strong> of the medium.</p><h3>The Inverse Square Law</h3><p>For an isotropic point source emitting sound power \(P\) uniformly in all directions in a lossless medium, the energy spreads over concentric spherical surfaces of area \(A = 4\pi r^2\):</p><p>\[I = \frac{P}{4\pi r^2} \implies I \propto \frac{1}{r^2}\]</p>
+<p>Hence, sound intensity decreases inversely as the square of the distance from a point source.</p><figure>
+
+<svg class="panel" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+
+<g transform="translate(20, 10)">
+<circle cx="40" cy="90" r="6" fill="#dc2626"/>
+<text x="40" y="112" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">Source (S)</text>
+
+<path d="M 120,30 A 90 90 0 0 1 120,150" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 2" fill="none"/>
+<path d="M 220,10 A 180 180 0 0 1 220,170" stroke="#0284c7" stroke-width="2" stroke-dasharray="4 2" fill="none"/>
+
+<line x1="40" y1="90" x2="250" y2="20" stroke="#64748b" stroke-width="1.5"/>
+<line x1="40" y1="90" x2="250" y2="160" stroke="#64748b" stroke-width="1.5"/>
+
+<rect x="115" y="65" width="10" height="50" fill="#bfdbfe" stroke="#0284c7" stroke-width="1.5"/>
+<text x="120" y="58" font-size="10" font-weight="bold" fill="#0369a1" text-anchor="middle">A₁ (r₁)</text>
+
+<rect x="215" y="40" width="10" height="100" fill="#bfdbfe" stroke="#0284c7" stroke-width="1.5"/>
+<text x="220" y="32" font-size="10" font-weight="bold" fill="#0369a1" text-anchor="middle">A₂ = 4A₁ (r₂=2r₁)</text>
+
+<text x="140" y="180" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Intensity I ∝ 1/r²</text>
+</g>
+
+<line x1="380" y1="10" x2="380" y2="190" stroke="#cbd5e1" stroke-width="2"/>
+
+<g transform="translate(410, 10)">
+<text x="0" y="18" font-size="11" font-weight="bold" fill="#0f172a">Waveforms (Quality / Timbre):</text>
+
+<path d="M 20,45 Q 45,25 70,45 T 120,45 T 170,45 T 220,45" stroke="#16a34a" stroke-width="2" fill="none"/>
+<text x="235" y="48" font-size="10" fill="#16a34a" font-weight="bold">Tuning Fork (Pure Tone)</text>
+
+<path d="M 20,105 Q 35,75 50,105 T 80,105 T 110,105 T 140,105 T 170,105 T 200,105" stroke="#2563eb" stroke-width="2" fill="none"/>
+<text x="235" y="108" font-size="10" fill="#2563eb" font-weight="bold">Flute (Few Harmonics)</text>
+
+<path d="M 20,165 L 35,140 L 45,175 L 60,165 L 75,140 L 85,175 L 100,165 L 115,140 L 125,175 L 140,165" stroke="#dc2626" stroke-width="2" fill="none"/>
+<text x="235" y="168" font-size="10" fill="#dc2626" font-weight="bold">Violin (Rich Complex Harmonics)</text>
+</g>
+</svg>
+<p>Figure 9.2: Left: Geometric spreading of sound energy illustrating the Inverse Square Law. Right: Comparison of acoustic waveforms produced by different instruments playing the same fundamental pitch.</p>
+
+</figure>
+<h3>2. Loudness (\(L\)), Weber-Fechner Law, and the Decibel Scale</h3><p><strong>Loudness (\(L\))</strong> is the subjective human physiological sensation of sound magnitude. Unlike objective physical intensity (\(I\)), loudness depends on the ear's sensitivity to specific frequencies.</p><div class="box law"><p>Weber-Fechner Law</p>
+
+The sensation of loudness (\(L\)) is directly proportional to the logarithm of the physical intensity (\(I\)) above the threshold of hearing:
+\[L \propto \log_{10} I \implies L = k \log_{10} I\]
+where \(k\) is a constant depending on sound frequency and individual ear response.</div>
+<p><strong>Sound Intensity Level (\(\beta\)):</strong> To handle the vast dynamic range of human hearing (\(10^{-12}\text{ W/m}^2\) to \(10^2\text{ W/m}^2\)), sound levels are measured on a logarithmic scale in <strong>Decibels (dB)</strong>:</p><div class="formula">\[\beta = 10 \log_{10} \left(\frac{I}{I_0}\right) \text{ dB}\]</div>
+<p>where \(I_0 = 10^{-12} \text{ W/m}^2 = 1 \text{ pW/m}^2\) is the standard reference <strong>Threshold of Hearing</strong> at \(1000\text{ Hz}\).</p><table>
+<thead>
+<tr>
+<th>Sound Source / Environment</th>
+<th>Intensity (\(I\) in \(\text{W/m}^2\))</th>
+<th>Sound Level (\(\beta\) in dB)</th>
+<th>Sensation / Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threshold of Hearing</td>
+<td>\(10^{-12}\)</td>
+<td>0 dB</td>
+<td>Barely Audible</td>
+</tr>
+<tr>
+<td>Whisper at 1 m</td>
+<td>\(10^{-10}\)</td>
+<td>20 dB</td>
+<td>Very Quiet</td>
+</tr>
+<tr>
+<td>Normal Classroom Conversation</td>
+<td>\(10^{-6}\)</td>
+<td>60 dB</td>
+<td>Moderate / Comfortable</td>
+</tr>
+<tr>
+<td>Heavy City Street Traffic</td>
+<td>\(10^{-4}\)</td>
+<td>80 dB</td>
+<td>Loud / Hearing Protection Needed (>85 dB)</td>
+</tr>
+<tr>
+<td>Siren at 30 m / Rock Concert</td>
+<td>\(10^{-1}\)</td>
+<td>110 dB</td>
+<td>Extremely Loud</td>
+</tr>
+<tr>
+<td>Threshold of Pain (Jet Engine at 30 m)</td>
+<td>\(10^1 - 10^2\)</td>
+<td>130 - 140 dB</td>
+<td>Immediate Ear Damage / Pain</td>
+</tr>
+</tbody>
+</table><h3>3. Pitch and Quality (Timbre)</h3><ul>
+<li><strong>Pitch:</strong> The subjective perceptual attribute that allows sounds to be ordered on a musical frequency scale. Pitch is primarily governed by fundamental frequency \(f\). Higher frequency corresponds to a higher pitch (shrill/sharp sound), whereas lower frequency corresponds to a lower pitch (grave/flat sound). Pitch is independent of amplitude.</li>
+<li><strong>Quality (Timbre):</strong> The characteristic of sound that enables a listener to distinguish between two sounds having the exact same fundamental frequency and loudness when produced by different musical instruments. Quality is determined by the number, relative intensities, and order of accompanying <em>overtones and harmonics</em> in the acoustic wave.</li>
+</ul><h2>9.3 Doppler's Effect</h2><p><strong>Doppler's Effect</strong> is defined as the apparent change in the observed frequency (or pitch) of a wave resulting from relative motion between the source of sound waves and the observer.</p><figure>
+
+<svg class="panel" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220">
+
+<g transform="translate(100, 10)">
+
+<circle cx="280" cy="100" r="90" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+<circle cx="310" cy="100" r="65" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+<circle cx="335" cy="100" r="40" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+<circle cx="355" cy="100" r="18" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+
+<circle cx="365" cy="100" r="5" fill="#dc2626"/>
+<line x1="365" y1="100" x2="410" y2="100" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polygon points="410,96 420,100 410,104" fill="#dc2626"/>
+<text x="380" y="90" font-size="11" font-weight="bold" fill="#dc2626">Source (v_s)</text>
+
+<rect x="520" y="80" width="30" height="40" rx="4" fill="#1e293b"/>
+<text x="535" y="135" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Observer O₁</text>
+<text x="535" y="150" font-size="10" font-weight="bold" fill="#16a34a" text-anchor="middle">Higher Pitch (f' > f)</text>
+<text x="535" y="165" font-size="10" fill="#0284c7" text-anchor="middle">λ' = λ − v_s T</text>
+
+<rect x="50" y="80" width="30" height="40" rx="4" fill="#1e293b"/>
+<text x="65" y="135" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Observer O₂</text>
+<text x="65" y="150" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">Lower Pitch (f'' < f)</text>
+<text x="65" y="165" font-size="10" fill="#0284c7" text-anchor="middle">λ'' = λ + v_s T</text>
+</g>
+</svg>
+<p>Figure 9.3: As the source moves to the right with velocity \(v_s\), acoustic wavefronts compress ahead of the source (\(\lambda' < \lambda\)) and expand behind it (\(\lambda'' > \lambda\)).</p>
+
+</figure>
+<h3>Comprehensive Derivations for Relative Motion Scenarios</h3><p>Let \(v\) = speed of sound in medium, \(f\) = original frequency emitted by source, \(\lambda = \frac{v}{f}\) = original wavelength, and \(T = \frac{1}{f}\) = time period.</p><p><strong>Case I: Source Moving Towards Stationary Observer (\(v_s > 0, v_o = 0\))</strong></p><p>During one period \(T\), the source moves forward by distance \(v_s T\). Thus, the wavelength ahead of the source is compressed to:</p><p>\[\lambda' = \lambda - v_s T = \frac{v}{f} - \frac{v_s}{f} = \frac{v - v_s}{f}\]</p>
+<p>The apparent frequency \(f'\) registered by the stationary observer is:</p><p>\[f' = \frac{v}{\lambda'} = \frac{v}{\left(\frac{v - v_s}{f}\right)}\]</p>
+<div class="formula">\[f' = f \left(\frac{v}{v - v_s}\right) > f \quad \text{(Apparent Pitch Increases)}\]</div>
+<p><strong>Case II: Source Moving Away from Stationary Observer (\(v_s > 0, v_o = 0\))</strong></p><p>The wavefronts behind the receding source are stretched out over distance \(\lambda'' = \lambda + v_s T = \frac{v + v_s}{f}\). The apparent frequency is:</p><div class="formula">\[f'' = f \left(\frac{v}{v + v_s}\right) < f \quad \text{(Apparent Pitch Decreases)}\]</div>
+<p><strong>Case III: Observer Moving Towards Stationary Source (\(v_o > 0, v_s = 0\))</strong></p><p>The sound wavelength in the medium remains completely unchanged (\(\lambda = \frac{v}{f}\)). However, because the observer moves towards the arriving waves, the relative speed of sound with respect to the observer becomes \(v' = v + v_o\).</p><p>The number of wave crests intercepted per unit time yields the apparent frequency:</p><p>\[f' = \frac{v'}{\lambda} = \frac{v + v_o}{\left(\frac{v}{f}\right)}\]</p>
+<div class="formula">\[f' = f \left(\frac{v + v_o}{v}\right) > f \quad \text{(Apparent Pitch Increases)}\]</div>
+<p><strong>Case IV: Observer Moving Away from Stationary Source (\(v_o > 0, v_s = 0\))</strong></p><p>The relative wave speed with respect to the retreating observer decreases to \(v' = v - v_o\). Thus:</p><div class="formula">\[f'' = f \left(\frac{v - v_o}{v}\right) < f \quad \text{(Apparent Pitch Decreases)}\]</div>
+<h3>General Doppler Formula &amp; Wind Velocity Effect</h3><p>When both the source and the observer are moving along the same line of sight, the generalized Doppler expression combining both relative wave speed and compressed wavelength is:</p><div class="formula">\[f' = f \left( \frac{v \pm v_o}{v \mp v_s} \right)\]</div>
+<div class="box law"><p>Universal Sign Convention Rules</p>
+
+<ul>
+<li><strong>Numerator (\(v \pm v_o\)):</strong> Use <strong>\(+v_o\)</strong> when observer moves TOWARDS source (increases \(f'\)); use <strong>\(-v_o\)</strong> when observer moves AWAY from source (decreases \(f'\)).</li>
+<li><strong>Denominator (\(v \mp v_s\)):</strong> Use <strong>\(-v_s\)</strong> when source moves TOWARDS observer (increases \(f'\)); use <strong>\(+v_s\)</strong> when source moves AWAY from observer (decreases \(f'\)).</li>
+</ul></div>
+<p><strong>Effect of Wind Medium Velocity (\(w\)):</strong> If the medium (wind) moves with speed \(w\) along the line joining source and observer:</p><ul>
+<li>If wind blows <em>in the direction of sound propagation</em> (from source to observer), effective sound velocity is \(v_{eff} = v + w\).</li>
+<li>If wind blows <em>against sound propagation</em>, effective sound velocity is \(v_{eff} = v - w\).</li>
+</ul><p>\[\text{Master Formula with Wind: } f' = f \left[ \frac{(v \pm w) \pm v_o}{(v \pm w) \mp v_s} \right]\]</p>
+<h3>Practical Applications of Doppler Effect</h3><ul>
+<li><strong>Police Speed Radar Guns:</strong> Emit microwave signals of known frequency \(f\). Reflections from moving vehicles exhibit a Doppler frequency shift \(\Delta f\), allowing instant calculation of vehicle speed.</li>
+<li><strong>Medical Doppler Echocardiography &amp; Ultrasound:</strong> Measures blood flow velocity in blood vessels and assesses heart valve movement non-invasively by detecting frequency shifts in reflected ultrasonic waves.</li>
+<li><strong>Acoustic Doppler Velocimeter (ADV):</strong> Measures 3D water current velocities in hydrology, oceanography, and open-channel environmental engineering.</li>
+<li><strong>Astrophysics &amp; Cosmology (Redshift / Blueshift):</strong> Light from distant galaxies exhibits optical Doppler shift. A shift toward longer wavelengths (<strong>Redshift</strong>) proves the expansion of the universe (Hubble's Law). A shift toward shorter wavelengths (<strong>Blueshift</strong>) indicates stars approaching Earth.</li>
+</ul><h2>9.4 Solved NEB Board Numerical Examples</h2><p>Example 9.1: Sound Intensity Level and Distance Scaling</p>
+<p><strong>Problem:</strong> A point acoustic source emits sound isotropically. The sound intensity level measured at a distance of \(5.0\text{ m}\) from the source is \(80\text{ dB}\). Calculate: (a) the acoustic intensity \(I_1\) at \(5.0\text{ m}\), (b) total acoustic power \(P\) emitted by the source, and (c) the sound level \(\beta_2\) at a distance of \(20.0\text{ m}\). (Given \(I_0 = 10^{-12} \text{ W/m}^2\)).</p><p><strong>Solution:</strong></p><p><strong>(a) Acoustic Intensity \(I_1\) at \(r_1 = 5.0\text{ m}\):</strong></p><p>\[\beta_1 = 10 \log_{10}\left(\frac{I_1}{I_0}\right) \implies 80 = 10 \log_{10}\left(\frac{I_1}{10^{-12}}\right)\]
+\[8 = \log_{10}\left(\frac{I_1}{10^{-12}}\right) \implies \frac{I_1}{10^{-12}} = 10^8 \implies I_1 = 10^{-4} \text{ W/m}^2\]</p>
+<p><strong>(b) Total Acoustic Power (\(P\)):</strong></p><p>\[P = I_1 \times (4\pi r_1^2) = (10^{-4} \text{ W/m}^2) \times 4\pi (5.0)^2 = 100\pi \times 10^{-4} = 0.0314\text{ W} = 31.4\text{ mW}\]</p>
+<p><strong>(c) Sound Level \(\beta_2\) at \(r_2 = 20.0\text{ m}\):</strong></p><p>Using the inverse square law \(I_2 = I_1 \left(\frac{r_1}{r_2}\right)^2\):</p><p>\[I_2 = 10^{-4} \times \left(\frac{5.0}{20.0}\right)^2 = 10^{-4} \times \frac{1}{16} = 6.25 \times 10^{-6} \text{ W/m}^2\]
+\[\beta_2 = 10 \log_{10}\left(\frac{6.25 \times 10^{-6}}{10^{-12}}\right) = 10 \log_{10}(6.25 \times 10^6) = 10 \times (6.796) = 67.96\text{ dB}\]</p>
+<p>Example 9.2: Train Whistle Doppler Shift</p>
+<p><strong>Problem:</strong> A train engine blowing a whistle of frequency \(400\text{ Hz}\) approaches a stationary station platform at a uniform speed of \(36\text{ km/h}\) (\(10\text{ m/s}\)), passes through, and recedes away at the same speed. Speed of sound in air = \(340\text{ m/s}\). Find: (a) apparent frequency heard on platform during approach, (b) apparent frequency heard during recession, and (c) total change in frequency heard.</p><p><strong>Solution:</strong></p><p>Given: \(f = 400\text{ Hz}\), \(v = 340\text{ m/s}\), \(v_s = 10\text{ m/s}\), \(v_o = 0\).</p><p><strong>(a) During Approach (\(v_s\) towards stationary observer):</strong></p><p>\[f' = f \left(\frac{v}{v - v_s}\right) = 400 \left(\frac{340}{340 - 10}\right) = 400 \times \frac{340}{330} \approx 412.12\text{ Hz}\]</p>
+<p><strong>(b) During Recession (\(v_s\) away from stationary observer):</strong></p><p>\[f'' = f \left(\frac{v}{v + v_s}\right) = 400 \left(\frac{340}{340 + 10}\right) = 400 \times \frac{340}{350} \approx 388.57\text{ Hz}\]</p>
+<p><strong>(c) Frequency Change:</strong></p><p>\[\Delta f = f' - f'' = 412.12\text{ Hz} - 388.57\text{ Hz} = 23.55\text{ Hz}\]</p>
+<p>Example 9.3: Moving Source, Moving Observer, and Wind Effect</p>
+<p><strong>Problem:</strong> A siren emitting sound at \(600\text{ Hz}\) and an observer are moving TOWARDS each other with speeds of \(20\text{ m/s}\) and \(10\text{ m/s}\) respectively. A wind blows at \(15\text{ m/s}\) from the source toward the observer. Speed of sound in still air = \(330\text{ m/s}\). Calculate the apparent frequency registered by the observer.</p><p><strong>Solution:</strong></p><p>Given: \(f = 600\text{ Hz}\), \(v = 330\text{ m/s}\), \(v_s = 20\text{ m/s}\), \(v_o = 10\text{ m/s}\), wind \(w = +15\text{ m/s}\) (in direction of sound).</p><p>Effective sound speed: \(v' = v + w = 330 + 15 = 345\text{ m/s}\).</p><p>Since both are moving towards each other, numerator uses \(+v_o\) and denominator uses \(-v_s\):</p><p>\[f' = f \left( \frac{v' + v_o}{v' - v_s} \right) = 600 \left( \frac{345 + 10}{345 - 20} \right) = 600 \times \left( \frac{355}{325} \right) \approx 655.38\text{ Hz}\]</p>
+<h2>9.5 Self-Study Practice Toolkit</h2><h3>Part A: Conceptual Short-Answer Questions (NEB 2 Marks Pattern)</h3><details class="solution"><summary>Q1: Why is a sound wave referred to as a pressure wave? Explain why pressure variation is maximum at a displacement node.</summary>
+<p><strong>Answer:</strong> Sound waves propagate via compressions and rarefactions, creating local fluctuations in fluid pressure above and below static atmospheric pressure. By the relation \(p = -B \frac{\partial y}{\partial x}\), excess pressure depends on the displacement gradient. At a displacement node (\(y=0\)), adjacent fluid particles on opposite sides move in opposite directions toward or away from the node, creating maximum volume change and maximum particle congestion (\(\frac{\partial y}{\partial x}\) is maximum). Thus, displacement nodes correspond to pressure antinodes (\(p = \pm p_m\)).</p></details>
+<details class="solution"><summary>Q2: Why does sound travel significantly faster in solid steel than in air, even though steel has a much higher density?</summary>
+<p><strong>Answer:</strong> Wave velocity in a elastic medium is given by \(v = \sqrt{\frac{E}{\rho}}\), where \(E\) is elastic modulus and \(\rho\) is density. Although steel is roughly 6000 times denser than air (\(\rho_{steel} \gg \rho_{air}\)), steel's Young's Modulus is nearly 2,000,000 times greater than air's bulk modulus (\(E_{steel} \gg B_{air}\)). The enormous elastic stiffness of steel far outweighs its density, making sound speed in steel (\(\approx 5100\text{ m/s}\)) over 15 times faster than in air (\(\approx 340\text{ m/s}\)).</p></details>
+<details class="solution"><summary>Q3: Does the pitch or frequency of a sound wave change when it passes from air into water? Explain.</summary>
+<p><strong>Answer:</strong> No, the frequency and pitch remain completely unchanged. Frequency is an intrinsic property determined exclusively by the vibrating source producing the wave. When sound enters water, its speed \(v\) increases significantly (\(\approx 1480\text{ m/s}\)), causing the wavelength \(\lambda = \frac{v}{f}\) to expand proportionally while frequency \(f\) remains strictly constant.</p></details>
+<details class="solution"><summary>Q4: Distinguish clearly between sound Intensity and Loudness.</summary>
+<p><strong>Answer:</strong></p><ul>
+<li><strong>Intensity (\(I\)):</strong> An objective, physical quantity defined as acoustic power per unit area (\(\text{W/m}^2\)). It depends solely on wave amplitude and medium properties, measurable by instruments.</li>
+<li><strong>Loudness (\(L\)):</strong> A subjective, physiological sensation experienced by the human ear. It depends on both physical intensity and the non-linear frequency sensitivity of the ear (governed by Weber-Fechner Law \(L \propto \log I\)).</li>
+</ul></details>
+<h3>Part B: Practice Numerical Exercises for Self-Assessment</h3><p><strong>P1 (Combined Decibels):</strong> Two independent sound sources produce sound levels of \(60.0\text{ dB}\) and \(65.0\text{ dB}\) at a specific location. Calculate the combined total sound intensity level in decibels when both sources operate simultaneously.</p><p>[Answer: \(\approx 66.19\text{ dB}\)]</p><p><strong>P2 (Moving Source towards Wall):</strong> A musician blowing a pipe of frequency \(500\text{ Hz}\) walks directly towards a flat vertical wall at \(2.0\text{ m/s}\). Speed of sound in air = \(340\text{ m/s}\). Calculate the beat frequency heard by the musician due to the superposition of direct sound and sound reflected from the wall.</p><p>[Answer: \(5.92\text{ beats/s} \approx 6\text{ Hz}\)]</p><p><strong>P3 (Pressure Amplitude &amp; dB Level):</strong> An acoustic sensor measures a peak pressure amplitude of \(p_m = 0.02\text{ Pa}\) in air at \(20^\circ\text{C}\) (\(\rho = 1.21\text{ kg/m}^3, v = 343\text{ m/s}\)). Calculate: (a) sound intensity \(I\), and (b) sound level in decibels.</p><p>[Answer: (a) \(4.82 \times 10^{-7}\text{ W/m}^2\), (b) \(\approx 56.83\text{ dB}\)]</p>

@@ -6,1709 +6,607 @@ date: 2026-10-02
 description: Work done by constant and variable force, power and efficiency, work-energy theorem, conservation of energy, conservative forces, and collisions.
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 5: Work, Energy and Power | NEB Grade 11 Physics</title>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        neb: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Georgia', 'Cambria', 'serif']
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- FontAwesome CDN for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- MathJax for TeX Rendering -->
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Custom & Print Styles -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        .textbook-font {
-            font-family: 'Georgia', 'Times New Roman', serif;
-        }
-
-        /* SVG Line Diagram Print Optimization */
-        svg line, svg path, svg circle, svg rect {
-            vector-effect: non-scaling-stroke;
-        }
-
-        .diagram-container {
-            background-color: #f8fafc;
-            border: 1px solid #cbd5e1;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
-        }
-
-        .dark .diagram-container {
-            background-color: #0f172a;
-            border-color: #334155;
-        }
-
-        /* Printable Mode Styling */
-        @media print {
-            body {
-                background: white !important;
-                color: black !important;
-                font-size: 11pt;
-            }
-            .no-print {
-                display: none !important;
-            }
-            .print-only {
-                display: block !important;
-            }
-            .content-area {
-                margin: 0 !important;
-                padding: 0 !important;
-                width: 100% !important;
-            }
-            .diagram-container {
-                background: white !important;
-                border: 1px solid #000 !important;
-                page-break-inside: avoid;
-            }
-            .solution-box {
-                display: block !important;
-                border: 1px solid #666 !important;
-                background: #fdfdfd !important;
-            }
-            .page-break {
-                page-break-before: always;
-            }
-            svg {
-                filter: grayscale(100%) contrast(150%) !important;
-            }
-        }
-    </style>
-</head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-200">
-
-    <!-- Top Header Navigation -->
-    <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-800/95 backdrop-blur border-b border-slate-200 dark:border-slate-700 shadow-sm no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <!-- Title / Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="p-2 bg-neb-700 text-white rounded-lg shadow">
-                        <i class="fa-solid fa-book-open text-xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-tight">NEB Grade 11 Physics</h1>
-                        <p class="text-xs text-neb-700 dark:text-neb-400 font-semibold tracking-wide uppercase">Unit 5: Work, Energy, and Power</p>
-                    </div>
-                </div>
-
-                <!-- Right Header Actions -->
-                <div class="flex items-center space-x-2 sm:space-x-4">
-                    <!-- Search Bar -->
-                    <div class="relative hidden md:block w-48 lg:w-64">
-                        <input type="text" id="searchInput" onkeyup="filterTopics()" placeholder="Search theory or formula..." 
-                            class="w-full pl-9 pr-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-700 rounded-lg border border-transparent focus:border-neb-500 focus:bg-white dark:focus:bg-slate-800 outline-none transition">
-                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-slate-400"></i>
-                    </div>
-
-                    <!-- Dark Mode Toggle -->
-                    <button onclick="toggleDarkMode()" title="Toggle Light/Dark Theme" class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition">
-                        <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
-                    </button>
-
-                   
-                    <!-- Mobile Drawer Toggle -->
-                    <button onclick="toggleMobileSidebar()" class="md:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex gap-8">
-
-        <!-- Sidebar Navigation (Desktop & Mobile Drawer) -->
-        <aside id="sidebar" class="fixed inset-y-0 left-0 z-40 w-72 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 p-4 transform -translate-x-full md:translate-x-0 md:static md:w-64 md:border-r-0 md:p-0 transition-transform duration-300 ease-in-out shrink-0 no-print">
-            <div class="sticky top-20 space-y-4 max-h-[calc(100vh-6rem)] overflow-y-auto pr-2">
-                <div class="flex items-center justify-between md:hidden pb-2 border-b border-slate-200 dark:border-slate-700">
-                    <span class="font-bold text-slate-700 dark:text-slate-200">Table of Contents</span>
-                    <button onclick="toggleMobileSidebar()" class="text-slate-500 hover:text-slate-700"><i class="fa-solid fa-xmark text-lg"></i></button>
-                </div>
-
-                <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-2">Course Topics</div>
-
-                <nav class="space-y-1 text-sm font-medium">
-                    <a href="#overview" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-bookmark w-6 text-neb-500"></i> Module Overview
-                    </a>
-                    <a href="#topic51" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-arrows-left-right w-6 text-neb-500"></i> 5.1 Constant & Variable Work
-                    </a>
-                    <a href="#topic52" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-bolt w-6 text-neb-500"></i> 5.2 Power & Efficiency
-                    </a>
-                    <a href="#topic53" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-gauge-high w-6 text-neb-500"></i> 5.3 Work-Energy Theorem
-                    </a>
-                    <a href="#topic54" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-recycle w-6 text-neb-500"></i> 5.4 Conservation of Energy
-                    </a>
-                    <a href="#topic55" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-shield-halved w-6 text-neb-500"></i> 5.5 Conservative Forces
-                    </a>
-                    <a href="#topic56" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-circle-nodes w-6 text-neb-500"></i> 5.6 Elastic & Inelastic Collisions
-                    </a>
-                </nav>
-
-                <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider px-2 pt-4 border-t border-slate-200 dark:border-slate-700">Practice & Tools</div>
-
-                <nav class="space-y-1 text-sm font-medium">
-                    <a href="#formulas" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-square-root-variable w-6 text-emerald-500"></i> Key Formula Sheet
-                    </a>
-                    <a href="#conceptual" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-circle-question w-6 text-amber-500"></i> 10 Conceptual Questions
-                    </a>
-                    <a href="#numericals" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-calculator w-6 text-indigo-500"></i> 8 Solved NEB Numericals
-                    </a>
-                    <a href="#quiz" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-vial-circle-check w-6 text-purple-500"></i> Self-Assessment Quiz
-                    </a>
-                    <a href="#calculators" class="flex items-center px-3 py-2 text-slate-700 dark:text-slate-300 hover:bg-neb-50 dark:hover:bg-slate-700/50 hover:text-neb-700 dark:hover:text-neb-400 rounded-lg transition">
-                        <i class="fa-solid fa-laptop-code w-6 text-rose-500"></i> Physics Calculators
-                    </a>
-                </nav>
-
-                <div class="p-3 bg-neb-50 dark:bg-slate-800 rounded-lg border border-neb-100 dark:border-slate-700 text-xs text-slate-600 dark:text-slate-400 mt-6">
-                    <p class="font-semibold text-neb-800 dark:text-neb-300 mb-1"><i class="fa-solid fa-graduation-cap"></i> NEB Board Standard</p>
-                    <p>Designed strictly per Curriculum Development Centre (CDC) Nepal syllabus for Grade XI Physics.</p>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="flex-1 max-w-full overflow-hidden content-area">
-
-            <!-- Overview Banner -->
-            <section id="overview" class="mb-10 bg-gradient-to-br from-neb-800 to-neb-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl relative overflow-hidden">
-                <div class="relative z-10">
-                    <span class="px-3 py-1 bg-neb-500/30 text-neb-200 border border-neb-400/30 rounded-full text-xs font-semibold uppercase tracking-wider">NEB Curriculum Code: Phys.105</span>
-                    <h1 class="text-2xl sm:text-4xl font-extrabold mt-3 mb-2 tracking-tight">Unit 5: Work, Energy, and Power</h1>
-                    <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-3xl">
-                        Comprehensive theoretical derivations, vector line diagrams, mathematical formulations, conservative dynamics, elastic and inelastic collision mechanics, and solved practice numericals tailored for National Examinations Board (NEB) Nepal Grade XI Physics.
-                    </p>
-                    <div class="mt-6 flex flex-wrap gap-4 text-xs font-medium text-slate-300">
-                        <div class="flex items-center space-x-1 bg-white/10 px-3 py-1.5 rounded-md"><i class="fa-regular fa-clock text-neb-400"></i><span>8 Teaching Hours</span></div>
-                        <div class="flex items-center space-x-1 bg-white/10 px-3 py-1.5 rounded-md"><i class="fa-solid fa-file-pdf text-neb-400"></i><span>Print-Ready Diagrams</span></div>
-                        <div class="flex items-center space-x-1 bg-white/10 px-3 py-1.5 rounded-md"><i class="fa-solid fa-circle-check text-neb-400"></i><span>Full Solved Solutions</span></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TOPIC 5.1 -->
-            <section id="topic51" class="topic-section mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="px-3 py-1 bg-neb-100 dark:bg-neb-900/50 text-neb-700 dark:text-neb-300 font-mono font-bold text-sm rounded-md">TOPIC 5.1</span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Work Done by a Constant Force and a Variable Force</h2>
-                </div>
-
-                <div class="prose dark:prose-invert max-w-none space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">1. Definition of Work in Physics</h3>
-                    <p>
-                        In common parlance, any physical or mental effort is termed "work". However, in physics, <strong>work</strong> is defined rigorously: <em>Work is said to be done by a force when the point of application of the force undergoes a displacement along or opposite to the line of action of the force.</em>
-                    </p>
-                    <p>
-                        If a constant force $\vec{F}$ acts on a body and causes a displacement $\vec{d}$ making an angle $\theta$ with the direction of the force, the work done $W$ is defined as the scalar (dot) product of the force vector and displacement vector:
-                    </p>
-
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$W = \vec{F} \cdot \vec{d} = F d \cos\theta$$
-                    </div>
-
-                    <p>
-                        Here, $F = |\vec{F}|$ is the magnitude of force, $d = |\vec{d}|$ is the magnitude of displacement, and $\theta$ is the angle between $\vec{F}$ and $\vec{d}$. Alternatively, work is the product of the component of force in the direction of displacement ($(F\cos\theta)$) and the magnitude of displacement ($d$).
-                    </p>
-
-                    <!-- SVG DIAGRAM 5.1a -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.1(a): Vector Resolution of Force acting on a Mass Block</div>
-                        <svg viewBox="0 0 550 220" class="w-full max-w-lg mx-auto h-auto">
-                            <!-- SVG Definitions for Arrowheads -->
-                            <defs>
-                                <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#0284c7" />
-                                </marker>
-                                <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626" />
-                                </marker>
-                                <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a" />
-                                </marker>
-                                <pattern id="hatch" width="10" height="10" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
-                                    <line x1="0" y1="0" x2="0" y2="10" stroke="#cbd5e1" stroke-width="1" />
-                                </pattern>
-                            </defs>
-
-                            <!-- Ground Surface with hatches -->
-                            <line x1="30" y1="160" x2="520" y2="160" stroke="#334155" stroke-width="2" />
-                            <rect x="30" y="160" width="490" height="15" fill="url(#hatch)" />
-
-                            <!-- Initial Block Position -->
-                            <rect x="80" y="100" width="80" height="60" rx="4" fill="#e2e8f0" stroke="#1e293b" stroke-width="2" />
-                            <text x="120" y="135" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0f172a">Mass m</text>
-
-                            <!-- Displaced Block Position (Dashed) -->
-                            <rect x="340" y="100" width="80" height="60" rx="4" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" />
-                            <text x="380" y="135" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#64748b">Position 2</text>
-
-                            <!-- Center Point -->
-                            <circle cx="120" cy="130" r="4" fill="#0284c7" />
-
-                            <!-- Displacement Vector Arrow -->
-                            <line x1="120" y1="180" x2="380" y2="180" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)" />
-                            <text x="250" y="200" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#16a34a">Displacement vector d</text>
-
-                            <!-- Applied Force Vector F -->
-                            <line x1="120" y1="130" x2="230" y2="60" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)" />
-                            <text x="240" y="55" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0284c7">Force F</text>
-
-                            <!-- Horizontal Component F cos theta -->
-                            <line x1="120" y1="130" x2="230" y2="130" stroke="#dc2626" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrow-red)" />
-                            <text x="180" y="150" font-family="sans-serif" font-size="12" font-weight="bold" fill="#dc2626">F cos θ</text>
-
-                            <!-- Vertical Component F sin theta -->
-                            <line x1="230" y1="130" x2="230" y2="60" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3" />
-                            <text x="240" y="100" font-family="sans-serif" font-size="12" fill="#64748b">F sin θ</text>
-
-                            <!-- Angle Arc θ -->
-                            <path d="M 160 130 A 40 40 0 0 0 152 110" fill="none" stroke="#0f172a" stroke-width="1.5" />
-                            <text x="168" y="122" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a">θ</text>
-                        </svg>
-                    </div>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">Dimensions & Units of Work</h4>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Dimensional Formula:</strong> $[\text{Work}] = [\text{Force}] \times [\text{Displacement}] = [M^1 L^1 T^{-2}] \times [L^1] = \mathbf{[M^1 L^2 T^{-2}]}$.</li>
-                        <li><strong>SI Unit:</strong> The SI unit of work is the <strong>Joule ($\text{J}$)</strong>. One Joule is defined as the work done when a force of $1\text{ Newton}$ displaces an object through $1\text{ meter}$ in the direction of the force ($1\text{ J} = 1\text{ N} \cdot 1\text{ m} = 1\text{ kg}\cdot\text{m}^2\text{s}^{-2}$).</li>
-                        <li><strong>CGS Unit:</strong> The CGS unit of work is the <strong>Erg</strong> ($1\text{ erg} = 1\text{ dyne} \cdot 1\text{ cm}$).</li>
-                        <li><strong>Conversion Relation:</strong>
-                            $$1\text{ Joule} = 1\text{ N} \times 1\text{ m} = (10^5\text{ dynes}) \times (10^2\text{ cm}) = \mathbf{10^7\text{ ergs}}$$
-                        </li>
-                    </ul>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">Sign Convention & Physical Nature of Work</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-4">
-                        <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl">
-                            <h5 class="font-bold text-emerald-800 dark:text-emerald-300 text-sm mb-1"><i class="fa-solid fa-plus-circle"></i> Positive Work ($\theta < 90^\circ$)</h5>
-                            <p class="text-xs">Done when force has a component in direction of motion ($\cos\theta > 0$). Energy is transferred <em>to</em> the body.</p>
-                            <p class="text-xs font-semibold mt-2 text-emerald-700 dark:text-emerald-400">Example: Work done by gravity on a freely falling body ($\theta = 0^\circ$).</p>
-                        </div>
-                        <div class="p-4 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-xl">
-                            <h5 class="font-bold text-rose-800 dark:text-rose-300 text-sm mb-1"><i class="fa-solid fa-minus-circle"></i> Negative Work ($90^\circ < \theta \le 180^\circ$)</h5>
-                            <p class="text-xs">Done when force opposes motion ($\cos\theta < 0$). Energy is removed <em>from</em> the body.</p>
-                            <p class="text-xs font-semibold mt-2 text-rose-700 dark:text-rose-400">Example: Work done by friction on a sliding block ($\theta = 180^\circ$).</p>
-                        </div>
-                        <div class="p-4 bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 rounded-xl">
-                            <h5 class="font-bold text-amber-800 dark:text-amber-300 text-sm mb-1"><i class="fa-solid fa-ban"></i> Zero Work ($\theta = 90^\circ$ or $d=0$)</h5>
-                            <p class="text-xs">No displacement or force acts perpendicular to motion ($\cos 90^\circ = 0$).</p>
-                            <p class="text-xs font-semibold mt-2 text-amber-700 dark:text-amber-400">Example: Work done by centripetal force in circular motion ($\theta = 90^\circ$).</p>
-                        </div>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">2. Work Done by a Variable Force</h3>
-                    <p>
-                        In practical scenario, forces are rarely constant. When a variable force $F(x)$ acts on a particle moving along the x-axis, its magnitude changes with position $x$. We cannot use $W = F d \cos\theta$ directly.
-                    </p>
-                    <p>
-                        To formulate the work done, we divide the total displacement from initial position $x_1$ to final position $x_2$ into a very large number of infinitesimal displacements $dx$. During a tiny displacement $dx$, the force $F(x)$ can be treated as virtually constant.
-                    </p>
-                    <p>
-                        The small elementary work done $dW$ for displacement $dx$ is given by:
-                        $$dW = F(x) \, dx$$
-                    </p>
-                    <p>
-                        Summing up the elementary work over the entire interval from $x_1$ to $x_2$ by taking the definite integral as $dx \to 0$:
-                    </p>
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$W = \int_{x_1}^{x_2} F(x) \, dx = \text{Area under Force-Displacement } (F-x) \text{ curve}$$
-                    </div>
-
-                    <!-- SVG DIAGRAM 5.1b -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.1(b): Graphical Determination of Work Done by a Variable Force</div>
-                        <svg viewBox="0 0 550 260" class="w-full max-w-lg mx-auto h-auto">
-                            <!-- Axes -->
-                            <line x1="60" y1="210" x2="500" y2="210" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
-                            <line x1="60" y1="210" x2="60" y2="20" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
-                            
-                            <text x="500" y="235" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a">Position x (m)</text>
-                            <text x="20" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a">Force F(x) (N)</text>
-                            <text x="45" y="225" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a">O</text>
-
-                            <!-- Curved Area Shading -->
-                            <path d="M 120 210 L 120 150 Q 220 30 320 100 T 440 180 L 440 210 Z" fill="#e0f2fe" opacity="0.7" />
-
-                            <!-- Variable Force Curve -->
-                            <path d="M 100 170 Q 220 30 320 100 T 460 190" fill="none" stroke="#0284c7" stroke-width="3" />
-
-                            <!-- Boundaries x1 and x2 -->
-                            <line x1="120" y1="210" x2="120" y2="150" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3" />
-                            <text x="115" y="228" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0284c7">x₁</text>
-
-                            <line x1="440" y1="210" x2="440" y2="180" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3" />
-                            <text x="435" y="228" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0284c7">x₂</text>
-
-                            <!-- Elementary Strip dx -->
-                            <rect x="250" y="65" width="20" height="145" fill="#38bdf8" opacity="0.6" stroke="#0284c7" stroke-width="1" />
-                            <text x="260" y="228" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#dc2626">dx</text>
-                            <text x="260" y="130" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0f172a" transform="rotate(-90 260 130)">dW = F(x) dx</text>
-
-                            <text x="320" y="140" font-family="sans-serif" font-size="13" font-weight="bold" fill="#0369a1">Total Area = ∫ F(x) dx = W</text>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">3. Work Done in Stretching/Compressing an Ideal Spring</h3>
-                    <p>
-                        Consider a block of mass $m$ attached to an ideal spring of spring constant (stiffness constant) $k$ resting on a frictionless horizontal plane.
-                    </p>
-                    <p>
-                        According to <strong>Hooke's Law</strong>, when the spring is extended or compressed by a displacement $x$ from its natural unstretched length ($x=0$), it exerts a restoring force $F_{\text{restoring}}$ given by:
-                        $$F_{\text{restoring}} = -k x$$
-                    </p>
-                    <p>
-                        To stretch the spring slowly without acceleration, an external applied force $F_{\text{ext}}$ equal and opposite to restoring force must be applied:
-                        $$F_{\text{ext}} = +k x$$
-                    </p>
-                    <p>
-                        The infinitesimal work done $dW$ by external force in stretching the spring through further distance $dx$ is:
-                        $$dW = F_{\text{ext}} \, dx = (k x) \, dx$$
-                    </p>
-                    <p>
-                        Therefore, the total work done $W$ in stretching the spring from its relaxed length ($x = 0$) to a final elongation $x$ is:
-                    </p>
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$W = \int_{0}^{x} k x \, dx = k \left[ \frac{x^2}{2} \right]_{0}^{x} = \mathbf{\frac{1}{2} k x^2}$$
-                    </div>
-
-                    <!-- SVG DIAGRAM 5.1c -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.1(c): Spring-Mass System States and Force-Extension Relationship</div>
-                        <svg viewBox="0 0 600 300" class="w-full max-w-xl mx-auto h-auto">
-                            <!-- State (i) Relaxed -->
-                            <g transform="translate(10, 20)">
-                                <line x1="20" y1="0" x2="20" y2="60" stroke="#1e293b" stroke-width="3" />
-                                <path d="M 20 30 Q 30 15 40 30 T 60 30 T 80 30 T 100 30 T 120 30 T 140 30 L 150 30" fill="none" stroke="#64748b" stroke-width="2" />
-                                <rect x="150" y="10" width="40" height="40" fill="#cbd5e1" stroke="#1e293b" stroke-width="2" />
-                                <text x="170" y="35" text-anchor="middle" font-size="11" font-weight="bold">m</text>
-                                <line x1="20" y1="50" x2="230" y2="50" stroke="#94a3b8" stroke-dasharray="2,2" />
-                                <line x1="170" y1="50" x2="170" y2="70" stroke="#dc2626" stroke-dasharray="2,2" />
-                                <text x="170" y="82" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="bold">x = 0 (Relaxed)</text>
-                            </g>
-
-                            <!-- State (ii) Stretched -->
-                            <g transform="translate(10, 110)">
-                                <line x1="20" y1="0" x2="20" y2="60" stroke="#1e293b" stroke-width="3" />
-                                <path d="M 20 30 Q 35 15 50 30 T 80 30 T 110 30 T 140 30 T 170 30 L 200 30" fill="none" stroke="#0284c7" stroke-width="2" />
-                                <rect x="200" y="10" width="40" height="40" fill="#38bdf8" stroke="#1e293b" stroke-width="2" />
-                                <text x="220" y="35" text-anchor="middle" font-size="11" font-weight="bold">m</text>
-                                <line x1="20" y1="50" x2="260" y2="50" stroke="#94a3b8" stroke-dasharray="2,2" />
-                                <!-- External force arrow -->
-                                <line x1="240" y1="30" x2="280" y2="30" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)" />
-                                <text x="285" y="34" font-size="10" font-weight="bold" fill="#16a34a">F_ext</text>
-                                <!-- Restoring force arrow -->
-                                <line x1="200" y1="30" x2="160" y2="30" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)" />
-                                <text x="125" y="34" font-size="10" font-weight="bold" fill="#dc2626">F_rest</text>
-                                <text x="220" y="70" text-anchor="middle" font-size="11" fill="#0284c7" font-weight="bold">x > 0 (Stretched by x)</text>
-                            </g>
-
-                            <!-- State (iii) Graph F vs x -->
-                            <g transform="translate(350, 30)">
-                                <line x1="40" y1="180" x2="220" y2="180" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
-                                <line x1="40" y1="180" x2="40" y2="20" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
-                                <text x="220" y="198" font-size="10" font-weight="bold">x</text>
-                                <text x="15" y="25" font-size="10" font-weight="bold">F_ext</text>
-                                
-                                <!-- Linear line -->
-                                <polygon points="40,180 180,50 180,180" fill="#e0f2fe" opacity="0.6" />
-                                <line x1="40" y1="180" x2="180" y2="50" stroke="#0284c7" stroke-width="2.5" />
-                                <line x1="180" y1="50" x2="180" y2="180" stroke="#64748b" stroke-dasharray="3,3" />
-                                
-                                <text x="180" y="45" font-size="10" font-weight="bold" fill="#0284c7">(x, kx)</text>
-                                <text x="110" y="140" font-size="11" font-weight="bold" fill="#0369a1">Area = ½ k x²</text>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TOPIC 5.2 -->
-            <section id="topic52" class="topic-section mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="px-3 py-1 bg-neb-100 dark:bg-neb-900/50 text-neb-700 dark:text-neb-300 font-mono font-bold text-sm rounded-md">TOPIC 5.2</span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Power and Machine Efficiency</h2>
-                </div>
-
-                <div class="prose dark:prose-invert max-w-none space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">1. Definition and Mathematical Formulation</h3>
-                    <p>
-                        <strong>Power</strong> is defined as the time rate at which work is done or the rate at which energy is transferred/transformed by a force. While work measures the total effect, power measures how fast or slowly that work is executed.
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                        <div class="p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm mb-2">Average Power ($P_{\text{avg}}$)</h4>
-                            <p class="text-xs">Total work done divided by total time taken:</p>
-                            <p class="font-mono text-center text-sm font-bold my-2 text-neb-700 dark:text-neb-400">$$P_{\text{avg}} = \frac{\Delta W}{\Delta t}$$</p>
-                        </div>
-                        <div class="p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h4 class="font-bold text-slate-800 dark:text-slate-200 text-sm mb-2">Instantaneous Power ($P$)</h4>
-                            <p class="text-xs">Power at a specific instant of time $t$:</p>
-                            <p class="font-mono text-center text-sm font-bold my-2 text-neb-700 dark:text-neb-400">$$P = \lim_{\Delta t \to 0} \frac{\Delta W}{\Delta t} = \frac{dW}{dt}$$</p>
-                        </div>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">2. Relation Between Power, Force, and Velocity</h3>
-                    <p>
-                        Suppose a force $\vec{F}$ produces an infinitesimal displacement $d\vec{r}$ of a particle in time $dt$. The elementary work done is $dW = \vec{F} \cdot d\vec{r}$.
-                    </p>
-                    <p>
-                        Dividing both sides by $dt$:
-                        $$P = \frac{dW}{dt} = \frac{\vec{F} \cdot d\vec{r}}{dt} = \vec{F} \cdot \left(\frac{d\vec{r}}{dt}\right)$$
-                    </p>
-                    <p>
-                        Since $\frac{d\vec{r}}{dt} = \vec{v}$ (instantaneous velocity vector):
-                    </p>
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$P = \vec{F} \cdot \vec{v} = F v \cos\theta$$
-                    </div>
-                    <p>
-                        Thus, instantaneous power equals the scalar dot product of force vector $\vec{F}$ and velocity vector $\vec{v}$.
-                    </p>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">3. Units of Power</h3>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>SI Unit:</strong> The SI unit of power is the <strong>Watt ($\text{W}$)</strong>, named in honor of James Watt. One Watt is defined as 1 Joule of work done per second ($1\text{ W} = 1\text{ J/s} = 1\text{ kg}\cdot\text{m}^2\cdot\text{s}^{-3}$).</li>
-                        <li><strong>Larger Practical Units:</strong>
-                            <ul class="list-circle pl-6 mt-1 space-y-1">
-                                <li>$1\text{ Kilowatt (kW)} = 10^3\text{ W} = 1000\text{ W}$</li>
-                                <li>$1\text{ Megawatt (MW)} = 10^6\text{ W}$</li>
-                                <li>$1\text{ Horsepower (HP)} = \mathbf{746\text{ Watts}}$ (Imperial unit widely used for motor ratings).</li>
-                            </ul>
-                        </li>
-                        <li><strong>Commercial Energy Unit ($\text{kWh}$):</strong> Kilowatt-hour is a practical unit of electrical <em>energy</em> (not power). $1\text{ kWh} = (1000\text{ W}) \times (3600\text{ s}) = \mathbf{3.6 \times 10^6\text{ Joules}}$.</li>
-                    </ul>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">4. Efficiency of Machines ($\eta$)</h3>
-                    <p>
-                        In practical mechanical systems, due to frictional and thermal dissipation, output power is always less than input power. The <strong>efficiency ($\eta$)</strong> is defined as the ratio of useful output power to total input power expressed as a percentage:
-                    </p>
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$\eta = \left( \frac{\text{Useful Output Power } P_{\text{out}}}{\text{Total Input Power } P_{\text{in}}} \right) \times 100\% = \left( \frac{\text{Useful Output Work}}{\text{Total Input Energy}} \right) \times 100\%$$
-                    </div>
-
-                    <div class="p-4 bg-sky-50 dark:bg-slate-900 border border-sky-200 dark:border-slate-700 rounded-xl my-4">
-                        <h5 class="font-bold text-sky-800 dark:text-sky-300 text-sm mb-2"><i class="fa-solid fa-lightbulb"></i> NEB Board Application Tip: Water Pump Efficiency</h5>
-                        <p class="text-xs">
-                            If a water motor pump of efficiency $\eta$ lifts mass $m$ of water to height $h$ in time $t$:
-                        </p>
-                        <p class="font-mono text-xs font-bold my-2 text-center text-neb-700 dark:text-neb-300">
-                            $$P_{\text{out}} = \frac{mgh}{t} \implies P_{\text{in}} = \frac{P_{\text{out}}}{\eta} = \frac{mgh}{\eta \cdot t}$$
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TOPIC 5.3 -->
-            <section id="topic53" class="topic-section mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="px-3 py-1 bg-neb-100 dark:bg-neb-900/50 text-neb-700 dark:text-neb-300 font-mono font-bold text-sm rounded-md">TOPIC 5.3</span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Work-Energy Theorem; Kinetic and Potential Energy</h2>
-                </div>
-
-                <div class="prose dark:prose-invert max-w-none space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">1. Kinetic Energy ($E_k$) and its Calculus Derivation</h3>
-                    <p>
-                        <strong>Kinetic energy</strong> is the energy possessed by a body by virtue of its motion.
-                    </p>
-                    <p>
-                        <strong>Derivation:</strong> Consider a body of mass $m$ initially at rest ($u=0$) on a smooth horizontal surface. A variable force $F$ acts on it, displacing it through distance $x$ and imparting a velocity $v$.
-                    </p>
-                    <p>
-                        According to Newton's second law, $F = m a = m \frac{dv}{dt}$. Using the chain rule for acceleration:
-                        $$a = \frac{dv}{dt} = \frac{dv}{dx} \cdot \frac{dx}{dt} = v \frac{dv}{dx}$$
-                    </p>
-                    <p>
-                        The elementary work $dW$ done by force $F$ for displacement $dx$ is:
-                        $$dW = F \, dx = \left(m v \frac{dv}{dx}\right) dx = m v \, dv$$
-                    </p>
-                    <p>
-                        Integrating both sides from initial velocity $0$ to final velocity $v$:
-                    </p>
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$W = \int_{0}^{v} m v \, dv = m \left[ \frac{v^2}{2} \right]_{0}^{v} = \mathbf{\frac{1}{2} m v^2}$$
-                    </div>
-                    <p>This total work done in setting the body into motion is stored as its Kinetic Energy: $E_k = \frac{1}{2} m v^2$.</p>
-
-                    <!-- SVG DIAGRAM 5.3 -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.3: Mass Moving Under Variable Force Demonstrating Work-Energy Theorem</div>
-                        <svg viewBox="0 0 550 180" class="w-full max-w-lg mx-auto h-auto">
-                            <!-- Horizontal path -->
-                            <line x1="40" y1="130" x2="500" y2="130" stroke="#334155" stroke-width="2" />
-                            <rect x="40" y="130" width="460" height="10" fill="url(#hatch)" />
-
-                            <!-- Block at Position x1 -->
-                            <rect x="80" y="70" width="60" height="60" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" />
-                            <text x="110" y="105" text-anchor="middle" font-weight="bold" font-size="12">m</text>
-                            <text x="110" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#0284c7">Initial: u (at x₁)</text>
-                            <line x1="110" y1="70" x2="150" y2="70" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)" />
-
-                            <!-- Block at Position x2 -->
-                            <rect x="360" y="70" width="60" height="60" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2" />
-                            <text x="390" y="105" text-anchor="middle" font-weight="bold" font-size="12">m</text>
-                            <text x="390" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#16a34a">Final: v (at x₂)</text>
-                            <line x1="390" y1="70" x2="450" y2="70" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow-green)" />
-
-                            <!-- Displacement indicator -->
-                            <line x1="110" y1="150" x2="390" y2="150" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-                            <text x="250" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#475569">W_net = ∫ F dx = ½ mv² - ½ mu²</text>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">2. Rigorous Proof of Work-Energy Theorem (WET)</h3>
-                    <p>
-                        <strong>Statement:</strong> The net work done by all resultant forces acting on a body is equal to the change in its kinetic energy.
-                        $$W_{\text{net}} = \Delta E_k = E_{k,f} - E_{k,i} = \frac{1}{2} m v^2 - \frac{1}{2} m u^2$$
-                    </p>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">A. Proof for Constant Force:</h4>
-                    <p>
-                        From third equation of motion under constant acceleration $a$:
-                        $$v^2 - u^2 = 2 a s \implies a s = \frac{v^2 - u^2}{2}$$
-                    </p>
-                    <p>
-                        Multiplying both sides by mass $m$:
-                        $$F \cdot s = (m a) s = m (a s) = m \left( \frac{v^2 - u^2}{2} \right) = \frac{1}{2} m v^2 - \frac{1}{2} m u^2$$
-                        $$\mathbf{W = \Delta E_k} \quad \text{(Proved)}$$
-                    </p>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">B. Proof for Variable Force:</h4>
-                    <p>
-                        Work done by variable force $F(x)$ from $x_1$ to $x_2$:
-                        $$W = \int_{x_1}^{x_2} F(x) \, dx = \int_{x_1}^{x_2} m \left( \frac{dv}{dt} \right) dx = \int_{x_1}^{x_2} m \left( v \frac{dv}{dx} \right) dx = \int_{u}^{v} m v \, dv$$
-                        $$W = m \left[ \frac{v^2}{2} \right]_{u}^{v} = \mathbf{\frac{1}{2} m v^2 - \frac{1}{2} m u^2 = \Delta E_k} \quad \text{(Proved)}$$
-                    </p>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">3. Potential Energy ($U$) & Reference Levels</h3>
-                    <p>
-                        <strong>Potential Energy</strong> is defined as the energy stored in a system by virtue of its position, configuration, or state of strain in a conservative field.
-                    </p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Gravitational Potential Energy ($U = mgh$):</strong> Work done against gravitational force in lifting mass $m$ slowly to height $h$: $W = F \cdot h = (mg) h = \mathbf{mgh}$.</li>
-                        <li><strong>Elastic Potential Energy ($U = \frac{1}{2}kx^2$):</strong> Work done in compressing or stretching a spring by distance $x$.</li>
-                        <li><strong>Zero Reference Level:</strong> Potential energy is relative. By convention, ground surface is taken as $U=0$ for gravity, and natural length $x=0$ is taken as $U=0$ for springs.</li>
-                    </ul>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">4. Relation Between Kinetic Energy ($E_k$) and Linear Momentum ($p$)</h3>
-                    <p>
-                        Linear momentum is $p = m v \implies v = \frac{p}{m}$. Substituting into kinetic energy formula:
-                        $$E_k = \frac{1}{2} m v^2 = \frac{1}{2} m \left(\frac{p}{m}\right)^2 = \mathbf{\frac{p^2}{2m}}$$
-                        Rearranging for linear momentum $p$:
-                        $$\mathbf{p = \sqrt{2m E_k}}$$
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                        <div class="p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h5 class="font-bold text-xs uppercase text-slate-500">Case I: Same Momentum ($p_1 = p_2$)</h5>
-                            <p class="text-xs my-1">$E_k = \frac{p^2}{2m} \implies E_k \propto \frac{1}{m}$.</p>
-                            <p class="text-xs font-semibold text-neb-700 dark:text-neb-300">The lighter mass body possesses GREATER kinetic energy!</p>
-                        </div>
-                        <div class="p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h5 class="font-bold text-xs uppercase text-slate-500">Case II: Same Kinetic Energy ($E_{k1} = E_{k2}$)</h5>
-                            <p class="text-xs my-1">$p = \sqrt{2m E_k} \implies p \propto \sqrt{m}$.</p>
-                            <p class="text-xs font-semibold text-neb-700 dark:text-neb-300">The heavier mass body possesses GREATER linear momentum!</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TOPIC 5.4 -->
-            <section id="topic54" class="topic-section mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="px-3 py-1 bg-neb-100 dark:bg-neb-900/50 text-neb-700 dark:text-neb-300 font-mono font-bold text-sm rounded-md">TOPIC 5.4</span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Conservation of Energy</h2>
-                </div>
-
-                <div class="prose dark:prose-invert max-w-none space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">1. Principle of Conservation of Mechanical Energy</h3>
-                    <p>
-                        <strong>Law of Conservation of Total Energy:</strong> Energy can neither be created nor destroyed; it can only be transformed from one form to another. The total energy of an isolated system remains constant.
-                    </p>
-                    <p>
-                        <strong>Conservation of Mechanical Energy:</strong> In an isolated system where only <em>conservative forces</em> do work, the total mechanical energy $E$ (sum of kinetic energy $K$ and potential energy $U$) remains constant at all points:
-                        $$E = K + U = \text{Constant} \implies K_A + U_A = K_B + U_B$$
-                    </p>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">2. Rigorous Mathematical Verification for a Freely Falling Body</h3>
-                    <p>
-                        Consider a body of mass $m$ initially held at rest at point <strong>A</strong> at height $h$ above the ground. Let it fall freely under gravity. We calculate total energy at three points: <strong>A</strong> (top), <strong>B</strong> (intermediate after falling distance $x$), and <strong>C</strong> (just before striking ground).
-                    </p>
-
-                    <!-- SVG DIAGRAM 5.4 -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.4: Energy Conservation Breakdown at Points A, B, and C in Free Fall</div>
-                        <svg viewBox="0 0 550 280" class="w-full max-w-lg mx-auto h-auto">
-                            <!-- Vertical Drop Axis -->
-                            <line x1="180" y1="40" x2="180" y2="230" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4" />
-
-                            <!-- Ground Line -->
-                            <line x1="60" y1="230" x2="300" y2="230" stroke="#1e293b" stroke-width="3" />
-                            <rect x="60" y="230" width="240" height="12" fill="url(#hatch)" />
-                            <text x="315" y="235" font-size="11" font-weight="bold" fill="#1e293b">Ground (U = 0)</text>
-
-                            <!-- Point A -->
-                            <circle cx="180" cy="50" r="14" fill="#0284c7" stroke="#075985" stroke-width="2" />
-                            <text x="180" y="54" text-anchor="middle" fill="white" font-size="11" font-weight="bold">A</text>
-                            <text x="210" y="55" font-size="12" font-weight="bold" fill="#0284c7">Point A (y = h, u = 0)</text>
-
-                            <!-- Point B -->
-                            <circle cx="180" cy="130" r="14" fill="#38bdf8" stroke="#0284c7" stroke-width="2" />
-                            <text x="180" y="134" text-anchor="middle" fill="white" font-size="11" font-weight="bold">B</text>
-                            <text x="210" y="135" font-size="12" font-weight="bold" fill="#0369a1">Point B (y = h - x)</text>
-
-                            <!-- Point C -->
-                            <circle cx="180" cy="216" r="14" fill="#16a34a" stroke="#15803d" stroke-width="2" />
-                            <text x="180" y="220" text-anchor="middle" fill="white" font-size="11" font-weight="bold">C</text>
-                            <text x="210" y="215" font-size="12" font-weight="bold" fill="#16a34a">Point C (y = 0, v = √(2gh))</text>
-
-                            <!-- Dimension lines -->
-                            <!-- Height x -->
-                            <line x1="120" y1="50" x2="120" y2="130" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)" />
-                            <text x="100" y="95" font-size="12" font-weight="bold" fill="#dc2626">x</text>
-
-                            <!-- Height h-x -->
-                            <line x1="120" y1="130" x2="120" y2="230" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)" />
-                            <text x="85" y="185" font-size="12" font-weight="bold" fill="#16a34a">h - x</text>
-
-                            <!-- Height h -->
-                            <line x1="50" y1="50" x2="50" y2="230" stroke="#0284c7" stroke-width="1.5" marker-end="url(#arrow)" />
-                            <text x="35" y="140" font-size="13" font-weight="bold" fill="#0284c7">h</text>
-
-                            <!-- Energy Summary Card on right -->
-                            <g transform="translate(360, 40)">
-                                <rect x="0" y="0" width="170" height="190" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
-                                <text x="15" y="25" font-size="12" font-weight="bold" fill="#0f172a">Energy Verification:</text>
-                                
-                                <text x="15" y="55" font-size="10" font-weight="bold" fill="#0284c7">At A:</text>
-                                <text x="15" y="70" font-size="10">E_A = 0 + mgh = mgh</text>
-
-                                <text x="15" y="105" font-size="10" font-weight="bold" fill="#0369a1">At B:</text>
-                                <text x="15" y="120" font-size="10">E_B = mgx + mg(h-x)</text>
-                                <text x="15" y="135" font-size="10" font-weight="bold" fill="#0369a1">    = mgh</text>
-
-                                <text x="15" y="165" font-size="10" font-weight="bold" fill="#16a34a">At C:</text>
-                                <text x="15" y="180" font-size="10">E_C = mgh + 0 = mgh</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <div class="space-y-4">
-                        <div class="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl">
-                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Point A (Top, height $y = h$):</h4>
-                            <p class="text-xs">At highest position, initial velocity $u = 0$.</p>
-                            <p class="font-mono text-xs font-bold mt-1 text-neb-700 dark:text-neb-400">
-                                $$K_A = \frac{1}{2}m(0)^2 = 0, \quad U_A = mgh \implies \mathbf{E_A = K_A + U_A = mgh} \quad \text{--- (1)}$$
-                            </p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl">
-                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Point B (Intermediate, after falling distance $x$, height $y = h - x$):</h4>
-                            <p class="text-xs">Velocity $v_B$ at point B: $v_B^2 = u^2 + 2gx = 0 + 2gx = 2gx$.</p>
-                            <p class="font-mono text-xs font-bold mt-1 text-neb-700 dark:text-neb-400">
-                                $$K_B = \frac{1}{2}m v_B^2 = \frac{1}{2}m(2gx) = mgx$$
-                                $$U_B = mg(h - x)$$
-                                $$\mathbf{E_B = K_B + U_B = mgx + mg(h - x) = mgh} \quad \text{--- (2)}$$
-                            </p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl">
-                            <h4 class="font-bold text-sm text-slate-800 dark:text-slate-200">Point C (Bottom, just before striking ground $y = 0$):</h4>
-                            <p class="text-xs">Velocity $v_C$ at point C: $v_C^2 = u^2 + 2gh = 2gh$.</p>
-                            <p class="font-mono text-xs font-bold mt-1 text-neb-700 dark:text-neb-400">
-                                $$K_C = \frac{1}{2}m v_C^2 = \frac{1}{2}m(2gh) = mgh, \quad U_C = 0$$
-                                $$\mathbf{E_C = K_C + U_C = mgh + 0 = mgh} \quad \text{--- (3)}$$
-                            </p>
-                        </div>
-                    </div>
-
-                    <p class="font-bold text-center text-neb-800 dark:text-neb-300 my-4">
-                        Since $E_A = E_B = E_C = mgh$, total mechanical energy is conserved throughout the motion under gravity.
-                    </p>
-                </div>
-            </section>
-
-            <!-- TOPIC 5.5 -->
-            <section id="topic55" class="topic-section mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="px-3 py-1 bg-neb-100 dark:bg-neb-900/50 text-neb-700 dark:text-neb-300 font-mono font-bold text-sm rounded-md">TOPIC 5.5</span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Conservative and Non-Conservative Forces</h2>
-                </div>
-
-                <div class="prose dark:prose-invert max-w-none space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">1. Comparison & Distinguishing Properties</h3>
-                    <p>
-                        Forces in nature are fundamentally divided into two categories based on path dependency of work done:
-                    </p>
-
-                    <!-- Comparison Table -->
-                    <div class="overflow-x-auto my-4">
-                        <table class="w-full text-sm text-left border-collapse border border-slate-300 dark:border-slate-700">
-                            <thead>
-                                <tr class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200">
-                                    <th class="p-3 border border-slate-300 dark:border-slate-700">Property</th>
-                                    <th class="p-3 border border-slate-300 dark:border-slate-700 text-neb-700 dark:text-neb-400">Conservative Force</th>
-                                    <th class="p-3 border border-slate-300 dark:border-slate-700 text-rose-600 dark:text-rose-400">Non-Conservative Force</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border border-slate-300 dark:border-slate-700">
-                                    <td class="p-3 font-semibold border border-slate-300 dark:border-slate-700">Path Dependency</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Work done depends ONLY on initial and final positions, independent of path.</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Work done depends on the actual path taken between two points.</td>
-                                </tr>
-                                <tr class="border border-slate-300 dark:border-slate-700">
-                                    <td class="p-3 font-semibold border border-slate-300 dark:border-slate-700">Closed Loop Work</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Work done over a closed round-trip path is ZERO ($\oint \vec{F} \cdot d\vec{r} = 0$).</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Work done over a closed loop is NON-ZERO ($\oint \vec{F} \cdot d\vec{r} \neq 0$).</td>
-                                </tr>
-                                <tr class="border border-slate-300 dark:border-slate-700">
-                                    <td class="p-3 font-semibold border border-slate-300 dark:border-slate-700">Energy Conservation</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Total mechanical energy ($K + U$) is completely conserved.</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Mechanical energy is dissipated into heat, sound, or deformation.</td>
-                                </tr>
-                                <tr class="border border-slate-300 dark:border-slate-700">
-                                    <td class="p-3 font-semibold border border-slate-300 dark:border-slate-700">Potential Energy Relation</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Potential energy $U$ can be uniquely defined ($F = -\frac{dU}{dx}$).</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">No potential energy function exists for non-conservative forces.</td>
-                                </tr>
-                                <tr class="border border-slate-300 dark:border-slate-700">
-                                    <td class="p-3 font-semibold border border-slate-300 dark:border-slate-700">Physical Examples</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Gravitational force, Electrostatic force, Elastic spring force.</td>
-                                    <td class="p-3 border border-slate-300 dark:border-slate-700">Friction force, Viscous drag force, Air resistance.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- SVG DIAGRAM 5.5 -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.5: Path Independence and Closed Loop Integral for Conservative Fields</div>
-                        <svg viewBox="0 0 550 200" class="w-full max-w-lg mx-auto h-auto">
-                            <!-- Left: Path Independence -->
-                            <g transform="translate(20, 20)">
-                                <circle cx="40" cy="80" r="8" fill="#0284c7" />
-                                <text x="40" y="105" text-anchor="middle" font-weight="bold" font-size="12">A</text>
-
-                                <circle cx="200" cy="80" r="8" fill="#16a34a" />
-                                <text x="200" y="105" text-anchor="middle" font-weight="bold" font-size="12">B</text>
-
-                                <!-- Path 1 -->
-                                <path d="M 40 80 Q 120 20 200 80" fill="none" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)" />
-                                <text x="120" y="35" text-anchor="middle" font-size="11" font-weight="bold" fill="#0284c7">Path 1 (W₁)</text>
-
-                                <!-- Path 2 -->
-                                <line x1="40" y1="80" x2="200" y2="80" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)" />
-                                <text x="120" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Path 2 (W₂)</text>
-
-                                <!-- Path 3 -->
-                                <path d="M 40 80 Q 120 140 200 80" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)" />
-                                <text x="120" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">Path 3 (W₃)</text>
-
-                                <text x="120" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#0369a1">W₁ = W₂ = W₃</text>
-                            </g>
-
-                            <!-- Right: Closed Loop -->
-                            <g transform="translate(300, 20)">
-                                <ellipse cx="110" cy="80" rx="70" ry="40" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="4,4" />
-                                <circle cx="40" cy="80" r="6" fill="#0284c7" />
-                                <text x="25" y="85" font-size="11" font-weight="bold">A</text>
-                                <circle cx="180" cy="80" r="6" fill="#16a34a" />
-                                <text x="190" y="85" font-size="11" font-weight="bold">B</text>
-
-                                <!-- Loop arrows -->
-                                <path d="M 40 80 A 70 40 0 0 1 180 80" fill="none" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)" />
-                                <text x="110" y="30" text-anchor="middle" font-size="11" fill="#0284c7">W_{A→B}</text>
-
-                                <path d="M 180 80 A 70 40 0 0 1 40 80" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)" />
-                                <text x="110" y="140" text-anchor="middle" font-size="11" fill="#dc2626">W_{B→A}</text>
-
-                                <text x="110" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">∮ F · dr = 0</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">2. Proof: Gravitational Force is a Conservative Force</h3>
-                    <p>
-                        To prove gravitational force is conservative, consider raising a mass $m$ to height $h$ along three different paths:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Vertical Path 1 (Direct Lift):</strong>
-                            $$W_1 = F \cdot h = mg \cdot h = mgh$$
-                        </li>
-                        <li><strong>Inclined Plane Path 2 (Angle $\theta$, length $L = h / \sin\theta$):</strong>
-                            Component of force needed against gravity $= mg \sin\theta$.
-                            $$W_2 = (mg \sin\theta) \cdot L = (mg \sin\theta) \cdot \left(\frac{h}{\sin\theta}\right) = mgh$$
-                        </li>
-                        <li><strong>Staircase / Stepwise Path 3:</strong>
-                            Dividing path into horizontal steps $dx_i$ and vertical steps $dy_i$.
-                            Work along horizontal steps $= \sum mg \cdot dx_i \cos 90^\circ = 0$.
-                            Work along vertical steps $= \sum mg \cdot dy_i = mg \sum dy_i = mgh$.
-                        </li>
-                    </ul>
-                    <p class="font-bold text-neb-700 dark:text-neb-300">
-                        Since $W_1 = W_2 = W_3 = mgh$, work done against gravity is strictly path-independent. Hence, Gravitational Force is Conservative!
-                    </p>
-                </div>
-            </section>
-
-            <!-- TOPIC 5.6 -->
-            <section id="topic56" class="topic-section mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="px-3 py-1 bg-neb-100 dark:bg-neb-900/50 text-neb-700 dark:text-neb-300 font-mono font-bold text-sm rounded-md">TOPIC 5.6</span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Elastic and Inelastic Collisions</h2>
-                </div>
-
-                <div class="prose dark:prose-invert max-w-none space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300">1. Definition and Classification of Collisions</h3>
-                    <p>
-                        A <strong>collision</strong> is an intense physical interaction between two or more bodies occurring in a relatively short time interval, resulting in mutual exchange of momentum and energy.
-                    </p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Elastic Collision:</strong> A collision in which <em>both total linear momentum and total kinetic energy</em> are conserved. No mechanical energy is lost as heat, sound, or permanent deformation.</li>
-                        <li><strong>Inelastic Collision:</strong> A collision in which total linear momentum is conserved, but <em>kinetic energy is NOT conserved</em>.</li>
-                        <li><strong>Perfectly Inelastic Collision:</strong> An extreme inelastic collision where the colliding bodies stick together after impact and move with a single common velocity. Maximum possible kinetic energy is lost.</li>
-                    </ul>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">2. One-Dimensional (Head-On) Elastic Collision</h3>
-                    <p>
-                        Consider two bodies $A$ and $B$ of masses $m_1$ and $m_2$ moving along a straight line with initial velocities $u_1$ and $u_2$ ($u_1 > u_2$). Let $v_1$ and $v_2$ be their final velocities after collision.
-                    </p>
-
-                    <!-- SVG DIAGRAM 5.6a -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.6(a): Three Stages of One-Dimensional Elastic Collision</div>
-                        <svg viewBox="0 0 600 240" class="w-full max-w-xl mx-auto h-auto">
-                            <!-- Stage 1: Before Collision -->
-                            <g transform="translate(10, 20)">
-                                <line x1="10" y1="50" x2="570" y2="50" stroke="#cbd5e1" stroke-width="1.5" />
-                                <circle cx="80" cy="35" r="16" fill="#38bdf8" stroke="#0284c7" stroke-width="2" />
-                                <text x="80" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₁</text>
-                                <line x1="80" y1="15" x2="120" y2="15" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)" />
-                                <text x="100" y="10" text-anchor="middle" font-size="10" font-weight="bold" fill="#0284c7">u₁</text>
-
-                                <circle cx="200" cy="35" r="20" fill="#a7f3d0" stroke="#16a34a" stroke-width="2" />
-                                <text x="200" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₂</text>
-                                <line x1="200" y1="12" x2="230" y2="12" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)" />
-                                <text x="215" y="8" text-anchor="middle" font-size="10" font-weight="bold" fill="#16a34a">u₂</text>
-
-                                <text x="320" y="38" font-size="11" font-weight="bold" fill="#0f172a">(a) Before Collision (u₁ > u₂)</text>
-                            </g>
-
-                            <!-- Stage 2: During Contact -->
-                            <g transform="translate(10, 90)">
-                                <line x1="10" y1="50" x2="570" y2="50" stroke="#cbd5e1" stroke-width="1.5" />
-                                <circle cx="126" cy="35" r="16" fill="#38bdf8" stroke="#0284c7" stroke-width="2" />
-                                <circle cx="158" cy="35" r="20" fill="#a7f3d0" stroke="#16a34a" stroke-width="2" />
-                                <text x="142" y="38" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">⚡</text>
-
-                                <text x="320" y="38" font-size="11" font-weight="bold" fill="#0f172a">(b) During Contact (Deformation)</text>
-                            </g>
-
-                            <!-- Stage 3: After Collision -->
-                            <g transform="translate(10, 160)">
-                                <line x1="10" y1="50" x2="570" y2="50" stroke="#cbd5e1" stroke-width="1.5" />
-                                <circle cx="80" cy="35" r="16" fill="#38bdf8" stroke="#0284c7" stroke-width="2" />
-                                <text x="80" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₁</text>
-                                <line x1="80" y1="15" x2="110" y2="15" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)" />
-                                <text x="95" y="10" text-anchor="middle" font-size="10" font-weight="bold" fill="#0284c7">v₁</text>
-
-                                <circle cx="230" cy="35" r="20" fill="#a7f3d0" stroke="#16a34a" stroke-width="2" />
-                                <text x="230" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₂</text>
-                                <line x1="230" y1="12" x2="280" y2="12" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)" />
-                                <text x="255" y="8" text-anchor="middle" font-size="10" font-weight="bold" fill="#16a34a">v₂</text>
-
-                                <text x="320" y="38" font-size="11" font-weight="bold" fill="#0f172a">(c) After Collision (v₂ > v₁)</text>
-                            </g>
-                        </svg>
-                    </div>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">Step 1: Apply Conservation of Linear Momentum</h4>
-                    <p>
-                        $$m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2$$
-                        Rearranging terms of $m_1$ and $m_2$:
-                        $$m_1 (u_1 - v_1) = m_2 (v_2 - u_2) \quad \text{--- (Equation 1)}$$
-                    </p>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">Step 2: Apply Conservation of Kinetic Energy</h4>
-                    <p>
-                        $$\frac{1}{2} m_1 u_1^2 + \frac{1}{2} m_2 u_2^2 = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2$$
-                        $$m_1 (u_1^2 - v_1^2) = m_2 (v_2^2 - u_2^2)$$
-                        $$m_1 (u_1 - v_1)(u_1 + v_1) = m_2 (v_2 - u_2)(v_2 + u_2) \quad \text{--- (Equation 2)}$$
-                    </p>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">Step 3: Derive Velocity Relation</h4>
-                    <p>
-                        Dividing Equation (2) by Equation (1):
-                        $$\frac{m_1 (u_1 - v_1)(u_1 + v_1)}{m_1 (u_1 - v_1)} = \frac{m_2 (v_2 - u_2)(v_2 + u_2)}{m_2 (v_2 - u_2)}$$
-                        $$u_1 + v_1 = v_2 + u_2$$
-                        $$\mathbf{u_1 - u_2 = v_2 - v_1} \quad \text{--- (Equation 3)}$$
-                    </p>
-                    <div class="p-3 bg-sky-50 dark:bg-slate-900 border border-sky-200 dark:border-slate-700 rounded-lg text-sm font-semibold text-neb-800 dark:text-neb-300">
-                        <i class="fa-solid fa-star text-amber-500"></i> Fundamental Result: Relative velocity of approach $(u_1 - u_2)$ equals relative velocity of separation $(v_2 - v_1)$.
-                    </div>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200 mt-4">Step 4: Express Final Velocity Formulas</h4>
-                    <p>From Equation (3), $v_2 = u_1 - u_2 + v_1$. Substituting $v_2$ into Equation (1):</p>
-                    <p>$$m_1 (u_1 - v_1) = m_2 (u_1 - u_2 + v_1 - u_2) = m_2 (u_1 - 2u_2 + v_1)$$</p>
-                    <p>$$m_1 u_1 - m_1 v_1 = m_2 u_1 - 2 m_2 u_2 + m_2 v_1$$</p>
-                    <p>$$(m_1 + m_2) v_1 = (m_1 - m_2) u_1 + 2 m_2 u_2$$</p>
-
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$\mathbf{v_1 = \left( \frac{m_1 - m_2}{m_1 + m_2} \right) u_1 + \left( \frac{2 m_2}{m_1 + m_2} \right) u_2}$$
-                    </div>
-
-                    <p>Similarly, substituting $v_1 = v_2 - u_1 + u_2$ into Equation (1) yields:</p>
-
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$\mathbf{v_2 = \left( \frac{2 m_1}{m_1 + m_2} \right) u_1 + \left( \frac{m_2 - m_1}{m_1 + m_2} \right) u_2}$$
-                    </div>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">3. Analysis of 4 Critical Special Cases</h3>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                        <div class="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl">
-                            <h5 class="font-bold text-sm text-neb-700 dark:text-neb-300">Case 1: Equal Masses ($m_1 = m_2 = m$)</h5>
-                            <p class="text-xs my-1">$v_1 = 0 \cdot u_1 + \frac{2m}{2m} u_2 = u_2$</p>
-                            <p class="text-xs my-1">$v_2 = \frac{2m}{2m} u_1 + 0 \cdot u_2 = u_1$</p>
-                            <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Result: Bodies swap/exchange their velocities completely!</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl">
-                            <h5 class="font-bold text-sm text-neb-700 dark:text-neb-300">Case 2: Equal Masses ($m_1 = m_2$), Target at Rest ($u_2 = 0$)</h5>
-                            <p class="text-xs my-1">$v_1 = 0$, $\quad v_2 = u_1$</p>
-                            <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Result: Incident body stops completely; target moves off with speed $u_1$.</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl">
-                            <h5 class="font-bold text-sm text-neb-700 dark:text-neb-300">Case 3: Heavy Target at Rest ($m_2 \gg m_1, u_2 = 0$)</h5>
-                            <p class="text-xs my-1">$v_1 \approx \left(\frac{-m_2}{m_2}\right) u_1 = -u_1$</p>
-                            <p class="text-xs my-1">$v_2 \approx 0$</p>
-                            <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Result: Light body rebounds with same speed; heavy target remains stationary.</p>
-                        </div>
-
-                        <div class="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl">
-                            <h5 class="font-bold text-sm text-neb-700 dark:text-neb-300">Case 4: Heavy Incident Body ($m_1 \gg m_2, u_2 = 0$)</h5>
-                            <p class="text-xs my-1">$v_1 \approx u_1$</p>
-                            <p class="text-xs my-1">$v_2 \approx 2 u_1$</p>
-                            <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Result: Heavy incident body continues unaffected; light target kicked forward at $2u_1$.</p>
-                        </div>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">4. Perfectly Inelastic Collision & Loss of Kinetic Energy</h3>
-                    <p>
-                        In a 1D perfectly inelastic collision, two bodies stick together after impact and move with common velocity $v$.
-                    </p>
-                    <p>By Conservation of Linear Momentum:
-                        $$m_1 u_1 + m_2 u_2 = (m_1 + m_2) v \implies \mathbf{v = \frac{m_1 u_1 + m_2 u_2}{m_1 + m_2}}$$
-                    </p>
-
-                    <h4 class="font-bold text-slate-800 dark:text-slate-200">Mathematical Proof of Kinetic Energy Loss ($\Delta E_k$):</h4>
-                    <p>
-                        Initial KE: $E_{k,i} = \frac{1}{2} m_1 u_1^2 + \frac{1}{2} m_2 u_2^2$
-                    </p>
-                    <p>
-                        Final KE: $E_{k,f} = \frac{1}{2} (m_1 + m_2) v^2 = \frac{1}{2} (m_1 + m_2) \left[ \frac{m_1 u_1 + m_2 u_2}{m_1 + m_2} \right]^2 = \frac{(m_1 u_1 + m_2 u_2)^2}{2(m_1 + m_2)}$
-                    </p>
-                    <p>
-                        Loss of Kinetic Energy $\Delta E_k = E_{k,i} - E_{k,f}$:
-                    </p>
-
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$\mathbf{\Delta E_k = \frac{m_1 m_2}{2(m_1 + m_2)} (u_1 - u_2)^2 > 0}$$
-                    </div>
-
-                    <p>Since $m_1, m_2 > 0$ and $(u_1 - u_2)^2 > 0$, $\Delta E_k$ is strictly positive, proving kinetic energy is always lost in an inelastic collision.</p>
-
-                    <h3 class="text-lg font-bold text-neb-800 dark:text-neb-300 mt-8">5. Coefficient of Restitution ($e$)</h3>
-                    <p>
-                        The <strong>coefficient of restitution ($e$)</strong> is defined as the ratio of relative velocity of separation to relative velocity of approach:
-                    </p>
-                    <div class="my-4 p-4 bg-slate-100 dark:bg-slate-900 border-l-4 border-neb-600 rounded-r-lg font-mono text-center">
-                        $$e = \frac{v_2 - v_1}{u_1 - u_2}$$
-                    </div>
-                    <ul class="list-disc pl-6 space-y-1 text-sm">
-                        <li>For Perfectly Elastic Collision: $\mathbf{e = 1}$.</li>
-                        <li>For Inelastic Collision: $\mathbf{0 < e < 1}$.</li>
-                        <li>For Perfectly Inelastic Collision: $\mathbf{e = 0}$.</li>
-                    </ul>
-
-                    <!-- SVG DIAGRAM 5.6b -->
-                    <div class="diagram-container text-center my-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Figure 5.6(b): Oblique (2D) Elastic Collision Vector Breakdown</div>
-                        <svg viewBox="0 0 550 220" class="w-full max-w-lg mx-auto h-auto">
-                            <!-- X Axis -->
-                            <line x1="50" y1="110" x2="500" y2="110" stroke="#94a3b8" stroke-dasharray="3,3" />
-                            <text x="500" y="105" font-size="11" font-weight="bold">X-axis</text>
-
-                            <!-- Center Collision Point -->
-                            <circle cx="180" cy="110" r="6" fill="#1e293b" />
-
-                            <!-- Incident mass m1 vector -->
-                            <line x1="50" y1="110" x2="180" y2="110" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow)" />
-                            <text x="100" y="100" font-size="12" font-weight="bold" fill="#0284c7">m₁ u₁</text>
-
-                            <!-- Target mass m2 initial -->
-                            <circle cx="180" cy="110" r="14" fill="#a7f3d0" stroke="#16a34a" stroke-width="2" />
-                            <text x="180" y="114" text-anchor="middle" font-size="9" font-weight="bold">m₂ (u₂=0)</text>
-
-                            <!-- Mass m1 deflected upward -->
-                            <line x1="180" y1="110" x2="380" y2="40" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow)" />
-                            <text x="390" y="40" font-size="12" font-weight="bold" fill="#0284c7">m₁ v₁</text>
-                            <path d="M 230 110 A 50 50 0 0 0 220 95" fill="none" stroke="#0284c7" stroke-width="1.5" />
-                            <text x="235" y="98" font-size="11" font-weight="bold" fill="#0284c7">θ₁</text>
-
-                            <!-- Mass m2 deflected downward -->
-                            <line x1="180" y1="110" x2="380" y2="180" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow-green)" />
-                            <text x="390" y="185" font-size="12" font-weight="bold" fill="#16a34a">m₂ v₂</text>
-                            <path d="M 230 110 A 50 50 0 0 1 220 125" fill="none" stroke="#16a34a" stroke-width="1.5" />
-                            <text x="235" y="130" font-size="11" font-weight="bold" fill="#16a34a">θ₂</text>
-
-                            <!-- Equations overlay -->
-                            <text x="300" y="210" font-size="10" font-weight="bold" fill="#0f172a">X-momentum: m₁ u₁ = m₁ v₁ cosθ₁ + m₂ v₂ cosθ₂</text>
-                            <text x="300" y="225" font-size="10" font-weight="bold" fill="#0f172a">Y-momentum: 0 = m₁ v₁ sinθ₁ - m₂ v₂ sinθ₂</text>
-                        </svg>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FORMULA QUICK REFERENCE SHEET -->
-            <section id="formulas" class="mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="p-2 bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 rounded-lg"><i class="fa-solid fa-square-root-variable text-xl"></i></span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Unit 5 Key Formula Summary Sheet</h2>
-                </div>
-
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left border-collapse border border-slate-300 dark:border-slate-700">
-                        <thead class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200">
-                            <tr>
-                                <th class="p-3 border border-slate-300 dark:border-slate-700">Physical Quantity / Theorem</th>
-                                <th class="p-3 border border-slate-300 dark:border-slate-700">Formula</th>
-                                <th class="p-3 border border-slate-300 dark:border-slate-700">SI Units</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
-                            <tr>
-                                <td class="p-3 font-semibold">Work Done (Constant Force)</td>
-                                <td class="p-3 font-mono">$W = \vec{F} \cdot \vec{d} = F d \cos\theta$</td>
-                                <td class="p-3">Joule ($\text{J}$)</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Work Done (Variable Force)</td>
-                                <td class="p-3 font-mono">$W = \int_{x_1}^{x_2} F(x) \, dx$</td>
-                                <td class="p-3">Joule ($\text{J}$)</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Spring Elastic Potential Work</td>
-                                <td class="p-3 font-mono">$W = \frac{1}{2} k x^2$</td>
-                                <td class="p-3">Joule ($\text{J}$)</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Instantaneous Power</td>
-                                <td class="p-3 font-mono">$P = \frac{dW}{dt} = \vec{F} \cdot \vec{v} = F v \cos\theta$</td>
-                                <td class="p-3">Watt ($\text{W}$)</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Work-Energy Theorem</td>
-                                <td class="p-3 font-mono">$W_{\text{net}} = \Delta E_k = \frac{1}{2}mv^2 - \frac{1}{2}mu^2$</td>
-                                <td class="p-3">Joule ($\text{J}$)</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Momentum & KE Relation</td>
-                                <td class="p-3 font-mono">$p = \sqrt{2m E_k} \quad \text{and} \quad E_k = \frac{p^2}{2m}$</td>
-                                <td class="p-3">$\text{kg}\cdot\text{m/s}$, $\text{J}$</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">1D Elastic Final Velocities</td>
-                                <td class="p-3 font-mono">
-                                    $v_1 = \left(\frac{m_1-m_2}{m_1+m_2}\right)u_1 + \left(\frac{2m_2}{m_1+m_2}\right)u_2$<br>
-                                    $v_2 = \left(\frac{2m_1}{m_1+m_2}\right)u_1 + \left(\frac{m_2-m_1}{m_1+m_2}\right)u_2$
-                                </td>
-                                <td class="p-3">$\text{m/s}$</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Inelastic Collision KE Loss</td>
-                                <td class="p-3 font-mono">$\Delta E_k = \frac{m_1 m_2}{2(m_1 + m_2)} (u_1 - u_2)^2$</td>
-                                <td class="p-3">Joule ($\text{J}$)</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Coefficient of Restitution</td>
-                                <td class="p-3 font-mono">$e = \frac{v_2 - v_1}{u_1 - u_2}$</td>
-                                <td class="p-3">Dimensionless</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- CONCEPTUAL QUESTIONS SECTION -->
-            <section id="conceptual" class="mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="p-2 bg-amber-100 dark:bg-amber-950/50 text-amber-600 rounded-lg"><i class="fa-solid fa-circle-question text-xl"></i></span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">10 Essential NEB Conceptual Questions & Answers</h2>
-                </div>
-
-                <div class="space-y-4">
-                    <!-- Q1 -->
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q1')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q1: Can Kinetic Energy ever be negative? Explain.</span>
-                            <i id="q1-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q1" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>No, kinetic energy can <strong>never be negative</strong>. Kinetic energy is given by $E_k = \frac{1}{2} m v^2$. Since mass $m$ is a scalar positive quantity ($m > 0$) and velocity squared $v^2$ is always non-negative ($v^2 \ge 0$), kinetic energy must be $\ge 0$. It can be zero (at rest) or positive, but never negative.</p>
-                        </div>
-                    </div>
-
-                    <!-- Q2 -->
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q2')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q2: A light body and a heavy body have the same momentum. Which one has greater kinetic energy?</span>
-                            <i id="q2-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q2" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>The <strong>lighter body</strong> has greater kinetic energy. Kinetic energy in terms of momentum is $E_k = \frac{p^2}{2m}$. Since momentum $p$ is constant for both bodies, $E_k \propto \frac{1}{m}$. Therefore, the body with smaller mass $m$ will possess a larger kinetic energy.</p>
-                        </div>
-                    </div>
-
-                    <!-- Q3 -->
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q3')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q3: Why is work done by centripetal force always zero?</span>
-                            <i id="q3-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q3" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>Centripetal force acts towards the center of the circular path, whereas instantaneous displacement is directed tangentially along the circle. Thus, the angle between centripetal force vector $\vec{F}_c$ and displacement vector $d\vec{r}$ is $\theta = 90^\circ$. Work done $W = F d \cos(90^\circ) = 0$.</p>
-                        </div>
-                    </div>
-
-                    <!-- Q4 -->
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q4')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q4: Can a body have momentum without kinetic energy, or vice versa?</span>
-                            <i id="q4-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q4" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>No. Relation between momentum and kinetic energy is $p = \sqrt{2m E_k}$. If $E_k = 0$, velocity $v=0$, so $p=0$. Conversely if $p=0$, then $v=0$, so $E_k = 0$. Hence, a body cannot have momentum without kinetic energy or vice versa.</p>
-                        </div>
-                    </div>
-
-                    <!-- Q5 -->
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q5')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q5: What happens to the kinetic energy lost during an inelastic collision?</span>
-                            <i id="q5-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q5" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>The "lost" kinetic energy is converted into non-mechanical forms of energy, such as thermal energy (heat generation during impact), acoustic energy (sound produced during clashing), and strain energy stored as permanent mechanical deformation of the colliding bodies.</p>
-                        </div>
-                    </div>
-
-                    <!-- Q6-Q10 simplified format -->
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q6')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q6: Is work done by friction force always negative?</span>
-                            <i id="q6-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q6" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>Usually friction opposes relative motion ($\theta = 180^\circ$), doing negative work. However, static friction can do positive work! For example, when a car accelerates, static friction exerted by the road on the tires propels the car forward in the direction of motion ($\theta = 0^\circ$), doing positive work on the car.</p>
-                        </div>
-                    </div>
-
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q7')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q7: Does potential energy depend on the choice of reference frame?</span>
-                            <i id="q7-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q7" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>Yes. Absolute potential energy depends on the chosen zero reference height $y=0$. However, the <em>change in potential energy</em> ($\Delta U = U_2 - U_1$) is independent of reference level choosing.</p>
-                        </div>
-                    </div>
-
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q8')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q8: Two springs A and B have spring constants $k_A > k_B$. Which spring requires more work to stretch by same distance $x$?</span>
-                            <i id="q8-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q8" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>Work done in stretching a spring is $W = \frac{1}{2} k x^2$. For equal extension $x$, $W \propto k$. Since $k_A > k_B$, <strong>Spring A</strong> requires more work.</p>
-                        </div>
-                    </div>
-
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q9')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q9: Why does a rubber ball bounce back lower after hitting a hard floor?</span>
-                            <i id="q9-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q9" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>The collision between ball and floor is inelastic ($e < 1$). Part of the kinetic energy is lost as heat and sound during deformation. With reduced kinetic energy, the rebound velocity $v < u$, so it reaches a lower maximum height ($h' < h$).</p>
-                        </div>
-                    </div>
-
-                    <div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden">
-                        <button onclick="toggleAccordion('q10')" class="w-full text-left p-4 bg-slate-50 dark:bg-slate-900 flex justify-between items-center font-semibold text-slate-800 dark:text-slate-200 hover:bg-slate-100 transition">
-                            <span>Q10: Is total mechanical energy conserved during an inelastic collision?</span>
-                            <i id="q10-icon" class="fa-solid fa-chevron-down text-slate-400"></i>
-                        </button>
-                        <div id="q10" class="hidden p-4 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 solution-box text-sm leading-relaxed">
-                            <p class="font-semibold text-neb-700 dark:text-neb-400 mb-1">Answer:</p>
-                            <p>No, total <em>mechanical</em> energy ($K+U$) is not conserved because non-conservative deformation forces dissipate kinetic energy into heat/sound. However, the <em>total energy of the universe</em> remains conserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- NUMERICAL PROBLEMS SECTION -->
-            <section id="numericals" class="mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="p-2 bg-indigo-100 dark:bg-indigo-950/50 text-indigo-600 rounded-lg"><i class="fa-solid fa-calculator text-xl"></i></span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">8 Fully Solved Standard NEB Numericals</h2>
-                </div>
-
-                <div class="space-y-6">
-                    <!-- N1 -->
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 1:</span> Work done in stretching a spring</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            A spring with force constant $k = 300\text{ N/m}$ is stretched from initial elongation $x_1 = 2\text{ cm}$ to final elongation $x_2 = 8\text{ cm}$. Calculate the work done on the spring.
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p><strong>Given:</strong> $k = 300\text{ N/m}$, $x_1 = 0.02\text{ m}$, $x_2 = 0.08\text{ m}$.</p>
-                            <p><strong>Formula:</strong> $W = \frac{1}{2} k x_2^2 - \frac{1}{2} k x_1^2 = \frac{1}{2} k (x_2^2 - x_1^2)$</p>
-                            <p><strong>Calculation:</strong> $W = \frac{1}{2} \times 300 \times [(0.08)^2 - (0.02)^2]$</p>
-                            <p>$W = 150 \times [0.0064 - 0.0004] = 150 \times 0.0060 = \mathbf{0.9\text{ Joules}}$</p>
-                        </div>
-                    </div>
-
-                    <!-- N2 -->
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 2:</span> Water pump power & motor efficiency</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            An electric pump lifts $1200\text{ kg}$ of water to a overhead tank at height $h = 20\text{ m}$ in $1\text{ minute}$. If efficiency of pump motor is $80\%$, find input electric power required in kW. ($g = 9.8\text{ m/s}^2$).
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p><strong>Given:</strong> $m = 1200\text{ kg}$, $h = 20\text{ m}$, $t = 60\text{ s}$, $\eta = 0.80$.</p>
-                            <p><strong>Useful Power Output:</strong> $P_{\text{out}} = \frac{mgh}{t} = \frac{1200 \times 9.8 \times 20}{60} = 3920\text{ W}$</p>
-                            <p><strong>Input Electrical Power:</strong> $P_{\text{in}} = \frac{P_{\text{out}}}{\eta} = \frac{3920}{0.80} = 4900\text{ W} = \mathbf{4.9\text{ kW}}$</p>
-                        </div>
-                    </div>
-
-                    <!-- N3 -->
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 3:</span> Work-Energy theorem stopping distance</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            A car of mass $1000\text{ kg}$ travelling at $72\text{ km/h}$ is brought to rest over a distance of $40\text{ m}$ by applying brakes. Calculate average braking force using Work-Energy Theorem.
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p><strong>Given:</strong> $m = 1000\text{ kg}$, $u = 72 \times \frac{5}{18} = 20\text{ m/s}$, $v = 0$, $s = 40\text{ m}$.</p>
-                            <p><strong>Change in KE:</strong> $\Delta E_k = 0 - \frac{1}{2} m u^2 = -\frac{1}{2} (1000) (20)^2 = -200,000\text{ J}$</p>
-                            <p><strong>Work-Energy Theorem:</strong> $W = -F_{\text{brake}} \cdot s = \Delta E_k$</p>
-                            <p>$-F_{\text{brake}} \times 40 = -200,000 \implies F_{\text{brake}} = \mathbf{5000\text{ N}}$</p>
-                        </div>
-                    </div>
-
-                    <!-- N4 -->
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 4:</span> 1D Elastic Collision Velocities</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            A sphere of mass $4\text{ kg}$ moving at $6\text{ m/s}$ collides head-on elastically with a stationary sphere of mass $2\text{ kg}$. Find final velocities $v_1$ and $v_2$.
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p><strong>Given:</strong> $m_1 = 4\text{ kg}$, $u_1 = 6\text{ m/s}$, $m_2 = 2\text{ kg}$, $u_2 = 0$.</p>
-                            <p>$v_1 = \left(\frac{m_1 - m_2}{m_1 + m_2}\right) u_1 = \left(\frac{4 - 2}{4 + 2}\right) \times 6 = \frac{2}{6} \times 6 = \mathbf{2\text{ m/s}}$</p>
-                            <p>$v_2 = \left(\frac{2 m_1}{m_1 + m_2}\right) u_1 = \left(\frac{2 \times 4}{4 + 2}\right) \times 6 = \frac{8}{6} \times 6 = \mathbf{8\text{ m/s}}$</p>
-                        </div>
-                    </div>
-
-                    <!-- N5-N8 Brief standard numericals -->
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 5:</span> Inelastic ballistic pendulum bullet loss of KE</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            A bullet of mass $20\text{ g}$ moving at $300\text{ m/s}$ embeds into a wooden block of mass $980\text{ g}$ at rest. Calculate common final velocity and loss of KE.
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p>$m_1 = 0.02\text{ kg}, u_1 = 300\text{ m/s}, m_2 = 0.98\text{ kg}, u_2 = 0$.</p>
-                            <p>Common velocity $v = \frac{m_1 u_1}{m_1 + m_2} = \frac{0.02 \times 300}{1.0} = \mathbf{6\text{ m/s}}$.</p>
-                            <p>$\Delta E_k = \frac{m_1 m_2}{2(m_1 + m_2)} u_1^2 = \frac{0.02 \times 0.98}{2(1.0)} (300)^2 = \mathbf{882\text{ Joules}}$.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 6:</span> Variable force work integral</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            A force $F(x) = (3x^2 + 2x + 1)\text{ N}$ acts on a particle from $x = 1\text{ m}$ to $x = 3\text{ m}$. Find total work done.
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p>$W = \int_{1}^{3} (3x^2 + 2x + 1) \, dx = \left[ x^3 + x^2 + x \right]_{1}^{3}$</p>
-                            <p>$W = (3^3 + 3^2 + 3) - (1^3 + 1^2 + 1) = (27 + 9 + 3) - (3) = 39 - 3 = \mathbf{36\text{ Joules}}$.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 7:</span> Simple Pendulum energy speed at lowest point</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            A pendulum bob of mass $0.1\text{ kg}$ is suspended by string of length $L = 1\text{ m}$. It is released from an angle of $60^\circ$ with vertical. Calculate speed at mean position ($g=9.8\text{ m/s}^2$).
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p>Height raised $h = L(1 - \cos 60^\circ) = 1(1 - 0.5) = 0.5\text{ m}$.</p>
-                            <p>Conservation of Energy: $\frac{1}{2} m v^2 = mgh \implies v = \sqrt{2gh} = \sqrt{2 \times 9.8 \times 0.5} = \sqrt{9.8} \approx \mathbf{3.13\text{ m/s}}$.</p>
-                        </div>
-                    </div>
-
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h4 class="font-bold text-slate-900 dark:text-slate-100 text-sm mb-2"><span class="text-indigo-600 font-mono">Numerical 8:</span> Freely falling body energy verification</h4>
-                        <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
-                            A body of mass $2\text{ kg}$ is dropped from height $20\text{ m}$. Verify total mechanical energy at midpoint ($10\text{ m}$). ($g=9.8\text{ m/s}^2$).
-                        </p>
-                        <div class="p-3 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-mono leading-relaxed">
-                            <p>At top ($20\text{ m}$): $E = mgh = 2 \times 9.8 \times 20 = 392\text{ J}$.</p>
-                            <p>At midpoint ($y=10\text{ m}$): $v^2 = 2g(10) = 196$. $K = \frac{1}{2}(2)(196) = 196\text{ J}$. $U = 2 \times 9.8 \times 10 = 196\text{ J}$.</p>
-                            <p>Total $E = K + U = 196 + 196 = \mathbf{392\text{ J}}$ (Verified equal!).</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- INTERACTIVE QUIZ SECTION -->
-            <section id="quiz" class="mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm no-print">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="p-2 bg-purple-100 dark:bg-purple-950/50 text-purple-600 rounded-lg"><i class="fa-solid fa-vial-circle-check text-xl"></i></span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">NEB Board Self-Assessment Quiz</h2>
-                </div>
-
-                <div id="quizContainer" class="space-y-6">
-                    <!-- Dynamic Quiz Inserted via JS -->
-                </div>
-
-                <div class="mt-6 p-4 bg-slate-100 dark:bg-slate-900 rounded-xl flex items-center justify-between">
-                    <div id="quizScoreDisplay" class="text-sm font-bold text-slate-700 dark:text-slate-300">Answer questions to test your knowledge!</div>
-                    <button onclick="resetQuiz()" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-semibold transition">Reset Quiz</button>
-                </div>
-            </section>
-
-            <!-- PHYSICS CALCULATORS SECTION -->
-            <section id="calculators" class="mb-12 bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm no-print">
-                <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
-                    <span class="p-2 bg-rose-100 dark:bg-rose-950/50 text-rose-600 rounded-lg"><i class="fa-solid fa-laptop-code text-xl"></i></span>
-                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Interactive Physics Tools & Calculators</h2>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <!-- Tool 1: Work Done Calculator -->
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center"><i class="fa-solid fa-calculator text-rose-500 mr-2"></i> Work Done Calculator ($W = F d \cos\theta$)</h3>
-                        <div class="space-y-3 text-xs">
-                            <div>
-                                <label class="block font-semibold mb-1">Force $F$ (N):</label>
-                                <input type="number" id="calcF" value="50" oninput="calculateWorkTool()" class="w-full p-2 rounded bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600">
-                            </div>
-                            <div>
-                                <label class="block font-semibold mb-1">Displacement $d$ (m):</label>
-                                <input type="number" id="calcD" value="10" oninput="calculateWorkTool()" class="w-full p-2 rounded bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600">
-                            </div>
-                            <div>
-                                <label class="block font-semibold mb-1">Angle $\theta$ (degrees): <span id="angleVal" class="text-neb-600 font-bold">60°</span></label>
-                                <input type="range" id="calcTheta" min="0" max="180" value="60" oninput="calculateWorkTool()" class="w-full">
-                            </div>
-                            <div class="p-3 bg-neb-50 dark:bg-slate-800 rounded border border-neb-200 dark:border-slate-700 text-center font-mono text-sm font-bold text-neb-800 dark:text-neb-300" id="workResult">
-                                Work W = 250.00 J
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tool 2: 1D Collision Simulator -->
-                    <div class="p-5 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                        <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-4 flex items-center"><i class="fa-solid fa-circle-nodes text-neb-500 mr-2"></i> 1D Elastic Collision Simulator</h3>
-                        <div class="grid grid-cols-2 gap-2 text-xs">
-                            <div>
-                                <label class="block font-semibold">Mass $m_1$ (kg):</label>
-                                <input type="number" id="simM1" value="4" oninput="runCollisionSim()" class="w-full p-1.5 rounded bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600">
-                            </div>
-                            <div>
-                                <label class="block font-semibold">Initial $u_1$ (m/s):</label>
-                                <input type="number" id="simU1" value="6" oninput="runCollisionSim()" class="w-full p-1.5 rounded bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600">
-                            </div>
-                            <div>
-                                <label class="block font-semibold">Mass $m_2$ (kg):</label>
-                                <input type="number" id="simM2" value="2" oninput="runCollisionSim()" class="w-full p-1.5 rounded bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600">
-                            </div>
-                            <div>
-                                <label class="block font-semibold">Initial $u_2$ (m/s):</label>
-                                <input type="number" id="simU2" value="0" oninput="runCollisionSim()" class="w-full p-1.5 rounded bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600">
-                            </div>
-                        </div>
-                        <div class="mt-4 p-3 bg-white dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-700 text-xs font-mono space-y-1" id="simResult">
-                            <!-- JS Output -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <!-- Application JavaScript Code -->
-    <script>
-        // Dark Mode Toggle Logic
-        function toggleDarkMode() {
-            const html = document.documentElement;
-            const themeIcon = document.getElementById('themeIcon');
-            if (html.classList.contains('dark')) {
-                html.classList.remove('dark');
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.classList.add('dark');
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-
-        // Check local storage theme
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            document.getElementById('themeIcon').classList.replace('fa-moon', 'fa-sun');
-        }
-
-        // Mobile Sidebar Toggle
-        function toggleMobileSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('-translate-x-full');
-        }
-
-        // Accordion Toggle for Conceptual Questions
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById(id + '-icon');
-            content.classList.toggle('hidden');
-            if (icon) {
-                icon.classList.toggle('rotate-180');
-            }
-            if (window.MathJax) {
-                MathJax.typesetPromise();
-            }
-        }
-
-        // Search Filter function
-        function filterTopics() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const sections = document.querySelectorAll('.topic-section');
-            sections.forEach(sec => {
-                const text = sec.innerText.toLowerCase();
-                sec.style.display = text.includes(input) ? 'block' : 'none';
-            });
-        }
-
-        // Work Calculator Engine
-        function calculateWorkTool() {
-            const F = parseFloat(document.getElementById('calcF').value) || 0;
-            const d = parseFloat(document.getElementById('calcD').value) || 0;
-            const theta = parseFloat(document.getElementById('calcTheta').value) || 0;
-            
-            document.getElementById('angleVal').innerText = theta + '°';
-            const rad = theta * (Math.PI / 180);
-            const work = F * d * Math.cos(rad);
-            
-            document.getElementById('workResult').innerText = `Work W = ${work.toFixed(2)} Joules`;
-        }
-
-        // Collision Simulator Engine
-        function runCollisionSim() {
-            const m1 = parseFloat(document.getElementById('simM1').value) || 1;
-            const m2 = parseFloat(document.getElementById('simM2').value) || 1;
-            const u1 = parseFloat(document.getElementById('simU1').value) || 0;
-            const u2 = parseFloat(document.getElementById('simU2').value) || 0;
-
-            const v1 = ((m1 - m2) / (m1 + m2)) * u1 + ((2 * m2) / (m1 + m2)) * u2;
-            const v2 = ((2 * m1) / (m1 + m2)) * u1 + ((m2 - m1) / (m1 + m2)) * u2;
-
-            const resultDiv = document.getElementById('simResult');
-            resultDiv.innerHTML = `
-                <p class="text-neb-700 dark:text-neb-400 font-bold">Final Velocity v₁ = ${v1.toFixed(2)} m/s</p>
-                <p class="text-emerald-600 dark:text-emerald-400 font-bold">Final Velocity v₂ = ${v2.toFixed(2)} m/s</p>
-                <p class="text-slate-500 text-[11px] mt-1">Relative velocity of approach: ${(u1 - u2).toFixed(2)} m/s</p>
-                <p class="text-slate-500 text-[11px]">Relative velocity of separation: ${(v2 - v1).toFixed(2)} m/s</p>
-            `;
-        }
-
-        // Self-Assessment Quiz Questions Data
-        const quizData = [
-            {
-                q: "1. What is the area under a Force vs. Displacement (F-x) graph equal to?",
-                options: ["Power", "Work Done", "Acceleration", "Momentum"],
-                correct: 1,
-                exp: "The definite integral ∫ F dx represents the area under the F-x curve, which equals work done."
-            },
-            {
-                q: "2. In a perfectly elastic collision, which of the following is conserved?",
-                options: ["Only Momentum", "Only Kinetic Energy", "Both Momentum and Kinetic Energy", "Neither Momentum nor Kinetic Energy"],
-                correct: 2,
-                exp: "Elastic collisions strictly preserve both linear momentum and kinetic energy."
-            },
-            {
-                q: "3. If two bodies of masses m₁ and m₂ (m₁ > m₂) have equal kinetic energy, which body has greater momentum?",
-                options: ["The lighter body (m₂)", "The heavier body (m₁)", "Both have equal momentum", "Cannot be determined"],
-                correct: 1,
-                exp: "Since p = √(2m E_k), momentum is directly proportional to √m when E_k is constant."
-            },
-            {
-                q: "4. What is the coefficient of restitution (e) for a perfectly inelastic collision?",
-                options: ["e = 1", "e = 0.5", "e = 0", "e > 1"],
-                correct: 2,
-                exp: "In a perfectly inelastic collision, bodies move together with zero relative velocity after impact (v₂ = v₁), so e = 0."
-            },
-            {
-                q: "5. A force of 10 N acts on a body moving with velocity 5 m/s at an angle of 60° to the force. What is the power?",
-                options: ["50 W", "25 W", "100 W", "0 W"],
-                correct: 1,
-                exp: "Power P = F v cosθ = 10 × 5 × cos(60°) = 50 × 0.5 = 25 Watts."
-            }
-        ];
-
-        let userAnswers = {};
-
-        function renderQuiz() {
-            const container = document.getElementById('quizContainer');
-            container.innerHTML = quizData.map((item, index) => `
-                <div class="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
-                    <p class="font-bold text-sm text-slate-800 dark:text-slate-200 mb-3">${item.q}</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                        ${item.options.map((opt, i) => `
-                            <button onclick="selectAnswer(${index}, ${i})" id="q_${index}_opt_${i}" 
-                                class="p-2.5 text-left rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-neb-50 dark:hover:bg-slate-800 transition">
-                                ${opt}
-                            </button>
-                        `).join('')}
-                    </div>
-                    <div id="q_exp_${index}" class="hidden mt-3 p-2.5 bg-sky-50 dark:bg-slate-800 rounded border border-sky-200 dark:border-slate-700 text-xs text-sky-800 dark:text-sky-300 font-medium">
-                        ${item.exp}
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function selectAnswer(qIdx, optIdx) {
-            userAnswers[qIdx] = optIdx;
-            const correctOpt = quizData[qIdx].correct;
-            
-            // Highlight options
-            quizData[qIdx].options.forEach((_, i) => {
-                const btn = document.getElementById(`q_${qIdx}_opt_${i}`);
-                btn.className = "p-2.5 text-left rounded-lg border text-xs transition ";
-                if (i === correctOpt) {
-                    btn.classList.add("bg-emerald-100", "dark:bg-emerald-950", "border-emerald-500", "text-emerald-800", "dark:text-emerald-300", "font-bold");
-                } else if (i === optIdx && i !== correctOpt) {
-                    btn.classList.add("bg-rose-100", "dark:bg-rose-950", "border-rose-500", "text-rose-800", "dark:text-rose-300");
-                } else {
-                    btn.classList.add("border-slate-300", "dark:border-slate-700", "opacity-60");
-                }
-            });
-
-            // Show explanation
-            document.getElementById(`q_exp_${qIdx}`).classList.remove('hidden');
-
-            // Update score
-            updateScore();
-        }
-
-        function updateScore() {
-            let score = 0;
-            const total = quizData.length;
-            Object.keys(userAnswers).forEach(qIdx => {
-                if (userAnswers[qIdx] === quizData[qIdx].correct) {
-                    score++;
-                }
-            });
-            document.getElementById('quizScoreDisplay').innerText = `Score: ${score} / ${total} Correct`;
-        }
-
-        function resetQuiz() {
-            userAnswers = {};
-            renderQuiz();
-            document.getElementById('quizScoreDisplay').innerText = "Answer questions to test your knowledge!";
-        }
-
-        // Initialize Calculators and Quiz on page load
-        window.onload = function() {
-            calculateWorkTool();
-            runCollisionSim();
-            renderQuiz();
-            if (window.MathJax) {
-                MathJax.typesetPromise();
-            }
-        };
-    </script>
-</body>
-</html>
+<h2>Work Done by a Constant Force and a Variable Force</h2><h3>1. Definition of Work in Physics</h3><p>
+In common parlance, any physical or mental effort is termed "work". However, in physics, <strong>work</strong> is defined rigorously: <em>Work is said to be done by a force when the point of application of the force undergoes a displacement along or opposite to the line of action of the force.</em>
+</p><p>
+If a constant force \(\vec{F}\) acts on a body and causes a displacement \(\vec{d}\) making an angle \(\theta\) with the direction of the force, the work done \(W\) is defined as the scalar (dot) product of the force vector and displacement vector:
+</p><div class="box note">\[W = \vec{F} \cdot \vec{d} = F d \cos\theta\]</div>
+<p>
+Here, \(F = |\vec{F}|\) is the magnitude of force, \(d = |\vec{d}|\) is the magnitude of displacement, and \(\theta\) is the angle between \(\vec{F}\) and \(\vec{d}\). Alternatively, work is the product of the component of force in the direction of displacement (\((F\cos\theta)\)) and the magnitude of displacement (\(d\)).
+</p><figure>
+<p>Figure 5.1(a): Vector Resolution of Force acting on a Mass Block</p>
+
+<svg class="panel" viewBox="0 0 550 220" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<defs>
+<marker id="arrow" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#0284c7"/>
+</marker>
+<marker id="arrow-red" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+</marker>
+<marker id="arrow-green" viewbox="0 0 10 10" refx="6" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+</marker>
+<pattern id="hatch" width="10" height="10">
+<line x1="0" y1="0" x2="0" y2="10" stroke="#cbd5e1" stroke-width="1"/>
+</pattern>
+</defs>
+
+<line x1="30" y1="160" x2="520" y2="160" stroke="#334155" stroke-width="2"/>
+<rect x="30" y="160" width="490" height="15" fill="url(#hatch)"/>
+
+<rect x="80" y="100" width="80" height="60" rx="4" fill="#e2e8f0" stroke="#1e293b" stroke-width="2"/>
+<text x="120" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f172a">Mass m</text>
+
+<rect x="340" y="100" width="80" height="60" rx="4" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+<text x="380" y="135" text-anchor="middle" font-size="12" fill="#64748b">Position 2</text>
+
+<circle cx="120" cy="130" r="4" fill="#0284c7"/>
+
+<line x1="120" y1="180" x2="380" y2="180" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="250" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">Displacement vector d</text>
+
+<line x1="120" y1="130" x2="230" y2="60" stroke="#0284c7" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="240" y="55" font-size="14" font-weight="bold" fill="#0284c7">Force F</text>
+
+<line x1="120" y1="130" x2="230" y2="130" stroke="#dc2626" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrow-red)"/>
+<text x="180" y="150" font-size="12" font-weight="bold" fill="#dc2626">F cos θ</text>
+
+<line x1="230" y1="130" x2="230" y2="60" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="240" y="100" font-size="12" fill="#64748b">F sin θ</text>
+
+<path d="M 160 130 A 40 40 0 0 0 152 110" fill="none" stroke="#0f172a" stroke-width="1.5"/>
+<text x="168" y="122" font-size="12" font-weight="bold" fill="#0f172a">θ</text>
+</svg>
+</figure>
+<h4>Dimensions & Units of Work</h4><ul>
+<li><strong>Dimensional Formula:</strong> \([\text{Work}] = [\text{Force}] \times [\text{Displacement}] = [M^1 L^1 T^{-2}] \times [L^1] = \mathbf{[M^1 L^2 T^{-2}]}\).</li>
+<li><strong>SI Unit:</strong> The SI unit of work is the <strong>Joule (\(\text{J}\))</strong>. One Joule is defined as the work done when a force of \(1\text{ Newton}\) displaces an object through \(1\text{ meter}\) in the direction of the force (\(1\text{ J} = 1\text{ N} \cdot 1\text{ m} = 1\text{ kg}\cdot\text{m}^2\text{s}^{-2}\)).</li>
+<li><strong>CGS Unit:</strong> The CGS unit of work is the <strong>Erg</strong> (\(1\text{ erg} = 1\text{ dyne} \cdot 1\text{ cm}\)).</li>
+<li><strong>Conversion Relation:</strong>
+\[1\text{ Joule} = 1\text{ N} \times 1\text{ m} = (10^5\text{ dynes}) \times (10^2\text{ cm}) = \mathbf{10^7\text{ ergs}}\]
+</li>
+</ul><h4>Sign Convention & Physical Nature of Work</h4><h5><i></i> Positive Work (\(\theta < 90^\circ\))</h5><p>Done when force has a component in direction of motion (\(\cos\theta > 0\)). Energy is transferred <em>to</em> the body.</p><p>Example: Work done by gravity on a freely falling body (\(\theta = 0^\circ\)).</p><h5><i></i> Negative Work (\(90^\circ < \theta \le 180^\circ\))</h5><p>Done when force opposes motion (\(\cos\theta < 0\)). Energy is removed <em>from</em> the body.</p><p>Example: Work done by friction on a sliding block (\(\theta = 180^\circ\)).</p><h5><i></i> Zero Work (\(\theta = 90^\circ\) or \(d=0\))</h5><p>No displacement or force acts perpendicular to motion (\(\cos 90^\circ = 0\)).</p><p>Example: Work done by centripetal force in circular motion (\(\theta = 90^\circ\)).</p><h3>2. Work Done by a Variable Force</h3><p>
+In practical scenario, forces are rarely constant. When a variable force \(F(x)\) acts on a particle moving along the x-axis, its magnitude changes with position \(x\). We cannot use \(W = F d \cos\theta\) directly.
+</p><p>
+To formulate the work done, we divide the total displacement from initial position \(x_1\) to final position \(x_2\) into a very large number of infinitesimal displacements \(dx\). During a tiny displacement \(dx\), the force \(F(x)\) can be treated as virtually constant.
+</p><p>
+The small elementary work done \(dW\) for displacement \(dx\) is given by:
+\[dW = F(x) \, dx\]
+</p><p>
+Summing up the elementary work over the entire interval from \(x_1\) to \(x_2\) by taking the definite integral as \(dx \to 0\):
+</p><div class="box note">\[W = \int_{x_1}^{x_2} F(x) \, dx = \text{Area under Force-Displacement } (F-x) \text{ curve}\]</div>
+<figure>
+<p>Figure 5.1(b): Graphical Determination of Work Done by a Variable Force</p>
+
+<svg class="panel" viewBox="0 0 550 260" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<line x1="60" y1="210" x2="500" y2="210" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="60" y1="210" x2="60" y2="20" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
+
+<text x="500" y="235" font-size="12" font-weight="bold" fill="#0f172a">Position x (m)</text>
+<text x="20" y="30" font-size="12" font-weight="bold" fill="#0f172a">Force F(x) (N)</text>
+<text x="45" y="225" font-size="12" font-weight="bold" fill="#0f172a">O</text>
+
+<path d="M 120 210 L 120 150 Q 220 30 320 100 T 440 180 L 440 210 Z" fill="#e0f2fe" opacity="0.7"/>
+
+<path d="M 100 170 Q 220 30 320 100 T 460 190" fill="none" stroke="#0284c7" stroke-width="3"/>
+
+<line x1="120" y1="210" x2="120" y2="150" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="115" y="228" font-size="12" font-weight="bold" fill="#0284c7">x₁</text>
+
+<line x1="440" y1="210" x2="440" y2="180" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="435" y="228" font-size="12" font-weight="bold" fill="#0284c7">x₂</text>
+
+<rect x="250" y="65" width="20" height="145" fill="#38bdf8" opacity="0.6" stroke="#0284c7" stroke-width="1"/>
+<text x="260" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">dx</text>
+<text x="260" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a" transform="rotate(-90 260 130)">dW = F(x) dx</text>
+
+<text x="320" y="140" font-size="13" font-weight="bold" fill="#0369a1">Total Area = ∫ F(x) dx = W</text>
+</svg>
+</figure>
+<h3>3. Work Done in Stretching/Compressing an Ideal Spring</h3><p>
+Consider a block of mass \(m\) attached to an ideal spring of spring constant (stiffness constant) \(k\) resting on a frictionless horizontal plane.
+</p><p>
+According to <strong>Hooke's Law</strong>, when the spring is extended or compressed by a displacement \(x\) from its natural unstretched length (\(x=0\)), it exerts a restoring force \(F_{\text{restoring}}\) given by:
+\[F_{\text{restoring}} = -k x\]
+</p><p>
+To stretch the spring slowly without acceleration, an external applied force \(F_{\text{ext}}\) equal and opposite to restoring force must be applied:
+\[F_{\text{ext}} = +k x\]
+</p><p>
+The infinitesimal work done \(dW\) by external force in stretching the spring through further distance \(dx\) is:
+\[dW = F_{\text{ext}} \, dx = (k x) \, dx\]
+</p><p>
+Therefore, the total work done \(W\) in stretching the spring from its relaxed length (\(x = 0\)) to a final elongation \(x\) is:
+</p><div class="box note">\[W = \int_{0}^{x} k x \, dx = k \left[ \frac{x^2}{2} \right]_{0}^{x} = \mathbf{\frac{1}{2} k x^2}\]</div>
+<figure>
+<p>Figure 5.1(c): Spring-Mass System States and Force-Extension Relationship</p>
+
+<svg class="panel" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(10, 20)">
+<line x1="20" y1="0" x2="20" y2="60" stroke="#1e293b" stroke-width="3"/>
+<path d="M 20 30 Q 30 15 40 30 T 60 30 T 80 30 T 100 30 T 120 30 T 140 30 L 150 30" fill="none" stroke="#64748b" stroke-width="2"/>
+<rect x="150" y="10" width="40" height="40" fill="#cbd5e1" stroke="#1e293b" stroke-width="2"/>
+<text x="170" y="35" text-anchor="middle" font-size="11" font-weight="bold">m</text>
+<line x1="20" y1="50" x2="230" y2="50" stroke="#94a3b8" stroke-dasharray="2,2"/>
+<line x1="170" y1="50" x2="170" y2="70" stroke="#dc2626" stroke-dasharray="2,2"/>
+<text x="170" y="82" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="bold">x = 0 (Relaxed)</text>
+</g>
+
+<g transform="translate(10, 110)">
+<line x1="20" y1="0" x2="20" y2="60" stroke="#1e293b" stroke-width="3"/>
+<path d="M 20 30 Q 35 15 50 30 T 80 30 T 110 30 T 140 30 T 170 30 L 200 30" fill="none" stroke="#0284c7" stroke-width="2"/>
+<rect x="200" y="10" width="40" height="40" fill="#38bdf8" stroke="#1e293b" stroke-width="2"/>
+<text x="220" y="35" text-anchor="middle" font-size="11" font-weight="bold">m</text>
+<line x1="20" y1="50" x2="260" y2="50" stroke="#94a3b8" stroke-dasharray="2,2"/>
+
+<line x1="240" y1="30" x2="280" y2="30" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="285" y="34" font-size="10" font-weight="bold" fill="#16a34a">F_ext</text>
+
+<line x1="200" y1="30" x2="160" y2="30" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+<text x="125" y="34" font-size="10" font-weight="bold" fill="#dc2626">F_rest</text>
+<text x="220" y="70" text-anchor="middle" font-size="11" fill="#0284c7" font-weight="bold">x > 0 (Stretched by x)</text>
+</g>
+
+<g transform="translate(350, 30)">
+<line x1="40" y1="180" x2="220" y2="180" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="40" y1="180" x2="40" y2="20" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="220" y="198" font-size="10" font-weight="bold">x</text>
+<text x="15" y="25" font-size="10" font-weight="bold">F_ext</text>
+
+<polygon points="40,180 180,50 180,180" fill="#e0f2fe" opacity="0.6"/>
+<line x1="40" y1="180" x2="180" y2="50" stroke="#0284c7" stroke-width="2.5"/>
+<line x1="180" y1="50" x2="180" y2="180" stroke="#64748b" stroke-dasharray="3,3"/>
+
+<text x="180" y="45" font-size="10" font-weight="bold" fill="#0284c7">(x, kx)</text>
+<text x="110" y="140" font-size="11" font-weight="bold" fill="#0369a1">Area = ½ k x²</text>
+</g>
+</svg>
+</figure>
+<h2>Power and Machine Efficiency</h2><h3>1. Definition and Mathematical Formulation</h3><p>
+<strong>Power</strong> is defined as the time rate at which work is done or the rate at which energy is transferred/transformed by a force. While work measures the total effect, power measures how fast or slowly that work is executed.
+</p><h4>Average Power (\(P_{\text{avg}}\))</h4><p>Total work done divided by total time taken:</p><p>\[P_{\text{avg}} = \frac{\Delta W}{\Delta t}\]</p><h4>Instantaneous Power (\(P\))</h4><p>Power at a specific instant of time \(t\):</p><p>\[P = \lim_{\Delta t \to 0} \frac{\Delta W}{\Delta t} = \frac{dW}{dt}\]</p><h3>2. Relation Between Power, Force, and Velocity</h3><p>
+Suppose a force \(\vec{F}\) produces an infinitesimal displacement \(d\vec{r}\) of a particle in time \(dt\). The elementary work done is \(dW = \vec{F} \cdot d\vec{r}\).
+</p><p>
+Dividing both sides by \(dt\):
+\[P = \frac{dW}{dt} = \frac{\vec{F} \cdot d\vec{r}}{dt} = \vec{F} \cdot \left(\frac{d\vec{r}}{dt}\right)\]
+</p><p>
+Since \(\frac{d\vec{r}}{dt} = \vec{v}\) (instantaneous velocity vector):
+</p><div class="box note">\[P = \vec{F} \cdot \vec{v} = F v \cos\theta\]</div>
+<p>
+Thus, instantaneous power equals the scalar dot product of force vector \(\vec{F}\) and velocity vector \(\vec{v}\).
+</p><h3>3. Units of Power</h3><ul>
+<li><strong>SI Unit:</strong> The SI unit of power is the <strong>Watt (\(\text{W}\))</strong>, named in honor of James Watt. One Watt is defined as 1 Joule of work done per second (\(1\text{ W} = 1\text{ J/s} = 1\text{ kg}\cdot\text{m}^2\cdot\text{s}^{-3}\)).</li>
+<li><strong>Larger Practical Units:</strong>
+<ul>
+<li>\(1\text{ Kilowatt (kW)} = 10^3\text{ W} = 1000\text{ W}\)</li>
+<li>\(1\text{ Megawatt (MW)} = 10^6\text{ W}\)</li>
+<li>\(1\text{ Horsepower (HP)} = \mathbf{746\text{ Watts}}\) (Imperial unit widely used for motor ratings).</li>
+</ul>
+</li>
+<li><strong>Commercial Energy Unit (\(\text{kWh}\)):</strong> Kilowatt-hour is a practical unit of electrical <em>energy</em> (not power). \(1\text{ kWh} = (1000\text{ W}) \times (3600\text{ s}) = \mathbf{3.6 \times 10^6\text{ Joules}}\).</li>
+</ul><h3>4. Efficiency of Machines (\(\eta\))</h3><p>
+In practical mechanical systems, due to frictional and thermal dissipation, output power is always less than input power. The <strong>efficiency (\(\eta\))</strong> is defined as the ratio of useful output power to total input power expressed as a percentage:
+</p><div class="box note">\[\eta = \left( \frac{\text{Useful Output Power } P_{\text{out}}}{\text{Total Input Power } P_{\text{in}}} \right) \times 100\% = \left( \frac{\text{Useful Output Work}}{\text{Total Input Energy}} \right) \times 100\%\]</div>
+<h5><i></i> NEB Board Application Tip: Water Pump Efficiency</h5><p>
+If a water motor pump of efficiency \(\eta\) lifts mass \(m\) of water to height \(h\) in time \(t\):
+</p><p>
+\[P_{\text{out}} = \frac{mgh}{t} \implies P_{\text{in}} = \frac{P_{\text{out}}}{\eta} = \frac{mgh}{\eta \cdot t}\]
+</p><h2>Work-Energy Theorem; Kinetic and Potential Energy</h2><h3>1. Kinetic Energy (\(E_k\)) and its Calculus Derivation</h3><p>
+<strong>Kinetic energy</strong> is the energy possessed by a body by virtue of its motion.
+</p><p>
+<strong>Derivation:</strong> Consider a body of mass \(m\) initially at rest (\(u=0\)) on a smooth horizontal surface. A variable force \(F\) acts on it, displacing it through distance \(x\) and imparting a velocity \(v\).
+</p><p>
+According to Newton's second law, \(F = m a = m \frac{dv}{dt}\). Using the chain rule for acceleration:
+\[a = \frac{dv}{dt} = \frac{dv}{dx} \cdot \frac{dx}{dt} = v \frac{dv}{dx}\]
+</p><p>
+The elementary work \(dW\) done by force \(F\) for displacement \(dx\) is:
+\[dW = F \, dx = \left(m v \frac{dv}{dx}\right) dx = m v \, dv\]
+</p><p>
+Integrating both sides from initial velocity \(0\) to final velocity \(v\):
+</p><div class="box note">\[W = \int_{0}^{v} m v \, dv = m \left[ \frac{v^2}{2} \right]_{0}^{v} = \mathbf{\frac{1}{2} m v^2}\]</div>
+<p>This total work done in setting the body into motion is stored as its Kinetic Energy: \(E_k = \frac{1}{2} m v^2\).</p><figure>
+<p>Figure 5.3: Mass Moving Under Variable Force Demonstrating Work-Energy Theorem</p>
+
+<svg class="panel" viewBox="0 0 550 180" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<line x1="40" y1="130" x2="500" y2="130" stroke="#334155" stroke-width="2"/>
+<rect x="40" y="130" width="460" height="10" fill="url(#hatch)"/>
+
+<rect x="80" y="70" width="60" height="60" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+<text x="110" y="105" text-anchor="middle" font-weight="bold" font-size="12">m</text>
+<text x="110" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#0284c7">Initial: u (at x₁)</text>
+<line x1="110" y1="70" x2="150" y2="70" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="360" y="70" width="60" height="60" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+<text x="390" y="105" text-anchor="middle" font-weight="bold" font-size="12">m</text>
+<text x="390" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#16a34a">Final: v (at x₂)</text>
+<line x1="390" y1="70" x2="450" y2="70" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+
+<line x1="110" y1="150" x2="390" y2="150" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="250" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#475569">W_net = ∫ F dx = ½ mv² - ½ mu²</text>
+</svg>
+</figure>
+<h3>2. Rigorous Proof of Work-Energy Theorem (WET)</h3><p>
+<strong>Statement:</strong> The net work done by all resultant forces acting on a body is equal to the change in its kinetic energy.
+\[W_{\text{net}} = \Delta E_k = E_{k,f} - E_{k,i} = \frac{1}{2} m v^2 - \frac{1}{2} m u^2\]
+</p><h4>A. Proof for Constant Force:</h4><p>
+From third equation of motion under constant acceleration \(a\):
+\[v^2 - u^2 = 2 a s \implies a s = \frac{v^2 - u^2}{2}\]
+</p><p>
+Multiplying both sides by mass \(m\):
+\[F \cdot s = (m a) s = m (a s) = m \left( \frac{v^2 - u^2}{2} \right) = \frac{1}{2} m v^2 - \frac{1}{2} m u^2\]
+\[\mathbf{W = \Delta E_k} \quad \text{(Proved)}\]
+</p><h4>B. Proof for Variable Force:</h4><p>
+Work done by variable force \(F(x)\) from \(x_1\) to \(x_2\):
+\[W = \int_{x_1}^{x_2} F(x) \, dx = \int_{x_1}^{x_2} m \left( \frac{dv}{dt} \right) dx = \int_{x_1}^{x_2} m \left( v \frac{dv}{dx} \right) dx = \int_{u}^{v} m v \, dv\]
+\[W = m \left[ \frac{v^2}{2} \right]_{u}^{v} = \mathbf{\frac{1}{2} m v^2 - \frac{1}{2} m u^2 = \Delta E_k} \quad \text{(Proved)}\]
+</p><h3>3. Potential Energy (\(U\)) & Reference Levels</h3><p>
+<strong>Potential Energy</strong> is defined as the energy stored in a system by virtue of its position, configuration, or state of strain in a conservative field.
+</p><ul>
+<li><strong>Gravitational Potential Energy (\(U = mgh\)):</strong> Work done against gravitational force in lifting mass \(m\) slowly to height \(h\): \(W = F \cdot h = (mg) h = \mathbf{mgh}\).</li>
+<li><strong>Elastic Potential Energy (\(U = \frac{1}{2}kx^2\)):</strong> Work done in compressing or stretching a spring by distance \(x\).</li>
+<li><strong>Zero Reference Level:</strong> Potential energy is relative. By convention, ground surface is taken as \(U=0\) for gravity, and natural length \(x=0\) is taken as \(U=0\) for springs.</li>
+</ul><h3>4. Relation Between Kinetic Energy (\(E_k\)) and Linear Momentum (\(p\))</h3><p>
+Linear momentum is \(p = m v \implies v = \frac{p}{m}\). Substituting into kinetic energy formula:
+\[E_k = \frac{1}{2} m v^2 = \frac{1}{2} m \left(\frac{p}{m}\right)^2 = \mathbf{\frac{p^2}{2m}}\]
+Rearranging for linear momentum \(p\):
+\[\mathbf{p = \sqrt{2m E_k}}\]
+</p><h5>Case I: Same Momentum (\(p_1 = p_2\))</h5><p>\(E_k = \frac{p^2}{2m} \implies E_k \propto \frac{1}{m}\).</p><p>The lighter mass body possesses GREATER kinetic energy!</p><h5>Case II: Same Kinetic Energy (\(E_{k1} = E_{k2}\))</h5><p>\(p = \sqrt{2m E_k} \implies p \propto \sqrt{m}\).</p><p>The heavier mass body possesses GREATER linear momentum!</p><h2>Conservation of Energy</h2><h3>1. Principle of Conservation of Mechanical Energy</h3><p>
+<strong>Law of Conservation of Total Energy:</strong> Energy can neither be created nor destroyed; it can only be transformed from one form to another. The total energy of an isolated system remains constant.
+</p><p>
+<strong>Conservation of Mechanical Energy:</strong> In an isolated system where only <em>conservative forces</em> do work, the total mechanical energy \(E\) (sum of kinetic energy \(K\) and potential energy \(U\)) remains constant at all points:
+\[E = K + U = \text{Constant} \implies K_A + U_A = K_B + U_B\]
+</p><h3>2. Rigorous Mathematical Verification for a Freely Falling Body</h3><p>
+Consider a body of mass \(m\) initially held at rest at point <strong>A</strong> at height \(h\) above the ground. Let it fall freely under gravity. We calculate total energy at three points: <strong>A</strong> (top), <strong>B</strong> (intermediate after falling distance \(x\)), and <strong>C</strong> (just before striking ground).
+</p><figure>
+<p>Figure 5.4: Energy Conservation Breakdown at Points A, B, and C in Free Fall</p>
+
+<svg class="panel" viewBox="0 0 550 280" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<line x1="180" y1="40" x2="180" y2="230" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+
+<line x1="60" y1="230" x2="300" y2="230" stroke="#1e293b" stroke-width="3"/>
+<rect x="60" y="230" width="240" height="12" fill="url(#hatch)"/>
+<text x="315" y="235" font-size="11" font-weight="bold" fill="#1e293b">Ground (U = 0)</text>
+
+<circle cx="180" cy="50" r="14" fill="#0284c7" stroke="#075985" stroke-width="2"/>
+<text x="180" y="54" text-anchor="middle" fill="white" font-size="11" font-weight="bold">A</text>
+<text x="210" y="55" font-size="12" font-weight="bold" fill="#0284c7">Point A (y = h, u = 0)</text>
+
+<circle cx="180" cy="130" r="14" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+<text x="180" y="134" text-anchor="middle" fill="white" font-size="11" font-weight="bold">B</text>
+<text x="210" y="135" font-size="12" font-weight="bold" fill="#0369a1">Point B (y = h - x)</text>
+
+<circle cx="180" cy="216" r="14" fill="#16a34a" stroke="#15803d" stroke-width="2"/>
+<text x="180" y="220" text-anchor="middle" fill="white" font-size="11" font-weight="bold">C</text>
+<text x="210" y="215" font-size="12" font-weight="bold" fill="#16a34a">Point C (y = 0, v = √(2gh))</text>
+
+<line x1="120" y1="50" x2="120" y2="130" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+<text x="100" y="95" font-size="12" font-weight="bold" fill="#dc2626">x</text>
+
+<line x1="120" y1="130" x2="120" y2="230" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+<text x="85" y="185" font-size="12" font-weight="bold" fill="#16a34a">h - x</text>
+
+<line x1="50" y1="50" x2="50" y2="230" stroke="#0284c7" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="35" y="140" font-size="13" font-weight="bold" fill="#0284c7">h</text>
+
+<g transform="translate(360, 40)">
+<rect x="0" y="0" width="170" height="190" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<text x="15" y="25" font-size="12" font-weight="bold" fill="#0f172a">Energy Verification:</text>
+
+<text x="15" y="55" font-size="10" font-weight="bold" fill="#0284c7">At A:</text>
+<text x="15" y="70" font-size="10">E_A = 0 + mgh = mgh</text>
+
+<text x="15" y="105" font-size="10" font-weight="bold" fill="#0369a1">At B:</text>
+<text x="15" y="120" font-size="10">E_B = mgx + mg(h-x)</text>
+<text x="15" y="135" font-size="10" font-weight="bold" fill="#0369a1">    = mgh</text>
+
+<text x="15" y="165" font-size="10" font-weight="bold" fill="#16a34a">At C:</text>
+<text x="15" y="180" font-size="10">E_C = mgh + 0 = mgh</text>
+</g>
+</svg>
+</figure>
+<h4>Point A (Top, height \(y = h\)):</h4><p>At highest position, initial velocity \(u = 0\).</p><p>
+\[K_A = \frac{1}{2}m(0)^2 = 0, \quad U_A = mgh \implies \mathbf{E_A = K_A + U_A = mgh} \quad \text{--- (1)}\]
+</p><h4>Point B (Intermediate, after falling distance \(x\), height \(y = h - x\)):</h4><p>Velocity \(v_B\) at point B: \(v_B^2 = u^2 + 2gx = 0 + 2gx = 2gx\).</p><p>
+\[K_B = \frac{1}{2}m v_B^2 = \frac{1}{2}m(2gx) = mgx\]
+\[U_B = mg(h - x)\]
+\[\mathbf{E_B = K_B + U_B = mgx + mg(h - x) = mgh} \quad \text{--- (2)}\]
+</p><h4>Point C (Bottom, just before striking ground \(y = 0\)):</h4><p>Velocity \(v_C\) at point C: \(v_C^2 = u^2 + 2gh = 2gh\).</p><p>
+\[K_C = \frac{1}{2}m v_C^2 = \frac{1}{2}m(2gh) = mgh, \quad U_C = 0\]
+\[\mathbf{E_C = K_C + U_C = mgh + 0 = mgh} \quad \text{--- (3)}\]
+</p><p>
+Since \(E_A = E_B = E_C = mgh\), total mechanical energy is conserved throughout the motion under gravity.
+</p><h2>Conservative and Non-Conservative Forces</h2><h3>1. Comparison & Distinguishing Properties</h3><p>
+Forces in nature are fundamentally divided into two categories based on path dependency of work done:
+</p><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Conservative Force</th>
+<th>Non-Conservative Force</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Path Dependency</td>
+<td>Work done depends ONLY on initial and final positions, independent of path.</td>
+<td>Work done depends on the actual path taken between two points.</td>
+</tr>
+<tr>
+<td>Closed Loop Work</td>
+<td>Work done over a closed round-trip path is ZERO (\(\oint \vec{F} \cdot d\vec{r} = 0\)).</td>
+<td>Work done over a closed loop is NON-ZERO (\(\oint \vec{F} \cdot d\vec{r} \neq 0\)).</td>
+</tr>
+<tr>
+<td>Energy Conservation</td>
+<td>Total mechanical energy (\(K + U\)) is completely conserved.</td>
+<td>Mechanical energy is dissipated into heat, sound, or deformation.</td>
+</tr>
+<tr>
+<td>Potential Energy Relation</td>
+<td>Potential energy \(U\) can be uniquely defined (\(F = -\frac{dU}{dx}\)).</td>
+<td>No potential energy function exists for non-conservative forces.</td>
+</tr>
+<tr>
+<td>Physical Examples</td>
+<td>Gravitational force, Electrostatic force, Elastic spring force.</td>
+<td>Friction force, Viscous drag force, Air resistance.</td>
+</tr>
+</tbody>
+</table><figure>
+<p>Figure 5.5: Path Independence and Closed Loop Integral for Conservative Fields</p>
+
+<svg class="panel" viewBox="0 0 550 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(20, 20)">
+<circle cx="40" cy="80" r="8" fill="#0284c7"/>
+<text x="40" y="105" text-anchor="middle" font-weight="bold" font-size="12">A</text>
+
+<circle cx="200" cy="80" r="8" fill="#16a34a"/>
+<text x="200" y="105" text-anchor="middle" font-weight="bold" font-size="12">B</text>
+
+<path d="M 40 80 Q 120 20 200 80" fill="none" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="120" y="35" text-anchor="middle" font-size="11" font-weight="bold" fill="#0284c7">Path 1 (W₁)</text>
+
+<line x1="40" y1="80" x2="200" y2="80" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="120" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Path 2 (W₂)</text>
+
+<path d="M 40 80 Q 120 140 200 80" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+<text x="120" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">Path 3 (W₃)</text>
+
+<text x="120" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#0369a1">W₁ = W₂ = W₃</text>
+</g>
+
+<g transform="translate(300, 20)">
+<ellipse cx="110" cy="80" rx="70" ry="40" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="4,4"/>
+<circle cx="40" cy="80" r="6" fill="#0284c7"/>
+<text x="25" y="85" font-size="11" font-weight="bold">A</text>
+<circle cx="180" cy="80" r="6" fill="#16a34a"/>
+<text x="190" y="85" font-size="11" font-weight="bold">B</text>
+
+<path d="M 40 80 A 70 40 0 0 1 180 80" fill="none" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="110" y="30" text-anchor="middle" font-size="11" fill="#0284c7">W_{A→B}</text>
+
+<path d="M 180 80 A 70 40 0 0 1 40 80" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow-red)"/>
+<text x="110" y="140" text-anchor="middle" font-size="11" fill="#dc2626">W_{B→A}</text>
+
+<text x="110" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">∮ F · dr = 0</text>
+</g>
+</svg>
+</figure>
+<h3>2. Proof: Gravitational Force is a Conservative Force</h3><p>
+To prove gravitational force is conservative, consider raising a mass \(m\) to height \(h\) along three different paths:
+</p><ul>
+<li><strong>Vertical Path 1 (Direct Lift):</strong>
+\[W_1 = F \cdot h = mg \cdot h = mgh\]
+</li>
+<li><strong>Inclined Plane Path 2 (Angle \(\theta\), length \(L = h / \sin\theta\)):</strong>
+Component of force needed against gravity \(= mg \sin\theta\).
+\[W_2 = (mg \sin\theta) \cdot L = (mg \sin\theta) \cdot \left(\frac{h}{\sin\theta}\right) = mgh\]
+</li>
+<li><strong>Staircase / Stepwise Path 3:</strong>
+Dividing path into horizontal steps \(dx_i\) and vertical steps \(dy_i\).
+Work along horizontal steps \(= \sum mg \cdot dx_i \cos 90^\circ = 0\).
+Work along vertical steps \(= \sum mg \cdot dy_i = mg \sum dy_i = mgh\).
+</li>
+</ul><p>
+Since \(W_1 = W_2 = W_3 = mgh\), work done against gravity is strictly path-independent. Hence, Gravitational Force is Conservative!
+</p><h2>Elastic and Inelastic Collisions</h2><h3>1. Definition and Classification of Collisions</h3><p>
+A <strong>collision</strong> is an intense physical interaction between two or more bodies occurring in a relatively short time interval, resulting in mutual exchange of momentum and energy.
+</p><ul>
+<li><strong>Elastic Collision:</strong> A collision in which <em>both total linear momentum and total kinetic energy</em> are conserved. No mechanical energy is lost as heat, sound, or permanent deformation.</li>
+<li><strong>Inelastic Collision:</strong> A collision in which total linear momentum is conserved, but <em>kinetic energy is NOT conserved</em>.</li>
+<li><strong>Perfectly Inelastic Collision:</strong> An extreme inelastic collision where the colliding bodies stick together after impact and move with a single common velocity. Maximum possible kinetic energy is lost.</li>
+</ul><h3>2. One-Dimensional (Head-On) Elastic Collision</h3><p>
+Consider two bodies \(A\) and \(B\) of masses \(m_1\) and \(m_2\) moving along a straight line with initial velocities \(u_1\) and \(u_2\) (\(u_1 > u_2\)). Let \(v_1\) and \(v_2\) be their final velocities after collision.
+</p><figure>
+<p>Figure 5.6(a): Three Stages of One-Dimensional Elastic Collision</p>
+
+<svg class="panel" viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<g transform="translate(10, 20)">
+<line x1="10" y1="50" x2="570" y2="50" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="80" cy="35" r="16" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+<text x="80" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₁</text>
+<line x1="80" y1="15" x2="120" y2="15" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="100" y="10" text-anchor="middle" font-size="10" font-weight="bold" fill="#0284c7">u₁</text>
+
+<circle cx="200" cy="35" r="20" fill="#a7f3d0" stroke="#16a34a" stroke-width="2"/>
+<text x="200" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₂</text>
+<line x1="200" y1="12" x2="230" y2="12" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="215" y="8" text-anchor="middle" font-size="10" font-weight="bold" fill="#16a34a">u₂</text>
+
+<text x="320" y="38" font-size="11" font-weight="bold" fill="#0f172a">(a) Before Collision (u₁ > u₂)</text>
+</g>
+
+<g transform="translate(10, 90)">
+<line x1="10" y1="50" x2="570" y2="50" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="126" cy="35" r="16" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+<circle cx="158" cy="35" r="20" fill="#a7f3d0" stroke="#16a34a" stroke-width="2"/>
+<text x="142" y="38" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">⚡</text>
+
+<text x="320" y="38" font-size="11" font-weight="bold" fill="#0f172a">(b) During Contact (Deformation)</text>
+</g>
+
+<g transform="translate(10, 160)">
+<line x1="10" y1="50" x2="570" y2="50" stroke="#cbd5e1" stroke-width="1.5"/>
+<circle cx="80" cy="35" r="16" fill="#38bdf8" stroke="#0284c7" stroke-width="2"/>
+<text x="80" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₁</text>
+<line x1="80" y1="15" x2="110" y2="15" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="95" y="10" text-anchor="middle" font-size="10" font-weight="bold" fill="#0284c7">v₁</text>
+
+<circle cx="230" cy="35" r="20" fill="#a7f3d0" stroke="#16a34a" stroke-width="2"/>
+<text x="230" y="39" text-anchor="middle" font-size="10" font-weight="bold">m₂</text>
+<line x1="230" y1="12" x2="280" y2="12" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+<text x="255" y="8" text-anchor="middle" font-size="10" font-weight="bold" fill="#16a34a">v₂</text>
+
+<text x="320" y="38" font-size="11" font-weight="bold" fill="#0f172a">(c) After Collision (v₂ > v₁)</text>
+</g>
+</svg>
+</figure>
+<h4>Step 1: Apply Conservation of Linear Momentum</h4><p>
+\[m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2\]
+Rearranging terms of \(m_1\) and \(m_2\):
+\[m_1 (u_1 - v_1) = m_2 (v_2 - u_2) \quad \text{--- (Equation 1)}\]
+</p><h4>Step 2: Apply Conservation of Kinetic Energy</h4><p>
+\[\frac{1}{2} m_1 u_1^2 + \frac{1}{2} m_2 u_2^2 = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2\]
+\[m_1 (u_1^2 - v_1^2) = m_2 (v_2^2 - u_2^2)\]
+\[m_1 (u_1 - v_1)(u_1 + v_1) = m_2 (v_2 - u_2)(v_2 + u_2) \quad \text{--- (Equation 2)}\]
+</p><h4>Step 3: Derive Velocity Relation</h4><p>
+Dividing Equation (2) by Equation (1):
+\[\frac{m_1 (u_1 - v_1)(u_1 + v_1)}{m_1 (u_1 - v_1)} = \frac{m_2 (v_2 - u_2)(v_2 + u_2)}{m_2 (v_2 - u_2)}\]
+\[u_1 + v_1 = v_2 + u_2\]
+\[\mathbf{u_1 - u_2 = v_2 - v_1} \quad \text{--- (Equation 3)}\]
+</p><p><i></i> Fundamental Result: Relative velocity of approach \((u_1 - u_2)\) equals relative velocity of separation \((v_2 - v_1)\).</p>
+<h4>Step 4: Express Final Velocity Formulas</h4><p>From Equation (3), \(v_2 = u_1 - u_2 + v_1\). Substituting \(v_2\) into Equation (1):</p><p>\[m_1 (u_1 - v_1) = m_2 (u_1 - u_2 + v_1 - u_2) = m_2 (u_1 - 2u_2 + v_1)\]</p><p>\[m_1 u_1 - m_1 v_1 = m_2 u_1 - 2 m_2 u_2 + m_2 v_1\]</p><p>\[(m_1 + m_2) v_1 = (m_1 - m_2) u_1 + 2 m_2 u_2\]</p><div class="box note">\[\mathbf{v_1 = \left( \frac{m_1 - m_2}{m_1 + m_2} \right) u_1 + \left( \frac{2 m_2}{m_1 + m_2} \right) u_2}\]</div>
+<p>Similarly, substituting \(v_1 = v_2 - u_1 + u_2\) into Equation (1) yields:</p><div class="box note">\[\mathbf{v_2 = \left( \frac{2 m_1}{m_1 + m_2} \right) u_1 + \left( \frac{m_2 - m_1}{m_1 + m_2} \right) u_2}\]</div>
+<h3>3. Analysis of 4 Critical Special Cases</h3><h5>Case 1: Equal Masses (\(m_1 = m_2 = m\))</h5><p>\(v_1 = 0 \cdot u_1 + \frac{2m}{2m} u_2 = u_2\)</p><p>\(v_2 = \frac{2m}{2m} u_1 + 0 \cdot u_2 = u_1\)</p><p>Result: Bodies swap/exchange their velocities completely!</p><h5>Case 2: Equal Masses (\(m_1 = m_2\)), Target at Rest (\(u_2 = 0\))</h5><p>\(v_1 = 0\), \(\quad v_2 = u_1\)</p><p>Result: Incident body stops completely; target moves off with speed \(u_1\).</p><h5>Case 3: Heavy Target at Rest (\(m_2 \gg m_1, u_2 = 0\))</h5><p>\(v_1 \approx \left(\frac{-m_2}{m_2}\right) u_1 = -u_1\)</p><p>\(v_2 \approx 0\)</p><p>Result: Light body rebounds with same speed; heavy target remains stationary.</p><h5>Case 4: Heavy Incident Body (\(m_1 \gg m_2, u_2 = 0\))</h5><p>\(v_1 \approx u_1\)</p><p>\(v_2 \approx 2 u_1\)</p><p>Result: Heavy incident body continues unaffected; light target kicked forward at \(2u_1\).</p><h3>4. Perfectly Inelastic Collision & Loss of Kinetic Energy</h3><p>
+In a 1D perfectly inelastic collision, two bodies stick together after impact and move with common velocity \(v\).
+</p><p>By Conservation of Linear Momentum:
+\[m_1 u_1 + m_2 u_2 = (m_1 + m_2) v \implies \mathbf{v = \frac{m_1 u_1 + m_2 u_2}{m_1 + m_2}}\]
+</p><h4>Mathematical Proof of Kinetic Energy Loss (\(\Delta E_k\)):</h4><p>
+Initial KE: \(E_{k,i} = \frac{1}{2} m_1 u_1^2 + \frac{1}{2} m_2 u_2^2\)
+</p><p>
+Final KE: \(E_{k,f} = \frac{1}{2} (m_1 + m_2) v^2 = \frac{1}{2} (m_1 + m_2) \left[ \frac{m_1 u_1 + m_2 u_2}{m_1 + m_2} \right]^2 = \frac{(m_1 u_1 + m_2 u_2)^2}{2(m_1 + m_2)}\)
+</p><p>
+Loss of Kinetic Energy \(\Delta E_k = E_{k,i} - E_{k,f}\):
+</p><div class="box note">\[\mathbf{\Delta E_k = \frac{m_1 m_2}{2(m_1 + m_2)} (u_1 - u_2)^2 > 0}\]</div>
+<p>Since \(m_1, m_2 > 0\) and \((u_1 - u_2)^2 > 0\), \(\Delta E_k\) is strictly positive, proving kinetic energy is always lost in an inelastic collision.</p><h3>5. Coefficient of Restitution (\(e\))</h3><p>
+The <strong>coefficient of restitution (\(e\))</strong> is defined as the ratio of relative velocity of separation to relative velocity of approach:
+</p><div class="box note">\[e = \frac{v_2 - v_1}{u_1 - u_2}\]</div>
+<ul>
+<li>For Perfectly Elastic Collision: \(\mathbf{e = 1}\).</li>
+<li>For Inelastic Collision: \(\mathbf{0 < e < 1}\).</li>
+<li>For Perfectly Inelastic Collision: \(\mathbf{e = 0}\).</li>
+</ul><figure>
+<p>Figure 5.6(b): Oblique (2D) Elastic Collision Vector Breakdown</p>
+
+<svg class="panel" viewBox="0 0 550 220" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+
+<line x1="50" y1="110" x2="500" y2="110" stroke="#94a3b8" stroke-dasharray="3,3"/>
+<text x="500" y="105" font-size="11" font-weight="bold">X-axis</text>
+
+<circle cx="180" cy="110" r="6" fill="#1e293b"/>
+
+<line x1="50" y1="110" x2="180" y2="110" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="100" y="100" font-size="12" font-weight="bold" fill="#0284c7">m₁ u₁</text>
+
+<circle cx="180" cy="110" r="14" fill="#a7f3d0" stroke="#16a34a" stroke-width="2"/>
+<text x="180" y="114" text-anchor="middle" font-size="9" font-weight="bold">m₂ (u₂=0)</text>
+
+<line x1="180" y1="110" x2="380" y2="40" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="390" y="40" font-size="12" font-weight="bold" fill="#0284c7">m₁ v₁</text>
+<path d="M 230 110 A 50 50 0 0 0 220 95" fill="none" stroke="#0284c7" stroke-width="1.5"/>
+<text x="235" y="98" font-size="11" font-weight="bold" fill="#0284c7">θ₁</text>
+
+<line x1="180" y1="110" x2="380" y2="180" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+<text x="390" y="185" font-size="12" font-weight="bold" fill="#16a34a">m₂ v₂</text>
+<path d="M 230 110 A 50 50 0 0 1 220 125" fill="none" stroke="#16a34a" stroke-width="1.5"/>
+<text x="235" y="130" font-size="11" font-weight="bold" fill="#16a34a">θ₂</text>
+
+<text x="300" y="210" font-size="10" font-weight="bold" fill="#0f172a">X-momentum: m₁ u₁ = m₁ v₁ cosθ₁ + m₂ v₂ cosθ₂</text>
+<text x="300" y="225" font-size="10" font-weight="bold" fill="#0f172a">Y-momentum: 0 = m₁ v₁ sinθ₁ - m₂ v₂ sinθ₂</text>
+</svg>
+</figure>
+<p><i></i></p>
+<h2>Unit 5 Key Formula Summary Sheet</h2><table>
+<thead>
+<tr>
+<th>Physical Quantity / Theorem</th>
+<th>Formula</th>
+<th>SI Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Work Done (Constant Force)</td>
+<td>\(W = \vec{F} \cdot \vec{d} = F d \cos\theta\)</td>
+<td>Joule (\(\text{J}\))</td>
+</tr>
+<tr>
+<td>Work Done (Variable Force)</td>
+<td>\(W = \int_{x_1}^{x_2} F(x) \, dx\)</td>
+<td>Joule (\(\text{J}\))</td>
+</tr>
+<tr>
+<td>Spring Elastic Potential Work</td>
+<td>\(W = \frac{1}{2} k x^2\)</td>
+<td>Joule (\(\text{J}\))</td>
+</tr>
+<tr>
+<td>Instantaneous Power</td>
+<td>\(P = \frac{dW}{dt} = \vec{F} \cdot \vec{v} = F v \cos\theta\)</td>
+<td>Watt (\(\text{W}\))</td>
+</tr>
+<tr>
+<td>Work-Energy Theorem</td>
+<td>\(W_{\text{net}} = \Delta E_k = \frac{1}{2}mv^2 - \frac{1}{2}mu^2\)</td>
+<td>Joule (\(\text{J}\))</td>
+</tr>
+<tr>
+<td>Momentum & KE Relation</td>
+<td>\(p = \sqrt{2m E_k} \quad \text{and} \quad E_k = \frac{p^2}{2m}\)</td>
+<td>\(\text{kg}\cdot\text{m/s}\), \(\text{J}\)</td>
+</tr>
+<tr>
+<td>1D Elastic Final Velocities</td>
+<td>
+\(v_1 = \left(\frac{m_1-m_2}{m_1+m_2}\right)u_1 + \left(\frac{2m_2}{m_1+m_2}\right)u_2\)<br>
+\(v_2 = \left(\frac{2m_1}{m_1+m_2}\right)u_1 + \left(\frac{m_2-m_1}{m_1+m_2}\right)u_2\)
+</td>
+<td>\(\text{m/s}\)</td>
+</tr>
+<tr>
+<td>Inelastic Collision KE Loss</td>
+<td>\(\Delta E_k = \frac{m_1 m_2}{2(m_1 + m_2)} (u_1 - u_2)^2\)</td>
+<td>Joule (\(\text{J}\))</td>
+</tr>
+<tr>
+<td>Coefficient of Restitution</td>
+<td>\(e = \frac{v_2 - v_1}{u_1 - u_2}\)</td>
+<td>Dimensionless</td>
+</tr>
+</tbody>
+</table><p><i></i></p>
+<h2>10 Essential NEB Conceptual Questions & Answers</h2><p>Answer:</p><p>No, kinetic energy can <strong>never be negative</strong>. Kinetic energy is given by \(E_k = \frac{1}{2} m v^2\). Since mass \(m\) is a scalar positive quantity (\(m > 0\)) and velocity squared \(v^2\) is always non-negative (\(v^2 \ge 0\)), kinetic energy must be \(\ge 0\). It can be zero (at rest) or positive, but never negative.</p><p>Answer:</p><p>The <strong>lighter body</strong> has greater kinetic energy. Kinetic energy in terms of momentum is \(E_k = \frac{p^2}{2m}\). Since momentum \(p\) is constant for both bodies, \(E_k \propto \frac{1}{m}\). Therefore, the body with smaller mass \(m\) will possess a larger kinetic energy.</p><p>Answer:</p><p>Centripetal force acts towards the center of the circular path, whereas instantaneous displacement is directed tangentially along the circle. Thus, the angle between centripetal force vector \(\vec{F}_c\) and displacement vector \(d\vec{r}\) is \(\theta = 90^\circ\). Work done \(W = F d \cos(90^\circ) = 0\).</p><p>Answer:</p><p>No. Relation between momentum and kinetic energy is \(p = \sqrt{2m E_k}\). If \(E_k = 0\), velocity \(v=0\), so \(p=0\). Conversely if \(p=0\), then \(v=0\), so \(E_k = 0\). Hence, a body cannot have momentum without kinetic energy or vice versa.</p><p>Answer:</p><p>The "lost" kinetic energy is converted into non-mechanical forms of energy, such as thermal energy (heat generation during impact), acoustic energy (sound produced during clashing), and strain energy stored as permanent mechanical deformation of the colliding bodies.</p><p>Answer:</p><p>Usually friction opposes relative motion (\(\theta = 180^\circ\)), doing negative work. However, static friction can do positive work! For example, when a car accelerates, static friction exerted by the road on the tires propels the car forward in the direction of motion (\(\theta = 0^\circ\)), doing positive work on the car.</p><p>Answer:</p><p>Yes. Absolute potential energy depends on the chosen zero reference height \(y=0\). However, the <em>change in potential energy</em> (\(\Delta U = U_2 - U_1\)) is independent of reference level choosing.</p><p>Answer:</p><p>Work done in stretching a spring is \(W = \frac{1}{2} k x^2\). For equal extension \(x\), \(W \propto k\). Since \(k_A > k_B\), <strong>Spring A</strong> requires more work.</p><p>Answer:</p><p>The collision between ball and floor is inelastic (\(e < 1\)). Part of the kinetic energy is lost as heat and sound during deformation. With reduced kinetic energy, the rebound velocity \(v < u\), so it reaches a lower maximum height (\(h' < h\)).</p><p>Answer:</p><p>No, total <em>mechanical</em> energy (\(K+U\)) is not conserved because non-conservative deformation forces dissipate kinetic energy into heat/sound. However, the <em>total energy of the universe</em> remains conserved.</p><p><i></i></p>
+<h2>8 Fully Solved Standard NEB Numericals</h2><h4>Numerical 1: Work done in stretching a spring</h4><p>
+A spring with force constant \(k = 300\text{ N/m}\) is stretched from initial elongation \(x_1 = 2\text{ cm}\) to final elongation \(x_2 = 8\text{ cm}\). Calculate the work done on the spring.
+</p><p><strong>Given:</strong> \(k = 300\text{ N/m}\), \(x_1 = 0.02\text{ m}\), \(x_2 = 0.08\text{ m}\).</p><p><strong>Formula:</strong> \(W = \frac{1}{2} k x_2^2 - \frac{1}{2} k x_1^2 = \frac{1}{2} k (x_2^2 - x_1^2)\)</p><p><strong>Calculation:</strong> \(W = \frac{1}{2} \times 300 \times [(0.08)^2 - (0.02)^2]\)</p><p>\(W = 150 \times [0.0064 - 0.0004] = 150 \times 0.0060 = \mathbf{0.9\text{ Joules}}\)</p><h4>Numerical 2: Water pump power & motor efficiency</h4><p>
+An electric pump lifts \(1200\text{ kg}\) of water to a overhead tank at height \(h = 20\text{ m}\) in \(1\text{ minute}\). If efficiency of pump motor is \(80\%\), find input electric power required in kW. (\(g = 9.8\text{ m/s}^2\)).
+</p><p><strong>Given:</strong> \(m = 1200\text{ kg}\), \(h = 20\text{ m}\), \(t = 60\text{ s}\), \(\eta = 0.80\).</p><p><strong>Useful Power Output:</strong> \(P_{\text{out}} = \frac{mgh}{t} = \frac{1200 \times 9.8 \times 20}{60} = 3920\text{ W}\)</p><p><strong>Input Electrical Power:</strong> \(P_{\text{in}} = \frac{P_{\text{out}}}{\eta} = \frac{3920}{0.80} = 4900\text{ W} = \mathbf{4.9\text{ kW}}\)</p><h4>Numerical 3: Work-Energy theorem stopping distance</h4><p>
+A car of mass \(1000\text{ kg}\) travelling at \(72\text{ km/h}\) is brought to rest over a distance of \(40\text{ m}\) by applying brakes. Calculate average braking force using Work-Energy Theorem.
+</p><p><strong>Given:</strong> \(m = 1000\text{ kg}\), \(u = 72 \times \frac{5}{18} = 20\text{ m/s}\), \(v = 0\), \(s = 40\text{ m}\).</p><p><strong>Change in KE:</strong> \(\Delta E_k = 0 - \frac{1}{2} m u^2 = -\frac{1}{2} (1000) (20)^2 = -200,000\text{ J}\)</p><p><strong>Work-Energy Theorem:</strong> \(W = -F_{\text{brake}} \cdot s = \Delta E_k\)</p><p>\(-F_{\text{brake}} \times 40 = -200,000 \implies F_{\text{brake}} = \mathbf{5000\text{ N}}\)</p><h4>Numerical 4: 1D Elastic Collision Velocities</h4><p>
+A sphere of mass \(4\text{ kg}\) moving at \(6\text{ m/s}\) collides head-on elastically with a stationary sphere of mass \(2\text{ kg}\). Find final velocities \(v_1\) and \(v_2\).
+</p><p><strong>Given:</strong> \(m_1 = 4\text{ kg}\), \(u_1 = 6\text{ m/s}\), \(m_2 = 2\text{ kg}\), \(u_2 = 0\).</p><p>\(v_1 = \left(\frac{m_1 - m_2}{m_1 + m_2}\right) u_1 = \left(\frac{4 - 2}{4 + 2}\right) \times 6 = \frac{2}{6} \times 6 = \mathbf{2\text{ m/s}}\)</p><p>\(v_2 = \left(\frac{2 m_1}{m_1 + m_2}\right) u_1 = \left(\frac{2 \times 4}{4 + 2}\right) \times 6 = \frac{8}{6} \times 6 = \mathbf{8\text{ m/s}}\)</p><h4>Numerical 5: Inelastic ballistic pendulum bullet loss of KE</h4><p>
+A bullet of mass \(20\text{ g}\) moving at \(300\text{ m/s}\) embeds into a wooden block of mass \(980\text{ g}\) at rest. Calculate common final velocity and loss of KE.
+</p><p>\(m_1 = 0.02\text{ kg}, u_1 = 300\text{ m/s}, m_2 = 0.98\text{ kg}, u_2 = 0\).</p><p>Common velocity \(v = \frac{m_1 u_1}{m_1 + m_2} = \frac{0.02 \times 300}{1.0} = \mathbf{6\text{ m/s}}\).</p><p>\(\Delta E_k = \frac{m_1 m_2}{2(m_1 + m_2)} u_1^2 = \frac{0.02 \times 0.98}{2(1.0)} (300)^2 = \mathbf{882\text{ Joules}}\).</p><h4>Numerical 6: Variable force work integral</h4><p>
+A force \(F(x) = (3x^2 + 2x + 1)\text{ N}\) acts on a particle from \(x = 1\text{ m}\) to \(x = 3\text{ m}\). Find total work done.
+</p><p>\(W = \int_{1}^{3} (3x^2 + 2x + 1) \, dx = \left[ x^3 + x^2 + x \right]_{1}^{3}\)</p><p>\(W = (3^3 + 3^2 + 3) - (1^3 + 1^2 + 1) = (27 + 9 + 3) - (3) = 39 - 3 = \mathbf{36\text{ Joules}}\).</p><h4>Numerical 7: Simple Pendulum energy speed at lowest point</h4><p>
+A pendulum bob of mass \(0.1\text{ kg}\) is suspended by string of length \(L = 1\text{ m}\). It is released from an angle of \(60^\circ\) with vertical. Calculate speed at mean position (\(g=9.8\text{ m/s}^2\)).
+</p><p>Height raised \(h = L(1 - \cos 60^\circ) = 1(1 - 0.5) = 0.5\text{ m}\).</p><p>Conservation of Energy: \(\frac{1}{2} m v^2 = mgh \implies v = \sqrt{2gh} = \sqrt{2 \times 9.8 \times 0.5} = \sqrt{9.8} \approx \mathbf{3.13\text{ m/s}}\).</p><h4>Numerical 8: Freely falling body energy verification</h4><p>
+A body of mass \(2\text{ kg}\) is dropped from height \(20\text{ m}\). Verify total mechanical energy at midpoint (\(10\text{ m}\)). (\(g=9.8\text{ m/s}^2\)).
+</p><p>At top (\(20\text{ m}\)): \(E = mgh = 2 \times 9.8 \times 20 = 392\text{ J}\).</p><p>At midpoint (\(y=10\text{ m}\)): \(v^2 = 2g(10) = 196\). \(K = \frac{1}{2}(2)(196) = 196\text{ J}\). \(U = 2 \times 9.8 \times 10 = 196\text{ J}\).</p><p>Total \(E = K + U = 196 + 196 = \mathbf{392\text{ J}}\) (Verified equal!).</p><p><i></i></p>

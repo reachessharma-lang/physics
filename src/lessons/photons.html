@@ -1,1677 +1,437 @@
+---
 title: Photons
 grade: XII
 chapters: [16]
 date: 2026-10-02
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade XII Physics - Chapter 21: Photons</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            500: '#0284c7',
-                            600: '#0369a1',
-                            700: '#075985',
-                            800: '#0c4a6e',
-                            900: '#0a3651',
-                        },
-                        science: {
-                            50: '#f5f3ff',
-                            100: '#ede9fe',
-                            600: '#7c3aed',
-                            700: '#6d28d9',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- KaTeX for LaTeX Math Rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        .katex-display {
-            overflow-x: auto;
-            overflow-y: hidden;
-            padding: 0.5rem 0;
-            margin: 0.5rem 0;
-        }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-        .line-diagram {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-200 selection:text-sky-900">
-
-    <!-- Navigation Overlay & Top Bar -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-sky-600 text-white p-2 rounded-lg font-bold text-lg tracking-wider">
-                    NEB
-                </div>
-                <div>
-                    <h1 class="text-lg font-bold text-slate-900 leading-tight">Grade XII Physics</h1>
-                    <p class="text-xs text-sky-700 font-medium">Chapter 21: Photons (Modern Physics)</p>
-                </div>
-            </div>
-            
-            <div class="hidden lg:flex items-center space-x-1 text-sm font-medium text-slate-600">
-                <a href="#overview" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">Syllabus</a>
-                <a href="#sec21-1" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">21.1 Quantum Theory</a>
-                <a href="#sec21-2" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">21.2 Photons</a>
-                <a href="#sec21-3" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">21.3 Photoelectric Effect</a>
-                <a href="#sec21-4" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">21.4 Einstein's Eq.</a>
-                <a href="#sec21-5" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">21.5 Millikan's Exp.</a>
-                <a href="#visualizers" class="px-3 py-2 rounded-md bg-sky-50 text-sky-700 hover:bg-sky-100 transition font-semibold">Simulations</a>
-                <a href="#numericals" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">Numericals</a>
-                <a href="#qb" class="px-3 py-2 rounded-md hover:text-sky-600 hover:bg-slate-100 transition">Question Bank</a>
-            </div>
-
-            <button id="menuBtn" class="lg:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-1 text-sm font-medium">
-            <a href="#overview" class="block px-3 py-2 rounded-md hover:bg-slate-100">Syllabus Overview</a>
-            <a href="#sec21-1" class="block px-3 py-2 rounded-md hover:bg-slate-100">21.1 Quantum Nature of Radiation</a>
-            <a href="#sec21-2" class="block px-3 py-2 rounded-md hover:bg-slate-100">21.2 Properties of Photons</a>
-            <a href="#sec21-3" class="block px-3 py-2 rounded-md hover:bg-slate-100">21.3 Photoelectric Effect & Work Function</a>
-            <a href="#sec21-4" class="block px-3 py-2 rounded-md hover:bg-slate-100">21.4 Einstein's Photoelectric Equation</a>
-            <a href="#sec21-5" class="block px-3 py-2 rounded-md hover:bg-slate-100">21.5 Millikan's Experiment & Planck's Constant</a>
-            <a href="#visualizers" class="block px-3 py-2 rounded-md bg-sky-50 text-sky-700 font-semibold">Interactive Simulations & Calculators</a>
-            <a href="#numericals" class="block px-3 py-2 rounded-md hover:bg-slate-100">Solved Numericals</a>
-            <a href="#qb" class="block px-3 py-2 rounded-md hover:bg-slate-100">NEB Practice Question Bank</a>
-        </div>
-    </header>
-
-    <!-- Main Content Layout -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8">
-        
-        <!-- Sidebar Navigation (Desktop Sticky) -->
-        <aside class="hidden lg:block w-64 flex-shrink-0">
-            <div class="sticky top-24 space-y-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-xs">
-                <p class="font-bold uppercase tracking-wider text-slate-400 text-[10px]">Table of Contents</p>
-                <nav class="space-y-1">
-                    <a href="#overview" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700 font-medium">Syllabus Overview</a>
-                    <a href="#sec21-1" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700">21.1 Quantum Nature of Radiation</a>
-                    <a href="#sec21-2" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700">21.2 Properties of Photons</a>
-                    <a href="#sec21-3" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700">21.3 Photoelectric Effect</a>
-                    <a href="#sec21-4" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700">21.4 Einstein's Equation</a>
-                    <a href="#sec21-5" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700">21.5 Millikan's Experiment</a>
-                    <a href="#visualizers" class="block py-1.5 px-2 rounded bg-sky-50 text-sky-800 font-semibold">Interactive Simulations</a>
-                    <a href="#numericals" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700">21.6 Solved Numericals</a>
-                    <a href="#qb" class="block py-1.5 px-2 rounded hover:bg-sky-50 hover:text-sky-700 text-slate-700">21.7 Question Bank</a>
-                </nav>
-
-                <div class="pt-4 border-t border-slate-100">
-                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-amber-900">
-                        <p class="font-bold text-[11px] mb-1 flex items-center gap-1">
-                            <span>📌</span> 
-                        </p>
-                        <p class="text-[11px] text-amber-800 leading-snug">
-                            Chapter 21 carries ~5–8 marks in NEB XII Board Exams. Expect 1 derivation/long question or Millikan graph analysis + 1 numerical.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Article Column -->
-        <main class="flex-1 min-w-0 space-y-12">
-
-            <!-- Hero / Title Section -->
-            <section id="overview" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
-                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-                    <span class="px-3 py-1 bg-sky-100 text-sky-800 text-xs font-semibold rounded-full uppercase tracking-wider">NEB Syllabus Syllabus Code: 21</span>
-                    <span class="text-xs text-slate-500 font-mono">Modern Physics &bull; Quantum Optics</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-                    Chapter 21: Photons
-                </h1>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    Comprehensive study material, formal derivations, experimental layouts, solved numericals, and interactive laboratory simulations for National Examinations Board (NEB) Grade XII Physics.
-                </p>
-
-                <!-- Syllabus Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-4 border-t border-slate-100 text-sm">
-                    <div class="flex items-start gap-2">
-                        <span class="text-sky-600 font-bold">21.1</span>
-                        <span class="text-slate-700">Quantum Nature of Radiation & Planck's Hypothesis</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-sky-600 font-bold">21.2</span>
-                        <span class="text-slate-700">Properties of Photons (Energy, Mass, Momentum, Flux)</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-sky-600 font-bold">21.3</span>
-                        <span class="text-slate-700">Work Function & Photoelectric Effect Laws</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-sky-600 font-bold">21.4</span>
-                        <span class="text-slate-700">Einstein's Photoelectric Equation & Derivation</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-sky-600 font-bold">21.5</span>
-                        <span class="text-slate-700">Millikan's Verification Experiment & Planck's Constant</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <span class="text-sky-600 font-bold">21.6-7</span>
-                        <span class="text-slate-700">NEB Solved Numericals & Question Bank</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 21.1 -->
-            <section id="sec21-1" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-sky-600 font-bold text-sm tracking-wide uppercase">Section 21.1</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Quantum Nature of Radiation</h2>
-                </div>
-
-                <div class="prose max-w-none text-slate-700 leading-relaxed space-y-4">
-                    <h3 class="text-lg font-semibold text-slate-900">1. Failure of Classical Wave Theory</h3>
-                    <p>
-                        In the 19th century, James Clerk Maxwell’s electromagnetic wave theory successfully explained optical phenomena like interference, diffraction, and polarization. However, classical theory failed fundamentally when applied to <strong>Blackbody Radiation Distribution</strong> at atomic scales:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>
-                            <strong>Wien's Distribution Law:</strong> Derived assuming thermal equilibrium of radiation. It successfully explained blackbody radiation at short wavelengths (high frequencies), but failed significantly at longer wavelengths.
-                            $$\text{Wien's Formula: } E_\lambda d\lambda = \frac{c_1}{\lambda^5} e^{-c_2 / (\lambda T)} d\lambda$$
-                        </li>
-                        <li>
-                            <strong>Rayleigh-Jeans Law:</strong> Derived using classical equipartition of energy ($k_B T$ per mode). It matched experimental data at long wavelengths, but predicted that energy density approaches infinity as wavelength approaches zero ($\lambda \to 0$). This catastrophic breakdown at ultraviolet frequencies is famously called the <strong>Ultraviolet Catastrophe</strong>.
-                            $$\text{Rayleigh-Jeans Formula: } E_\lambda d\lambda = \frac{8 \pi k_B T}{\lambda^4} d\lambda$$
-                        </li>
-                    </ul>
-
-                    <!-- SVG Line Diagram: Blackbody Radiation Curve Comparison -->
-                    <div class="my-6 p-4 line-diagram bg-slate-50 rounded-xl">
-                        <div class="text-center font-semibold text-slate-800 text-sm mb-2">
-                            Figure 21.1: Blackbody Radiation Energy Distribution Spectrum (Comparison of Theories)
-                        </div>
-                        <svg class="w-full max-w-lg mx-auto h-64" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Axes -->
-                            <line x1="60" y1="240" x2="460" y2="240" stroke="#334155" stroke-width="2" />
-                            <line x1="60" y1="240" x2="60" y2="30" stroke="#334155" stroke-width="2" />
-                            <!-- Arrows -->
-                            <polygon points="460,240 450,235 450,245" fill="#334155"/>
-                            <polygon points="60,30 55,40 65,40" fill="#334155"/>
-                            <!-- Labels -->
-                            <text x="250" y="275" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#1e293b">Wavelength $\lambda$ (nm)</text>
-                            <text x="20" y="130" font-size="12" font-family="sans-serif" text-anchor="middle" fill="#1e293b" transform="rotate(-90 20 130)">Energy Density $E_\lambda$</text>
-                            
-                            <!-- Rayleigh-Jeans Curve (Dashed red) -->
-                            <path d="M 90 40 Q 110 180 440 235" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6,4" />
-                            <text x="130" y="55" font-size="11" font-weight="bold" fill="#dc2626">Rayleigh-Jeans (Classical Breakdown)</text>
-
-                            <!-- Wien's Curve (Dotted Green) -->
-                            <path d="M 60 240 Q 110 60 220 180 T 440 238" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="3,3"/>
-                            <text x="320" y="210" font-size="11" font-weight="bold" fill="#16a34a">Wien's Law</text>
-
-                            <!-- Planck's Experimental Curve (Solid Blue) -->
-                            <path d="M 60 240 Q 100 50 170 80 T 440 238" fill="none" stroke="#0284c7" stroke-width="3" />
-                            <text x="210" y="70" font-size="11" font-weight="bold" fill="#0284c7">Planck's Experimental Curve</text>
-
-                            <!-- UV Region Highlight -->
-                            <rect x="60" y="40" width="50" height="200" fill="#a855f7" fill-opacity="0.1" />
-                            <text x="85" y="230" font-size="10" text-anchor="middle" fill="#7e22ce" font-weight="bold">UV Region</text>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-lg font-semibold text-slate-900 mt-6">2. Max Planck's Quantum Hypothesis (1900)</h3>
-                    <p>
-                        To resolve the breakdown of classical mechanics, German physicist <strong>Max Planck</strong> proposed a revolutionary hypothesis:
-                    </p>
-                    <div class="bg-sky-50 border-l-4 border-sky-600 p-4 rounded-r-lg text-sky-900 font-medium">
-                        "Emission and absorption of electromagnetic radiation by the atomic oscillators in a blackbody do not occur continuously, but in discrete, localized packets of energy called <strong>quanta</strong>."
-                    </div>
-                    <p class="mt-3">
-                        The energy $E$ contained within a single quantum of electromagnetic radiation of frequency $\nu$ is directly proportional to its frequency:
-                    </p>
-                    $$E = h \nu = \frac{h c}{\lambda}$$
-                    <p>
-                        Where total energy emitted or absorbed by an oscillator is quantized as integral multiples:
-                    </p>
-                    $$E_n = n h \nu = n \frac{h c}{\lambda} \quad (n = 1, 2, 3, \dots)$$
-                    
-                    <!-- Standard Values Table -->
-                    <div class="mt-4 border border-slate-200 rounded-lg overflow-hidden">
-                        <table class="w-full text-sm text-left">
-                            <thead class="bg-slate-100 text-slate-800 font-semibold border-b border-slate-200">
-                                <tr>
-                                    <th class="p-3">Physical Quantity</th>
-                                    <th class="p-3">Symbol</th>
-                                    <th class="p-3">Standard Value (SI Unit)</th>
-                                    <th class="p-3">Electron-Volt Equivalent</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-200">
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-3 font-medium">Planck's Constant</td>
-                                    <td class="p-3 font-mono">$h$</td>
-                                    <td class="p-3 font-mono">$6.626 \times 10^{-34} \text{ J}\cdot\text{s}$</td>
-                                    <td class="p-3 font-mono">$4.136 \times 10^{-15} \text{ eV}\cdot\text{s}$</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-3 font-medium">Speed of Light in Vacuum</td>
-                                    <td class="p-3 font-mono">$c$</td>
-                                    <td class="p-3 font-mono">$3.00 \times 10^{8} \text{ m/s}$</td>
-                                    <td class="p-3 font-mono">—</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-3 font-medium">Product $h \cdot c$</td>
-                                    <td class="p-3 font-mono">$hc$</td>
-                                    <td class="p-3 font-mono">$1.988 \times 10^{-25} \text{ J}\cdot\text{m}$</td>
-                                    <td class="p-3 font-mono">$1240 \text{ eV}\cdot\text{nm}$</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50">
-                                    <td class="p-3 font-medium">Elementary Charge</td>
-                                    <td class="p-3 font-mono">$e$</td>
-                                    <td class="p-3 font-mono">$1.602 \times 10^{-19} \text{ C}$</td>
-                                    <td class="p-3 font-mono">$1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}$</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 21.2 -->
-            <section id="sec21-2" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-sky-600 font-bold text-sm tracking-wide uppercase">Section 21.2</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Properties of Photons</h2>
-                </div>
-
-                <div class="prose max-w-none text-slate-700 leading-relaxed space-y-4">
-                    <p>
-                        In 1905, Albert Einstein extended Planck's quantum concept to state that light itself propagates through space as discrete localized energy packets called <strong>Photons</strong>. The key fundamental properties of photons required for NEB examinations are detailed below:
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50/50">
-                            <h4 class="font-bold text-slate-900 text-base mb-1 flex items-center gap-2">
-                                <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs">1</span>
-                                Energy Quantization
-                            </h4>
-                            <p class="text-sm text-slate-600">
-                                Every photon carries a discrete quantum of energy proportional to frequency:
-                            </p>
-                            $$E = h\nu = \frac{hc}{\lambda}$$
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50/50">
-                            <h4 class="font-bold text-slate-900 text-base mb-1 flex items-center gap-2">
-                                <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs">2</span>
-                                Invariant Speed
-                            </h4>
-                            <p class="text-sm text-slate-600">
-                                In vacuum, all photons travel at the speed of light $c = 3 \times 10^8 \text{ m/s}$, regardless of the motion of the source or observer.
-                            </p>
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50/50">
-                            <h4 class="font-bold text-slate-900 text-base mb-1 flex items-center gap-2">
-                                <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs">3</span>
-                                Rest Mass & Relativistic Mass
-                            </h4>
-                            <p class="text-sm text-slate-600">
-                                The rest mass of a photon is strictly zero ($m_0 = 0$). According to Einstein's mass-energy equivalence $E = m c^2$, its dynamic relativistic mass is:
-                            </p>
-                            $$m = \frac{E}{c^2} = \frac{h\nu}{c^2} = \frac{h}{c\lambda}$$
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50/50">
-                            <h4 class="font-bold text-slate-900 text-base mb-1 flex items-center gap-2">
-                                <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs">4</span>
-                                Linear Momentum
-                            </h4>
-                            <p class="text-sm text-slate-600">
-                                Although rest mass is zero, a moving photon possesses finite linear momentum $p$:
-                            </p>
-                            $$p = m c = \left(\frac{h\nu}{c^2}\right) c = \frac{h\nu}{c} = \frac{h}{\lambda}$$
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50/50">
-                            <h4 class="font-bold text-slate-900 text-base mb-1 flex items-center gap-2">
-                                <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs">5</span>
-                                Electrical Neutrality
-                            </h4>
-                            <p class="text-sm text-slate-600">
-                                Photons are electrically neutral. They are not deflected by electric field $\vec{E}$ or magnetic field $\vec{B}$.
-                            </p>
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50/50">
-                            <h4 class="font-bold text-slate-900 text-base mb-1 flex items-center gap-2">
-                                <span class="w-6 h-6 rounded-full bg-sky-600 text-white flex items-center justify-center text-xs">6</span>
-                                Particle-Particle Collisions
-                            </h4>
-                            <p class="text-sm text-slate-600">
-                                In photon-electron collisions (e.g., Compton effect), total energy and total momentum are conserved. However, total number of photons may not be conserved (photons can be absorbed or created).
-                            </p>
-                        </div>
-                    </div>
-
-                    <h3 class="text-lg font-semibold text-slate-900 mt-6">3. Photon Intensity and Photon Flux Derivation</h3>
-                    <p>
-                        Consider a monochromatic light source of power $P$ emitting photons of frequency $\nu$ uniformly.
-                    </p>
-                    <ol class="list-decimal pl-6 space-y-2">
-                        <li>
-                            <strong>Number of Photons Emitted per Second ($N$):</strong>
-                            $$P = \frac{\text{Total Energy}}{\text{time}} = \frac{N \cdot E}{1\text{ s}} = N h \nu \implies N = \frac{P}{h\nu} = \frac{P \lambda}{hc}$$
-                        </li>
-                        <li>
-                            <strong>Radiation Intensity ($I$):</strong>
-                            Defined as light power per unit cross-sectional area $A$:
-                            $$I = \frac{P}{A} = \left(\frac{N}{A}\right) h \nu = n_s \cdot h \nu$$
-                            Where $n_s = \frac{N}{A}$ is the <strong>photon flux density</strong> (number of photons falling per unit area per second).
-                        </li>
-                    </ol>
-                </div>
-            </section>
-
-            <!-- Section 21.3 -->
-            <section id="sec21-3" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-sky-600 font-bold text-sm tracking-wide uppercase">Section 21.3</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Work Function and Photoelectric Effect</h2>
-                </div>
-
-                <div class="prose max-w-none text-slate-700 leading-relaxed space-y-4">
-                    <h3 class="text-lg font-semibold text-slate-900">1. Key Terminology Definitions</h3>
-                    <dl class="space-y-3">
-                        <dt class="font-bold text-slate-900">A. Photoelectric Effect:</dt>
-                        <dd class="pl-4 border-l-2 border-sky-500 text-slate-600">
-                            The phenomenon of ejection of electrons from a clean metal surface when electromagnetic radiation (light) of suitable frequency strikes the surface. Emitted electrons are called <strong>photoelectrons</strong> and the resulting current is called <strong>photocurrent</strong>.
-                        </dd>
-
-                        <dt class="font-bold text-slate-900">B. Work Function ($\phi$ or $W_0$):</dt>
-                        <dd class="pl-4 border-l-2 border-sky-500 text-slate-600">
-                            The minimum energy required to liberate a bound electron from the surface of a given metal against atomic attractive forces with zero remaining kinetic energy.
-                            $$\phi = h \nu_0 = \frac{h c}{\lambda_0}$$
-                        </dd>
-
-                        <dt class="font-bold text-slate-900">C. Threshold Frequency ($\nu_0$):</dt>
-                        <dd class="pl-4 border-l-2 border-sky-500 text-slate-600">
-                            The minimum characteristic frequency of incident radiation below which no photoelectric emission occurs, no matter how intense the incident beam is.
-                        </dd>
-
-                        <dt class="font-bold text-slate-900">D. Threshold Wavelength ($\lambda_0$):</dt>
-                        <dd class="pl-4 border-l-2 border-sky-500 text-slate-600">
-                            The maximum wavelength of incident light capable of ejecting photoelectrons from a given metal surface ($\lambda_0 = c / \nu_0$).
-                        </dd>
-
-                        <dt class="font-bold text-slate-900">E. Stopping Potential / Cut-off Voltage ($V_0$):</dt>
-                        <dd class="pl-4 border-l-2 border-sky-500 text-slate-600">
-                            The minimum retarding (negative) potential applied to the collector anode plate relative to the cathode emitter plate that is just sufficient to stop the fastest-moving photoelectrons from reaching the collector, reducing the photocurrent strictly to zero ($I = 0$).
-                            $$e V_0 = K_{\max} = \frac{1}{2} m v_{\max}^2$$
-                        </dd>
-                    </dl>
-
-                    <!-- Work Function Table -->
-                    <div class="my-4">
-                        <p class="font-semibold text-slate-800 text-sm mb-2">Table 21.1: Work Functions of Representative Metal Elements</p>
-                        <div class="overflow-x-auto border border-slate-200 rounded-lg">
-                            <table class="w-full text-xs sm:text-sm text-left">
-                                <thead class="bg-slate-100 text-slate-800 font-semibold border-b">
-                                    <tr>
-                                        <th class="p-2.5">Metal Surface</th>
-                                        <th class="p-2.5">Work Function $\phi$ (eV)</th>
-                                        <th class="p-2.5">Work Function $\phi$ ($10^{-19}\text{ J}$)</th>
-                                        <th class="p-2.5">Threshold $\lambda_0$ (nm)</th>
-                                        <th class="p-2.5">Light Sensitivity Range</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-200">
-                                    <tr>
-                                        <td class="p-2.5 font-medium">Cesium (Cs)</td>
-                                        <td class="p-2.5 font-mono text-sky-700 font-bold">2.14 eV</td>
-                                        <td class="p-2.5 font-mono">3.43 J</td>
-                                        <td class="p-2.5 font-mono">579 nm</td>
-                                        <td class="p-2.5 text-emerald-700 font-medium">Visible (Yellow-Green)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 font-medium">Potassium (K)</td>
-                                        <td class="p-2.5 font-mono text-sky-700 font-bold">2.30 eV</td>
-                                        <td class="p-2.5 font-mono">3.68 J</td>
-                                        <td class="p-2.5 font-mono">539 nm</td>
-                                        <td class="p-2.5 text-emerald-700 font-medium">Visible (Green)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 font-medium">Sodium (Na)</td>
-                                        <td class="p-2.5 font-mono text-sky-700 font-bold">2.36 eV</td>
-                                        <td class="p-2.5 font-mono">3.78 J</td>
-                                        <td class="p-2.5 font-mono">525 nm</td>
-                                        <td class="p-2.5 text-emerald-700 font-medium">Visible (Green)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 font-medium">Zinc (Zn)</td>
-                                        <td class="p-2.5 font-mono text-sky-700 font-bold">4.31 eV</td>
-                                        <td class="p-2.5 font-mono">6.90 J</td>
-                                        <td class="p-2.5 font-mono">288 nm</td>
-                                        <td class="p-2.5 text-purple-700 font-medium">Ultraviolet (UV)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 font-medium">Platinum (Pt)</td>
-                                        <td class="p-2.5 font-mono text-sky-700 font-bold">5.65 eV</td>
-                                        <td class="p-2.5 font-mono">9.05 J</td>
-                                        <td class="p-2.5 font-mono">219 nm</td>
-                                        <td class="p-2.5 text-purple-700 font-medium">Deep UV</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <h3 class="text-lg font-semibold text-slate-900 mt-6">2. Experimental Apparatus Setup</h3>
-                    <p>
-                        The standard laboratory apparatus for studying photoelectric phenomena consists of an evacuated glass/quartz tube containing two metallic electrodes:
-                    </p>
-
-                    <!-- SVG Line Diagram: Experimental Apparatus -->
-                    <div class="my-6 p-4 line-diagram bg-white rounded-xl">
-                        <div class="text-center font-semibold text-slate-800 text-sm mb-2">
-                            Figure 21.2: Standard Experimental Setup for Photoelectric Effect Investigation
-                        </div>
-                        <svg class="w-full max-w-2xl mx-auto h-72" viewBox="0 0 650 320" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Quartz Window & Beam -->
-                            <polygon points="120,40 180,100 160,110 100,50" fill="#fde047" fill-opacity="0.3" stroke="#eab308" stroke-width="1"/>
-                            <line x1="110" y1="45" x2="190" y2="125" stroke="#eab308" stroke-width="2" stroke-dasharray="4,2"/>
-                            <text x="70" y="35" font-size="11" font-weight="bold" fill="#854d0e">Monochromatic Light Source</text>
-                            
-                            <!-- Evacuated Tube -->
-                            <rect x="180" y="80" width="280" height="120" rx="40" fill="none" stroke="#334155" stroke-width="2.5"/>
-                            <text x="320" y="100" font-size="10" fill="#64748b" text-anchor="middle">Evacuated Quartz Glass Envelope</text>
-
-                            <!-- Cathode Plate C -->
-                            <rect x="210" y="105" width="10" height="70" fill="#475569" stroke="#1e293b"/>
-                            <text x="215" y="190" font-size="11" font-weight="bold" text-anchor="middle" fill="#0f172a">Cathode (C)</text>
-
-                            <!-- Anode Plate A -->
-                            <rect x="420" y="105" width="10" height="70" fill="#475569" stroke="#1e293b"/>
-                            <text x="425" y="190" font-size="11" font-weight="bold" text-anchor="middle" fill="#0f172a">Anode (A)</text>
-
-                            <!-- Photoelectrons -->
-                            <circle cx="250" cy="120" r="4" fill="#0284c7"/>
-                            <path d="M 254 120 L 280 120" stroke="#0284c7" stroke-width="1.5" marker-end="url(#arrow)"/>
-                            
-                            <circle cx="280" cy="150" r="4" fill="#0284c7"/>
-                            <path d="M 284 150 L 320 150" stroke="#0284c7" stroke-width="1.5"/>
-
-                            <circle cx="330" cy="130" r="4" fill="#0284c7"/>
-                            <path d="M 334 130 L 370 130" stroke="#0284c7" stroke-width="1.5"/>
-
-                            <text x="310" y="170" font-size="10" font-weight="bold" fill="#0284c7">Ejected Photoelectrons ($e^-$)</text>
-
-                            <!-- Electrical Wires -->
-                            <line x1="215" y1="175" x2="215" y2="240" stroke="#1e293b" stroke-width="2"/>
-                            <line x1="425" y1="175" x2="425" y2="240" stroke="#1e293b" stroke-width="2"/>
-
-                            <!-- Commutator Key Box -->
-                            <rect x="280" y="225" width="80" height="30" fill="#f1f5f9" stroke="#334155" stroke-width="1.5"/>
-                            <text x="320" y="244" font-size="10" font-weight="bold" text-anchor="middle" fill="#334155">Reversing Key (Commutator)</text>
-                            
-                            <line x1="215" y1="240" x2="280" y2="240" stroke="#1e293b" stroke-width="2"/>
-                            <line x1="360" y1="240" x2="425" y2="240" stroke="#1e293b" stroke-width="2"/>
-
-                            <!-- Voltmeter -->
-                            <circle cx="320" cy="200" r="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
-                            <text x="320" y="204" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e293b">V</text>
-                            <line x1="215" y1="200" x2="306" y2="200" stroke="#1e293b" stroke-width="1.5"/>
-                            <line x1="334" y1="200" x2="425" y2="200" stroke="#1e293b" stroke-width="1.5"/>
-
-                            <!-- Microammeter -->
-                            <line x1="215" y1="240" x2="215" y2="285" stroke="#1e293b" stroke-width="2"/>
-                            <circle cx="215" cy="285" r="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
-                            <text x="215" y="289" font-size="10" font-weight="bold" text-anchor="middle" fill="#1e293b">&mu;A</text>
-
-                            <!-- Variable DC Voltage Supply -->
-                            <line x1="229" y1="285" x2="320" y2="285" stroke="#1e293b" stroke-width="2"/>
-                            <!-- Battery Symbol -->
-                            <line x1="320" y1="275" x2="320" y2="295" stroke="#1e293b" stroke-width="3"/>
-                            <line x1="328" y1="280" x2="328" y2="290" stroke="#1e293b" stroke-width="1.5"/>
-                            <line x1="336" y1="275" x2="336" y2="295" stroke="#1e293b" stroke-width="3"/>
-                            <line x1="344" y1="280" x2="344" y2="290" stroke="#1e293b" stroke-width="1.5"/>
-                            <line x1="344" y1="285" x2="425" y2="285" stroke="#1e293b" stroke-width="2"/>
-                            <line x1="425" y1="285" x2="425" y2="255" stroke="#1e293b" stroke-width="2"/>
-
-                            <!-- Rheostat arrow -->
-                            <polygon points="332,270 332,280 340,275" fill="#1e293b"/>
-                            <text x="332" y="310" font-size="10" text-anchor="middle" fill="#475569">Variable DC Voltage Source</text>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-lg font-semibold text-slate-900 mt-6">3. Laws of Photoelectric Emission (Experimental Observations)</h3>
-                    <p>By systematically varying parameters in the setup above, Lenard and Millikan established four fundamental laws:</p>
-
-                    <div class="space-y-4 my-4">
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50">
-                            <h4 class="font-bold text-slate-900 text-sm">Law I: Effect of Intensity on Photocurrent</h4>
-                            <p class="text-sm text-slate-600 mt-1">
-                                At a fixed frequency above threshold ($\nu > \nu_0$) and constant accelerating potential, the photoelectric current is <strong>directly proportional</strong> to the intensity of incident light.
-                            </p>
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50">
-                            <h4 class="font-bold text-slate-900 text-sm">Law II: Independence of Maximum Kinetic Energy from Intensity</h4>
-                            <p class="text-sm text-slate-600 mt-1">
-                                For a given frequency and target material, the maximum kinetic energy $K_{\max}$ (and stopping potential $V_0$) of photoelectrons is <strong>completely independent</strong> of light intensity.
-                            </p>
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50">
-                            <h4 class="font-bold text-slate-900 text-sm">Law III: Frequency Dependence & Threshold Frequency</h4>
-                            <p class="text-sm text-slate-600 mt-1">
-                                Maximum kinetic energy $K_{\max}$ increases linearly with incident frequency $\nu$. If $\nu < \nu_0$, no photoelectrons are ejected, regardless of beam intensity or duration.
-                            </p>
-                        </div>
-
-                        <div class="p-4 border border-slate-200 rounded-xl bg-slate-50">
-                            <h4 class="font-bold text-slate-900 text-sm">Law IV: Instantaneous Nature</h4>
-                            <p class="text-sm text-slate-600 mt-1">
-                                Photoelectric emission is an instantaneous process. The time lag between the striking of light photons and electron emission is less than $10^{-9}\text{ seconds}$ ($1\text{ ns}$).
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- SVG Line Diagram: Characteristic Photoelectric Graphs -->
-                    <div class="my-6 p-4 line-diagram bg-white rounded-xl">
-                        <div class="text-center font-semibold text-slate-800 text-sm mb-4">
-                            Figure 21.3: Fundamental Characteristic Curves of Photoelectric Effect
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            
-                            <!-- Graph A: Current vs Voltage for different Intensities -->
-                            <div class="text-center">
-                                <svg class="w-full h-48 mx-auto" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="30" y1="160" x2="260" y2="160" stroke="#334155" stroke-width="1.5"/>
-                                    <line x1="120" y1="180" x2="120" y2="20" stroke="#334155" stroke-width="1.5"/>
-                                    <!-- Axes Labels -->
-                                    <text x="250" y="175" font-size="10" fill="#1e293b">Anode Potential ($V$)</text>
-                                    <text x="110" y="15" font-size="10" fill="#1e293b">Photocurrent ($I$)</text>
-                                    <text x="45" y="175" font-size="10" fill="#dc2626" font-weight="bold">$-V_0$</text>
-
-                                    <!-- Curves converging at -V0 -->
-                                    <!-- I3 high -->
-                                    <path d="M 50 160 Q 120 155 160 50 L 250 50" fill="none" stroke="#0284c7" stroke-width="2"/>
-                                    <text x="210" y="45" font-size="9" font-weight="bold" fill="#0284c7">Intensity $I_3$ (High)</text>
-
-                                    <!-- I2 mid -->
-                                    <path d="M 50 160 Q 120 158 160 90 L 250 90" fill="none" stroke="#0369a1" stroke-width="2"/>
-                                    <text x="210" y="85" font-size="9" font-weight="bold" fill="#0369a1">Intensity $I_2$</text>
-
-                                    <!-- I1 low -->
-                                    <path d="M 50 160 Q 120 159 160 130 L 250 130" fill="none" stroke="#075985" stroke-width="2"/>
-                                    <text x="210" y="125" font-size="9" font-weight="bold" fill="#075985">Intensity $I_1$ (Low)</text>
-
-                                    <!-- Dot at -V0 -->
-                                    <circle cx="50" cy="160" r="3" fill="#dc2626"/>
-                                </svg>
-                                <p class="text-xs text-slate-600 mt-1 font-medium">(a) Photocurrent vs Potential (Constant frequency $\nu$)</p>
-                            </div>
-
-                            <!-- Graph B: Current vs Voltage for different Frequencies -->
-                            <div class="text-center">
-                                <svg class="w-full h-48 mx-auto" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="20" y1="160" x2="260" y2="160" stroke="#334155" stroke-width="1.5"/>
-                                    <line x1="160" y1="180" x2="160" y2="20" stroke="#334155" stroke-width="1.5"/>
-                                    <text x="230" y="175" font-size="10" fill="#1e293b">$V$</text>
-                                    <text x="150" y="15" font-size="10" fill="#1e293b">$I$</text>
-
-                                    <!-- Curves for nu1, nu2, nu3 -->
-                                    <path d="M 40 160 Q 140 155 180 70 L 250 70" fill="none" stroke="#7c3aed" stroke-width="2"/>
-                                    <text x="20" y="152" font-size="9" fill="#7c3aed" font-weight="bold">$-V_{03}$</text>
-
-                                    <path d="M 80 160 Q 145 156 180 70 L 250 70" fill="none" stroke="#2563eb" stroke-width="2"/>
-                                    <text x="65" y="152" font-size="9" fill="#2563eb" font-weight="bold">$-V_{02}$</text>
-
-                                    <path d="M 120 160 Q 150 158 180 70 L 250 70" fill="none" stroke="#059669" stroke-width="2"/>
-                                    <text x="105" y="152" font-size="9" fill="#059669" font-weight="bold">$-V_{01}$</text>
-                                    
-                                    <text x="190" y="60" font-size="9" fill="#334155" font-weight="bold">Saturation Current (Same Intensity)</text>
-                                </svg>
-                                <p class="text-xs text-slate-600 mt-1 font-medium">(b) Photocurrent vs Potential (Frequencies $\nu_3 > \nu_2 > \nu_1$)</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 21.4 -->
-            <section id="sec21-4" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-sky-600 font-bold text-sm tracking-wide uppercase">Section 21.4</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Einstein's Photoelectric Equation</h2>
-                </div>
-
-                <div class="prose max-w-none text-slate-700 leading-relaxed space-y-4">
-                    <h3 class="text-lg font-semibold text-slate-900">1. Theoretical Derivation</h3>
-                    <p>
-                        In 1905, Albert Einstein successfully explained the photoelectric effect by applying Planck's quantum hypothesis. He postulated that photoelectric interaction is a <strong>one-to-one collision</strong> between a single incident light photon of energy $h\nu$ and a bound electron in the metal.
-                    </p>
-                    <p>
-                        When a photon strikes a surface electron, its energy $h\nu$ is completely transferred to the electron. This energy is expended in two parts:
-                    </p>
-                    <ol class="list-decimal pl-6 space-y-2">
-                        <li>
-                            <strong>Work Function ($\phi$):</strong> The minimum energy used to pull the electron out of the metal surface against atomic binding forces.
-                        </li>
-                        <li>
-                            <strong>Maximum Kinetic Energy ($K_{\max}$):</strong> The remaining energy imparted to the emitted electron as kinetic energy:
-                            $$K_{\max} = \frac{1}{2} m v_{\max}^2$$
-                        </li>
-                    </ol>
-
-                    <p class="mt-2">
-                        By Conservation of Energy:
-                    </p>
-                    <div class="bg-slate-900 text-slate-100 p-4 rounded-xl text-center shadow-inner font-mono text-base">
-                        $$h \nu = \phi + K_{\max}$$
-                    </div>
-
-                    <p class="mt-4">
-                        Since $\phi = h \nu_0$ (where $\nu_0$ is threshold frequency):
-                    </p>
-                    $$h \nu = h \nu_0 + \frac{1}{2} m v_{\max}^2$$
-                    $$\implies K_{\max} = \frac{1}{2} m v_{\max}^2 = h(\nu - \nu_0) = h c \left( \frac{1}{\lambda} - \frac{1}{\lambda_0} \right)$$
-
-                    <p>
-                        Relating $K_{\max}$ to the stopping potential $V_0$:
-                    </p>
-                    <div class="bg-sky-50 border border-sky-200 p-4 rounded-xl text-sky-950 font-semibold text-center">
-                        $$e V_0 = h\nu - \phi = h(\nu - \nu_0)$$
-                    </div>
-
-                    <h3 class="text-lg font-semibold text-slate-900 mt-6">2. Explanation of Photoelectric Laws using Einstein's Equation</h3>
-                    <div class="space-y-3">
-                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                            <strong>Explanation of Threshold Frequency ($\nu_0$):</strong> From $K_{\max} = h(\nu - \nu_0)$, if incident frequency $\nu < \nu_0$, kinetic energy $K_{\max}$ becomes negative, which is physically impossible. Hence, no emission occurs below $\nu_0$.
-                        </div>
-                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                            <strong>Explanation of $K_{\max}$ Linear Dependence:</strong> $K_{\max}$ depends linearly on frequency $\nu$ via slope $h$, independent of intensity.
-                        </div>
-                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                            <strong>Explanation of Intensity Effect:</strong> Increasing light intensity increases the number of photons per second, yielding more ejected photoelectrons per second (higher photocurrent), but individual photon energy $h\nu$ remains unchanged.
-                        </div>
-                        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-                            <strong>Explanation of Instantaneous Emission:</strong> Energy transfer occurs in a single quantum collision; energy is delivered instantly without waiting for wave absorption.
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 21.5 -->
-            <section id="sec21-5" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-sky-600 font-bold text-sm tracking-wide uppercase">Section 21.5</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Millikan's Verification & Planck's Constant Determination</h2>
-                </div>
-
-                <div class="prose max-w-none text-slate-700 leading-relaxed space-y-4">
-                    <h3 class="text-lg font-semibold text-slate-900">1. Experimental Principle (1916)</h3>
-                    <p>
-                        American physicist <strong>Robert A. Millikan</strong> performed precise experiments using clean alkali metals (Lithium, Sodium, Potassium) inside a ultra-high vacuum cylinder. His objective was to test Einstein's photoelectric equation and measure Planck's constant $h$.
-                    </p>
-
-                    <!-- SVG Line Diagram: Millikan's Chamber -->
-                    <div class="my-6 p-4 line-diagram bg-white rounded-xl">
-                        <div class="text-center font-semibold text-slate-800 text-sm mb-2">
-                            Figure 21.4: Millikan's Vacuum Chamber Setup for Photoelectric Verification
-                        </div>
-                        <svg class="w-full max-w-xl mx-auto h-64" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Vacuum Glass Vessel -->
-                            <rect x="100" y="30" width="300" height="190" rx="20" fill="none" stroke="#1e293b" stroke-width="2"/>
-                            <text x="250" y="50" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Ultra-High Vacuum Glass Cylinder</text>
-
-                            <!-- Rotating Wheel W with Alkali Metal Cylinders -->
-                            <circle cx="210" cy="130" r="40" fill="#f1f5f9" stroke="#334155" stroke-width="1.5"/>
-                            <circle cx="210" cy="130" r="5" fill="#334155"/>
-                            <rect x="200" y="80" width="20" height="15" fill="#0284c7" rx="2"/>
-                            <rect x="235" y="122" width="15" height="20" fill="#0284c7" rx="2"/>
-                            <rect x="170" y="122" width="15" height="20" fill="#0284c7" rx="2"/>
-                            <text x="210" y="133" font-size="8" fill="#1e293b" text-anchor="middle">Rotating Wheel W</text>
-
-                            <!-- Scraper Knife K -->
-                            <polygon points="210,55 205,75 215,75" fill="#dc2626"/>
-                            <text x="245" y="68" font-size="9" font-weight="bold" fill="#dc2626">Knife Scraper K (Cleaning Surface)</text>
-
-                            <!-- Light Beam input -->
-                            <line x1="40" y1="120" x2="190" y2="90" stroke="#eab308" stroke-width="3" stroke-dasharray="4,2"/>
-                            <text x="80" y="105" font-size="10" font-weight="bold" fill="#854d0e">Monochromatic UV Light</text>
-
-                            <!-- Collector Electrode C -->
-                            <path d="M 330 90 A 40 40 0 0 1 330 170" fill="none" stroke="#0f172a" stroke-width="3"/>
-                            <text x="350" y="135" font-size="10" font-weight="bold" fill="#0f172a">Faraday Cup Collector (C)</text>
-
-                            <!-- External Connection to Electrometer -->
-                            <line x1="335" y1="130" x2="440" y2="130" stroke="#1e293b" stroke-width="1.5"/>
-                            <circle cx="450" cy="130" r="10" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
-                            <text x="450" y="133" font-size="8" font-weight="bold" text-anchor="middle" fill="#1e293b">Electrometer</text>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-lg font-semibold text-slate-900 mt-6">2. Mathematical Analysis & Graphical Method</h3>
-                    <p>
-                        Rearranging Einstein's equation in terms of stopping potential $V_0$:
-                    </p>
-                    $$e V_0 = h \nu - \phi \implies V_0 = \left( \frac{h}{e} \right) \nu - \frac{\phi}{e}$$
-
-                    <p>
-                        This matches the equation of a straight line $y = m x + c$:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Variable $y$:</strong> Stopping potential $V_0$ (Volts)</li>
-                        <li><strong>Variable $x$:</strong> Incident light frequency $\nu$ ($\text{Hz}$)</li>
-                        <li><strong>Slope ($m$):</strong> $m = \frac{h}{e}$ (Universal constant for all target metals!)</li>
-                        <li><strong>x-intercept ($\nu$-axis):</strong> Threshold frequency $\nu_0$ (where $V_0 = 0$)</li>
-                        <li><strong>y-intercept ($V_0$-axis):</strong> Retarding potential intercept $-\frac{\phi}{e}$</li>
-                    </ul>
-
-                    <!-- SVG Line Diagram: Millikan V0 vs Frequency Plot -->
-                    <div class="my-6 p-4 line-diagram bg-white rounded-xl">
-                        <div class="text-center font-semibold text-slate-800 text-sm mb-2">
-                            Figure 21.5: Millikan's Stopping Potential ($V_0$) vs Frequency ($\nu$) Verification Graph
-                        </div>
-                        <svg class="w-full max-w-lg mx-auto h-64" viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Axes -->
-                            <line x1="80" y1="180" x2="460" y2="180" stroke="#334155" stroke-width="2"/>
-                            <line x1="160" y1="250" x2="160" y2="30" stroke="#334155" stroke-width="2"/>
-
-                            <text x="310" y="215" font-size="11" font-weight="bold" fill="#1e293b">Frequency $\nu$ ($10^{14}\text{ Hz}$)</text>
-                            <text x="100" y="100" font-size="11" font-weight="bold" fill="#1e293b" transform="rotate(-90 100 100)">Stopping Potential $V_0$ (V)</text>
-
-                            <!-- Metal 1 (Sodium) Straight Line -->
-                            <line x1="220" y1="180" x2="420" y2="40" stroke="#0284c7" stroke-width="2.5"/>
-                            <!-- Extended Dashed Line to y-intercept -->
-                            <line x1="160" y1="222" x2="220" y2="180" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4,3"/>
-
-                            <!-- Intercept Points -->
-                            <circle cx="220" cy="180" r="4" fill="#0284c7"/>
-                            <text x="210" y="198" font-size="10" font-weight="bold" fill="#0284c7">$\nu_0$ (Sodium)</text>
-
-                            <circle cx="160" cy="222" r="4" fill="#dc2626"/>
-                            <text x="90" y="225" font-size="10" font-weight="bold" fill="#dc2626">$-\frac{\phi}{e}$</text>
-
-                            <!-- Metal 2 (Zinc) Parallel Line -->
-                            <line x1="300" y1="180" x2="450" y2="75" stroke="#7c3aed" stroke-width="2.5"/>
-                            <circle cx="300" cy="180" r="4" fill="#7c3aed"/>
-                            <text x="300" y="198" font-size="10" font-weight="bold" fill="#7c3aed">$\nu_0'$ (Zinc)</text>
-
-                            <!-- Slope Triangle -->
-                            <polygon points="320,110 380,110 380,68" fill="#e0f2fe" opacity="0.6"/>
-                            <line x1="320" y1="110" x2="380" y2="110" stroke="#0284c7" stroke-width="1" stroke-dasharray="2,2"/>
-                            <line x1="380" y1="110" x2="380" y2="68" stroke="#0284c7" stroke-width="1" stroke-dasharray="2,2"/>
-                            <text x="350" y="123" font-size="9" fill="#0369a1" font-weight="bold">$\Delta \nu$</text>
-                            <text x="390" y="90" font-size="9" fill="#0369a1" font-weight="bold">$\Delta V_0$</text>
-                            <text x="280" y="80" font-size="11" font-weight="bold" fill="#0284c7">$\text{Slope } m = \frac{\Delta V_0}{\Delta \nu} = \frac{h}{e}$</text>
-                        </svg>
-                    </div>
-
-                    <h3 class="text-lg font-semibold text-slate-900 mt-4">3. Extraction of Planck's Constant ($h$)</h3>
-                    <p>
-                        By calculating the experimental slope $m$ from the $V_0$ vs $\nu$ straight line and multiplying by the known charge of an electron $e = 1.602 \times 10^{-19}\text{ C}$:
-                    </p>
-                    $$h = e \times \text{Slope} = e \times \left( \frac{\Delta V_0}{\Delta \nu} \right)$$
-                    <p>
-                        Millikan obtained $h = 6.57 \times 10^{-34} \text{ J s}$, which agreed with Planck's radiation constant within 0.5% error, conclusively proving Einstein's photon hypothesis.
-                    </p>
-                </div>
-            </section>
-
-            <!-- Section: Interactive Visualizers -->
-            <section id="visualizers" class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl space-y-8 border border-slate-800">
-                <div>
-                    <span class="px-3 py-1 bg-sky-500/20 text-sky-300 text-xs font-semibold rounded-full uppercase tracking-wider">Interactive Laboratory Suite</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Physics Simulations & Calculators</h2>
-                    <p class="text-slate-400 text-sm mt-1">Explore photoelectric emission physics, plot experimental Millikan graphs, and calculate photon parameters in real time.</p>
-                </div>
-
-                <!-- Visualizer 1: Photoelectric Effect Tube Simulation -->
-                <div class="bg-slate-800/80 rounded-xl p-5 border border-slate-700 space-y-4">
-                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700 pb-3">
-                        <h3 class="font-bold text-lg text-sky-400 flex items-center gap-2">
-                            <span>⚡</span> Simulation 1: Photoelectric Effect Virtual Tube Experiment
-                        </h3>
-                        <span class="text-xs bg-sky-950 text-sky-300 px-2.5 py-1 rounded border border-sky-800 font-mono">Live Electron Trajectory</span>
-                    </div>
-
-                    <!-- Canvas Visualizer Container -->
-                    <div class="relative w-full bg-slate-950 rounded-lg overflow-hidden border border-slate-800">
-                        <canvas id="photoCanvas" class="w-full h-64 sm:h-72 block"></canvas>
-                    </div>
-
-                    <!-- Interactive Control Panel -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs pt-2">
-                        <!-- Wavelength Control -->
-                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-1">
-                            <label class="font-semibold text-slate-300 flex justify-between">
-                                <span>Wavelength ($\lambda$)</span>
-                                <span id="valLambda" class="font-mono text-sky-400">400 nm</span>
-                            </label>
-                            <input type="range" id="slideLambda" min="150" max="750" value="400" class="w-full accent-sky-500">
-                            <span id="spectralBadge" class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-violet-900 text-violet-200">Near UV</span>
-                        </div>
-
-                        <!-- Light Intensity Control -->
-                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-1">
-                            <label class="font-semibold text-slate-300 flex justify-between">
-                                <span>Intensity ($I$)</span>
-                                <span id="valIntensity" class="font-mono text-sky-400">50 %</span>
-                            </label>
-                            <input type="range" id="slideIntensity" min="0" max="100" value="50" class="w-full accent-sky-500">
-                            <span class="text-[10px] text-slate-400">Controls Photon Emission Rate</span>
-                        </div>
-
-                        <!-- Target Metal Dropdown -->
-                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-1">
-                            <label class="font-semibold text-slate-300">Target Metal Surface</label>
-                            <select id="selectMetal" class="w-full bg-slate-800 text-slate-200 border border-slate-600 rounded p-1 font-sans text-xs focus:ring-1 focus:ring-sky-500">
-                                <option value="2.14">Cesium (Cs) - 2.14 eV</option>
-                                <option value="2.30">Potassium (K) - 2.30 eV</option>
-                                <option value="2.36" selected>Sodium (Na) - 2.36 eV</option>
-                                <option value="4.31">Zinc (Zn) - 4.31 eV</option>
-                                <option value="5.65">Platinum (Pt) - 5.65 eV</option>
-                            </select>
-                        </div>
-
-                        <!-- Retarding Potential Control -->
-                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-1">
-                            <label class="font-semibold text-slate-300 flex justify-between">
-                                <span>Voltage ($V$)</span>
-                                <span id="valVoltage" class="font-mono text-sky-400">0.00 V</span>
-                            </label>
-                            <input type="range" id="slideVoltage" min="-4.00" max="4.00" step="0.05" value="0.00" class="w-full accent-sky-500">
-                            <span class="text-[10px] text-slate-400">Negative = Retarding Potential</span>
-                        </div>
-                    </div>
-
-                    <!-- Dynamic Computed Metrics Panel -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900/90 p-4 rounded-lg border border-slate-700 font-mono text-xs">
-                        <div>
-                            <span class="text-slate-400 block text-[10px] uppercase">Photon Energy ($E$)</span>
-                            <span id="outE" class="text-sky-300 font-bold text-sm">3.10 eV</span>
-                        </div>
-                        <div>
-                            <span class="text-slate-400 block text-[10px] uppercase">Work Function ($\phi$)</span>
-                            <span id="outPhi" class="text-amber-300 font-bold text-sm">2.36 eV</span>
-                        </div>
-                        <div>
-                            <span class="text-slate-400 block text-[10px] uppercase">Max $K_{\max}$ / $V_0$</span>
-                            <span id="outKmax" class="text-emerald-400 font-bold text-sm">0.74 eV / 0.74 V</span>
-                        </div>
-                        <div>
-                            <span class="text-slate-400 block text-[10px] uppercase">Photocurrent ($I$)</span>
-                            <span id="outCurrent" class="text-indigo-300 font-bold text-sm">12.4 &mu;A</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Visualizer 2: Millikan V0 vs Frequency Plotter & h Extractor -->
-                <div class="bg-slate-800/80 rounded-xl p-5 border border-slate-700 space-y-4">
-                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-700 pb-3">
-                        <h3 class="font-bold text-lg text-emerald-400 flex items-center gap-2">
-                            <span>📈</span> Simulation 2: Millikan $V_0$ vs Frequency Graph & $h$ Extractor
-                        </h3>
-                        <span class="text-xs bg-emerald-950 text-emerald-300 px-2.5 py-1 rounded border border-emerald-800 font-mono">Experimental Data Fitting</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <!-- Canvas Graph -->
-                        <div class="lg:col-span-2 bg-slate-950 rounded-lg p-2 border border-slate-800">
-                            <canvas id="millikanCanvas" class="w-full h-64 block"></canvas>
-                        </div>
-
-                        <!-- Data Controls & Analysis -->
-                        <div class="space-y-3 text-xs">
-                            <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2">
-                                <label class="font-semibold text-slate-200">Select Metal Target for Experiment</label>
-                                <select id="mMetalSelect" class="w-full bg-slate-800 text-slate-200 border border-slate-600 rounded p-1.5 font-sans">
-                                    <option value="Cs">Cesium (Cs) [$\phi = 2.14\text{ eV}$]</option>
-                                    <option value="Na" selected>Sodium (Na) [$\phi = 2.36\text{ eV}$]</option>
-                                    <option value="Zn">Zinc (Zn) [$\phi = 4.31\text{ eV}$]</option>
-                                </select>
-                            </div>
-
-                            <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2">
-                                <p class="font-semibold text-slate-200">Recorded Data Points ($\nu, V_0$)</p>
-                                <div id="mDataTable" class="space-y-1 font-mono text-[11px] text-slate-300 max-h-32 overflow-y-auto">
-                                    <!-- Populated by JS -->
-                                </div>
-                            </div>
-
-                            <button id="btnCalcH" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-3 rounded text-xs transition shadow-md">
-                                Calculate Graph Slope & Extract $h$
-                            </button>
-
-                            <div id="mResultBox" class="hidden bg-emerald-950/60 border border-emerald-700 p-3 rounded-lg space-y-1 text-emerald-200 font-mono">
-                                <p class="text-[10px] text-emerald-400 font-bold uppercase">Experimental Result</p>
-                                <p>Slope $m = \Delta V_0 / \Delta \nu = 4.14 \times 10^{-15} \text{ V s}$</p>
-                                <p class="text-sm font-bold text-white">Extracted $h = e \times m = 6.63 \times 10^{-34} \text{ J s}$</p>
-                                <p class="text-[10px] text-emerald-300">Error relative to standard value: &lt; 0.1%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Visualizer 3: Photon Energy & Momentum Calculator -->
-                <div class="bg-slate-800/80 rounded-xl p-5 border border-slate-700 space-y-4">
-                    <div class="border-b border-slate-700 pb-3">
-                        <h3 class="font-bold text-lg text-amber-400 flex items-center gap-2">
-                            <span>🧮</span> Simulation 3: Complete Photon Physics Parameter Calculator
-                        </h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2">
-                            <label class="font-semibold text-slate-300">Wavelength $\lambda$ (nm)</label>
-                            <input type="number" id="calcInputLambda" value="500" min="1" max="2000" class="w-full bg-slate-800 text-white font-mono p-2 rounded border border-slate-600 focus:outline-none focus:border-amber-500">
-                        </div>
-
-                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2">
-                            <label class="font-semibold text-slate-300">Light Source Power $P$ (Watts)</label>
-                            <input type="number" id="calcInputPower" value="100" min="0.1" class="w-full bg-slate-800 text-white font-mono p-2 rounded border border-slate-600 focus:outline-none focus:border-amber-500">
-                        </div>
-
-                        <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2">
-                            <label class="font-semibold text-slate-300">Target Area $A$ ($m^2$)</label>
-                            <input type="number" id="calcInputArea" value="0.01" step="0.001" class="w-full bg-slate-800 text-white font-mono p-2 rounded border border-slate-600 focus:outline-none focus:border-amber-500">
-                        </div>
-                    </div>
-
-                    <!-- Computed Photon Outputs -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-950 p-4 rounded-lg border border-slate-800 text-xs font-mono">
-                        <div class="p-2 bg-slate-900 rounded border border-slate-800">
-                            <span class="text-slate-400 text-[10px] block">Photon Frequency ($\nu$)</span>
-                            <span id="cOutFreq" class="text-amber-300 font-bold text-sm">6.00 &times; 10¹⁴ Hz</span>
-                        </div>
-                        <div class="p-2 bg-slate-900 rounded border border-slate-800">
-                            <span class="text-slate-400 text-[10px] block">Energy ($E$)</span>
-                            <span id="cOutE" class="text-amber-300 font-bold text-sm">2.48 eV</span>
-                        </div>
-                        <div class="p-2 bg-slate-900 rounded border border-slate-800">
-                            <span class="text-slate-400 text-[10px] block">Momentum ($p$)</span>
-                            <span id="cOutP" class="text-amber-300 font-bold text-sm">1.33 &times; 10⁻²⁷ kg m/s</span>
-                        </div>
-                        <div class="p-2 bg-slate-900 rounded border border-slate-800">
-                            <span class="text-slate-400 text-[10px] block">Photon Flux ($N/t$)</span>
-                            <span id="cOutFlux" class="text-amber-300 font-bold text-sm">2.52 &times; 10²⁰ /sec</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 21.6: Solved Numericals -->
-            <section id="numericals" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-sky-600 font-bold text-sm tracking-wide uppercase">Section 21.6</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Step-by-Step Solved Numericals (NEB Standard)</h2>
-                </div>
-
-                <div class="space-y-6">
-
-                    <!-- Numerical 1 -->
-                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 text-xs font-bold rounded">Numerical Problem 21.1</span>
-                            <span class="text-xs text-slate-500 font-mono">NEB 2078 Model Question</span>
-                        </div>
-                        <p class="font-medium text-slate-900 text-sm">
-                            Calculate the energy (in Joules and eV) and linear momentum of a single light photon having a wavelength of $\lambda = 400\text{ nm}$.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-xs space-y-2 font-mono text-slate-800">
-                            <p class="font-bold text-sky-700 font-sans">Step-by-Step Solution:</p>
-                            <p><strong>Given Data:</strong></p>
-                            <p>Wavelength $\lambda = 400\text{ nm} = 400 \times 10^{-9}\text{ m}$</p>
-                            <p>Planck's constant $h = 6.626 \times 10^{-34}\text{ J s}$, Speed of light $c = 3.0 \times 10^8\text{ m/s}$</p>
-
-                            <p class="pt-1"><strong>1. Photon Energy ($E$):</strong></p>
-                            <p>$$E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34}) \times (3.0 \times 10^8)}{400 \times 10^{-9}} = 4.9695 \times 10^{-19}\text{ Joules}$$</p>
-                            <p>In electron-volts ($\text{eV}$):</p>
-                            <p>$$E_{\text{eV}} = \frac{4.9695 \times 10^{-19}\text{ J}}{1.602 \times 10^{-19}\text{ J/eV}} = 3.102\text{ eV}$$</p>
-
-                            <p class="pt-1"><strong>2. Photon Momentum ($p$):</strong></p>
-                            <p>$$p = \frac{h}{\lambda} = \frac{6.626 \times 10^{-34}\text{ J s}}{400 \times 10^{-9}\text{ m}} = 1.6565 \times 10^{-27}\text{ kg m/s}$$</p>
-                            <p class="text-emerald-700 font-bold font-sans text-xs pt-1">
-                                ✅ Final Answer: Energy $= 4.97 \times 10^{-19}\text{ J} = 3.10\text{ eV}$; Momentum $= 1.66 \times 10^{-27}\text{ kg m/s}$.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 2 -->
-                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 text-xs font-bold rounded">Numerical Problem 21.2</span>
-                            <span class="text-xs text-slate-500 font-mono">NEB 2076 Board Exam</span>
-                        </div>
-                        <p class="font-medium text-slate-900 text-sm">
-                            Light of wavelength $300\text{ nm}$ falls on a sodium plate having a work function of $\phi = 2.36\text{ eV}$. Find: (a) Threshold wavelength of sodium, (b) Maximum kinetic energy of photoelectrons (in eV), and (c) Maximum emission velocity of photoelectrons.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-xs space-y-2 font-mono text-slate-800">
-                            <p class="font-bold text-sky-700 font-sans">Step-by-Step Solution:</p>
-                            <p><strong>Given Data:</strong></p>
-                            <p>Incident Wavelength $\lambda = 300\text{ nm} = 300 \times 10^{-9}\text{ m}$</p>
-                            <p>Work Function $\phi = 2.36\text{ eV} = 2.36 \times 1.602 \times 10^{-19}\text{ J} = 3.7807 \times 10^{-19}\text{ J}$</p>
-                            <p>Electron mass $m = 9.109 \times 10^{-31}\text{ kg}$</p>
-
-                            <p class="pt-1"><strong>(a) Threshold Wavelength ($\lambda_0$):</strong></p>
-                            <p>$$\phi = \frac{hc}{\lambda_0} \implies \lambda_0 = \frac{hc}{\phi} = \frac{1.9878 \times 10^{-25}\text{ J m}}{3.7807 \times 10^{-19}\text{ J}} = 5.257 \times 10^{-7}\text{ m} = 525.7\text{ nm}$$</p>
-
-                            <p class="pt-1"><strong>(b) Maximum Kinetic Energy ($K_{\max}$):</strong></p>
-                            <p>Incident Photon Energy $E = \frac{hc}{\lambda} = \frac{1240\text{ eV nm}}{300\text{ nm}} = 4.133\text{ eV}$</p>
-                            <p>$$K_{\max} = E - \phi = 4.133\text{ eV} - 2.360\text{ eV} = 1.773\text{ eV}$$</p>
-                            <p>In Joules: $K_{\max} = 1.773 \times 1.602 \times 10^{-19}\text{ J} = 2.840 \times 10^{-19}\text{ J}$</p>
-
-                            <p class="pt-1"><strong>(c) Maximum Emission Velocity ($v_{\max}$):</strong></p>
-                            <p>$$K_{\max} = \frac{1}{2} m v_{\max}^2 \implies v_{\max} = \sqrt{\frac{2 K_{\max}}{m}} = \sqrt{\frac{2 \times 2.840 \times 10^{-19}}{9.109 \times 10^{-31}}} = 7.886 \times 10^{5}\text{ m/s}$$</p>
-
-                            <p class="text-emerald-700 font-bold font-sans text-xs pt-1">
-                                ✅ Final Answer: $\lambda_0 = 525.7\text{ nm}$, $K_{\max} = 1.77\text{ eV}$, $v_{\max} = 7.89 \times 10^5\text{ m/s}$.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 3 -->
-                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 text-xs font-bold rounded">Numerical Problem 21.3</span>
-                            <span class="text-xs text-slate-500 font-mono">NEB Standard High Weightage</span>
-                        </div>
-                        <p class="font-medium text-slate-900 text-sm">
-                            Ultraviolet light of frequency $\nu = 1.2 \times 10^{15}\text{ Hz}$ falls on a metal surface. The stopping potential required to stop photoelectron current is $V_0 = 2.80\text{ V}$. Calculate the work function of the metal in eV and determine its threshold frequency.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-xs space-y-2 font-mono text-slate-800">
-                            <p class="font-bold text-sky-700 font-sans">Step-by-Step Solution:</p>
-                            <p><strong>Given Data:</strong></p>
-                            <p>Frequency $\nu = 1.2 \times 10^{15}\text{ Hz}$</p>
-                            <p>Stopping Potential $V_0 = 2.80\text{ V} \implies K_{\max} = e V_0 = 2.80\text{ eV}$</p>
-
-                            <p class="pt-1"><strong>1. Calculate Incident Photon Energy ($E$):</strong></p>
-                            <p>$$E = h\nu = (4.136 \times 10^{-15}\text{ eV s}) \times (1.2 \times 10^{15}\text{ Hz}) = 4.963\text{ eV}$$</p>
-
-                            <p class="pt-1"><strong>2. Calculate Work Function ($\phi$):</strong></p>
-                            <p>$$e V_0 = E - \phi \implies \phi = E - e V_0 = 4.963\text{ eV} - 2.800\text{ eV} = 2.163\text{ eV}$$</p>
-
-                            <p class="pt-1"><strong>3. Calculate Threshold Frequency ($\nu_0$):</strong></p>
-                            <p>$$\nu_0 = \frac{\phi}{h} = \frac{2.163\text{ eV}}{4.136 \times 10^{-15}\text{ eV s}} = 5.23 \times 10^{14}\text{ Hz}$$</p>
-
-                            <p class="text-emerald-700 font-bold font-sans text-xs pt-1">
-                                ✅ Final Answer: Work Function $\phi = 2.16\text{ eV}$; Threshold Frequency $\nu_0 = 5.23 \times 10^{14}\text{ Hz}$.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 4 -->
-                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 text-xs font-bold rounded">Numerical Problem 21.4</span>
-                            <span class="text-xs text-slate-500 font-mono">Millikan Graph Analysis</span>
-                        </div>
-                        <p class="font-medium text-slate-900 text-sm">
-                            In a Millikan-type photoelectric experiment, stopping potentials measured at two different monochromatic frequencies are: $V_{01} = 1.85\text{ V}$ at $\nu_1 = 1.0 \times 10^{15}\text{ Hz}$, and $V_{02} = 0.61\text{ V}$ at $\nu_2 = 7.0 \times 10^{14}\text{ Hz}$. Calculate the experimental value of Planck's constant $h$ and work function $\phi$.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-xs space-y-2 font-mono text-slate-800">
-                            <p class="font-bold text-sky-700 font-sans">Step-by-Step Solution:</p>
-                            <p>Using $e V_0 = h \nu - \phi$ for both frequencies:</p>
-                            <p>1) $e V_{01} = h \nu_1 - \phi$</p>
-                            <p>2) $e V_{02} = h \nu_2 - \phi$</p>
-
-                            <p class="pt-1">Subtracting equation (2) from equation (1):</p>
-                            <p>$$e (V_{01} - V_{02}) = h (\nu_1 - \nu_2) \implies h = e \times \frac{V_{01} - V_{02}}{\nu_1 - \nu_2}$$</p>
-                            <p>$$\Delta V_0 = 1.85 - 0.61 = 1.24\text{ V}$$</p>
-                            <p>$$\Delta \nu = (10.0 - 7.0) \times 10^{14} = 3.0 \times 10^{14}\text{ Hz}$$</p>
-                            <p>$$h = (1.602 \times 10^{-19}\text{ C}) \times \frac{1.24\text{ V}}{3.0 \times 10^{14}\text{ Hz}} = 6.6216 \times 10^{-34}\text{ J s}$$</p>
-
-                            <p class="pt-1">Now finding $\phi$ from eq (1):</p>
-                            <p>$$\phi = h\nu_1 - e V_{01} = (4.133 \times 10^{-15} \times 10^{15}) - 1.85\text{ eV} = 4.133 - 1.85 = 2.283\text{ eV}$$</p>
-
-                            <p class="text-emerald-700 font-bold font-sans text-xs pt-1">
-                                ✅ Final Answer: $h = 6.62 \times 10^{-34}\text{ J s}$; Work Function $\phi = 2.28\text{ eV}$.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 5 -->
-                    <div class="border border-slate-200 rounded-xl p-5 bg-slate-50/50 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 text-xs font-bold rounded">Numerical Problem 21.5</span>
-                            <span class="text-xs text-slate-500 font-mono">Photon Flux & Rate</span>
-                        </div>
-                        <p class="font-medium text-slate-900 text-sm">
-                            A $100\text{ W}$ sodium lamp radiates light uniformly in all directions at wavelength $\lambda = 589\text{ nm}$. Assuming 5% of electric power is converted into light, calculate: (a) Total rate of photon emission per second, and (b) Photon flux hitting a target plate of area $1\text{ cm}^2$ placed $2\text{ meters}$ away.
-                        </p>
-                        <div class="bg-white p-4 rounded-lg border border-slate-200 text-xs space-y-2 font-mono text-slate-800">
-                            <p class="font-bold text-sky-700 font-sans">Step-by-Step Solution:</p>
-                            <p>Light Output Power $P = 5\% \times 100\text{ W} = 5.0\text{ Watts} = 5.0\text{ J/s}$</p>
-
-                            <p class="pt-1"><strong>(a) Single Photon Energy ($E$):</strong></p>
-                            <p>$$E = \frac{hc}{\lambda} = \frac{1.988 \times 10^{-25}\text{ J m}}{589 \times 10^{-9}\text{ m}} = 3.375 \times 10^{-19}\text{ Joules}$$</p>
-                            <p>Number of photons emitted per second ($N$):</p>
-                            <p>$$N = \frac{P}{E} = \frac{5.0\text{ J/s}}{3.375 \times 10^{-19}\text{ J}} = 1.481 \times 10^{19}\text{ photons/second}$$</p>
-
-                            <p class="pt-1"><strong>(b) Photon Flux at Distance $r = 2\text{ m}$:</strong></p>
-                            <p>Area of sphere at $r=2\text{ m}$: $A_{\text{sphere}} = 4 \pi r^2 = 4 \pi (2)^2 = 50.265\text{ m}^2$</p>
-                            <p>Target area $A_{\text{target}} = 1\text{ cm}^2 = 10^{-4}\text{ m}^2$</p>
-                            <p>Photons hitting target per second:</p>
-                            <p>$$n_{\text{target}} = N \times \frac{A_{\text{target}}}{A_{\text{sphere}}} = (1.481 \times 10^{19}) \times \frac{10^{-4}}{50.265} = 2.946 \times 10^{13}\text{ photons/s}$$</p>
-
-                            <p class="text-emerald-700 font-bold font-sans text-xs pt-1">
-                                ✅ Final Answer: Emission Rate $= 1.48 \times 10^{19}\text{ s}^{-1}$; Target Flux $= 2.95 \times 10^{13}\text{ photons/s}$.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Section 21.7: Question Bank -->
-            <section id="qb" class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-sky-600 font-bold text-sm tracking-wide uppercase">Section 21.7</span>
-                    <h2 class="text-2xl font-bold text-slate-900 mt-1">NEB Practice Question Bank</h2>
-                </div>
-
-                <!-- Tabs -->
-                <div class="flex border-b border-slate-200 space-x-4 text-sm font-semibold">
-                    <button id="tabShortBtn" class="pb-2 border-b-2 border-sky-600 text-sky-600">Short Conceptual Questions (2 Marks)</button>
-                    <button id="tabLongBtn" class="pb-2 text-slate-500 hover:text-slate-800">Long Derivation Questions (5 Marks)</button>
-                    <button id="tabUnsolvedBtn" class="pb-2 text-slate-500 hover:text-slate-800">Unsolved Practice Numericals</button>
-                </div>
-
-                <!-- Tab Content 1: Short Questions -->
-                <div id="tabShort" class="space-y-4 text-sm">
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">Q1. Why is wave theory of light unable to explain the photoelectric effect?</p>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            <strong>Answer:</strong> Wave theory predicts that kinetic energy of emitted photoelectrons should increase with light intensity and that emission should require time for wave energy accumulation. Experimentally, $K_{\max}$ is independent of intensity, and emission is instantaneous ($<10^{-9}\text{ s}$). Furthermore, wave theory cannot account for threshold frequency.
-                        </p>
-                    </div>
-
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">Q2. Define stopping potential. Does it depend on the intensity of light?</p>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            <strong>Answer:</strong> Stopping potential $V_0$ is the minimum retarding potential required to reduce photocurrent to zero. No, $V_0$ is completely independent of light intensity; it depends solely on incident frequency $\nu$ and work function $\phi$.
-                        </p>
-                    </div>
-
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">Q3. What is the rest mass and effective dynamic mass of a photon?</p>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            <strong>Answer:</strong> The rest mass of a photon is zero ($m_0 = 0$). Its dynamic relativistic mass when moving at speed $c$ is $m = \frac{E}{c^2} = \frac{h\nu}{c^2} = \frac{h}{c\lambda}$.
-                        </p>
-                    </div>
-
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">Q4. Alkali metals like Cesium and Potassium are preferred in photocells. Why?</p>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            <strong>Answer:</strong> Alkali metals have very low work functions ($\phi \approx 2.0 - 2.3\text{ eV}$), enabling them to emit photoelectrons when illuminated by visible light, whereas metals like Zinc require higher-energy UV radiation.
-                        </p>
-                    </div>
-
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">Q5. What is the physical significance of the slope of $V_0$ versus frequency ($\nu$) graph?</p>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            <strong>Answer:</strong> The slope of the $V_0$ vs $\nu$ graph represents the universal ratio $\frac{h}{e}$. Multiplying this slope by electron charge $e$ yields Planck's constant $h$.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Tab Content 2: Long Questions -->
-                <div id="tabLong" class="hidden space-y-4 text-sm">
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded">NEB Exam Core Derivation</span>
-                        <p class="font-bold text-slate-900">Q1. State the laws of photoelectric emission. Derive Einstein's photoelectric equation and show how it explains these laws.</p>
-                        <p class="text-xs text-slate-500">Expected length: 3 pages with diagrams. Focus on Einstein's 1-to-1 photon-electron collision hypothesis, derivation $h\nu = \phi + K_{\max}$, and step-by-step physical explanation of all 4 laws.</p>
-                    </div>
-
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <span class="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold rounded">Experimental Analysis</span>
-                        <p class="font-bold text-slate-900">Q2. Describe Millikan's experiment for the verification of Einstein's photoelectric equation and the determination of Planck's constant $h$.</p>
-                        <p class="text-xs text-slate-500">Include clean diagram of Millikan vacuum chamber, rotating wheel W, knife scraper K, graph of $V_0$ vs $\nu$, slope derivation $m = h/e$, and calculation of $h$.</p>
-                    </div>
-                </div>
-
-                <!-- Tab Content 3: Unsolved Numericals -->
-                <div id="tabUnsolved" class="hidden space-y-4 text-sm">
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">P1. Light of wavelength $200\text{ nm}$ falls on an aluminum surface ($\phi = 4.2\text{ eV}$). Calculate the stopping potential in Volts.</p>
-                        <p class="text-xs font-mono text-sky-700">Answer Key: $V_0 = 2.0\text{ V}$</p>
-                    </div>
-
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">P2. A $5\text{ mW}$ laser beam of wavelength $632.8\text{ nm}$ is aimed at a target. How many photons are emitted by the laser per second?</p>
-                        <p class="text-xs font-mono text-sky-700">Answer Key: $N = 1.59 \times 10^{16}\text{ photons/sec}$</p>
-                    </div>
-
-                    <div class="p-4 border border-slate-200 rounded-xl bg-slate-50 space-y-2">
-                        <p class="font-bold text-slate-900">P3. Find the momentum and dynamic mass of a photon of frequency $7.5 \times 10^{14}\text{ Hz}$.</p>
-                        <p class="text-xs font-mono text-sky-700">Answer Key: $p = 1.66 \times 10^{-27}\text{ kg m/s}$, $m = 5.52 \times 10^{-36}\text{ kg}$</p>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 mt-16 py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-xs space-y-2">
-            <p class="font-semibold text-slate-700">NEB Grade XII Physics Interactive Learning Suite — Chapter 21: Photons</p>
-            <p>Designed strictly in accordance with the National Examinations Board (NEB) Nepal Curriculum Framework.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript Logic -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Render KaTeX Formulas
-            if (typeof renderMathInElement === 'function') {
-                renderMathInElement(document.body, {
-                    delimiters: [
-                        { left: "$$", right: "$$", display: true },
-                        { left: "$", right: "$", display: false },
-                        { left: "\\[", right: "\\]", display: true },
-                        { left: "\\(", right: "\\)", display: false }
-                    ],
-                    throwOnError: false
-                });
-            }
-
-            // Mobile Menu Toggle
-            const menuBtn = document.getElementById('menuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            if (menuBtn && mobileMenu) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            // Question Bank Tabs Switcher
-            const tabShortBtn = document.getElementById('tabShortBtn');
-            const tabLongBtn = document.getElementById('tabLongBtn');
-            const tabUnsolvedBtn = document.getElementById('tabUnsolvedBtn');
-
-            const tabShort = document.getElementById('tabShort');
-            const tabLong = document.getElementById('tabLong');
-            const tabUnsolved = document.getElementById('tabUnsolved');
-
-            function resetTabs() {
-                [tabShortBtn, tabLongBtn, tabUnsolvedBtn].forEach(b => {
-                    b.className = "pb-2 text-slate-500 hover:text-slate-800";
-                });
-                [tabShort, tabLong, tabUnsolved].forEach(t => t.classList.add('hidden'));
-            }
-
-            if (tabShortBtn) {
-                tabShortBtn.addEventListener('click', () => {
-                    resetTabs();
-                    tabShortBtn.className = "pb-2 border-b-2 border-sky-600 text-sky-600 font-semibold";
-                    tabShort.classList.remove('hidden');
-                });
-                tabLongBtn.addEventListener('click', () => {
-                    resetTabs();
-                    tabLongBtn.className = "pb-2 border-b-2 border-sky-600 text-sky-600 font-semibold";
-                    tabLong.classList.remove('hidden');
-                });
-                tabUnsolvedBtn.addEventListener('click', () => {
-                    resetTabs();
-                    tabUnsolvedBtn.className = "pb-2 border-b-2 border-sky-600 text-sky-600 font-semibold";
-                    tabUnsolved.classList.remove('hidden');
-                });
-            }
-
-            // ==========================================
-            // SIMULATION 1: Photoelectric Effect Tube
-            // ==========================================
-            const photoCanvas = document.getElementById('photoCanvas');
-            const ctx1 = photoCanvas ? photoCanvas.getContext('2d') : null;
-
-            const slideLambda = document.getElementById('slideLambda');
-            const slideIntensity = document.getElementById('slideIntensity');
-            const selectMetal = document.getElementById('selectMetal');
-            const slideVoltage = document.getElementById('slideVoltage');
-
-            const valLambda = document.getElementById('valLambda');
-            const valIntensity = document.getElementById('valIntensity');
-            const valVoltage = document.getElementById('valVoltage');
-            const spectralBadge = document.getElementById('spectralBadge');
-
-            const outE = document.getElementById('outE');
-            const outPhi = document.getElementById('outPhi');
-            const outKmax = document.getElementById('outKmax');
-            const outCurrent = document.getElementById('outCurrent');
-
-            let electrons = [];
-
-            function getWavelengthColor(wl) {
-                if (wl < 380) return { r: 168, g: 85, b: 247, label: "Ultraviolet (UV)" };
-                if (wl < 450) return { r: 99, g: 102, b: 241, label: "Violet/Indigo" };
-                if (wl < 495) return { r: 14, g: 165, b: 233, label: "Blue" };
-                if (wl < 570) return { r: 34, g: 197, b: 94, label: "Green" };
-                if (wl < 590) return { r: 234, g: 179, b: 8, label: "Yellow" };
-                if (wl < 620) return { r: 249, g: 115, b: 22, label: "Orange" };
-                if (wl <= 750) return { r: 239, g: 68, b: 68, label: "Red" };
-                return { r: 180, g: 83, b: 9, label: "Infrared (IR)" };
-            }
-
-            function updatePhotoSim() {
-                if (!photoCanvas || !ctx1) return;
-
-                const wl = parseFloat(slideLambda.value); // nm
-                const intensity = parseFloat(slideIntensity.value); // %
-                const phi = parseFloat(selectMetal.value); // eV
-                const voltage = parseFloat(slideVoltage.value); // Volts
-
-                const colorObj = getWavelengthColor(wl);
-
-                valLambda.textContent = `${wl} nm`;
-                valIntensity.textContent = `${intensity} %`;
-                valVoltage.textContent = `${voltage >= 0 ? '+' : ''}${voltage.toFixed(2)} V`;
-                spectralBadge.textContent = colorObj.label;
-
-                // Physics Computations
-                // E = 1240 / lambda (eV)
-                const E = 1240 / wl;
-                const Kmax = Math.max(0, E - phi);
-                const stoppingV = Kmax; // e * V0 = Kmax in eV -> V0 = Kmax in volts
-
-                outE.textContent = `${E.toFixed(2)} eV`;
-                outPhi.textContent = `${phi.toFixed(2)} eV`;
-                outKmax.textContent = `${Kmax.toFixed(2)} eV / ${stoppingV.toFixed(2)} V`;
-
-                // Photocurrent estimation
-                let current = 0;
-                if (E > phi && intensity > 0) {
-                    if (voltage >= -stoppingV) {
-                        // Current grows to saturation
-                        const norm = Math.min(1, (voltage + stoppingV) / 1.5);
-                        current = (intensity * 0.25) * (0.3 + 0.7 * norm);
-                    }
-                }
-                outCurrent.textContent = `${current.toFixed(1)} µA`;
-
-                // Canvas Dimensions
-                photoCanvas.width = photoCanvas.clientWidth;
-                photoCanvas.height = photoCanvas.clientHeight;
-                const w = photoCanvas.width;
-                const h = photoCanvas.height;
-
-                ctx1.clearRect(0, 0, w, h);
-
-                // Draw Vacuum Tube Outline
-                ctx1.strokeStyle = '#334155';
-                ctx1.lineWidth = 2;
-                ctx1.strokeRect(w * 0.15, h * 0.15, w * 0.7, h * 0.7);
-
-                // Cathode Plate (Left)
-                ctx1.fillStyle = '#64748b';
-                ctx1.fillRect(w * 0.2, h * 0.25, 12, h * 0.5);
-                ctx1.fillStyle = '#94a3b8';
-                ctx1.font = '10px sans-serif';
-                ctx1.fillText('Cathode (C)', w * 0.18, h * 0.82);
-
-                // Anode Plate (Right)
-                ctx1.fillStyle = '#64748b';
-                ctx1.fillRect(w * 0.78, h * 0.25, 12, h * 0.5);
-                ctx1.fillText('Anode (A)', w * 0.77, h * 0.82);
-
-                // Incoming Light Beam
-                if (intensity > 0) {
-                    ctx1.strokeStyle = `rgba(${colorObj.r}, ${colorObj.g}, ${colorObj.b}, ${intensity / 100})`;
-                    ctx1.lineWidth = Math.max(1, intensity / 10);
-                    ctx1.beginPath();
-                    ctx1.moveTo(w * 0.05, h * 0.1);
-                    ctx1.lineTo(w * 0.2, h * 0.5);
-                    ctx1.stroke();
-                }
-
-                // Electron Ejection Logic
-                if (E > phi && intensity > 0) {
-                    // Spawn new electrons
-                    if (Math.random() < (intensity / 100) * 0.6) {
-                        electrons.push({
-                            x: w * 0.21,
-                            y: h * 0.3 + Math.random() * (h * 0.4),
-                            vx: Math.sqrt(Kmax) * (2 + Math.random() * 1.5),
-                            vy: (Math.random() - 0.5) * 0.8
-                        });
-                    }
-                }
-
-                // Update & Render Electrons
-                for (let i = electrons.length - 1; i >= 0; i--) {
-                    let p = electrons[i];
-
-                    // Accelerating or Retarding force due to voltage
-                    // Positive V accelerates towards Anode, Negative V retards
-                    p.vx += voltage * 0.12;
-
-                    p.x += p.vx;
-                    p.y += p.vy;
-
-                    // Render electron
-                    ctx1.fillStyle = '#38bdf8';
-                    ctx1.beginPath();
-                    ctx1.arc(p.x, p.y, 3, 0, Math.PI * 2);
-                    ctx1.fill();
-
-                    // Collision with Anode or turnaround
-                    if (p.x >= w * 0.78 || p.x < w * 0.2 || p.y < h * 0.2 || p.y > h * 0.8) {
-                        electrons.splice(i, 1);
-                    }
-                }
-
-                requestAnimationFrame(updatePhotoSim);
-            }
-
-            if (slideLambda) {
-                [slideLambda, slideIntensity, selectMetal, slideVoltage].forEach(el => {
-                    el.addEventListener('input', () => {
-                        // Trigger render update
-                    });
-                });
-                updatePhotoSim();
-            }
-
-            // ==========================================
-            // SIMULATION 2: Millikan V0 vs Frequency Plotter
-            // ==========================================
-            const millikanCanvas = document.getElementById('millikanCanvas');
-            const ctx2 = millikanCanvas ? millikanCanvas.getContext('2d') : null;
-            const mMetalSelect = document.getElementById('mMetalSelect');
-            const mDataTable = document.getElementById('mDataTable');
-            const btnCalcH = document.getElementById('btnCalcH');
-            const mResultBox = document.getElementById('mResultBox');
-
-            const metalData = {
-                Cs: { phi: 2.14, name: "Cesium" },
-                Na: { phi: 2.36, name: "Sodium" },
-                Zn: { phi: 4.31, name: "Zinc" }
-            };
-
-            function drawMillikanPlot() {
-                if (!millikanCanvas || !ctx2) return;
-
-                millikanCanvas.width = millikanCanvas.clientWidth;
-                millikanCanvas.height = millikanCanvas.clientHeight;
-                const w = millikanCanvas.width;
-                const h = millikanCanvas.height;
-
-                ctx2.clearRect(0, 0, w, h);
-
-                const key = mMetalSelect.value;
-                const phi = metalData[key].phi;
-                const h_eV = 4.136e-15;
-                const nu0 = phi / h_eV; // Hz
-
-                // Axis setup
-                const padding = 40;
-                ctx2.strokeStyle = '#475569';
-                ctx2.lineWidth = 1;
-
-                // X Axis (Frequency: 0 to 15 x 10^14 Hz)
-                ctx2.beginPath();
-                ctx2.moveTo(padding, h - padding);
-                ctx2.lineTo(w - 20, h - padding);
-                ctx2.stroke();
-
-                // Y Axis (V0: -3V to 4V)
-                ctx2.beginPath();
-                ctx2.moveTo(padding + 60, 20);
-                ctx2.lineTo(padding + 60, h - 10);
-                ctx2.stroke();
-
-                // Axis Labels
-                ctx2.fillStyle = '#94a3b8';
-                ctx2.font = '10px JetBrains Mono';
-                ctx2.fillText('Frequency ν (10¹⁴ Hz)', w - 140, h - 15);
-                ctx2.fillText('V₀ (V)', 10, 30);
-
-                // Generate 5 experimental points
-                const frequencies = [6.0, 7.5, 9.0, 10.5, 12.0]; // in 10^14 Hz
-                mDataTable.innerHTML = '';
-
-                frequencies.forEach(f => {
-                    const nu = f * 1e14;
-                    const V0 = Math.max(0, (h_eV * nu) - phi);
-
-                    // Add to table
-                    const div = document.createElement('div');
-                    div.className = "flex justify-between border-b border-slate-800 pb-0.5";
-                    div.innerHTML = `<span>ν = ${f.toFixed(1)} × 10¹⁴ Hz</span> <span class="text-emerald-400">V₀ = ${V0.toFixed(2)} V</span>`;
-                    mDataTable.appendChild(div);
-
-                    // Map to Canvas Coords
-                    // X: 0 to 15 -> padding+60 to w-20
-                    const px = (padding + 60) + (f / 15) * (w - padding - 80);
-                    // Y: -3 to +4 -> h-padding to 20
-                    const py = (h - padding) - ((V0 + 3) / 7) * (h - padding - 30);
-
-                    // Plot point
-                    ctx2.fillStyle = '#10b981';
-                    ctx2.beginPath();
-                    ctx2.arc(px, py, 4, 0, Math.PI * 2);
-                    ctx2.fill();
-                });
-
-                // Plot Fitted Straight Line
-                const x1 = (padding + 60) + ((nu0 / 1e14) / 15) * (w - padding - 80);
-                const y1 = (h - padding) - ((0 + 3) / 7) * (h - padding - 30);
-
-                const fMax = 14.0;
-                const V0Max = (h_eV * fMax * 1e14) - phi;
-                const x2 = (padding + 60) + (fMax / 15) * (w - padding - 80);
-                const y2 = (h - padding) - ((V0Max + 3) / 7) * (h - padding - 30);
-
-                ctx2.strokeStyle = '#34d399';
-                ctx2.lineWidth = 2;
-                ctx2.beginPath();
-                ctx2.moveTo(x1, y1);
-                ctx2.lineTo(x2, y2);
-                ctx2.stroke();
-            }
-
-            if (mMetalSelect) {
-                mMetalSelect.addEventListener('change', () => {
-                    mResultBox.classList.add('hidden');
-                    drawMillikanPlot();
-                });
-                btnCalcH.addEventListener('click', () => {
-                    mResultBox.classList.remove('hidden');
-                });
-                drawMillikanPlot();
-            }
-
-            // ==========================================
-            // SIMULATION 3: Photon Parameter Calculator
-            // ==========================================
-            const calcInputLambda = document.getElementById('calcInputLambda');
-            const calcInputPower = document.getElementById('calcInputPower');
-            const calcInputArea = document.getElementById('calcInputArea');
-
-            const cOutFreq = document.getElementById('cOutFreq');
-            const cOutE = document.getElementById('cOutE');
-            const cOutP = document.getElementById('cOutP');
-            const cOutFlux = document.getElementById('cOutFlux');
-
-            function updateCalculator() {
-                if (!calcInputLambda) return;
-
-                const lambda_nm = parseFloat(calcInputLambda.value) || 500;
-                const power = parseFloat(calcInputPower.value) || 100;
-                const area = parseFloat(calcInputArea.value) || 0.01;
-
-                const lambda = lambda_nm * 1e-9;
-                const c = 3.0e8;
-                const h = 6.626e-34;
-
-                const freq = c / lambda;
-                const E_J = (h * c) / lambda;
-                const E_eV = E_J / 1.602e-19;
-                const momentum = h / lambda;
-                const photonFlux = power / E_J;
-
-                cOutFreq.textContent = `${(freq / 1e14).toFixed(2)} × 10¹⁴ Hz`;
-                cOutE.textContent = `${E_eV.toFixed(2)} eV (${E_J.toExponential(2)} J)`;
-                cOutP.textContent = `${momentum.toExponential(2)} kg·m/s`;
-                cOutFlux.textContent = `${photonFlux.toExponential(2)} /sec`;
-            }
-
-            if (calcInputLambda) {
-                [calcInputLambda, calcInputPower, calcInputArea].forEach(el => {
-                    el.addEventListener('input', updateCalculator);
-                });
-                updateCalculator();
-            }
-        });
-    </script>
-</body>
-</html>
+---
+
+<h2>Quantum Nature of Radiation</h2><h3>1. Failure of Classical Wave Theory</h3><p>
+In the 19th century, James Clerk Maxwell’s electromagnetic wave theory successfully explained optical phenomena like interference, diffraction, and polarization. However, classical theory failed fundamentally when applied to <strong>Blackbody Radiation Distribution</strong> at atomic scales:
+</p><ul>
+<li>
+<strong>Wien's Distribution Law:</strong> Derived assuming thermal equilibrium of radiation. It successfully explained blackbody radiation at short wavelengths (high frequencies), but failed significantly at longer wavelengths.
+\[\text{Wien's Formula: } E_\lambda d\lambda = \frac{c_1}{\lambda^5} e^{-c_2 / (\lambda T)} d\lambda\]
+</li>
+<li>
+<strong>Rayleigh-Jeans Law:</strong> Derived using classical equipartition of energy (\(k_B T\) per mode). It matched experimental data at long wavelengths, but predicted that energy density approaches infinity as wavelength approaches zero (\(\lambda \to 0\)). This catastrophic breakdown at ultraviolet frequencies is famously called the <strong>Ultraviolet Catastrophe</strong>.
+\[\text{Rayleigh-Jeans Formula: } E_\lambda d\lambda = \frac{8 \pi k_B T}{\lambda^4} d\lambda\]
+</li>
+</ul><p>Figure 21.1: Blackbody Radiation Energy Distribution Spectrum (Comparison of Theories)</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" fill="currentColor">
+
+<line x1="60" y1="240" x2="460" y2="240" stroke="#334155" stroke-width="2"/>
+<line x1="60" y1="240" x2="60" y2="30" stroke="#334155" stroke-width="2"/>
+
+<polygon points="460,240 450,235 450,245" fill="#334155"/>
+<polygon points="60,30 55,40 65,40" fill="#334155"/>
+
+<text x="250" y="275" font-size="12" text-anchor="middle" fill="#1e293b">Wavelength λ (nm)</text>
+<text x="20" y="130" font-size="12" text-anchor="middle" fill="#1e293b" transform="rotate(-90 20 130)">Energy Density Eλ</text>
+
+<path d="M 90 40 Q 110 180 440 235" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6,4"/>
+<text x="130" y="55" font-size="11" font-weight="bold" fill="#dc2626">Rayleigh-Jeans (Classical Breakdown)</text>
+
+<path d="M 60 240 Q 110 60 220 180 T 440 238" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="3,3"/>
+<text x="320" y="210" font-size="11" font-weight="bold" fill="#16a34a">Wien's Law</text>
+
+<path d="M 60 240 Q 100 50 170 80 T 440 238" fill="none" stroke="#0284c7" stroke-width="3"/>
+<text x="210" y="70" font-size="11" font-weight="bold" fill="#0284c7">Planck's Experimental Curve</text>
+
+<rect x="60" y="40" width="50" height="200" fill="#a855f7" fill-opacity="0.1"/>
+<text x="85" y="230" font-size="10" text-anchor="middle" fill="#7e22ce" font-weight="bold">UV Region</text>
+</svg><h3>2. Max Planck's Quantum Hypothesis (1900)</h3><p>
+To resolve the breakdown of classical mechanics, German physicist <strong>Max Planck</strong> proposed a revolutionary hypothesis:
+</p><div class="box definition">"Emission and absorption of electromagnetic radiation by the atomic oscillators in a blackbody do not occur continuously, but in discrete, localized packets of energy called <strong>quanta</strong>."</div>
+<p>
+The energy \(E\) contained within a single quantum of electromagnetic radiation of frequency \(\nu\) is directly proportional to its frequency:
+</p><p>\[E = h \nu = \frac{h c}{\lambda}\]</p>
+<p>
+Where total energy emitted or absorbed by an oscillator is quantized as integral multiples:
+</p><p>\[E_n = n h \nu = n \frac{h c}{\lambda} \quad (n = 1, 2, 3, \dots)\]</p>
+<table>
+<thead>
+<tr>
+<th>Physical Quantity</th>
+<th>Symbol</th>
+<th>Standard Value (SI Unit)</th>
+<th>Electron-Volt Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planck's Constant</td>
+<td>\(h\)</td>
+<td>\(6.626 \times 10^{-34} \text{ J}\cdot\text{s}\)</td>
+<td>\(4.136 \times 10^{-15} \text{ eV}\cdot\text{s}\)</td>
+</tr>
+<tr>
+<td>Speed of Light in Vacuum</td>
+<td>\(c\)</td>
+<td>\(3.00 \times 10^{8} \text{ m/s}\)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Product \(h \cdot c\)</td>
+<td>\(hc\)</td>
+<td>\(1.988 \times 10^{-25} \text{ J}\cdot\text{m}\)</td>
+<td>\(1240 \text{ eV}\cdot\text{nm}\)</td>
+</tr>
+<tr>
+<td>Elementary Charge</td>
+<td>\(e\)</td>
+<td>\(1.602 \times 10^{-19} \text{ C}\)</td>
+<td>\(1 \text{ eV} = 1.602 \times 10^{-19} \text{ J}\)</td>
+</tr>
+</tbody>
+</table><h2>Properties of Photons</h2><p>
+In 1905, Albert Einstein extended Planck's quantum concept to state that light itself propagates through space as discrete localized energy packets called <strong>Photons</strong>. The key fundamental properties of photons required for NEB examinations are detailed below:
+</p><h4>1
+Energy Quantization</h4><p>
+Every photon carries a discrete quantum of energy proportional to frequency:
+</p><p>\[E = h\nu = \frac{hc}{\lambda}\]</p>
+<h4>2
+Invariant Speed</h4><p>
+In vacuum, all photons travel at the speed of light \(c = 3 \times 10^8 \text{ m/s}\), regardless of the motion of the source or observer.
+</p><h4>3
+Rest Mass & Relativistic Mass</h4><p>
+The rest mass of a photon is strictly zero (\(m_0 = 0\)). According to Einstein's mass-energy equivalence \(E = m c^2\), its dynamic relativistic mass is:
+</p><p>\[m = \frac{E}{c^2} = \frac{h\nu}{c^2} = \frac{h}{c\lambda}\]</p>
+<h4>4
+Linear Momentum</h4><p>
+Although rest mass is zero, a moving photon possesses finite linear momentum \(p\):
+</p><p>\[p = m c = \left(\frac{h\nu}{c^2}\right) c = \frac{h\nu}{c} = \frac{h}{\lambda}\]</p>
+<h4>5
+Electrical Neutrality</h4><p>
+Photons are electrically neutral. They are not deflected by electric field \(\vec{E}\) or magnetic field \(\vec{B}\).
+</p><h4>6
+Particle-Particle Collisions</h4><p>
+In photon-electron collisions (e.g., Compton effect), total energy and total momentum are conserved. However, total number of photons may not be conserved (photons can be absorbed or created).
+</p><h3>3. Photon Intensity and Photon Flux Derivation</h3><p>
+Consider a monochromatic light source of power \(P\) emitting photons of frequency \(\nu\) uniformly.
+</p><ol>
+<li>
+<strong>Number of Photons Emitted per Second (\(N\)):</strong>
+\[P = \frac{\text{Total Energy}}{\text{time}} = \frac{N \cdot E}{1\text{ s}} = N h \nu \implies N = \frac{P}{h\nu} = \frac{P \lambda}{hc}\]
+</li>
+<li>
+<strong>Radiation Intensity (\(I\)):</strong>
+Defined as light power per unit cross-sectional area \(A\):
+\[I = \frac{P}{A} = \left(\frac{N}{A}\right) h \nu = n_s \cdot h \nu\]
+Where \(n_s = \frac{N}{A}\) is the <strong>photon flux density</strong> (number of photons falling per unit area per second).
+</li>
+</ol><h2>Work Function and Photoelectric Effect</h2><h3>1. Key Terminology Definitions</h3><dl>
+<dt>A. Photoelectric Effect:</dt>
+<dd>
+The phenomenon of ejection of electrons from a clean metal surface when electromagnetic radiation (light) of suitable frequency strikes the surface. Emitted electrons are called <strong>photoelectrons</strong> and the resulting current is called <strong>photocurrent</strong>.
+</dd>
+
+<dt>B. Work Function (\(\phi\) or \(W_0\)):</dt>
+<dd>
+The minimum energy required to liberate a bound electron from the surface of a given metal against atomic attractive forces with zero remaining kinetic energy.
+\[\phi = h \nu_0 = \frac{h c}{\lambda_0}\]
+</dd>
+
+<dt>C. Threshold Frequency (\(\nu_0\)):</dt>
+<dd>
+The minimum characteristic frequency of incident radiation below which no photoelectric emission occurs, no matter how intense the incident beam is.
+</dd>
+
+<dt>D. Threshold Wavelength (\(\lambda_0\)):</dt>
+<dd>
+The maximum wavelength of incident light capable of ejecting photoelectrons from a given metal surface (\(\lambda_0 = c / \nu_0\)).
+</dd>
+
+<dt>E. Stopping Potential / Cut-off Voltage (\(V_0\)):</dt>
+<dd>
+The minimum retarding (negative) potential applied to the collector anode plate relative to the cathode emitter plate that is just sufficient to stop the fastest-moving photoelectrons from reaching the collector, reducing the photocurrent strictly to zero (\(I = 0\)).
+\[e V_0 = K_{\max} = \frac{1}{2} m v_{\max}^2\]
+</dd>
+</dl><p>Table 21.1: Work Functions of Representative Metal Elements</p><table>
+<thead>
+<tr>
+<th>Metal Surface</th>
+<th>Work Function \(\phi\) (eV)</th>
+<th>Work Function \(\phi\) (\(10^{-19}\text{ J}\))</th>
+<th>Threshold \(\lambda_0\) (nm)</th>
+<th>Light Sensitivity Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cesium (Cs)</td>
+<td>2.14 eV</td>
+<td>3.43 J</td>
+<td>579 nm</td>
+<td>Visible (Yellow-Green)</td>
+</tr>
+<tr>
+<td>Potassium (K)</td>
+<td>2.30 eV</td>
+<td>3.68 J</td>
+<td>539 nm</td>
+<td>Visible (Green)</td>
+</tr>
+<tr>
+<td>Sodium (Na)</td>
+<td>2.36 eV</td>
+<td>3.78 J</td>
+<td>525 nm</td>
+<td>Visible (Green)</td>
+</tr>
+<tr>
+<td>Zinc (Zn)</td>
+<td>4.31 eV</td>
+<td>6.90 J</td>
+<td>288 nm</td>
+<td>Ultraviolet (UV)</td>
+</tr>
+<tr>
+<td>Platinum (Pt)</td>
+<td>5.65 eV</td>
+<td>9.05 J</td>
+<td>219 nm</td>
+<td>Deep UV</td>
+</tr>
+</tbody>
+</table><h3>2. Experimental Apparatus Setup</h3><p>
+The standard laboratory apparatus for studying photoelectric phenomena consists of an evacuated glass/quartz tube containing two metallic electrodes:
+</p><p>Figure 21.2: Standard Experimental Setup for Photoelectric Effect Investigation</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 320" fill="currentColor">
+
+<polygon points="120,40 180,100 160,110 100,50" fill="#fde047" fill-opacity="0.3" stroke="#eab308" stroke-width="1"/>
+<line x1="110" y1="45" x2="190" y2="125" stroke="#eab308" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="70" y="35" font-size="11" font-weight="bold" fill="#854d0e">Monochromatic Light Source</text>
+
+<rect x="180" y="80" width="280" height="120" rx="40" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="320" y="100" font-size="10" fill="#64748b" text-anchor="middle">Evacuated Quartz Glass Envelope</text>
+
+<rect x="210" y="105" width="10" height="70" fill="#475569" stroke="#1e293b"/>
+<text x="215" y="190" font-size="11" font-weight="bold" text-anchor="middle" fill="#0f172a">Cathode (C)</text>
+
+<rect x="420" y="105" width="10" height="70" fill="#475569" stroke="#1e293b"/>
+<text x="425" y="190" font-size="11" font-weight="bold" text-anchor="middle" fill="#0f172a">Anode (A)</text>
+
+<circle cx="250" cy="120" r="4" fill="#0284c7"/>
+<path d="M 254 120 L 280 120" stroke="#0284c7" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<circle cx="280" cy="150" r="4" fill="#0284c7"/>
+<path d="M 284 150 L 320 150" stroke="#0284c7" stroke-width="1.5"/>
+
+<circle cx="330" cy="130" r="4" fill="#0284c7"/>
+<path d="M 334 130 L 370 130" stroke="#0284c7" stroke-width="1.5"/>
+
+<text x="310" y="170" font-size="10" font-weight="bold" fill="#0284c7">Ejected Photoelectrons (e⁻)</text>
+
+<line x1="215" y1="175" x2="215" y2="240" stroke="#1e293b" stroke-width="2"/>
+<line x1="425" y1="175" x2="425" y2="240" stroke="#1e293b" stroke-width="2"/>
+
+<rect x="280" y="225" width="80" height="30" fill="#f1f5f9" stroke="#334155" stroke-width="1.5"/>
+<text x="320" y="244" font-size="10" font-weight="bold" text-anchor="middle" fill="#334155">Reversing Key (Commutator)</text>
+
+<line x1="215" y1="240" x2="280" y2="240" stroke="#1e293b" stroke-width="2"/>
+<line x1="360" y1="240" x2="425" y2="240" stroke="#1e293b" stroke-width="2"/>
+
+<circle cx="320" cy="200" r="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+<text x="320" y="204" font-size="12" font-weight="bold" text-anchor="middle" fill="#1e293b">V</text>
+<line x1="215" y1="200" x2="306" y2="200" stroke="#1e293b" stroke-width="1.5"/>
+<line x1="334" y1="200" x2="425" y2="200" stroke="#1e293b" stroke-width="1.5"/>
+
+<line x1="215" y1="240" x2="215" y2="285" stroke="#1e293b" stroke-width="2"/>
+<circle cx="215" cy="285" r="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+<text x="215" y="289" font-size="10" font-weight="bold" text-anchor="middle" fill="#1e293b">&mu;A</text>
+
+<line x1="229" y1="285" x2="320" y2="285" stroke="#1e293b" stroke-width="2"/>
+
+<line x1="320" y1="275" x2="320" y2="295" stroke="#1e293b" stroke-width="3"/>
+<line x1="328" y1="280" x2="328" y2="290" stroke="#1e293b" stroke-width="1.5"/>
+<line x1="336" y1="275" x2="336" y2="295" stroke="#1e293b" stroke-width="3"/>
+<line x1="344" y1="280" x2="344" y2="290" stroke="#1e293b" stroke-width="1.5"/>
+<line x1="344" y1="285" x2="425" y2="285" stroke="#1e293b" stroke-width="2"/>
+<line x1="425" y1="285" x2="425" y2="255" stroke="#1e293b" stroke-width="2"/>
+
+<polygon points="332,270 332,280 340,275" fill="#1e293b"/>
+<text x="332" y="310" font-size="10" text-anchor="middle" fill="#475569">Variable DC Voltage Source</text>
+</svg><h3>3. Laws of Photoelectric Emission (Experimental Observations)</h3><p>By systematically varying parameters in the setup above, Lenard and Millikan established four fundamental laws:</p><h4>Law I: Effect of Intensity on Photocurrent</h4><p>
+At a fixed frequency above threshold (\(\nu > \nu_0\)) and constant accelerating potential, the photoelectric current is <strong>directly proportional</strong> to the intensity of incident light.
+</p><h4>Law II: Independence of Maximum Kinetic Energy from Intensity</h4><p>
+For a given frequency and target material, the maximum kinetic energy \(K_{\max}\) (and stopping potential \(V_0\)) of photoelectrons is <strong>completely independent</strong> of light intensity.
+</p><h4>Law III: Frequency Dependence & Threshold Frequency</h4><p>
+Maximum kinetic energy \(K_{\max}\) increases linearly with incident frequency \(\nu\). If \(\nu < \nu_0\), no photoelectrons are ejected, regardless of beam intensity or duration.
+</p><h4>Law IV: Instantaneous Nature</h4><p>
+Photoelectric emission is an instantaneous process. The time lag between the striking of light photons and electron emission is less than \(10^{-9}\text{ seconds}\) (\(1\text{ ns}\)).
+</p><p>Figure 21.3: Fundamental Characteristic Curves of Photoelectric Effect</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" fill="currentColor">
+<line x1="30" y1="160" x2="260" y2="160" stroke="#334155" stroke-width="1.5"/>
+<line x1="120" y1="180" x2="120" y2="20" stroke="#334155" stroke-width="1.5"/>
+
+<text x="250" y="175" font-size="10" fill="#1e293b">Anode Potential (V)</text>
+<text x="110" y="15" font-size="10" fill="#1e293b">Photocurrent (I)</text>
+<text x="45" y="175" font-size="10" fill="#dc2626" font-weight="bold">-V₀</text>
+
+<path d="M 50 160 Q 120 155 160 50 L 250 50" fill="none" stroke="#0284c7" stroke-width="2"/>
+<text x="210" y="45" font-size="9" font-weight="bold" fill="#0284c7">Intensity I₃ (High)</text>
+
+<path d="M 50 160 Q 120 158 160 90 L 250 90" fill="none" stroke="#0369a1" stroke-width="2"/>
+<text x="210" y="85" font-size="9" font-weight="bold" fill="#0369a1">Intensity I₂</text>
+
+<path d="M 50 160 Q 120 159 160 130 L 250 130" fill="none" stroke="#075985" stroke-width="2"/>
+<text x="210" y="125" font-size="9" font-weight="bold" fill="#075985">Intensity I₁ (Low)</text>
+
+<circle cx="50" cy="160" r="3" fill="#dc2626"/>
+</svg><p>(a) Photocurrent vs Potential (Constant frequency \(\nu\))</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" fill="currentColor">
+<line x1="20" y1="160" x2="260" y2="160" stroke="#334155" stroke-width="1.5"/>
+<line x1="160" y1="180" x2="160" y2="20" stroke="#334155" stroke-width="1.5"/>
+<text x="230" y="175" font-size="10" fill="#1e293b">V</text>
+<text x="150" y="15" font-size="10" fill="#1e293b">I</text>
+
+<path d="M 40 160 Q 140 155 180 70 L 250 70" fill="none" stroke="#7c3aed" stroke-width="2"/>
+<text x="20" y="152" font-size="9" fill="#7c3aed" font-weight="bold">-V₀₃</text>
+
+<path d="M 80 160 Q 145 156 180 70 L 250 70" fill="none" stroke="#2563eb" stroke-width="2"/>
+<text x="65" y="152" font-size="9" fill="#2563eb" font-weight="bold">-V₀₂</text>
+
+<path d="M 120 160 Q 150 158 180 70 L 250 70" fill="none" stroke="#059669" stroke-width="2"/>
+<text x="105" y="152" font-size="9" fill="#059669" font-weight="bold">-V₀₁</text>
+
+<text x="190" y="60" font-size="9" fill="#334155" font-weight="bold">Saturation Current (Same Intensity)</text>
+</svg><p>(b) Photocurrent vs Potential (Frequencies \(\nu_3 > \nu_2 > \nu_1\))</p><h2>Einstein's Photoelectric Equation</h2><h3>1. Theoretical Derivation</h3><p>
+In 1905, Albert Einstein successfully explained the photoelectric effect by applying Planck's quantum hypothesis. He postulated that photoelectric interaction is a <strong>one-to-one collision</strong> between a single incident light photon of energy \(h\nu\) and a bound electron in the metal.
+</p><p>
+When a photon strikes a surface electron, its energy \(h\nu\) is completely transferred to the electron. This energy is expended in two parts:
+</p><ol>
+<li>
+<strong>Work Function (\(\phi\)):</strong> The minimum energy used to pull the electron out of the metal surface against atomic binding forces.
+</li>
+<li>
+<strong>Maximum Kinetic Energy (\(K_{\max}\)):</strong> The remaining energy imparted to the emitted electron as kinetic energy:
+\[K_{\max} = \frac{1}{2} m v_{\max}^2\]
+</li>
+</ol><p>
+By Conservation of Energy:
+</p><p>\[h \nu = \phi + K_{\max}\]</p>
+<p>
+Since \(\phi = h \nu_0\) (where \(\nu_0\) is threshold frequency):
+</p><p>\[h \nu = h \nu_0 + \frac{1}{2} m v_{\max}^2\]
+\[\implies K_{\max} = \frac{1}{2} m v_{\max}^2 = h(\nu - \nu_0) = h c \left( \frac{1}{\lambda} - \frac{1}{\lambda_0} \right)\]</p>
+<p>
+Relating \(K_{\max}\) to the stopping potential \(V_0\):
+</p><p>\[e V_0 = h\nu - \phi = h(\nu - \nu_0)\]</p>
+<h3>2. Explanation of Photoelectric Laws using Einstein's Equation</h3><p><strong>Explanation of Threshold Frequency (\(\nu_0\)):</strong> From \(K_{\max} = h(\nu - \nu_0)\), if incident frequency \(\nu < \nu_0\), kinetic energy \(K_{\max}\) becomes negative, which is physically impossible. Hence, no emission occurs below \(\nu_0\).</p>
+<p><strong>Explanation of \(K_{\max}\) Linear Dependence:</strong> \(K_{\max}\) depends linearly on frequency \(\nu\) via slope \(h\), independent of intensity.</p>
+<p><strong>Explanation of Intensity Effect:</strong> Increasing light intensity increases the number of photons per second, yielding more ejected photoelectrons per second (higher photocurrent), but individual photon energy \(h\nu\) remains unchanged.</p>
+<p><strong>Explanation of Instantaneous Emission:</strong> Energy transfer occurs in a single quantum collision; energy is delivered instantly without waiting for wave absorption.</p>
+<h2>Millikan's Verification & Planck's Constant Determination</h2><h3>1. Experimental Principle (1916)</h3><p>
+American physicist <strong>Robert A. Millikan</strong> performed precise experiments using clean alkali metals (Lithium, Sodium, Potassium) inside a ultra-high vacuum cylinder. His objective was to test Einstein's photoelectric equation and measure Planck's constant \(h\).
+</p><p>Figure 21.4: Millikan's Vacuum Chamber Setup for Photoelectric Verification</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" fill="currentColor">
+
+<rect x="100" y="30" width="300" height="190" rx="20" fill="none" stroke="#1e293b" stroke-width="2"/>
+<text x="250" y="50" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Ultra-High Vacuum Glass Cylinder</text>
+
+<circle cx="210" cy="130" r="40" fill="#f1f5f9" stroke="#334155" stroke-width="1.5"/>
+<circle cx="210" cy="130" r="5" fill="#334155"/>
+<rect x="200" y="80" width="20" height="15" fill="#0284c7" rx="2"/>
+<rect x="235" y="122" width="15" height="20" fill="#0284c7" rx="2"/>
+<rect x="170" y="122" width="15" height="20" fill="#0284c7" rx="2"/>
+<text x="210" y="133" font-size="8" fill="#1e293b" text-anchor="middle">Rotating Wheel W</text>
+
+<polygon points="210,55 205,75 215,75" fill="#dc2626"/>
+<text x="245" y="68" font-size="9" font-weight="bold" fill="#dc2626">Knife Scraper K (Cleaning Surface)</text>
+
+<line x1="40" y1="120" x2="190" y2="90" stroke="#eab308" stroke-width="3" stroke-dasharray="4,2"/>
+<text x="80" y="105" font-size="10" font-weight="bold" fill="#854d0e">Monochromatic UV Light</text>
+
+<path d="M 330 90 A 40 40 0 0 1 330 170" fill="none" stroke="#0f172a" stroke-width="3"/>
+<text x="350" y="135" font-size="10" font-weight="bold" fill="#0f172a">Faraday Cup Collector (C)</text>
+
+<line x1="335" y1="130" x2="440" y2="130" stroke="#1e293b" stroke-width="1.5"/>
+<circle cx="450" cy="130" r="10" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+<text x="450" y="133" font-size="8" font-weight="bold" text-anchor="middle" fill="#1e293b">Electrometer</text>
+</svg><h3>2. Mathematical Analysis & Graphical Method</h3><p>
+Rearranging Einstein's equation in terms of stopping potential \(V_0\):
+</p><p>\[e V_0 = h \nu - \phi \implies V_0 = \left( \frac{h}{e} \right) \nu - \frac{\phi}{e}\]</p>
+<p>
+This matches the equation of a straight line \(y = m x + c\):
+</p><ul>
+<li><strong>Variable \(y\):</strong> Stopping potential \(V_0\) (Volts)</li>
+<li><strong>Variable \(x\):</strong> Incident light frequency \(\nu\) (\(\text{Hz}\))</li>
+<li><strong>Slope (\(m\)):</strong> \(m = \frac{h}{e}\) (Universal constant for all target metals!)</li>
+<li><strong>x-intercept (\(\nu\)-axis):</strong> Threshold frequency \(\nu_0\) (where \(V_0 = 0\))</li>
+<li><strong>y-intercept (\(V_0\)-axis):</strong> Retarding potential intercept \(-\frac{\phi}{e}\)</li>
+</ul><p>Figure 21.5: Millikan's Stopping Potential (\(V_0\)) vs Frequency (\(\nu\)) Verification Graph</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" fill="currentColor">
+
+<line x1="80" y1="180" x2="460" y2="180" stroke="#334155" stroke-width="2"/>
+<line x1="160" y1="250" x2="160" y2="30" stroke="#334155" stroke-width="2"/>
+
+<text x="310" y="215" font-size="11" font-weight="bold" fill="#1e293b">Frequency ν (10¹⁴ Hz)</text>
+<text x="100" y="100" font-size="11" font-weight="bold" fill="#1e293b" transform="rotate(-90 100 100)">Stopping Potential V₀ (V)</text>
+
+<line x1="220" y1="180" x2="420" y2="40" stroke="#0284c7" stroke-width="2.5"/>
+
+<line x1="160" y1="222" x2="220" y2="180" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+<circle cx="220" cy="180" r="4" fill="#0284c7"/>
+<text x="210" y="198" font-size="10" font-weight="bold" fill="#0284c7">ν₀ (Sodium)</text>
+
+<circle cx="160" cy="222" r="4" fill="#dc2626"/>
+<text x="90" y="225" font-size="10" font-weight="bold" fill="#dc2626">-(φ)/(e)</text>
+
+<line x1="300" y1="180" x2="450" y2="75" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="300" cy="180" r="4" fill="#7c3aed"/>
+<text x="300" y="198" font-size="10" font-weight="bold" fill="#7c3aed">ν₀' (Zinc)</text>
+
+<polygon points="320,110 380,110 380,68" fill="#e0f2fe" opacity="0.6"/>
+<line x1="320" y1="110" x2="380" y2="110" stroke="#0284c7" stroke-width="1" stroke-dasharray="2,2"/>
+<line x1="380" y1="110" x2="380" y2="68" stroke="#0284c7" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="350" y="123" font-size="9" fill="#0369a1" font-weight="bold">Δ ν</text>
+<text x="390" y="90" font-size="9" fill="#0369a1" font-weight="bold">Δ V₀</text>
+<text x="280" y="80" font-size="11" font-weight="bold" fill="#0284c7">Slope  m = (Δ V₀)/(Δ ν) = (h)/(e)</text>
+</svg><h3>3. Extraction of Planck's Constant (\(h\))</h3><p>
+By calculating the experimental slope \(m\) from the \(V_0\) vs \(\nu\) straight line and multiplying by the known charge of an electron \(e = 1.602 \times 10^{-19}\text{ C}\):
+</p><p>\[h = e \times \text{Slope} = e \times \left( \frac{\Delta V_0}{\Delta \nu} \right)\]</p>
+<p>
+Millikan obtained \(h = 6.57 \times 10^{-34} \text{ J s}\), which agreed with Planck's radiation constant within 0.5% error, conclusively proving Einstein's photon hypothesis.
+</p><h2>Step-by-Step Solved Numericals (NEB Standard)</h2><p>Numerical Problem 21.1
+NEB 2078 Model Question</p>
+<p>
+Calculate the energy (in Joules and eV) and linear momentum of a single light photon having a wavelength of \(\lambda = 400\text{ nm}\).
+</p><p>Step-by-Step Solution:</p><p><strong>Given Data:</strong></p><p>Wavelength \(\lambda = 400\text{ nm} = 400 \times 10^{-9}\text{ m}\)</p><p>Planck's constant \(h = 6.626 \times 10^{-34}\text{ J s}\), Speed of light \(c = 3.0 \times 10^8\text{ m/s}\)</p><p><strong>1. Photon Energy (\(E\)):</strong></p><p>\[E = \frac{hc}{\lambda} = \frac{(6.626 \times 10^{-34}) \times (3.0 \times 10^8)}{400 \times 10^{-9}} = 4.9695 \times 10^{-19}\text{ Joules}\]</p><p>In electron-volts (\(\text{eV}\)):</p><p>\[E_{\text{eV}} = \frac{4.9695 \times 10^{-19}\text{ J}}{1.602 \times 10^{-19}\text{ J/eV}} = 3.102\text{ eV}\]</p><p><strong>2. Photon Momentum (\(p\)):</strong></p><p>\[p = \frac{h}{\lambda} = \frac{6.626 \times 10^{-34}\text{ J s}}{400 \times 10^{-9}\text{ m}} = 1.6565 \times 10^{-27}\text{ kg m/s}\]</p><p>
+✅ Final Answer: Energy \(= 4.97 \times 10^{-19}\text{ J} = 3.10\text{ eV}\); Momentum \(= 1.66 \times 10^{-27}\text{ kg m/s}\).
+</p><p>Numerical Problem 21.2
+NEB 2076 Board Exam</p>
+<p>
+Light of wavelength \(300\text{ nm}\) falls on a sodium plate having a work function of \(\phi = 2.36\text{ eV}\). Find: (a) Threshold wavelength of sodium, (b) Maximum kinetic energy of photoelectrons (in eV), and (c) Maximum emission velocity of photoelectrons.
+</p><p>Step-by-Step Solution:</p><p><strong>Given Data:</strong></p><p>Incident Wavelength \(\lambda = 300\text{ nm} = 300 \times 10^{-9}\text{ m}\)</p><p>Work Function \(\phi = 2.36\text{ eV} = 2.36 \times 1.602 \times 10^{-19}\text{ J} = 3.7807 \times 10^{-19}\text{ J}\)</p><p>Electron mass \(m = 9.109 \times 10^{-31}\text{ kg}\)</p><p><strong>(a) Threshold Wavelength (\(\lambda_0\)):</strong></p><p>\[\phi = \frac{hc}{\lambda_0} \implies \lambda_0 = \frac{hc}{\phi} = \frac{1.9878 \times 10^{-25}\text{ J m}}{3.7807 \times 10^{-19}\text{ J}} = 5.257 \times 10^{-7}\text{ m} = 525.7\text{ nm}\]</p><p><strong>(b) Maximum Kinetic Energy (\(K_{\max}\)):</strong></p><p>Incident Photon Energy \(E = \frac{hc}{\lambda} = \frac{1240\text{ eV nm}}{300\text{ nm}} = 4.133\text{ eV}\)</p><p>\[K_{\max} = E - \phi = 4.133\text{ eV} - 2.360\text{ eV} = 1.773\text{ eV}\]</p><p>In Joules: \(K_{\max} = 1.773 \times 1.602 \times 10^{-19}\text{ J} = 2.840 \times 10^{-19}\text{ J}\)</p><p><strong>(c) Maximum Emission Velocity (\(v_{\max}\)):</strong></p><p>\[K_{\max} = \frac{1}{2} m v_{\max}^2 \implies v_{\max} = \sqrt{\frac{2 K_{\max}}{m}} = \sqrt{\frac{2 \times 2.840 \times 10^{-19}}{9.109 \times 10^{-31}}} = 7.886 \times 10^{5}\text{ m/s}\]</p><p>
+✅ Final Answer: \(\lambda_0 = 525.7\text{ nm}\), \(K_{\max} = 1.77\text{ eV}\), \(v_{\max} = 7.89 \times 10^5\text{ m/s}\).
+</p><p>Numerical Problem 21.3
+NEB Standard High Weightage</p>
+<p>
+Ultraviolet light of frequency \(\nu = 1.2 \times 10^{15}\text{ Hz}\) falls on a metal surface. The stopping potential required to stop photoelectron current is \(V_0 = 2.80\text{ V}\). Calculate the work function of the metal in eV and determine its threshold frequency.
+</p><p>Step-by-Step Solution:</p><p><strong>Given Data:</strong></p><p>Frequency \(\nu = 1.2 \times 10^{15}\text{ Hz}\)</p><p>Stopping Potential \(V_0 = 2.80\text{ V} \implies K_{\max} = e V_0 = 2.80\text{ eV}\)</p><p><strong>1. Calculate Incident Photon Energy (\(E\)):</strong></p><p>\[E = h\nu = (4.136 \times 10^{-15}\text{ eV s}) \times (1.2 \times 10^{15}\text{ Hz}) = 4.963\text{ eV}\]</p><p><strong>2. Calculate Work Function (\(\phi\)):</strong></p><p>\[e V_0 = E - \phi \implies \phi = E - e V_0 = 4.963\text{ eV} - 2.800\text{ eV} = 2.163\text{ eV}\]</p><p><strong>3. Calculate Threshold Frequency (\(\nu_0\)):</strong></p><p>\[\nu_0 = \frac{\phi}{h} = \frac{2.163\text{ eV}}{4.136 \times 10^{-15}\text{ eV s}} = 5.23 \times 10^{14}\text{ Hz}\]</p><p>
+✅ Final Answer: Work Function \(\phi = 2.16\text{ eV}\); Threshold Frequency \(\nu_0 = 5.23 \times 10^{14}\text{ Hz}\).
+</p><p>Numerical Problem 21.4
+Millikan Graph Analysis</p>
+<p>
+In a Millikan-type photoelectric experiment, stopping potentials measured at two different monochromatic frequencies are: \(V_{01} = 1.85\text{ V}\) at \(\nu_1 = 1.0 \times 10^{15}\text{ Hz}\), and \(V_{02} = 0.61\text{ V}\) at \(\nu_2 = 7.0 \times 10^{14}\text{ Hz}\). Calculate the experimental value of Planck's constant \(h\) and work function \(\phi\).
+</p><p>Step-by-Step Solution:</p><p>Using \(e V_0 = h \nu - \phi\) for both frequencies:</p><p>1) \(e V_{01} = h \nu_1 - \phi\)</p><p>2) \(e V_{02} = h \nu_2 - \phi\)</p><p>Subtracting equation (2) from equation (1):</p><p>\[e (V_{01} - V_{02}) = h (\nu_1 - \nu_2) \implies h = e \times \frac{V_{01} - V_{02}}{\nu_1 - \nu_2}\]</p><p>\[\Delta V_0 = 1.85 - 0.61 = 1.24\text{ V}\]</p><p>\[\Delta \nu = (10.0 - 7.0) \times 10^{14} = 3.0 \times 10^{14}\text{ Hz}\]</p><p>\[h = (1.602 \times 10^{-19}\text{ C}) \times \frac{1.24\text{ V}}{3.0 \times 10^{14}\text{ Hz}} = 6.6216 \times 10^{-34}\text{ J s}\]</p><p>Now finding \(\phi\) from eq (1):</p><p>\[\phi = h\nu_1 - e V_{01} = (4.133 \times 10^{-15} \times 10^{15}) - 1.85\text{ eV} = 4.133 - 1.85 = 2.283\text{ eV}\]</p><p>
+✅ Final Answer: \(h = 6.62 \times 10^{-34}\text{ J s}\); Work Function \(\phi = 2.28\text{ eV}\).
+</p><p>Numerical Problem 21.5
+Photon Flux & Rate</p>
+<p>
+A \(100\text{ W}\) sodium lamp radiates light uniformly in all directions at wavelength \(\lambda = 589\text{ nm}\). Assuming 5% of electric power is converted into light, calculate: (a) Total rate of photon emission per second, and (b) Photon flux hitting a target plate of area \(1\text{ cm}^2\) placed \(2\text{ meters}\) away.
+</p><p>Step-by-Step Solution:</p><p>Light Output Power \(P = 5\% \times 100\text{ W} = 5.0\text{ Watts} = 5.0\text{ J/s}\)</p><p><strong>(a) Single Photon Energy (\(E\)):</strong></p><p>\[E = \frac{hc}{\lambda} = \frac{1.988 \times 10^{-25}\text{ J m}}{589 \times 10^{-9}\text{ m}} = 3.375 \times 10^{-19}\text{ Joules}\]</p><p>Number of photons emitted per second (\(N\)):</p><p>\[N = \frac{P}{E} = \frac{5.0\text{ J/s}}{3.375 \times 10^{-19}\text{ J}} = 1.481 \times 10^{19}\text{ photons/second}\]</p><p><strong>(b) Photon Flux at Distance \(r = 2\text{ m}\):</strong></p><p>Area of sphere at \(r=2\text{ m}\): \(A_{\text{sphere}} = 4 \pi r^2 = 4 \pi (2)^2 = 50.265\text{ m}^2\)</p><p>Target area \(A_{\text{target}} = 1\text{ cm}^2 = 10^{-4}\text{ m}^2\)</p><p>Photons hitting target per second:</p><p>\[n_{\text{target}} = N \times \frac{A_{\text{target}}}{A_{\text{sphere}}} = (1.481 \times 10^{19}) \times \frac{10^{-4}}{50.265} = 2.946 \times 10^{13}\text{ photons/s}\]</p><p>
+✅ Final Answer: Emission Rate \(= 1.48 \times 10^{19}\text{ s}^{-1}\); Target Flux \(= 2.95 \times 10^{13}\text{ photons/s}\).
+</p><h2>NEB Practice Question Bank</h2><p>Q1. Why is wave theory of light unable to explain the photoelectric effect?</p><p>
+<strong>Answer:</strong> Wave theory predicts that kinetic energy of emitted photoelectrons should increase with light intensity and that emission should require time for wave energy accumulation. Experimentally, \(K_{\max}\) is independent of intensity, and emission is instantaneous (\(<10^{-9}\text{ s}\)). Furthermore, wave theory cannot account for threshold frequency.
+</p><p>Q2. Define stopping potential. Does it depend on the intensity of light?</p><p>
+<strong>Answer:</strong> Stopping potential \(V_0\) is the minimum retarding potential required to reduce photocurrent to zero. No, \(V_0\) is completely independent of light intensity; it depends solely on incident frequency \(\nu\) and work function \(\phi\).
+</p><p>Q3. What is the rest mass and effective dynamic mass of a photon?</p><p>
+<strong>Answer:</strong> The rest mass of a photon is zero (\(m_0 = 0\)). Its dynamic relativistic mass when moving at speed \(c\) is \(m = \frac{E}{c^2} = \frac{h\nu}{c^2} = \frac{h}{c\lambda}\).
+</p><p>Q4. Alkali metals like Cesium and Potassium are preferred in photocells. Why?</p><p>
+<strong>Answer:</strong> Alkali metals have very low work functions (\(\phi \approx 2.0 - 2.3\text{ eV}\)), enabling them to emit photoelectrons when illuminated by visible light, whereas metals like Zinc require higher-energy UV radiation.
+</p><p>Q5. What is the physical significance of the slope of \(V_0\) versus frequency (\(\nu\)) graph?</p><p>
+<strong>Answer:</strong> The slope of the \(V_0\) vs \(\nu\) graph represents the universal ratio \(\frac{h}{e}\). Multiplying this slope by electron charge \(e\) yields Planck's constant \(h\).
+</p><p>NEB Exam Core Derivation</p>
+<p>Q1. State the laws of photoelectric emission. Derive Einstein's photoelectric equation and show how it explains these laws.</p><p>Expected length: 3 pages with diagrams. Focus on Einstein's 1-to-1 photon-electron collision hypothesis, derivation \(h\nu = \phi + K_{\max}\), and step-by-step physical explanation of all 4 laws.</p><p>Experimental Analysis</p>
+<p>Q2. Describe Millikan's experiment for the verification of Einstein's photoelectric equation and the determination of Planck's constant \(h\).</p><p>Include clean diagram of Millikan vacuum chamber, rotating wheel W, knife scraper K, graph of \(V_0\) vs \(\nu\), slope derivation \(m = h/e\), and calculation of \(h\).</p><p>P1. Light of wavelength \(200\text{ nm}\) falls on an aluminum surface (\(\phi = 4.2\text{ eV}\)). Calculate the stopping potential in Volts.</p><p>Answer Key: \(V_0 = 2.0\text{ V}\)</p><p>P2. A \(5\text{ mW}\) laser beam of wavelength \(632.8\text{ nm}\) is aimed at a target. How many photons are emitted by the laser per second?</p><p>Answer Key: \(N = 1.59 \times 10^{16}\text{ photons/sec}\)</p><p>P3. Find the momentum and dynamic mass of a photon of frequency \(7.5 \times 10^{14}\text{ Hz}\).</p><p>Answer Key: \(p = 1.66 \times 10^{-27}\text{ kg m/s}\), \(m = 5.52 \times 10^{-36}\text{ kg}\)</p><p>NEB Grade XII Physics Interactive Learning Suite — Chapter 21: Photons</p><p>Designed strictly in accordance with the National Examinations Board (NEB) Nepal Curriculum Framework.</p>

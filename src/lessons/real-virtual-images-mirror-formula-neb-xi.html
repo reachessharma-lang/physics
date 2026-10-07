@@ -4,745 +4,194 @@ grade: XI
 chapters: [14]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real and Virtual Images — Mirror Formula - Grade XI Physics</title>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.65;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.97);
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-            margin-bottom: 30px;
-            text-align: center;
-            border-left: 5px solid #3498db;
-        }
-
-        h1 {
-            color: #1f3a5f;
-            margin-bottom: 10px;
-            font-size: 2.4em;
-        }
-
-        .subtitle {
-            color: #5d6d7e;
-            font-size: 1.1em;
-        }
-
-        .section {
-            background: rgba(255,255,255,0.97);
-            margin-bottom: 30px;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: #1f3a5f;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 12px;
-            font-size: 1.8em;
-        }
-
-        h3 {
-            color: #2c5aa0;
-            margin: 24px 0 16px;
-            font-size: 1.3em;
-        }
-
-        h4 {
-            color: #34495e;
-            margin: 18px 0 12px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        ul, ol {
-            margin-left: 24px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .formula {
-            background: #f5f8fb;
-            padding: 20px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 1.05em;
-            border-radius: 6px;
-            overflow-x: auto;
-            line-height: 1.8;
-        }
-
-        .example {
-            background: #e8f7fc;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #16a085;
-        }
-
-        .derivation {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #2980b9;
-        }
-
-        .key-points {
-            background: #f0fff5;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #27ae60;
-        }
-
-        .key-points ul {
-            margin-left: 20px;
-        }
-
-        .numerical {
-            background: #fff7f3;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #e67e22;
-        }
-
-        .warning {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #f39c12;
-        }
-
-        .mcq-section {
-            background: #fff8e1;
-            padding: 18px;
-            border-radius: 8px;
-            margin: 16px 0;
-            border-left: 4px solid #f39c12;
-        }
-
-        .question {
-            margin-bottom: 12px;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-
-        .options {
-            margin-left: 20px;
-        }
-
-        .option {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .diagram {
-            text-align: center;
-            margin: 25px auto;
-            max-width: 800px;
-        }
-
-        .diagram pre {
-            white-space: pre-wrap;
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            line-height: 1.5;
-            font-size: 0.95em;
-            overflow-x: auto;
-            text-align: left;
-            color: #333;
-        }
-
-        .diagram-caption {
-            text-align: center;
-            font-style: italic;
-            color: #666;
-            margin-top: 12px;
-            font-size: 0.95em;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid #bdc3c7;
-            padding: 12px;
-            text-align: left;
-        }
-
-        th {
-            background: #34495e;
-            color: white;
-            font-weight: 700;
-        }
-
-        tr:nth-child(even) {
-            background: #f9f9f9;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: 700;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: white;
-            font-size: 0.95em;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            .section {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    
-        /* Line diagrams (SVG): black on white so they print cleanly */
-        .diagram svg { background: #fff; border: 1px solid #ddd; border-radius: 8px; margin: 6px 0; }
-
-        @media print {
-            body { background: #fff !important; }
-            .container { max-width: 100%; padding: 0; }
-            .section { box-shadow: none !important; page-break-inside: auto; }
-            .diagram { page-break-inside: avoid; break-inside: avoid; }
-            .diagram svg { border: none; max-width: 100% !important; }
-            h2, h3, h4 { page-break-after: avoid; }
-            .example, .derivation, .formula { page-break-inside: avoid; }
-            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        }
-</style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🔍 Real and Virtual Images — Mirror Formula</h1>
-            <div class="subtitle">Grade XI Physics - NEB Curriculum</div>
-        </div>
-
-        <div class="section">
-            <h2>Unit 14: Reflection at Curved Surfaces</h2>
-
-            <p>Mirrors are used in torches, vehicle headlights, rear-view mirrors, telescopes, shaving mirrors and dentists' instruments. This chapter studies how spherical mirrors form <strong>real</strong> and <strong>virtual</strong> images and derives the <strong>mirror formula</strong> connecting object distance, image distance and focal length. Throughout, the <span class="highlight">real-is-positive, virtual-is-negative</span> sign convention is used, as in the NEB textbook.</p>
-
-            <h3>Terms Used for Spherical Mirrors</h3>
-            <p>A spherical mirror is a part of a hollow sphere whose one surface is polished. If the inner (hollow) surface reflects, it is a <strong>concave</strong> mirror; if the outer (bulging) surface reflects, it is a <strong>convex</strong> mirror.</p>
-
-            <table>
-                <tr><th>Term</th><th>Meaning</th></tr>
-                <tr><td>Pole (P)</td><td>Geometric centre of the reflecting surface</td></tr>
-                <tr><td>Centre of curvature (C)</td><td>Centre of the sphere of which the mirror is a part</td></tr>
-                <tr><td>Radius of curvature (R)</td><td>Radius of that sphere, R = PC</td></tr>
-                <tr><td>Principal axis</td><td>Line joining P and C</td></tr>
-                <tr><td>Aperture</td><td>Diameter of the reflecting surface (the width M₁M₂)</td></tr>
-                <tr><td>Principal focus (F)</td><td>Point on the axis where rays parallel and close to the axis meet (concave) or appear to diverge from (convex) after reflection</td></tr>
-                <tr><td>Focal length (f)</td><td>Distance PF</td></tr>
-            </table>
-
-            <div class="diagram"><div><svg viewBox="0 0 540 270" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:810px;height:auto;background:#fff"><rect width="540" height="270" fill="#fff"/><line x1="20.0" y1="140.0" x2="520.0" y2="140.0" stroke="#000" stroke-width="1"/><path d="M386.3,60 A240,240 0 0 1 386.3,220" fill="none" stroke="#000" stroke-width="3"/><line x1="387.9" y1="64.7" x2="395.9" y2="72.7" stroke="#000" stroke-width="1"/><line x1="390.8" y1="74.1" x2="398.8" y2="82.1" stroke="#000" stroke-width="1"/><line x1="393.3" y1="83.5" x2="401.3" y2="91.5" stroke="#000" stroke-width="1"/><line x1="395.3" y1="92.9" x2="403.3" y2="100.9" stroke="#000" stroke-width="1"/><line x1="397.0" y1="102.4" x2="405.0" y2="110.4" stroke="#000" stroke-width="1"/><line x1="398.3" y1="111.8" x2="406.3" y2="119.8" stroke="#000" stroke-width="1"/><line x1="399.3" y1="121.2" x2="407.3" y2="129.2" stroke="#000" stroke-width="1"/><line x1="399.8" y1="130.6" x2="407.8" y2="138.6" stroke="#000" stroke-width="1"/><line x1="400.0" y1="140.0" x2="408.0" y2="148.0" stroke="#000" stroke-width="1"/><line x1="399.8" y1="149.4" x2="407.8" y2="157.4" stroke="#000" stroke-width="1"/><line x1="399.3" y1="158.8" x2="407.3" y2="166.8" stroke="#000" stroke-width="1"/><line x1="398.3" y1="168.2" x2="406.3" y2="176.2" stroke="#000" stroke-width="1"/><line x1="397.0" y1="177.6" x2="405.0" y2="185.6" stroke="#000" stroke-width="1"/><line x1="395.3" y1="187.1" x2="403.3" y2="195.1" stroke="#000" stroke-width="1"/><line x1="393.3" y1="196.5" x2="401.3" y2="204.5" stroke="#000" stroke-width="1"/><line x1="390.8" y1="205.9" x2="398.8" y2="213.9" stroke="#000" stroke-width="1"/><line x1="387.9" y1="215.3" x2="395.9" y2="223.3" stroke="#000" stroke-width="1"/><circle cx="160.0" cy="140.0" r="3" fill="#000"/><text x="160.0" y="157.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">C</text><circle cx="280.0" cy="140.0" r="3" fill="#000"/><text x="280.0" y="157.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">F</text><circle cx="400.0" cy="140.0" r="3" fill="#000"/><text x="420.0" y="162.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">P</text><line x1="30.0" y1="90.0" x2="394.7" y2="90.0" stroke="#000" stroke-width="1.4"/><polygon points="217.8,90.0 208.8,92.7 208.8,87.3" fill="#000"/><line x1="394.7" y1="90.0" x2="239.8" y2="157.5" stroke="#000" stroke-width="1.4"/><polygon points="320.1,122.5 327.3,116.5 329.4,121.4" fill="#000"/><text x="28.0" y="82.0" text-anchor="start" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">parallel ray</text><text x="395.0" y="52.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">M₁</text><text x="395.0" y="240.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">M₂</text><line x1="280.0" y1="188.0" x2="400.0" y2="188.0" stroke="#000" stroke-width="1"/><polygon points="395.2,188.0 403.2,185.6 403.2,190.4" fill="#000"/><polygon points="284.8,188.0 276.8,190.4 276.8,185.6" fill="#000"/><line x1="280.0" y1="183.0" x2="280.0" y2="193.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="183.0" x2="400.0" y2="193.0" stroke="#000" stroke-width="1"/><text x="340.0" y="182.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">f</text><line x1="160.0" y1="225.0" x2="400.0" y2="225.0" stroke="#000" stroke-width="1"/><polygon points="395.2,225.0 403.2,222.6 403.2,227.4" fill="#000"/><polygon points="164.8,225.0 156.8,227.4 156.8,222.6" fill="#000"/><line x1="160.0" y1="220.0" x2="160.0" y2="230.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="220.0" x2="400.0" y2="230.0" stroke="#000" stroke-width="1"/><text x="280.0" y="219.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">R = 2f</text><text x="60.0" y="156.0" text-anchor="start" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">Principal axis</text><text x="270.0" y="20.0" text-anchor="middle" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#000">CONCAVE MIRROR (real focus, f positive)</text></svg></div><div><svg viewBox="0 0 540 270" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:810px;height:auto;background:#fff"><rect width="540" height="270" fill="#fff"/><line x1="20.0" y1="140.0" x2="520.0" y2="140.0" stroke="#000" stroke-width="1"/><path d="M173.7,60 A240,240 0 0 0 173.7,220" fill="none" stroke="#000" stroke-width="3"/><line x1="172.1" y1="64.7" x2="180.1" y2="72.7" stroke="#000" stroke-width="1"/><line x1="169.2" y1="74.1" x2="177.2" y2="82.1" stroke="#000" stroke-width="1"/><line x1="166.7" y1="83.5" x2="174.7" y2="91.5" stroke="#000" stroke-width="1"/><line x1="164.7" y1="92.9" x2="172.7" y2="100.9" stroke="#000" stroke-width="1"/><line x1="163.0" y1="102.4" x2="171.0" y2="110.4" stroke="#000" stroke-width="1"/><line x1="161.7" y1="111.8" x2="169.7" y2="119.8" stroke="#000" stroke-width="1"/><line x1="160.7" y1="121.2" x2="168.7" y2="129.2" stroke="#000" stroke-width="1"/><line x1="160.2" y1="130.6" x2="168.2" y2="138.6" stroke="#000" stroke-width="1"/><line x1="160.0" y1="140.0" x2="168.0" y2="148.0" stroke="#000" stroke-width="1"/><line x1="160.2" y1="149.4" x2="168.2" y2="157.4" stroke="#000" stroke-width="1"/><line x1="160.7" y1="158.8" x2="168.7" y2="166.8" stroke="#000" stroke-width="1"/><line x1="161.7" y1="168.2" x2="169.7" y2="176.2" stroke="#000" stroke-width="1"/><line x1="163.0" y1="177.6" x2="171.0" y2="185.6" stroke="#000" stroke-width="1"/><line x1="164.7" y1="187.1" x2="172.7" y2="195.1" stroke="#000" stroke-width="1"/><line x1="166.7" y1="196.5" x2="174.7" y2="204.5" stroke="#000" stroke-width="1"/><line x1="169.2" y1="205.9" x2="177.2" y2="213.9" stroke="#000" stroke-width="1"/><line x1="172.1" y1="215.3" x2="180.1" y2="223.3" stroke="#000" stroke-width="1"/><circle cx="160.0" cy="140.0" r="3" fill="#000"/><text x="152.0" y="157.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">P</text><circle cx="280.0" cy="140.0" r="3" fill="#000"/><text x="280.0" y="157.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">F</text><circle cx="400.0" cy="140.0" r="3" fill="#000"/><text x="400.0" y="157.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">C</text><line x1="20.0" y1="90.0" x2="165.3" y2="90.0" stroke="#000" stroke-width="1.4"/><polygon points="98.0,90.0 89.0,92.7 89.0,87.3" fill="#000"/><line x1="165.3" y1="90.0" x2="36.9" y2="34.1" stroke="#000" stroke-width="1.4"/><polygon points="83.3,54.3 92.6,55.4 90.5,60.4" fill="#000"/><line x1="165.3" y1="90.0" x2="280.0" y2="140.0" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><text x="24.0" y="82.0" text-anchor="start" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">parallel ray</text><text x="170.0" y="52.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">M₁</text><text x="170.0" y="240.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">M₂</text><line x1="160.0" y1="188.0" x2="280.0" y2="188.0" stroke="#000" stroke-width="1"/><polygon points="275.2,188.0 283.2,185.6 283.2,190.4" fill="#000"/><polygon points="164.8,188.0 156.8,190.4 156.8,185.6" fill="#000"/><line x1="160.0" y1="183.0" x2="160.0" y2="193.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="183.0" x2="280.0" y2="193.0" stroke="#000" stroke-width="1"/><text x="220.0" y="182.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">f</text><line x1="160.0" y1="225.0" x2="400.0" y2="225.0" stroke="#000" stroke-width="1"/><polygon points="395.2,225.0 403.2,222.6 403.2,227.4" fill="#000"/><polygon points="164.8,225.0 156.8,227.4 156.8,222.6" fill="#000"/><line x1="160.0" y1="220.0" x2="160.0" y2="230.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="220.0" x2="400.0" y2="230.0" stroke="#000" stroke-width="1"/><text x="280.0" y="219.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">R = 2f</text><text x="270.0" y="20.0" text-anchor="middle" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#000">CONVEX MIRROR (virtual focus, f negative)</text><text x="500.0" y="132.0" text-anchor="end" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">Principal axis</text></svg></div>
-                <div class="diagram-caption"><strong>Figure 14.1:</strong> Concave mirror (top) and convex mirror (bottom) with pole P, focus F, centre of curvature C, focal length f and radius R</div>
-            </div>
-
-            <div class="derivation">
-                <h4>Relation between focal length and radius of curvature</h4>
-                <p>Consider a ray AB parallel to the principal axis (close to it) striking the mirror at B. The normal at B is the line CB, so the angle of incidence is ∠ABC = θ and the angle of reflection is ∠CBF = θ. Since AB ∥ PC, ∠BCP = θ (alternate angles). Hence triangle CFB has equal angles ∠FCB = ∠FBC = θ, so FC = FB.</p>
-                <div class="formula">
-                    For a small aperture, B is very close to P, so FB ≈ FP
-                    <br>
-                    FC = FP ⇒ PF = ½ PC
-                    <br>
-                    <strong>f = R / 2</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>14.1 Real and Virtual Images</h2>
-
-            <h3>14.1(a) Real and Virtual Objects</h3>
-            <p>An object is <strong>real</strong> if the rays reaching the mirror actually diverge from it. It is <strong>virtual</strong> if the rays reaching the mirror are already converging towards a point behind the mirror. Ordinary objects placed in front of a mirror are real objects.</p>
-
-            <h3>14.1(b) Real Image</h3>
-            <p>An image is <strong>real</strong> when the reflected rays <em>actually meet</em> at a point. A real image can be caught on a screen and is always <strong>inverted</strong> in a mirror. It is formed on the same side of the mirror as the real object.</p>
-
-            <h3>14.1(c) Virtual Image</h3>
-            <p>An image is <strong>virtual</strong> when the reflected rays only <em>appear to come from</em> a point, because they actually diverge. Their backward extensions meet behind the mirror. A virtual image cannot be caught on a screen but can be seen by the eye (or a lens). It is always <strong>erect</strong> in a mirror.</p>
-
-            <table>
-                <tr><th>Property</th><th>Real image</th><th>Virtual image</th></tr>
-                <tr><td>Rays</td><td>Actually converge</td><td>Appear to diverge from a point</td></tr>
-                <tr><td>Screen</td><td>Can be obtained</td><td>Cannot be obtained</td></tr>
-                <tr><td>Position</td><td>In front of the mirror</td><td>Behind the mirror</td></tr>
-                <tr><td>Orientation</td><td>Inverted</td><td>Erect</td></tr>
-                <tr><td>Sign of v (this convention)</td><td>Positive (+)</td><td>Negative (−)</td></tr>
-            </table>
-
-            <h3>14.1(d) Rules for Drawing Ray Diagrams</h3>
-            <p>To locate the image of a point on an object, any two of the following rays are traced:</p>
-            <div class="key-points">
-                <ul>
-                    <li><strong>Ray 1:</strong> A ray parallel to the principal axis passes through F after reflection (concave), or appears to come from F (convex).</li>
-                    <li><strong>Ray 2:</strong> A ray through F (or heading towards F) becomes parallel to the principal axis after reflection.</li>
-                    <li><strong>Ray 3:</strong> A ray through C (or heading towards C) strikes the mirror normally and is reflected back along its own path.</li>
-                    <li><strong>Ray 4:</strong> A ray striking the pole P is reflected so that the angle of reflection equals the angle of incidence about the principal axis.</li>
-                </ul>
-            </div>
-
-            <h3>14.1(e) Images in a Concave Mirror</h3>
-
-            <div class="diagram"><svg viewBox="0 0 420 280" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:630px;height:auto;background:#fff"><rect width="420" height="280" fill="#fff"/><line x1="15.0" y1="150.0" x2="405.0" y2="150.0" stroke="#000" stroke-width="1"/><path d="M343.3,62 A240.0,240.0 0 0 1 343.3,238" fill="none" stroke="#000" stroke-width="3"/><line x1="345.3" y1="67.2" x2="353.3" y2="75.2" stroke="#000" stroke-width="1"/><line x1="348.8" y1="77.5" x2="356.8" y2="85.5" stroke="#000" stroke-width="1"/><line x1="351.8" y1="87.9" x2="359.8" y2="95.9" stroke="#000" stroke-width="1"/><line x1="354.4" y1="98.2" x2="362.4" y2="106.2" stroke="#000" stroke-width="1"/><line x1="356.4" y1="108.6" x2="364.4" y2="116.6" stroke="#000" stroke-width="1"/><line x1="358.0" y1="118.9" x2="366.0" y2="126.9" stroke="#000" stroke-width="1"/><line x1="359.1" y1="129.3" x2="367.1" y2="137.3" stroke="#000" stroke-width="1"/><line x1="359.8" y1="139.6" x2="367.8" y2="147.6" stroke="#000" stroke-width="1"/><line x1="360.0" y1="150.0" x2="368.0" y2="158.0" stroke="#000" stroke-width="1"/><line x1="359.8" y1="160.4" x2="367.8" y2="168.4" stroke="#000" stroke-width="1"/><line x1="359.1" y1="170.7" x2="367.1" y2="178.7" stroke="#000" stroke-width="1"/><line x1="358.0" y1="181.1" x2="366.0" y2="189.1" stroke="#000" stroke-width="1"/><line x1="356.4" y1="191.4" x2="364.4" y2="199.4" stroke="#000" stroke-width="1"/><line x1="354.4" y1="201.8" x2="362.4" y2="209.8" stroke="#000" stroke-width="1"/><line x1="351.8" y1="212.1" x2="359.8" y2="220.1" stroke="#000" stroke-width="1"/><line x1="348.8" y1="222.5" x2="356.8" y2="230.5" stroke="#000" stroke-width="1"/><line x1="345.3" y1="232.8" x2="353.3" y2="240.8" stroke="#000" stroke-width="1"/><circle cx="200.0" cy="150.0" r="3" fill="#000"/><text x="193.0" y="141.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">C</text><circle cx="280.0" cy="150.0" r="3" fill="#000"/><text x="273.0" y="141.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">F</text><circle cx="360.0" cy="150.0" r="3" fill="#000"/><text x="382.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">P</text><line x1="168.0" y1="150.0" x2="168.0" y2="110.0" stroke="#000" stroke-width="2.2"/><polygon points="168.0,103.4 171.3,114.4 164.7,114.4" fill="#000"/><text x="168.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A</text><text x="168.0" y="103.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B</text><line x1="222.9" y1="150.0" x2="222.9" y2="178.6" stroke="#000" stroke-width="2.2"/><polygon points="222.9,185.2 219.6,174.2 226.2,174.2" fill="#000"/><text x="222.9" y="142.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A'</text><text x="222.9" y="197.6" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B'</text><line x1="168.0" y1="110.0" x2="360.0" y2="110.0" stroke="#000" stroke-width="1.4"/><polygon points="269.4,110.0 260.4,112.7 260.4,107.3" fill="#000"/><line x1="360.0" y1="110.0" x2="222.9" y2="178.6" stroke="#000" stroke-width="1.4"/><polygon points="286.6,146.7 293.4,140.3 295.9,145.1" fill="#000"/><line x1="168.0" y1="110.0" x2="360.0" y2="150.0" stroke="#000" stroke-width="1.4"/><polygon points="269.3,131.1 259.9,131.9 261.0,126.6" fill="#000"/><line x1="360.0" y1="150.0" x2="222.9" y2="178.6" stroke="#000" stroke-width="1.4"/><polygon points="286.1,165.4 294.4,160.9 295.5,166.2" fill="#000"/><text x="210.0" y="22.0" text-anchor="middle" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#000">Object beyond C: real, inverted, diminished image between F and C</text></svg>
-                <div class="diagram-caption"><strong>Figure 14.2:</strong> Object beyond C. Rays used: Ray 1 (parallel to the axis, then through F) and Ray 4 (incident at the pole P)</div>
-            </div>
-
-            <div class="diagram"><svg viewBox="0 0 540 290" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:810px;height:auto;background:#fff"><rect width="540" height="290" fill="#fff"/><line x1="15.0" y1="150.0" x2="525.0" y2="150.0" stroke="#000" stroke-width="1"/><path d="M316.8,62 A300.0,300.0 0 0 1 316.8,238" fill="none" stroke="#000" stroke-width="3"/><line x1="318.3" y1="67.2" x2="326.3" y2="75.2" stroke="#000" stroke-width="1"/><line x1="321.1" y1="77.5" x2="329.1" y2="85.5" stroke="#000" stroke-width="1"/><line x1="323.5" y1="87.9" x2="331.5" y2="95.9" stroke="#000" stroke-width="1"/><line x1="325.5" y1="98.2" x2="333.5" y2="106.2" stroke="#000" stroke-width="1"/><line x1="327.1" y1="108.6" x2="335.1" y2="116.6" stroke="#000" stroke-width="1"/><line x1="328.4" y1="118.9" x2="336.4" y2="126.9" stroke="#000" stroke-width="1"/><line x1="329.3" y1="129.3" x2="337.3" y2="137.3" stroke="#000" stroke-width="1"/><line x1="329.8" y1="139.6" x2="337.8" y2="147.6" stroke="#000" stroke-width="1"/><line x1="330.0" y1="150.0" x2="338.0" y2="158.0" stroke="#000" stroke-width="1"/><line x1="329.8" y1="160.4" x2="337.8" y2="168.4" stroke="#000" stroke-width="1"/><line x1="329.3" y1="170.7" x2="337.3" y2="178.7" stroke="#000" stroke-width="1"/><line x1="328.4" y1="181.1" x2="336.4" y2="189.1" stroke="#000" stroke-width="1"/><line x1="327.1" y1="191.4" x2="335.1" y2="199.4" stroke="#000" stroke-width="1"/><line x1="325.5" y1="201.8" x2="333.5" y2="209.8" stroke="#000" stroke-width="1"/><line x1="323.5" y1="212.1" x2="331.5" y2="220.1" stroke="#000" stroke-width="1"/><line x1="321.1" y1="222.5" x2="329.1" y2="230.5" stroke="#000" stroke-width="1"/><line x1="318.3" y1="232.8" x2="326.3" y2="240.8" stroke="#000" stroke-width="1"/><circle cx="130.0" cy="150.0" r="3" fill="#000"/><text x="123.0" y="141.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">C</text><circle cx="230.0" cy="150.0" r="3" fill="#000"/><text x="223.0" y="141.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">F</text><circle cx="330.0" cy="150.0" r="3" fill="#000"/><text x="352.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">P</text><line x1="270.0" y1="150.0" x2="270.0" y2="125.0" stroke="#000" stroke-width="2.2"/><polygon points="270.0,118.4 273.3,129.4 266.7,129.4" fill="#000"/><text x="270.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A</text><text x="270.0" y="118.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B</text><line x1="480.0" y1="150.0" x2="480.0" y2="87.5" stroke="#000" stroke-width="2.2" stroke-dasharray="6 4"/><polygon points="480.0,80.9 483.3,91.9 476.7,91.9" fill="#000"/><text x="480.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A'</text><text x="480.0" y="80.5" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B'</text><line x1="270.0" y1="125.0" x2="330.0" y2="125.0" stroke="#000" stroke-width="1.4"/><polygon points="305.4,125.0 296.4,127.7 296.4,122.3" fill="#000"/><line x1="330.0" y1="125.0" x2="200.9" y2="157.3" stroke="#000" stroke-width="1.4"/><polygon points="260.2,142.4 268.3,137.6 269.6,142.9" fill="#000"/><line x1="330.0" y1="125.0" x2="480.0" y2="87.5" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><line x1="270.0" y1="125.0" x2="330.0" y2="150.0" stroke="#000" stroke-width="1.4"/><polygon points="305.0,139.6 295.6,138.6 297.7,133.6" fill="#000"/><line x1="330.0" y1="150.0" x2="250.0" y2="183.3" stroke="#000" stroke-width="1.4"/><polygon points="285.0,168.7 292.3,162.8 294.4,167.8" fill="#000"/><line x1="330.0" y1="150.0" x2="480.0" y2="87.5" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><text x="270.0" y="22.0" text-anchor="middle" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#000">Object between F and P: virtual, erect, magnified image</text></svg>
-                <div class="diagram-caption"><strong>Figure 14.3:</strong> Object between F and P. Dashed lines are backward extensions of reflected rays; they meet behind the mirror at the virtual image</div>
-            </div>
-
-            <table>
-                <tr><th>Object position (concave mirror)</th><th>Image position</th><th>Nature and size</th></tr>
-                <tr><td>At infinity</td><td>At F</td><td>Real, inverted, point-sized</td></tr>
-                <tr><td>Beyond C</td><td>Between F and C</td><td>Real, inverted, diminished</td></tr>
-                <tr><td>At C</td><td>At C</td><td>Real, inverted, same size</td></tr>
-                <tr><td>Between C and F</td><td>Beyond C</td><td>Real, inverted, magnified</td></tr>
-                <tr><td>At F</td><td>At infinity</td><td>Real, inverted, highly magnified</td></tr>
-                <tr><td>Between F and P</td><td>Behind the mirror</td><td>Virtual, erect, magnified</td></tr>
-            </table>
-
-            <h3>14.1(f) Images in a Convex Mirror</h3>
-            <div class="diagram"><svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:780px;height:auto;background:#fff"><rect width="520" height="280" fill="#fff"/><line x1="15.0" y1="150.0" x2="505.0" y2="150.0" stroke="#000" stroke-width="1"/><path d="M316.7,62 A240.0,240.0 0 0 0 316.7,238" fill="none" stroke="#000" stroke-width="3"/><line x1="314.7" y1="67.2" x2="322.7" y2="75.2" stroke="#000" stroke-width="1"/><line x1="311.2" y1="77.5" x2="319.2" y2="85.5" stroke="#000" stroke-width="1"/><line x1="308.2" y1="87.9" x2="316.2" y2="95.9" stroke="#000" stroke-width="1"/><line x1="305.6" y1="98.2" x2="313.6" y2="106.2" stroke="#000" stroke-width="1"/><line x1="303.6" y1="108.6" x2="311.6" y2="116.6" stroke="#000" stroke-width="1"/><line x1="302.0" y1="118.9" x2="310.0" y2="126.9" stroke="#000" stroke-width="1"/><line x1="300.9" y1="129.3" x2="308.9" y2="137.3" stroke="#000" stroke-width="1"/><line x1="300.2" y1="139.6" x2="308.2" y2="147.6" stroke="#000" stroke-width="1"/><line x1="300.0" y1="150.0" x2="308.0" y2="158.0" stroke="#000" stroke-width="1"/><line x1="300.2" y1="160.4" x2="308.2" y2="168.4" stroke="#000" stroke-width="1"/><line x1="300.9" y1="170.7" x2="308.9" y2="178.7" stroke="#000" stroke-width="1"/><line x1="302.0" y1="181.1" x2="310.0" y2="189.1" stroke="#000" stroke-width="1"/><line x1="303.6" y1="191.4" x2="311.6" y2="199.4" stroke="#000" stroke-width="1"/><line x1="305.6" y1="201.8" x2="313.6" y2="209.8" stroke="#000" stroke-width="1"/><line x1="308.2" y1="212.1" x2="316.2" y2="220.1" stroke="#000" stroke-width="1"/><line x1="311.2" y1="222.5" x2="319.2" y2="230.5" stroke="#000" stroke-width="1"/><line x1="314.7" y1="232.8" x2="322.7" y2="240.8" stroke="#000" stroke-width="1"/><circle cx="300.0" cy="150.0" r="3" fill="#000"/><text x="290.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">P</text><circle cx="380.0" cy="150.0" r="3" fill="#000"/><text x="380.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">F</text><circle cx="460.0" cy="150.0" r="3" fill="#000"/><text x="460.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">C</text><line x1="108.0" y1="150.0" x2="108.0" y2="110.0" stroke="#000" stroke-width="2.2"/><polygon points="108.0,103.4 111.3,114.4 104.7,114.4" fill="#000"/><text x="108.0" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A</text><text x="108.0" y="103.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B</text><line x1="356.5" y1="150.0" x2="356.5" y2="138.2" stroke="#000" stroke-width="2.2" stroke-dasharray="6 4"/><polygon points="356.5,131.6 359.8,142.6 353.2,142.6" fill="#000"/><text x="356.5" y="167.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A'</text><text x="356.5" y="131.2" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B'</text><line x1="108.0" y1="110.0" x2="300.0" y2="110.0" stroke="#000" stroke-width="1.4"/><polygon points="209.4,110.0 200.4,112.7 200.4,107.3" fill="#000"/><line x1="300.0" y1="110.0" x2="201.6" y2="60.8" stroke="#000" stroke-width="1.4"/><polygon points="246.0,83.0 255.2,84.6 252.8,89.4" fill="#000"/><line x1="300.0" y1="110.0" x2="356.5" y2="138.2" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><line x1="108.0" y1="110.0" x2="300.0" y2="150.0" stroke="#000" stroke-width="1.4"/><polygon points="209.3,131.1 199.9,131.9 201.0,126.6" fill="#000"/><line x1="300.0" y1="150.0" x2="88.0" y2="194.2" stroke="#000" stroke-width="1.4"/><polygon points="188.7,173.2 197.0,168.7 198.1,174.0" fill="#000"/><line x1="300.0" y1="150.0" x2="356.5" y2="138.2" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><text x="260.0" y="22.0" text-anchor="middle" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#000">Convex mirror: virtual, erect, diminished image between P and F</text></svg>
-                <div class="diagram-caption"><strong>Figure 14.4:</strong> Image in a convex mirror. Reflected rays diverge; their backward extensions (dashed) meet behind the mirror</div>
-            </div>
-
-            <div class="key-points">
-                <h4>Uses of convex mirrors:</h4>
-                <ul>
-                    <li><strong>Rear-view mirrors</strong> of vehicles: erect image and a wide field of view.</li>
-                    <li><strong>Street and shop security mirrors:</strong> view of a large area.</li>
-                </ul>
-                <h4>Uses of concave mirrors:</h4>
-                <ul>
-                    <li><strong>Shaving and make-up mirrors, dentist's mirror:</strong> enlarged erect image at close range.</li>
-                    <li><strong>Headlights, torches, solar cookers:</strong> a source at F gives a parallel beam, or parallel sunlight is concentrated at F.</li>
-                    <li><strong>Reflecting telescopes:</strong> collect light from distant objects.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>14.2 Mirror Formula</h2>
-
-            <h3>14.2(a) Sign Convention (Real is Positive, Virtual is Negative)</h3>
-            <p>All distances are measured from the pole P. The convention is based on whether an object, an image or a focus is <strong>real</strong> or <strong>virtual</strong>:</p>
-
-            <table>
-                <tr><th>Quantity</th><th>Positive (+)</th><th>Negative (−)</th></tr>
-                <tr><td>Object distance u</td><td>Real object</td><td>Virtual object</td></tr>
-                <tr><td>Image distance v</td><td>Real image (in front of mirror)</td><td>Virtual image (behind mirror)</td></tr>
-                <tr><td>Focal length f (and R)</td><td>Concave mirror (real focus)</td><td>Convex mirror (virtual focus)</td></tr>
-            </table>
-
-            <div class="key-points">
-                <ul>
-                    <li>An ordinary object placed in front of a mirror is real, so <strong>u is positive</strong> in almost every problem.</li>
-                    <li>A <strong>concave mirror</strong> has f = +R/2; a <strong>convex mirror</strong> has f = −R/2.</li>
-                    <li>If the calculated v is positive the image is real (inverted); if negative, it is virtual (erect).</li>
-                    <li>Heights above the principal axis are taken as positive; the real inverted image has a downward height.</li>
-                </ul>
-            </div>
-
-            <div class="diagram"><svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:840px;height:auto;background:#fff"><rect width="560" height="250" fill="#fff"/><line x1="280.0" y1="45.0" x2="280.0" y2="215.0" stroke="#000" stroke-width="3"/><line x1="280.0" y1="50.0" x2="289.0" y2="59.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="60.0" x2="289.0" y2="69.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="70.0" x2="289.0" y2="79.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="80.0" x2="289.0" y2="89.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="90.0" x2="289.0" y2="99.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="100.0" x2="289.0" y2="109.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="110.0" x2="289.0" y2="119.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="120.0" x2="289.0" y2="129.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="130.0" x2="289.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="140.0" x2="289.0" y2="149.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="150.0" x2="289.0" y2="159.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="160.0" x2="289.0" y2="169.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="170.0" x2="289.0" y2="179.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="180.0" x2="289.0" y2="189.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="190.0" x2="289.0" y2="199.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="200.0" x2="289.0" y2="209.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="210.0" x2="289.0" y2="219.0" stroke="#000" stroke-width="1"/><line x1="20.0" y1="130.0" x2="540.0" y2="130.0" stroke="#000" stroke-width="1"/><circle cx="280.0" cy="130.0" r="3" fill="#000"/><text x="271.0" y="147.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">P</text><text x="150.0" y="26.0" text-anchor="middle" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#000">REAL side (in front of mirror)</text><text x="420.0" y="26.0" text-anchor="middle" font-size="13" font-family="Arial,Helvetica,sans-serif" fill="#000">VIRTUAL side (behind mirror)</text><line x1="260.0" y1="48.0" x2="30.0" y2="48.0" stroke="#000" stroke-width="1.4"/><polygon points="139.6,48.0 148.6,45.3 148.6,50.7" fill="#000"/><text x="150.0" y="64.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">measured this way: POSITIVE (+)</text><line x1="300.0" y1="48.0" x2="530.0" y2="48.0" stroke="#000" stroke-width="1.4"/><polygon points="420.4,48.0 411.4,50.7 411.4,45.3" fill="#000"/><text x="420.0" y="64.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">measured this way: NEGATIVE (−)</text><text x="150.0" y="100.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">real object  u &gt; 0</text><text x="150.0" y="116.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">real image   v &gt; 0</text><text x="150.0" y="164.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">concave mirror: f &gt; 0</text><text x="150.0" y="180.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">(real focus, F in front)</text><text x="420.0" y="100.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">virtual image  v &lt; 0</text><text x="420.0" y="116.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">virtual object  u &lt; 0</text><text x="420.0" y="164.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">convex mirror: f &lt; 0</text><text x="420.0" y="180.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">(virtual focus, F behind)</text><text x="280.0" y="236.0" text-anchor="middle" font-size="12" font-family="Arial,Helvetica,sans-serif" fill="#000">All distances are measured from the pole P</text></svg>
-                <div class="diagram-caption"><strong>Figure 14.5:</strong> Sign convention: real quantities positive, virtual quantities negative</div>
-            </div>
-
-            <h3>14.2(b) Derivation of the Mirror Formula</h3>
-
-            <div class="diagram"><svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" role="img" style="width:100%;max-width:630px;height:auto;background:#fff"><rect width="420" height="260" fill="#fff"/><line x1="15.0" y1="130.0" x2="405.0" y2="130.0" stroke="#000" stroke-width="1"/><path d="M341.1,40 A224.0,224.0 0 0 1 341.1,220" fill="none" stroke="#000" stroke-width="3"/><line x1="343.4" y1="45.3" x2="351.4" y2="53.3" stroke="#000" stroke-width="1"/><line x1="347.4" y1="55.9" x2="355.4" y2="63.9" stroke="#000" stroke-width="1"/><line x1="350.8" y1="66.5" x2="358.8" y2="74.5" stroke="#000" stroke-width="1"/><line x1="353.7" y1="77.1" x2="361.7" y2="85.1" stroke="#000" stroke-width="1"/><line x1="356.0" y1="87.6" x2="364.0" y2="95.6" stroke="#000" stroke-width="1"/><line x1="357.7" y1="98.2" x2="365.7" y2="106.2" stroke="#000" stroke-width="1"/><line x1="359.0" y1="108.8" x2="367.0" y2="116.8" stroke="#000" stroke-width="1"/><line x1="359.7" y1="119.4" x2="367.7" y2="127.4" stroke="#000" stroke-width="1"/><line x1="360.0" y1="130.0" x2="368.0" y2="138.0" stroke="#000" stroke-width="1"/><line x1="359.7" y1="140.6" x2="367.7" y2="148.6" stroke="#000" stroke-width="1"/><line x1="359.0" y1="151.2" x2="367.0" y2="159.2" stroke="#000" stroke-width="1"/><line x1="357.7" y1="161.8" x2="365.7" y2="169.8" stroke="#000" stroke-width="1"/><line x1="356.0" y1="172.4" x2="364.0" y2="180.4" stroke="#000" stroke-width="1"/><line x1="353.7" y1="182.9" x2="361.7" y2="190.9" stroke="#000" stroke-width="1"/><line x1="350.8" y1="193.5" x2="358.8" y2="201.5" stroke="#000" stroke-width="1"/><line x1="347.4" y1="204.1" x2="355.4" y2="212.1" stroke="#000" stroke-width="1"/><line x1="343.4" y1="214.7" x2="351.4" y2="222.7" stroke="#000" stroke-width="1"/><circle cx="220.0" cy="130.0" r="3" fill="#000"/><text x="213.0" y="121.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">C</text><circle cx="290.0" cy="130.0" r="3" fill="#000"/><text x="283.0" y="121.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">F</text><circle cx="360.0" cy="130.0" r="3" fill="#000"/><text x="382.0" y="147.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">P</text><line x1="160.0" y1="130.0" x2="160.0" y2="90.0" stroke="#000" stroke-width="2.2"/><polygon points="160.0,83.4 163.3,94.4 156.7,94.4" fill="#000"/><text x="160.0" y="147.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A</text><text x="160.0" y="83.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B</text><line x1="252.3" y1="130.0" x2="252.3" y2="151.5" stroke="#000" stroke-width="2.2"/><polygon points="252.3,158.1 249.0,147.1 255.6,147.1" fill="#000"/><text x="243.3" y="125.0" text-anchor="end" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">A′</text><text x="252.3" y="167.5" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">B′</text><line x1="160.0" y1="90.0" x2="360.0" y2="90.0" stroke="#000" stroke-width="1.4"/><polygon points="265.4,90.0 256.4,92.7 256.4,87.3" fill="#000"/><line x1="360.0" y1="90.0" x2="252.3" y2="151.5" stroke="#000" stroke-width="1.4"/><polygon points="301.5,123.4 307.9,116.6 310.6,121.3" fill="#000"/><line x1="160.0" y1="90.0" x2="360.0" y2="130.0" stroke="#000" stroke-width="1.4"/><polygon points="265.3,111.1 255.9,111.9 257.0,106.6" fill="#000"/><line x1="360.0" y1="130.0" x2="252.3" y2="151.5" stroke="#000" stroke-width="1.4"/><polygon points="300.9,141.8 309.2,137.4 310.2,142.7" fill="#000"/><text x="368.0" y="84.0" text-anchor="start" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">D</text><line x1="290.0" y1="190.0" x2="360.0" y2="190.0" stroke="#000" stroke-width="1"/><polygon points="355.2,190.0 363.2,187.6 363.2,192.4" fill="#000"/><polygon points="294.8,190.0 286.8,192.4 286.8,187.6" fill="#000"/><line x1="290.0" y1="185.0" x2="290.0" y2="195.0" stroke="#000" stroke-width="1"/><line x1="360.0" y1="185.0" x2="360.0" y2="195.0" stroke="#000" stroke-width="1"/><text x="325.0" y="184.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">f</text><line x1="252.3" y1="212.0" x2="360.0" y2="212.0" stroke="#000" stroke-width="1"/><polygon points="355.2,212.0 363.2,209.6 363.2,214.4" fill="#000"/><polygon points="257.1,212.0 249.1,214.4 249.1,209.6" fill="#000"/><line x1="252.3" y1="207.0" x2="252.3" y2="217.0" stroke="#000" stroke-width="1"/><line x1="360.0" y1="207.0" x2="360.0" y2="217.0" stroke="#000" stroke-width="1"/><text x="306.2" y="206.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">v</text><line x1="160.0" y1="234.0" x2="360.0" y2="234.0" stroke="#000" stroke-width="1"/><polygon points="355.2,234.0 363.2,231.6 363.2,236.4" fill="#000"/><polygon points="164.8,234.0 156.8,236.4 156.8,231.6" fill="#000"/><line x1="160.0" y1="229.0" x2="160.0" y2="239.0" stroke="#000" stroke-width="1"/><line x1="360.0" y1="229.0" x2="360.0" y2="239.0" stroke="#000" stroke-width="1"/><text x="260.0" y="228.0" text-anchor="middle" font-style="italic" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#000">u</text><line x1="252.3" y1="160.0" x2="252.3" y2="212.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="160.0" y1="156.0" x2="160.0" y2="234.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="290.0" y1="138.0" x2="290.0" y2="190.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><text x="200.0" y="80.0" text-anchor="start" font-size="11" font-family="Arial,Helvetica,sans-serif" fill="#000">ray BD parallel to axis</text></svg>
-                <div class="diagram-caption"><strong>Figure 14.6:</strong> Geometry for deriving the mirror formula (concave mirror, real image). Triangles ABP and A′B′P are similar; so are DPF and A′B′F</div>
-            </div>
-
-            <div class="derivation">
-                <h4>Derivation of 1/f = 1/u + 1/v</h4>
-                <p>Let AB be a small real object at distance u (= AP) from a concave mirror and A′B′ its real image at distance v (= A′P). Draw ray BP striking the pole, and ray BD parallel to the axis, which after reflection passes through F and meets BP's reflected ray at B′.</p>
-
-                <p><strong>Step 1:</strong> Triangles ABP and A′B′P are similar (angle of incidence = angle of reflection at P):</p>
-                <div class="formula">
-                    A′B′ / AB = A′P / AP = v / u    ... (1)
-                </div>
-
-                <p><strong>Step 2:</strong> Triangles DPF and A′B′F are similar, and DP = AB:</p>
-                <div class="formula">
-                    A′B′ / DP = A′F / PF
-                    <br>
-                    A′B′ / AB = (v − f) / f    ... (2)
-                </div>
-
-                <p><strong>Step 3:</strong> Equate (1) and (2):</p>
-                <div class="formula">
-                    v / u = (v − f) / f
-                    <br>
-                    vf = uv − uf
-                    <br>
-                    uf + vf = uv
-                </div>
-
-                <p>Dividing every term by uvf:</p>
-                <div class="formula">
-                    <strong>1/f = 1/u + 1/v</strong>
-                </div>
-                <p>With the real-is-positive convention this single formula holds for concave and convex mirrors, real and virtual images; only the signs of f, u and v change.</p>
-            </div>
-
-            <h3>14.2(c) Linear Magnification</h3>
-            <p>Linear magnification m is the ratio of the height of the image (I) to the height of the object (O). From equation (1):</p>
-            <div class="formula">
-                |m| = I / O = v / u
-                <br>
-                With signs: <strong>m = v / u</strong>
-            </div>
-            <div class="key-points">
-                <ul>
-                    <li>m is <strong>positive</strong> for a real image (v &lt; 0): inverted.</li>
-                    <li>m is <strong>negative</strong> for a virtual image (v &gt; 0): erect.</li>
-                    <li>|m| &gt; 1: magnified; |m| &lt; 1: diminished; |m| = 1: same size.</li>
-                </ul>
-            </div>
-
-            <div class="warning">
-                <h4>⚠️ Common mistakes:</h4>
-                <ul>
-                    <li>Substituting a positive f for a convex mirror. A convex mirror always has negative f.</li>
-                    <li>Forgetting that a negative v means the image is <strong>virtual</strong>, not that the distance is "wrong".</li>
-                    <li>Using 1/f = 1/u − 1/v: that belongs to a different convention. Here it is always +.</li>
-                    <li>Applying the formula to large-aperture mirrors: it holds only for rays close to the axis (paraxial rays).</li>
-                </ul>
-            </div>
-
-            <div class="example">
-                <h4>Example 14.1 — Real image</h4>
-                <p>An object is placed 30 cm from a concave mirror of focal length 15 cm. Find the image position and magnification.</p>
-                <div class="formula">
-                    f = +15 cm, u = +30 cm
-                    <br>
-                    1/v = 1/f − 1/u = 1/15 − 1/30 = 1/30
-                    <br>
-                    v = <strong>+30 cm</strong> (real, in front of the mirror)
-                    <br>
-                    m = −v/u = −30/30 = <strong>−1</strong> (inverted, same size)
-                </div>
-                <p>The object is at C (R = 30 cm), so the image is also at C.</p>
-            </div>
-
-            <div class="example">
-                <h4>Example 14.2 — Virtual image in a concave mirror</h4>
-                <p>A 2 cm tall object is placed 6 cm from a concave mirror of focal length 10 cm. Find the image position and size.</p>
-                <div class="formula">
-                    1/v = 1/10 − 1/6 = (3 − 5)/30 = −1/15
-                    <br>
-                    v = <strong>−15 cm</strong> (virtual, behind the mirror)
-                    <br>
-                    m = −v/u = 15/6 = <strong>+2.5</strong> (erect)
-                    <br>
-                    Image height = 2.5 × 2 = <strong>5 cm</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 14.3 — Convex mirror</h4>
-                <p>An object is placed 30 cm from a convex mirror of focal length 20 cm. Find the image position and magnification.</p>
-                <div class="formula">
-                    f = −20 cm (virtual focus), u = +30 cm
-                    <br>
-                    1/v = 1/f − 1/u = −1/20 − 1/30 = −5/60 = −1/12
-                    <br>
-                    v = <strong>−12 cm</strong> (virtual, behind the mirror)
-                    <br>
-                    m = −v/u = 12/30 = <strong>+0.4</strong> (erect, diminished)
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 14.4 — Finding f and R</h4>
-                <p>A real image forms 60 cm from a concave mirror when the object is 20 cm away. Find f and R.</p>
-                <div class="formula">
-                    1/f = 1/u + 1/v = 1/20 + 1/60 = 4/60
-                    <br>
-                    f = <strong>15 cm</strong>
-                    <br>
-                    R = 2f = <strong>30 cm</strong>
-                </div>
-            </div>
-
-            <div class="example">
-                <h4>Example 14.5 — Magnified image on a screen</h4>
-                <p>A concave mirror forms a 4 times magnified real image on a screen 40 cm from the mirror. Find the object distance and focal length.</p>
-                <div class="formula">
-                    |m| = v/u = 4 ⇒ u = 40/4 = <strong>10 cm</strong>
-                    <br>
-                    1/f = 1/10 + 1/40 = 5/40 = 1/8
-                    <br>
-                    f = <strong>8 cm</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Key Formulas and Summary</h2>
-
-            <div class="key-points">
-                <h4>Fundamental Relations:</h4>
-                <div class="formula">
-                    f = R / 2
-                    <br>
-                    1/f = 1/u + 1/v
-                    <br>
-                    m = I/O = − v/u
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Sign Convention (real +, virtual −):</h4>
-                <div class="formula">
-                    Real object: u &gt; 0     Virtual object: u &lt; 0
-                    <br>
-                    Real image: v &gt; 0     Virtual image: v &lt; 0
-                    <br>
-                    Concave mirror: f &gt; 0     Convex mirror: f &lt; 0
-                </div>
-            </div>
-
-            <div class="key-points">
-                <h4>Quick Facts:</h4>
-                <ul>
-                    <li>Real image: can be on a screen, inverted, v &gt; 0.</li>
-                    <li>Virtual image: cannot be on a screen, erect, v &lt; 0.</li>
-                    <li>Convex mirror: always virtual, erect and diminished for a real object.</li>
-                    <li>Concave mirror: virtual image only when u &lt; f.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Practice Numerical Problems</h2>
-            <p>Use 1/f = 1/u + 1/v with real-is-positive signs. Attempt each problem before reading the answer.</p>
-
-            <div class="numerical">
-                <div class="question">1. A concave mirror has f = 12 cm. An object is placed 18 cm in front of it. Find the image distance and magnification.</div>
-                <p><strong>Answer:</strong> 1/v = 1/12 − 1/18 = 1/36, so v = <strong>+36 cm</strong> (real); m = −36/18 = <strong>−2</strong> (inverted, magnified).</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">2. A concave mirror has radius of curvature 40 cm. Find the image for an object 10 cm from it.</div>
-                <p><strong>Answer:</strong> f = 20 cm. 1/v = 1/20 − 1/10 = −1/20, so v = <strong>−20 cm</strong> (virtual); m = <strong>+2</strong> (erect, magnified).</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">3. A convex mirror has f = 15 cm (magnitude). An object is 25 cm from it. Find the image position and magnification.</div>
-                <p><strong>Answer:</strong> f = −15 cm. 1/v = −1/15 − 1/25 = −8/75, so v ≈ <strong>−9.4 cm</strong> (virtual); m = 9.375/25 ≈ <strong>+0.375</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">4. An erect image 3 times the size of the object is obtained with a concave mirror when the object is 10 cm from it. Find the focal length.</div>
-                <p><strong>Answer:</strong> Erect means virtual: m = −v/u = +3 ⇒ v = −30 cm. 1/f = 1/10 − 1/30 = 2/30, so f = <strong>15 cm</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">5. A car's rear-view convex mirror has radius of curvature 2 m. A vehicle is 5 m behind. Find the image position and magnification.</div>
-                <p><strong>Answer:</strong> f = −1 m. 1/v = −1 − 1/5 = −6/5, so v ≈ <strong>−0.83 m</strong> (virtual); m ≈ <strong>+0.17</strong>.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">6. A real image is formed at the same distance (50 cm) as the object from a concave mirror. Find f and R.</div>
-                <p><strong>Answer:</strong> 1/f = 1/50 + 1/50 = 2/50, so f = <strong>25 cm</strong>, R = <strong>50 cm</strong>. The object is at C.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">7. A 4 cm tall object is 15 cm from a concave mirror of f = 10 cm. Find the position, nature and height of the image.</div>
-                <p><strong>Answer:</strong> 1/v = 1/10 − 1/15 = 1/30, so v = <strong>+30 cm</strong> (real); m = −2; height = <strong>8 cm</strong>, inverted.</p>
-            </div>
-
-            <div class="numerical">
-                <div class="question">8. Where should an object be placed in front of a concave mirror of f = 20 cm to get a virtual image 40 cm behind the mirror?</div>
-                <p><strong>Answer:</strong> v = −40 cm. 1/u = 1/f − 1/v = 1/20 + 1/40 = 3/40, so u ≈ <strong>13.3 cm</strong>; m = +3.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Conceptual and Long Answer Questions</h2>
-
-            <div class="mcq-section">
-                <div class="question">1. Differentiate between a real and a virtual image.</div>
-                <div class="options"><div class="option">See table in 14.1: a real image is formed by actual convergence of rays, can be received on a screen and is inverted; a virtual image only appears to come from behind the mirror, cannot be received on a screen and is erect.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">2. Why is a convex mirror preferred as a rear-view mirror?</div>
-                <div class="options"><div class="option">It always forms an erect, diminished image, which gives a wide field of view.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">3. Why does a dentist use a concave mirror?</div>
-                <div class="options"><div class="option">With the tooth between F and P, a virtual, erect and magnified image is formed.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">4. Can a real image be formed by a convex mirror of a real object? Explain.</div>
-                <div class="options"><div class="option">No. For a real object, reflected rays always diverge, so the image is always virtual.</div></div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">5. Prove that f = R/2 for a spherical mirror. (Section 14, introduction)</div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">6. Derive the mirror formula 1/f = 1/u + 1/v for a concave mirror using the real-is-positive convention. (Section 14.2)</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Multiple Choice Questions</h2>
-
-            <div class="mcq-section">
-                <div class="question">1. A real image is one that:</div>
-                <div class="options">
-                    <div class="option">(a) Cannot be obtained on a screen</div>
-                    <div class="option">(b) Is formed by actual meeting of reflected rays ✓</div>
-                    <div class="option">(c) Is always erect</div>
-                    <div class="option">(d) Is formed behind a mirror</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">2. In the real-is-positive convention, the focal length of a concave mirror is:</div>
-                <div class="options">
-                    <div class="option">(a) Positive ✓</div>
-                    <div class="option">(b) Negative</div>
-                    <div class="option">(c) Zero</div>
-                    <div class="option">(d) Infinite</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">3. The focal length of a spherical mirror is related to its radius of curvature by:</div>
-                <div class="options">
-                    <div class="option">(a) f = R</div>
-                    <div class="option">(b) f = 2R</div>
-                    <div class="option">(c) f = R/2 ✓</div>
-                    <div class="option">(d) f = R/4</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">4. A convex mirror always forms an image that is:</div>
-                <div class="options">
-                    <div class="option">(a) Real, inverted, diminished</div>
-                    <div class="option">(b) Real, erect, magnified</div>
-                    <div class="option">(c) Virtual, erect, diminished ✓</div>
-                    <div class="option">(d) Virtual, inverted, magnified</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">5. An object is at the centre of curvature of a concave mirror. The image is:</div>
-                <div class="options">
-                    <div class="option">(a) At infinity</div>
-                    <div class="option">(b) At F, diminished</div>
-                    <div class="option">(c) At C, real, inverted, same size ✓</div>
-                    <div class="option">(d) Behind the mirror</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">6. A calculated image distance v = −24 cm means the image is:</div>
-                <div class="options">
-                    <div class="option">(a) Real, in front of the mirror</div>
-                    <div class="option">(b) Virtual, behind the mirror ✓</div>
-                    <div class="option">(c) At infinity</div>
-                    <div class="option">(d) Inverted</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">7. The mirror formula in the real-is-positive convention is:</div>
-                <div class="options">
-                    <div class="option">(a) 1/f = 1/v − 1/u</div>
-                    <div class="option">(b) 1/f = 1/u + 1/v ✓</div>
-                    <div class="option">(c) f = u + v</div>
-                    <div class="option">(d) 1/f = u + v</div>
-                </div>
-            </div>
-
-            <div class="mcq-section">
-                <div class="question">8. When an object is placed between F and P of a concave mirror, the image is:</div>
-                <div class="options">
-                    <div class="option">(a) Real, inverted, magnified</div>
-                    <div class="option">(b) Real, inverted, diminished</div>
-                    <div class="option">(c) Virtual, erect, magnified ✓</div>
-                    <div class="option">(d) Virtual, erect, diminished</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Grade XI Physics - Real and Virtual Images — Mirror Formula | NEB Curriculum</p>
-        </div>
-    </div>
-</body>
-</html>
+<h2>Unit 14: Reflection at Curved Surfaces</h2><p>Mirrors are used in torches, vehicle headlights, rear-view mirrors, telescopes, shaving mirrors and dentists' instruments. This chapter studies how spherical mirrors form <strong>real</strong> and <strong>virtual</strong> images and derives the <strong>mirror formula</strong> connecting object distance, image distance and focal length. Throughout, the real-is-positive, virtual-is-negative sign convention is used, as in the NEB textbook.</p><h3>Terms Used for Spherical Mirrors</h3><p>A spherical mirror is a part of a hollow sphere whose one surface is polished. If the inner (hollow) surface reflects, it is a <strong>concave</strong> mirror; if the outer (bulging) surface reflects, it is a <strong>convex</strong> mirror.</p><table>
+<tr><th>Term</th><th>Meaning</th></tr>
+<tr><td>Pole (P)</td><td>Geometric centre of the reflecting surface</td></tr>
+<tr><td>Centre of curvature (C)</td><td>Centre of the sphere of which the mirror is a part</td></tr>
+<tr><td>Radius of curvature (R)</td><td>Radius of that sphere, R = PC</td></tr>
+<tr><td>Principal axis</td><td>Line joining P and C</td></tr>
+<tr><td>Aperture</td><td>Diameter of the reflecting surface (the width M₁M₂)</td></tr>
+<tr><td>Principal focus (F)</td><td>Point on the axis where rays parallel and close to the axis meet (concave) or appear to diverge from (convex) after reflection</td></tr>
+<tr><td>Focal length (f)</td><td>Distance PF</td></tr>
+</table><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 270" fill="currentColor" role="img"><rect width="540" height="270" fill="#fff"/><line x1="20.0" y1="140.0" x2="520.0" y2="140.0" stroke="#000" stroke-width="1"/><path d="M386.3,60 A240,240 0 0 1 386.3,220" fill="none" stroke="#000" stroke-width="3"/><line x1="387.9" y1="64.7" x2="395.9" y2="72.7" stroke="#000" stroke-width="1"/><line x1="390.8" y1="74.1" x2="398.8" y2="82.1" stroke="#000" stroke-width="1"/><line x1="393.3" y1="83.5" x2="401.3" y2="91.5" stroke="#000" stroke-width="1"/><line x1="395.3" y1="92.9" x2="403.3" y2="100.9" stroke="#000" stroke-width="1"/><line x1="397.0" y1="102.4" x2="405.0" y2="110.4" stroke="#000" stroke-width="1"/><line x1="398.3" y1="111.8" x2="406.3" y2="119.8" stroke="#000" stroke-width="1"/><line x1="399.3" y1="121.2" x2="407.3" y2="129.2" stroke="#000" stroke-width="1"/><line x1="399.8" y1="130.6" x2="407.8" y2="138.6" stroke="#000" stroke-width="1"/><line x1="400.0" y1="140.0" x2="408.0" y2="148.0" stroke="#000" stroke-width="1"/><line x1="399.8" y1="149.4" x2="407.8" y2="157.4" stroke="#000" stroke-width="1"/><line x1="399.3" y1="158.8" x2="407.3" y2="166.8" stroke="#000" stroke-width="1"/><line x1="398.3" y1="168.2" x2="406.3" y2="176.2" stroke="#000" stroke-width="1"/><line x1="397.0" y1="177.6" x2="405.0" y2="185.6" stroke="#000" stroke-width="1"/><line x1="395.3" y1="187.1" x2="403.3" y2="195.1" stroke="#000" stroke-width="1"/><line x1="393.3" y1="196.5" x2="401.3" y2="204.5" stroke="#000" stroke-width="1"/><line x1="390.8" y1="205.9" x2="398.8" y2="213.9" stroke="#000" stroke-width="1"/><line x1="387.9" y1="215.3" x2="395.9" y2="223.3" stroke="#000" stroke-width="1"/><circle cx="160.0" cy="140.0" r="3" fill="#000"/><text x="160.0" y="157.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">C</text><circle cx="280.0" cy="140.0" r="3" fill="#000"/><text x="280.0" y="157.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">F</text><circle cx="400.0" cy="140.0" r="3" fill="#000"/><text x="420.0" y="162.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">P</text><line x1="30.0" y1="90.0" x2="394.7" y2="90.0" stroke="#000" stroke-width="1.4"/><polygon points="217.8,90.0 208.8,92.7 208.8,87.3" fill="#000"/><line x1="394.7" y1="90.0" x2="239.8" y2="157.5" stroke="#000" stroke-width="1.4"/><polygon points="320.1,122.5 327.3,116.5 329.4,121.4" fill="#000"/><text x="28.0" y="82.0" text-anchor="start" font-size="12" fill="#000">parallel ray</text><text x="395.0" y="52.0" text-anchor="end" font-style="italic" font-size="13" fill="#000">M₁</text><text x="395.0" y="240.0" text-anchor="end" font-style="italic" font-size="13" fill="#000">M₂</text><line x1="280.0" y1="188.0" x2="400.0" y2="188.0" stroke="#000" stroke-width="1"/><polygon points="395.2,188.0 403.2,185.6 403.2,190.4" fill="#000"/><polygon points="284.8,188.0 276.8,190.4 276.8,185.6" fill="#000"/><line x1="280.0" y1="183.0" x2="280.0" y2="193.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="183.0" x2="400.0" y2="193.0" stroke="#000" stroke-width="1"/><text x="340.0" y="182.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">f</text><line x1="160.0" y1="225.0" x2="400.0" y2="225.0" stroke="#000" stroke-width="1"/><polygon points="395.2,225.0 403.2,222.6 403.2,227.4" fill="#000"/><polygon points="164.8,225.0 156.8,227.4 156.8,222.6" fill="#000"/><line x1="160.0" y1="220.0" x2="160.0" y2="230.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="220.0" x2="400.0" y2="230.0" stroke="#000" stroke-width="1"/><text x="280.0" y="219.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">R = 2f</text><text x="60.0" y="156.0" text-anchor="start" font-size="12" fill="#000">Principal axis</text><text x="270.0" y="20.0" text-anchor="middle" font-size="13" fill="#000">CONCAVE MIRROR (real focus, f positive)</text></svg><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 270" fill="currentColor" role="img"><rect width="540" height="270" fill="#fff"/><line x1="20.0" y1="140.0" x2="520.0" y2="140.0" stroke="#000" stroke-width="1"/><path d="M173.7,60 A240,240 0 0 0 173.7,220" fill="none" stroke="#000" stroke-width="3"/><line x1="172.1" y1="64.7" x2="180.1" y2="72.7" stroke="#000" stroke-width="1"/><line x1="169.2" y1="74.1" x2="177.2" y2="82.1" stroke="#000" stroke-width="1"/><line x1="166.7" y1="83.5" x2="174.7" y2="91.5" stroke="#000" stroke-width="1"/><line x1="164.7" y1="92.9" x2="172.7" y2="100.9" stroke="#000" stroke-width="1"/><line x1="163.0" y1="102.4" x2="171.0" y2="110.4" stroke="#000" stroke-width="1"/><line x1="161.7" y1="111.8" x2="169.7" y2="119.8" stroke="#000" stroke-width="1"/><line x1="160.7" y1="121.2" x2="168.7" y2="129.2" stroke="#000" stroke-width="1"/><line x1="160.2" y1="130.6" x2="168.2" y2="138.6" stroke="#000" stroke-width="1"/><line x1="160.0" y1="140.0" x2="168.0" y2="148.0" stroke="#000" stroke-width="1"/><line x1="160.2" y1="149.4" x2="168.2" y2="157.4" stroke="#000" stroke-width="1"/><line x1="160.7" y1="158.8" x2="168.7" y2="166.8" stroke="#000" stroke-width="1"/><line x1="161.7" y1="168.2" x2="169.7" y2="176.2" stroke="#000" stroke-width="1"/><line x1="163.0" y1="177.6" x2="171.0" y2="185.6" stroke="#000" stroke-width="1"/><line x1="164.7" y1="187.1" x2="172.7" y2="195.1" stroke="#000" stroke-width="1"/><line x1="166.7" y1="196.5" x2="174.7" y2="204.5" stroke="#000" stroke-width="1"/><line x1="169.2" y1="205.9" x2="177.2" y2="213.9" stroke="#000" stroke-width="1"/><line x1="172.1" y1="215.3" x2="180.1" y2="223.3" stroke="#000" stroke-width="1"/><circle cx="160.0" cy="140.0" r="3" fill="#000"/><text x="152.0" y="157.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">P</text><circle cx="280.0" cy="140.0" r="3" fill="#000"/><text x="280.0" y="157.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">F</text><circle cx="400.0" cy="140.0" r="3" fill="#000"/><text x="400.0" y="157.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">C</text><line x1="20.0" y1="90.0" x2="165.3" y2="90.0" stroke="#000" stroke-width="1.4"/><polygon points="98.0,90.0 89.0,92.7 89.0,87.3" fill="#000"/><line x1="165.3" y1="90.0" x2="36.9" y2="34.1" stroke="#000" stroke-width="1.4"/><polygon points="83.3,54.3 92.6,55.4 90.5,60.4" fill="#000"/><line x1="165.3" y1="90.0" x2="280.0" y2="140.0" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><text x="24.0" y="82.0" text-anchor="start" font-size="12" fill="#000">parallel ray</text><text x="170.0" y="52.0" text-anchor="start" font-style="italic" font-size="13" fill="#000">M₁</text><text x="170.0" y="240.0" text-anchor="start" font-style="italic" font-size="13" fill="#000">M₂</text><line x1="160.0" y1="188.0" x2="280.0" y2="188.0" stroke="#000" stroke-width="1"/><polygon points="275.2,188.0 283.2,185.6 283.2,190.4" fill="#000"/><polygon points="164.8,188.0 156.8,190.4 156.8,185.6" fill="#000"/><line x1="160.0" y1="183.0" x2="160.0" y2="193.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="183.0" x2="280.0" y2="193.0" stroke="#000" stroke-width="1"/><text x="220.0" y="182.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">f</text><line x1="160.0" y1="225.0" x2="400.0" y2="225.0" stroke="#000" stroke-width="1"/><polygon points="395.2,225.0 403.2,222.6 403.2,227.4" fill="#000"/><polygon points="164.8,225.0 156.8,227.4 156.8,222.6" fill="#000"/><line x1="160.0" y1="220.0" x2="160.0" y2="230.0" stroke="#000" stroke-width="1"/><line x1="400.0" y1="220.0" x2="400.0" y2="230.0" stroke="#000" stroke-width="1"/><text x="280.0" y="219.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">R = 2f</text><text x="270.0" y="20.0" text-anchor="middle" font-size="13" fill="#000">CONVEX MIRROR (virtual focus, f negative)</text><text x="500.0" y="132.0" text-anchor="end" font-size="12" fill="#000">Principal axis</text></svg><p><strong>Figure 14.1:</strong> Concave mirror (top) and convex mirror (bottom) with pole P, focus F, centre of curvature C, focal length f and radius R</p>
+<div class="box note" data-title="Relation between focal length and radius of curvature"><p>Consider a ray AB parallel to the principal axis (close to it) striking the mirror at B. The normal at B is the line CB, so the angle of incidence is ∠ABC = θ and the angle of reflection is ∠CBF = θ. Since AB ∥ PC, ∠BCP = θ (alternate angles). Hence triangle CFB has equal angles ∠FCB = ∠FBC = θ, so FC = FB.</p>
+<div class="formula">For a small aperture, B is very close to P, so FB ≈ FP
+<br>
+FC = FP ⇒ PF = ½ PC
+<br>
+<strong>f = R / 2</strong></div></div>
+<h2>14.1 Real and Virtual Images</h2><h3>14.1(a) Real and Virtual Objects</h3><p>An object is <strong>real</strong> if the rays reaching the mirror actually diverge from it. It is <strong>virtual</strong> if the rays reaching the mirror are already converging towards a point behind the mirror. Ordinary objects placed in front of a mirror are real objects.</p><h3>14.1(b) Real Image</h3><p>An image is <strong>real</strong> when the reflected rays <em>actually meet</em> at a point. A real image can be caught on a screen and is always <strong>inverted</strong> in a mirror. It is formed on the same side of the mirror as the real object.</p><h3>14.1(c) Virtual Image</h3><p>An image is <strong>virtual</strong> when the reflected rays only <em>appear to come from</em> a point, because they actually diverge. Their backward extensions meet behind the mirror. A virtual image cannot be caught on a screen but can be seen by the eye (or a lens). It is always <strong>erect</strong> in a mirror.</p><table>
+<tr><th>Property</th><th>Real image</th><th>Virtual image</th></tr>
+<tr><td>Rays</td><td>Actually converge</td><td>Appear to diverge from a point</td></tr>
+<tr><td>Screen</td><td>Can be obtained</td><td>Cannot be obtained</td></tr>
+<tr><td>Position</td><td>In front of the mirror</td><td>Behind the mirror</td></tr>
+<tr><td>Orientation</td><td>Inverted</td><td>Erect</td></tr>
+<tr><td>Sign of v (this convention)</td><td>Positive (+)</td><td>Negative (−)</td></tr>
+</table><h3>14.1(d) Rules for Drawing Ray Diagrams</h3><p>To locate the image of a point on an object, any two of the following rays are traced:</p><div class="box tip" data-title="Key points"><ul>
+<li><strong>Ray 1:</strong> A ray parallel to the principal axis passes through F after reflection (concave), or appears to come from F (convex).</li>
+<li><strong>Ray 2:</strong> A ray through F (or heading towards F) becomes parallel to the principal axis after reflection.</li>
+<li><strong>Ray 3:</strong> A ray through C (or heading towards C) strikes the mirror normally and is reflected back along its own path.</li>
+<li><strong>Ray 4:</strong> A ray striking the pole P is reflected so that the angle of reflection equals the angle of incidence about the principal axis.</li>
+</ul></div>
+<h3>14.1(e) Images in a Concave Mirror</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 280" fill="currentColor" role="img"><rect width="420" height="280" fill="#fff"/><line x1="15.0" y1="150.0" x2="405.0" y2="150.0" stroke="#000" stroke-width="1"/><path d="M343.3,62 A240.0,240.0 0 0 1 343.3,238" fill="none" stroke="#000" stroke-width="3"/><line x1="345.3" y1="67.2" x2="353.3" y2="75.2" stroke="#000" stroke-width="1"/><line x1="348.8" y1="77.5" x2="356.8" y2="85.5" stroke="#000" stroke-width="1"/><line x1="351.8" y1="87.9" x2="359.8" y2="95.9" stroke="#000" stroke-width="1"/><line x1="354.4" y1="98.2" x2="362.4" y2="106.2" stroke="#000" stroke-width="1"/><line x1="356.4" y1="108.6" x2="364.4" y2="116.6" stroke="#000" stroke-width="1"/><line x1="358.0" y1="118.9" x2="366.0" y2="126.9" stroke="#000" stroke-width="1"/><line x1="359.1" y1="129.3" x2="367.1" y2="137.3" stroke="#000" stroke-width="1"/><line x1="359.8" y1="139.6" x2="367.8" y2="147.6" stroke="#000" stroke-width="1"/><line x1="360.0" y1="150.0" x2="368.0" y2="158.0" stroke="#000" stroke-width="1"/><line x1="359.8" y1="160.4" x2="367.8" y2="168.4" stroke="#000" stroke-width="1"/><line x1="359.1" y1="170.7" x2="367.1" y2="178.7" stroke="#000" stroke-width="1"/><line x1="358.0" y1="181.1" x2="366.0" y2="189.1" stroke="#000" stroke-width="1"/><line x1="356.4" y1="191.4" x2="364.4" y2="199.4" stroke="#000" stroke-width="1"/><line x1="354.4" y1="201.8" x2="362.4" y2="209.8" stroke="#000" stroke-width="1"/><line x1="351.8" y1="212.1" x2="359.8" y2="220.1" stroke="#000" stroke-width="1"/><line x1="348.8" y1="222.5" x2="356.8" y2="230.5" stroke="#000" stroke-width="1"/><line x1="345.3" y1="232.8" x2="353.3" y2="240.8" stroke="#000" stroke-width="1"/><circle cx="200.0" cy="150.0" r="3" fill="#000"/><text x="193.0" y="141.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">C</text><circle cx="280.0" cy="150.0" r="3" fill="#000"/><text x="273.0" y="141.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">F</text><circle cx="360.0" cy="150.0" r="3" fill="#000"/><text x="382.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">P</text><line x1="168.0" y1="150.0" x2="168.0" y2="110.0" stroke="#000" stroke-width="2.2"/><polygon points="168.0,103.4 171.3,114.4 164.7,114.4" fill="#000"/><text x="168.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">A</text><text x="168.0" y="103.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B</text><line x1="222.9" y1="150.0" x2="222.9" y2="178.6" stroke="#000" stroke-width="2.2"/><polygon points="222.9,185.2 219.6,174.2 226.2,174.2" fill="#000"/><text x="222.9" y="142.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">A'</text><text x="222.9" y="197.6" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B'</text><line x1="168.0" y1="110.0" x2="360.0" y2="110.0" stroke="#000" stroke-width="1.4"/><polygon points="269.4,110.0 260.4,112.7 260.4,107.3" fill="#000"/><line x1="360.0" y1="110.0" x2="222.9" y2="178.6" stroke="#000" stroke-width="1.4"/><polygon points="286.6,146.7 293.4,140.3 295.9,145.1" fill="#000"/><line x1="168.0" y1="110.0" x2="360.0" y2="150.0" stroke="#000" stroke-width="1.4"/><polygon points="269.3,131.1 259.9,131.9 261.0,126.6" fill="#000"/><line x1="360.0" y1="150.0" x2="222.9" y2="178.6" stroke="#000" stroke-width="1.4"/><polygon points="286.1,165.4 294.4,160.9 295.5,166.2" fill="#000"/><text x="210.0" y="22.0" text-anchor="middle" font-size="13" fill="#000">Object beyond C: real, inverted, diminished image between F and C</text></svg><p><strong>Figure 14.2:</strong> Object beyond C. Rays used: Ray 1 (parallel to the axis, then through F) and Ray 4 (incident at the pole P)</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 290" fill="currentColor" role="img"><rect width="540" height="290" fill="#fff"/><line x1="15.0" y1="150.0" x2="525.0" y2="150.0" stroke="#000" stroke-width="1"/><path d="M316.8,62 A300.0,300.0 0 0 1 316.8,238" fill="none" stroke="#000" stroke-width="3"/><line x1="318.3" y1="67.2" x2="326.3" y2="75.2" stroke="#000" stroke-width="1"/><line x1="321.1" y1="77.5" x2="329.1" y2="85.5" stroke="#000" stroke-width="1"/><line x1="323.5" y1="87.9" x2="331.5" y2="95.9" stroke="#000" stroke-width="1"/><line x1="325.5" y1="98.2" x2="333.5" y2="106.2" stroke="#000" stroke-width="1"/><line x1="327.1" y1="108.6" x2="335.1" y2="116.6" stroke="#000" stroke-width="1"/><line x1="328.4" y1="118.9" x2="336.4" y2="126.9" stroke="#000" stroke-width="1"/><line x1="329.3" y1="129.3" x2="337.3" y2="137.3" stroke="#000" stroke-width="1"/><line x1="329.8" y1="139.6" x2="337.8" y2="147.6" stroke="#000" stroke-width="1"/><line x1="330.0" y1="150.0" x2="338.0" y2="158.0" stroke="#000" stroke-width="1"/><line x1="329.8" y1="160.4" x2="337.8" y2="168.4" stroke="#000" stroke-width="1"/><line x1="329.3" y1="170.7" x2="337.3" y2="178.7" stroke="#000" stroke-width="1"/><line x1="328.4" y1="181.1" x2="336.4" y2="189.1" stroke="#000" stroke-width="1"/><line x1="327.1" y1="191.4" x2="335.1" y2="199.4" stroke="#000" stroke-width="1"/><line x1="325.5" y1="201.8" x2="333.5" y2="209.8" stroke="#000" stroke-width="1"/><line x1="323.5" y1="212.1" x2="331.5" y2="220.1" stroke="#000" stroke-width="1"/><line x1="321.1" y1="222.5" x2="329.1" y2="230.5" stroke="#000" stroke-width="1"/><line x1="318.3" y1="232.8" x2="326.3" y2="240.8" stroke="#000" stroke-width="1"/><circle cx="130.0" cy="150.0" r="3" fill="#000"/><text x="123.0" y="141.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">C</text><circle cx="230.0" cy="150.0" r="3" fill="#000"/><text x="223.0" y="141.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">F</text><circle cx="330.0" cy="150.0" r="3" fill="#000"/><text x="352.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">P</text><line x1="270.0" y1="150.0" x2="270.0" y2="125.0" stroke="#000" stroke-width="2.2"/><polygon points="270.0,118.4 273.3,129.4 266.7,129.4" fill="#000"/><text x="270.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">A</text><text x="270.0" y="118.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B</text><line x1="480.0" y1="150.0" x2="480.0" y2="87.5" stroke="#000" stroke-width="2.2" stroke-dasharray="6 4"/><polygon points="480.0,80.9 483.3,91.9 476.7,91.9" fill="#000"/><text x="480.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">A'</text><text x="480.0" y="80.5" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B'</text><line x1="270.0" y1="125.0" x2="330.0" y2="125.0" stroke="#000" stroke-width="1.4"/><polygon points="305.4,125.0 296.4,127.7 296.4,122.3" fill="#000"/><line x1="330.0" y1="125.0" x2="200.9" y2="157.3" stroke="#000" stroke-width="1.4"/><polygon points="260.2,142.4 268.3,137.6 269.6,142.9" fill="#000"/><line x1="330.0" y1="125.0" x2="480.0" y2="87.5" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><line x1="270.0" y1="125.0" x2="330.0" y2="150.0" stroke="#000" stroke-width="1.4"/><polygon points="305.0,139.6 295.6,138.6 297.7,133.6" fill="#000"/><line x1="330.0" y1="150.0" x2="250.0" y2="183.3" stroke="#000" stroke-width="1.4"/><polygon points="285.0,168.7 292.3,162.8 294.4,167.8" fill="#000"/><line x1="330.0" y1="150.0" x2="480.0" y2="87.5" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><text x="270.0" y="22.0" text-anchor="middle" font-size="13" fill="#000">Object between F and P: virtual, erect, magnified image</text></svg><p><strong>Figure 14.3:</strong> Object between F and P. Dashed lines are backward extensions of reflected rays; they meet behind the mirror at the virtual image</p>
+<table>
+<tr><th>Object position (concave mirror)</th><th>Image position</th><th>Nature and size</th></tr>
+<tr><td>At infinity</td><td>At F</td><td>Real, inverted, point-sized</td></tr>
+<tr><td>Beyond C</td><td>Between F and C</td><td>Real, inverted, diminished</td></tr>
+<tr><td>At C</td><td>At C</td><td>Real, inverted, same size</td></tr>
+<tr><td>Between C and F</td><td>Beyond C</td><td>Real, inverted, magnified</td></tr>
+<tr><td>At F</td><td>At infinity</td><td>Real, inverted, highly magnified</td></tr>
+<tr><td>Between F and P</td><td>Behind the mirror</td><td>Virtual, erect, magnified</td></tr>
+</table><h3>14.1(f) Images in a Convex Mirror</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" fill="currentColor" role="img"><rect width="520" height="280" fill="#fff"/><line x1="15.0" y1="150.0" x2="505.0" y2="150.0" stroke="#000" stroke-width="1"/><path d="M316.7,62 A240.0,240.0 0 0 0 316.7,238" fill="none" stroke="#000" stroke-width="3"/><line x1="314.7" y1="67.2" x2="322.7" y2="75.2" stroke="#000" stroke-width="1"/><line x1="311.2" y1="77.5" x2="319.2" y2="85.5" stroke="#000" stroke-width="1"/><line x1="308.2" y1="87.9" x2="316.2" y2="95.9" stroke="#000" stroke-width="1"/><line x1="305.6" y1="98.2" x2="313.6" y2="106.2" stroke="#000" stroke-width="1"/><line x1="303.6" y1="108.6" x2="311.6" y2="116.6" stroke="#000" stroke-width="1"/><line x1="302.0" y1="118.9" x2="310.0" y2="126.9" stroke="#000" stroke-width="1"/><line x1="300.9" y1="129.3" x2="308.9" y2="137.3" stroke="#000" stroke-width="1"/><line x1="300.2" y1="139.6" x2="308.2" y2="147.6" stroke="#000" stroke-width="1"/><line x1="300.0" y1="150.0" x2="308.0" y2="158.0" stroke="#000" stroke-width="1"/><line x1="300.2" y1="160.4" x2="308.2" y2="168.4" stroke="#000" stroke-width="1"/><line x1="300.9" y1="170.7" x2="308.9" y2="178.7" stroke="#000" stroke-width="1"/><line x1="302.0" y1="181.1" x2="310.0" y2="189.1" stroke="#000" stroke-width="1"/><line x1="303.6" y1="191.4" x2="311.6" y2="199.4" stroke="#000" stroke-width="1"/><line x1="305.6" y1="201.8" x2="313.6" y2="209.8" stroke="#000" stroke-width="1"/><line x1="308.2" y1="212.1" x2="316.2" y2="220.1" stroke="#000" stroke-width="1"/><line x1="311.2" y1="222.5" x2="319.2" y2="230.5" stroke="#000" stroke-width="1"/><line x1="314.7" y1="232.8" x2="322.7" y2="240.8" stroke="#000" stroke-width="1"/><circle cx="300.0" cy="150.0" r="3" fill="#000"/><text x="290.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">P</text><circle cx="380.0" cy="150.0" r="3" fill="#000"/><text x="380.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">F</text><circle cx="460.0" cy="150.0" r="3" fill="#000"/><text x="460.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">C</text><line x1="108.0" y1="150.0" x2="108.0" y2="110.0" stroke="#000" stroke-width="2.2"/><polygon points="108.0,103.4 111.3,114.4 104.7,114.4" fill="#000"/><text x="108.0" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">A</text><text x="108.0" y="103.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B</text><line x1="356.5" y1="150.0" x2="356.5" y2="138.2" stroke="#000" stroke-width="2.2" stroke-dasharray="6 4"/><polygon points="356.5,131.6 359.8,142.6 353.2,142.6" fill="#000"/><text x="356.5" y="167.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">A'</text><text x="356.5" y="131.2" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B'</text><line x1="108.0" y1="110.0" x2="300.0" y2="110.0" stroke="#000" stroke-width="1.4"/><polygon points="209.4,110.0 200.4,112.7 200.4,107.3" fill="#000"/><line x1="300.0" y1="110.0" x2="201.6" y2="60.8" stroke="#000" stroke-width="1.4"/><polygon points="246.0,83.0 255.2,84.6 252.8,89.4" fill="#000"/><line x1="300.0" y1="110.0" x2="356.5" y2="138.2" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><line x1="108.0" y1="110.0" x2="300.0" y2="150.0" stroke="#000" stroke-width="1.4"/><polygon points="209.3,131.1 199.9,131.9 201.0,126.6" fill="#000"/><line x1="300.0" y1="150.0" x2="88.0" y2="194.2" stroke="#000" stroke-width="1.4"/><polygon points="188.7,173.2 197.0,168.7 198.1,174.0" fill="#000"/><line x1="300.0" y1="150.0" x2="356.5" y2="138.2" stroke="#000" stroke-width="1.4" stroke-dasharray="6 4"/><text x="260.0" y="22.0" text-anchor="middle" font-size="13" fill="#000">Convex mirror: virtual, erect, diminished image between P and F</text></svg><p><strong>Figure 14.4:</strong> Image in a convex mirror. Reflected rays diverge; their backward extensions (dashed) meet behind the mirror</p>
+<div class="box tip" data-title="Uses of convex mirrors"><ul>
+<li><strong>Rear-view mirrors</strong> of vehicles: erect image and a wide field of view.</li>
+<li><strong>Street and shop security mirrors:</strong> view of a large area.</li>
+</ul>
+<h4>Uses of concave mirrors:</h4>
+<ul>
+<li><strong>Shaving and make-up mirrors, dentist's mirror:</strong> enlarged erect image at close range.</li>
+<li><strong>Headlights, torches, solar cookers:</strong> a source at F gives a parallel beam, or parallel sunlight is concentrated at F.</li>
+<li><strong>Reflecting telescopes:</strong> collect light from distant objects.</li>
+</ul></div>
+<h2>14.2 Mirror Formula</h2><h3>14.2(a) Sign Convention (Real is Positive, Virtual is Negative)</h3><p>All distances are measured from the pole P. The convention is based on whether an object, an image or a focus is <strong>real</strong> or <strong>virtual</strong>:</p><table>
+<tr><th>Quantity</th><th>Positive (+)</th><th>Negative (−)</th></tr>
+<tr><td>Object distance u</td><td>Real object</td><td>Virtual object</td></tr>
+<tr><td>Image distance v</td><td>Real image (in front of mirror)</td><td>Virtual image (behind mirror)</td></tr>
+<tr><td>Focal length f (and R)</td><td>Concave mirror (real focus)</td><td>Convex mirror (virtual focus)</td></tr>
+</table><div class="box tip" data-title="Key points"><ul>
+<li>An ordinary object placed in front of a mirror is real, so <strong>u is positive</strong> in almost every problem.</li>
+<li>A <strong>concave mirror</strong> has f = +R/2; a <strong>convex mirror</strong> has f = −R/2.</li>
+<li>If the calculated v is positive the image is real (inverted); if negative, it is virtual (erect).</li>
+<li>Heights above the principal axis are taken as positive; the real inverted image has a downward height.</li>
+</ul></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 250" fill="currentColor" role="img"><rect width="560" height="250" fill="#fff"/><line x1="280.0" y1="45.0" x2="280.0" y2="215.0" stroke="#000" stroke-width="3"/><line x1="280.0" y1="50.0" x2="289.0" y2="59.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="60.0" x2="289.0" y2="69.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="70.0" x2="289.0" y2="79.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="80.0" x2="289.0" y2="89.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="90.0" x2="289.0" y2="99.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="100.0" x2="289.0" y2="109.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="110.0" x2="289.0" y2="119.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="120.0" x2="289.0" y2="129.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="130.0" x2="289.0" y2="139.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="140.0" x2="289.0" y2="149.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="150.0" x2="289.0" y2="159.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="160.0" x2="289.0" y2="169.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="170.0" x2="289.0" y2="179.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="180.0" x2="289.0" y2="189.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="190.0" x2="289.0" y2="199.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="200.0" x2="289.0" y2="209.0" stroke="#000" stroke-width="1"/><line x1="280.0" y1="210.0" x2="289.0" y2="219.0" stroke="#000" stroke-width="1"/><line x1="20.0" y1="130.0" x2="540.0" y2="130.0" stroke="#000" stroke-width="1"/><circle cx="280.0" cy="130.0" r="3" fill="#000"/><text x="271.0" y="147.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">P</text><text x="150.0" y="26.0" text-anchor="middle" font-size="13" fill="#000">REAL side (in front of mirror)</text><text x="420.0" y="26.0" text-anchor="middle" font-size="13" fill="#000">VIRTUAL side (behind mirror)</text><line x1="260.0" y1="48.0" x2="30.0" y2="48.0" stroke="#000" stroke-width="1.4"/><polygon points="139.6,48.0 148.6,45.3 148.6,50.7" fill="#000"/><text x="150.0" y="64.0" text-anchor="middle" font-size="12" fill="#000">measured this way: POSITIVE (+)</text><line x1="300.0" y1="48.0" x2="530.0" y2="48.0" stroke="#000" stroke-width="1.4"/><polygon points="420.4,48.0 411.4,50.7 411.4,45.3" fill="#000"/><text x="420.0" y="64.0" text-anchor="middle" font-size="12" fill="#000">measured this way: NEGATIVE (−)</text><text x="150.0" y="100.0" text-anchor="middle" font-size="12" fill="#000">real object  u &gt; 0</text><text x="150.0" y="116.0" text-anchor="middle" font-size="12" fill="#000">real image   v &gt; 0</text><text x="150.0" y="164.0" text-anchor="middle" font-size="12" fill="#000">concave mirror: f &gt; 0</text><text x="150.0" y="180.0" text-anchor="middle" font-size="12" fill="#000">(real focus, F in front)</text><text x="420.0" y="100.0" text-anchor="middle" font-size="12" fill="#000">virtual image  v &lt; 0</text><text x="420.0" y="116.0" text-anchor="middle" font-size="12" fill="#000">virtual object  u &lt; 0</text><text x="420.0" y="164.0" text-anchor="middle" font-size="12" fill="#000">convex mirror: f &lt; 0</text><text x="420.0" y="180.0" text-anchor="middle" font-size="12" fill="#000">(virtual focus, F behind)</text><text x="280.0" y="236.0" text-anchor="middle" font-size="12" fill="#000">All distances are measured from the pole P</text></svg><p><strong>Figure 14.5:</strong> Sign convention: real quantities positive, virtual quantities negative</p>
+<h3>14.2(b) Derivation of the Mirror Formula</h3><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" fill="currentColor" role="img"><rect width="420" height="260" fill="#fff"/><line x1="15.0" y1="130.0" x2="405.0" y2="130.0" stroke="#000" stroke-width="1"/><path d="M341.1,40 A224.0,224.0 0 0 1 341.1,220" fill="none" stroke="#000" stroke-width="3"/><line x1="343.4" y1="45.3" x2="351.4" y2="53.3" stroke="#000" stroke-width="1"/><line x1="347.4" y1="55.9" x2="355.4" y2="63.9" stroke="#000" stroke-width="1"/><line x1="350.8" y1="66.5" x2="358.8" y2="74.5" stroke="#000" stroke-width="1"/><line x1="353.7" y1="77.1" x2="361.7" y2="85.1" stroke="#000" stroke-width="1"/><line x1="356.0" y1="87.6" x2="364.0" y2="95.6" stroke="#000" stroke-width="1"/><line x1="357.7" y1="98.2" x2="365.7" y2="106.2" stroke="#000" stroke-width="1"/><line x1="359.0" y1="108.8" x2="367.0" y2="116.8" stroke="#000" stroke-width="1"/><line x1="359.7" y1="119.4" x2="367.7" y2="127.4" stroke="#000" stroke-width="1"/><line x1="360.0" y1="130.0" x2="368.0" y2="138.0" stroke="#000" stroke-width="1"/><line x1="359.7" y1="140.6" x2="367.7" y2="148.6" stroke="#000" stroke-width="1"/><line x1="359.0" y1="151.2" x2="367.0" y2="159.2" stroke="#000" stroke-width="1"/><line x1="357.7" y1="161.8" x2="365.7" y2="169.8" stroke="#000" stroke-width="1"/><line x1="356.0" y1="172.4" x2="364.0" y2="180.4" stroke="#000" stroke-width="1"/><line x1="353.7" y1="182.9" x2="361.7" y2="190.9" stroke="#000" stroke-width="1"/><line x1="350.8" y1="193.5" x2="358.8" y2="201.5" stroke="#000" stroke-width="1"/><line x1="347.4" y1="204.1" x2="355.4" y2="212.1" stroke="#000" stroke-width="1"/><line x1="343.4" y1="214.7" x2="351.4" y2="222.7" stroke="#000" stroke-width="1"/><circle cx="220.0" cy="130.0" r="3" fill="#000"/><text x="213.0" y="121.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">C</text><circle cx="290.0" cy="130.0" r="3" fill="#000"/><text x="283.0" y="121.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">F</text><circle cx="360.0" cy="130.0" r="3" fill="#000"/><text x="382.0" y="147.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">P</text><line x1="160.0" y1="130.0" x2="160.0" y2="90.0" stroke="#000" stroke-width="2.2"/><polygon points="160.0,83.4 163.3,94.4 156.7,94.4" fill="#000"/><text x="160.0" y="147.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">A</text><text x="160.0" y="83.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B</text><line x1="252.3" y1="130.0" x2="252.3" y2="151.5" stroke="#000" stroke-width="2.2"/><polygon points="252.3,158.1 249.0,147.1 255.6,147.1" fill="#000"/><text x="243.3" y="125.0" text-anchor="end" font-style="italic" font-size="13" fill="#000">A′</text><text x="252.3" y="167.5" text-anchor="middle" font-style="italic" font-size="13" fill="#000">B′</text><line x1="160.0" y1="90.0" x2="360.0" y2="90.0" stroke="#000" stroke-width="1.4"/><polygon points="265.4,90.0 256.4,92.7 256.4,87.3" fill="#000"/><line x1="360.0" y1="90.0" x2="252.3" y2="151.5" stroke="#000" stroke-width="1.4"/><polygon points="301.5,123.4 307.9,116.6 310.6,121.3" fill="#000"/><line x1="160.0" y1="90.0" x2="360.0" y2="130.0" stroke="#000" stroke-width="1.4"/><polygon points="265.3,111.1 255.9,111.9 257.0,106.6" fill="#000"/><line x1="360.0" y1="130.0" x2="252.3" y2="151.5" stroke="#000" stroke-width="1.4"/><polygon points="300.9,141.8 309.2,137.4 310.2,142.7" fill="#000"/><text x="368.0" y="84.0" text-anchor="start" font-style="italic" font-size="13" fill="#000">D</text><line x1="290.0" y1="190.0" x2="360.0" y2="190.0" stroke="#000" stroke-width="1"/><polygon points="355.2,190.0 363.2,187.6 363.2,192.4" fill="#000"/><polygon points="294.8,190.0 286.8,192.4 286.8,187.6" fill="#000"/><line x1="290.0" y1="185.0" x2="290.0" y2="195.0" stroke="#000" stroke-width="1"/><line x1="360.0" y1="185.0" x2="360.0" y2="195.0" stroke="#000" stroke-width="1"/><text x="325.0" y="184.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">f</text><line x1="252.3" y1="212.0" x2="360.0" y2="212.0" stroke="#000" stroke-width="1"/><polygon points="355.2,212.0 363.2,209.6 363.2,214.4" fill="#000"/><polygon points="257.1,212.0 249.1,214.4 249.1,209.6" fill="#000"/><line x1="252.3" y1="207.0" x2="252.3" y2="217.0" stroke="#000" stroke-width="1"/><line x1="360.0" y1="207.0" x2="360.0" y2="217.0" stroke="#000" stroke-width="1"/><text x="306.2" y="206.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">v</text><line x1="160.0" y1="234.0" x2="360.0" y2="234.0" stroke="#000" stroke-width="1"/><polygon points="355.2,234.0 363.2,231.6 363.2,236.4" fill="#000"/><polygon points="164.8,234.0 156.8,236.4 156.8,231.6" fill="#000"/><line x1="160.0" y1="229.0" x2="160.0" y2="239.0" stroke="#000" stroke-width="1"/><line x1="360.0" y1="229.0" x2="360.0" y2="239.0" stroke="#000" stroke-width="1"/><text x="260.0" y="228.0" text-anchor="middle" font-style="italic" font-size="13" fill="#000">u</text><line x1="252.3" y1="160.0" x2="252.3" y2="212.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="160.0" y1="156.0" x2="160.0" y2="234.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><line x1="290.0" y1="138.0" x2="290.0" y2="190.0" stroke="#000" stroke-width="1" stroke-dasharray="6 4"/><text x="200.0" y="80.0" text-anchor="start" font-size="11" fill="#000">ray BD parallel to axis</text></svg><p><strong>Figure 14.6:</strong> Geometry for deriving the mirror formula (concave mirror, real image). Triangles ABP and A′B′P are similar; so are DPF and A′B′F</p>
+<div class="box note" data-title="Derivation of 1/f = 1/u + 1/v"><p>Let AB be a small real object at distance u (= AP) from a concave mirror and A′B′ its real image at distance v (= A′P). Draw ray BP striking the pole, and ray BD parallel to the axis, which after reflection passes through F and meets BP's reflected ray at B′.</p>
+
+<p><strong>Step 1:</strong> Triangles ABP and A′B′P are similar (angle of incidence = angle of reflection at P):</p>
+<div class="formula">A′B′ / AB = A′P / AP = v / u    ... (1)</div>
+
+<p><strong>Step 2:</strong> Triangles DPF and A′B′F are similar, and DP = AB:</p>
+<div class="formula">A′B′ / DP = A′F / PF
+<br>
+A′B′ / AB = (v − f) / f    ... (2)</div>
+
+<p><strong>Step 3:</strong> Equate (1) and (2):</p>
+<div class="formula">v / u = (v − f) / f
+<br>
+vf = uv − uf
+<br>
+uf + vf = uv</div>
+
+<p>Dividing every term by uvf:</p>
+<div class="formula"><strong>1/f = 1/u + 1/v</strong></div>
+
+<p>With the real-is-positive convention this single formula holds for concave and convex mirrors, real and virtual images; only the signs of f, u and v change.</p></div>
+<h3>14.2(c) Linear Magnification</h3><p>Linear magnification m is the ratio of the height of the image (I) to the height of the object (O). From equation (1):</p><div class="formula">|m| = I / O = v / u
+<br>
+With signs: <strong>m = v / u</strong></div>
+<div class="box tip" data-title="Key points"><ul>
+<li>m is <strong>positive</strong> for a real image (v &lt; 0): inverted.</li>
+<li>m is <strong>negative</strong> for a virtual image (v &gt; 0): erect.</li>
+<li>|m| &gt; 1: magnified; |m| &lt; 1: diminished; |m| = 1: same size.</li>
+</ul></div>
+<div class="box warning" data-title="⚠️ Common mistakes"><ul>
+<li>Substituting a positive f for a convex mirror. A convex mirror always has negative f.</li>
+<li>Forgetting that a negative v means the image is <strong>virtual</strong>, not that the distance is "wrong".</li>
+<li>Using 1/f = 1/u − 1/v: that belongs to a different convention. Here it is always +.</li>
+<li>Applying the formula to large-aperture mirrors: it holds only for rays close to the axis (paraxial rays).</li>
+</ul></div>
+<div class="box example" data-title="Example 14.1 — Real image"><p>An object is placed 30 cm from a concave mirror of focal length 15 cm. Find the image position and magnification.</p>
+<div class="formula">f = +15 cm, u = +30 cm
+<br>
+1/v = 1/f − 1/u = 1/15 − 1/30 = 1/30
+<br>
+v = <strong>+30 cm</strong> (real, in front of the mirror)
+<br>
+m = −v/u = −30/30 = <strong>−1</strong> (inverted, same size)</div>
+
+<p>The object is at C (R = 30 cm), so the image is also at C.</p></div>
+<div class="box example" data-title="Example 14.2 — Virtual image in a concave mirror"><p>A 2 cm tall object is placed 6 cm from a concave mirror of focal length 10 cm. Find the image position and size.</p>
+<div class="formula">1/v = 1/10 − 1/6 = (3 − 5)/30 = −1/15
+<br>
+v = <strong>−15 cm</strong> (virtual, behind the mirror)
+<br>
+m = −v/u = 15/6 = <strong>+2.5</strong> (erect)
+<br>
+Image height = 2.5 × 2 = <strong>5 cm</strong></div></div>
+<div class="box example" data-title="Example 14.3 — Convex mirror"><p>An object is placed 30 cm from a convex mirror of focal length 20 cm. Find the image position and magnification.</p>
+<div class="formula">f = −20 cm (virtual focus), u = +30 cm
+<br>
+1/v = 1/f − 1/u = −1/20 − 1/30 = −5/60 = −1/12
+<br>
+v = <strong>−12 cm</strong> (virtual, behind the mirror)
+<br>
+m = −v/u = 12/30 = <strong>+0.4</strong> (erect, diminished)</div></div>
+<div class="box example" data-title="Example 14.4 — Finding f and R"><p>A real image forms 60 cm from a concave mirror when the object is 20 cm away. Find f and R.</p>
+<div class="formula">1/f = 1/u + 1/v = 1/20 + 1/60 = 4/60
+<br>
+f = <strong>15 cm</strong>
+<br>
+R = 2f = <strong>30 cm</strong></div></div>
+<div class="box example" data-title="Example 14.5 — Magnified image on a screen"><p>A concave mirror forms a 4 times magnified real image on a screen 40 cm from the mirror. Find the object distance and focal length.</p>
+<div class="formula">|m| = v/u = 4 ⇒ u = 40/4 = <strong>10 cm</strong>
+<br>
+1/f = 1/10 + 1/40 = 5/40 = 1/8
+<br>
+f = <strong>8 cm</strong></div></div>
+<h2>Key Formulas and Summary</h2><div class="box tip" data-title="Fundamental Relations"><div class="formula">f = R / 2
+<br>
+1/f = 1/u + 1/v
+<br>
+m = I/O = − v/u</div></div>
+<div class="box tip" data-title="Sign Convention (real +, virtual −)"><div class="formula">Real object: u &gt; 0     Virtual object: u &lt; 0
+<br>
+Real image: v &gt; 0     Virtual image: v &lt; 0
+<br>
+Concave mirror: f &gt; 0     Convex mirror: f &lt; 0</div></div>
+<div class="box tip" data-title="Quick Facts"><ul>
+<li>Real image: can be on a screen, inverted, v &gt; 0.</li>
+<li>Virtual image: cannot be on a screen, erect, v &lt; 0.</li>
+<li>Convex mirror: always virtual, erect and diminished for a real object.</li>
+<li>Concave mirror: virtual image only when u &lt; f.</li>
+</ul></div>
+<h2>Practice Numerical Problems</h2><p>Use 1/f = 1/u + 1/v with real-is-positive signs. Attempt each problem before reading the answer.</p><div class="box example"><p>1. A concave mirror has f = 12 cm. An object is placed 18 cm in front of it. Find the image distance and magnification.</p>
+
+<p><strong>Answer:</strong> 1/v = 1/12 − 1/18 = 1/36, so v = <strong>+36 cm</strong> (real); m = −36/18 = <strong>−2</strong> (inverted, magnified).</p></div>
+<div class="box example"><p>2. A concave mirror has radius of curvature 40 cm. Find the image for an object 10 cm from it.</p>
+
+<p><strong>Answer:</strong> f = 20 cm. 1/v = 1/20 − 1/10 = −1/20, so v = <strong>−20 cm</strong> (virtual); m = <strong>+2</strong> (erect, magnified).</p></div>
+<div class="box example"><p>3. A convex mirror has f = 15 cm (magnitude). An object is 25 cm from it. Find the image position and magnification.</p>
+
+<p><strong>Answer:</strong> f = −15 cm. 1/v = −1/15 − 1/25 = −8/75, so v ≈ <strong>−9.4 cm</strong> (virtual); m = 9.375/25 ≈ <strong>+0.375</strong>.</p></div>
+<div class="box example"><p>4. An erect image 3 times the size of the object is obtained with a concave mirror when the object is 10 cm from it. Find the focal length.</p>
+
+<p><strong>Answer:</strong> Erect means virtual: m = −v/u = +3 ⇒ v = −30 cm. 1/f = 1/10 − 1/30 = 2/30, so f = <strong>15 cm</strong>.</p></div>
+<div class="box example"><p>5. A car's rear-view convex mirror has radius of curvature 2 m. A vehicle is 5 m behind. Find the image position and magnification.</p>
+
+<p><strong>Answer:</strong> f = −1 m. 1/v = −1 − 1/5 = −6/5, so v ≈ <strong>−0.83 m</strong> (virtual); m ≈ <strong>+0.17</strong>.</p></div>
+<div class="box example"><p>6. A real image is formed at the same distance (50 cm) as the object from a concave mirror. Find f and R.</p>
+
+<p><strong>Answer:</strong> 1/f = 1/50 + 1/50 = 2/50, so f = <strong>25 cm</strong>, R = <strong>50 cm</strong>. The object is at C.</p></div>
+<div class="box example"><p>7. A 4 cm tall object is 15 cm from a concave mirror of f = 10 cm. Find the position, nature and height of the image.</p>
+
+<p><strong>Answer:</strong> 1/v = 1/10 − 1/15 = 1/30, so v = <strong>+30 cm</strong> (real); m = −2; height = <strong>8 cm</strong>, inverted.</p></div>
+<div class="box example"><p>8. Where should an object be placed in front of a concave mirror of f = 20 cm to get a virtual image 40 cm behind the mirror?</p>
+
+<p><strong>Answer:</strong> v = −40 cm. 1/u = 1/f − 1/v = 1/20 + 1/40 = 3/40, so u ≈ <strong>13.3 cm</strong>; m = +3.</p></div>
+<h2>Conceptual and Long Answer Questions</h2><div class="box example" data-title="MCQ"><p><strong>1. Differentiate between a real and a virtual image.</strong></p><ul><li>See table in 14.1: a real image is formed by actual convergence of rays, can be received on a screen and is inverted; a virtual image only appears to come from behind the mirror, cannot be received on a screen and is erect.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>2. Why is a convex mirror preferred as a rear-view mirror?</strong></p><ul><li>It always forms an erect, diminished image, which gives a wide field of view.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>3. Why does a dentist use a concave mirror?</strong></p><ul><li>With the tooth between F and P, a virtual, erect and magnified image is formed.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>4. Can a real image be formed by a convex mirror of a real object? Explain.</strong></p><ul><li>No. For a real object, reflected rays always diverge, so the image is always virtual.</li></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>5. Prove that f = R/2 for a spherical mirror. (Section 14, introduction)</strong></p><ul></ul></div>
+<div class="box example" data-title="MCQ"><p><strong>6. Derive the mirror formula 1/f = 1/u + 1/v for a concave mirror using the real-is-positive convention. (Section 14.2)</strong></p><ul></ul></div>
+<h2>Multiple Choice Questions</h2><div class="box example" data-title="MCQ"><p><strong>1. A real image is one that:</strong></p><ul><li>(a) Cannot be obtained on a screen</li><li>(b) Is formed by actual meeting of reflected rays</li><li>(c) Is always erect</li><li>(d) Is formed behind a mirror</li></ul><details class="solution"><summary>Show answer</summary><p>(b) Is formed by actual meeting of reflected rays</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>2. In the real-is-positive convention, the focal length of a concave mirror is:</strong></p><ul><li>(a) Positive</li><li>(b) Negative</li><li>(c) Zero</li><li>(d) Infinite</li></ul><details class="solution"><summary>Show answer</summary><p>(a) Positive</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>3. The focal length of a spherical mirror is related to its radius of curvature by:</strong></p><ul><li>(a) f = R</li><li>(b) f = 2R</li><li>(c) f = R/2</li><li>(d) f = R/4</li></ul><details class="solution"><summary>Show answer</summary><p>(c) f = R/2</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>4. A convex mirror always forms an image that is:</strong></p><ul><li>(a) Real, inverted, diminished</li><li>(b) Real, erect, magnified</li><li>(c) Virtual, erect, diminished</li><li>(d) Virtual, inverted, magnified</li></ul><details class="solution"><summary>Show answer</summary><p>(c) Virtual, erect, diminished</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>5. An object is at the centre of curvature of a concave mirror. The image is:</strong></p><ul><li>(a) At infinity</li><li>(b) At F, diminished</li><li>(c) At C, real, inverted, same size</li><li>(d) Behind the mirror</li></ul><details class="solution"><summary>Show answer</summary><p>(c) At C, real, inverted, same size</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>6. A calculated image distance v = −24 cm means the image is:</strong></p><ul><li>(a) Real, in front of the mirror</li><li>(b) Virtual, behind the mirror</li><li>(c) At infinity</li><li>(d) Inverted</li></ul><details class="solution"><summary>Show answer</summary><p>(b) Virtual, behind the mirror</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>7. The mirror formula in the real-is-positive convention is:</strong></p><ul><li>(a) 1/f = 1/v − 1/u</li><li>(b) 1/f = 1/u + 1/v</li><li>(c) f = u + v</li><li>(d) 1/f = u + v</li></ul><details class="solution"><summary>Show answer</summary><p>(b) 1/f = 1/u + 1/v</p></details></div>
+<div class="box example" data-title="MCQ"><p><strong>8. When an object is placed between F and P of a concave mirror, the image is:</strong></p><ul><li>(a) Real, inverted, magnified</li><li>(b) Real, inverted, diminished</li><li>(c) Virtual, erect, magnified</li><li>(d) Virtual, erect, diminished</li></ul><details class="solution"><summary>Show answer</summary><p>(c) Virtual, erect, magnified</p></details></div>

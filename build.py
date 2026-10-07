@@ -18,6 +18,7 @@ import functools
 import hashlib
 import html
 import json
+import random
 import re
 import shutil
 from datetime import date
@@ -120,53 +121,75 @@ def validate_questions(qs, file, problems):
 
 
 def load():
+    """Read every lesson. A lesson with problems is skipped (and reported) so one bad upload
+    cannot stop the rest of the site from being published."""
     problems = Problems()
     site_data = json.loads((SRC / "content.json").read_text(encoding="utf-8"))
     grades = site_data["grades"]
     posts = []
     for f in sorted((SRC / "lessons").iterdir()):
-        rel = f"src/lessons/{f.name}"
-        if f.suffix not in (".json", ".html"):
-            problems.add(rel, "only .json (MCQ) and .html (notes) files belong here")
+        if f.is_dir() or f.name.startswith("."):
             continue
-        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", f.stem):
-            problems.add(rel, "file name must be lowercase words joined by hyphens, e.g. wave-motion.html")
-        text = f.read_text(encoding="utf-8")
-        if f.suffix == ".json":
-            try:
-                meta = json.loads(text)
-            except json.JSONDecodeError as e:
-                problems.add(rel, f"invalid JSON at line {e.lineno}, column {e.colno}: {e.msg}")
-                continue
-            meta.setdefault("kind", "mcq")
-            meta["format"] = "mcq"
-            validate_questions(meta.get("questions"), rel, problems)
-        else:
-            meta, body = parse_front_matter(text, rel, problems)
-            meta.setdefault("kind", "notes")
-            meta["body"] = body
-            meta["format"] = "notes"
-            if re.match(r"\s*<!doctype", body, re.I):
-                problems.add(rel, "full web pages are no longer accepted; convert it to content-only notes "
-                                  "(docs/prompts/convert-legacy-notes.md)")
-            else:
-                for pattern, what in FORBIDDEN_IN_NOTES:
-                    if re.search(pattern, body, re.I):
-                        problems.add(rel, f"notes must not contain {what} — the site stylesheet handles styling")
-                for svg in re.findall(r"<svg\b[^>]*>", body, re.I):
-                    if not re.search(r"\bviewBox=", svg):
-                        problems.add(rel, "every <svg> needs a viewBox so it can shrink to fit phone screens")
-        if meta.get("kind") not in KIND_LABEL:
-            problems.add(rel, f"kind must be 'notes' or 'mcq'")
-        validate_meta(meta, rel, grades, problems)
-        meta["slug"] = f.stem
-        meta["file"] = rel
-        posts.append(meta)
-    slugs = [p["slug"] for p in posts]
-    for s in {s for s in slugs if slugs.count(s) > 1}:
-        problems.append(f"src/lessons: '{s}' exists as both .json and .html")
+        rel = f"src/lessons/{f.name}"
+        before = len(problems)
+        meta = read_lesson(f, rel, grades, problems)
+        if meta is not None and len(problems) == before:
+            posts.append(meta)
+    by_slug = {}
+    for p in posts:
+        by_slug.setdefault(p["slug"], []).append(p)
+    for s, same in by_slug.items():
+        if len(same) > 1:
+            problems.append(f"src/lessons: '{s}' exists as both .json and .html (both skipped)")
+            posts = [p for p in posts if p["slug"] != s]
     posts.sort(key=lambda p: (p.get("date", ""), p["slug"]), reverse=True)
     return site_data, posts, problems
+
+
+def read_lesson(f, rel, grades, problems):
+    if f.suffix not in (".json", ".html"):
+        problems.add(rel, "only .json (MCQ) and .html (notes) files belong here")
+        return None
+    if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", f.stem):
+        problems.add(rel, "file name must be lowercase words joined by hyphens, e.g. wave-motion.html")
+    try:
+        text = f.read_text(encoding="utf-8")
+    except UnicodeDecodeError:
+        problems.add(rel, "file is not saved as UTF-8 text")
+        return None
+    if f.suffix == ".json":
+        try:
+            meta = json.loads(text)
+        except json.JSONDecodeError as e:
+            problems.add(rel, f"invalid JSON at line {e.lineno}, column {e.colno}: {e.msg}")
+            return None
+        if not isinstance(meta, dict):
+            problems.add(rel, "an MCQ file must be one JSON object { \"title\": …, \"questions\": [ … ] }")
+            return None
+        meta.setdefault("kind", "mcq")
+        meta["format"] = "mcq"
+        validate_questions(meta.get("questions"), rel, problems)
+    else:
+        meta, body = parse_front_matter(text, rel, problems)
+        meta.setdefault("kind", "notes")
+        meta["body"] = body
+        meta["format"] = "notes"
+        if re.match(r"\s*<!doctype", body, re.I):
+            problems.add(rel, "full web pages are no longer accepted; convert it to content-only notes "
+                              "(docs/prompts/convert-legacy-notes.md)")
+        else:
+            for pattern, what in FORBIDDEN_IN_NOTES:
+                if re.search(pattern, body, re.I):
+                    problems.add(rel, f"notes must not contain {what} — the site stylesheet handles styling")
+            for svg in re.findall(r"<svg\b[^>]*>", body, re.I):
+                if not re.search(r"\bviewBox=", svg):
+                    problems.add(rel, "every <svg> needs a viewBox so it can shrink to fit phone screens")
+    if meta.get("kind") not in KIND_LABEL:
+        problems.add(rel, f"kind must be 'notes' or 'mcq'")
+    validate_meta(meta, rel, grades, problems)
+    meta["slug"] = f.stem
+    meta["file"] = rel
+    return meta
 
 
 # ---------------------------------------------------------------- helpers
@@ -292,14 +315,30 @@ def related_block(data, posts, post):
 
 # ---------------------------------------------------------------- lesson pages
 
+# Options that refer to the other options must keep their place, so such questions are not shuffled.
+REFERS_TO_OPTIONS = re.compile(r"\b(all|none|both|neither)\b.*\b(above|these|of them)\b|^(both|neither)\b", re.I)
+
+
+def shuffled_options(post, i, q):
+    """Many MCQ files put the correct answer first. Show the options in a fixed per-question random
+    order (the same on every build) so the answer is not always A. Returns (options, answer index)."""
+    opts = list(q["options"])
+    if any(REFERS_TO_OPTIONS.search(o) for o in opts):
+        return opts, q["answer"]
+    order = list(range(len(opts)))
+    random.Random(f"{post['slug']}:{i}:{q['q']}").shuffle(order)
+    return [opts[k] for k in order], order.index(q["answer"])
+
+
 def build_mcq(data, posts, post):
     qs = []
     for i, q in enumerate(post["questions"]):
         diff = q.get("difficulty")
+        options, answer = shuffled_options(post, i, q)
         opts = "".join(f'<li><button class="option" type="button"><span class="letter" aria-hidden="true">{"ABCDEF"[j]}</span><span>{esc(o)}</span></button></li>'
-                       for j, o in enumerate(q["options"]))
+                       for j, o in enumerate(options))
         exp = f"<strong>Explanation:</strong> {esc(q['explanation'])}" if q.get("explanation") else ""
-        qs.append(f"""<li class="question" data-i="{i}" data-answer="{q['answer']}" data-difficulty="{diff or ''}">
+        qs.append(f"""<li class="question" data-i="{i}" data-answer="{answer}" data-difficulty="{diff or ''}">
   <div class="q-head"><p class="q-text"><span class="q-num">{i + 1}.</span> {esc(q['q'])}</p>{f'<span class="diff {diff}">{diff}</span>' if diff else ''}</div>
   <ol class="options" type="A">{opts}</ol>
   <div class="explanation" hidden role="status"><span class="verdict"></span> {exp}</div>
@@ -508,10 +547,11 @@ def main():
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     data, posts, problems = load()
     if problems:
-        print(f"Found {len(problems)} problem(s) — nothing was built:")
+        print(f"WARNING: {len(problems)} problem(s); the lessons below were SKIPPED and are not on the site:")
         for p in problems:
             print("  -", p)
-        sys.exit(1)
+        if "--strict" in sys.argv or "--check" in sys.argv:
+            sys.exit(1)
     if "--check" in sys.argv:
         print(f"OK: {len(posts)} lessons are valid.")
         return

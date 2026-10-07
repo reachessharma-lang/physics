@@ -1,0 +1,60 @@
+{
+  "title": "Electromagnetic Induction — Quick Quiz",
+  "grade": "XII",
+  "chapters": [
+    14
+  ],
+  "date": "2026-10-02",
+  "questions": [
+    {
+      "q": "Lenz's Law is a direct consequence of which conservation principle?",
+      "options": [
+        "Conservation of Charge",
+        "Conservation of Energy",
+        "Conservation of Momentum",
+        "Conservation of Flux"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "If the speed of rotation of an AC generator coil is doubled, the peak induced EMF (e₀) becomes:",
+      "options": [
+        "Remains same",
+        "Halved",
+        "Doubled",
+        "Quadrupled"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "How are eddy current heat losses in transformer cores effectively minimized?",
+      "options": [
+        "Using laminated iron sheets insulated with varnish",
+        "Using thick solid copper cores",
+        "Increasing primary current",
+        "Cooling with water"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "The expression for magnetic energy density (uB) stored inside a solenoid is:",
+      "options": [
+        "(1)/(2) L I²",
+        "μ₀ B²",
+        "(B)/(2μ₀)",
+        "(B²)/(2μ₀)"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "In long-distance AC electric power transmission, high voltages are used to:",
+      "options": [
+        "Increase current in wires",
+        "Minimize I² R heat losses in transmission lines",
+        "Prevent eddy currents",
+        "Increase frequency of transmission"
+      ],
+      "answer": 1
+    }
+  ]
+}

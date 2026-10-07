@@ -1,1593 +1,650 @@
 ---
-title: Magnetic field and properties of material
+title: Magnetic Field and Properties of Materials
 grade: XII
 chapters: [13]
 date: 2026-10-02
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade XII Physics: Magnetic Effects of Current & Magnetism</title>
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#0f172a'
-                        },
-                        accent: {
-                            crimson: '#991b1b',
-                            emerald: '#047857',
-                            amber: '#b45309'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
-                        sans: ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- KaTeX CSS & JS for publication-grade mathematical notation rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-
-    <style>
-        /* Textbook specific typography and layout styles */
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: #f8fafc;
-            color: #0f172a;
-            line-height: 1.7;
-        }
-
-        .textbook-content p {
-            font-family: Georgia, Cambria, 'Times New Roman', serif;
-            font-size: 1.05rem;
-            margin-bottom: 1rem;
-            color: #1e293b;
-            text-align: justify;
-        }
-
-        .derivation-box {
-            background-color: #ffffff;
-            border-left: 4px solid #1d4ed8;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            padding: 1.25rem;
-            margin: 1.25rem 0;
-            border-radius: 0 0.5rem 0.5rem 0;
-        }
-
-        .neb-exam-tip {
-            background-color: #fffbeb;
-            border-left: 4px solid #b45309;
-            padding: 1rem 1.25rem;
-            margin: 1.25rem 0;
-            border-radius: 0 0.5rem 0.5rem 0;
-        }
-
-        .svg-diagram-container {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.5rem;
-            padding: 1.25rem;
-            margin: 1.5rem 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* SVG diagram printing high contrast */
-        svg line, svg path, svg circle, svg rect {
-            vector-effect: non-scaling-stroke;
-        }
-
-        /* Print formatting stylesheet */
-        @media print {
-            header, nav, .interactive-tool, .quiz-section, .no-print {
-                display: none !important;
-            }
-            body {
-                background: white;
-                color: black;
-            }
-            .container {
-                max-width: 100% !important;
-                width: 100% !important;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-            .textbook-section {
-                page-break-inside: avoid;
-                border-bottom: 1px solid #cbd5e1;
-                padding-bottom: 2rem;
-                margin-bottom: 2rem;
-            }
-            .svg-diagram-container {
-                border: 1px solid #000;
-                page-break-inside: avoid;
-            }
-        }
-    </style>
-</head>
-<body class="bg-slate-50 min-h-screen flex flex-col selection:bg-blue-200 selection:text-blue-900">
-
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-slate-900 text-white shadow-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center space-x-3">
-                <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-lg flex items-center justify-center w-10 h-10">
-                    16
-                </div>
-                <div>
-                    <h1 class="text-lg font-bold tracking-tight text-white leading-snug">NEB Physics Grade XII</h1>
-                    <p class="text-xs text-slate-400 font-medium">Unit 16: Magnetic Effects of Current & Magnetism</p>
-                </div>
-            </div>
-
-            <!-- Quick Navigation Tabs -->
-            <nav class="hidden md:flex items-center space-x-1 text-sm font-medium">
-                <a href="#textbook-modules" class="px-3 py-1.5 rounded-md hover:bg-slate-800 text-slate-200 hover:text-white transition">Syllabus Topics</a>
-                <a href="#interactive-calculators" class="px-3 py-1.5 rounded-md hover:bg-slate-800 text-slate-200 hover:text-white transition">Calculators</a>
-                <a href="#solved-numericals" class="px-3 py-1.5 rounded-md hover:bg-slate-800 text-slate-200 hover:text-white transition">Solved Numericals</a>
-                <a href="#conceptual-qa" class="px-3 py-1.5 rounded-md hover:bg-slate-800 text-slate-200 hover:text-white transition">Short Q&A</a>
-                <a href="#assessment-quiz" class="px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white transition">Self-Assessment Quiz</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-8">
-
-        <!-- Sidebar / Table of Contents (Desktop) -->
-        <aside class="hidden lg:block lg:col-span-3">
-            <div class="sticky top-20 bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
-                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 border-b border-slate-100 pb-2">Unit Contents (Syllabus)</h3>
-                <nav class="space-y-1 text-xs font-medium text-slate-600 max-h-[calc(100vh-16rem)] overflow-y-auto pr-1">
-                    <a href="#sec-intro" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">Intro: Field Lines & Flux</a>
-                    <a href="#sec-16-1" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.1 Oersted's Experiment</a>
-                    <a href="#sec-16-2" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.2 Force on Moving Charge</a>
-                    <a href="#sec-16-3" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.3 Force on Conductor</a>
-                    <a href="#sec-16-4" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.4 Force & Torque on Coil</a>
-                    <a href="#sec-16-5" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.5 Moving Coil Galvanometer</a>
-                    <a href="#sec-16-6" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.6 Hall Effect & Derivation</a>
-                    <a href="#sec-16-7" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.7 Hall Probe Measurement</a>
-                    <a href="#sec-16-8" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.8 Biot-Savart Law & Apps</a>
-                    <a href="#sec-16-9" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.9 Ampere's Law & Apps</a>
-                    <a href="#sec-16-10" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">16.10 Parallel Conductors & Ampere</a>
-                    <a href="#interactive-calculators" class="block py-1.5 px-2 rounded bg-blue-50 text-blue-700 font-semibold mt-3">Interactive Solvers</a>
-                    <a href="#solved-numericals" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">NEB Solved Numericals</a>
-                    <a href="#conceptual-qa" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">NEB Short Questions</a>
-                    <a href="#assessment-quiz" class="block py-1.5 px-2 rounded hover:bg-slate-100 hover:text-blue-700 transition">10-Q Board Exam Quiz</a>
-                </nav>
-            </div>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="lg:col-span-9 space-y-12">
-
-            <!-- SECTION INTRO: Magnetic Field Lines & Flux -->
-            <section id="sec-intro" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">NEB Grade XII Physics Syllabus</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Introduction: Magnetic Field Lines & Magnetic Flux</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        A <strong>magnetic field</strong> is a region in space surrounding a magnet, current-carrying conductor, or moving charge within which magnetic forces can be detected. It is represented by the vector field quantity $\vec{B}$, known as <strong>magnetic flux density</strong> or <strong>magnetic induction</strong>. The SI unit of $\vec{B}$ is the <strong>Tesla (T)</strong> or $\text{Wb/m}^2$.
-                    </p>
-                    <p>
-                        <strong>Magnetic Field Lines:</strong> Imaginary continuous visual lines drawn in a magnetic field such that the tangent at any point gives the direction of the magnetic field vector $\vec{B}$ at that point.
-                    </p>
-                    
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4 text-sm font-sans space-y-2">
-                        <h4 class="font-bold text-slate-800">Fundamental Properties of Magnetic Field Lines:</h4>
-                        <ol class="list-decimal list-inside space-y-1 text-slate-700">
-                            <li>They form continuous, closed loops (unlike electrostatic field lines which begin on positive charges and end on negative charges).</li>
-                            <li>The tangent to a field line at any point gives the direction of the magnetic field $\vec{B}$.</li>
-                            <li>No two magnetic field lines can cross each other. If they did, two tangents could be drawn at the intersection point, implying two distinct directions for $\vec{B}$ at the same point, which is physically impossible.</li>
-                            <li>The density of field lines per unit cross-sectional area represents the strength of the magnetic field (denser lines represent a stronger field).</li>
-                        </ol>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Magnetic Flux ($\Phi_B$)</h3>
-                    <p>
-                        <strong>Magnetic flux</strong> ($\Phi_B$) through a given surface area $A$ placed in a magnetic field is defined as the total number of magnetic field lines passing normally through that surface.
-                    </p>
-                    
-                    <div class="derivation-box">
-                        <p class="font-sans font-semibold text-blue-900 mb-2">Mathematical Definition:</p>
-                        $$\Phi_B = \int \vec{B} \cdot d\vec{A} = \int B \cos\theta \, dA$$
-                        For a uniform magnetic field $\vec{B}$ passing through a flat area $A$:
-                        $$\Phi_B = \vec{B} \cdot \vec{A} = B A \cos\theta$$
-                        Where:
-                        <ul class="list-disc list-inside text-sm mt-2 font-sans space-y-1">
-                            <li>$\theta$ is the angle between the magnetic field $\vec{B}$ and the <strong>normal vector</strong> $\hat{n}$ to the surface.</li>
-                            <li><strong>SI Unit:</strong> Weber ($\text{Wb}$), where $1 \text{ Wb} = 1 \text{ T} \cdot \text{m}^2 = 1 \text{ V} \cdot \text{s}$.</li>
-                            <li><strong>Dimensional Formula:</strong> $[M^1 L^2 T^{-2} A^{-1}]$.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- SVG Line Diagram 1: Field Lines around Wire & Solenoid -->
-                <div class="svg-diagram-container">
-                    <svg viewBox="0 0 700 260" class="w-full max-w-2xl h-auto" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e293b"/>
-                            </marker>
-                            <marker id="arrow-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                                <path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/>
-                            </marker>
-                        </defs>
-
-                        <!-- Left Diagram: Straight Current Wire -->
-                        <g transform="translate(20, 10)">
-                            <text x="140" y="25" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(a) Magnetic Field around Straight Conductor</text>
-                            
-                            <!-- Concentric circles representing B field -->
-                            <ellipse cx="140" cy="140" rx="40" ry="20" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 2"/>
-                            <ellipse cx="140" cy="140" rx="75" ry="37.5" fill="none" stroke="#64748b" stroke-width="1.5"/>
-                            <ellipse cx="140" cy="140" rx="110" ry="55" fill="none" stroke="#64748b" stroke-width="1.5"/>
-                            
-                            <!-- Field direction arrows -->
-                            <path d="M 180 140 L 180 138" marker-end="url(#arrow-blue)"/>
-                            <path d="M 215 140 L 215 138" marker-end="url(#arrow-blue)"/>
-                            <path d="M 250 140 L 250 138" marker-end="url(#arrow-blue)"/>
-
-                            <!-- Straight wire -->
-                            <line x1="140" y1="220" x2="140" y2="45" stroke="#1e293b" stroke-width="6"/>
-                            <line x1="140" y1="45" x2="140" y2="35" stroke="#1e293b" stroke-width="3" marker-end="url(#arrow)"/>
-                            
-                            <text x="150" y="45" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1d4ed8">Current I</text>
-                            <text x="220" y="125" font-family="sans-serif" font-size="11" fill="#1d4ed8">B-field loops</text>
-                            <text x="140" y="245" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#475569">Right-Hand Thumb Rule</text>
-                        </g>
-
-                        <!-- Right Diagram: Solenoid Field -->
-                        <g transform="translate(360, 10)">
-                            <text x="160" y="25" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(b) Magnetic Field lines of a Solenoid</text>
-                            
-                            <!-- Internal uniform parallel lines -->
-                            <line x1="50" y1="120" x2="270" y2="120" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
-                            <line x1="50" y1="135" x2="270" y2="135" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
-                            <line x1="50" y1="150" x2="270" y2="150" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
-
-                            <!-- External closed loop paths -->
-                            <path d="M 270 110 C 310 60, 10 60, 50 110" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="3 2"/>
-                            <path d="M 270 160 C 310 210, 10 210, 50 160" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="3 2"/>
-
-                            <!-- Solenoid coils cross section -->
-                            <rect x="50" y="100" width="220" height="70" fill="none" stroke="#0f172a" stroke-width="2" rx="4"/>
-                            
-                            <!-- Coils loops visualization -->
-                            <g fill="#991b1b">
-                                <circle cx="70" cy="100" r="4"/><circle cx="100" cy="100" r="4"/><circle cx="130" cy="100" r="4"/>
-                                <circle cx="160" cy="100" r="4"/><circle cx="190" cy="100" r="4"/><circle cx="220" cy="100" r="4"/><circle cx="250" cy="100" r="4"/>
-                                
-                                <circle cx="70" cy="170" r="4"/><circle cx="100" cy="170" r="4"/><circle cx="130" cy="170" r="4"/>
-                                <circle cx="160" cy="170" r="4"/><circle cx="190" cy="170" r="4"/><circle cx="220" cy="170" r="4"/><circle cx="250" cy="170" r="4"/>
-                            </g>
-
-                            <text x="30" y="140" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a">S</text>
-                            <text x="285" y="140" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0f172a">N</text>
-                            <text x="160" y="235" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#475569">Uniform field B = μ₀nI inside solenoid</text>
-                        </g>
-                    </svg>
-                    <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.1: Magnetic field lines for a straight wire (Left) and a long solenoid (Right) ready for printing.</span>
-                </div>
-            </section>
-
-            <!-- SECTION 16.1: OERSTED'S EXPERIMENT -->
-            <section id="sec-16-1" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.1</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Oersted's Experiment, Outcome & Limitations</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        In 1820, Danish physicist <strong>Hans Christian Oersted</strong> discovered the fundamental connection between electricity and magnetism. Prior to this discovery, electricity and magnetism were treated as completely independent phenomena.
-                    </p>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-4 mb-2 font-sans">Experimental Setup & Procedure</h3>
-                    <p>
-                        A straight metallic conductor $AB$ is aligned parallel to the magnetic meridian (North-South direction) and placed directly over a pivoted magnetic needle. The wire is connected in series with a DC voltage source (battery), a rheostat, and a key $K$.
-                    </p>
-
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4 text-sm font-sans space-y-2">
-                        <h4 class="font-bold text-slate-800">Key Observations:</h4>
-                        <ol class="list-decimal list-inside space-y-1.5 text-slate-700">
-                            <li><strong>When no current flows ($I = 0$):</strong> The magnetic needle remains stationary along the Earth's North-South magnetic axis.</li>
-                            <li><strong>When current flows from South to North ($S \to N$):</strong> The North pole ($N$-pole) of the magnetic needle immediately deflects towards the <strong>West</strong>. (Remembered via the <strong>SNOW Rule</strong>: <em>Current from <strong>S</strong>outh to <strong>N</strong>orth <strong>O</strong>ver needle deflects <strong>W</strong>est</em>).</li>
-                            <li><strong>When current direction is reversed ($N \to S$):</strong> The $N$-pole of the needle deflects towards the <strong>East</strong>.</li>
-                            <li><strong>When current magnitude $I$ is increased:</strong> The angle of deflection increases, demonstrating a stronger magnetic force.</li>
-                        </ol>
-                    </div>
-
-                    <!-- SVG Line Diagram 2: Oersted Experiment Setup -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 650 220" class="w-full max-w-xl h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Circuit 1: Switch Open -->
-                            <g transform="translate(20, 10)">
-                                <text x="130" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(a) Switch Open (I = 0)</text>
-                                <!-- Wire -->
-                                <line x1="30" y1="80" x2="230" y2="80" stroke="#1e293b" stroke-width="4"/>
-                                <text x="25" y="75" font-family="sans-serif" font-size="11" font-weight="bold">S</text>
-                                <text x="235" y="75" font-family="sans-serif" font-size="11" font-weight="bold">N</text>
-                                <!-- Magnetic needle aligned N-S -->
-                                <polygon points="130,50 145,80 130,110 115,80" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5"/>
-                                <polygon points="130,50 145,80 115,80" fill="#991b1b" stroke="#0f172a" stroke-width="1.5"/>
-                                <circle cx="130" cy="80" r="3" fill="#0f172a"/>
-                                <text x="130" y="42" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#991b1b">N</text>
-                                <text x="130" y="125" font-family="sans-serif" font-size="10" text-anchor="middle">No Deflection</text>
-                                <!-- Circuit details -->
-                                <path d="M 30 80 L 30 160 L 100 160 M 160 160 L 230 160 L 230 80" stroke="#475569" stroke-width="2" fill="none"/>
-                                <!-- Battery icon -->
-                                <line x1="100" y1="150" x2="100" y2="170" stroke="#0f172a" stroke-width="3"/>
-                                <line x1="110" y1="155" x2="110" y2="165" stroke="#0f172a" stroke-width="1.5"/>
-                                <!-- Switch open -->
-                                <circle cx="140" cy="160" r="3" fill="#0f172a"/>
-                                <line x1="140" y1="160" x2="155" y2="150" stroke="#0f172a" stroke-width="2"/>
-                                <circle cx="160" cy="160" r="3" fill="#0f172a"/>
-                            </g>
-
-                            <!-- Circuit 2: Switch Closed (I > 0) -->
-                            <g transform="translate(340, 10)">
-                                <text x="130" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(b) Switch Closed (Current S -> N)</text>
-                                <!-- Wire -->
-                                <line x1="30" y1="80" x2="230" y2="80" stroke="#1d4ed8" stroke-width="4"/>
-                                <path d="M 120 80 L 140 80" marker-end="url(#arrow-blue)" stroke="#1d4ed8" stroke-width="2"/>
-                                <!-- Deflected Magnetic needle -->
-                                <g transform="rotate(-30 130 80)">
-                                    <polygon points="130,50 145,80 130,110 115,80" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5"/>
-                                    <polygon points="130,50 145,80 115,80" fill="#991b1b" stroke="#0f172a" stroke-width="1.5"/>
-                                    <circle cx="130" cy="80" r="3" fill="#0f172a"/>
-                                    <text x="130" y="42" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#991b1b">N</text>
-                                </g>
-                                <text x="80" y="50" font-family="sans-serif" font-size="10" font-weight="bold" fill="#047857">Deflection West</text>
-                                <!-- Circuit details -->
-                                <path d="M 30 80 L 30 160 L 100 160 M 160 160 L 230 160 L 230 80" stroke="#475569" stroke-width="2" fill="none"/>
-                                <!-- Battery -->
-                                <line x1="100" y1="150" x2="100" y2="170" stroke="#0f172a" stroke-width="3"/>
-                                <line x1="110" y1="155" x2="110" y2="165" stroke="#0f172a" stroke-width="1.5"/>
-                                <!-- Switch closed -->
-                                <circle cx="140" cy="160" r="3" fill="#0f172a"/>
-                                <line x1="140" y1="160" x2="160" y2="160" stroke="#0f172a" stroke-width="2"/>
-                                <circle cx="160" cy="160" r="3" fill="#0f172a"/>
-                            </g>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.2: Oersted's experimental setup illustrating magnetic deflection of a compass needle due to current.</span>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Fundamental Outcome & Significance</h3>
-                    <p>
-                        Oersted's experiment established that <strong>moving electric charges (electric current) produce a magnetic field</strong> in surrounding space. This laid the foundation for electromagnetism.
-                    </p>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Limitations of Oersted's Experiment</h3>
-                    <ul class="list-disc list-inside space-y-1.5 text-slate-700 font-serif">
-                        <li>It was purely <strong>qualitative</strong> in nature and did not provide a mathematical law or formula to calculate the exact magnitude of magnetic field $\vec{B}$.</li>
-                        <li>It applies only to steady continuous direct currents (DC).</li>
-                        <li>The observed deflection is influenced by the horizontal component of Earth's magnetic field ($B_H$), leading to systematic orientation errors.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- SECTION 16.2: FORCE ON MOVING CHARGE IN B-FIELD -->
-            <section id="sec-16-2" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.2</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Force on a Moving Charge in a Uniform Magnetic Field</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        When a point charge $q$ moves with velocity $\vec{v}$ through a region containing a uniform magnetic field $\vec{B}$, it experiences a side-wise deflecting force termed the <strong>Magnetic Lorentz Force</strong> ($\vec{F}_m$).
-                    </p>
-
-                    <div class="derivation-box">
-                        <p class="font-sans font-semibold text-blue-900 mb-2">Lorentz Magnetic Force Vector Formula:</p>
-                        $$\vec{F}_m = q (\vec{v} \times \vec{B})$$
-                        In scalar magnitude form:
-                        $$F_m = |q| v B \sin\theta$$
-                        where $\theta$ is the angle between velocity vector $\vec{v}$ and magnetic field vector $\vec{B}$.
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Special Cases for Force Magnitude:</h3>
-                    <ul class="list-disc list-inside space-y-1 text-slate-700">
-                        <li><strong>Case 1 ($\theta = 0^\circ$ or $180^\circ$):</strong> If charge moves parallel or anti-parallel to field, $\sin\theta = 0 \implies F_m = 0$. Charge continues un-deflected.</li>
-                        <li><strong>Case 2 ($\theta = 90^\circ$):</strong> If charge enters perpendicular to field, $\sin 90^\circ = 1 \implies F_{m,\text{max}} = q v B$. Force is maximum.</li>
-                        <li><strong>Case 3 ($v = 0$):</strong> A stationary charge in a magnetic field experiences zero magnetic force ($F_m = 0$).</li>
-                    </ul>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans font-sans">Direction of Force: Fleming's Left-Hand Rule</h3>
-                    <p>
-                        Stretch the thumb, forefinger, and middle finger of the left hand mutually perpendicular to each other:
-                    </p>
-                    <ul class="list-disc list-inside space-y-1 text-slate-700">
-                        <li><strong>Forefinger:</strong> Points in the direction of Magnetic Field ($\vec{B}$).</li>
-                        <li><strong>Middle Finger:</strong> Points in the direction of Motion of Positive Charge ($\vec{v}$).</li>
-                        <li><strong>Thumb:</strong> Points in the direction of Magnetic Force ($\vec{F}_m$).</li>
-                    </ul>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Motion of a Charged Particle in Uniform B-Field</h3>
-
-                    <!-- Case 1: Perpendicular Entry -->
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4">
-                        <h4 class="font-bold text-slate-900 font-sans">Case A: Perpendicular Entry ($\theta = 90^\circ$) &mdash; Circular Motion</h4>
-                        <p class="mt-2 font-serif text-slate-700">
-                            Since $\vec{F}_m \perp \vec{v}$ at all points, the magnetic force does zero work ($\vec{F}_m \cdot d\vec{r} = 0$) and changes only the direction of velocity without changing kinetic energy or speed. $\vec{F}_m$ acts as the necessary centripetal force:
-                        </p>
-                        $$\frac{m v^2}{r} = q v B \implies r = \frac{m v}{q B}$$
-                        <p class="font-serif text-slate-700">Time period of revolution $T$ and Cyclotron Frequency $f$:</p>
-                        $$T = \frac{2\pi r}{v} = \frac{2\pi m}{q B}$$
-                        $$f = \frac{1}{T} = \frac{q B}{2\pi m}$$
-                        <p class="text-xs text-slate-600 font-sans italic mt-1">Note: Time period and frequency are independent of particle velocity $v$ and radius $r$.</p>
-                    </div>
-
-                    <!-- Case 2: Oblique Entry -->
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4">
-                        <h4 class="font-bold text-slate-900 font-sans">Case B: Oblique Entry ($\theta \neq 0^\circ, 90^\circ$) &mdash; Helical Motion</h4>
-                        <p class="mt-2 font-serif text-slate-700">
-                            Resolve velocity into two components:
-                        </p>
-                        <ul class="list-disc list-inside text-sm font-sans space-y-1">
-                            <li>$v_\parallel = v \cos\theta$ (parallel to $\vec{B}$, unchanged, causes linear displacement).</li>
-                            <li>$v_\perp = v \sin\theta$ (perpendicular to $\vec{B}$, causes circular trajectory of radius $r = \frac{m v \sin\theta}{q B}$).</li>
-                        </ul>
-                        <p class="mt-2 font-serif text-slate-700">
-                            The resulting trajectory is a <strong>Helix</strong>. The <strong>Pitch ($p$)</strong> is the linear distance advanced along the field per revolution:
-                        </p>
-                        $$p = v_\parallel \times T = (v \cos\theta) \cdot \left(\frac{2\pi m}{q B}\right)$$
-                    </div>
-
-                    <!-- SVG Line Diagram 3: Charged Particle Trajectory -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 650 220" class="w-full max-w-xl h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Circular Motion Diagram -->
-                            <g transform="translate(20, 10)">
-                                <text x="130" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(a) Perpendicular Entry (θ = 90°)</text>
-                                <!-- Inward B-field crosses -->
-                                <g fill="#94a3b8" font-family="sans-serif" font-size="12">
-                                    <text x="40" y="60">×</text><text x="90" y="60">×</text><text x="140" y="60">×</text><text x="190" y="60">×</text>
-                                    <text x="40" y="110">×</text><text x="90" y="110">×</text><text x="140" y="110">×</text><text x="190" y="110">×</text>
-                                    <text x="40" y="160">×</text><text x="90" y="160">×</text><text x="140" y="160">×</text><text x="190" y="160">×</text>
-                                </g>
-                                <!-- Circular path -->
-                                <circle cx="130" cy="110" r="45" fill="none" stroke="#1d4ed8" stroke-width="2"/>
-                                <!-- Charge position -->
-                                <circle cx="175" cy="110" r="6" fill="#991b1b"/>
-                                <text x="172" y="113" font-family="sans-serif" font-size="9" font-weight="bold" fill="#fff">+</text>
-                                <!-- Velocity vector -->
-                                <line x1="175" y1="110" x2="175" y2="70" stroke="#047857" stroke-width="2" marker-end="url(#arrow)"/>
-                                <text x="182" y="75" font-family="sans-serif" font-size="11" font-weight="bold" fill="#047857">v</text>
-                                <!-- Centripetal force vector -->
-                                <line x1="175" y1="110" x2="140" y2="110" stroke="#991b1b" stroke-width="2" marker-end="url(#arrow)"/>
-                                <text x="145" y="105" font-family="sans-serif" font-size="11" font-weight="bold" fill="#991b1b">F_m</text>
-                                <text x="130" y="195" font-family="sans-serif" font-size="11" text-anchor="middle">Circular Orbit r = mv / qB</text>
-                            </g>
-
-                            <!-- Helical Motion Diagram -->
-                            <g transform="translate(340, 10)">
-                                <text x="140" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(b) Oblique Entry (Helical Path)</text>
-                                <!-- Parallel B field lines -->
-                                <line x1="20" y1="60" x2="260" y2="60" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-                                <line x1="20" y1="110" x2="260" y2="110" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-                                <line x1="20" y1="160" x2="260" y2="160" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
-                                <text x="265" y="115" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1d4ed8">B</text>
-
-                                <!-- Helical curve -->
-                                <path d="M 30 110 Q 50 60, 70 110 T 110 110 T 150 110 T 190 110 T 230 110" fill="none" stroke="#1d4ed8" stroke-width="2.5"/>
-                                <!-- Pitch dimension indicator -->
-                                <line x1="70" y1="175" x2="110" y2="175" stroke="#991b1b" stroke-width="1.5"/>
-                                <line x1="70" y1="170" x2="70" y2="180" stroke="#991b1b" stroke-width="1.5"/>
-                                <line x1="110" y1="170" x2="110" y2="180" stroke="#991b1b" stroke-width="1.5"/>
-                                <text x="90" y="193" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#991b1b">Pitch p</text>
-                            </g>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.3: Trajectories of a charged particle in a uniform magnetic field.</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 16.3: FORCE ON CURRENT-CARRYING CONDUCTOR -->
-            <section id="sec-16-3" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.3</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Force on a Current-Carrying Conductor in a Uniform B-Field</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        Since electric current in a conductor consists of moving free charge carriers, placing a current-carrying wire in an external magnetic field causes each drift charge to experience a Lorentz force. The microscopic sum of these forces results in a macroscopic force on the conductor.
-                    </p>
-
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-1 mb-3">Microscopic Derivation:</h4>
-                        <p>Consider a straight conductor segment of length $L$, cross-sectional area $A$, carrying steady current $I$.</p>
-                        <ul class="list-disc list-inside text-sm font-sans space-y-1 my-2">
-                            <li>Let $n =$ number density of free electrons per unit volume.</li>
-                            <li>$v_d =$ drift velocity of electrons.</li>
-                            <li>$e =$ elementary electron charge ($1.6 \times 10^{-19} \text{ C}$).</li>
-                        </ul>
-                        <p>Total number of free charge carriers in segment volume $V = A L$:</p>
-                        $$N = n \times (A L)$$
-                        <p>Magnetic Lorentz force on a single free electron moving with velocity $\vec{v}_d$:</p>
-                        $$\vec{f}_e = -e (\vec{v}_d \times \vec{B})$$
-                        <p>Total magnetic force $\vec{F}$ on the conductor segment:</p>
-                        $$\vec{F} = N \vec{f}_e = (n A L) [-e (\vec{v}_d \times \vec{B})] = - (n A e \vec{v}_d L) \times \vec{B}$$
-                        <p>Recalling the microscopic current relation $I = n A e v_d$, and assigning vector length $\vec{L}$ in direction of conventional current:</p>
-                        $$\vec{F} = I (\vec{L} \times \vec{B})$$
-                        <p>In scalar magnitude form:</p>
-                        $$F = I L B \sin\theta$$
-                        where $\theta$ is the angle between wire length vector $\vec{L}$ and magnetic field $\vec{B}$.
-                    </div>
-
-                    <!-- SVG Line Diagram 4: Conductor Segment Microscopic Model -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 550 200" class="w-full max-w-lg h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Cylinder conductor wire -->
-                            <rect x="80" y="70" width="340" height="60" rx="30" fill="#f1f5f9" stroke="#1e293b" stroke-width="2"/>
-                            <!-- Magnetic field arrows background -->
-                            <g stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)">
-                                <line x1="120" y1="180" x2="220" y2="20"/>
-                                <line x1="220" y1="180" x2="320" y2="20"/>
-                                <line x1="320" y1="180" x2="420" y2="20"/>
-                            </g>
-                            <text x="425" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1d4ed8">Field B</text>
-
-                            <!-- Electron drift inside wire -->
-                            <circle cx="200" cy="100" r="7" fill="#991b1b"/>
-                            <text x="197" y="103" font-family="sans-serif" font-size="9" font-weight="bold" fill="#fff">-</text>
-                            <line x1="200" y1="100" x2="150" y2="100" stroke="#991b1b" stroke-width="2" marker-end="url(#arrow)"/>
-                            <text x="160" y="92" font-family="sans-serif" font-size="10" font-weight="bold" fill="#991b1b">v_d</text>
-
-                            <!-- Force Vector F -->
-                            <line x1="250" y1="100" x2="250" y2="20" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
-                            <text x="260" y="30" font-family="sans-serif" font-size="12" font-weight="bold">Force F = I L B sinθ</text>
-
-                            <!-- Current arrow -->
-                            <line x1="300" y1="100" x2="370" y2="100" stroke="#047857" stroke-width="3" marker-end="url(#arrow)"/>
-                            <text x="330" y="90" font-family="sans-serif" font-size="11" font-weight="bold" fill="#047857">Current I</text>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.4: Magnetic force generation on a current-carrying conductor segment.</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 16.4: FORCE AND TORQUE ON RECTANGULAR COIL -->
-            <section id="sec-16-4" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.4</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Force and Torque on a Rectangular Coil in Uniform B-Field</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        Consider a rectangular coil $PQRS$ of length $l$, width $b$, having $N$ turns carrying steady current $I$, placed in a uniform magnetic field $\vec{B}$. Let $\theta$ be the angle between the magnetic field vector $\vec{B}$ and the <strong>normal vector</strong> $\hat{n}$ to the plane of the coil.
-                    </p>
-
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-1 mb-3">Derivation of Torque ($\tau$):</h4>
-                        <ol class="list-decimal list-inside space-y-2 font-serif text-slate-700">
-                            <li>
-                                <strong>Forces on Horizontal Sides ($QR$ and $SP$):</strong>
-                                Equal in magnitude ($F = I b B \cos\theta$), opposite in direction, and act along the same line of action (axis of rotation). Thus, they cancel each other out with zero net force and zero net torque.
-                            </li>
-                            <li>
-                                <strong>Forces on Vertical Sides ($PQ$ and $RS$):</strong>
-                                Magnitude of force on each vertical side of length $l$:
-                                $$F_1 = F_2 = N I l B$$
-                                These two forces are equal in magnitude, opposite in direction, but have <em>different lines of action</em>. Hence, they constitute a <strong>Deflecting Couple</strong>.
-                            </li>
-                            <li>
-                                <strong>Arm of Couple ($d$):</strong>
-                                Perpendicular distance between lines of action of $F_1$ and $F_2$:
-                                $$d = b \sin\theta$$
-                            </li>
-                            <li>
-                                <strong>Torque Magnitude ($\tau$):</strong>
-                                $$\tau = \text{Force} \times \text{Perpendicular distance} = (N I l B) \cdot (b \sin\theta)$$
-                                Since surface area $A = l \times b$:
-                                $$\tau = N I A B \sin\theta$$
-                            </li>
-                        </ol>
-                        <p class="mt-2 font-sans font-semibold text-blue-900">Vector Form of Torque:</p>
-                        $$\vec{\tau} = \vec{\mu} \times \vec{B}$$
-                        where $\vec{\mu} = N I \vec{A}$ is the <strong>Magnetic Dipole Moment</strong> of the coil (SI Unit: $\text{A} \cdot \text{m}^2$).
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Work Done and Potential Energy</h3>
-                    <p>
-                        When the magnetic dipole rotates from initial angle $\theta_1$ to final angle $\theta_2$ in the B-field:
-                    </p>
-                    $$W = \int_{\theta_1}^{\theta_2} \tau \, d\theta = N I A B \int_{\theta_1}^{\theta_2} \sin\theta \, d\theta = - N I A B (\cos\theta_2 - \cos\theta_1)$$
-                    <p>
-                        <strong>Magnetic Potential Energy ($U$):</strong>
-                    </p>
-                    $$U = -\vec{\mu} \cdot \vec{B} = -\mu B \cos\theta$$
-                    <ul class="list-disc list-inside text-sm font-sans space-y-1 mt-2">
-                        <li><strong>Stable Equilibrium ($\theta = 0^\circ$):</strong> $U_{\text{min}} = -\mu B$ (Coil normal parallel to field).</li>
-                        <li><strong>Unstable Equilibrium ($\theta = 180^\circ$):</strong> $U_{\text{max}} = +\mu B$ (Coil normal anti-parallel to field).</li>
-                    </ul>
-
-                    <!-- SVG Line Diagram 5: Torque on Rectangular Loop -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 550 240" class="w-full max-w-lg h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Field lines -->
-                            <g stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)">
-                                <line x1="30" y1="50" x2="510" y2="50"/>
-                                <line x1="30" y1="120" x2="510" y2="120"/>
-                                <line x1="30" y1="190" x2="510" y2="190"/>
-                            </g>
-                            <text x="515" y="125" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1d4ed8">B</text>
-
-                            <!-- Rectangular Loop in Perspective -->
-                            <polygon points="200,60 360,90 300,180 140,150" fill="none" stroke="#0f172a" stroke-width="2.5"/>
-                            <text x="185" y="55" font-family="sans-serif" font-size="11" font-weight="bold">P</text>
-                            <text x="370" y="90" font-family="sans-serif" font-size="11" font-weight="bold">Q</text>
-                            <text x="310" y="195" font-family="sans-serif" font-size="11" font-weight="bold">R</text>
-                            <text x="125" y="155" font-family="sans-serif" font-size="11" font-weight="bold">S</text>
-
-                            <!-- Normal vector n -->
-                            <line x1="250" y1="120" x2="210" y2="30" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow-blue)"/>
-                            <text x="200" y="25" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1d4ed8">Normal n̂</text>
-
-                            <!-- Couple Forces F1 and F2 -->
-                            <line x1="170" y1="105" x2="170" y2="20" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
-                            <text x="150" y="20" font-family="sans-serif" font-size="11" font-weight="bold" fill="#991b1b">F1</text>
-
-                            <line x1="330" y1="135" x2="330" y2="220" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
-                            <text x="340" y="225" font-family="sans-serif" font-size="11" font-weight="bold" fill="#991b1b">F2</text>
-
-                            <text x="250" y="225" font-family="sans-serif" font-size="11" text-anchor="middle">Torque τ = N I A B sinθ</text>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.5: Deflecting couple on a current-carrying rectangular loop in a uniform magnetic field.</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 16.5: MOVING COIL GALVANOMETER -->
-            <section id="sec-16-5" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.5</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Moving Coil Galvanometer (MCG) & Applications</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        A <strong>Moving Coil Galvanometer</strong> is a sensitive electromagnetic instrument used to detect and measure extremely small electric currents (of the order of microamperes, $\mu\text{A}$).
-                    </p>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-4 mb-2 font-sans">Working Principle</h3>
-                    <p>
-                        When a current-carrying coil is suspended in a magnetic field, it experiences a torque ($\tau$). In a <strong>radial magnetic field</strong>, the plane of the coil is always parallel to the field lines ($\theta = 90^\circ$), resulting in a constant maximum deflecting torque.
-                    </p>
-
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-1 mb-3">Mathematical Theory & Equilibrium Equation:</h4>
-                        <p>1. <strong>Deflecting Torque ($\tau_d$):</strong></p>
-                        $$\tau_d = N I A B \sin 90^\circ = N I A B$$
-                        <p>2. <strong>Restoring Torque ($\tau_r$):</strong> Provided by the hairspring/phosphor-bronze strip twisted through angle $\theta$:</p>
-                        $$\tau_r = C \theta$$
-                        where $C$ is the torsional restitution constant (restoring torque per unit twist).
-                        <p>At equilibrium position ($\tau_d = \tau_r$):</p>
-                        $$N I A B = C \theta \implies I = \left(\frac{C}{N A B}\right) \theta$$
-                        $$I = K \theta \implies I \propto \theta$$
-                        where $K = \frac{C}{N A B}$ is the <strong>Galvanometer Constant</strong>. The linear relationship ($I \propto \theta$) enables a linear linear-spaced dial scale.
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Role of Concave Pole Pieces & Soft Iron Core</h3>
-                    <ul class="list-disc list-inside space-y-1.5 text-slate-700">
-                        <li><strong>Concave Cylindrical Pole Pieces:</strong> Produce a <strong>radial magnetic field</strong> so that magnetic field lines are always parallel to the coil plane ($\theta = 90^\circ$ always).</li>
-                        <li><strong>Soft Iron Core:</strong> High relative permeability ($\mu_r \gg 1$) concentrates magnetic flux, dramatically increasing field strength $B$ and making the field strictly radial.</li>
-                    </ul>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Sensitivities of MCG</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 font-sans text-sm">
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
-                            <h5 class="font-bold text-slate-900">1. Current Sensitivity ($S_I$)</h5>
-                            <p class="text-xs text-slate-600 my-1">Deflection produced per unit electric current:</p>
-                            $$S_I = \frac{\theta}{I} = \frac{N A B}{C} \quad [\text{rad/A or div/A}]$$
-                        </div>
-                        <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
-                            <h5 class="font-bold text-slate-900">2. Voltage Sensitivity ($S_V$)</h5>
-                            <p class="text-xs text-slate-600 my-1">Deflection produced per unit applied voltage:</p>
-                            $$S_V = \frac{\theta}{V} = \frac{\theta}{I R_g} = \frac{N A B}{C R_g} \quad [\text{div/V}]$$
-                        </div>
-                    </div>
-
-                    <!-- SVG Line Diagram 6: MCG Internal Construction & Radial Field -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 650 240" class="w-full max-w-xl h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Radial Field Pole Pieces & Soft Iron Core Top View -->
-                            <g transform="translate(30, 20)">
-                                <text x="140" y="15" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(a) Radial Field Cross-Section</text>
-                                <!-- North Pole Concave -->
-                                <path d="M 20 40 C 70 60, 70 160, 20 180 L 10 180 L 10 40 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
-                                <text x="35" y="115" font-family="sans-serif" font-size="16" font-weight="bold" fill="#991b1b">N</text>
-                                <!-- South Pole Concave -->
-                                <path d="M 260 40 C 210 60, 210 160, 260 180 L 270 180 L 270 40 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
-                                <text x="240" y="115" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1d4ed8">S</text>
-                                <!-- Soft Iron Core -->
-                                <circle cx="140" cy="110" r="45" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
-                                <text x="140" y="114" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold">Iron Core</text>
-                                <!-- Rectangular Coil section -->
-                                <rect x="80" y="105" width="120" height="10" fill="none" stroke="#991b1b" stroke-width="2.5" transform="rotate(-20 140 110)"/>
-                                <!-- Radial Field Lines -->
-                                <path d="M 65 80 L 95 95 M 60 110 L 95 110 M 65 140 L 95 125" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
-                                <path d="M 185 95 L 215 80 M 185 110 L 220 110 M 185 125 L 215 140" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
-                            </g>
-
-                            <!-- MCG Ammeter & Voltmeter Conversion Circuits -->
-                            <g transform="translate(350, 20)">
-                                <text x="130" y="15" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(b) Conversion Circuits</text>
-                                
-                                <!-- Ammeter (Shunt in parallel) -->
-                                <g transform="translate(0, 35)">
-                                    <rect x="10" y="10" width="240" height="70" fill="none" stroke="#cbd5e1" stroke-dasharray="3 2" rx="4"/>
-                                    <text x="20" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#047857">Ammeter Conversion (Shunt S)</text>
-                                    <line x1="20" y1="45" x2="60" y2="45" stroke="#0f172a" stroke-width="2"/>
-                                    <!-- Galvanometer -->
-                                    <circle cx="90" cy="45" r="14" fill="#fff" stroke="#0f172a" stroke-width="2"/>
-                                    <text x="90" y="50" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">G</text>
-                                    <line x1="104" y1="45" x2="220" y2="45" stroke="#0f172a" stroke-width="2"/>
-                                    <!-- Parallel Shunt S -->
-                                    <path d="M 50 45 L 50 70 L 90 70 M 130 70 L 180 70 L 180 45" stroke="#0f172a" stroke-width="2" fill="none"/>
-                                    <rect x="90" y="65" width="40" height="10" fill="#f1f5f9" stroke="#991b1b" stroke-width="2"/>
-                                    <text x="110" y="62" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#991b1b">Shunt S</text>
-                                </g>
-
-                                <!-- Voltmeter (Series Resistance R) -->
-                                <g transform="translate(0, 130)">
-                                    <rect x="10" y="10" width="240" height="60" fill="none" stroke="#cbd5e1" stroke-dasharray="3 2" rx="4"/>
-                                    <text x="20" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">Voltmeter Conversion (Series R)</text>
-                                    <line x1="20" y1="45" x2="60" y2="45" stroke="#0f172a" stroke-width="2"/>
-                                    <circle cx="75" cy="45" r="14" fill="#fff" stroke="#0f172a" stroke-width="2"/>
-                                    <text x="75" y="50" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">G</text>
-                                    <line x1="89" y1="45" x2="130" y2="45" stroke="#0f172a" stroke-width="2"/>
-                                    <!-- Series Resistor -->
-                                    <rect x="130" y="40" width="50" height="10" fill="#f1f5f9" stroke="#1d4ed8" stroke-width="2"/>
-                                    <text x="155" y="35" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#1d4ed8">Series R</text>
-                                    <line x1="180" y1="45" x2="230" y2="45" stroke="#0f172a" stroke-width="2"/>
-                                </g>
-                            </g>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.6: MCG radial magnetic field configuration and conversion schematics for Ammeter and Voltmeter.</span>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Applications: Conversion of MCG to Ammeter & Voltmeter</h3>
-
-                    <!-- Ammeter Derivation -->
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans text-emerald-800 mb-2">1. Conversion into Ammeter (To measure current in series)</h4>
-                        <p>
-                            A galvanometer is converted into an ammeter by connecting a <strong>low resistance (Shunt, $S$) in parallel</strong> with its coil.
-                        </p>
-                        <p>Let $I_g =$ full-scale deflection current of MCG, $R_g =$ galvanometer coil resistance, $I =$ total current to be measured ($I > I_g$).</p>
-                        <p>Since $R_g$ and $S$ are in parallel, potential difference across both branches is equal:</p>
-                        $$I_g R_g = (I - I_g) S \implies S = \frac{I_g R_g}{I - I_g}$$
-                        <p class="text-sm font-sans mt-2"><strong>Effective Resistance of Ammeter ($R_A$):</strong></p>
-                        $$R_A = \frac{R_g S}{R_g + S} \approx S \quad (\text{Very Low, ideal ammeter } R_A = 0)$$
-                    </div>
-
-                    <!-- Voltmeter Derivation -->
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans text-blue-800 mb-2">2. Conversion into Voltmeter (To measure voltage in parallel)</h4>
-                        <p>
-                            A galvanometer is converted into a voltmeter by connecting a <strong>high resistance ($R$) in series</strong> with its coil.
-                        </p>
-                        <p>Let $V =$ total potential difference to be measured across range $0 - V$ volts.</p>
-                        <p>Total resistance of voltmeter branch $= R_g + R$. Applying Ohm's Law:</p>
-                        $$V = I_g (R_g + R) \implies R = \frac{V}{I_g} - R_g$$
-                        <p class="text-sm font-sans mt-2"><strong>Effective Resistance of Voltmeter ($R_V$):</strong></p>
-                        $$R_V = R_g + R \quad (\text{Very High, ideal voltmeter } R_V = \infty)$$
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 16.6: HALL EFFECT & DERIVATION -->
-            <section id="sec-16-6" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.6</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Hall Effect & Derivation of Hall Voltage ($V_H = \frac{BI}{ntq}$)</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        <strong>Hall Effect Definition:</strong> When a current-carrying conductor or semiconductor slab is placed in a transverse magnetic field, a potential difference is generated across its opposite faces perpendicular to both the direction of current and the magnetic field. This transverse voltage is known as the <strong>Hall Voltage ($V_H$)</strong>.
-                    </p>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-4 mb-2 font-sans">Physical Mechanism & Derivation</h3>
-                    <p>
-                        Consider a rectangular semiconductor slab of length $l$, width $w$, thickness $t$, carrying steady current $I$ along the X-axis in a magnetic field $\vec{B}$ directed along the Z-axis.
-                    </p>
-
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-1 mb-3">Step-by-Step Derivation of Hall Voltage:</h4>
-                        <ol class="list-decimal list-inside space-y-2 font-serif text-slate-700">
-                            <li>
-                                <strong>Magnetic Lorentz Force ($F_M$):</strong>
-                                Charge carriers (charge $q$) drift with velocity $v_d$ along X-axis. They experience magnetic force along Y-axis:
-                                $$F_M = q v_d B$$
-                            </li>
-                            <li>
-                                <strong>Charge Accumulation & Transverse Electric Field ($E_H$):</strong>
-                                Accumulation of charges on the upper face creates an internal transverse electric field $E_H$. This exerts an opposing electrostatic force $F_E$:
-                                $$F_E = q E_H$$
-                            </li>
-                            <li>
-                                <strong>Dynamic Equilibrium Condition ($F_E = F_M$):</strong>
-                                $$q E_H = q v_d B \implies E_H = v_d B$$
-                            </li>
-                            <li>
-                                <strong>Relation between Hall Voltage $V_H$ and Electric Field $E_H$:</strong>
-                                Since transverse width is $w$:
-                                $$V_H = E_H \cdot w = (v_d B) w$$
-                            </li>
-                            <li>
-                                <strong>Substituting Microscopic Current Formula:</strong>
-                                Current $I = n A q v_d = n (w \cdot t) q v_d \implies v_d = \frac{I}{n w t q}$
-                            </li>
-                            <li>
-                                <strong>Final Hall Voltage Formula:</strong>
-                                $$V_H = \left(\frac{I}{n w t q}\right) B w \implies V_H = \frac{B I}{n t q}$$
-                            </li>
-                        </ol>
-                        <p class="mt-3 text-sm font-sans font-semibold text-blue-900">Hall Coefficient ($R_H$):</p>
-                        $$R_H = \frac{1}{n q} \implies V_H = \frac{R_H B I}{t}$$
-                    </div>
-
-                    <!-- SVG Line Diagram 7: Hall Effect 3D Slab -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 580 230" class="w-full max-w-lg h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- 3D Semiconductor Slab -->
-                            <polygon points="120,80 340,80 420,40 200,40" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
-                            <polygon points="120,80 340,80 340,160 120,160" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
-                            <polygon points="340,80 420,40 420,120 340,160" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
-
-                            <!-- Dimensions -->
-                            <!-- Width w -->
-                            <line x1="120" y1="175" x2="340" y2="175" stroke="#475569" stroke-width="1.5"/>
-                            <text x="230" y="195" font-family="sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Width w</text>
-                            <!-- Thickness t -->
-                            <line x1="355" y1="80" x2="355" y2="160" stroke="#475569" stroke-width="1.5"/>
-                            <text x="375" y="125" font-family="sans-serif" font-size="11" font-weight="bold">Thickness t</text>
-
-                            <!-- B Field Vertical Vector -->
-                            <line x1="230" y1="140" x2="230" y2="10" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
-                            <text x="240" y="25" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1d4ed8">Field B (Z-axis)</text>
-
-                            <!-- Current I Horizontal -->
-                            <line x1="50" y1="120" x2="120" y2="120" stroke="#047857" stroke-width="3" marker-end="url(#arrow)"/>
-                            <text x="50" y="110" font-family="sans-serif" font-size="11" font-weight="bold" fill="#047857">Current I</text>
-
-                            <!-- Charge accumulation top/bottom -->
-                            <g fill="#991b1b" font-family="sans-serif" font-size="11" font-weight="bold">
-                                <text x="140" y="75">+</text><text x="180" y="75">+</text><text x="220" y="75">+</text><text x="260" y="75">+</text><text x="300" y="75">+</text>
-                            </g>
-                            <g fill="#1d4ed8" font-family="sans-serif" font-size="13" font-weight="bold">
-                                <text x="140" y="155">-</text><text x="180" y="155">-</text><text x="220" y="155">-</text><text x="260" y="155">-</text><text x="300" y="155">-</text>
-                            </g>
-
-                            <!-- Hall Voltmeter Connection -->
-                            <path d="M 230 75 L 230 50 L 480 50 L 480 100" stroke="#991b1b" stroke-width="1.5" fill="none"/>
-                            <path d="M 230 155 L 230 180 L 480 180 L 480 140" stroke="#1d4ed8" stroke-width="1.5" fill="none"/>
-                            <circle cx="480" cy="120" r="20" fill="#fff" stroke="#0f172a" stroke-width="2"/>
-                            <text x="480" y="124" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">V_H</text>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.7: Hall effect charge separation and Hall voltage measurement in a conductor slab.</span>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Physical Significance of Hall Effect</h3>
-                    <ul class="list-disc list-inside space-y-1.5 text-slate-700">
-                        <li><strong>Determination of Charge Carrier Sign:</strong> Distinguishes whether conduction occurs via negative electrons ($n$-type) or positive holes ($p$-type).</li>
-                        <li><strong>Measurement of Carrier Concentration ($n$):</strong> Directly calculates number density $n = \frac{I B}{V_H t q}$.</li>
-                        <li><strong>Determination of Carrier Mobility ($\mu_e$):</strong> $\mu_e = \sigma |R_H|$, where $\sigma$ is electrical conductivity.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- SECTION 16.7: HALL PROBE -->
-            <section id="sec-16-7" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.7</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Hall Probe for Measuring Flux Density</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        A <strong>Hall Probe</strong> is a calibrated precision sensor based on the Hall effect, widely used in laboratory gaussmeters to measure unknown magnetic flux density $\vec{B}$.
-                    </p>
-
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4 text-sm font-sans space-y-2">
-                        <h4 class="font-bold text-slate-800">Operational Procedure:</h4>
-                        <ol class="list-decimal list-inside space-y-1.5 text-slate-700">
-                            <li>A very thin semiconductor element (such as Indium Arsenide, $\text{InAs}$, or Gallium Arsenide, $\text{GaAs}$) with known thickness $t$ and carrier density $n$ is mounted at the tip of a non-magnetic probe rod.</li>
-                            <li>A calibrated constant control current $I$ is passed through the semiconductor sensor tip.</li>
-                            <li>The probe tip is oriented perpendicularly inside the unknown magnetic field $\vec{B}$ until maximum voltage reading is indicated on the digital display.</li>
-                            <li>The calibrated Hall voltage $V_H$ directly yields $B$:
-                            $$B = \frac{V_H \cdot n t q}{I} = \text{Constant} \times V_H$$</li>
-                        </ol>
-                    </div>
-
-                    <!-- SVG Line Diagram 8: Hall Probe Sensor Tip -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 550 160" class="w-full max-w-lg h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Probe Handle -->
-                            <rect x="20" y="60" width="220" height="40" fill="#334155" rx="5"/>
-                            <text x="100" y="84" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff">Hall Probe Shaft</text>
-
-                            <!-- Sensor Tip -->
-                            <rect x="240" y="70" width="80" height="20" fill="#047857" rx="2"/>
-                            <text x="280" y="84" font-family="sans-serif" font-size="9" text-anchor="middle" font-weight="bold" fill="#fff">InAs Wafer</text>
-
-                            <!-- External B Field lines -->
-                            <g stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow-blue)">
-                                <line x1="280" y1="140" x2="280" y2="20"/>
-                                <line x1="300" y1="140" x2="300" y2="20"/>
-                            </g>
-                            <text x="310" y="30" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1d4ed8">Unknown B-field</text>
-
-                            <!-- Digital Display unit -->
-                            <rect x="390" y="40" width="130" height="80" fill="#f8fafc" stroke="#0f172a" stroke-width="2" rx="6"/>
-                            <rect x="405" y="55" width="100" height="30" fill="#0f172a" rx="3"/>
-                            <text x="455" y="75" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle" fill="#22c55e">0.425 T</text>
-                            <text x="455" y="105" font-family="sans-serif" font-size="10" text-anchor="middle" font-weight="bold">Gaussmeter</text>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.8: Hall probe sensor tip submerged in magnetic field connected to digital gaussmeter display.</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 16.8: BIOT-SAVART LAW & APPLICATIONS -->
-            <section id="sec-16-8" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.8</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Biot-Savart Law & Applications</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        <strong>Biot-Savart Law</strong> is the fundamental law of magnetostatics that relates the magnetic field $d\vec{B}$ produced at a point in space to an infinitesimal current element $I d\vec{l}$.
-                    </p>
-
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-1 mb-2">Statement & Mathematical Formulation:</h4>
-                        <p>
-                            The magnitude of magnetic field $d B$ produced at point $P$ at distance $r$ from element $I d\vec{l}$ is:
-                        </p>
-                        <ol class="list-decimal list-inside text-sm font-sans space-y-1 my-2">
-                            <li>Directly proportional to current $I$.</li>
-                            <li>Directly proportional to element length $d l$.</li>
-                            <li>Directly proportional to $\sin\theta$ (where $\theta$ is angle between $d\vec{l}$ and position vector $\vec{r}$).</li>
-                            <li>Inversely proportional to the square of distance $r^2$.</li>
-                        </ol>
-                        $$d B \propto \frac{I d l \sin\theta}{r^2} \implies d B = \frac{\mu_0}{4\pi} \frac{I d l \sin\theta}{r^2}$$
-                        <p class="mt-2 font-sans font-semibold text-blue-900">Vector Form:</p>
-                        $$d\vec{B} = \frac{\mu_0}{4\pi} \frac{I (d\vec{l} \times \hat{r})}{r^2} = \frac{\mu_0}{4\pi} \frac{I (d\vec{l} \times \vec{r})}{r^3}$$
-                        <p class="text-xs text-slate-600 font-sans mt-1">where $\mu_0 = 4\pi \times 10^{-7} \text{ T}\cdot\text{m/A} = \text{Permeability of free space}$.</p>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Applications of Biot-Savart Law</h3>
-
-                    <!-- Application 1: Circular Coil -->
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 my-4">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-2 mb-3">Application (i): Magnetic Field on the Axis of a Circular Current Coil</h4>
-                        <p class="font-serif">
-                            Consider a circular loop of radius $R$ carrying steady current $I$. We evaluate field $B$ at axial point $P$ at distance $x$ from coil center $O$.
-                        </p>
-                        <div class="derivation-box bg-white">
-                            <p>Distance from current element $d l$ to axial point $P$: $r = \sqrt{R^2 + x^2}$.</p>
-                            <p>Angle between element $d\vec{l}$ and position vector $\vec{r}$ is $\theta = 90^\circ$.</p>
-                            $$d B = \frac{\mu_0}{4\pi} \frac{I d l \sin 90^\circ}{r^2} = \frac{\mu_0}{4\pi} \frac{I d l}{R^2 + x^2}$$
-                            <p>Resolving $d\vec{B}$ into axial component ($d B_x = d B \sin\phi$) and perpendicular component ($d B_\perp = d B \cos\phi$):</p>
-                            <p>By symmetry, perpendicular components $\sum d B_\perp = 0$. Total field is sum of axial components:</p>
-                            $$B = \int d B \sin\phi = \int \left(\frac{\mu_0}{4\pi} \frac{I d l}{R^2 + x^2}\right) \left(\frac{R}{\sqrt{R^2 + x^2}}\right)$$
-                            $$B = \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{3/2}} \int d l = \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{3/2}} (2\pi R)$$
-                            <p class="font-sans font-semibold text-blue-900 mt-2">For $N$ turns:</p>
-                            $$B_{\text{axis}} = \frac{\mu_0 N I R^2}{2 (R^2 + x^2)^{3/2}}$$
-                            <p class="font-sans font-semibold text-emerald-800 mt-1">Special Case: At center of coil ($x = 0$):</p>
-                            $$B_{\text{center}} = \frac{\mu_0 N I}{2 R}$$
-                        </div>
-                    </div>
-
-                    <!-- Application 2: Straight Conductor -->
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200 my-4">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-2 mb-3">Application (ii): Field due to a Straight Current-Carrying Conductor</h4>
-                        <p class="font-serif">
-                            For a straight conductor at perpendicular distance $a$ with subtended angles $\phi_1$ and $\phi_2$ at the ends:
-                        </p>
-                        $$B = \frac{\mu_0 I}{4\pi a} (\sin\phi_1 + \sin\phi_2)$$
-                        <p class="font-serif mt-2"><strong>For an infinitely long wire ($\phi_1 = \phi_2 = 90^\circ$):</strong></p>
-                        $$B = \frac{\mu_0 I}{4\pi a} (\sin 90^\circ + \sin 90^\circ) = \frac{\mu_0 I}{2\pi a}$$
-                    </div>
-
-                    <!-- SVG Line Diagram 9: Circular Loop Axis -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 600 220" class="w-full max-w-xl h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Axis Line -->
-                            <line x1="40" y1="110" x2="560" y2="110" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 2"/>
-                            
-                            <!-- Circular Coil in Perspective -->
-                            <ellipse cx="140" cy="110" rx="25" ry="70" fill="none" stroke="#0f172a" stroke-width="3"/>
-                            <text x="140" y="115" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">O</text>
-                            
-                            <!-- Point P -->
-                            <circle cx="420" cy="110" r="4" fill="#0f172a"/>
-                            <text x="420" y="128" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">P</text>
-
-                            <!-- Distance x and Radius R -->
-                            <line x1="140" y1="110" x2="140" y2="40" stroke="#1d4ed8" stroke-width="2"/>
-                            <text x="125" y="75" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1d4ed8">R</text>
-
-                            <line x1="140" y1="110" x2="420" y2="110" stroke="#047857" stroke-width="2"/>
-                            <text x="280" y="102" font-family="sans-serif" font-size="11" font-weight="bold" fill="#047857">Axial distance x</text>
-
-                            <!-- Position Vector r -->
-                            <line x1="140" y1="40" x2="420" y2="110" stroke="#991b1b" stroke-width="2"/>
-                            <text x="280" y="65" font-family="sans-serif" font-size="11" font-weight="bold" fill="#991b1b">r = √(R² + x²)</text>
-
-                            <!-- dB Field Vector at P -->
-                            <line x1="420" y1="110" x2="490" y2="75" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
-                            <text x="500" y="70" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1d4ed8">dB</text>
-
-                            <!-- Horizontal dB_x component -->
-                            <line x1="420" y1="110" x2="490" y2="110" stroke="#047857" stroke-width="2" stroke-dasharray="3 2" marker-end="url(#arrow)"/>
-                            <text x="450" y="125" font-family="sans-serif" font-size="10" font-weight="bold" fill="#047857">dB_x</text>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.9: Biot-Savart law integration geometry for axial magnetic field of circular coil.</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 16.9: AMPERE'S CIRCUITAL LAW & APPLICATIONS -->
-            <section id="sec-16-9" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.9</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Ampere's Circuital Law & Applications</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        <strong>Ampere's Circuital Law</strong> provides an elegant symmetry-based method to calculate magnetic fields, analogous to Gauss's Law in electrostatics.
-                    </p>
-
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-1 mb-2">Statement & Mathematical Integral:</h4>
-                        <p>
-                            The line integral of magnetic field vector $\vec{B}$ around any closed closed path (termed an <strong>Amperian Loop</strong>) in free space equals $\mu_0$ times the total net electric current $I_{\text{enc}}$ threading through the loop.
-                        </p>
-                        $$\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}}$$
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Applications of Ampere's Law</h3>
-
-                    <!-- Application 1: Straight Conductor -->
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4">
-                        <h4 class="font-bold text-slate-900 font-sans">1. Long Straight Current Wire</h4>
-                        <p class="font-serif text-slate-700">Choose a circular Amperian loop of radius $r$ centered on the wire. $\vec{B}$ is tangent to loop at all points ($\theta = 0^\circ$):</p>
-                        $$\oint \vec{B} \cdot d\vec{l} = B \oint d l = B (2\pi r) = \mu_0 I \implies B = \frac{\mu_0 I}{2\pi r}$$
-                    </div>
-
-                    <!-- Application 2: Straight Solenoid -->
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4">
-                        <h4 class="font-bold text-slate-900 font-sans">2. Straight Solenoid</h4>
-                        <p class="font-serif text-slate-700">Consider a rectangular Amperian loop $abcd$ of length $L$. Total turns enclosed $= n L$ (where $n = N/L$ is turns per unit length):</p>
-                        $$\oint_{abcd} \vec{B} \cdot d\vec{l} = \int_a^b \vec{B} \cdot d\vec{l} + \int_b^c \vec{B} \cdot d\vec{l} + \int_c^d \vec{B} \cdot d\vec{l} + \int_d^a \vec{B} \cdot d\vec{l}$$
-                        $$\implies B L + 0 + 0 + 0 = \mu_0 (n L I) \implies B = \mu_0 n I$$
-                    </div>
-
-                    <!-- Application 3: Toroid -->
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 my-4">
-                        <h4 class="font-bold text-slate-900 font-sans">3. Toroidal Solenoid (Toroid)</h4>
-                        <p class="font-serif text-slate-700">A toroid is an endless solenoid bent into a ring of mean radius $r$:</p>
-                        $$\oint \vec{B} \cdot d\vec{l} = B (2\pi r) = \mu_0 (N I) \implies B = \frac{\mu_0 N I}{2\pi r} = \mu_0 n I$$
-                        <p class="text-xs text-slate-600 font-sans mt-1">Field in interior empty space ($r < r_{\text{inner}}$) and exterior space ($r > r_{\text{outer}}$) is strictly zero ($B = 0$).</p>
-                    </div>
-
-                    <!-- SVG Line Diagram 10: Toroid & Solenoid Amperian Loop -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 600 200" class="w-full max-w-xl h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Left: Solenoid Rectangular Loop -->
-                            <g transform="translate(20, 10)">
-                                <text x="130" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(a) Solenoid Rectangular Loop</text>
-                                <rect x="30" y="50" width="200" height="80" fill="none" stroke="#0f172a" stroke-width="2"/>
-                                <!-- Amperian Loop abcd -->
-                                <rect x="60" y="30" width="120" height="100" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 2"/>
-                                <text x="55" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">a</text>
-                                <text x="185" y="25" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">b</text>
-                                <text x="185" y="145" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">c</text>
-                                <text x="55" y="145" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">d</text>
-                                <text x="130" y="180" font-family="sans-serif" font-size="11" text-anchor="middle">B = μ₀nI inside</text>
-                            </g>
-
-                            <!-- Right: Toroid Cross-section -->
-                            <g transform="translate(340, 10)">
-                                <text x="120" y="20" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">(b) Toroid Ring Amperian Loops</text>
-                                <circle cx="120" cy="100" r="75" fill="none" stroke="#0f172a" stroke-width="2"/>
-                                <circle cx="120" cy="100" r="45" fill="none" stroke="#0f172a" stroke-width="2"/>
-                                <!-- Mean Amperian loop -->
-                                <circle cx="120" cy="100" r="60" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 2"/>
-                                <line x1="120" y1="100" x2="180" y2="100" stroke="#1d4ed8" stroke-width="1.5"/>
-                                <text x="150" y="95" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1d4ed8">r</text>
-                                <text x="120" y="190" font-family="sans-serif" font-size="11" text-anchor="middle">B = μ₀NI / (2πr)</text>
-                            </g>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.10: Amperian loops for a straight solenoid and a toroidal solenoid.</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 16.10: FORCE BETWEEN PARALLEL CONDUCTORS -->
-            <section id="sec-16-10" class="textbook-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Section 16.10</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Force Between Two Parallel Conductors & Definition of Ampere</h2>
-                </div>
-
-                <div class="textbook-content">
-                    <p>
-                        Consider two long, straight parallel conductors $C_1$ and $C_2$ placed in vacuum separated by distance $d$, carrying currents $I_1$ and $I_2$ respectively.
-                    </p>
-
-                    <div class="derivation-box">
-                        <h4 class="font-bold text-slate-900 font-sans border-b border-slate-200 pb-1 mb-2">Step-by-Step Derivation of Force per Unit Length:</h4>
-                        <ol class="list-decimal list-inside space-y-2 font-serif text-slate-700">
-                            <li>
-                                <strong>Magnetic Field produced by wire 1 at wire 2 ($B_1$):</strong>
-                                $$B_1 = \frac{\mu_0 I_1}{2\pi d}$$
-                                Directed perpendicularly into the plane of paper at wire 2 (by Right-Hand Thumb Rule).
-                            </li>
-                            <li>
-                                <strong>Magnetic Force on segment length $L$ of wire 2 ($F_{21}$):</strong>
-                                $$F_{21} = I_2 L B_1 \sin 90^\circ = I_2 L \left(\frac{\mu_0 I_1}{2\pi d}\right) = \frac{\mu_0 I_1 I_2 L}{2\pi d}$$
-                            </li>
-                            <li>
-                                <strong>Force per Unit Length ($f = F/L$):</strong>
-                                $$f = \frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d} \quad [\text{N/m}]$$
-                            </li>
-                        </ol>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2 font-sans">Attraction vs Repulsion Rule</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 font-sans text-sm">
-                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                            <h5 class="font-bold text-blue-900">Parallel Currents (Same Direction)</h5>
-                            <p class="text-slate-700 mt-1">Conductors <strong>ATTRACT</strong> each other.</p>
-                        </div>
-                        <div class="bg-red-50 p-4 rounded-lg border border-red-200">
-                            <h5 class="font-bold text-red-900">Anti-Parallel Currents (Opposite Directions)</h5>
-                            <p class="text-slate-700 mt-1">Conductors <strong>REPEL</strong> each other.</p>
-                        </div>
-                    </div>
-
-                    <!-- SVG Line Diagram 11: Parallel Conductors Force -->
-                    <div class="svg-diagram-container">
-                        <svg viewBox="0 0 550 200" class="w-full max-w-lg h-auto" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Wire 1 -->
-                            <line x1="150" y1="20" x2="150" y2="170" stroke="#1e293b" stroke-width="4"/>
-                            <line x1="150" y1="40" x2="150" y2="30" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
-                            <text x="130" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1d4ed8">I1</text>
-
-                            <!-- Wire 2 -->
-                            <line x1="350" y1="20" x2="350" y2="170" stroke="#1e293b" stroke-width="4"/>
-                            <line x1="350" y1="40" x2="350" y2="30" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
-                            <text x="365" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1d4ed8">I2</text>
-
-                            <!-- Separation d -->
-                            <line x1="150" y1="140" x2="350" y2="140" stroke="#64748b" stroke-width="1.5"/>
-                            <text x="250" y="132" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Distance d</text>
-
-                            <!-- Attractive Force Vectors -->
-                            <line x1="150" y1="85" x2="220" y2="85" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
-                            <text x="170" y="75" font-family="sans-serif" font-size="11" font-weight="bold" fill="#991b1b">F12</text>
-
-                            <line x1="350" y1="85" x2="280" y2="85" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
-                            <text x="310" y="75" font-family="sans-serif" font-size="11" font-weight="bold" fill="#991b1b">F21</text>
-                        </svg>
-                        <span class="text-xs text-slate-500 font-sans mt-2">Figure 16.11: Mutual magnetic attraction force between two parallel wires carrying currents in the same direction.</span>
-                    </div>
-
-                    <div class="neb-exam-tip">
-                        <h4 class="font-bold text-amber-900 font-sans text-base mb-1">NEB Standard Board Exam Definition of 1 Ampere:</h4>
-                        <p class="italic text-amber-950 font-serif">
-                            "One ampere is defined as that constant current which, if maintained in two straight parallel conductors of infinite length and negligible circular cross-section, placed 1 metre apart in vacuum, produces between them a force equal to $2 \times 10^{-7}$ newtons per metre of length."
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SOLVED BOARD NUMERICALS SECTION -->
-            <section id="solved-numericals" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">NEB Board Examination Practice</span>
-                    <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Step-by-Step Solved Textbook Numericals</h2>
-                </div>
-
-                <div class="space-y-6">
-                    <!-- Numerical 1 -->
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                        <h4 class="font-bold text-slate-900 font-sans text-base">Example 1 (NEB 2078): Solenoid Field & Force</h4>
-                        <p class="text-sm font-serif text-slate-700 mt-2">
-                            A solenoid $0.5 \text{ m}$ long has $500$ turns and carries a current of $2.5 \text{ A}$. Calculate the magnetic field strength at the center of the solenoid.
-                        </p>
-                        <div class="mt-3 text-xs font-mono bg-white p-3 rounded border border-slate-200 text-slate-800 space-y-1">
-                            <p><strong>Given:</strong> $L = 0.5 \text{ m}$, $N = 500$, $I = 2.5 \text{ A}$, $\mu_0 = 4\pi \times 10^{-7} \text{ T}\cdot\text{m/A}$</p>
-                            <p>Turns per unit length $n = \frac{N}{L} = \frac{500}{0.5} = 1000 \text{ turns/m}$</p>
-                            <p>Formula: $B = \mu_0 n I = (4\pi \times 10^{-7}) \times 1000 \times 2.5$</p>
-                            <p><strong>Calculation:</strong> $B = 3.1416 \times 10^{-3} \text{ T} = 3.14 \text{ mT}$</p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 2 -->
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                        <h4 class="font-bold text-slate-900 font-sans text-base">Example 2 (NEB 2076): MCG Ammeter Conversion</h4>
-                        <p class="text-sm font-serif text-slate-700 mt-2">
-                            A galvanometer has a coil resistance of $50 \, \Omega$ and shows full-scale deflection for a current of $2 \text{ mA}$. How can it be converted into an ammeter reading up to $5 \text{ A}$?
-                        </p>
-                        <div class="mt-3 text-xs font-mono bg-white p-3 rounded border border-slate-200 text-slate-800 space-y-1">
-                            <p><strong>Given:</strong> $R_g = 50 \, \Omega$, $I_g = 2 \text{ mA} = 2 \times 10^{-3} \text{ A}$, $I = 5 \text{ A}$</p>
-                            <p>Formula for Shunt Resistance: $S = \frac{I_g R_g}{I - I_g}$</p>
-                            <p>$S = \frac{(2 \times 10^{-3}) \times 50}{5 - 0.002} = \frac{0.1}{4.998} \approx 0.020008 \, \Omega$</p>
-                            <p><strong>Result:</strong> Connect a shunt resistance of $0.020 \, \Omega$ in parallel with the galvanometer coil.</p>
-                        </div>
-                    </div>
-
-                    <!-- Numerical 3 -->
-                    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
-                        <h4 class="font-bold text-slate-900 font-sans text-base">Example 3: Hall Effect Semiconductor Calculation</h4>
-                        <p class="text-sm font-serif text-slate-700 mt-2">
-                            A ribbon of copper $1.0 \text{ mm}$ thick carries a current of $20 \text{ A}$ in a perpendicular magnetic field of $1.5 \text{ T}$. If carrier density $n = 8.49 \times 10^{28} \text{ m}^{-3}$, calculate the Hall voltage $V_H$.
-                        </p>
-                        <div class="mt-3 text-xs font-mono bg-white p-3 rounded border border-slate-200 text-slate-800 space-y-1">
-                            <p><strong>Given:</strong> $t = 1.0 \text{ mm} = 10^{-3} \text{ m}$, $I = 20 \text{ A}$, $B = 1.5 \text{ T}$, $n = 8.49 \times 10^{28} \text{ m}^{-3}$, $q = 1.6 \times 10^{-19} \text{ C}$</p>
-                            <p>Formula: $V_H = \frac{B I}{n t q}$</p>
-                            <p>$V_H = \frac{1.5 \times 20}{(8.49 \times 10^{28}) \times 10^{-3} \times (1.6 \times 10^{-19})} = \frac{30}{1.3584 \times 10^7} \approx 2.21 \times 10^{-6} \text{ V} = 2.21 \, \mu\text{V}$</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CONCEPTUAL SHORT ANSWER QUESTIONS -->
-            <section id="conceptual-qa" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">NEB Viva & Short Questions</span>
-                    <h2 class="text-2xl font-extrabold text-slate-900 mt-2">Conceptual Short-Answer Accordions</h2>
-                </div>
-
-                <div class="space-y-3 font-sans">
-                    <!-- Q1 -->
-                    <details class="group bg-slate-50 rounded-lg border border-slate-200 p-4 [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer">
-                            <span>Q1: Why does a magnetic field do no work on a moving charged particle?</span>
-                            <span class="transition group-open:rotate-180">▼</span>
-                        </summary>
-                        <p class="mt-3 text-sm text-slate-700 font-serif border-t border-slate-200 pt-3">
-                            The magnetic Lorentz force is given by $\vec{F} = q(\vec{v} \times \vec{B})$. By definition of vector cross product, $\vec{F}$ is always strictly perpendicular to the velocity vector $\vec{v}$ (and displacement $d\vec{r}$). Therefore, rate of work done $P = \vec{F} \cdot \vec{v} = 0$. Since work done is zero, the kinetic energy and speed of the particle remain constant.
-                        </p>
-                    </details>
-
-                    <!-- Q2 -->
-                    <details class="group bg-slate-50 rounded-lg border border-slate-200 p-4 [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer">
-                            <span>Q2: Why is an ammeter always connected in series while a voltmeter is connected in parallel?</span>
-                            <span class="transition group-open:rotate-180">▼</span>
-                        </summary>
-                        <p class="mt-3 text-sm text-slate-700 font-serif border-t border-slate-200 pt-3">
-                            An ammeter measures total current passing through a branch and has a very low resistance ($R_A \approx 0$). Connecting it in series ensures all current passes through it without significantly altering circuit resistance. Conversely, a voltmeter measures potential difference between two points and has very high resistance ($R_V \approx \infty$). Connecting it in parallel draws negligible current from the main circuit.
-                        </p>
-                    </details>
-
-                    <!-- Q3 -->
-                    <details class="group bg-slate-50 rounded-lg border border-slate-200 p-4 [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer">
-                            <span>Q3: Why do two parallel wires carrying currents in opposite directions repel each other?</span>
-                            <span class="transition group-open:rotate-180">▼</span>
-                        </summary>
-                        <p class="mt-3 text-sm text-slate-700 font-serif border-t border-slate-200 pt-3">
-                            The magnetic field $B_1$ produced by the first wire at the second wire interacts with the opposite current $I_2$. Applying Fleming's Left-Hand Rule to wire 2 shows that the resultant Lorentz force vector points away from wire 1, producing mutual repulsion.
-                        </p>
-                    </details>
-                </div>
-            </section>
-
-            <!-- INTERACTIVE CALCULATORS SECTION -->
-            <section id="interactive-calculators" class="interactive-tool bg-slate-900 text-white p-6 sm:p-8 rounded-xl shadow-lg space-y-6">
-                <div class="border-b border-slate-800 pb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-950/80 px-2.5 py-1 rounded-md border border-blue-800">Interactive Suite</span>
-                    <h2 class="text-2xl font-extrabold text-white mt-2">Physics Parameter Solvers & Calculators</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Calculator 1: Hall Effect Solver -->
-                    <div class="bg-slate-800 p-5 rounded-lg border border-slate-700 space-y-3 font-sans">
-                        <h3 class="font-bold text-blue-400 text-base flex items-center gap-2">
-                            <span>1. Hall Effect Voltage Solver</span>
-                        </h3>
-                        <div class="space-y-2 text-xs">
-                            <div>
-                                <label class="block text-slate-300 mb-1">Magnetic Field B (Tesla):</label>
-                                <input type="number" id="calc-b" value="1.5" step="0.1" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-white">
-                            </div>
-                            <div>
-                                <label class="block text-slate-300 mb-1">Current I (Amperes):</label>
-                                <input type="number" id="calc-i" value="10" step="0.5" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-white">
-                            </div>
-                            <div>
-                                <label class="block text-slate-300 mb-1">Thickness t (mm):</label>
-                                <input type="number" id="calc-t" value="0.5" step="0.1" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-white">
-                            </div>
-                            <div>
-                                <label class="block text-slate-300 mb-1">Carrier Density n (m⁻³):</label>
-                                <input type="text" id="calc-n" value="8.49e28" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-white">
-                            </div>
-                            <button onclick="calculateHallVoltage()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded transition mt-2">Compute Hall Voltage (V_H)</button>
-                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 text-center font-mono mt-2">
-                                <span class="text-slate-400 text-xs">Hall Voltage V_H = </span>
-                                <span id="res-vh" class="text-emerald-400 font-bold text-sm">2.21 μV</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Calculator 2: MCG Conversion Solver -->
-                    <div class="bg-slate-800 p-5 rounded-lg border border-slate-700 space-y-3 font-sans">
-                        <h3 class="font-bold text-emerald-400 text-base flex items-center gap-2">
-                            <span>2. MCG Ammeter / Voltmeter Conversion</span>
-                        </h3>
-                        <div class="space-y-2 text-xs">
-                            <div>
-                                <label class="block text-slate-300 mb-1">Galvanometer Resistance Rg (Ω):</label>
-                                <input type="number" id="mcg-rg" value="100" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-white">
-                            </div>
-                            <div>
-                                <label class="block text-slate-300 mb-1">Full-Scale Current Ig (mA):</label>
-                                <input type="number" id="mcg-ig" value="2" step="0.1" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-white">
-                            </div>
-                            <div>
-                                <label class="block text-slate-300 mb-1">Desired Range (Ammeter I in A or Voltmeter V in Volts):</label>
-                                <input type="number" id="mcg-target" value="10" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-white">
-                            </div>
-                            <button onclick="calculateMCGConversion()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 rounded transition mt-2">Calculate Shunt & Series Resistance</button>
-                            <div class="bg-slate-950 p-2.5 rounded border border-slate-800 font-mono text-xs space-y-1 mt-2">
-                                <div><span class="text-slate-400">Shunt S (for Ammeter): </span><span id="res-shunt" class="text-emerald-400 font-bold">0.0200 Ω</span></div>
-                                <div><span class="text-slate-400">Series R (for Voltmeter): </span><span id="res-series" class="text-blue-400 font-bold">4900 Ω</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SELF-ASSESSMENT QUIZ SECTION -->
-            <section id="assessment-quiz" class="quiz-section bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm space-y-6">
-                <div class="border-b border-slate-200 pb-4 flex flex-wrap items-center justify-between gap-2">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md">Interactive Assessment</span>
-                        <h2 class="text-2xl font-extrabold text-slate-900 mt-2">10-Question NEB Self-Assessment Quiz</h2>
-                    </div>
-                    <div id="quiz-score-badge" class="hidden bg-slate-900 text-white px-4 py-2 rounded-lg font-mono font-bold text-sm">
-                        Score: <span id="score-val" class="text-emerald-400">0</span> / 10
-                    </div>
-                </div>
-
-                <div id="quiz-container" class="space-y-6 font-sans">
-                    <!-- Quiz dynamic injection -->
-                </div>
-
-                <div class="pt-4 border-t border-slate-200 flex justify-between items-center">
-                    <button onclick="submitQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2.5 rounded-lg transition">Submit Answers & Grade</button>
-                    <button onclick="resetQuiz()" class="text-slate-500 hover:text-slate-800 text-sm font-semibold underline">Reset Quiz</button>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center space-y-2 font-sans">
-            <p class="font-medium text-slate-300">NEB Grade XII Physics Textbook Module &mdash; Unit 16: Magnetic Effects of Current & Magnetism</p>
-            <p>Designed strictly according to the National Examinations Board (NEB) Nepal Curriculum Syllabus.</p>
-        </div>
-    </footer>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', function() {
-            // KaTeX Auto-Render Initializer
-            if (window.renderMathInElement) {
-                renderMathInElement(document.body, {
-                    delimiters: [
-                        {left: '$$', right: '$$', display: true},
-                        {left: '$', right: '$', display: false},
-                        {left: '\\(', right: '\\)', display: false},
-                        {left: '\\[', right: '\\]', display: true}
-                    ],
-                    throwOnError: false
-                });
-            }
-
-            // Render Quiz Questions
-            initQuiz();
-        });
-
-        // Hall Effect Calculator Script
-        function calculateHallVoltage() {
-            const B = parseFloat(document.getElementById('calc-b').value);
-            const I = parseFloat(document.getElementById('calc-i').value);
-            const t_mm = parseFloat(document.getElementById('calc-t').value);
-            const n_str = document.getElementById('calc-n').value;
-            
-            const t = t_mm * 1e-3;
-            const n = parseFloat(n_str);
-            const q = 1.6e-19;
-
-            if (isNaN(B) || isNaN(I) || isNaN(t) || isNaN(n) || n === 0 || t === 0) {
-                document.getElementById('res-vh').innerText = 'Invalid Input';
-                return;
-            }
-
-            const Vh = (B * I) / (n * t * q);
-            const Vh_micro = Vh * 1e6;
-            document.getElementById('res-vh').innerText = Vh_micro.toFixed(3) + ' μV (' + Vh.toExponential(3) + ' V)';
-        }
-
-        // MCG Conversion Calculator Script
-        function calculateMCGConversion() {
-            const Rg = parseFloat(document.getElementById('mcg-rg').value);
-            const Ig_mA = parseFloat(document.getElementById('mcg-ig').value);
-            const target = parseFloat(document.getElementById('mcg-target').value);
-
-            const Ig = Ig_mA * 1e-3;
-
-            if (isNaN(Rg) || isNaN(Ig) || isNaN(target) || target <= Ig) {
-                document.getElementById('res-shunt').innerText = 'Error: Target I must > Ig';
-                document.getElementById('res-series').innerText = 'Error';
-                return;
-            }
-
-            const S = (Ig * Rg) / (target - Ig);
-            const R = (target / Ig) - Rg;
-
-            document.getElementById('res-shunt').innerText = S.toFixed(5) + ' Ω';
-            document.getElementById('res-series').innerText = R > 0 ? R.toFixed(1) + ' Ω' : 'Target V too low';
-        }
-
-        // Quiz Questions Data
-        const quizQuestions = [
-            {
-                q: "1. What is the trajectory of a charged particle entering a uniform magnetic field at an angle θ = 90°?",
-                options: ["Straight Line", "Circular Orbit", "Helical Path", "Parabolic Path"],
-                correct: 1,
-                explanation: "When θ = 90°, magnetic force acts as a purely centripetal force perpendicular to velocity, producing a circular orbit."
-            },
-            {
-                q: "2. The SI unit of Magnetic Flux Density (B) is:",
-                options: ["Weber (Wb)", "Tesla (T)", "Gauss (G)", "Ampere-metre"],
-                correct: 1,
-                explanation: "Tesla (T) is the SI unit of magnetic field density, where 1 T = 1 Wb/m²."
-            },
-            {
-                q: "3. To convert a galvanometer into an ammeter, one must connect:",
-                options: ["High resistance in series", "Low resistance in parallel (Shunt)", "High resistance in parallel", "Low resistance in series"],
-                correct: 1,
-                explanation: "Connecting a low resistance shunt S in parallel bypasses excess current around the delicate galvanometer coil."
-            },
-            {
-                q: "4. What is the magnetic field strength inside a toroid's central empty space?",
-                options: ["μ₀nI", "μ₀NI / (2πr)", "Zero", "2μ₀nI"],
-                correct: 2,
-                explanation: "By Ampere's Law, no net current is enclosed by an Amperian loop inside the central hole, so B = 0."
-            },
-            {
-                q: "5. Two parallel wires carrying currents in opposite directions will:",
-                options: ["Attract each other", "Repel each other", "Rotate clockwise", "Exert zero mutual force"],
-                correct: 1,
-                explanation: "Anti-parallel currents produce repulsive magnetic forces by Fleming's Left-Hand Rule."
-            },
-            {
-                q: "6. Which rule determines the direction of magnetic force on a moving positive charge?",
-                options: ["Fleming's Right-Hand Rule", "Fleming's Left-Hand Rule", "Lenz's Law", "Faraday's Law"],
-                correct: 1,
-                explanation: "Fleming's Left-Hand Rule gives the force vector direction on moving charges/conductors."
-            },
-            {
-                q: "7. The expression for Hall Voltage V_H across a sample of thickness t is:",
-                options: ["V_H = B I / (n t q)", "V_H = B I n t / q", "V_H = n q / (B I t)", "V_H = B I t / (n q)"],
-                correct: 0,
-                explanation: "Derivation yields V_H = B I / (n t q)."
-            },
-            {
-                q: "8. Work done by a magnetic field on a moving charged particle is always:",
-                options: ["Maximum", "Negative", "Zero", "Proportional to mass"],
-                correct: 2,
-                explanation: "Since magnetic force is perpendicular to displacement (v·F = 0), work done is identically zero."
-            },
-            {
-                q: "9. Soft iron core in a Moving Coil Galvanometer is used to:",
-                options: ["Increase electrical resistance", "Produce a radial and strong magnetic field", "Decrease current sensitivity", "Eliminate hairspring friction"],
-                correct: 1,
-                explanation: "Soft iron core concentrates magnetic field lines, making the field radial and strongly enhancing sensitivity."
-            },
-            {
-                q: "10. Two parallel conductors carrying currents 1 A each separated by 1 m in vacuum experience a force per unit length of:",
-                options: ["2 × 10⁻⁷ N/m", "4π × 10⁻⁷ N/m", "1.6 × 10⁻¹⁹ N/m", "9 × 10⁹ N/m"],
-                correct: 0,
-                explanation: "By definition of 1 Ampere: f = μ₀ I₁ I₂ / (2π d) = (4π × 10⁻⁷ × 1 × 1)/(2π × 1) = 2 × 10⁻⁷ N/m."
-            }
-        ];
-
-        function initQuiz() {
-            const container = document.getElementById('quiz-container');
-            container.innerHTML = '';
-
-            quizQuestions.forEach((item, idx) => {
-                const qDiv = document.createElement('div');
-                qDiv.className = 'bg-slate-50 p-4 rounded-lg border border-slate-200 space-y-3';
-                qDiv.id = `quiz-q-${idx}`;
-
-                let optionsHTML = '';
-                item.options.forEach((opt, oIdx) => {
-                    optionsHTML += `
-                        <label class="flex items-center space-x-2 text-sm text-slate-700 cursor-pointer p-1.5 rounded hover:bg-slate-100 transition">
-                            <input type="radio" name="q-${idx}" value="${oIdx}" class="text-blue-600 focus:ring-blue-500">
-                            <span>${opt}</span>
-                        </label>
-                    `;
-                });
-
-                qDiv.innerHTML = `
-                    <p class="font-bold text-slate-900 text-sm">${item.q}</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 mt-2">
-                        ${optionsHTML}
-                    </div>
-                    <div id="expl-${idx}" class="hidden mt-2 p-2.5 rounded text-xs bg-slate-100 border border-slate-300 text-slate-800">
-                        <strong>Explanation:</strong> ${item.explanation}
-                    </div>
-                `;
-                container.appendChild(qDiv);
-            });
-        }
-
-        function submitQuiz() {
-            let score = 0;
-            quizQuestions.forEach((item, idx) => {
-                const selected = document.querySelector(`input[name="q-${idx}"]:checked`);
-                const explDiv = document.getElementById(`expl-${idx}`);
-                const qDiv = document.getElementById(`quiz-q-${idx}`);
-
-                explDiv.classList.remove('hidden');
-
-                if (selected && parseInt(selected.value) === item.correct) {
-                    score++;
-                    qDiv.className = 'bg-emerald-50 p-4 rounded-lg border border-emerald-300 space-y-3';
-                } else {
-                    qDiv.className = 'bg-red-50 p-4 rounded-lg border border-red-300 space-y-3';
-                }
-            });
-
-            document.getElementById('quiz-score-badge').classList.remove('hidden');
-            document.getElementById('score-val').innerText = score;
-        }
-
-        function resetQuiz() {
-            document.getElementById('quiz-score-badge').classList.add('hidden');
-            initQuiz();
-        }
-    </script>
-</body>
-</html>
+
+<h2>Introduction: Magnetic Field Lines & Magnetic Flux</h2><p>
+A <strong>magnetic field</strong> is a region in space surrounding a magnet, current-carrying conductor, or moving charge within which magnetic forces can be detected. It is represented by the vector field quantity \(\vec{B}\), known as <strong>magnetic flux density</strong> or <strong>magnetic induction</strong>. The SI unit of \(\vec{B}\) is the <strong>Tesla (T)</strong> or \(\text{Wb/m}^2\).
+</p><p>
+<strong>Magnetic Field Lines:</strong> Imaginary continuous visual lines drawn in a magnetic field such that the tangent at any point gives the direction of the magnetic field vector \(\vec{B}\) at that point.
+</p><h4>Fundamental Properties of Magnetic Field Lines:</h4><ol>
+<li>They form continuous, closed loops (unlike electrostatic field lines which begin on positive charges and end on negative charges).</li>
+<li>The tangent to a field line at any point gives the direction of the magnetic field \(\vec{B}\).</li>
+<li>No two magnetic field lines can cross each other. If they did, two tangents could be drawn at the intersection point, implying two distinct directions for \(\vec{B}\) at the same point, which is physically impossible.</li>
+<li>The density of field lines per unit cross-sectional area represents the strength of the magnetic field (denser lines represent a stronger field).</li>
+</ol><h3>Magnetic Flux (\(\Phi_B\))</h3><p>
+<strong>Magnetic flux</strong> (\(\Phi_B\)) through a given surface area \(A\) placed in a magnetic field is defined as the total number of magnetic field lines passing normally through that surface.
+</p><div class="box note" data-title="Derivation"><p>Mathematical Definition:</p>
+\[\Phi_B = \int \vec{B} \cdot d\vec{A} = \int B \cos\theta \, dA\]
+For a uniform magnetic field \(\vec{B}\) passing through a flat area \(A\):
+\[\Phi_B = \vec{B} \cdot \vec{A} = B A \cos\theta\]
+Where:
+<ul>
+<li>\(\theta\) is the angle between the magnetic field \(\vec{B}\) and the <strong>normal vector</strong> \(\hat{n}\) to the surface.</li>
+<li><strong>SI Unit:</strong> Weber (\(\text{Wb}\)), where \(1 \text{ Wb} = 1 \text{ T} \cdot \text{m}^2 = 1 \text{ V} \cdot \text{s}\).</li>
+<li><strong>Dimensional Formula:</strong> \([M^1 L^2 T^{-2} A^{-1}]\).</li>
+</ul></div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" fill="currentColor">
+<defs>
+<marker id="arrow" viewbox="0 0 10 10" refx="5" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#1e293b"/>
+</marker>
+<marker id="arrow-blue" viewbox="0 0 10 10" refx="5" refy="5" markerwidth="6" markerheight="6" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#1d4ed8"/>
+</marker>
+</defs>
+
+<g transform="translate(20, 10)">
+<text x="140" y="25" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(a) Magnetic Field around Straight Conductor</text>
+
+<ellipse cx="140" cy="140" rx="40" ry="20" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 2"/>
+<ellipse cx="140" cy="140" rx="75" ry="37.5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+<ellipse cx="140" cy="140" rx="110" ry="55" fill="none" stroke="#64748b" stroke-width="1.5"/>
+
+<path d="M 180 140 L 180 138" marker-end="url(#arrow-blue)"/>
+<path d="M 215 140 L 215 138" marker-end="url(#arrow-blue)"/>
+<path d="M 250 140 L 250 138" marker-end="url(#arrow-blue)"/>
+
+<line x1="140" y1="220" x2="140" y2="45" stroke="#1e293b" stroke-width="6"/>
+<line x1="140" y1="45" x2="140" y2="35" stroke="#1e293b" stroke-width="3" marker-end="url(#arrow)"/>
+
+<text x="150" y="45" font-size="12" font-weight="bold" fill="#1d4ed8">Current I</text>
+<text x="220" y="125" font-size="11" fill="#1d4ed8">B-field loops</text>
+<text x="140" y="245" font-size="11" text-anchor="middle" fill="#475569">Right-Hand Thumb Rule</text>
+</g>
+
+<g transform="translate(360, 10)">
+<text x="160" y="25" font-size="13" font-weight="bold" text-anchor="middle" fill="#0f172a">(b) Magnetic Field lines of a Solenoid</text>
+
+<line x1="50" y1="120" x2="270" y2="120" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<line x1="50" y1="135" x2="270" y2="135" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<line x1="50" y1="150" x2="270" y2="150" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+<path d="M 270 110 C 310 60, 10 60, 50 110" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="3 2"/>
+<path d="M 270 160 C 310 210, 10 210, 50 160" fill="none" stroke="#1d4ed8" stroke-width="1.2" stroke-dasharray="3 2"/>
+
+<rect x="50" y="100" width="220" height="70" fill="none" stroke="#0f172a" stroke-width="2" rx="4"/>
+
+<g fill="#991b1b">
+<circle cx="70" cy="100" r="4"/><circle cx="100" cy="100" r="4"/><circle cx="130" cy="100" r="4"/>
+<circle cx="160" cy="100" r="4"/><circle cx="190" cy="100" r="4"/><circle cx="220" cy="100" r="4"/><circle cx="250" cy="100" r="4"/>
+
+<circle cx="70" cy="170" r="4"/><circle cx="100" cy="170" r="4"/><circle cx="130" cy="170" r="4"/>
+<circle cx="160" cy="170" r="4"/><circle cx="190" cy="170" r="4"/><circle cx="220" cy="170" r="4"/><circle cx="250" cy="170" r="4"/>
+</g>
+
+<text x="30" y="140" font-size="12" font-weight="bold" fill="#0f172a">S</text>
+<text x="285" y="140" font-size="12" font-weight="bold" fill="#0f172a">N</text>
+<text x="160" y="235" font-size="11" text-anchor="middle" fill="#475569">Uniform field B = μ₀nI inside solenoid</text>
+</g>
+</svg><p>Figure 16.1: Magnetic field lines for a straight wire (Left) and a long solenoid (Right) ready for printing.</p>
+<h2>Oersted's Experiment, Outcome & Limitations</h2><p>
+In 1820, Danish physicist <strong>Hans Christian Oersted</strong> discovered the fundamental connection between electricity and magnetism. Prior to this discovery, electricity and magnetism were treated as completely independent phenomena.
+</p><h3>Experimental Setup & Procedure</h3><p>
+A straight metallic conductor \(AB\) is aligned parallel to the magnetic meridian (North-South direction) and placed directly over a pivoted magnetic needle. The wire is connected in series with a DC voltage source (battery), a rheostat, and a key \(K\).
+</p><h4>Key Observations:</h4><ol>
+<li><strong>When no current flows (\(I = 0\)):</strong> The magnetic needle remains stationary along the Earth's North-South magnetic axis.</li>
+<li><strong>When current flows from South to North (\(S \to N\)):</strong> The North pole (\(N\)-pole) of the magnetic needle immediately deflects towards the <strong>West</strong>. (Remembered via the <strong>SNOW Rule</strong>: <em>Current from <strong>S</strong>outh to <strong>N</strong>orth <strong>O</strong>ver needle deflects <strong>W</strong>est</em>).</li>
+<li><strong>When current direction is reversed (\(N \to S\)):</strong> The \(N\)-pole of the needle deflects towards the <strong>East</strong>.</li>
+<li><strong>When current magnitude \(I\) is increased:</strong> The angle of deflection increases, demonstrating a stronger magnetic force.</li>
+</ol><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 220" fill="currentColor">
+
+<g transform="translate(20, 10)">
+<text x="130" y="20" font-size="12" font-weight="bold" text-anchor="middle">(a) Switch Open (I = 0)</text>
+
+<line x1="30" y1="80" x2="230" y2="80" stroke="#1e293b" stroke-width="4"/>
+<text x="25" y="75" font-size="11" font-weight="bold">S</text>
+<text x="235" y="75" font-size="11" font-weight="bold">N</text>
+
+<polygon points="130,50 145,80 130,110 115,80" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5"/>
+<polygon points="130,50 145,80 115,80" fill="#991b1b" stroke="#0f172a" stroke-width="1.5"/>
+<circle cx="130" cy="80" r="3" fill="#0f172a"/>
+<text x="130" y="42" font-size="10" font-weight="bold" text-anchor="middle" fill="#991b1b">N</text>
+<text x="130" y="125" font-size="10" text-anchor="middle">No Deflection</text>
+
+<path d="M 30 80 L 30 160 L 100 160 M 160 160 L 230 160 L 230 80" stroke="#475569" stroke-width="2" fill="none"/>
+
+<line x1="100" y1="150" x2="100" y2="170" stroke="#0f172a" stroke-width="3"/>
+<line x1="110" y1="155" x2="110" y2="165" stroke="#0f172a" stroke-width="1.5"/>
+
+<circle cx="140" cy="160" r="3" fill="#0f172a"/>
+<line x1="140" y1="160" x2="155" y2="150" stroke="#0f172a" stroke-width="2"/>
+<circle cx="160" cy="160" r="3" fill="#0f172a"/>
+</g>
+
+<g transform="translate(340, 10)">
+<text x="130" y="20" font-size="12" font-weight="bold" text-anchor="middle">(b) Switch Closed (Current S -> N)</text>
+
+<line x1="30" y1="80" x2="230" y2="80" stroke="#1d4ed8" stroke-width="4"/>
+<path d="M 120 80 L 140 80" marker-end="url(#arrow-blue)" stroke="#1d4ed8" stroke-width="2"/>
+
+<g transform="rotate(-30 130 80)">
+<polygon points="130,50 145,80 130,110 115,80" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5"/>
+<polygon points="130,50 145,80 115,80" fill="#991b1b" stroke="#0f172a" stroke-width="1.5"/>
+<circle cx="130" cy="80" r="3" fill="#0f172a"/>
+<text x="130" y="42" font-size="10" font-weight="bold" text-anchor="middle" fill="#991b1b">N</text>
+</g>
+<text x="80" y="50" font-size="10" font-weight="bold" fill="#047857">Deflection West</text>
+
+<path d="M 30 80 L 30 160 L 100 160 M 160 160 L 230 160 L 230 80" stroke="#475569" stroke-width="2" fill="none"/>
+
+<line x1="100" y1="150" x2="100" y2="170" stroke="#0f172a" stroke-width="3"/>
+<line x1="110" y1="155" x2="110" y2="165" stroke="#0f172a" stroke-width="1.5"/>
+
+<circle cx="140" cy="160" r="3" fill="#0f172a"/>
+<line x1="140" y1="160" x2="160" y2="160" stroke="#0f172a" stroke-width="2"/>
+<circle cx="160" cy="160" r="3" fill="#0f172a"/>
+</g>
+</svg><p>Figure 16.2: Oersted's experimental setup illustrating magnetic deflection of a compass needle due to current.</p>
+<h3>Fundamental Outcome & Significance</h3><p>
+Oersted's experiment established that <strong>moving electric charges (electric current) produce a magnetic field</strong> in surrounding space. This laid the foundation for electromagnetism.
+</p><h3>Limitations of Oersted's Experiment</h3><ul>
+<li>It was purely <strong>qualitative</strong> in nature and did not provide a mathematical law or formula to calculate the exact magnitude of magnetic field \(\vec{B}\).</li>
+<li>It applies only to steady continuous direct currents (DC).</li>
+<li>The observed deflection is influenced by the horizontal component of Earth's magnetic field (\(B_H\)), leading to systematic orientation errors.</li>
+</ul><h2>Force on a Moving Charge in a Uniform Magnetic Field</h2><p>
+When a point charge \(q\) moves with velocity \(\vec{v}\) through a region containing a uniform magnetic field \(\vec{B}\), it experiences a side-wise deflecting force termed the <strong>Magnetic Lorentz Force</strong> (\(\vec{F}_m\)).
+</p><div class="box note" data-title="Derivation"><p>Lorentz Magnetic Force Vector Formula:</p>
+\[\vec{F}_m = q (\vec{v} \times \vec{B})\]
+In scalar magnitude form:
+\[F_m = |q| v B \sin\theta\]
+where \(\theta\) is the angle between velocity vector \(\vec{v}\) and magnetic field vector \(\vec{B}\).</div>
+<h3>Special Cases for Force Magnitude:</h3><ul>
+<li><strong>Case 1 (\(\theta = 0^\circ\) or \(180^\circ\)):</strong> If charge moves parallel or anti-parallel to field, \(\sin\theta = 0 \implies F_m = 0\). Charge continues un-deflected.</li>
+<li><strong>Case 2 (\(\theta = 90^\circ\)):</strong> If charge enters perpendicular to field, \(\sin 90^\circ = 1 \implies F_{m,\text{max}} = q v B\). Force is maximum.</li>
+<li><strong>Case 3 (\(v = 0\)):</strong> A stationary charge in a magnetic field experiences zero magnetic force (\(F_m = 0\)).</li>
+</ul><h3>Direction of Force: Fleming's Left-Hand Rule</h3><p>
+Stretch the thumb, forefinger, and middle finger of the left hand mutually perpendicular to each other:
+</p><ul>
+<li><strong>Forefinger:</strong> Points in the direction of Magnetic Field (\(\vec{B}\)).</li>
+<li><strong>Middle Finger:</strong> Points in the direction of Motion of Positive Charge (\(\vec{v}\)).</li>
+<li><strong>Thumb:</strong> Points in the direction of Magnetic Force (\(\vec{F}_m\)).</li>
+</ul><h3>Motion of a Charged Particle in Uniform B-Field</h3><h4>Case A: Perpendicular Entry (\(\theta = 90^\circ\)) &mdash; Circular Motion</h4><p>
+Since \(\vec{F}_m \perp \vec{v}\) at all points, the magnetic force does zero work (\(\vec{F}_m \cdot d\vec{r} = 0\)) and changes only the direction of velocity without changing kinetic energy or speed. \(\vec{F}_m\) acts as the necessary centripetal force:
+</p><p>\[\frac{m v^2}{r} = q v B \implies r = \frac{m v}{q B}\]</p>
+<p>Time period of revolution \(T\) and Cyclotron Frequency \(f\):</p><p>\[T = \frac{2\pi r}{v} = \frac{2\pi m}{q B}\]
+\[f = \frac{1}{T} = \frac{q B}{2\pi m}\]</p>
+<p>Note: Time period and frequency are independent of particle velocity \(v\) and radius \(r\).</p><h4>Case B: Oblique Entry (\(\theta \neq 0^\circ, 90^\circ\)) &mdash; Helical Motion</h4><p>
+Resolve velocity into two components:
+</p><ul>
+<li>\(v_\parallel = v \cos\theta\) (parallel to \(\vec{B}\), unchanged, causes linear displacement).</li>
+<li>\(v_\perp = v \sin\theta\) (perpendicular to \(\vec{B}\), causes circular trajectory of radius \(r = \frac{m v \sin\theta}{q B}\)).</li>
+</ul><p>
+The resulting trajectory is a <strong>Helix</strong>. The <strong>Pitch (\(p\))</strong> is the linear distance advanced along the field per revolution:
+</p><p>\[p = v_\parallel \times T = (v \cos\theta) \cdot \left(\frac{2\pi m}{q B}\right)\]</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 220" fill="currentColor">
+
+<g transform="translate(20, 10)">
+<text x="130" y="20" font-size="12" font-weight="bold" text-anchor="middle">(a) Perpendicular Entry (θ = 90°)</text>
+
+<g fill="#94a3b8" font-size="12">
+<text x="40" y="60">×</text><text x="90" y="60">×</text><text x="140" y="60">×</text><text x="190" y="60">×</text>
+<text x="40" y="110">×</text><text x="90" y="110">×</text><text x="140" y="110">×</text><text x="190" y="110">×</text>
+<text x="40" y="160">×</text><text x="90" y="160">×</text><text x="140" y="160">×</text><text x="190" y="160">×</text>
+</g>
+
+<circle cx="130" cy="110" r="45" fill="none" stroke="#1d4ed8" stroke-width="2"/>
+
+<circle cx="175" cy="110" r="6" fill="#991b1b"/>
+<text x="172" y="113" font-size="9" font-weight="bold" fill="#fff">+</text>
+
+<line x1="175" y1="110" x2="175" y2="70" stroke="#047857" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="182" y="75" font-size="11" font-weight="bold" fill="#047857">v</text>
+
+<line x1="175" y1="110" x2="140" y2="110" stroke="#991b1b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="145" y="105" font-size="11" font-weight="bold" fill="#991b1b">F_m</text>
+<text x="130" y="195" font-size="11" text-anchor="middle">Circular Orbit r = mv / qB</text>
+</g>
+
+<g transform="translate(340, 10)">
+<text x="140" y="20" font-size="12" font-weight="bold" text-anchor="middle">(b) Oblique Entry (Helical Path)</text>
+
+<line x1="20" y1="60" x2="260" y2="60" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="20" y1="110" x2="260" y2="110" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="20" y1="160" x2="260" y2="160" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="265" y="115" font-size="11" font-weight="bold" fill="#1d4ed8">B</text>
+
+<path d="M 30 110 Q 50 60, 70 110 T 110 110 T 150 110 T 190 110 T 230 110" fill="none" stroke="#1d4ed8" stroke-width="2.5"/>
+
+<line x1="70" y1="175" x2="110" y2="175" stroke="#991b1b" stroke-width="1.5"/>
+<line x1="70" y1="170" x2="70" y2="180" stroke="#991b1b" stroke-width="1.5"/>
+<line x1="110" y1="170" x2="110" y2="180" stroke="#991b1b" stroke-width="1.5"/>
+<text x="90" y="193" font-size="11" font-weight="bold" text-anchor="middle" fill="#991b1b">Pitch p</text>
+</g>
+</svg><p>Figure 16.3: Trajectories of a charged particle in a uniform magnetic field.</p>
+<h2>Force on a Current-Carrying Conductor in a Uniform B-Field</h2><p>
+Since electric current in a conductor consists of moving free charge carriers, placing a current-carrying wire in an external magnetic field causes each drift charge to experience a Lorentz force. The microscopic sum of these forces results in a macroscopic force on the conductor.
+</p><div class="box note" data-title="Microscopic Derivation"><p>Consider a straight conductor segment of length \(L\), cross-sectional area \(A\), carrying steady current \(I\).</p>
+<ul>
+<li>Let \(n =\) number density of free electrons per unit volume.</li>
+<li>\(v_d =\) drift velocity of electrons.</li>
+<li>\(e =\) elementary electron charge (\(1.6 \times 10^{-19} \text{ C}\)).</li>
+</ul>
+<p>Total number of free charge carriers in segment volume \(V = A L\):</p>
+\[N = n \times (A L)\]
+<p>Magnetic Lorentz force on a single free electron moving with velocity \(\vec{v}_d\):</p>
+\[\vec{f}_e = -e (\vec{v}_d \times \vec{B})\]
+<p>Total magnetic force \(\vec{F}\) on the conductor segment:</p>
+\[\vec{F} = N \vec{f}_e = (n A L) [-e (\vec{v}_d \times \vec{B})] = - (n A e \vec{v}_d L) \times \vec{B}\]
+<p>Recalling the microscopic current relation \(I = n A e v_d\), and assigning vector length \(\vec{L}\) in direction of conventional current:</p>
+\[\vec{F} = I (\vec{L} \times \vec{B})\]
+<p>In scalar magnitude form:</p>
+\[F = I L B \sin\theta\]
+where \(\theta\) is the angle between wire length vector \(\vec{L}\) and magnetic field \(\vec{B}\).</div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 200" fill="currentColor">
+
+<rect x="80" y="70" width="340" height="60" rx="30" fill="#f1f5f9" stroke="#1e293b" stroke-width="2"/>
+
+<g stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)">
+<line x1="120" y1="180" x2="220" y2="20"/>
+<line x1="220" y1="180" x2="320" y2="20"/>
+<line x1="320" y1="180" x2="420" y2="20"/>
+</g>
+<text x="425" y="30" font-size="12" font-weight="bold" fill="#1d4ed8">Field B</text>
+
+<circle cx="200" cy="100" r="7" fill="#991b1b"/>
+<text x="197" y="103" font-size="9" font-weight="bold" fill="#fff">-</text>
+<line x1="200" y1="100" x2="150" y2="100" stroke="#991b1b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="160" y="92" font-size="10" font-weight="bold" fill="#991b1b">v_d</text>
+
+<line x1="250" y1="100" x2="250" y2="20" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="260" y="30" font-size="12" font-weight="bold">Force F = I L B sinθ</text>
+
+<line x1="300" y1="100" x2="370" y2="100" stroke="#047857" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="330" y="90" font-size="11" font-weight="bold" fill="#047857">Current I</text>
+</svg><p>Figure 16.4: Magnetic force generation on a current-carrying conductor segment.</p>
+<h2>Force and Torque on a Rectangular Coil in Uniform B-Field</h2><p>
+Consider a rectangular coil \(PQRS\) of length \(l\), width \(b\), having \(N\) turns carrying steady current \(I\), placed in a uniform magnetic field \(\vec{B}\). Let \(\theta\) be the angle between the magnetic field vector \(\vec{B}\) and the <strong>normal vector</strong> \(\hat{n}\) to the plane of the coil.
+</p><div class="box note" data-title="Derivation of Torque (\(\tau\))"><ol>
+<li>
+<strong>Forces on Horizontal Sides (\(QR\) and \(SP\)):</strong>
+Equal in magnitude (\(F = I b B \cos\theta\)), opposite in direction, and act along the same line of action (axis of rotation). Thus, they cancel each other out with zero net force and zero net torque.
+</li>
+<li>
+<strong>Forces on Vertical Sides (\(PQ\) and \(RS\)):</strong>
+Magnitude of force on each vertical side of length \(l\):
+\[F_1 = F_2 = N I l B\]
+These two forces are equal in magnitude, opposite in direction, but have <em>different lines of action</em>. Hence, they constitute a <strong>Deflecting Couple</strong>.
+</li>
+<li>
+<strong>Arm of Couple (\(d\)):</strong>
+Perpendicular distance between lines of action of \(F_1\) and \(F_2\):
+\[d = b \sin\theta\]
+</li>
+<li>
+<strong>Torque Magnitude (\(\tau\)):</strong>
+\[\tau = \text{Force} \times \text{Perpendicular distance} = (N I l B) \cdot (b \sin\theta)\]
+Since surface area \(A = l \times b\):
+\[\tau = N I A B \sin\theta\]
+</li>
+</ol>
+<p>Vector Form of Torque:</p>
+\[\vec{\tau} = \vec{\mu} \times \vec{B}\]
+where \(\vec{\mu} = N I \vec{A}\) is the <strong>Magnetic Dipole Moment</strong> of the coil (SI Unit: \(\text{A} \cdot \text{m}^2\)).</div>
+<h3>Work Done and Potential Energy</h3><p>
+When the magnetic dipole rotates from initial angle \(\theta_1\) to final angle \(\theta_2\) in the B-field:
+</p><p>\[W = \int_{\theta_1}^{\theta_2} \tau \, d\theta = N I A B \int_{\theta_1}^{\theta_2} \sin\theta \, d\theta = - N I A B (\cos\theta_2 - \cos\theta_1)\]</p>
+<p>
+<strong>Magnetic Potential Energy (\(U\)):</strong>
+</p><p>\[U = -\vec{\mu} \cdot \vec{B} = -\mu B \cos\theta\]</p>
+<ul>
+<li><strong>Stable Equilibrium (\(\theta = 0^\circ\)):</strong> \(U_{\text{min}} = -\mu B\) (Coil normal parallel to field).</li>
+<li><strong>Unstable Equilibrium (\(\theta = 180^\circ\)):</strong> \(U_{\text{max}} = +\mu B\) (Coil normal anti-parallel to field).</li>
+</ul><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 240" fill="currentColor">
+
+<g stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)">
+<line x1="30" y1="50" x2="510" y2="50"/>
+<line x1="30" y1="120" x2="510" y2="120"/>
+<line x1="30" y1="190" x2="510" y2="190"/>
+</g>
+<text x="515" y="125" font-size="12" font-weight="bold" fill="#1d4ed8">B</text>
+
+<polygon points="200,60 360,90 300,180 140,150" fill="none" stroke="#0f172a" stroke-width="2.5"/>
+<text x="185" y="55" font-size="11" font-weight="bold">P</text>
+<text x="370" y="90" font-size="11" font-weight="bold">Q</text>
+<text x="310" y="195" font-size="11" font-weight="bold">R</text>
+<text x="125" y="155" font-size="11" font-weight="bold">S</text>
+
+<line x1="250" y1="120" x2="210" y2="30" stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow-blue)"/>
+<text x="200" y="25" font-size="11" font-weight="bold" fill="#1d4ed8">Normal n̂</text>
+
+<line x1="170" y1="105" x2="170" y2="20" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="150" y="20" font-size="11" font-weight="bold" fill="#991b1b">F1</text>
+
+<line x1="330" y1="135" x2="330" y2="220" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="340" y="225" font-size="11" font-weight="bold" fill="#991b1b">F2</text>
+
+<text x="250" y="225" font-size="11" text-anchor="middle">Torque τ = N I A B sinθ</text>
+</svg><p>Figure 16.5: Deflecting couple on a current-carrying rectangular loop in a uniform magnetic field.</p>
+<h2>Moving Coil Galvanometer (MCG) & Applications</h2><p>
+A <strong>Moving Coil Galvanometer</strong> is a sensitive electromagnetic instrument used to detect and measure extremely small electric currents (of the order of microamperes, \(\mu\text{A}\)).
+</p><h3>Working Principle</h3><p>
+When a current-carrying coil is suspended in a magnetic field, it experiences a torque (\(\tau\)). In a <strong>radial magnetic field</strong>, the plane of the coil is always parallel to the field lines (\(\theta = 90^\circ\)), resulting in a constant maximum deflecting torque.
+</p><div class="box note" data-title="Mathematical Theory &amp; Equilibrium Equation"><p>1. <strong>Deflecting Torque (\(\tau_d\)):</strong></p>
+\[\tau_d = N I A B \sin 90^\circ = N I A B\]
+<p>2. <strong>Restoring Torque (\(\tau_r\)):</strong> Provided by the hairspring/phosphor-bronze strip twisted through angle \(\theta\):</p>
+\[\tau_r = C \theta\]
+where \(C\) is the torsional restitution constant (restoring torque per unit twist).
+<p>At equilibrium position (\(\tau_d = \tau_r\)):</p>
+\[N I A B = C \theta \implies I = \left(\frac{C}{N A B}\right) \theta\]
+\[I = K \theta \implies I \propto \theta\]
+where \(K = \frac{C}{N A B}\) is the <strong>Galvanometer Constant</strong>. The linear relationship (\(I \propto \theta\)) enables a linear linear-spaced dial scale.</div>
+<h3>Role of Concave Pole Pieces & Soft Iron Core</h3><ul>
+<li><strong>Concave Cylindrical Pole Pieces:</strong> Produce a <strong>radial magnetic field</strong> so that magnetic field lines are always parallel to the coil plane (\(\theta = 90^\circ\) always).</li>
+<li><strong>Soft Iron Core:</strong> High relative permeability (\(\mu_r \gg 1\)) concentrates magnetic flux, dramatically increasing field strength \(B\) and making the field strictly radial.</li>
+</ul><h3>Sensitivities of MCG</h3><h5>1. Current Sensitivity (\(S_I\))</h5><p>Deflection produced per unit electric current:</p><p>\[S_I = \frac{\theta}{I} = \frac{N A B}{C} \quad [\text{rad/A or div/A}]\]</p>
+<h5>2. Voltage Sensitivity (\(S_V\))</h5><p>Deflection produced per unit applied voltage:</p><p>\[S_V = \frac{\theta}{V} = \frac{\theta}{I R_g} = \frac{N A B}{C R_g} \quad [\text{div/V}]\]</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 240" fill="currentColor">
+
+<g transform="translate(30, 20)">
+<text x="140" y="15" font-size="12" font-weight="bold" text-anchor="middle">(a) Radial Field Cross-Section</text>
+
+<path d="M 20 40 C 70 60, 70 160, 20 180 L 10 180 L 10 40 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+<text x="35" y="115" font-size="16" font-weight="bold" fill="#991b1b">N</text>
+
+<path d="M 260 40 C 210 60, 210 160, 260 180 L 270 180 L 270 40 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+<text x="240" y="115" font-size="16" font-weight="bold" fill="#1d4ed8">S</text>
+
+<circle cx="140" cy="110" r="45" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
+<text x="140" y="114" font-size="9" text-anchor="middle" font-weight="bold">Iron Core</text>
+
+<rect x="80" y="105" width="120" height="10" fill="none" stroke="#991b1b" stroke-width="2.5" transform="rotate(-20 140 110)"/>
+
+<path d="M 65 80 L 95 95 M 60 110 L 95 110 M 65 140 L 95 125" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+<path d="M 185 95 L 215 80 M 185 110 L 220 110 M 185 125 L 215 140" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+</g>
+
+<g transform="translate(350, 20)">
+<text x="130" y="15" font-size="12" font-weight="bold" text-anchor="middle">(b) Conversion Circuits</text>
+
+<g transform="translate(0, 35)">
+<rect x="10" y="10" width="240" height="70" fill="none" stroke="#cbd5e1" stroke-dasharray="3 2" rx="4"/>
+<text x="20" y="25" font-size="10" font-weight="bold" fill="#047857">Ammeter Conversion (Shunt S)</text>
+<line x1="20" y1="45" x2="60" y2="45" stroke="#0f172a" stroke-width="2"/>
+
+<circle cx="90" cy="45" r="14" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+<text x="90" y="50" font-size="11" font-weight="bold" text-anchor="middle">G</text>
+<line x1="104" y1="45" x2="220" y2="45" stroke="#0f172a" stroke-width="2"/>
+
+<path d="M 50 45 L 50 70 L 90 70 M 130 70 L 180 70 L 180 45" stroke="#0f172a" stroke-width="2" fill="none"/>
+<rect x="90" y="65" width="40" height="10" fill="#f1f5f9" stroke="#991b1b" stroke-width="2"/>
+<text x="110" y="62" font-size="9" text-anchor="middle" font-weight="bold" fill="#991b1b">Shunt S</text>
+</g>
+
+<g transform="translate(0, 130)">
+<rect x="10" y="10" width="240" height="60" fill="none" stroke="#cbd5e1" stroke-dasharray="3 2" rx="4"/>
+<text x="20" y="25" font-size="10" font-weight="bold" fill="#1d4ed8">Voltmeter Conversion (Series R)</text>
+<line x1="20" y1="45" x2="60" y2="45" stroke="#0f172a" stroke-width="2"/>
+<circle cx="75" cy="45" r="14" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+<text x="75" y="50" font-size="11" font-weight="bold" text-anchor="middle">G</text>
+<line x1="89" y1="45" x2="130" y2="45" stroke="#0f172a" stroke-width="2"/>
+
+<rect x="130" y="40" width="50" height="10" fill="#f1f5f9" stroke="#1d4ed8" stroke-width="2"/>
+<text x="155" y="35" font-size="9" text-anchor="middle" font-weight="bold" fill="#1d4ed8">Series R</text>
+<line x1="180" y1="45" x2="230" y2="45" stroke="#0f172a" stroke-width="2"/>
+</g>
+</g>
+</svg><p>Figure 16.6: MCG radial magnetic field configuration and conversion schematics for Ammeter and Voltmeter.</p>
+<h3>Applications: Conversion of MCG to Ammeter & Voltmeter</h3><div class="box note" data-title="1. Conversion into Ammeter (To measure current in series)"><p>
+A galvanometer is converted into an ammeter by connecting a <strong>low resistance (Shunt, \(S\)) in parallel</strong> with its coil.
+</p>
+<p>Let \(I_g =\) full-scale deflection current of MCG, \(R_g =\) galvanometer coil resistance, \(I =\) total current to be measured (\(I > I_g\)).</p>
+<p>Since \(R_g\) and \(S\) are in parallel, potential difference across both branches is equal:</p>
+\[I_g R_g = (I - I_g) S \implies S = \frac{I_g R_g}{I - I_g}\]
+<p><strong>Effective Resistance of Ammeter (\(R_A\)):</strong></p>
+\[R_A = \frac{R_g S}{R_g + S} \approx S \quad (\text{Very Low, ideal ammeter } R_A = 0)\]</div>
+<div class="box note" data-title="2. Conversion into Voltmeter (To measure voltage in parallel)"><p>
+A galvanometer is converted into a voltmeter by connecting a <strong>high resistance (\(R\)) in series</strong> with its coil.
+</p>
+<p>Let \(V =\) total potential difference to be measured across range \(0 - V\) volts.</p>
+<p>Total resistance of voltmeter branch \(= R_g + R\). Applying Ohm's Law:</p>
+\[V = I_g (R_g + R) \implies R = \frac{V}{I_g} - R_g\]
+<p><strong>Effective Resistance of Voltmeter (\(R_V\)):</strong></p>
+\[R_V = R_g + R \quad (\text{Very High, ideal voltmeter } R_V = \infty)\]</div>
+<h2>Hall Effect & Derivation of Hall Voltage (\(V_H = \frac{BI}{ntq}\))</h2><p>
+<strong>Hall Effect Definition:</strong> When a current-carrying conductor or semiconductor slab is placed in a transverse magnetic field, a potential difference is generated across its opposite faces perpendicular to both the direction of current and the magnetic field. This transverse voltage is known as the <strong>Hall Voltage (\(V_H\))</strong>.
+</p><h3>Physical Mechanism & Derivation</h3><p>
+Consider a rectangular semiconductor slab of length \(l\), width \(w\), thickness \(t\), carrying steady current \(I\) along the X-axis in a magnetic field \(\vec{B}\) directed along the Z-axis.
+</p><div class="box note" data-title="Step-by-Step Derivation of Hall Voltage"><ol>
+<li>
+<strong>Magnetic Lorentz Force (\(F_M\)):</strong>
+Charge carriers (charge \(q\)) drift with velocity \(v_d\) along X-axis. They experience magnetic force along Y-axis:
+\[F_M = q v_d B\]
+</li>
+<li>
+<strong>Charge Accumulation & Transverse Electric Field (\(E_H\)):</strong>
+Accumulation of charges on the upper face creates an internal transverse electric field \(E_H\). This exerts an opposing electrostatic force \(F_E\):
+\[F_E = q E_H\]
+</li>
+<li>
+<strong>Dynamic Equilibrium Condition (\(F_E = F_M\)):</strong>
+\[q E_H = q v_d B \implies E_H = v_d B\]
+</li>
+<li>
+<strong>Relation between Hall Voltage \(V_H\) and Electric Field \(E_H\):</strong>
+Since transverse width is \(w\):
+\[V_H = E_H \cdot w = (v_d B) w\]
+</li>
+<li>
+<strong>Substituting Microscopic Current Formula:</strong>
+Current \(I = n A q v_d = n (w \cdot t) q v_d \implies v_d = \frac{I}{n w t q}\)
+</li>
+<li>
+<strong>Final Hall Voltage Formula:</strong>
+\[V_H = \left(\frac{I}{n w t q}\right) B w \implies V_H = \frac{B I}{n t q}\]
+</li>
+</ol>
+<p>Hall Coefficient (\(R_H\)):</p>
+\[R_H = \frac{1}{n q} \implies V_H = \frac{R_H B I}{t}\]</div>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 230" fill="currentColor">
+
+<polygon points="120,80 340,80 420,40 200,40" fill="#f1f5f9" stroke="#0f172a" stroke-width="2"/>
+<polygon points="120,80 340,80 340,160 120,160" fill="#e2e8f0" stroke="#0f172a" stroke-width="2"/>
+<polygon points="340,80 420,40 420,120 340,160" fill="#cbd5e1" stroke="#0f172a" stroke-width="2"/>
+
+<line x1="120" y1="175" x2="340" y2="175" stroke="#475569" stroke-width="1.5"/>
+<text x="230" y="195" font-size="11" text-anchor="middle" font-weight="bold">Width w</text>
+
+<line x1="355" y1="80" x2="355" y2="160" stroke="#475569" stroke-width="1.5"/>
+<text x="375" y="125" font-size="11" font-weight="bold">Thickness t</text>
+
+<line x1="230" y1="140" x2="230" y2="10" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+<text x="240" y="25" font-size="12" font-weight="bold" fill="#1d4ed8">Field B (Z-axis)</text>
+
+<line x1="50" y1="120" x2="120" y2="120" stroke="#047857" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="50" y="110" font-size="11" font-weight="bold" fill="#047857">Current I</text>
+
+<g fill="#991b1b" font-size="11" font-weight="bold">
+<text x="140" y="75">+</text><text x="180" y="75">+</text><text x="220" y="75">+</text><text x="260" y="75">+</text><text x="300" y="75">+</text>
+</g>
+<g fill="#1d4ed8" font-size="13" font-weight="bold">
+<text x="140" y="155">-</text><text x="180" y="155">-</text><text x="220" y="155">-</text><text x="260" y="155">-</text><text x="300" y="155">-</text>
+</g>
+
+<path d="M 230 75 L 230 50 L 480 50 L 480 100" stroke="#991b1b" stroke-width="1.5" fill="none"/>
+<path d="M 230 155 L 230 180 L 480 180 L 480 140" stroke="#1d4ed8" stroke-width="1.5" fill="none"/>
+<circle cx="480" cy="120" r="20" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+<text x="480" y="124" font-size="11" font-weight="bold" text-anchor="middle">V_H</text>
+</svg><p>Figure 16.7: Hall effect charge separation and Hall voltage measurement in a conductor slab.</p>
+<h3>Physical Significance of Hall Effect</h3><ul>
+<li><strong>Determination of Charge Carrier Sign:</strong> Distinguishes whether conduction occurs via negative electrons (\(n\)-type) or positive holes (\(p\)-type).</li>
+<li><strong>Measurement of Carrier Concentration (\(n\)):</strong> Directly calculates number density \(n = \frac{I B}{V_H t q}\).</li>
+<li><strong>Determination of Carrier Mobility (\(\mu_e\)):</strong> \(\mu_e = \sigma |R_H|\), where \(\sigma\) is electrical conductivity.</li>
+</ul><h2>Hall Probe for Measuring Flux Density</h2><p>
+A <strong>Hall Probe</strong> is a calibrated precision sensor based on the Hall effect, widely used in laboratory gaussmeters to measure unknown magnetic flux density \(\vec{B}\).
+</p><h4>Operational Procedure:</h4><ol>
+<li>A very thin semiconductor element (such as Indium Arsenide, \(\text{InAs}\), or Gallium Arsenide, \(\text{GaAs}\)) with known thickness \(t\) and carrier density \(n\) is mounted at the tip of a non-magnetic probe rod.</li>
+<li>A calibrated constant control current \(I\) is passed through the semiconductor sensor tip.</li>
+<li>The probe tip is oriented perpendicularly inside the unknown magnetic field \(\vec{B}\) until maximum voltage reading is indicated on the digital display.</li>
+<li>The calibrated Hall voltage \(V_H\) directly yields \(B\):
+\[B = \frac{V_H \cdot n t q}{I} = \text{Constant} \times V_H\]</li>
+</ol><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 160" fill="currentColor">
+
+<rect x="20" y="60" width="220" height="40" fill="#334155" rx="5"/>
+<text x="100" y="84" font-size="12" font-weight="bold" fill="#fff">Hall Probe Shaft</text>
+
+<rect x="240" y="70" width="80" height="20" fill="#047857" rx="2"/>
+<text x="280" y="84" font-size="9" text-anchor="middle" font-weight="bold" fill="#fff">InAs Wafer</text>
+
+<g stroke="#1d4ed8" stroke-width="2" marker-end="url(#arrow-blue)">
+<line x1="280" y1="140" x2="280" y2="20"/>
+<line x1="300" y1="140" x2="300" y2="20"/>
+</g>
+<text x="310" y="30" font-size="11" font-weight="bold" fill="#1d4ed8">Unknown B-field</text>
+
+<rect x="390" y="40" width="130" height="80" fill="#f8fafc" stroke="#0f172a" stroke-width="2" rx="6"/>
+<rect x="405" y="55" width="100" height="30" fill="#0f172a" rx="3"/>
+<text x="455" y="75" font-size="14" font-weight="bold" text-anchor="middle" fill="#22c55e">0.425 T</text>
+<text x="455" y="105" font-size="10" text-anchor="middle" font-weight="bold">Gaussmeter</text>
+</svg><p>Figure 16.8: Hall probe sensor tip submerged in magnetic field connected to digital gaussmeter display.</p>
+<h2>Biot-Savart Law & Applications</h2><p>
+<strong>Biot-Savart Law</strong> is the fundamental law of magnetostatics that relates the magnetic field \(d\vec{B}\) produced at a point in space to an infinitesimal current element \(I d\vec{l}\).
+</p><div class="box note" data-title="Statement &amp; Mathematical Formulation"><p>
+The magnitude of magnetic field \(d B\) produced at point \(P\) at distance \(r\) from element \(I d\vec{l}\) is:
+</p>
+<ol>
+<li>Directly proportional to current \(I\).</li>
+<li>Directly proportional to element length \(d l\).</li>
+<li>Directly proportional to \(\sin\theta\) (where \(\theta\) is angle between \(d\vec{l}\) and position vector \(\vec{r}\)).</li>
+<li>Inversely proportional to the square of distance \(r^2\).</li>
+</ol>
+\[d B \propto \frac{I d l \sin\theta}{r^2} \implies d B = \frac{\mu_0}{4\pi} \frac{I d l \sin\theta}{r^2}\]
+<p>Vector Form:</p>
+\[d\vec{B} = \frac{\mu_0}{4\pi} \frac{I (d\vec{l} \times \hat{r})}{r^2} = \frac{\mu_0}{4\pi} \frac{I (d\vec{l} \times \vec{r})}{r^3}\]
+<p>where \(\mu_0 = 4\pi \times 10^{-7} \text{ T}\cdot\text{m/A} = \text{Permeability of free space}\).</p></div>
+<h3>Applications of Biot-Savart Law</h3><h4>Application (i): Magnetic Field on the Axis of a Circular Current Coil</h4><p>
+Consider a circular loop of radius \(R\) carrying steady current \(I\). We evaluate field \(B\) at axial point \(P\) at distance \(x\) from coil center \(O\).
+</p><div class="box note" data-title="Derivation"><p>Distance from current element \(d l\) to axial point \(P\): \(r = \sqrt{R^2 + x^2}\).</p>
+<p>Angle between element \(d\vec{l}\) and position vector \(\vec{r}\) is \(\theta = 90^\circ\).</p>
+\[d B = \frac{\mu_0}{4\pi} \frac{I d l \sin 90^\circ}{r^2} = \frac{\mu_0}{4\pi} \frac{I d l}{R^2 + x^2}\]
+<p>Resolving \(d\vec{B}\) into axial component (\(d B_x = d B \sin\phi\)) and perpendicular component (\(d B_\perp = d B \cos\phi\)):</p>
+<p>By symmetry, perpendicular components \(\sum d B_\perp = 0\). Total field is sum of axial components:</p>
+\[B = \int d B \sin\phi = \int \left(\frac{\mu_0}{4\pi} \frac{I d l}{R^2 + x^2}\right) \left(\frac{R}{\sqrt{R^2 + x^2}}\right)\]
+\[B = \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{3/2}} \int d l = \frac{\mu_0 I R}{4\pi (R^2 + x^2)^{3/2}} (2\pi R)\]
+<p>For \(N\) turns:</p>
+\[B_{\text{axis}} = \frac{\mu_0 N I R^2}{2 (R^2 + x^2)^{3/2}}\]
+<p>Special Case: At center of coil (\(x = 0\)):</p>
+\[B_{\text{center}} = \frac{\mu_0 N I}{2 R}\]</div>
+<h4>Application (ii): Field due to a Straight Current-Carrying Conductor</h4><p>
+For a straight conductor at perpendicular distance \(a\) with subtended angles \(\phi_1\) and \(\phi_2\) at the ends:
+</p><p>\[B = \frac{\mu_0 I}{4\pi a} (\sin\phi_1 + \sin\phi_2)\]</p>
+<p><strong>For an infinitely long wire (\(\phi_1 = \phi_2 = 90^\circ\)):</strong></p><p>\[B = \frac{\mu_0 I}{4\pi a} (\sin 90^\circ + \sin 90^\circ) = \frac{\mu_0 I}{2\pi a}\]</p>
+<svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" fill="currentColor">
+
+<line x1="40" y1="110" x2="560" y2="110" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 2"/>
+
+<ellipse cx="140" cy="110" rx="25" ry="70" fill="none" stroke="#0f172a" stroke-width="3"/>
+<text x="140" y="115" font-size="10" font-weight="bold" text-anchor="middle">O</text>
+
+<circle cx="420" cy="110" r="4" fill="#0f172a"/>
+<text x="420" y="128" font-size="11" font-weight="bold" text-anchor="middle">P</text>
+
+<line x1="140" y1="110" x2="140" y2="40" stroke="#1d4ed8" stroke-width="2"/>
+<text x="125" y="75" font-size="11" font-weight="bold" fill="#1d4ed8">R</text>
+
+<line x1="140" y1="110" x2="420" y2="110" stroke="#047857" stroke-width="2"/>
+<text x="280" y="102" font-size="11" font-weight="bold" fill="#047857">Axial distance x</text>
+
+<line x1="140" y1="40" x2="420" y2="110" stroke="#991b1b" stroke-width="2"/>
+<text x="280" y="65" font-size="11" font-weight="bold" fill="#991b1b">r = √(R² + x²)</text>
+
+<line x1="420" y1="110" x2="490" y2="75" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+<text x="500" y="70" font-size="11" font-weight="bold" fill="#1d4ed8">dB</text>
+
+<line x1="420" y1="110" x2="490" y2="110" stroke="#047857" stroke-width="2" stroke-dasharray="3 2" marker-end="url(#arrow)"/>
+<text x="450" y="125" font-size="10" font-weight="bold" fill="#047857">dB_x</text>
+</svg><p>Figure 16.9: Biot-Savart law integration geometry for axial magnetic field of circular coil.</p>
+<h2>Ampere's Circuital Law & Applications</h2><p>
+<strong>Ampere's Circuital Law</strong> provides an elegant symmetry-based method to calculate magnetic fields, analogous to Gauss's Law in electrostatics.
+</p><div class="box note" data-title="Statement &amp; Mathematical Integral"><p>
+The line integral of magnetic field vector \(\vec{B}\) around any closed closed path (termed an <strong>Amperian Loop</strong>) in free space equals \(\mu_0\) times the total net electric current \(I_{\text{enc}}\) threading through the loop.
+</p>
+\[\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}}\]</div>
+<h3>Applications of Ampere's Law</h3><h4>1. Long Straight Current Wire</h4><p>Choose a circular Amperian loop of radius \(r\) centered on the wire. \(\vec{B}\) is tangent to loop at all points (\(\theta = 0^\circ\)):</p><p>\[\oint \vec{B} \cdot d\vec{l} = B \oint d l = B (2\pi r) = \mu_0 I \implies B = \frac{\mu_0 I}{2\pi r}\]</p>
+<h4>2. Straight Solenoid</h4><p>Consider a rectangular Amperian loop \(abcd\) of length \(L\). Total turns enclosed \(= n L\) (where \(n = N/L\) is turns per unit length):</p><p>\[\oint_{abcd} \vec{B} \cdot d\vec{l} = \int_a^b \vec{B} \cdot d\vec{l} + \int_b^c \vec{B} \cdot d\vec{l} + \int_c^d \vec{B} \cdot d\vec{l} + \int_d^a \vec{B} \cdot d\vec{l}\]
+\[\implies B L + 0 + 0 + 0 = \mu_0 (n L I) \implies B = \mu_0 n I\]</p>
+<h4>3. Toroidal Solenoid (Toroid)</h4><p>A toroid is an endless solenoid bent into a ring of mean radius \(r\):</p><p>\[\oint \vec{B} \cdot d\vec{l} = B (2\pi r) = \mu_0 (N I) \implies B = \frac{\mu_0 N I}{2\pi r} = \mu_0 n I\]</p>
+<p>Field in interior empty space (\(r < r_{\text{inner}}\)) and exterior space (\(r > r_{\text{outer}}\)) is strictly zero (\(B = 0\)).</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" fill="currentColor">
+
+<g transform="translate(20, 10)">
+<text x="130" y="20" font-size="12" font-weight="bold" text-anchor="middle">(a) Solenoid Rectangular Loop</text>
+<rect x="30" y="50" width="200" height="80" fill="none" stroke="#0f172a" stroke-width="2"/>
+
+<rect x="60" y="30" width="120" height="100" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 2"/>
+<text x="55" y="25" font-size="10" font-weight="bold" fill="#1d4ed8">a</text>
+<text x="185" y="25" font-size="10" font-weight="bold" fill="#1d4ed8">b</text>
+<text x="185" y="145" font-size="10" font-weight="bold" fill="#1d4ed8">c</text>
+<text x="55" y="145" font-size="10" font-weight="bold" fill="#1d4ed8">d</text>
+<text x="130" y="180" font-size="11" text-anchor="middle">B = μ₀nI inside</text>
+</g>
+
+<g transform="translate(340, 10)">
+<text x="120" y="20" font-size="12" font-weight="bold" text-anchor="middle">(b) Toroid Ring Amperian Loops</text>
+<circle cx="120" cy="100" r="75" fill="none" stroke="#0f172a" stroke-width="2"/>
+<circle cx="120" cy="100" r="45" fill="none" stroke="#0f172a" stroke-width="2"/>
+
+<circle cx="120" cy="100" r="60" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="4 2"/>
+<line x1="120" y1="100" x2="180" y2="100" stroke="#1d4ed8" stroke-width="1.5"/>
+<text x="150" y="95" font-size="10" font-weight="bold" fill="#1d4ed8">r</text>
+<text x="120" y="190" font-size="11" text-anchor="middle">B = μ₀NI / (2πr)</text>
+</g>
+</svg><p>Figure 16.10: Amperian loops for a straight solenoid and a toroidal solenoid.</p>
+<h2>Force Between Two Parallel Conductors & Definition of Ampere</h2><p>
+Consider two long, straight parallel conductors \(C_1\) and \(C_2\) placed in vacuum separated by distance \(d\), carrying currents \(I_1\) and \(I_2\) respectively.
+</p><div class="box note" data-title="Step-by-Step Derivation of Force per Unit Length"><ol>
+<li>
+<strong>Magnetic Field produced by wire 1 at wire 2 (\(B_1\)):</strong>
+\[B_1 = \frac{\mu_0 I_1}{2\pi d}\]
+Directed perpendicularly into the plane of paper at wire 2 (by Right-Hand Thumb Rule).
+</li>
+<li>
+<strong>Magnetic Force on segment length \(L\) of wire 2 (\(F_{21}\)):</strong>
+\[F_{21} = I_2 L B_1 \sin 90^\circ = I_2 L \left(\frac{\mu_0 I_1}{2\pi d}\right) = \frac{\mu_0 I_1 I_2 L}{2\pi d}\]
+</li>
+<li>
+<strong>Force per Unit Length (\(f = F/L\)):</strong>
+\[f = \frac{F}{L} = \frac{\mu_0 I_1 I_2}{2\pi d} \quad [\text{N/m}]\]
+</li>
+</ol></div>
+<h3>Attraction vs Repulsion Rule</h3><h5>Parallel Currents (Same Direction)</h5><p>Conductors <strong>ATTRACT</strong> each other.</p><h5>Anti-Parallel Currents (Opposite Directions)</h5><p>Conductors <strong>REPEL</strong> each other.</p><svg class="panel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 200" fill="currentColor">
+
+<line x1="150" y1="20" x2="150" y2="170" stroke="#1e293b" stroke-width="4"/>
+<line x1="150" y1="40" x2="150" y2="30" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="130" y="30" font-size="12" font-weight="bold" fill="#1d4ed8">I1</text>
+
+<line x1="350" y1="20" x2="350" y2="170" stroke="#1e293b" stroke-width="4"/>
+<line x1="350" y1="40" x2="350" y2="30" stroke="#1e293b" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="365" y="30" font-size="12" font-weight="bold" fill="#1d4ed8">I2</text>
+
+<line x1="150" y1="140" x2="350" y2="140" stroke="#64748b" stroke-width="1.5"/>
+<text x="250" y="132" font-size="11" font-weight="bold" text-anchor="middle">Distance d</text>
+
+<line x1="150" y1="85" x2="220" y2="85" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="170" y="75" font-size="11" font-weight="bold" fill="#991b1b">F12</text>
+
+<line x1="350" y1="85" x2="280" y2="85" stroke="#991b1b" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="310" y="75" font-size="11" font-weight="bold" fill="#991b1b">F21</text>
+</svg><p>Figure 16.11: Mutual magnetic attraction force between two parallel wires carrying currents in the same direction.</p>
+<h4>NEB Standard Board Exam Definition of 1 Ampere:</h4><p>
+"One ampere is defined as that constant current which, if maintained in two straight parallel conductors of infinite length and negligible circular cross-section, placed 1 metre apart in vacuum, produces between them a force equal to \(2 \times 10^{-7}\) newtons per metre of length."
+</p><h2>Step-by-Step Solved Textbook Numericals</h2><h4>Example 1 (NEB 2078): Solenoid Field & Force</h4><p>
+A solenoid \(0.5 \text{ m}\) long has \(500\) turns and carries a current of \(2.5 \text{ A}\). Calculate the magnetic field strength at the center of the solenoid.
+</p><p><strong>Given:</strong> \(L = 0.5 \text{ m}\), \(N = 500\), \(I = 2.5 \text{ A}\), \(\mu_0 = 4\pi \times 10^{-7} \text{ T}\cdot\text{m/A}\)</p><p>Turns per unit length \(n = \frac{N}{L} = \frac{500}{0.5} = 1000 \text{ turns/m}\)</p><p>Formula: \(B = \mu_0 n I = (4\pi \times 10^{-7}) \times 1000 \times 2.5\)</p><p><strong>Calculation:</strong> \(B = 3.1416 \times 10^{-3} \text{ T} = 3.14 \text{ mT}\)</p><h4>Example 2 (NEB 2076): MCG Ammeter Conversion</h4><p>
+A galvanometer has a coil resistance of \(50 \, \Omega\) and shows full-scale deflection for a current of \(2 \text{ mA}\). How can it be converted into an ammeter reading up to \(5 \text{ A}\)?
+</p><p><strong>Given:</strong> \(R_g = 50 \, \Omega\), \(I_g = 2 \text{ mA} = 2 \times 10^{-3} \text{ A}\), \(I = 5 \text{ A}\)</p><p>Formula for Shunt Resistance: \(S = \frac{I_g R_g}{I - I_g}\)</p><p>\(S = \frac{(2 \times 10^{-3}) \times 50}{5 - 0.002} = \frac{0.1}{4.998} \approx 0.020008 \, \Omega\)</p><p><strong>Result:</strong> Connect a shunt resistance of \(0.020 \, \Omega\) in parallel with the galvanometer coil.</p><h4>Example 3: Hall Effect Semiconductor Calculation</h4><p>
+A ribbon of copper \(1.0 \text{ mm}\) thick carries a current of \(20 \text{ A}\) in a perpendicular magnetic field of \(1.5 \text{ T}\). If carrier density \(n = 8.49 \times 10^{28} \text{ m}^{-3}\), calculate the Hall voltage \(V_H\).
+</p><p><strong>Given:</strong> \(t = 1.0 \text{ mm} = 10^{-3} \text{ m}\), \(I = 20 \text{ A}\), \(B = 1.5 \text{ T}\), \(n = 8.49 \times 10^{28} \text{ m}^{-3}\), \(q = 1.6 \times 10^{-19} \text{ C}\)</p><p>Formula: \(V_H = \frac{B I}{n t q}\)</p><p>\(V_H = \frac{1.5 \times 20}{(8.49 \times 10^{28}) \times 10^{-3} \times (1.6 \times 10^{-19})} = \frac{30}{1.3584 \times 10^7} \approx 2.21 \times 10^{-6} \text{ V} = 2.21 \, \mu\text{V}\)</p><h2>Conceptual Short-Answer Accordions</h2><details class="solution"><summary>Q1: Why does a magnetic field do no work on a moving charged particle?</summary>
+<p>
+The magnetic Lorentz force is given by \(\vec{F} = q(\vec{v} \times \vec{B})\). By definition of vector cross product, \(\vec{F}\) is always strictly perpendicular to the velocity vector \(\vec{v}\) (and displacement \(d\vec{r}\)). Therefore, rate of work done \(P = \vec{F} \cdot \vec{v} = 0\). Since work done is zero, the kinetic energy and speed of the particle remain constant.
+</p></details>
+<details class="solution"><summary>Q2: Why is an ammeter always connected in series while a voltmeter is connected in parallel?</summary>
+<p>
+An ammeter measures total current passing through a branch and has a very low resistance (\(R_A \approx 0\)). Connecting it in series ensures all current passes through it without significantly altering circuit resistance. Conversely, a voltmeter measures potential difference between two points and has very high resistance (\(R_V \approx \infty\)). Connecting it in parallel draws negligible current from the main circuit.
+</p></details>
+<details class="solution"><summary>Q3: Why do two parallel wires carrying currents in opposite directions repel each other?</summary>
+<p>
+The magnetic field \(B_1\) produced by the first wire at the second wire interacts with the opposite current \(I_2\). Applying Fleming's Left-Hand Rule to wire 2 shows that the resultant Lorentz force vector points away from wire 1, producing mutual repulsion.
+</p></details>
+<p>Interactive Suite</p>

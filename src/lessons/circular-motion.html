@@ -5,622 +5,211 @@ chapters: [6]
 date: 2026-10-02
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEB Grade 11 Physics - Circular Motion Study Module</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        neb: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            500: '#0284c7',
-                            600: '#0369a1',
-                            700: '#075985',
-                            800: '#0c4a6e',
-                            900: '#0f172a'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- KaTeX for LaTeX Math Rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
-        onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<h2>Unit 6: Circular Motion</h2><p>
+A complete standard self-study resource covering angular kinematics, force dynamics, banked roads, conical pendulums, and vertical loops with complete NEB board exam proofs.
+</p><h2>Angular Displacement, Velocity, and Acceleration</h2><p>
+When a particle moves along a circular path of radius \(r\), its motion is called <strong>circular motion</strong>. To describe this motion, we use angular variables analogous to linear kinematics.
+</p><h3>1. Angular Displacement (\(\theta\))</h3><p>
+The angle swept out by the radius vector at the center of the circular path in a given time interval.
+</p><p>
+\(\theta = \frac{s}{r} \text{ radians}\)
+</p><ul>
+<li><strong>SI Unit:</strong> radian (\(\text{rad}\))</li>
+<li><strong>Dimensions:</strong> \([M^0L^0T^0]\) (Dimensionless)</li>
+</ul><h3>2. Angular Velocity (\(\omega\))</h3><p>
+The rate of change of angular displacement with respect to time.
+</p><p>
+\(\omega = \frac{d\theta}{dt} = \frac{2\pi}{T} = 2\pi f\)
+</p><ul>
+<li><strong>SI Unit:</strong> \(\text{rad/s}\)</li>
+<li><strong>Dimensions:</strong> \([M^0L^0T^{-1}]\)</li>
+</ul><h3>3. Angular Acceleration (\(\alpha\))</h3><p>
+The rate of change of angular velocity with time.
+</p><p>
+\(\alpha = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2}\)
+</p><ul>
+<li><strong>SI Unit:</strong> \(\text{rad/s}^2\)</li>
+<li><strong>Dimensions:</strong> \([M^0L^0T^{-2}]\)</li>
+</ul><svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
 
-    <style>
-        /* Custom Styles & CSS Variables */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+<ellipse cx="150" cy="160" rx="90" ry="35" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M 60 160 A 90 35 0 0 0 240 160" fill="none" stroke="currentColor" stroke-width="2.5"/>
 
-        .textbook-font {
-            font-family: 'Merriweather', serif;
-        }
+<circle cx="150" cy="160" r="4" fill="currentColor"/>
+<text x="140" y="178" font-size="12" fill="currentColor" font-weight="bold">O</text>
 
-        /* PRINT STYLES - A4 Optimized Line Art & Pure Minimal Text */
-        @media print {
-            @page {
-                size: A4;
-                margin: 1.5cm;
-            }
-            body {
-                background: white !important;
-                color: black !important;
-                font-size: 11pt;
-                line-height: 1.5;
-            }
-            .no-print, nav, sidebar, header, .interactive-tool, button, .quiz-controls, .no-print-bg {
-                display: none !important;
-            }
-            .print-only {
-                display: block !important;
-            }
-            .page-break {
-                page-break-before: always;
-            }
-            .avoid-break {
-                page-break-inside: avoid;
-            }
-            .content-card {
-                border: none !important;
-                box-shadow: none !important;
-                padding: 0 !important;
-                margin-bottom: 2rem !important;
-            }
-            svg {
-                filter: grayscale(100%) contrast(200%);
-                max-width: 100% !important;
-            }
-            .derivation-box {
-                border-left: 3px solid #000 !important;
-                background-color: #f8f9fa !important;
-            }
-            a {
-                text-decoration: none !important;
-                color: black !important;
-            }
-        }
+<line x1="150" y1="160" x2="150" y2="30" stroke="#0284c7" stroke-width="3"/>
 
-        .print-only {
-            display: none;
-        }
+<polygon points="150,20 144,35 156,35" fill="#0284c7"/>
+<text x="160" y="35" font-size="13" fill="#0284c7" font-weight="bold">Vector ω, α</text>
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #0f172a;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #94a3b8;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #64748b;
-        }
-    </style>
-</head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-200">
+<line x1="150" y1="160" x2="225" y2="142" stroke="currentColor" stroke-width="2"/>
+<circle cx="225" cy="142" r="6" fill="#ef4444"/>
+<text x="235" y="145" font-size="12" fill="currentColor" font-weight="bold">P(t)</text>
+<text x="180" y="165" font-size="11" fill="currentColor">r</text>
 
-    <!-- Top Navigation Header (No Print) -->
-    <header class="no-print sticky top-0 z-50 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="bg-neb-600 text-white p-2 rounded-lg font-bold text-lg">NEB</div>
-                <div>
-                    <h1 class="font-bold text-slate-900 dark:text-white text-base sm:text-lg leading-tight">Grade 11 Physics: Circular Motion</h1>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">CDC Nepal Standard Textbook Module</p>
-                </div>
-            </div>
+<line x1="225" y1="142" x2="225" y2="80" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3"/>
+<line x1="225" y1="142" x2="260" y2="120" stroke="#10b981" stroke-width="2.5"/>
+<polygon points="265,117 254,115 258,125" fill="#10b981"/>
+<text x="250" y="110" font-size="12" fill="#10b981" font-weight="bold">v</text>
 
-            <!-- Header Controls -->
-            <div class="flex items-center space-x-2 sm:space-x-4">
-                <!-- Search Box -->
-                <div class="relative hidden md:block w-48 lg:w-64">
-                    <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="Search formula, topic..." 
-                           class="w-full pl-9 pr-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-100 rounded-lg border-none focus:ring-2 focus:ring-neb-500 outline-none">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-                </div>
+<path d="M 190 182 A 50 20 0 0 0 210 170" fill="none" stroke="#0284c7" stroke-width="2"/>
+<polygon points="214,166 205,168 210,175" fill="#0284c7"/>
+<text x="170" y="210" font-size="11" fill="currentColor">Counter-clockwise Motion</text>
+</svg><h4>Direction of Axial Vectors (Right-Hand Thumb Rule)</h4><p>
+Angular displacement (\(\boldsymbol{\theta}\)), velocity (\(\boldsymbol{\omega}\)), and acceleration (\(\boldsymbol{\alpha}\)) are <strong>axial vectors</strong>. Their direction is perpendicular to the plane of rotation.
+</p><div class="box note">"Curl the fingers of your right hand in the direction of circular rotation of the body; then the stretched thumb points along the axis of rotation in the direction of \(\vec{\omega}\) and \(\vec{\alpha}\)."</div>
+<h3>Analogy Between Linear and Angular Kinematics</h3><table>
+<thead>
+<tr>
+<th>Linear Parameter</th>
+<th>Angular Parameter</th>
+<th>Connecting Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear Displacement (\(s\))</td>
+<td>Angular Displacement (\(\theta\))</td>
+<td>\(s = r\theta\)</td>
+</tr>
+<tr>
+<td>Linear Velocity (\(v\))</td>
+<td>Angular Velocity (\(\omega\))</td>
+<td>\(v = r\omega\)</td>
+</tr>
+<tr>
+<td>Tangential Acceleration (\(a_t\))</td>
+<td>Angular Acceleration (\(\alpha\))</td>
+<td>\(a_t = r\alpha\)</td>
+</tr>
+<tr>
+<td>Mass (\(m\))</td>
+<td>Moment of Inertia (\(I\))</td>
+<td>\(I = \sum m r^2\)</td>
+</tr>
+</tbody>
+</table><h2>Conical Pendulum</h2><p>
+A <strong>conical pendulum</strong> consists of a small heavy bob of mass \(m\) tied to a light inextensible string of length \(l\), suspended from a fixed point, such that the bob rotates in a horizontal circle at constant angular velocity.
+</p><svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
 
-                <!-- Theme Toggle -->
-                <button onclick="toggleDarkMode()" class="p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg transition-colors" title="Toggle Theme">
-                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
-                    <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+<line x1="80" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width="3"/>
+<line x1="100" y1="20" x2="90" y2="30" stroke="currentColor" stroke-width="1"/>
+<line x1="130" y1="20" x2="120" y2="30" stroke="currentColor" stroke-width="1"/>
+<line x1="160" y1="20" x2="150" y2="30" stroke="currentColor" stroke-width="1"/>
+<line x1="190" y1="20" x2="180" y2="30" stroke="currentColor" stroke-width="1"/>
 
-    <!-- Main Container -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col lg:flex-row gap-8">
+<circle cx="140" cy="30" r="3" fill="currentColor"/>
+<text x="145" y="25" font-size="11" font-weight="bold">S</text>
 
-        <!-- Sidebar Navigation (Desktop) -->
-        <aside class="no-print lg:w-64 flex-shrink-0">
-            <div class="sticky top-20 bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm space-y-1 text-sm max-h-[85vh] overflow-y-auto">
-                <div class="px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Unit 6 Syllabus</div>
-                <a href="#sec6-1" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <span class="w-8 font-semibold text-neb-500">6.1</span> Kinematic Parameters
-                </a>
-                <a href="#sec6-2" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <span class="w-8 font-semibold text-neb-500">6.2</span> Linear vs Angular Relations
-                </a>
-                <a href="#sec6-3" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <span class="w-8 font-semibold text-neb-500">6.3</span> Centripetal Acceleration
-                </a>
-                <a href="#sec6-4" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <span class="w-8 font-semibold text-neb-500">6.4</span> Centripetal vs Centrifugal
-                </a>
-                <a href="#sec6-7" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <span class="w-8 font-semibold text-neb-500">6.7</span> Conical Pendulum
-                </a>
-                <a href="#sec6-8" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <span class="w-8 font-semibold text-neb-500">6.8</span> Motion in Vertical Circle
-                </a>
-                <a href="#sec6-9" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <span class="w-8 font-semibold text-neb-500">6.9</span> Applications of Banking
-                </a>
+<line x1="140" y1="30" x2="140" y2="210" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+<text x="145" y="120" font-size="11">h</text>
 
-                <div class="pt-4 border-t border-slate-200 dark:border-slate-700 px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Interactive & Practice</div>
-                <a href="#solved-numericals" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <i class="fa-solid fa-book-open-reader w-6 text-neb-500"></i> Solved Examples
-                </a>
-                <a href="#self-practice" class="flex items-center px-3 py-2 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-neb-50 dark:hover:bg-slate-700 hover:text-neb-600 transition-colors">
-                    <i class="fa-solid fa-pen-to-square w-6 text-neb-500"></i> Short Answer Q&A
-                </a>
-                <a href="#quiz-section" class="flex items-center px-3 py-2 rounded-lg text-amber-600 dark:text-amber-400 hover:bg-amber-50 dark:hover:bg-slate-700 transition-colors font-medium">
-                    <i class="fa-solid fa-circle-question w-6"></i> Model Board Quiz
-                </a>
-            </div>
-        </aside>
+<line x1="140" y1="30" x2="70" y2="210" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
 
-        <!-- Main Content Area -->
-        <main class="flex-1 min-w-0 space-y-12">
+<line x1="140" y1="30" x2="210" y2="210" stroke="#0284c7" stroke-width="2.5"/>
+<text x="180" y="115" font-size="12" fill="#0284c7" font-weight="bold">l</text>
 
-            <!-- Printable Document Header (Appears only on PDF/Print) -->
-            <div class="print-only border-b-2 border-black pb-4 mb-6 text-center">
-                <h1 class="text-2xl font-bold uppercase tracking-wide">National Examinations Board (NEB) - Grade 11 Physics</h1>
-                <h2 class="text-xl font-semibold mt-1">Unit 6: Circular Motion (Complete Study & Derivation Textbook)</h2>
-                <p class="text-xs italic mt-2">Prepared in accordance with the official CDC Nepal Syllabus. Includes line diagrams, derivations, and board examination numerical solutions.</p>
-            </div>
+<path d="M 140 70 A 40 40 0 0 1 153 66" fill="none" stroke="#ef4444" stroke-width="2"/>
+<text x="148" y="85" font-size="11" fill="#ef4444" font-weight="bold">θ</text>
 
-            <!-- Overview Banner -->
-            <section class="bg-gradient-to-r from-neb-800 to-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-lg no-print">
-                <div class="max-w-3xl">
-                    <span class="bg-neb-500/30 text-neb-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">NEB Curriculum Guide</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold mt-3 leading-tight">Unit 6: Circular Motion</h2>
-                    <p class="mt-2 text-slate-300 text-sm sm:text-base leading-relaxed">
-                        A complete standard self-study resource covering angular kinematics, force dynamics, banked roads, conical pendulums, and vertical loops with complete NEB board exam proofs.
-                    </p>
-                </div>
-            </section>
+<ellipse cx="140" cy="210" rx="70" ry="25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/>
+<line x1="140" y1="210" x2="210" y2="210" stroke="currentColor" stroke-width="1.5"/>
+<text x="170" y="225" font-size="11">r</text>
 
-            <!-- SECTION 6.1 -->
-            <section id="sec6-1" class="content-card bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm scroll-mt-20">
-                <div class="border-b border-slate-200 dark:border-slate-700 pb-4 mb-6">
-                    <span class="text-xs font-bold text-neb-500 uppercase tracking-widest">Section 6.1</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Angular Displacement, Velocity, and Acceleration</h2>
-                </div>
+<circle cx="210" cy="210" r="10" fill="#0284c7"/>
+<text x="225" y="215" font-size="11" font-weight="bold">m</text>
 
-                <div class="space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed">
-                    <p>
-                        When a particle moves along a circular path of radius $r$, its motion is called <strong>circular motion</strong>. To describe this motion, we use angular variables analogous to linear kinematics.
-                    </p>
+<line x1="210" y1="210" x2="210" y2="260" stroke="#ef4444" stroke-width="2"/>
+<polygon points="210,265 206,255 214,255" fill="#ef4444"/>
+<text x="218" y="258" font-size="11" fill="#ef4444" font-weight="bold">mg</text>
 
-                    <!-- Definitions Grid -->
-                    <div class="grid md:grid-cols-3 gap-4 my-6">
-                        <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
-                            <h3 class="font-bold text-slate-900 dark:text-white text-base border-b border-slate-200 dark:border-slate-600 pb-2 mb-2">1. Angular Displacement ($\theta$)</h3>
-                            <p class="text-xs sm:text-sm">
-                                The angle swept out by the radius vector at the center of the circular path in a given time interval.
-                            </p>
-                            <p class="mt-2 font-mono text-xs text-neb-600 dark:text-neb-400">
-                                $\theta = \frac{s}{r} \text{ radians}$
-                            </p>
-                            <ul class="text-xs mt-2 text-slate-500 dark:text-slate-400 space-y-1">
-                                <li><strong>SI Unit:</strong> radian ($\text{rad}$)</li>
-                                <li><strong>Dimensions:</strong> $[M^0L^0T^0]$ (Dimensionless)</li>
-                            </ul>
-                        </div>
+<line x1="210" y1="210" x2="185" y2="145" stroke="#10b981" stroke-width="2"/>
+<polygon points="181,136 181,148 190,144" fill="#10b981"/>
+<text x="160" y="145" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">s</tspan></text>
 
-                        <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
-                            <h3 class="font-bold text-slate-900 dark:text-white text-base border-b border-slate-200 dark:border-slate-600 pb-2 mb-2">2. Angular Velocity ($\omega$)</h3>
-                            <p class="text-xs sm:text-sm">
-                                The rate of change of angular displacement with respect to time.
-                            </p>
-                            <p class="mt-2 font-mono text-xs text-neb-600 dark:text-neb-400">
-                                $\omega = \frac{d\theta}{dt} = \frac{2\pi}{T} = 2\pi f$
-                            </p>
-                            <ul class="text-xs mt-2 text-slate-500 dark:text-slate-400 space-y-1">
-                                <li><strong>SI Unit:</strong> $\text{rad/s}$</li>
-                                <li><strong>Dimensions:</strong> $[M^0L^0T^{-1}]$</li>
-                            </ul>
-                        </div>
+<line x1="210" y1="210" x2="210" y2="160" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2 2"/>
+<text x="215" y="170" font-size="10" fill="#10b981">T<tspan baseline-shift="sub" font-size="8">s</tspan>cosθ</text>
+<line x1="210" y1="210" x2="150" y2="210" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2 2"/>
+<text x="155" y="200" font-size="10" fill="#10b981">T<tspan baseline-shift="sub" font-size="8">s</tspan>sinθ</text>
+</svg><h4>Force Resolution:</h4><p>Let string length be \(l\), inclination with vertical be \(\theta\), and radius of path be \(r = l \sin\theta\). Height \(h = l \cos\theta\).</p><p>Tension \(T_s\) in string resolves into two components:</p><ul>
+<li><strong>\(T_s \cos\theta\) (Vertical component):</strong> Balances downward weight \(mg\).</li>
+<li><strong>\(T_s \sin\theta\) (Horizontal component):</strong> Provides required centripetal force (\(m\omega^2 r\)).</li>
+</ul><div class="box note" data-title="Derivation of Time Period (\(T\))"><p>From force equilibrium equations:</p>
+<p>Equation (1): \(T_s \cos\theta = mg\)</p>
+<p>Equation (2): \(T_s \sin\theta = m \omega^2 r = m \omega^2 (l \sin\theta)\)</p>
 
-                        <div class="bg-slate-50 dark:bg-slate-700/50 p-4 rounded-xl border border-slate-200 dark:border-slate-600">
-                            <h3 class="font-bold text-slate-900 dark:text-white text-base border-b border-slate-200 dark:border-slate-600 pb-2 mb-2">3. Angular Acceleration ($\alpha$)</h3>
-                            <p class="text-xs sm:text-sm">
-                                The rate of change of angular velocity with time.
-                            </p>
-                            <p class="mt-2 font-mono text-xs text-neb-600 dark:text-neb-400">
-                                $\alpha = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2}$
-                            </p>
-                            <ul class="text-xs mt-2 text-slate-500 dark:text-slate-400 space-y-1">
-                                <li><strong>SI Unit:</strong> $\text{rad/s}^2$</li>
-                                <li><strong>Dimensions:</strong> $[M^0L^0T^{-2}]$</li>
-                            </ul>
-                        </div>
-                    </div>
+<p>From Equation (2), dividing both sides by \(\sin\theta\):</p>
+<p>\[T_s = m \omega^2 l\]</p>
 
-                    <!-- SVG Diagram: Vector Direction & Right Hand Rule -->
-                    <div class="my-6 avoid-break">
-                        <div class="bg-slate-50 dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row items-center justify-around gap-6">
-                            <div class="w-full md:w-1/2 max-w-xs">
-                                <!-- SVG 1: Angular Motion & Right Hand Rule -->
-                                <svg viewBox="0 0 300 240" class="w-full h-auto text-slate-800 dark:text-slate-200">
-                                    <!-- Base Circle Axis -->
-                                    <ellipse cx="150" cy="160" rx="90" ry="35" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
-                                    <path d="M 60 160 A 90 35 0 0 0 240 160" fill="none" stroke="currentColor" stroke-width="2.5" />
-                                    
-                                    <!-- Center Point -->
-                                    <circle cx="150" cy="160" r="4" fill="currentColor" />
-                                    <text x="140" y="178" font-size="12" fill="currentColor" font-weight="bold">O</text>
-                                    
-                                    <!-- Rotation Axis Line -->
-                                    <line x1="150" y1="160" x2="150" y2="30" stroke="#0284c7" stroke-width="3" />
-                                    <!-- Arrow Head Axis -->
-                                    <polygon points="150,20 144,35 156,35" fill="#0284c7" />
-                                    <text x="160" y="35" font-size="13" fill="#0284c7" font-weight="bold">Vector ω, α</text>
+<p>Substitute \(T_s\) in Equation (1):</p>
+<p>\[(m \omega^2 l) \cos\theta = mg \implies \omega^2 = \frac{g}{l \cos\theta}\]</p>
 
-                                    <!-- Particle Radius Vector -->
-                                    <line x1="150" y1="160" x2="225" y2="142" stroke="currentColor" stroke-width="2" />
-                                    <circle cx="225" cy="142" r="6" fill="#ef4444" />
-                                    <text x="235" y="145" font-size="12" fill="currentColor" font-weight="bold">P(t)</text>
-                                    <text x="180" y="165" font-size="11" fill="currentColor">r</text>
+<p>Since angular velocity \(\omega = \frac{2\pi}{T}\):</p>
+<p>\[\left(\frac{2\pi}{T}\right)^2 = \frac{g}{l \cos\theta} \implies \frac{2\pi}{T} = \sqrt{\frac{g}{l \cos\theta}}\]</p>
 
-                                    <!-- Tangential Velocity Vector -->
-                                    <line x1="225" y1="142" x2="225" y2="80" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3" />
-                                    <line x1="225" y1="142" x2="260" y2="120" stroke="#10b981" stroke-width="2.5" />
-                                    <polygon points="265,117 254,115 258,125" fill="#10b981" />
-                                    <text x="250" y="110" font-size="12" fill="#10b981" font-weight="bold">v</text>
+<p>\[T = 2\pi \sqrt{\frac{l \cos\theta}{g}} = 2\pi \sqrt{\frac{h}{g}}\]</p>
 
-                                    <!-- Circular Sense Arrow -->
-                                    <path d="M 190 182 A 50 20 0 0 0 210 170" fill="none" stroke="#0284c7" stroke-width="2" />
-                                    <polygon points="214,166 205,168 210,175" fill="#0284c7" />
-                                    <text x="170" y="210" font-size="11" fill="currentColor">Counter-clockwise Motion</text>
-                                </svg>
-                            </div>
-                            <div class="w-full md:w-1/2 space-y-3">
-                                <h4 class="font-bold text-slate-900 dark:text-white text-sm uppercase tracking-wide border-b border-slate-200 dark:border-slate-700 pb-1">
-                                    Direction of Axial Vectors (Right-Hand Thumb Rule)
-                                </h4>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                                    Angular displacement ($\boldsymbol{\theta}$), velocity ($\boldsymbol{\omega}$), and acceleration ($\boldsymbol{\alpha}$) are <strong>axial vectors</strong>. Their direction is perpendicular to the plane of rotation.
-                                </p>
-                                <div class="p-3 bg-neb-50 dark:bg-slate-800 rounded-lg border-l-4 border-neb-500 text-xs text-slate-700 dark:text-slate-200">
-                                    "Curl the fingers of your right hand in the direction of circular rotation of the body; then the stretched thumb points along the axis of rotation in the direction of $\vec{\omega}$ and $\vec{\alpha}$."
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<p><strong>Frequency (\(f\)):</strong> \(f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{g}{l \cos\theta}}\)</p><p><strong>String Tension (\(T_s\)):</strong> \(T_s = \frac{mg}{\cos\theta}\)</p><p><strong>Limiting Case:</strong> If \(\theta \to 0^\circ\), \(\cos\theta \to 1\), reducing to simple pendulum formula \(T = 2\pi \sqrt{\frac{l}{g}}\).</p></div>
+<h2>Motion in a Vertical Circle</h2><p>
+Consider a small body of mass \(m\) tied to an inextensible string of length \(r\) rotated in a vertical circle. Unlike horizontal circular motion, motion in a vertical circle involves variable speed and changing tension.
+</p><svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
 
-                    <!-- Comparison Table -->
-                    <h3 class="font-bold text-slate-900 dark:text-white text-lg mt-6">Analogy Between Linear and Angular Kinematics</h3>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left text-xs sm:text-sm border-collapse border border-slate-200 dark:border-slate-700">
-                            <thead>
-                                <tr class="bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white">
-                                    <th class="p-3 border border-slate-200 dark:border-slate-700">Linear Parameter</th>
-                                    <th class="p-3 border border-slate-200 dark:border-slate-700">Angular Parameter</th>
-                                    <th class="p-3 border border-slate-200 dark:border-slate-700">Connecting Relation</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
-                                <tr>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Linear Displacement ($s$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Angular Displacement ($\theta$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-mono">$s = r\theta$</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Linear Velocity ($v$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Angular Velocity ($\omega$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-mono">$v = r\omega$</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Tangential Acceleration ($a_t$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Angular Acceleration ($\alpha$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-mono">$a_t = r\alpha$</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Mass ($m$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700">Moment of Inertia ($I$)</td>
-                                    <td class="p-3 border border-slate-200 dark:border-slate-700 font-mono">$I = \sum m r^2$</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
+<circle cx="140" cy="140" r="90" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="140" cy="140" r="4" fill="currentColor"/>
+<text x="148" y="145" font-size="11" font-weight="bold">O</text>
 
-            <!-- SECTION 6.7 -->
-            <section id="sec6-7" class="content-card bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm scroll-mt-20">
-                <div class="border-b border-slate-200 dark:border-slate-700 pb-4 mb-6">
-                    <span class="text-xs font-bold text-neb-500 uppercase tracking-widest">Section 6.7</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Conical Pendulum</h2>
-                </div>
+<line x1="140" y1="30" x2="140" y2="250" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
 
-                <div class="space-y-6 text-slate-700 dark:text-slate-300">
-                    <p class="text-sm sm:text-base">
-                        A <strong>conical pendulum</strong> consists of a small heavy bob of mass $m$ tied to a light inextensible string of length $l$, suspended from a fixed point, such that the bob rotates in a horizontal circle at constant angular velocity.
-                    </p>
+<circle cx="140" cy="230" r="10" fill="#0284c7"/>
+<text x="140" y="234" fill="white" font-size="10" font-weight="bold" text-anchor="middle">L</text>
 
-                    <!-- SVG Diagram: Conical Pendulum FBD -->
-                    <div class="my-6 avoid-break">
-                        <div class="bg-slate-50 dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row items-center justify-around gap-6">
-                            <div class="w-full md:w-1/2 max-w-xs">
-                                <!-- SVG 3: Conical Pendulum Diagram -->
-                                <svg viewBox="0 0 280 280" class="w-full h-auto text-slate-800 dark:text-slate-200">
-                                    <!-- Rigid Ceiling -->
-                                    <line x1="80" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width="3" />
-                                    <line x1="100" y1="20" x2="90" y2="30" stroke="currentColor" stroke-width="1" />
-                                    <line x1="130" y1="20" x2="120" y2="30" stroke="currentColor" stroke-width="1" />
-                                    <line x1="160" y1="20" x2="150" y2="30" stroke="currentColor" stroke-width="1" />
-                                    <line x1="190" y1="20" x2="180" y2="30" stroke="currentColor" stroke-width="1" />
+<line x1="140" y1="220" x2="140" y2="160" stroke="#10b981" stroke-width="2"/>
+<polygon points="140,152 136,162 144,162" fill="#10b981"/>
+<text x="148" y="175" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">L</tspan></text>
 
-                                    <!-- Suspension Point S -->
-                                    <circle cx="140" cy="30" r="3" fill="currentColor" />
-                                    <text x="145" y="25" font-size="11" font-weight="bold">S</text>
+<line x1="140" y1="240" x2="140" y2="275" stroke="#ef4444" stroke-width="2"/>
+<polygon points="140,278 136,270 144,270" fill="#ef4444"/>
+<text x="148" y="270" font-size="11" fill="#ef4444" font-weight="bold">mg</text>
 
-                                    <!-- Vertical Axis -->
-                                    <line x1="140" y1="30" x2="140" y2="210" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" />
-                                    <text x="145" y="120" font-size="11">h</text>
+<circle cx="140" cy="50" r="10" fill="#0284c7"/>
+<text x="140" y="54" fill="white" font-size="10" font-weight="bold" text-anchor="middle">T</text>
 
-                                    <!-- Cone Boundary String (Left) -->
-                                    <line x1="140" y1="30" x2="70" y2="210" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" />
+<line x1="140" y1="60" x2="140" y2="110" stroke="#10b981" stroke-width="2"/>
+<polygon points="140,118 136,108 144,108" fill="#10b981"/>
+<text x="148" y="95" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">T</tspan></text>
 
-                                    <!-- Active String (Right) -->
-                                    <line x1="140" y1="30" x2="210" y2="210" stroke="#0284c7" stroke-width="2.5" />
-                                    <text x="180" y="115" font-size="12" fill="#0284c7" font-weight="bold">l</text>
+<line x1="140" y1="60" x2="140" y2="100" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2 2"/>
+<text x="110" y="85" font-size="11" fill="#ef4444" font-weight="bold">mg</text>
 
-                                    <!-- Angle theta -->
-                                    <path d="M 140 70 A 40 40 0 0 1 153 66" fill="none" stroke="#ef4444" stroke-width="2" />
-                                    <text x="148" y="85" font-size="11" fill="#ef4444" font-weight="bold">θ</text>
+<circle cx="230" cy="140" r="10" fill="#0284c7"/>
+<text x="230" y="144" fill="white" font-size="10" font-weight="bold" text-anchor="middle">M</text>
+<line x1="220" y1="140" x2="160" y2="140" stroke="#10b981" stroke-width="2"/>
+<polygon points="152,140 162,136 162,144" fill="#10b981"/>
+<text x="180" y="132" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">M</tspan></text>
+</svg><h4>Critical Conditions for Complete Looping:</h4><ul>
+<li>
+<strong>At Highest Point (T):</strong>
+<br>\(T_T + mg = \frac{m v_T^2}{r}\)
+<br>For minimum critical velocity, \(T_T \ge 0 \implies v_T \ge \sqrt{gr}\).
+</li>
+<li>
+<strong>At Lowest Point (L):</strong>
+<br>\(T_L - mg = \frac{m v_L^2}{r}\)
+<br>Using conservation of energy, \(v_L \ge \sqrt{5gr}\).
+</li>
+<li>
+<strong>At Horizontal Point (M):</strong>
+<br>\(v_M \ge \sqrt{3gr}\)
+</li>
+</ul><div class="box note" data-title="Complete Step-by-Step Derivation"><h4>1. Critical Velocity at Highest Point (\(v_T\)):</h4><p>At top point \(T\), both gravity \(mg\) and string tension \(T_T\) act downwards toward center \(O\):</p><p>\[T_T + mg = \frac{m v_T^2}{r} \implies T_T = \frac{m v_T^2}{r} - mg\]</p>
+<p>To complete the loop without string slackening, \(T_T \ge 0\):</p><p>\[\frac{m v_T^2}{r} - mg \ge 0 \implies v_T^2 \ge gr \implies \mathbf{v_T(\text{min}) = \sqrt{gr}}\]</p>
 
-                                    <!-- Horizontal Base Ellipse -->
-                                    <ellipse cx="140" cy="210" rx="70" ry="25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3" />
-                                    <line x1="140" y1="210" x2="210" y2="210" stroke="currentColor" stroke-width="1.5" />
-                                    <text x="170" y="225" font-size="11">r</text>
+<h4>2. Critical Velocity at Lowest Point (\(v_L\)):</h4><p>By Conservation of Mechanical Energy between lowest point \(L\) (\(h=0\)) and top point \(T\) (\(h=2r\)):</p><p>\[E_L = E_T \implies \frac{1}{2} m v_L^2 + 0 = \frac{1}{2} m v_T^2 + mg(2r)\]</p>
+<p>Substitute minimum top velocity \(v_T^2 = gr\):</p><p>\[\frac{1}{2} m v_L^2 = \frac{1}{2} m (gr) + 2 mgr = \frac{5}{2} mgr\]</p>
+<p>\[v_L(\text{min}) = \sqrt{5gr}\]</p>
 
-                                    <!-- Bob Mass m -->
-                                    <circle cx="210" cy="210" r="10" fill="#0284c7" />
-                                    <text x="225" y="215" font-size="11" font-weight="bold">m</text>
-
-                                    <!-- Force Vectors at Bob -->
-                                    <!-- Weight mg -->
-                                    <line x1="210" y1="210" x2="210" y2="260" stroke="#ef4444" stroke-width="2" />
-                                    <polygon points="210,265 206,255 214,255" fill="#ef4444" />
-                                    <text x="218" y="258" font-size="11" fill="#ef4444" font-weight="bold">mg</text>
-
-                                    <!-- Tension T_s with subscript -->
-                                    <line x1="210" y1="210" x2="185" y2="145" stroke="#10b981" stroke-width="2" />
-                                    <polygon points="181,136 181,148 190,144" fill="#10b981" />
-                                    <text x="160" y="145" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">s</tspan></text>
-
-                                    <!-- Tension Components -->
-                                    <line x1="210" y1="210" x2="210" y2="160" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2 2" />
-                                    <text x="215" y="170" font-size="10" fill="#10b981">T<tspan baseline-shift="sub" font-size="8">s</tspan>cosθ</text>
-                                    <line x1="210" y1="210" x2="150" y2="210" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2 2" />
-                                    <text x="155" y="200" font-size="10" fill="#10b981">T<tspan baseline-shift="sub" font-size="8">s</tspan>sinθ</text>
-                                </svg>
-                            </div>
-
-                            <div class="w-full md:w-1/2 space-y-3">
-                                <h4 class="font-bold text-slate-900 dark:text-white text-sm uppercase">Force Resolution:</h4>
-                                <p class="text-xs sm:text-sm">Let string length be $l$, inclination with vertical be $\theta$, and radius of path be $r = l \sin\theta$. Height $h = l \cos\theta$.</p>
-                                <p class="text-xs sm:text-sm">Tension $T_s$ in string resolves into two components:</p>
-                                <ul class="list-disc list-inside text-xs sm:text-sm space-y-1">
-                                    <li><strong>$T_s \cos\theta$ (Vertical component):</strong> Balances downward weight $mg$.</li>
-                                    <li><strong>$T_s \sin\theta$ (Horizontal component):</strong> Provides required centripetal force ($m\omega^2 r$).</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step-by-Step Derivation of Time Period -->
-                    <div class="derivation-box p-5 bg-slate-50 dark:bg-slate-900/80 rounded-xl border-l-4 border-neb-600 space-y-3">
-                        <h3 class="font-bold text-slate-900 dark:text-white text-base">Derivation of Time Period ($T$):</h3>
-                        <p class="text-sm">From force equilibrium equations:</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 font-mono text-xs sm:text-sm my-2">
-                            <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-700">
-                                Equation (1): $T_s \cos\theta = mg$
-                            </div>
-                            <div class="bg-white dark:bg-slate-800 p-2 rounded border border-slate-200 dark:border-slate-700">
-                                Equation (2): $T_s \sin\theta = m \omega^2 r = m \omega^2 (l \sin\theta)$
-                            </div>
-                        </div>
-
-                        <p class="text-sm">From Equation (2), dividing both sides by $\sin\theta$:</p>
-                        <div class="text-center font-mono text-sm">
-                            $$T_s = m \omega^2 l$$
-                        </div>
-
-                        <p class="text-sm">Substitute $T_s$ in Equation (1):</p>
-                        <div class="text-center font-mono text-sm">
-                            $$(m \omega^2 l) \cos\theta = mg \implies \omega^2 = \frac{g}{l \cos\theta}$$
-                        </div>
-
-                        <p class="text-sm">Since angular velocity $\omega = \frac{2\pi}{T}$:</p>
-                        <div class="text-center font-mono text-sm">
-                            $$\left(\frac{2\pi}{T}\right)^2 = \frac{g}{l \cos\theta} \implies \frac{2\pi}{T} = \sqrt{\frac{g}{l \cos\theta}}$$
-                        </div>
-
-                        <div class="bg-neb-100 dark:bg-slate-800 text-neb-900 dark:text-neb-200 font-bold text-center py-3 rounded-lg text-sm sm:text-base">
-                            $$T = 2\pi \sqrt{\frac{l \cos\theta}{g}} = 2\pi \sqrt{\frac{h}{g}}$$
-                        </div>
-
-                        <div class="mt-4 pt-3 border-t border-slate-200 dark:border-slate-700 text-xs sm:text-sm space-y-1">
-                            <p><strong>Frequency ($f$):</strong> $f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{g}{l \cos\theta}}$</p>
-                            <p><strong>String Tension ($T_s$):</strong> $T_s = \frac{mg}{\cos\theta}$</p>
-                            <p><strong>Limiting Case:</strong> If $\theta \to 0^\circ$, $\cos\theta \to 1$, reducing to simple pendulum formula $T = 2\pi \sqrt{\frac{l}{g}}$.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECTION 6.8 -->
-            <section id="sec6-8" class="content-card bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm scroll-mt-20">
-                <div class="border-b border-slate-200 dark:border-slate-700 pb-4 mb-6">
-                    <span class="text-xs font-bold text-neb-500 uppercase tracking-widest">Section 6.8</span>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">Motion in a Vertical Circle</h2>
-                </div>
-
-                <div class="space-y-6 text-slate-700 dark:text-slate-300">
-                    <p class="text-sm sm:text-base">
-                        Consider a small body of mass $m$ tied to an inextensible string of length $r$ rotated in a vertical circle. Unlike horizontal circular motion, motion in a vertical circle involves variable speed and changing tension.
-                    </p>
-
-                    <!-- SVG Diagram: Vertical Circle Vectors -->
-                    <div class="my-6 avoid-break">
-                        <div class="bg-slate-50 dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row items-center justify-around gap-6">
-                            <div class="w-full md:w-1/2 max-w-xs">
-                                <!-- SVG 4: Motion in Vertical Circle Diagram -->
-                                <svg viewBox="0 0 280 280" class="w-full h-auto text-slate-800 dark:text-slate-200">
-                                    <!-- Main Vertical Circle -->
-                                    <circle cx="140" cy="140" r="90" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
-                                    <circle cx="140" cy="140" r="4" fill="currentColor" />
-                                    <text x="148" y="145" font-size="11" font-weight="bold">O</text>
-
-                                    <!-- Vertical Reference Line -->
-                                    <line x1="140" y1="30" x2="140" y2="250" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" />
-
-                                    <!-- Lowest Point L -->
-                                    <circle cx="140" cy="230" r="10" fill="#0284c7" />
-                                    <text x="140" y="234" fill="white" font-size="10" font-weight="bold" text-anchor="middle">L</text>
-                                    <!-- Tension T_L -->
-                                    <line x1="140" y1="220" x2="140" y2="160" stroke="#10b981" stroke-width="2" />
-                                    <polygon points="140,152 136,162 144,162" fill="#10b981" />
-                                    <text x="148" y="175" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">L</tspan></text>
-                                    <!-- Weight mg (Bottom) -->
-                                    <line x1="140" y1="240" x2="140" y2="275" stroke="#ef4444" stroke-width="2" />
-                                    <polygon points="140,278 136,270 144,270" fill="#ef4444" />
-                                    <text x="148" y="270" font-size="11" fill="#ef4444" font-weight="bold">mg</text>
-
-                                    <!-- Highest Point T -->
-                                    <circle cx="140" cy="50" r="10" fill="#0284c7" />
-                                    <text x="140" y="54" fill="white" font-size="10" font-weight="bold" text-anchor="middle">T</text>
-                                    <!-- Tension T_T -->
-                                    <line x1="140" y1="60" x2="140" y2="110" stroke="#10b981" stroke-width="2" />
-                                    <polygon points="140,118 136,108 144,108" fill="#10b981" />
-                                    <text x="148" y="95" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">T</tspan></text>
-                                    <!-- Weight mg (Top) -->
-                                    <line x1="140" y1="60" x2="140" y2="100" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2 2" />
-                                    <text x="110" y="85" font-size="11" fill="#ef4444" font-weight="bold">mg</text>
-
-                                    <!-- Mid Point M (Horizontal) -->
-                                    <circle cx="230" cy="140" r="10" fill="#0284c7" />
-                                    <text x="230" y="144" fill="white" font-size="10" font-weight="bold" text-anchor="middle">M</text>
-                                    <line x1="220" y1="140" x2="160" y2="140" stroke="#10b981" stroke-width="2" />
-                                    <polygon points="152,140 162,136 162,144" fill="#10b981" />
-                                    <text x="180" y="132" font-size="11" fill="#10b981" font-weight="bold">T<tspan baseline-shift="sub" font-size="9">M</tspan></text>
-                                </svg>
-                            </div>
-
-                            <div class="w-full md:w-1/2 space-y-3 text-xs sm:text-sm">
-                                <h4 class="font-bold text-slate-900 dark:text-white uppercase">Critical Conditions for Complete Looping:</h4>
-                                <ul class="space-y-2 list-disc list-inside">
-                                    <li>
-                                        <strong>At Highest Point (T):</strong>
-                                        <br><span class="font-mono text-xs text-neb-600 dark:text-neb-400">$T_T + mg = \frac{m v_T^2}{r}$</span>
-                                        <br>For minimum critical velocity, $T_T \ge 0 \implies v_T \ge \sqrt{gr}$.
-                                    </li>
-                                    <li>
-                                        <strong>At Lowest Point (L):</strong>
-                                        <br><span class="font-mono text-xs text-neb-600 dark:text-neb-400">$T_L - mg = \frac{m v_L^2}{r}$</span>
-                                        <br>Using conservation of energy, $v_L \ge \sqrt{5gr}$.
-                                    </li>
-                                    <li>
-                                        <strong>At Horizontal Point (M):</strong>
-                                        <br><span class="font-mono text-xs text-neb-600 dark:text-neb-400">$v_M \ge \sqrt{3gr}$</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step-by-Step Derivation of Critical Velocities -->
-                    <div class="derivation-box p-5 bg-slate-50 dark:bg-slate-900/80 rounded-xl border-l-4 border-neb-600 space-y-4">
-                        <h3 class="font-bold text-slate-900 dark:text-white text-base">Complete Step-by-Step Derivation</h3>
-                        
-                        <div>
-                            <h4 class="font-bold text-sm text-neb-600 dark:text-neb-400">1. Critical Velocity at Highest Point ($v_T$):</h4>
-                            <p class="text-xs sm:text-sm">At top point $T$, both gravity $mg$ and string tension $T_T$ act downwards toward center $O$:</p>
-                            <div class="font-mono text-xs sm:text-sm text-center py-1">
-                                $$T_T + mg = \frac{m v_T^2}{r} \implies T_T = \frac{m v_T^2}{r} - mg$$
-                            </div>
-                            <p class="text-xs sm:text-sm">To complete the loop without string slackening, $T_T \ge 0$:</p>
-                            <div class="font-mono text-xs sm:text-sm text-center py-1">
-                                $$\frac{m v_T^2}{r} - mg \ge 0 \implies v_T^2 \ge gr \implies \mathbf{v_T(\text{min}) = \sqrt{gr}}$$
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 class="font-bold text-sm text-neb-600 dark:text-neb-400">2. Critical Velocity at Lowest Point ($v_L$):</h4>
-                            <p class="text-xs sm:text-sm">By Conservation of Mechanical Energy between lowest point $L$ ($h=0$) and top point $T$ ($h=2r$):</p>
-                            <div class="font-mono text-xs sm:text-sm text-center py-1">
-                                $$E_L = E_T \implies \frac{1}{2} m v_L^2 + 0 = \frac{1}{2} m v_T^2 + mg(2r)$$
-                            </div>
-                            <p class="text-xs sm:text-sm">Substitute minimum top velocity $v_T^2 = gr$:</p>
-                            <div class="font-mono text-xs sm:text-sm text-center py-1">
-                                $$\frac{1}{2} m v_L^2 = \frac{1}{2} m (gr) + 2 mgr = \frac{5}{2} mgr$$
-                            </div>
-                            <div class="bg-neb-100 dark:bg-slate-800 text-neb-900 dark:text-neb-200 font-bold text-center py-2 rounded-lg text-xs sm:text-sm">
-                                $$v_L(\text{min}) = \sqrt{5gr}$$
-                            </div>
-                        </div>
-
-                        <div>
-                            <h4 class="font-bold text-sm text-neb-600 dark:text-neb-400">3. Difference in String Tension ($T_L - T_T$):</h4>
-                            <p class="text-xs sm:text-sm">At bottom: $T_L = \frac{m v_L^2}{r} + mg$. At top: $T_T = \frac{m v_T^2}{r} - mg$.</p>
-                            <div class="font-mono text-xs sm:text-sm text-center py-1">
-                                $$T_L - T_T = \left(\frac{m v_L^2}{r} + mg\right) - \left(\frac{m v_T^2}{r} - mg\right) = \frac{m}{r}(v_L^2 - v_T^2) + 2mg$$
-                            </div>
-                            <p class="text-xs sm:text-sm">Since $v_L^2 - v_T^2 = 4gr$ from energy conservation:</p>
-                            <div class="bg-slate-200 dark:bg-slate-800 text-center font-mono font-bold py-2 rounded-lg text-xs sm:text-sm">
-                                $$T_L - T_T = \frac{m}{r}(4gr) + 2mg = 6mg$$
-                            </div>
-                            <p class="text-xs text-slate-500 dark:text-slate-400">The difference in tension between the lowest and highest points is always <strong>$6mg$</strong>, independent of the velocity.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="text-center text-sm text-slate-500 dark:text-slate-400 mt-12 py-6">
-                <p>Complete study module for NEB Grade 11 Physics - Unit 6: Circular Motion</p>
-            </div>
-        </main>
-    </div>
-</body>
-</html>
+<h4>3. Difference in String Tension (\(T_L - T_T\)):</h4><p>At bottom: \(T_L = \frac{m v_L^2}{r} + mg\). At top: \(T_T = \frac{m v_T^2}{r} - mg\).</p><p>\[T_L - T_T = \left(\frac{m v_L^2}{r} + mg\right) - \left(\frac{m v_T^2}{r} - mg\right) = \frac{m}{r}(v_L^2 - v_T^2) + 2mg\]</p>
+<p>Since \(v_L^2 - v_T^2 = 4gr\) from energy conservation:</p><p>\[T_L - T_T = \frac{m}{r}(4gr) + 2mg = 6mg\]</p>
+<p>The difference in tension between the lowest and highest points is always <strong>\(6mg\)</strong>, independent of the velocity.</p></div>
+<p>Complete study module for NEB Grade 11 Physics - Unit 6: Circular Motion</p>
