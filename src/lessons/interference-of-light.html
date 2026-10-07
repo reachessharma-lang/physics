@@ -1,0 +1,960 @@
+---
+title: Interference of light
+grade: XII
+chapters: [7]
+date: 2026-10-02
+---
+<p>Interference is one of the important phenomena of wave optics. It provides direct evidence for the wave nature of light. When two or more coherent light waves superpose, the resultant intensity is redistributed, producing alternate bright and dark regions.</p>
+
+<h2>11.1 Explain the Phenomenon of Interference</h2>
+
+<h3>Introduction</h3>
+
+<p><strong>Interference of light</strong> is the phenomenon of redistribution of intensity produced when two or more coherent light waves travelling through the same region of space superpose.</p>
+
+<div class="box definition">
+<strong>Definition:</strong> The phenomenon of redistribution of intensity of light due to the superposition of two or more coherent light waves is called <strong>interference of light</strong>.
+</div>
+
+<p>According to the principle of superposition, when two or more waves meet at a point, the resultant displacement is equal to the algebraic sum of the individual displacements.</p>
+
+<div class="formula">
+\[
+y = y_1+y_2
+\]
+</div>
+
+<p>If two waves of the same frequency and amplitude interfere, they produce alternate regions of maximum and minimum intensity.</p>
+
+<h3>Constructive and Destructive Interference</h3>
+
+<p>Consider two waves having the same frequency and amplitude:</p>
+
+<div class="formula">
+\[
+y_1=a\sin\omega t
+\]
+
+\[
+y_2=a\sin(\omega t+\phi)
+\]
+
+<span class="where">where \(a\) is the amplitude, \(\omega\) is the angular frequency and \(\phi\) is the phase difference between the waves.</span>
+</div>
+
+<p>The resultant displacement is</p>
+
+<div class="formula">
+\[
+y=y_1+y_2
+\]
+
+\[
+y=2a\cos\frac{\phi}{2}\sin\left(\omega t+\frac{\phi}{2}\right)
+\]
+
+\[
+A=2a\cos\frac{\phi}{2}
+\]
+
+<span class="where">where \(A\) is the amplitude of the resultant wave.</span>
+</div>
+
+<p>Since intensity is proportional to the square of amplitude,</p>
+
+<div class="formula">
+\[
+I\propto A^2
+\]
+
+\[
+I=4I_0\cos^2\frac{\phi}{2}
+\]
+
+<span class="where">for two identical waves, \(I_0\) is the intensity due to either wave alone.</span>
+</div>
+
+<h3>Constructive Interference</h3>
+
+<p>When the two waves arrive at a point in the same phase, their amplitudes reinforce each other. The resultant amplitude and intensity are maximum.</p>
+
+<div class="box definition">
+<strong>Constructive interference:</strong> The interference in which the resultant intensity is maximum is called constructive interference.
+</div>
+
+<p>For constructive interference,</p>
+
+<div class="formula">
+\[
+\phi=2n\pi
+\]
+
+\[
+\Delta=n\lambda
+\]
+
+\[
+n=0,1,2,3,\ldots
+\]
+
+<span class="where">\(\Delta\) is the path difference and \(\lambda\) is the wavelength.</span>
+</div>
+
+<p>The resultant amplitude is</p>
+
+<div class="formula">
+\[
+A_{\max}=2a
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+I_{\max}=4I_0
+\]
+</div>
+
+<h3>Destructive Interference</h3>
+
+<p>When the two waves arrive at a point in opposite phase, their amplitudes cancel each other partially or completely. For waves of equal amplitude, complete cancellation occurs.</p>
+
+<div class="box definition">
+<strong>Destructive interference:</strong> The interference in which the resultant intensity is minimum is called destructive interference.
+</div>
+
+<p>For destructive interference,</p>
+
+<div class="formula">
+\[
+\phi=(2n+1)\pi
+\]
+
+\[
+\Delta=\left(n+\frac12\right)\lambda
+\]
+
+\[
+\Delta=\frac{(2n+1)\lambda}{2}
+\]
+
+<span class="where">where \(n=0,1,2,3,\ldots\).</span>
+</div>
+
+<p>For two waves of equal amplitude,</p>
+
+<div class="formula">
+\[
+A_{\min}=0
+\]
+
+\[
+I_{\min}=0
+\]
+</div>
+
+<figure>
+<svg viewBox="0 0 760 440"
+     role="img"
+     aria-label="Constructive and destructive interference of two waves"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="760" height="440" fill="#111111"/>
+
+  <!-- axes -->
+  <line x1="70" y1="115" x2="710" y2="115"
+        stroke="white" stroke-width="2"/>
+  <line x1="70" y1="300" x2="710" y2="300"
+        stroke="white" stroke-width="2"/>
+
+  <!-- constructive waves -->
+  <path d="M70 115
+           C100 55 130 55 160 115
+           C190 175 220 175 250 115
+           C280 55 310 55 340 115
+           C370 175 400 175 430 115
+           C460 55 490 55 520 115
+           C550 175 580 175 610 115
+           C640 55 670 55 700 115"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <path d="M70 115
+           C100 55 130 55 160 115
+           C190 175 220 175 250 115
+           C280 55 310 55 340 115
+           C370 175 400 175 430 115
+           C460 55 490 55 520 115
+           C550 175 580 175 610 115
+           C640 55 670 55 700 115"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <!-- resultant constructive -->
+  <path d="M70 115
+           C100 -5 130 -5 160 115
+           C190 235 220 235 250 115
+           C280 -5 310 -5 340 115
+           C370 235 400 235 430 115
+           C460 -5 490 -5 520 115
+           C550 235 580 235 610 115
+           C640 -5 670 -5 700 115"
+        fill="none" stroke="white" stroke-width="4"
+        opacity="0.9"/>
+
+  <!-- destructive waves -->
+  <path d="M70 300
+           C100 260 130 260 160 300
+           C190 340 220 340 250 300
+           C280 260 310 260 340 300
+           C370 340 400 340 430 300
+           C460 260 490 260 520 300
+           C550 340 580 340 610 300
+           C640 260 670 260 700 300"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <path d="M70 300
+           C100 340 130 340 160 300
+           C190 260 220 260 250 300
+           C280 340 310 340 340 300
+           C370 260 400 260 430 300
+           C460 340 490 340 520 300
+           C550 260 580 260 610 300
+           C640 340 670 340 700 300"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <!-- zero resultant -->
+  <line x1="70" y1="300" x2="700" y2="300"
+        stroke="white" stroke-width="4"/>
+
+  <text x="380" y="35" fill="white" font-size="22"
+        text-anchor="middle" font-weight="bold">
+    Constructive Interference
+  </text>
+
+  <text x="380" y="245" fill="white" font-size="22"
+        text-anchor="middle" font-weight="bold">
+    Destructive Interference
+  </text>
+
+  <text x="380" y="415" fill="white" font-size="18"
+        text-anchor="middle">
+    Superposition of coherent waves
+  </text>
+</svg>
+<figcaption>Figure: Constructive and destructive interference.</figcaption>
+</figure>
+
+<h3>Conditions for Sustained Interference</h3>
+
+<ul class="key-points">
+<li>The sources must be <strong>coherent</strong>.</li>
+<li>The two sources should have the same frequency or wavelength.</li>
+<li>The phase difference between the sources should remain constant.</li>
+<li>For clear fringes, the amplitudes or intensities of the two waves should be comparable.</li>
+<li>The waves should have the same state of polarization for maximum visibility.</li>
+</ul>
+
+<div class="box tip">
+<strong>Important:</strong> Two independent ordinary light sources generally do not produce sustained interference because their phase difference changes randomly with time.
+</div>
+
+
+<h2>11.2 Understand the Meaning of Coherent Sources</h2>
+
+<h3>Coherent Sources</h3>
+
+<div class="box definition">
+<strong>Definition:</strong> Two sources of light are said to be <strong>coherent sources</strong> if they emit light waves of the same frequency and maintain a constant phase difference between them.
+</div>
+
+<p>For sustained interference, the phase difference between the waves reaching a particular point must remain constant.</p>
+
+<div class="formula">
+\[
+\Delta\phi=\text{constant}
+\]
+</div>
+
+<p>Thus, the two important conditions for coherent sources are:</p>
+
+<ol>
+<li>They must have the <strong>same frequency</strong> or wavelength.</li>
+<li>They must maintain a <strong>constant phase difference</strong>.</li>
+</ol>
+
+<h3>Production of Coherent Sources</h3>
+
+<p>Two independent light sources are generally not coherent. In Young's double-slit experiment, two coherent sources are obtained by illuminating two narrow slits with light from the same source.</p>
+
+<figure>
+<svg viewBox="0 0 760 430"
+     role="img"
+     aria-label="Production of coherent sources using two slits illuminated by one source"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="760" height="430" fill="#111111"/>
+
+  <!-- source -->
+  <circle cx="105" cy="210" r="28"
+          fill="none" stroke="white" stroke-width="3"/>
+
+  <text x="105" y="216" fill="white" font-size="18"
+        text-anchor="middle">S</text>
+
+  <!-- wavefronts -->
+  <path d="M145 150 Q175 210 145 270"
+        fill="none" stroke="white" stroke-width="2"/>
+  <path d="M165 130 Q200 210 165 290"
+        fill="none" stroke="white" stroke-width="2"/>
+  <path d="M190 115 Q230 210 190 305"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <!-- slit plate -->
+  <rect x="300" y="70" width="24" height="280"
+        fill="white"/>
+
+  <!-- slit openings -->
+  <rect x="298" y="170" width="28" height="22"
+        fill="#111111"/>
+  <rect x="298" y="238" width="28" height="22"
+        fill="#111111"/>
+
+  <!-- coherent waves -->
+  <path d="M328 181
+           C400 145 465 125 535 110"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <path d="M328 181
+           C400 190 465 200 535 215"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <path d="M328 249
+           C400 215 465 205 535 190"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <path d="M328 249
+           C400 260 465 275 535 300"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <!-- labels -->
+  <text x="105" y="350" fill="white" font-size="18"
+        text-anchor="middle">Single source</text>
+
+  <text x="312" y="50" fill="white" font-size="18"
+        text-anchor="middle">Slit plate</text>
+
+  <text x="335" y="178" fill="white" font-size="17">S₁</text>
+  <text x="335" y="270" fill="white" font-size="17">S₂</text>
+
+  <text x="505" y="75" fill="white" font-size="18"
+        text-anchor="middle">
+    Coherent waves
+  </text>
+
+  <text x="380" y="405" fill="white" font-size="18"
+        text-anchor="middle">
+    S₁ and S₂ originate from the same source and remain coherent
+  </text>
+</svg>
+<figcaption>Figure: Two coherent sources obtained from a single source.</figcaption>
+</figure>
+
+<div class="box note">
+<strong>Why is a single source used?</strong> Since both slits receive light originating from the same source, the phase relationship between the waves emerging from the two slits remains constant. Hence, the two slits act as coherent sources.
+</div>
+
+
+<h2>11.3 Describe Young's Double-Slit Experiment and Obtain the Expression for nth Order Maxima</h2>
+
+<h3>Young's Double-Slit Experiment</h3>
+
+<p>Thomas Young demonstrated the interference of light using two narrow slits. The experiment is known as <strong>Young's double-slit experiment (YDSE)</strong>.</p>
+
+<div class="box definition">
+<strong>Principle:</strong> Young's double-slit experiment demonstrates the wave nature of light by producing a stable pattern of alternate bright and dark fringes due to interference.
+</div>
+
+<h3>Experimental Arrangement</h3>
+
+<p>A monochromatic light source illuminates two narrow and closely spaced slits \(S_1\) and \(S_2\). The slits act as coherent sources. A screen is placed at a distance \(D\) from the slits, where \(D\) is much greater than the separation \(d\) between the slits.</p>
+
+<p>Let:</p>
+
+<ul>
+<li>\(d\) = separation between the two slits</li>
+<li>\(D\) = distance between the slit plane and the screen</li>
+<li>\(P\) = an arbitrary point on the screen</li>
+<li>\(y\) = perpendicular distance of \(P\) from the central point \(O\)</li>
+<li>\(\lambda\) = wavelength of the monochromatic light</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 900 570"
+     role="img"
+     aria-label="Young double slit experiment showing path difference geometry"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="900" height="570" fill="#111111"/>
+
+  <!-- Source -->
+  <circle cx="85" cy="285" r="25"
+          fill="none" stroke="white" stroke-width="3"/>
+  <text x="85" y="292" fill="white" font-size="18"
+        text-anchor="middle">S</text>
+
+  <!-- incident rays -->
+  <line x1="110" y1="285" x2="245" y2="250"
+        stroke="white" stroke-width="2"/>
+  <line x1="110" y1="285" x2="245" y2="320"
+        stroke="white" stroke-width="2"/>
+
+  <!-- slit plate -->
+  <rect x="245" y="70" width="20" height="400"
+        fill="white"/>
+
+  <!-- slits -->
+  <rect x="242" y="250" width="26" height="18"
+        fill="#111111"/>
+  <rect x="242" y="302" width="26" height="18"
+        fill="#111111"/>
+
+  <!-- S1 and S2 -->
+  <circle cx="255" cy="259" r="4" fill="white"/>
+  <circle cx="255" cy="311" r="4" fill="white"/>
+
+  <text x="278" y="264" fill="white" font-size="20">S₁</text>
+  <text x="278" y="317" fill="white" font-size="20">S₂</text>
+
+  <!-- screen -->
+  <line x1="770" y1="60" x2="770" y2="500"
+        stroke="white" stroke-width="5"/>
+
+  <!-- central point O -->
+  <circle cx="770" cy="285" r="5" fill="white"/>
+  <text x="782" y="291" fill="white" font-size="20">O</text>
+
+  <!-- point P -->
+  <circle cx="770" cy="150" r="6" fill="white"/>
+  <text x="785" y="155" fill="white" font-size="20">P</text>
+
+  <!-- paths S1P and S2P -->
+  <line x1="255" y1="259" x2="770" y2="150"
+        stroke="white" stroke-width="3"/>
+  <line x1="255" y1="311" x2="770" y2="150"
+        stroke="white" stroke-width="3"/>
+
+  <!-- perpendicular from S2 to S1P -->
+  <line x1="255" y1="311" x2="280" y2="254"
+        stroke="white" stroke-width="2"
+        stroke-dasharray="7,6"/>
+
+  <!-- D dimension -->
+  <line x1="290" y1="340" x2="760" y2="340"
+        stroke="white" stroke-width="2"/>
+  <line x1="290" y1="332" x2="290" y2="348"
+        stroke="white" stroke-width="2"/>
+  <line x1="760" y1="332" x2="760" y2="348"
+        stroke="white" stroke-width="2"/>
+
+  <text x="525" y="365" fill="white" font-size="19"
+        text-anchor="middle">D</text>
+
+  <!-- y dimension -->
+  <line x1="720" y1="150" x2="720" y2="285"
+        stroke="white" stroke-width="2"/>
+  <line x1="713" y1="150" x2="727" y2="150"
+        stroke="white" stroke-width="2"/>
+  <line x1="713" y1="285" x2="727" y2="285"
+        stroke="white" stroke-width="2"/>
+
+  <text x="700" y="225" fill="white" font-size="19">y</text>
+
+  <!-- d dimension -->
+  <line x1="215" y1="259" x2="215" y2="311"
+        stroke="white" stroke-width="2"/>
+  <line x1="208" y1="259" x2="222" y2="259"
+        stroke="white" stroke-width="2"/>
+  <line x1="208" y1="311" x2="222" y2="311"
+        stroke="white" stroke-width="2"/>
+
+  <text x="190" y="290" fill="white" font-size="19">d</text>
+
+  <!-- theta -->
+  <path d="M255 311 A55 55 0 0 1 280 254"
+        fill="none" stroke="white" stroke-width="2"/>
+  <text x="275" y="300" fill="white" font-size="18">θ</text>
+
+  <!-- labels -->
+  <text x="85" y="335" fill="white" font-size="18"
+        text-anchor="middle">Monochromatic</text>
+  <text x="85" y="357" fill="white" font-size="18"
+        text-anchor="middle">light source</text>
+
+  <text x="255" y="45" fill="white" font-size="19"
+        text-anchor="middle">Double slit</text>
+
+  <text x="770" y="535" fill="white" font-size="19"
+        text-anchor="middle">Screen</text>
+
+</svg>
+<figcaption>Figure: Young's double-slit experiment and the geometry used to determine path difference.</figcaption>
+</figure>
+
+<h3>Formation of Interference Fringes</h3>
+
+<p>The waves emerging from \(S_1\) and \(S_2\) interfere on the screen. At some points, the waves arrive in phase and produce bright fringes. At other points, they arrive in opposite phase and produce dark fringes.</p>
+
+<p>The central point \(O\) is equidistant from \(S_1\) and \(S_2\). Therefore, the path difference at \(O\) is zero and a <strong>central bright fringe</strong> is formed there.</p>
+
+<h3>Path Difference</h3>
+
+<p>Consider a point \(P\) on the screen. The distances travelled by the waves from \(S_1\) and \(S_2\) to reach \(P\) are \(S_1P\) and \(S_2P\).</p>
+
+<p>Therefore, the path difference is</p>
+
+<div class="formula">
+\[
+\Delta=S_2P-S_1P
+\]
+</div>
+
+<p>From the geometry of the experiment, if \(\theta\) is the angle made by \(S_1P\) with the central axis,</p>
+
+<div class="formula">
+\[
+\Delta=d\sin\theta
+\]
+</div>
+
+<p>For small angles,</p>
+
+<div class="formula">
+\[
+\sin\theta\approx\tan\theta
+\]
+</div>
+
+<p>Since</p>
+
+<div class="formula">
+\[
+\tan\theta=\frac{y}{D}
+\]
+
+<span class="where">where \(y\) is the distance of the point \(P\) from the central bright fringe.</span>
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{\Delta=\frac{dy}{D}}
+\]
+</div>
+
+<h3>Condition for Bright Fringe</h3>
+
+<p>For constructive interference, the path difference must be an integral multiple of the wavelength:</p>
+
+<div class="formula">
+\[
+\Delta=n\lambda
+\]
+
+\[
+n=0,\pm1,\pm2,\pm3,\ldots
+\]
+</div>
+
+<p>Using</p>
+
+<div class="formula">
+\[
+\Delta=\frac{dy}{D}
+\]
+</div>
+
+<p>we get</p>
+
+<div class="formula">
+\[
+\frac{dy}{D}=n\lambda
+\]
+</div>
+
+<p>Hence,</p>
+
+<div class="formula">
+\[
+\boxed{y_n=\frac{n\lambda D}{d}}
+\]
+
+<span class="where">where \(y_n\) is the position of the \(n\)th bright fringe from the central bright fringe.</span>
+</div>
+
+<h3>Expression for nth-Order Maximum</h3>
+
+<p>The \(n\)th-order maximum is a bright fringe produced when the path difference is \(n\lambda\).</p>
+
+<p>For the \(n\)th maximum,</p>
+
+<div class="formula">
+\[
+\Delta=n\lambda
+\]
+</div>
+
+<p>But from Young's double-slit geometry,</p>
+
+<div class="formula">
+\[
+\Delta=d\sin\theta
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+d\sin\theta_n=n\lambda
+\]
+</div>
+
+<p>Hence, the exact angular position of the \(n\)th maximum is</p>
+
+<div class="formula">
+\[
+\boxed{\sin\theta_n=\frac{n\lambda}{d}}
+\]
+</div>
+
+<p>For small angles, \(\sin\theta_n\approx\tan\theta_n\), and</p>
+
+<div class="formula">
+\[
+\tan\theta_n=\frac{y_n}{D}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\frac{y_n}{D}=\frac{n\lambda}{d}
+\]
+</div>
+
+<p>Thus,</p>
+
+<div class="formula">
+\[
+\boxed{y_n=\frac{n\lambda D}{d}}
+\]
+</div>
+
+<div class="box law">
+<strong>Position of nth-order maximum:</strong>
+
+\[
+\boxed{y_n=\frac{n\lambda D}{d}}
+\]
+
+<p>The corresponding condition for maximum intensity is</p>
+
+\[
+\boxed{d\sin\theta_n=n\lambda}
+\]
+
+<p>For small angles,</p>
+
+\[
+\boxed{\theta_n\approx\frac{n\lambda}{d}}
+\]
+</div>
+
+<h3>Positions of Bright Fringes</h3>
+
+<table>
+<tr>
+<th>Order</th>
+<th>Path difference</th>
+<th>Position from central maximum</th>
+</tr>
+<tr>
+<td>Central maximum, \(n=0\)</td>
+<td>\(0\)</td>
+<td>\(y_0=0\)</td>
+</tr>
+<tr>
+<td>First maximum, \(n=1\)</td>
+<td>\(\lambda\)</td>
+<td>\(y_1=\frac{\lambda D}{d}\)</td>
+</tr>
+<tr>
+<td>Second maximum, \(n=2\)</td>
+<td>\(2\lambda\)</td>
+<td>\(y_2=\frac{2\lambda D}{d}\)</td>
+</tr>
+<tr>
+<td>nth maximum</td>
+<td>\(n\lambda\)</td>
+<td>\(y_n=\frac{n\lambda D}{d}\)</td>
+</tr>
+</table>
+
+<h3>Fringe Width</h3>
+
+<p>The distance between two successive bright fringes or two successive dark fringes is called the <strong>fringe width</strong>.</p>
+
+<p>For two successive bright fringes,</p>
+
+<div class="formula">
+\[
+\beta=y_{n+1}-y_n
+\]
+</div>
+
+<p>Using</p>
+
+<div class="formula">
+\[
+y_n=\frac{n\lambda D}{d}
+\]
+</div>
+
+<p>we get</p>
+
+<div class="formula">
+\[
+\beta=
+\frac{(n+1)\lambda D}{d}
+-
+\frac{n\lambda D}{d}
+\]
+
+\[
+\boxed{\beta=\frac{\lambda D}{d}}
+\]
+</div>
+
+<div class="box note">
+<strong>Important conclusion:</strong> The fringe width is independent of the order of the fringe. Therefore, the bright and dark fringes are equally spaced on the screen under the usual small-angle approximation.
+</div>
+
+<h3>Positions of Dark Fringes</h3>
+
+<p>For destructive interference,</p>
+
+<div class="formula">
+\[
+\Delta=\left(n+\frac12\right)\lambda
+\]
+</div>
+
+<p>Since</p>
+
+<div class="formula">
+\[
+\Delta=\frac{dy}{D}
+\]
+</div>
+
+<p>we obtain</p>
+
+<div class="formula">
+\[
+\boxed{
+y_n=
+\left(n+\frac12\right)
+\frac{\lambda D}{d}
+}
+\]
+
+<span class="where">where \(n=0,1,2,3,\ldots\).</span>
+</div>
+
+<h3>Important Results of Young's Double-Slit Experiment</h3>
+
+<ul class="key-points">
+<li>Condition for bright fringe: \(\Delta=n\lambda\).</li>
+<li>Condition for dark fringe: \(\Delta=(2n+1)\lambda/2\).</li>
+<li>Position of nth bright fringe: \(y_n=n\lambda D/d\).</li>
+<li>Position of nth dark fringe: \(y_n=(n+\frac12)\lambda D/d\).</li>
+<li>Fringe width: \(\beta=\lambda D/d\).</li>
+<li>Fringe width increases with wavelength.</li>
+<li>Fringe width increases when the screen distance \(D\) is increased.</li>
+<li>Fringe width decreases when slit separation \(d\) is increased.</li>
+<li>The central fringe is bright because the path difference at the centre is zero.</li>
+</ul>
+
+<h3>Worked Example 1 — Position of First Maximum</h3>
+
+<div class="box example">
+<strong>Problem:</strong> In Young's double-slit experiment, the wavelength of light is \(600\,\text{nm}\), the slit separation is \(0.5\,\text{mm}\), and the screen is \(2\,\text{m}\) away. Find the distance of the first bright fringe from the central maximum.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Given:</p>
+
+\[
+\lambda=600\times10^{-9}\,\text{m}
+\]
+
+\[
+d=0.5\times10^{-3}\,\text{m}
+\]
+
+\[
+D=2\,\text{m}
+\]
+
+<p>For the first maximum, \(n=1\).</p>
+
+\[
+y_1=\frac{\lambda D}{d}
+\]
+
+\[
+y_1=
+\frac{600\times10^{-9}\times2}
+{0.5\times10^{-3}}
+\]
+
+\[
+y_1=2.4\times10^{-3}\,\text{m}
+\]
+
+\[
+\boxed{y_1=2.4\,\text{mm}}
+\]
+
+</details>
+</div>
+
+<h3>Worked Example 2 — Fringe Width</h3>
+
+<div class="box example">
+<strong>Problem:</strong> In Young's double-slit experiment, the wavelength of light is \(500\,\text{nm}\), the distance between the slits is \(0.25\,\text{mm}\), and the screen is \(1.5\,\text{m}\) from the slits. Calculate the fringe width.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+\[
+\beta=\frac{\lambda D}{d}
+\]
+
+Given,
+
+\[
+\lambda=500\times10^{-9}\,\text{m}
+\]
+
+\[
+D=1.5\,\text{m}
+\]
+
+\[
+d=0.25\times10^{-3}\,\text{m}
+\]
+
+Therefore,
+
+\[
+\beta=
+\frac{500\times10^{-9}\times1.5}
+{0.25\times10^{-3}}
+\]
+
+\[
+\beta=3.0\times10^{-3}\,\text{m}
+\]
+
+\[
+\boxed{\beta=3\,\text{mm}}
+\]
+
+</details>
+</div>
+
+<h3>Worked Example 3 — Finding Wavelength</h3>
+
+<div class="box example">
+<strong>Problem:</strong> In a Young's double-slit experiment, the slit separation is \(0.4\,\text{mm}\), the screen is \(2\,\text{m}\) away, and the fringe width is \(3\,\text{mm}\). Find the wavelength of light used.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+\[
+\beta=\frac{\lambda D}{d}
+\]
+
+Therefore,
+
+\[
+\lambda=\frac{\beta d}{D}
+\]
+
+Substituting,
+
+\[
+\lambda=
+\frac{(3\times10^{-3})(0.4\times10^{-3})}{2}
+\]
+
+\[
+\lambda=0.6\times10^{-6}\,\text{m}
+\]
+
+\[
+\boxed{\lambda=600\,\text{nm}}
+\]
+
+</details>
+</div>
+
+<h3>Common Mistakes</h3>
+
+<ul>
+<li>Do not confuse <strong>path difference</strong> with <strong>phase difference</strong>.</li>
+<li>For a bright fringe, use \(\Delta=n\lambda\), not \((n+\frac12)\lambda\).</li>
+<li>For a dark fringe, use \(\Delta=(n+\frac12)\lambda\).</li>
+<li>In \(y_n=n\lambda D/d\), \(D\) is the distance from the double slit to the screen.</li>
+<li>Use SI units when calculating numerical answers.</li>
+<li>The exact condition for the \(n\)th maximum is \(d\sin\theta_n=n\lambda\). The expression \(y_n=n\lambda D/d\) uses the small-angle approximation.</li>
+<li>The central maximum corresponds to \(n=0\), not \(n=1\).</li>
+</ul>
+
+<div class="box warning">
+<strong>Exam Note:</strong> In a derivation of the position of the \(n\)th-order maximum, clearly show the steps
+\[
+\Delta=d\sin\theta
+\]
+\[
+\Delta=n\lambda
+\]
+\[
+d\sin\theta=n\lambda
+\]
+and, for small angles,
+\[
+\boxed{y_n=\frac{n\lambda D}{d}}.
+\]
+This is the standard result required for Young's double-slit interference.
+</div>
+
+<h3>Key Points Summary</h3>
+
+<ul class="key-points">
+<li>Interference is the redistribution of intensity due to superposition of coherent waves.</li>
+<li>Constructive interference produces maximum intensity.</li>
+<li>Destructive interference produces minimum intensity.</li>
+<li>Coherent sources have the same frequency and a constant phase difference.</li>
+<li>In YDSE, the two slits act as coherent sources because they are illuminated by the same source.</li>
+<li>Path difference at a point \(P\) is \(\Delta=d\sin\theta\).</li>
+<li>For small angles, \(\Delta=dy/D\).</li>
+<li>Condition for nth maximum: \(d\sin\theta_n=n\lambda\).</li>
+<li>Position of nth maximum: \(\boxed{y_n=n\lambda D/d}\).</li>
+<li>Position of nth minimum: \(\boxed{y_n=(n+\frac12)\lambda D/d}\).</li>
+<li>Fringe width: \(\boxed{\beta=\lambda D/d}\).</li>
+</ul>
