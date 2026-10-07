@@ -1,0 +1,720 @@
+---
+title: Semiconductor
+grade: XII
+chapters: [17]
+date: 2026-10-07
+---
+<h2>22. Semiconductor Devices</h2>
+
+<p>Semiconductor devices are electronic devices made from semiconductor materials such as silicon and germanium. Their electrical properties can be controlled by doping and by applying suitable external voltages. Important semiconductor devices include <strong>PN junction diodes</strong>, <strong>Zener diodes</strong>, rectifiers and logic gates.</p>
+
+<h2>22.1 Formation of PN Junction and Semiconductor Diode</h2>
+
+<h3>Semiconductor</h3>
+
+<p>A <strong>semiconductor</strong> is a material whose electrical conductivity lies between that of a conductor and an insulator. The most commonly used semiconductor materials are <strong>silicon (Si)</strong> and <strong>germanium (Ge)</strong>.</p>
+
+<h3>Intrinsic Semiconductor</h3>
+
+<p>A pure semiconductor is called an <strong>intrinsic semiconductor</strong>. In an intrinsic semiconductor, the number of free electrons is equal to the number of holes.</p>
+
+<h3>Extrinsic Semiconductor</h3>
+
+<p>A semiconductor whose conductivity is increased by adding a small amount of suitable impurity is called an <strong>extrinsic semiconductor</strong>. The process of adding impurities is called <strong>doping</strong>.</p>
+
+<h3>n-Type Semiconductor</h3>
+
+<p>An n-type semiconductor is obtained by doping a pure semiconductor with a <strong>pentavalent impurity</strong> such as phosphorus, arsenic or antimony.</p>
+
+<p>Four electrons of the impurity atom participate in covalent bonding, while the fifth electron is weakly bound and becomes a free electron.</p>
+
+<ul>
+<li>Majority carriers: <strong>electrons</strong></li>
+<li>Minority carriers: <strong>holes</strong></li>
+</ul>
+
+<h3>p-Type Semiconductor</h3>
+
+<p>A p-type semiconductor is obtained by doping a pure semiconductor with a <strong>trivalent impurity</strong> such as boron, aluminium or gallium.</p>
+
+<p>Because the impurity atom has only three valence electrons, one covalent bond remains incomplete. This produces a <strong>hole</strong>.</p>
+
+<ul>
+<li>Majority carriers: <strong>holes</strong></li>
+<li>Minority carriers: <strong>electrons</strong></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>n-Type</th>
+<th>p-Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Impurity</td>
+<td>Pentavalent</td>
+<td>Trivalent</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>P, As, Sb</td>
+<td>B, Al, Ga</td>
+</tr>
+<tr>
+<td>Majority carriers</td>
+<td>Electrons</td>
+<td>Holes</td>
+</tr>
+<tr>
+<td>Minority carriers</td>
+<td>Holes</td>
+<td>Electrons</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Formation of PN Junction</h3>
+
+<p>When a p-type semiconductor is joined with an n-type semiconductor, a <strong>PN junction</strong> is formed.</p>
+
+<p>Immediately after the junction is formed, the concentration of holes is high on the p-side and the concentration of electrons is high on the n-side. Therefore, holes diffuse from the p-side towards the n-side, while electrons diffuse from the n-side towards the p-side.</p>
+
+<p>Near the junction, electrons and holes recombine. This leaves behind immobile positively charged donor ions on the n-side and negatively charged acceptor ions on the p-side.</p>
+
+<p>The region around the junction depleted of mobile charge carriers is called the <strong>depletion region</strong> or <strong>depletion layer</strong>.</p>
+
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Formation of depletion region in a PN junction">
+<rect x="60" y="80" width="280" height="130" stroke="currentColor" fill="none" stroke-width="2"/>
+<rect x="340" y="80" width="360" height="130" stroke="currentColor" fill="none" stroke-width="2"/>
+<line x1="340" y1="60" x2="340" y2="235" stroke="currentColor" stroke-width="4"/>
+<text x="185" y="110" fill="currentColor">P-region</text>
+<text x="500" y="110" fill="currentColor">N-region</text>
+<text x="325" y="250" fill="currentColor">Junction</text>
+<text x="235" y="145" fill="currentColor">− − −</text>
+<text x="380" y="145" fill="currentColor">+ + +</text>
+<text x="275" y="180" fill="currentColor">Depletion region</text>
+<path d="M260 285 L320 285" stroke="currentColor" stroke-width="2"/>
+<path d="M320 285 L310 280 M320 285 L310 290" stroke="currentColor" stroke-width="2" fill="none"/>
+<path d="M500 285 L440 285" stroke="currentColor" stroke-width="2"/>
+<path d="M440 285 L450 280 M440 285 L450 290" stroke="currentColor" stroke-width="2" fill="none"/>
+<text x="190" y="315" fill="currentColor">Diffusion of holes</text>
+<text x="470" y="315" fill="currentColor">Diffusion of electrons</text>
+</svg>
+<figcaption>Formation of the depletion region at a PN junction</figcaption>
+</figure>
+
+<h3>Potential Barrier</h3>
+
+<p>The immobile ions in the depletion region produce an electric field directed from the positively charged n-side towards the negatively charged p-side. This electric field opposes further diffusion of majority carriers.</p>
+
+<p>The potential difference developed across the depletion region is called the <strong>potential barrier</strong> or <strong>barrier potential</strong>.</p>
+
+<p>At room temperature, the barrier potential is approximately \(0.7\,\text{V}\) for silicon and \(0.3\,\text{V}\) for germanium.</p>
+
+<div class="box definition">
+<strong>Depletion region:</strong> The region around a PN junction containing almost no mobile charge carriers because electrons and holes have recombined near the junction.
+</div>
+
+<div class="box definition">
+<strong>Potential barrier:</strong> The potential difference developed across the depletion region that opposes the diffusion of majority charge carriers across the junction.
+</div>
+
+<h3>Semiconductor Diode</h3>
+
+<p>A <strong>semiconductor diode</strong> is a two-terminal semiconductor device consisting essentially of a single PN junction. Its two terminals are called the <strong>anode</strong> and <strong>cathode</strong>.</p>
+
+<figure>
+<svg viewBox="0 0 700 250" role="img" aria-label="Symbol of a semiconductor diode">
+<line x1="80" y1="125" x2="280" y2="125" stroke="currentColor" stroke-width="3"/>
+<polygon points="280,75 280,175 400,125" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="400" y1="75" x2="400" y2="175" stroke="currentColor" stroke-width="4"/>
+<line x1="400" y1="125" x2="620" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="220" y="65" fill="currentColor">Anode</text>
+<text x="375" y="65" fill="currentColor">Cathode</text>
+<text x="300" y="215" fill="currentColor">Conventional diode symbol</text>
+</svg>
+<figcaption>Symbol of a PN junction diode</figcaption>
+</figure>
+
+<h3>Biasing of a PN Junction</h3>
+
+<p>Applying an external voltage across a PN junction is called <strong>biasing</strong>. There are two types of biasing:</p>
+
+<ol>
+<li>Forward bias</li>
+<li>Reverse bias</li>
+</ol>
+
+<h3>Forward Bias</h3>
+
+<p>A PN junction is said to be <strong>forward biased</strong> when the p-side is connected to the positive terminal and the n-side to the negative terminal of a battery.</p>
+
+<p>Forward bias reduces the width of the depletion region and lowers the potential barrier. Majority carriers can therefore cross the junction more easily, producing a significant current.</p>
+
+<figure>
+<svg viewBox="0 0 760 300" role="img" aria-label="Forward biased PN junction">
+<line x1="70" y1="150" x2="250" y2="150" stroke="currentColor" stroke-width="3"/>
+<polygon points="250,100 250,200 370,150" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="370" y1="100" x2="370" y2="200" stroke="currentColor" stroke-width="4"/>
+<line x1="370" y1="150" x2="500" y2="150" stroke="currentColor" stroke-width="3"/>
+<line x1="500" y1="150" x2="500" y2="80" stroke="currentColor" stroke-width="3"/>
+<line x1="500" y1="80" x2="150" y2="80" stroke="currentColor" stroke-width="3"/>
+<line x1="150" y1="80" x2="150" y2="150" stroke="currentColor" stroke-width="3"/>
+<text x="95" y="65" fill="currentColor">+</text>
+<text x="490" y="65" fill="currentColor">−</text>
+<text x="245" y="245" fill="currentColor">Forward bias</text>
+<text x="110" y="175" fill="currentColor">P</text>
+<text x="395" y="175" fill="currentColor">N</text>
+</svg>
+<figcaption>PN junction under forward bias</figcaption>
+</figure>
+
+<h3>Reverse Bias</h3>
+
+<p>A PN junction is said to be <strong>reverse biased</strong> when the p-side is connected to the negative terminal and the n-side to the positive terminal of the battery.</p>
+
+<p>Reverse bias increases the width of the depletion region and increases the potential barrier. Only a very small current due to minority carriers flows through the junction. This current is called <strong>reverse saturation current</strong>.</p>
+
+<h2>22.2 Forward and Reverse Characteristics of a Semiconductor Diode</h2>
+
+<p>The relationship between the current through a diode and the voltage applied across it is called the <strong>V-I characteristic</strong> of the diode.</p>
+
+<h3>Forward Characteristic</h3>
+
+<p>In forward bias, initially the current is very small because the applied voltage is insufficient to overcome the potential barrier. As the applied voltage approaches the <strong>knee voltage</strong>, the current begins to increase rapidly.</p>
+
+<p>The knee voltage is approximately \(0.7\,\text{V}\) for silicon and \(0.3\,\text{V}\) for germanium.</p>
+
+<figure>
+<svg viewBox="0 0 760 430" role="img" aria-label="Forward and reverse V-I characteristic of a semiconductor diode">
+<line x1="100" y1="330" x2="700" y2="330" stroke="currentColor" stroke-width="2"/>
+<line x1="400" y1="50" x2="400" y2="380" stroke="currentColor" stroke-width="2"/>
+<path d="M400 330 L470 330 L510 325 L535 310 L550 270 L565 210 L580 130 L600 75" stroke="currentColor" fill="none" stroke-width="3"/>
+<path d="M400 330 L350 330 L300 332 L250 335 L200 338 L150 340" stroke="currentColor" fill="none" stroke-width="3"/>
+<path d="M150 340 L120 340 L105 345" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="570" y="60" fill="currentColor">Forward current</text>
+<text x="125" y="370" fill="currentColor">Reverse current</text>
+<text x="430" y="355" fill="currentColor">V</text>
+<text x="380" y="65" fill="currentColor">I</text>
+<text x="515" y="300" fill="currentColor">Knee</text>
+<text x="120" y="315" fill="currentColor">Breakdown</text>
+</svg>
+<figcaption>Typical V-I characteristic of a PN junction diode</figcaption>
+</figure>
+
+<h3>Reverse Characteristic</h3>
+
+<p>In reverse bias, only a small reverse saturation current flows. As the reverse voltage is increased to a sufficiently high value, the current increases sharply. This voltage is called the <strong>breakdown voltage</strong>.</p>
+
+<h3>Breakdown</h3>
+
+<p>At breakdown, a small increase in reverse voltage produces a very large increase in reverse current. If the current is not properly limited, an ordinary diode may be damaged.</p>
+
+<h3>Zener Diode</h3>
+
+<p>A <strong>Zener diode</strong> is a specially designed semiconductor diode intended to operate safely in the reverse-breakdown region.</p>
+
+<p>It is heavily doped compared with an ordinary junction diode, giving it a thin depletion layer and a well-defined breakdown voltage called the <strong>Zener voltage</strong>, \(V_Z\).</p>
+
+<figure>
+<svg viewBox="0 0 700 270" role="img" aria-label="Zener diode symbol">
+<line x1="60" y1="135" x2="260" y2="135" stroke="currentColor" stroke-width="3"/>
+<polygon points="260,85 260,185 380,135" stroke="currentColor" fill="none" stroke-width="3"/>
+<path d="M380 85 L380 105 L370 115 L390 125 L370 135 L390 145 L370 155 L380 165 L380 185" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="380" y1="135" x2="640" y2="135" stroke="currentColor" stroke-width="3"/>
+<text x="285" y="65" fill="currentColor">Zener diode</text>
+</svg>
+<figcaption>Symbol of a Zener diode</figcaption>
+</figure>
+
+<h3>Use of Zener Diode as a Voltage Regulator</h3>
+
+<p>A Zener diode can maintain an approximately constant voltage across a load when operated in its breakdown region. Therefore, it is commonly used as a <strong>voltage regulator</strong>.</p>
+
+<div class="box note">
+<strong>Important distinction:</strong> An ordinary diode is generally operated in forward bias for rectification, whereas a Zener diode is specially designed to operate in reverse breakdown for voltage regulation.
+</div>
+
+<h2>22.3 Rectifier</h2>
+
+<div class="box definition">
+<strong>Rectifier:</strong> A rectifier is an electronic device or circuit that converts alternating current (AC) into unidirectional or pulsating direct current (DC).
+</div>
+
+<p>Since a semiconductor diode conducts mainly in one direction, it can be used for rectification.</p>
+
+<h3>Types of Rectification</h3>
+
+<ul>
+<li><strong>Half-wave rectification:</strong> only one half-cycle of the AC input is used.</li>
+<li><strong>Full-wave rectification:</strong> both half-cycles of the AC input are converted into pulsating DC.</li>
+</ul>
+
+<div class="box tip">
+<strong>Exam point:</strong> Full-wave rectification is more efficient than half-wave rectification because both half-cycles of the AC input contribute to the output.
+</div>
+
+<h2>22.4 Full-Wave Rectification Using Semiconductor Diodes</h2>
+
+<p>A <strong>full-wave rectifier</strong> is a rectifier circuit that converts both the positive and negative half-cycles of an AC input into output current flowing in the same direction through the load.</p>
+
+<p>A common full-wave rectifier uses <strong>four diodes in a bridge configuration</strong>. It is called a <strong>bridge rectifier</strong>.</p>
+
+<h3>Bridge Full-Wave Rectifier</h3>
+
+<figure>
+<svg viewBox="0 0 760 430" role="img" aria-label="Bridge full-wave rectifier circuit">
+<circle cx="120" cy="215" r="35" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="103" y="220" fill="currentColor">AC</text>
+<line x1="155" y1="215" x2="240" y2="215" stroke="currentColor" stroke-width="2"/>
+<line x1="240" y1="215" x2="330" y2="120" stroke="currentColor" stroke-width="2"/>
+<line x1="240" y1="215" x2="330" y2="310" stroke="currentColor" stroke-width="2"/>
+<line x1="330" y1="120" x2="470" y2="120" stroke="currentColor" stroke-width="2"/>
+<line x1="330" y1="310" x2="470" y2="310" stroke="currentColor" stroke-width="2"/>
+<line x1="470" y1="120" x2="560" y2="215" stroke="currentColor" stroke-width="2"/>
+<line x1="470" y1="310" x2="560" y2="215" stroke="currentColor" stroke-width="2"/>
+<line x1="560" y1="215" x2="640" y2="215" stroke="currentColor" stroke-width="2"/>
+<polygon points="310,140 335,120 310,100" stroke="currentColor" fill="none" stroke-width="2"/>
+<polygon points="310,290 335,310 310,330" stroke="currentColor" fill="none" stroke-width="2"/>
+<polygon points="485,100 460,120 485,140" stroke="currentColor" fill="none" stroke-width="2"/>
+<polygon points="485,330 460,310 485,290" stroke="currentColor" fill="none" stroke-width="2"/>
+<line x1="560" y1="215" x2="560" y2="150" stroke="currentColor" stroke-width="2"/>
+<line x1="560" y1="150" x2="650" y2="150" stroke="currentColor" stroke-width="2"/>
+<line x1="650" y1="150" x2="650" y2="215" stroke="currentColor" stroke-width="2"/>
+<line x1="560" y1="215" x2="560" y2="280" stroke="currentColor" stroke-width="2"/>
+<line x1="560" y1="280" x2="650" y2="280" stroke="currentColor" stroke-width="2"/>
+<line x1="650" y1="280" x2="650" y2="215" stroke="currentColor" stroke-width="2"/>
+<text x="575" y="135" fill="currentColor">Load</text>
+<text x="290" y="85" fill="currentColor">D₁</text>
+<text x="290" y="350" fill="currentColor">D₂</text>
+<text x="480" y="85" fill="currentColor">D₃</text>
+<text x="480" y="350" fill="currentColor">D₄</text>
+</svg>
+<figcaption>Basic bridge full-wave rectifier using four semiconductor diodes</figcaption>
+</figure>
+
+<h3>Working During the Positive Half-Cycle</h3>
+
+<p>During the positive half-cycle of the AC input, one pair of diodes becomes forward biased and conducts current through the load. The other pair remains reverse biased.</p>
+
+<p>The current through the load flows in a particular direction.</p>
+
+<h3>Working During the Negative Half-Cycle</h3>
+
+<p>During the negative half-cycle, the other pair of diodes becomes forward biased. The current through the load nevertheless flows in the <strong>same direction</strong> as during the positive half-cycle.</p>
+
+<p>Thus both half-cycles of the AC input produce output current through the load in the same direction.</p>
+
+<h3>Output of a Full-Wave Rectifier</h3>
+
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Input and full-wave rectified output waveforms">
+<line x1="70" y1="90" x2="710" y2="90" stroke="currentColor" stroke-width="2"/>
+<path d="M70 90 C110 20 150 20 190 90 S270 160 310 90 S390 20 430 90 S510 160 550 90 S630 20 670 90" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="75" y="45" fill="currentColor">AC input</text>
+<line x1="70" y1="250" x2="710" y2="250" stroke="currentColor" stroke-width="2"/>
+<path d="M70 250 C110 180 150 180 190 250 C230 180 270 180 310 250 C350 180 390 180 430 250 C470 180 510 180 550 250 C590 180 630 180 670 250" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="75" y="205" fill="currentColor">Full-wave rectified output</text>
+<text x="330" y="310" fill="currentColor">Time →</text>
+</svg>
+<figcaption>Input AC waveform and pulsating DC output of a full-wave rectifier</figcaption>
+</figure>
+
+<h3>Advantages of Full-Wave Rectifier</h3>
+
+<ul>
+<li>Both half-cycles of AC are utilized.</li>
+<li>Higher average output current than a half-wave rectifier.</li>
+<li>Higher rectification efficiency.</li>
+<li>Lower ripple compared with half-wave rectification.</li>
+<li>Output frequency is twice the input AC frequency.</li>
+</ul>
+
+<div class="box law">
+<strong>For a full-wave rectifier:</strong>
+
+<div class="formula">\[
+f_{\text{output}}=2f_{\text{input}}
+\]<span class="where">where \(f_{\text{input}}\) is the AC input frequency.</span></div>
+</div>
+
+<h2>22.5 Logic Gates</h2>
+
+<h3>Definition of Logic Gate</h3>
+
+<div class="box definition">
+<strong>Logic gate:</strong> A logic gate is an electronic circuit that performs a logical operation on one or more binary inputs and produces a single binary output.
+</div>
+
+<p>Digital electronic systems use two logical states:</p>
+
+<ul>
+<li><strong>Logic 0:</strong> LOW or false</li>
+<li><strong>Logic 1:</strong> HIGH or true</li>
+</ul>
+
+<p>Logic gates are represented using symbols and can also be described using <strong>Boolean algebra</strong> and <strong>truth tables</strong>.</p>
+
+<h3>Basic Logic Gates</h3>
+
+<p>The important gates in this syllabus are:</p>
+
+<ol>
+<li>OR gate</li>
+<li>AND gate</li>
+<li>NOT gate</li>
+<li>NAND gate</li>
+<li>NOR gate</li>
+</ol>
+
+<h3>OR Gate</h3>
+
+<p>An <strong>OR gate</strong> gives an output of 1 if <strong>at least one</strong> of its inputs is 1. Its output is 0 only when all inputs are 0.</p>
+
+<div class="formula">\[
+Y=A+B
+\]<span class="where">where \(+\) denotes the OR operation in Boolean algebra.</span></div>
+
+<figure>
+<svg viewBox="0 0 700 230" role="img" aria-label="OR gate symbol">
+<line x1="60" y1="90" x2="220" y2="90" stroke="currentColor" stroke-width="3"/>
+<line x1="60" y1="160" x2="220" y2="160" stroke="currentColor" stroke-width="3"/>
+<path d="M220 90 Q280 90 330 125 Q280 160 220 160 Q255 125 220 90" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="330" y1="125" x2="560" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="80" y="75" fill="currentColor">A</text>
+<text x="80" y="185" fill="currentColor">B</text>
+<text x="410" y="115" fill="currentColor">Y = A + B</text>
+</svg>
+<figcaption>Symbol of an OR gate</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>Y = A + B</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</tbody>
+</table>
+
+<h3>AND Gate</h3>
+
+<p>An <strong>AND gate</strong> gives an output of 1 only when <strong>all</strong> inputs are 1.</p>
+
+<div class="formula">\[
+Y=A\cdot B
+\]<span class="where">where \(\cdot\) denotes the AND operation in Boolean algebra.</span></div>
+
+<figure>
+<svg viewBox="0 0 700 230" role="img" aria-label="AND gate symbol">
+<line x1="60" y1="90" x2="220" y2="90" stroke="currentColor" stroke-width="3"/>
+<line x1="60" y1="160" x2="220" y2="160" stroke="currentColor" stroke-width="3"/>
+<path d="M220 90 L270 90 Q350 90 350 125 Q350 160 270 160 L220 160 Z" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="350" y1="125" x2="560" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="80" y="75" fill="currentColor">A</text>
+<text x="80" y="185" fill="currentColor">B</text>
+<text x="410" y="115" fill="currentColor">Y = A · B</text>
+</svg>
+<figcaption>Symbol of an AND gate</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>Y = A · B</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</tbody>
+</table>
+
+<h3>NOT Gate</h3>
+
+<p>A <strong>NOT gate</strong> has only one input. It produces an output that is the logical complement of the input.</p>
+
+<div class="formula">\[
+Y=\overline{A}
+\]<span class="where">where the overbar represents logical NOT or complementation.</span></div>
+
+<figure>
+<svg viewBox="0 0 700 230" role="img" aria-label="NOT gate symbol">
+<line x1="60" y1="125" x2="260" y2="125" stroke="currentColor" stroke-width="3"/>
+<polygon points="260,70 260,180 400,125" stroke="currentColor" fill="none" stroke-width="3"/>
+<circle cx="415" cy="125" r="15" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="430" y1="125" x2="600" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="100" y="105" fill="currentColor">A</text>
+<text x="475" y="115" fill="currentColor">Y = A̅</text>
+</svg>
+<figcaption>Symbol of a NOT gate</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>Y = NOT A</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>0</td></tr>
+</tbody>
+</table>
+
+<h3>NAND Gate</h3>
+
+<p>A <strong>NAND gate</strong> is an AND gate followed by a NOT operation. It produces an output of 0 only when all inputs are 1.</p>
+
+<div class="formula">\[
+Y=\overline{A\cdot B}
+\]<span class="where">where the bar represents the NOT operation.</span></div>
+
+<figure>
+<svg viewBox="0 0 700 230" role="img" aria-label="NAND gate symbol">
+<line x1="60" y1="90" x2="220" y2="90" stroke="currentColor" stroke-width="3"/>
+<line x1="60" y1="160" x2="220" y2="160" stroke="currentColor" stroke-width="3"/>
+<path d="M220 90 L270 90 Q350 90 350 125 Q350 160 270 160 L220 160 Z" stroke="currentColor" fill="none" stroke-width="3"/>
+<circle cx="365" cy="125" r="15" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="380" y1="125" x2="560" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="80" y="75" fill="currentColor">A</text>
+<text x="80" y="185" fill="currentColor">B</text>
+<text x="410" y="115" fill="currentColor">Y = (A·B)̅</text>
+</svg>
+<figcaption>Symbol of a NAND gate</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>Y = \(\overline{A\cdot B}\)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>0</td></tr>
+</tbody>
+</table>
+
+<h3>NOR Gate</h3>
+
+<p>A <strong>NOR gate</strong> is an OR gate followed by a NOT operation. It produces an output of 1 only when all inputs are 0.</p>
+
+<div class="formula">\[
+Y=\overline{A+B}
+\]<span class="where">where the bar represents the NOT operation.</span></div>
+
+<figure>
+<svg viewBox="0 0 700 230" role="img" aria-label="NOR gate symbol">
+<line x1="60" y1="90" x2="220" y2="90" stroke="currentColor" stroke-width="3"/>
+<line x1="60" y1="160" x2="220" y2="160" stroke="currentColor" stroke-width="3"/>
+<path d="M220 90 Q280 90 330 125 Q280 160 220 160 Q255 125 220 90" stroke="currentColor" fill="none" stroke-width="3"/>
+<circle cx="345" cy="125" r="15" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="360" y1="125" x2="560" y2="125" stroke="currentColor" stroke-width="3"/>
+<text x="80" y="75" fill="currentColor">A</text>
+<text x="80" y="185" fill="currentColor">B</text>
+<text x="390" y="115" fill="currentColor">Y = (A+B)̅</text>
+</svg>
+<figcaption>Symbol of a NOR gate</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>Y = \(\overline{A+B}\)</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+<tr><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>1</td><td>1</td><td>0</td></tr>
+</tbody>
+</table>
+
+genui{"learning_viz":{"type_id":"BOOLEAN_TRUTH_TABLE","initial_values":{"inputA":true,"inputB":true,"operator":"AND"}}}
+
+<h3>Comparison of Logic Gates</h3>
+
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Boolean expression</th>
+<th>Output condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OR</td>
+<td>\(Y=A+B\)</td>
+<td>1 if at least one input is 1</td>
+</tr>
+<tr>
+<td>AND</td>
+<td>\(Y=A\cdot B\)</td>
+<td>1 only if both inputs are 1</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>\(Y=\overline{A}\)</td>
+<td>Complement of input</td>
+</tr>
+<tr>
+<td>NAND</td>
+<td>\(Y=\overline{A\cdot B}\)</td>
+<td>0 only if both inputs are 1</td>
+</tr>
+<tr>
+<td>NOR</td>
+<td>\(Y=\overline{A+B}\)</td>
+<td>1 only if both inputs are 0</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Universal Gates</h3>
+
+<p><strong>NAND</strong> and <strong>NOR</strong> are called <strong>universal gates</strong> because either of them alone can be used to construct the basic gates and, consequently, any Boolean logic circuit.</p>
+
+<div class="box note">
+<strong>Important:</strong> The small circle (bubble) at the output of an AND or OR symbol indicates inversion. Thus, AND + NOT gives NAND, while OR + NOT gives NOR.
+</div>
+
+<h2>Key Points Summary</h2>
+
+<ul class="key-points">
+<li>A semiconductor has conductivity between that of a conductor and an insulator.</li>
+<li>Doping produces extrinsic semiconductors.</li>
+<li>n-type semiconductors have electrons as majority carriers.</li>
+<li>p-type semiconductors have holes as majority carriers.</li>
+<li>A PN junction contains a depletion region and a potential barrier.</li>
+<li>Forward bias reduces the depletion region and allows significant current to flow.</li>
+<li>Reverse bias widens the depletion region and produces only a small reverse current until breakdown.</li>
+<li>The V-I characteristic shows the relationship between diode current and applied voltage.</li>
+<li>A Zener diode is designed to operate in the reverse-breakdown region.</li>
+<li>A Zener diode can be used as a voltage regulator.</li>
+<li>A rectifier converts AC into unidirectional or pulsating DC.</li>
+<li>A full-wave rectifier uses both half-cycles of the AC input.</li>
+<li>In a bridge rectifier, four diodes are used.</li>
+<li>The output frequency of a full-wave rectifier is twice the input frequency.</li>
+<li>A logic gate performs a Boolean operation on binary inputs.</li>
+<li>OR operation is represented by \(+\).</li>
+<li>AND operation is represented by \(\cdot\).</li>
+<li>NOT operation gives the complement of the input.</li>
+<li>NAND is NOT-AND.</li>
+<li>NOR is NOT-OR.</li>
+<li>NAND and NOR are universal logic gates.</li>
+</ul>
+
+<h2>Common Examination Questions</h2>
+
+<ol>
+<li>What is a semiconductor? Distinguish between intrinsic and extrinsic semiconductors.</li>
+<li>Explain the formation of n-type and p-type semiconductors.</li>
+<li>Explain the formation of a PN junction.</li>
+<li>What is a depletion region? How is it formed?</li>
+<li>What is potential barrier? Give its approximate value for silicon and germanium.</li>
+<li>Explain forward and reverse biasing of a PN junction.</li>
+<li>Draw and explain the V-I characteristics of a semiconductor diode.</li>
+<li>What is breakdown voltage?</li>
+<li>What is a Zener diode? Explain its use as a voltage regulator.</li>
+<li>Define rectifier. Explain the principle of rectification.</li>
+<li>Explain the working of a full-wave bridge rectifier.</li>
+<li>Draw the input and output waveforms of a full-wave rectifier.</li>
+<li>Define a logic gate.</li>
+<li>Explain OR, AND and NOT gates with their symbols, Boolean expressions and truth tables.</li>
+<li>Explain NAND and NOR gates with their symbols, Boolean expressions and truth tables.</li>
+<li>Why are NAND and NOR gates called universal gates?</li>
+</ol>
+
+<h2>Quick Revision Table</h2>
+
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Essential Point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n-type semiconductor</td>
+<td>Electrons are majority carriers</td>
+</tr>
+<tr>
+<td>p-type semiconductor</td>
+<td>Holes are majority carriers</td>
+</tr>
+<tr>
+<td>PN junction</td>
+<td>Junction between p-type and n-type semiconductor</td>
+</tr>
+<tr>
+<td>Depletion region</td>
+<td>Region depleted of mobile charge carriers near the junction</td>
+</tr>
+<tr>
+<td>Forward bias</td>
+<td>P-side positive, N-side negative</td>
+</tr>
+<tr>
+<td>Reverse bias</td>
+<td>P-side negative, N-side positive</td>
+</tr>
+<tr>
+<td>Zener diode</td>
+<td>Operates in controlled reverse breakdown</td>
+</tr>
+<tr>
+<td>Rectifier</td>
+<td>Converts AC into pulsating DC</td>
+</tr>
+<tr>
+<td>Full-wave rectifier</td>
+<td>Uses both half-cycles of AC</td>
+</tr>
+<tr>
+<td>OR gate</td>
+<td>Output is 1 if at least one input is 1</td>
+</tr>
+<tr>
+<td>AND gate</td>
+<td>Output is 1 only when all inputs are 1</td>
+</tr>
+<tr>
+<td>NOT gate</td>
+<td>Output is the complement of input</td>
+</tr>
+<tr>
+<td>NAND gate</td>
+<td>NOT of AND operation</td>
+</tr>
+<tr>
+<td>NOR gate</td>
+<td>NOT of OR operation</td>
+</tr>
+</tbody>
+</table>
