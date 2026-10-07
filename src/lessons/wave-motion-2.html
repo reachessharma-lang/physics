@@ -3,246 +3,1256 @@ title: Wave Motion
 grade: XII
 chapters: [4]
 date: 2026-10-01
-description: Progressive and stationary waves, mathematical description, velocity of sound, Laplace correction, waves in pipes and strings, harmonics.
+description: Progressive and stationary waves, mathematical description
 ---
 
-<h2>Introduction</h2>
-<p><strong>Wave motion</strong> is the propagation of a disturbance through a medium, transferring energy without the permanent displacement of the medium itself. Waves are classified as <em>progressive</em> (traveling through space) or <em>stationary</em> (confined to a region).</p>
+---
 
-<h2>4.1 Progressive waves</h2>
-<p>A <strong>progressive wave</strong> continuously propagates through a medium, carrying energy from one location to another. Particles oscillate about equilibrium but do not move with the wave.</p>
+title: Wave Motion
+grade: XII
+chapters: [6]
+date: 2026-10-07
+description: Complete NEB-focused notes on progressive and stationary waves, their mathematical forms, characteristics, formation conditions, derivation of stationary waves, and numerical applications.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<div class="box definition">
-  <p><strong>Wavelength</strong> \(\lambda\) is the shortest distance between two particles that oscillate in phase.</p>
-  <p><strong>Period</strong> \(T\) is the time for one complete oscillation.</p>
-  <p><strong>Frequency</strong> \(f = 1/T\) is the number of oscillations per second (unit: Hz).</p>
-</div>
-
-<div class="formula">
-  \[ v = \lambda f = \frac{\lambda}{T} \]
-  <span class="where">where \(v\) is the wave speed.</span>
-</div>
-
-<h3>Transverse and longitudinal waves</h3>
-<table>
-  <tr><th>Type</th><th>Particle motion</th><th>Examples</th></tr>
-  <tr><td><strong>Transverse</strong></td><td>Perpendicular to propagation</td><td>Light, waves on strings, water waves</td></tr>
-  <tr><td><strong>Longitudinal</strong></td><td>Parallel to propagation (compressions and rarefactions)</td><td>Sound, pressure waves</td></tr>
-</table>
-
-<h2>4.2 Mathematical description of wave motion</h2>
-<p>For a harmonic progressive wave traveling in the positive \(x\) direction:</p>
-
-<div class="formula">
-  \[ y(x, t) = A\sin\left( kx - \omega t + \phi \right) \]
-  <span class="where">where \(A\) = amplitude, \(k = 2\pi/\lambda\) = wave number, \(\omega = 2\pi f\) = angular frequency, \(\phi\) = initial phase.</span>
-</div>
-
-<p><strong>Wave speed</strong> can be expressed as</p>
-<div class="formula">
-  \[ v = \frac{\omega}{k} \]
-</div>
-
-<h3>Particle velocity and acceleration</h3>
-<p>The velocity and acceleration of a particle at position \(x\) are obtained by differentiating the displacement with respect to time:</p>
-
-<div class="formula">
-  \[ v_{\text{particle}} = \frac{\partial y}{\partial t} = -A\omega\cos(kx - \omega t + \phi) \]
-</div>
-
-<div class="formula">
-  \[ a_{\text{particle}} = \frac{\partial^2 y}{\partial t^2} = -A\omega^2\sin(kx - \omega t + \phi) = -\omega^2 y \]
-</div>
-
-<div class="box note">
-  <p>The particle velocity is <em>not</em> the same as wave velocity. Particle velocity is perpendicular to wave velocity in transverse waves.</p>
-</div>
-
-<h2>4.3 Velocity of sound in different media</h2>
-
-<h3>In fluids</h3>
-<p>The speed of longitudinal waves (sound) in a fluid depends on the bulk modulus and density:</p>
-
-<div class="formula">
-  \[ v = \sqrt{\frac{B}{\rho}} \]
-  <span class="where">where \(B\) is bulk modulus (Pa), \(\rho\) is density (kg/m³).</span>
-</div>
-
-<h3>In gases</h3>
-<p>For an ideal gas, the speed of sound is given by Newton's formula:</p>
-
-<div class="formula">
-  \[ v = \sqrt{\frac{\gamma P}{\rho}} \]
-  <span class="where">where \(\gamma\) is the adiabatic index, \(P\) is pressure.</span>
-</div>
-
-<p>In terms of absolute temperature \(T\):</p>
-<div class="formula">
-  \[ v = \sqrt{\frac{\gamma RT}{M}} \]
-  <span class="where">where \(R = 8.314\ \text{J K}^{-1}\text{ mol}^{-1}\), \(M\) is molar mass (kg/mol).</span>
-</div>
-
-<p>For air at temperature \(T\) (in °C):</p>
-<div class="formula">
-  \[ v \approx 331 + 0.6\,T\ \text{m/s} \]
-</div>
-
-<table>
-  <tr><th>Medium</th><th>Speed of sound (m/s)</th></tr>
-  <tr><td>Air (0°C)</td><td>331</td></tr>
-  <tr><td>Air (20°C)</td><td>343</td></tr>
-  <tr><td>Water (20°C)</td><td>1482</td></tr>
-  <tr><td>Steel</td><td>5960</td></tr>
-</table>
-
-<h3>Laplace correction</h3>
-
-<div class="box law">
-  <p>Newton initially assumed isothermal compression during sound propagation, but Laplace showed that the process is <em>adiabatic</em> because compression and rarefaction occur rapidly, with no time for heat exchange.</p>
-</div>
-
-<p>Laplace's corrected formula:</p>
-<div class="formula">
-  \[ v = \sqrt{\frac{\gamma B}{\rho}} \]
-  <span class="where">where \(\gamma = C_P/C_V\) ≈ 1.4 for air.</span>
-</div>
-
-<p>Newton's formula underestimated sound velocity by a factor of \(\sqrt{\gamma}\) ≈ 1.18 for air.</p>
-
-<h2>4.4 Waves in pipes and stretched strings</h2>
-
-<h3>Closed pipe (both ends closed or one end open, one closed)</h3>
-<p>Resonance occurs when the pipe length is an odd multiple of the quarter wavelength:</p>
-
-<div class="formula">
-  \[ L = (2n-1)\frac{\lambda}{4}, \quad n = 1, 2, 3, \ldots \]
-</div>
-
-<p>Fundamental frequency (first harmonic):</p>
-<div class="formula">
-  \[ f_1 = \frac{v}{4L} \]
-</div>
-
-<p>Overtones (only odd harmonics):</p>
-<div class="formula">
-  \[ f_n = (2n-1)f_1, \quad n = 1, 2, 3, \ldots \]
-</div>
-
-<h3>Open pipe (both ends open)</h3>
-<p>Resonance occurs when the pipe length is an integer multiple of the half wavelength:</p>
-
-<div class="formula">
-  \[ L = n\frac{\lambda}{2}, \quad n = 1, 2, 3, \ldots \]
-</div>
-
-<p>Fundamental frequency:</p>
-<div class="formula">
-  \[ f_1 = \frac{v}{2L} \]
-</div>
-
-<p>Harmonics (all harmonics present):</p>
-<div class="formula">
-  \[ f_n = nf_1, \quad n = 1, 2, 3, \ldots \]
-</div>
-
-<h3>Stretched string</h3>
-<p>The speed of a wave on a string depends on tension and linear mass density:</p>
-
-<div class="formula">
-  \[ v = \sqrt{\frac{T}{\mu}} \]
-  <span class="where">where \(T\) is tension (N), \(\mu\) is linear mass density (kg/m).</span>
-</div>
-
-<p>For a string fixed at both ends:</p>
-<div class="formula">
-  \[ L = n\frac{\lambda}{2}, \quad f_n = \frac{nv}{2L} = n\frac{1}{2L}\sqrt{\frac{T}{\mu}}, \quad n = 1, 2, 3, \ldots \]
-</div>
-
-<h2>4.5 Harmonics and overtones</h2>
+<h2>6.1 Progressive Wave</h2>
 
 <div class="box definition">
-  <p><strong>Fundamental or first harmonic</strong> is the lowest frequency at which a resonant object vibrates.</p>
-  <p><strong>Overtones</strong> are any frequencies higher than the fundamental.</p>
-  <p><strong>Harmonics</strong> are integral multiples of the fundamental frequency.</p>
+<p><strong>Wave motion:</strong> Wave motion is the propagation of a disturbance through a medium or space from one point to another without the actual transfer of matter as a whole.</p>
 </div>
-
-<table>
-  <tr><th>Harmonic</th><th>Open pipe</th><th>Closed pipe</th><th>Stretched string</th></tr>
-  <tr><td>1st (fundamental)</td><td>\(f_1\)</td><td>\(f_1\)</td><td>\(f_1\)</td></tr>
-  <tr><td>2nd</td><td>\(2f_1\)</td><td>absent</td><td>\(2f_1\)</td></tr>
-  <tr><td>3rd</td><td>\(3f_1\)</td><td>\(3f_1\)</td><td>\(3f_1\)</td></tr>
-  <tr><td>4th</td><td>\(4f_1\)</td><td>absent</td><td>\(4f_1\)</td></tr>
-</table>
-
-<h2>4.6 Stationary (standing) waves</h2>
 
 <div class="box definition">
-  <p>A <strong>stationary wave</strong> (or standing wave) is formed by the superposition of two progressive waves of equal amplitude and frequency traveling in opposite directions.</p>
+<p><strong>Progressive wave:</strong> A progressive wave is a wave in which the disturbance travels continuously through the medium from one point to another, transferring energy from one region to another without permanent displacement of the particles of the medium.</p>
 </div>
 
-<p>If two waves with displacements \(y_1 = A\sin(kx - \omega t)\) and \(y_2 = A\sin(kx + \omega t)\) interfere:</p>
+<h3>Characteristics of progressive waves</h3>
 
-<div class="formula">
-  \[ y = y_1 + y_2 = 2A\sin(kx)\cos(\omega t) \]
-</div>
-
-<h3>Nodes and antinodes</h3>
-<p><strong>Nodes</strong> are points of zero amplitude (permanent rest) at positions where \(\sin(kx) = 0\):</p>
-<div class="formula">
-  \[ x_{\text{node}} = n\frac{\lambda}{2}, \quad n = 0, 1, 2, \ldots \]
-</div>
-
-<p><strong>Antinodes</strong> are points of maximum amplitude at positions where \(|\sin(kx)| = 1\):</p>
-<div class="formula">
-  \[ x_{\text{antinode}} = (2n+1)\frac{\lambda}{4}, \quad n = 0, 1, 2, \ldots \]
-</div>
-
-<table>
-  <tr><th>Property</th><th>Progressive wave</th><th>Stationary wave</th></tr>
-  <tr><td>Energy transfer</td><td>Continuous flow through medium</td><td>No net energy transfer</td></tr>
-  <tr><td>Amplitude</td><td>Constant everywhere</td><td>Varies with position; zero at nodes</td></tr>
-  <tr><td>Phase</td><td>Varies with position</td><td>Same or opposite for entire antinode</td></tr>
-  <tr><td>Particle motion</td><td>Perpendicular to wave direction</td><td>Perpendicular to wave direction</td></tr>
-</table>
-
-<h2>Worked examples</h2>
-
-<div class="box example">
-  <p><strong>1. Wavelength and frequency.</strong> A wave travels at 20 m/s with frequency 50 Hz. Find the wavelength.</p>
-  <p>\(\lambda = v/f = 20/50 = 0.4\ \text{m}\)</p>
-</div>
-
-<div class="box example">
-  <p><strong>2. Fundamental frequency of an open pipe.</strong> An open pipe is 0.5 m long. Speed of sound is 340 m/s. Find the fundamental frequency.</p>
-  <p>\(f_1 = v/(2L) = 340/(2 \times 0.5) = 340\ \text{Hz}\)</p>
-</div>
-
-<div class="box example">
-  <p><strong>3. String vibration.</strong> A string of length 1 m with mass 0.01 kg and tension 100 N. Find the fundamental frequency.</p>
-  <p>\(\mu = 0.01/1 = 0.01\ \text{kg/m}\)</p>
-  <p>\(v = \sqrt{T/\mu} = \sqrt{100/0.01} = 100\ \text{m/s}\)</p>
-  <p>\(f_1 = v/(2L) = 100/2 = 50\ \text{Hz}\)</p>
-</div>
-
-<h2>Key points</h2>
 <ul class="key-points">
-  <li>Wave speed: \(v = \lambda f = \omega/k\).</li>
-  <li>Speed of sound in fluids: \(v = \sqrt{B/\rho}\); in gases: \(v = \sqrt{\gamma RT/M}\).</li>
-  <li>Resonance in open pipe: \(f_n = nf_1\) (all harmonics).</li>
-  <li>Resonance in closed pipe: \(f_n = (2n-1)f_1\) (odd harmonics only).</li>
-  <li>Speed on string: \(v = \sqrt{T/\mu}\).</li>
-  <li>Stationary wave: no net energy transfer; amplitude varies with position.</li>
-  <li>Nodes and antinodes are permanently at rest and maximum oscillation, respectively.</li>
+<li>The wave travels continuously through the medium.</li>
+<li>Energy is transferred from one point to another.</li>
+<li>Particles of the medium vibrate about their mean positions.</li>
+<li>Different particles generally have different phases of vibration.</li>
+<li>All particles have the same frequency as the source.</li>
+<li>For an ideal progressive wave, all particles have the same amplitude.</li>
+<li>The displacement of particles varies with both position and time.</li>
+<li>There is no fixed node or antinode.</li>
+<li>The wave velocity depends mainly on the properties of the medium.</li>
 </ul>
 
-<h2>Practice questions</h2>
+<h3>Important wave quantities</h3>
+
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>SI unit</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amplitude</td>
+<td>\(A\)</td>
+<td>m</td>
+<td>Maximum displacement from mean position</td>
+</tr>
+<tr>
+<td>Wavelength</td>
+<td>\(\lambda\)</td>
+<td>m</td>
+<td>Distance between two successive particles in the same phase</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>\(f\)</td>
+<td>Hz</td>
+<td>Number of vibrations per second</td>
+</tr>
+<tr>
+<td>Time period</td>
+<td>\(T\)</td>
+<td>s</td>
+<td>Time required for one complete vibration</td>
+</tr>
+<tr>
+<td>Angular frequency</td>
+<td>\(\omega\)</td>
+<td>rad s\(^{-1}\)</td>
+<td>Rate of change of phase with time</td>
+</tr>
+<tr>
+<td>Wave number</td>
+<td>\(k\)</td>
+<td>rad m\(^{-1}\)</td>
+<td>Rate of change of phase with distance</td>
+</tr>
+<tr>
+<td>Wave velocity</td>
+<td>\(v\)</td>
+<td>m s\(^{-1}\)</td>
+<td>Speed with which the disturbance propagates</td>
+</tr>
+</tbody>
+</table>
+
+<div class="formula">\[
+f=\frac{1}{T}
+\]</div>
+
+<div class="formula">\[
+\omega=2\pi f=\frac{2\pi}{T}
+\]<span class="where">\(\omega\) is angular frequency.</span></div>
+
+<div class="formula">\[
+k=\frac{2\pi}{\lambda}
+\]<span class="where">\(k\) is the wave number.</span></div>
+
+<div class="formula">\[
+\boxed{v=f\lambda=\frac{\lambda}{T}}
+\]<span class="where">\(v\) is wave velocity.</span></div>
+
+<figure>
+<svg viewBox="0 0 760 320" role="img" aria-label="Progressive sinusoidal wave travelling in the positive x direction">
+<line x1="60" y1="160" x2="710" y2="160" stroke="currentColor" stroke-width="2"/>
+<line x1="70" y1="270" x2="70" y2="45" stroke="currentColor" stroke-width="2"/>
+<path d="M70 160 C120 60 170 60 220 160 C270 260 320 260 370 160 C420 60 470 60 520 160 C570 260 620 260 670 160" fill="none" stroke="currentColor" stroke-width="3"/>
+<line x1="120" y1="75" x2="520" y2="75" stroke="currentColor" stroke-dasharray="6 5"/>
+<text x="525" y="80" fill="currentColor">λ</text>
+<text x="30" y="55" fill="currentColor">y</text>
+<text x="690" y="185" fill="currentColor">x</text>
+<text x="82" y="72" fill="currentColor">A</text>
+</svg>
+<figcaption>A progressive sinusoidal wave propagating along the positive \(x\)-direction.</figcaption>
+</figure>
+
+<h2>6.2 Mathematical Form of a Progressive Wave</h2>
+
+<p>Consider a particle at the origin executing simple harmonic motion:</p>
+
+<div class="formula">\[
+y=A\sin\omega t
+\]<span class="where">\(A\) is amplitude and \(\omega\) is angular frequency.</span></div>
+
+<p>Consider another particle at a distance \(x\) from the origin. The disturbance takes a time \(x/v\) to reach it.</p>
+
+<p>Therefore, its displacement at time \(t\) is</p>
+
+<div class="formula">\[
+y=A\sin\left[\omega\left(t-\frac{x}{v}\right)\right]
+\]</div>
+
+<p>Since</p>
+
+<div class="formula">\[
+v=f\lambda=\frac{\omega}{k}
+\]</div>
+
+<p>we have</p>
+
+<div class="formula">\[
+\frac{\omega}{v}=k=\frac{2\pi}{\lambda}
+\]</div>
+
+<p>Hence the equation of a progressive wave travelling in the positive \(x\)-direction is</p>
+
+<div class="formula">\[
+\boxed{y=A\sin(\omega t-kx)}
+\]<span class="where">\(A\) is amplitude, \(\omega\) is angular frequency, \(k=2\pi/\lambda\) is wave number, \(x\) is position and \(t\) is time.</span></div>
+
+<p>Equivalent forms are</p>
+
+<div class="formula">\[
+\boxed{y=A\sin 2\pi\left(\frac{t}{T}-\frac{x}{\lambda}\right)}
+\]</div>
+
+and</p>
+
+<div class="formula">\[
+\boxed{y=A\sin(\omega t-kx)}
+\]</div>
+
+<h3>Wave travelling in the negative \(x\)-direction</h3>
+
+<p>If the wave travels in the negative \(x\)-direction, the equation becomes</p>
+
+<div class="formula">\[
+\boxed{y=A\sin(\omega t+kx)}
+\]</div>
+
+<div class="box.tip">
+<p><strong>Remember:</strong></p>
+<ul>
+<li>\(y=A\sin(\omega t-kx)\) represents a wave travelling in the \(+x\)-direction.</li>
+<li>\(y=A\sin(\omega t+kx)\) represents a wave travelling in the \(-x\)-direction.</li>
+</ul>
+</div>
+
+<h3>Phase of a progressive wave</h3>
+
+<p>The phase of the wave is</p>
+
+<div class="formula">\[
+\phi=\omega t-kx
+\]</div>
+
+<p>For two particles separated by distance \(\Delta x\) at the same instant, their phase difference is</p>
+
+<div class="formula">\[
+\boxed{\Delta\phi=k\Delta x
+=\frac{2\pi}{\lambda}\Delta x}
+\]</div>
+
+<p>Thus:</p>
+
+<ul>
+<li>If \(\Delta x=\lambda\), phase difference \(=2\pi\).</li>
+<li>If \(\Delta x=\lambda/2\), phase difference \(=\pi\).</li>
+<li>If \(\Delta x=\lambda/4\), phase difference \(=\pi/2\).</li>
+</ul>
+
+<h3>Particle velocity in a progressive wave</h3>
+
+<p>For</p>
+
+<div class="formula">\[
+y=A\sin(\omega t-kx)
+\]</div>
+
+<p>the particle velocity is</p>
+
+<div class="formula">\[
+u=\frac{\partial y}{\partial t}
+=A\omega\cos(\omega t-kx)
+\]</div>
+
+<p>Therefore, maximum particle velocity is</p>
+
+<div class="formula">\[
+\boxed{u_{\max}=A\omega}
+\]</div>
+
+<div class="box.warning">
+<p><strong>Important distinction:</strong> Wave velocity \(v\) is the speed of propagation of the disturbance, whereas particle velocity \(u\) is the instantaneous velocity of an individual particle of the medium. They are not generally the same.</p>
+</div>
+
+<h3>Worked Example 1 — Finding wave quantities</h3>
+
+<div class="box example">
+<p><strong>Problem:</strong> A progressive wave is represented by</p>
+
+<div class="formula">\[
+y=0.04\sin(20\pi t-5\pi x)
+\]</div>
+
+<p>where \(x\) and \(y\) are in metres and \(t\) is in seconds. Find its amplitude, frequency, wavelength and velocity.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Compare with</p>
+
+<div class="formula">\[
+y=A\sin(\omega t-kx)
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+A=0.04\,m
+\]</div>
+
+<div class="formula">\[
+\omega=20\pi
+\]</div>
+
+<p>Hence</p>
+
+<div class="formula">\[
+f=\frac{\omega}{2\pi}
+=\frac{20\pi}{2\pi}
+=10\,Hz
+\]</div>
+
+<p>Also,</p>
+
+<div class="formula">\[
+k=5\pi=\frac{2\pi}{\lambda}
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\lambda=\frac{2\pi}{5\pi}=0.4\,m
+\]</div>
+
+<p>Finally,</p>
+
+<div class="formula">\[
+v=f\lambda=(10)(0.4)=4\,m\,s^{-1}
+\]</div>
+
+<p><strong>Answer:</strong> \(A=0.04\,m,\ f=10\,Hz,\ \lambda=0.4\,m,\ v=4\,m\,s^{-1}\).</p>
+
+</details>
+</div>
+
+<h3>Worked Example 2 — Time period and wave velocity</h3>
+
+<div class="box example">
+<p><strong>Problem:</strong> A progressive wave has wavelength \(2\,m\) and frequency \(25\,Hz\). Find its velocity and time period.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<div class="formula">\[
+v=f\lambda=(25)(2)=50\,m\,s^{-1}
+\]</div>
+
+<div class="formula">\[
+T=\frac{1}{f}=\frac{1}{25}=0.04\,s
+\]</div>
+
+<p><strong>Answer:</strong> \(v=50\,m\,s^{-1}\) and \(T=0.04\,s\).</p>
+
+</details>
+</div>
+
+<h2>6.3 Formation of Stationary Waves</h2>
+
+<div class="box.definition">
+<p><strong>Stationary wave:</strong> A stationary or standing wave is formed when two progressive waves of the same frequency, amplitude and wavelength travel through the same medium in opposite directions and superpose.</p>
+</div>
+
+<p>Suppose two waves travelling in opposite directions are</p>
+
+<div class="formula">\[
+y_1=A\sin(\omega t-kx)
+\]</div>
+
+and</p>
+
+<div class="formula">\[
+y_2=A\sin(\omega t+kx)
+\]</div>
+
+<p>By the principle of superposition,</p>
+
+<div class="formula">\[
+y=y_1+y_2
+\]</div>
+
+<p>Using</p>
+
+<div class="formula">\[
+\sin C+\sin D
+=2\sin\frac{C+D}{2}\cos\frac{C-D}{2}
+\]</div>
+
+<p>we obtain</p>
+
+<div class="formula">\[
+\boxed{y=2A\sin\omega t\cos kx}
+\]</div>
+
+<p>This is the mathematical equation of a stationary wave.</p>
+
+<h3>Conditions for formation of stationary waves</h3>
+
+<ul class="key-points">
+<li>The two waves must have the same frequency.</li>
+<li>They must have the same wavelength.</li>
+<li>They must have equal or nearly equal amplitudes for a clear stationary pattern.</li>
+<li>They must travel in opposite directions.</li>
+<li>They must propagate through the same medium.</li>
+<li>Their superposition must occur continuously.</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 800 420" role="img" aria-label="Formation of stationary wave by two oppositely travelling waves">
+<line x1="60" y1="110" x2="740" y2="110" stroke="currentColor" stroke-width="2"/>
+<path d="M60 110 C120 50 180 50 240 110 C300 170 360 170 420 110 C480 50 540 50 600 110 C660 170 700 170 740 110" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="70" y="35" fill="currentColor">Wave travelling →</text>
+
+<line x1="60" y1="250" x2="740" y2="250" stroke="currentColor" stroke-width="2"/>
+<path d="M60 250 C120 310 180 310 240 250 C300 190 360 190 420 250 C480 310 540 310 600 250 C660 190 700 190 740 250" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="70" y="365" fill="currentColor">Wave travelling ←</text>
+
+<line x1="60" y1="390" x2="740" y2="390" stroke="currentColor" stroke-width="2"/>
+<path d="M60 390 C120 330 180 330 240 390 C300 450 360 450 420 390 C480 330 540 330 600 390 C660 450 700 450 740 390" fill="none" stroke="currentColor" stroke-width="3"/>
+<text x="70" y="415" fill="currentColor">Superposition: stationary pattern</text>
+</svg>
+<figcaption>Two oppositely travelling waves combine to produce a stationary wave.</figcaption>
+</figure>
+
+<h3>Characteristics of stationary waves</h3>
+
+<ul>
+<li>There is no net transfer of energy along the medium.</li>
+<li>Fixed points of zero displacement are called nodes.</li>
+<li>Points of maximum displacement are called antinodes.</li>
+<li>Particles between two consecutive nodes vibrate in phase.</li>
+<li>Particles in adjacent loops vibrate in opposite phase.</li>
+<li>The amplitude varies from zero at nodes to maximum at antinodes.</li>
+<li>All particles between two adjacent nodes have the same frequency.</li>
+</ul>
+
+<h3>Node and antinode</h3>
+
+<div class="box.definition">
+<p><strong>Node:</strong> A point in a stationary wave where the displacement is always zero is called a node.</p>
+</div>
+
+<div class="box.definition">
+<p><strong>Antinode:</strong> A point in a stationary wave where the displacement has maximum amplitude is called an antinode.</p>
+</div>
+
+<p>For a stationary wave, the distance between two consecutive nodes is</p>
+
+<div class="formula">\[
+\boxed{\frac{\lambda}{2}}
+\]</div>
+
+<p>The distance between two consecutive antinodes is also</p>
+
+<div class="formula">\[
+\boxed{\frac{\lambda}{2}}
+\]</div>
+
+<p>The distance between a node and the nearest antinode is</p>
+
+<div class="formula">\[
+\boxed{\frac{\lambda}{4}}
+\]</div>
+
+<figure>
+<svg viewBox="0 0 800 360" role="img" aria-label="Stationary wave showing nodes and antinodes">
+<line x1="70" y1="180" x2="730" y2="180" stroke="currentColor" stroke-width="2"/>
+<path d="M70 180 C120 80 180 80 230 180 C280 280 340 280 390 180 C440 80 500 80 550 180 C600 280 660 280 710 180" fill="none" stroke="currentColor" stroke-width="3"/>
+<path d="M70 180 C120 280 180 280 230 180 C280 80 340 80 390 180 C440 280 500 280 550 180 C600 80 660 80 710 180" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="70" cy="180" r="6" fill="currentColor"/>
+<circle cx="230" cy="180" r="6" fill="currentColor"/>
+<circle cx="390" cy="180" r="6" fill="currentColor"/>
+<circle cx="550" cy="180" r="6" fill="currentColor"/>
+<circle cx="710" cy="180" r="6" fill="currentColor"/>
+<text x="60" y="215" fill="currentColor">N</text>
+<text x="220" y="215" fill="currentColor">N</text>
+<text x="380" y="215" fill="currentColor">N</text>
+<text x="540" y="215" fill="currentColor">N</text>
+<text x="700" y="215" fill="currentColor">N</text>
+<text x="140" y="75" fill="currentColor">A</text>
+<text x="300" y="75" fill="currentColor">A</text>
+<text x="460" y="75" fill="currentColor">A</text>
+<text x="620" y="75" fill="currentColor">A</text>
+</svg>
+<figcaption>N = node, A = antinode.</figcaption>
+</figure>
+
+<h2>6.4 Mathematical Form of a Stationary Wave</h2>
+
+<p>Consider two progressive waves of equal amplitude \(A\), angular frequency \(\omega\), and wave number \(k\), travelling in opposite directions:</p>
+
+<div class="formula">\[
+y_1=A\sin(\omega t-kx)
+\]</div>
+
+<div class="formula">\[
+y_2=A\sin(\omega t+kx)
+\]</div>
+
+<p>The resultant displacement is</p>
+
+<div class="formula">\[
+y=y_1+y_2
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+y=A\left[\sin(\omega t-kx)+\sin(\omega t+kx)\right]
+\]</div>
+
+<p>Using the identity</p>
+
+<div class="formula">\[
+\sin C+\sin D
+=2\sin\frac{C+D}{2}\cos\frac{C-D}{2}
+\]</div>
+
+<p>we obtain</p>
+
+<div class="formula">\[
+\boxed{y=2A\sin\omega t\cos kx}
+\]</div>
+
+<p>Thus, the amplitude at position \(x\) is</p>
+
+<div class="formula">\[
+\boxed{A_x=2A|\cos kx|}
+\]</div>
+
+<p>Therefore, the amplitude is not constant throughout the medium.</p>
+
+<h3>Equation for nodes</h3>
+
+<p>At a node, displacement is always zero. Therefore,</p>
+
+<div class="formula">\[
+\cos kx=0
+\]</div>
+
+<p>Hence</p>
+
+<div class="formula">\[
+kx=\frac{(2n+1)\pi}{2}
+\]</div>
+
+<p>Since \(k=2\pi/\lambda\),</p>
+
+<div class="formula">\[
+\frac{2\pi x}{\lambda}
+=\frac{(2n+1)\pi}{2}
+\]</div>
+
+<p>Therefore, positions of nodes are</p>
+
+<div class="formula">\[
+\boxed{x=\frac{(2n+1)\lambda}{4}}
+\]<span class="where">\(n=0,1,2,3,\ldots\)</span></div>
+
+<h3>Equation for antinodes</h3>
+
+<p>At an antinode, the amplitude is maximum:</p>
+
+<div class="formula">\[
+|\cos kx|=1
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+kx=n\pi
+\]</div>
+
+<p>Hence</p>
+
+<div class="formula">\[
+\boxed{x=\frac{n\lambda}{2}}
+\]<span class="where">\(n=0,1,2,3,\ldots\)</span></div>
+
+<h3>Amplitude of stationary wave</h3>
+
+<p>The resultant amplitude at position \(x\) is</p>
+
+<div class="formula">\[
+\boxed{A_x=2A|\cos kx|}
+\]</div>
+
+<p>The maximum amplitude is therefore</p>
+
+<div class="formula">\[
+\boxed{A_{\max}=2A}
+\]</div>
+
+<p>and at a node,</p>
+
+<div class="formula">\[
+\boxed{A_{\min}=0}
+\]</div>
+
+<div class="box.note">
+<p>Unlike a progressive wave, the amplitude of a stationary wave depends upon position.</p>
+</div>
+
+<h3>Particle velocity in a stationary wave</h3>
+
+<p>For</p>
+
+<div class="formula">\[
+y=2A\sin\omega t\cos kx
+\]</div>
+
+<p>the particle velocity is</p>
+
+<div class="formula">\[
+u=\frac{\partial y}{\partial t}
+=2A\omega\cos\omega t\cos kx
+\]</div>
+
+<p>At a node, \(\cos kx=0\), so the particle velocity is always zero.</p>
+
+<p>At an antinode, the particle velocity is maximum.</p>
+
+<h3>Worked Example 3 — Position of nodes and antinodes</h3>
+
+<div class="box example">
+<p><strong>Problem:</strong> A stationary wave is represented by</p>
+
+<div class="formula">\[
+y=0.08\sin(40\pi t)\cos(2\pi x)
+\]</div>
+
+<p>where \(x\) and \(y\) are in metres. Find the wavelength and the positions of the first three nodes.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Comparing with</p>
+
+<div class="formula">\[
+y=2A\sin\omega t\cos kx
+\]</div>
+
+<p>we have</p>
+
+<div class="formula">\[
+k=2\pi
+\]</div>
+
+<p>But</p>
+
+<div class="formula">\[
+k=\frac{2\pi}{\lambda}
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\lambda=1\,m
+\]</div>
+
+<p>Nodes occur at</p>
+
+<div class="formula">\[
+x=\frac{(2n+1)\lambda}{4}
+\]</div>
+
+<p>Thus the first three nodes are</p>
+
+<div class="formula">\[
+x=\frac14,\quad\frac34,\quad\frac54\ m
+\]</div>
+
+<p><strong>Answer:</strong> Wavelength \(=1\,m\); first three nodes are at \(0.25\,m,\ 0.75\,m,\ 1.25\,m\).</p>
+
+</details>
+</div>
+
+<h2>6.5 Numerical Applications of Progressive Waves</h2>
+
+<h3>Finding frequency</h3>
+
+<div class="formula">\[
+\boxed{f=\frac{v}{\lambda}}
+\]</div>
+
+<h3>Finding wavelength</h3>
+
+<div class="formula">\[
+\boxed{\lambda=\frac{v}{f}}
+\]</div>
+
+<h3>Finding time period</h3>
+
+<div class="formula">\[
+\boxed{T=\frac{1}{f}}
+\]</div>
+
+<h3>Finding angular frequency</h3>
+
+<div class="formula">\[
+\boxed{\omega=2\pi f}
+\]</div>
+
+<h3>Finding wave number</h3>
+
+<div class="formula">\[
+\boxed{k=\frac{2\pi}{\lambda}}
+\]</div>
+
+<h3>Finding particle displacement</h3>
+
+<p>For a wave</p>
+
+<div class="formula">\[
+y=A\sin(\omega t-kx)
+\]</div>
+
+<p>substitute the specified \(x\) and \(t\) to calculate the instantaneous displacement.</p>
+
+<h3>Worked Example 4 — NEB-style wave equation</h3>
+
+<div class="box example">
+<p><strong>Problem:</strong> A wave travelling along the positive \(x\)-axis is represented by</p>
+
+<div class="formula">\[
+y=0.02\sin(100\pi t-4\pi x)
+\]</div>
+
+<p>Find its amplitude, frequency, wavelength and velocity.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Comparing with</p>
+
+<div class="formula">\[
+y=A\sin(\omega t-kx)
+\]</div>
+
+<p>we get</p>
+
+<div class="formula">\[
+A=0.02\,m,\qquad \omega=100\pi,\qquad k=4\pi
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+f=\frac{100\pi}{2\pi}=50\,Hz
+\]</div>
+
+<p>and</p>
+
+<div class="formula">\[
+\lambda=\frac{2\pi}{4\pi}=0.5\,m
+\]</div>
+
+<p>Thus</p>
+
+<div class="formula">\[
+v=f\lambda=(50)(0.5)=25\,m\,s^{-1}
+\]</div>
+
+<p><strong>Answer:</strong> \(A=0.02\,m,\ f=50\,Hz,\ \lambda=0.5\,m,\ v=25\,m\,s^{-1}\).</p>
+
+</details>
+</div>
+
+<h3>Worked Example 5 — Phase difference</h3>
+
+<div class="box example">
+<p><strong>Problem:</strong> Two particles in a progressive wave are separated by \(0.25\,m\). If the wavelength is \(1\,m\), find their phase difference.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<div class="formula">\[
+\Delta\phi=\frac{2\pi}{\lambda}\Delta x
+\]</div>
+
+<div class="formula">\[
+\Delta\phi=
+\frac{2\pi}{1}(0.25)
+=\frac{\pi}{2}
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\boxed{\Delta\phi=90^\circ}
+\]</div>
+
+</details>
+</div>
+
+<h3>Worked Example 6 — Finding displacement</h3>
+
+<div class="box example">
+<p><strong>Problem:</strong> A progressive wave is given by</p>
+
+<div class="formula">\[
+y=0.05\sin(20\pi t-2\pi x)
+\]</div>
+
+<p>Find the displacement of the particle at \(x=0.25\,m\) and \(t=0.05\,s\).</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<div class="formula">\[
+y=0.05\sin[20\pi(0.05)-2\pi(0.25)]
+\]</div>
+
+<div class="formula">\[
+y=0.05\sin(\pi-\frac{\pi}{2})
+\]</div>
+
+<div class="formula">\[
+y=0.05\sin\frac{\pi}{2}
+=0.05\,m
+\]</div>
+
+<p><strong>Answer:</strong> \(y=0.05\,m=5\,cm\).</p>
+
+</details>
+</div>
+
+<h2>6.6 Derivation of Stationary Wave Using Two Progressive Waves</h2>
+
+<p>Consider two identical progressive waves travelling in opposite directions along the same line.</p>
+
+<p>The first wave travels in the positive \(x\)-direction:</p>
+
+<div class="formula">\[
+\boxed{y_1=A\sin(\omega t-kx)}
+\]</div>
+
+<p>The second wave travels in the negative \(x\)-direction:</p>
+
+<div class="formula">\[
+\boxed{y_2=A\sin(\omega t+kx)}
+\]</div>
+
+<p>By the principle of superposition, the resultant displacement is</p>
+
+<div class="formula">\[
+y=y_1+y_2
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+y=A\sin(\omega t-kx)+A\sin(\omega t+kx)
+\]</div>
+
+<p>Taking \(A\) common,</p>
+
+<div class="formula">\[
+y=A[\sin(\omega t-kx)+\sin(\omega t+kx)]
+\]</div>
+
+<p>Using the identity</p>
+
+<div class="formula">\[
+\sin C+\sin D
+=2\sin\frac{C+D}{2}\cos\frac{C-D}{2}
+\]</div>
+
+<p>we obtain</p>
+
+<div class="formula">\[
+y=2A\sin\left[
+\frac{(\omega t-kx)+(\omega t+kx)}{2}
+\right]
+\cos\left[
+\frac{(\omega t-kx)-(\omega t+kx)}{2}
+\right]
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\boxed{y=2A\sin\omega t\cos kx}
+\]</div>
+
+<p>This is the equation of a stationary wave.</p>
+
+<h3>Alternative form</h3>
+
+<p>Depending upon the initial phase and choice of origin, a stationary wave can also be written as</p>
+
+<div class="formula">\[
+\boxed{y=2A\cos\omega t\sin kx}
+\]</div>
+
+<p>Both forms describe a stationary wave; the apparent difference is due to the choice of time origin and spatial origin.</p>
+
+<h3>Derivation of positions of nodes</h3>
+
+<p>For the stationary wave</p>
+
+<div class="formula">\[
+y=2A\sin\omega t\cos kx
+\]</div>
+
+<p>At a node, \(y=0\) for all values of \(t\). Therefore,</p>
+
+<div class="formula">\[
+\cos kx=0
+\]</div>
+
+<p>Thus</p>
+
+<div class="formula">\[
+kx=\frac{(2n+1)\pi}{2}
+\]</div>
+
+<p>Using \(k=2\pi/\lambda\),</p>
+
+<div class="formula">\[
+\boxed{x=\frac{(2n+1)\lambda}{4}}
+\]</div>
+
+<h3>Derivation of positions of antinodes</h3>
+
+<p>For an antinode, the amplitude must be maximum. Hence</p>
+
+<div class="formula">\[
+|\cos kx|=1
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+kx=n\pi
+\]</div>
+
+<p>and hence</p>
+
+<div class="formula">\[
+\boxed{x=\frac{n\lambda}{2}}
+\]</div>
+
+<h3>Separation between nodes and antinodes</h3>
+
+<div class="formula">\[
+\boxed{\text{Distance between consecutive nodes}=\frac{\lambda}{2}}
+\]</div>
+
+<div class="formula">\[
+\boxed{\text{Distance between consecutive antinodes}=\frac{\lambda}{2}}
+\]</div>
+
+<div class="formula">\[
+\boxed{\text{Distance between a node and nearest antinode}=\frac{\lambda}{4}}
+\]</div>
+
+<h2>NEB-Style Long and Short Numerical Problems</h2>
+
+<h3>Numerical 1</h3>
+
+<div class="box example">
+<p>A progressive wave is represented by \(y=0.05\sin(40\pi t-8\pi x)\). Find its amplitude, frequency, wavelength and velocity.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<div class="formula">\[
+A=0.05\,m
+\]</div>
+
+<div class="formula">\[
+f=\frac{40\pi}{2\pi}=20\,Hz
+\]</div>
+
+<div class="formula">\[
+\lambda=\frac{2\pi}{8\pi}=0.25\,m
+\]</div>
+
+<div class="formula">\[
+v=f\lambda=(20)(0.25)=5\,m\,s^{-1}
+\]</div>
+
+<p><strong>Answer:</strong> \(A=0.05\,m,\ f=20\,Hz,\ \lambda=0.25\,m,\ v=5\,m\,s^{-1}\).</p>
+
+</details>
+</div>
+
+<h3>Numerical 2</h3>
+
+<div class="box example">
+<p>A wave has velocity \(340\,m\,s^{-1}\) and frequency \(680\,Hz\). Find its wavelength and time period.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<div class="formula">\[
+\lambda=\frac{v}{f}
+=\frac{340}{680}
+=0.5\,m
+\]</div>
+
+<div class="formula">\[
+T=\frac{1}{680}
+=1.47\times10^{-3}\,s
+\]</div>
+
+<p><strong>Answer:</strong> \(\lambda=0.5\,m\), \(T=1.47\times10^{-3}\,s\).</p>
+
+</details>
+</div>
+
+<h3>Numerical 3</h3>
+
+<div class="box example">
+<p>Two particles of a progressive wave are separated by \(0.5\,m\). If the wavelength is \(2\,m\), determine their phase difference.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<div class="formula">\[
+\Delta\phi
+=\frac{2\pi}{\lambda}\Delta x
+=\frac{2\pi}{2}(0.5)
+=\frac{\pi}{2}
+\]</div>
+
+<p><strong>Answer:</strong> \(\Delta\phi=90^\circ\).</p>
+
+</details>
+</div>
+
+<h3>Numerical 4 — Stationary wave</h3>
+
+<div class="box example">
+<p>A stationary wave is represented by</p>
+
+<div class="formula">\[
+y=0.10\sin(50\pi t)\cos(5\pi x)
+\]</div>
+
+<p>Find its wavelength, frequency and maximum amplitude.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Comparing with</p>
+
+<div class="formula">\[
+y=2A\sin\omega t\cos kx
+\]</div>
+
+<p>we get</p>
+
+<div class="formula">\[
+2A=0.10
+\quad\Rightarrow\quad A=0.05\,m
+\]</div>
+
+<div class="formula">\[
+\omega=50\pi
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+f=\frac{50\pi}{2\pi}=25\,Hz
+\]</div>
+
+<p>Also,</p>
+
+<div class="formula">\[
+k=5\pi=\frac{2\pi}{\lambda}
+\]</div>
+
+<p>Hence</p>
+
+<div class="formula">\[
+\lambda=\frac{2\pi}{5\pi}=0.4\,m
+\]</div>
+
+<p>The maximum resultant amplitude is</p>
+
+<div class="formula">\[
+A_{\max}=2A=0.10\,m
+\]</div>
+
+<p><strong>Answer:</strong> \(\lambda=0.4\,m,\ f=25\,Hz,\ A_{\max}=0.10\,m\).</p>
+
+</details>
+</div>
+
+<h3>Numerical 5 — Node and antinode positions</h3>
+
+<div class="box example">
+<p>A stationary wave has wavelength \(0.8\,m\). Find the distance between consecutive nodes and the distance between a node and the nearest antinode.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<div class="formula">\[
+d_{\mathrm{NN}}=\frac{\lambda}{2}
+=\frac{0.8}{2}
+=0.4\,m
+\]</div>
+
+<div class="formula">\[
+d_{\mathrm{NA}}=\frac{\lambda}{4}
+=\frac{0.8}{4}
+=0.2\,m
+\]</div>
+
+<p><strong>Answer:</strong> Node-to-node distance \(=0.4\,m\); node-to-nearest-antinode distance \(=0.2\,m\).</p>
+
+</details>
+</div>
+
+<h2>Conceptual Questions for NEB Examination</h2>
+
 <ol>
-  <li>Distinguish between progressive and stationary waves.</li>
-  <li>Derive the wave equation \(y = A\sin(kx - \omega t)\) for a harmonic wave.</li>
-  <li>Show that the speed of sound in a gas is \(v = \sqrt{\gamma RT/M}\).</li>
-  <li>An open pipe resonates at 256 Hz (fundamental). Find the next three resonant frequencies.</li>
-  <li>A closed pipe resonates at 200 Hz (fundamental). Find the next two resonant frequencies.</li>
-  <li>Explain why sound travels faster in solids than in gases.</li>
-  <li>Show that adjacent nodes in a standing wave are separated by \(\lambda/2\).</li>
-  <li>A guitar string of length 0.65 m and mass 0.003 kg is tuned to 440 Hz. Find the tension.</li>
+<li>What is meant by progressive wave?</li>
+<li>What is meant by stationary wave?</li>
+<li>State any four differences between progressive and stationary waves.</li>
+<li>Why is there no net transfer of energy in a stationary wave?</li>
+<li>What are nodes and antinodes?</li>
+<li>Why is the amplitude of a stationary wave zero at a node?</li>
+<li>Why is the amplitude maximum at an antinode?</li>
+<li>What is the distance between two consecutive nodes?</li>
+<li>What is the distance between a node and the nearest antinode?</li>
+<li>What is the phase difference between two particles separated by one wavelength in a progressive wave?</li>
+<li>What is the phase difference between two particles separated by half a wavelength?</li>
+<li>Why do particles between two consecutive nodes vibrate in phase?</li>
+<li>Why do particles in two adjacent loops of a stationary wave vibrate in opposite phases?</li>
+<li>What are the necessary conditions for formation of stationary waves?</li>
+<li>Why must the two progressive waves have the same frequency to form a stationary wave?</li>
+<li>Why must the two waves travel in opposite directions to form a stationary wave?</li>
+<li>Distinguish between wave velocity and particle velocity.</li>
+<li>Does a stationary wave have a definite wavelength? Explain.</li>
+<li>Does every particle in a stationary wave have the same amplitude?</li>
+<li>Does every particle in a stationary wave have the same frequency?</li>
+<li>Can a stationary wave be formed by two waves travelling in the same direction? Explain.</li>
+<li>Why are stationary waves also called standing waves?</li>
+<li>What is the physical significance of the wave number \(k\)?</li>
+<li>What is the significance of the negative sign in \(y=A\sin(\omega t-kx)\)?</li>
+<li>What does the positive sign in \(y=A\sin(\omega t+kx)\) indicate?</li>
 </ol>
+
+<h2>Progressive Wave vs Stationary Wave</h2>
+
+<table>
+<thead>
+<tr>
+<th>Progressive wave</th>
+<th>Stationary wave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Travels continuously through the medium.</td>
+<td>Does not show continuous propagation of the wave pattern.</td>
+</tr>
+<tr>
+<td>Transfers energy from one point to another.</td>
+<td>No net energy is transferred along the medium.</td>
+</tr>
+<tr>
+<td>Amplitude is generally the same for all particles in an ideal uniform medium.</td>
+<td>Amplitude varies from zero at nodes to maximum at antinodes.</td>
+</tr>
+<tr>
+<td>There are no fixed nodes or antinodes.</td>
+<td>Fixed nodes and antinodes are present.</td>
+</tr>
+<tr>
+<td>Particles generally have different phases depending on their positions.</td>
+<td>Particles between consecutive nodes vibrate in phase.</td>
+</tr>
+<tr>
+<td>Can be represented by one travelling-wave equation.</td>
+<td>Is produced by superposition of two oppositely travelling waves.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Common Mistakes in NEB Examinations</h2>
+
+<div class="box.warning">
+<ul>
+<li>Do not confuse wave velocity with particle velocity.</li>
+<li>For a wave travelling in \(+x\)-direction, use \(y=A\sin(\omega t-kx)\).</li>
+<li>For a wave travelling in \(-x\)-direction, use \(y=A\sin(\omega t+kx)\).</li>
+<li>Remember \(v=f\lambda\), not \(v=f/\lambda\).</li>
+<li>Remember \(\omega=2\pi f\) and \(k=2\pi/\lambda\).</li>
+<li>For a stationary wave, the resultant amplitude is \(2A|\cos kx|\) for the chosen form.</li>
+<li>Do not state that a stationary wave transfers energy continuously from one end to the other.</li>
+<li>The distance between consecutive nodes is \(\lambda/2\), not \(\lambda\).</li>
+<li>The distance between a node and the nearest antinode is \(\lambda/4\).</li>
+<li>At a node, displacement and particle velocity remain zero.</li>
+<li>Do not confuse the amplitude \(A\) of each constituent progressive wave with the maximum amplitude \(2A\) of the resultant stationary wave.</li>
+</ul>
+</div>
+
+<h2>Chapter Formula Sheet</h2>
+
+<div class="cols">
+<div>
+<p><strong>Progressive wave</strong></p>
+
+<div class="formula">\[
+y=A\sin(\omega t-kx)
+\]</div>
+
+<div class="formula">\[
+y=A\sin(\omega t+kx)
+\]</div>
+
+<div class="formula">\[
+v=f\lambda
+\]</div>
+
+<div class="formula">\[
+f=\frac{1}{T}
+\]</div>
+
+<div class="formula">\[
+\omega=2\pi f
+\]</div>
+
+<div class="formula">\[
+k=\frac{2\pi}{\lambda}
+\]</div>
+
+<div class="formula">\[
+u_{\max}=A\omega
+\]</div>
+
+<div class="formula">\[
+\Delta\phi=\frac{2\pi\Delta x}{\lambda}
+\]</div>
+</div>
+
+<div>
+<p><strong>Stationary wave</strong></p>
+
+<div class="formula">\[
+y=2A\sin\omega t\cos kx
+\]</div>
+
+<div class="formula">\[
+A_x=2A|\cos kx|
+\]</div>
+
+<div class="formula">\[
+x_{\mathrm{node}}
+=\frac{(2n+1)\lambda}{4}
+\]</div>
+
+<div class="formula">\[
+x_{\mathrm{antinode}}
+=\frac{n\lambda}{2}
+\]</div>
+
+<div class="formula">\[
+d_{\mathrm{node-node}}=\frac{\lambda}{2}
+\]</div>
+
+<div class="formula">\[
+d_{\mathrm{node-antinode}}=\frac{\lambda}{4}
+\]</div>
+
+<div class="formula">\[
+A_{\max}=2A
+\]</div>
+</div>
+</div>
+
+<h2>Key Points for Revision</h2>
+
+<ul class="key-points">
+<li>A progressive wave transfers energy from one place to another.</li>
+<li>The basic equation of a progressive wave travelling in the \(+x\)-direction is \(y=A\sin(\omega t-kx)\).</li>
+<li>The wave travelling in the \(-x\)-direction is represented by \(y=A\sin(\omega t+kx)\).</li>
+<li>The fundamental wave relation is \(v=f\lambda\).</li>
+<li>\(\omega=2\pi f\) and \(k=2\pi/\lambda\).</li>
+<li>Particle velocity and wave velocity are different physical quantities.</li>
+<li>A stationary wave is formed by superposition of two identical waves travelling in opposite directions.</li>
+<li>The equation \(y=2A\sin\omega t\cos kx\) represents a stationary wave.</li>
+<li>Nodes are points of zero amplitude.</li>
+<li>Antinodes are points of maximum amplitude.</li>
+<li>Distance between consecutive nodes is \(\lambda/2\).</li>
+<li>Distance between consecutive antinodes is \(\lambda/2\).</li>
+<li>Distance between a node and the nearest antinode is \(\lambda/4\).</li>
+<li>The maximum amplitude of a stationary wave is \(2A\), where \(A\) is the amplitude of either constituent wave.</li>
+<li>There is no net energy transfer along an ideal stationary wave.</li>
+</ul>
