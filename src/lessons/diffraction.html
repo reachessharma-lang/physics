@@ -1,0 +1,996 @@
+---
+title: Diffraction
+grade: XII
+chapters: [8]
+date: 2026-10-07
+description: Diffraction at a single slit, diffraction grating, diffraction maxima and minima, and resolving power of optical instruments.
+---
+
+<p>Diffraction is a characteristic phenomenon of waves in which light bends and spreads into the region of geometrical shadow when it passes through a narrow aperture or around an obstacle whose size is comparable to its wavelength. Diffraction provides strong evidence for the wave nature of light.</p>
+
+<h2>11.1 Describe Diffraction at a Single Slit</h2>
+
+<h3>Introduction</h3>
+
+<div class="box definition">
+<strong>Definition:</strong> Diffraction is the phenomenon of bending and spreading of light waves into the geometrical shadow region when light passes through a narrow aperture or around the edge of an obstacle.
+</div>
+
+<p>Diffraction becomes appreciable when the size of the aperture or obstacle is comparable to the wavelength of light.</p>
+
+<p>For visible light, the wavelength is very small. Therefore, diffraction is normally noticeable only when the width of the slit is very small.</p>
+
+<h3>Single-Slit Diffraction</h3>
+
+<p>Consider monochromatic light of wavelength \(\lambda\) incident normally on a narrow slit of width \(a\). According to Huygens' principle, every point of the slit acts as a source of secondary wavelets. These wavelets spread into the region behind the slit and interfere with one another.</p>
+
+<figure>
+<svg viewBox="0 0 900 500"
+     role="img"
+     aria-label="Single slit diffraction arrangement"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="900" height="500" fill="#111111"/>
+
+  <!-- incident rays -->
+  <line x1="60" y1="150" x2="260" y2="150"
+        stroke="white" stroke-width="2"/>
+  <line x1="60" y1="200" x2="260" y2="200"
+        stroke="white" stroke-width="2"/>
+  <line x1="60" y1="250" x2="260" y2="250"
+        stroke="white" stroke-width="2"/>
+  <line x1="60" y1="300" x2="260" y2="300"
+        stroke="white" stroke-width="2"/>
+  <line x1="60" y1="350" x2="260" y2="350"
+        stroke="white" stroke-width="2"/>
+
+  <!-- slit plate -->
+  <rect x="260" y="60" width="20" height="170"
+        fill="white"/>
+  <rect x="260" y="270" width="20" height="170"
+        fill="white"/>
+
+  <!-- slit -->
+  <text x="295" y="255" fill="white" font-size="19">a</text>
+
+  <!-- diffracted rays -->
+  <line x1="270" y1="245" x2="720" y2="90"
+        stroke="white" stroke-width="2"/>
+  <line x1="270" y1="245" x2="720" y2="160"
+        stroke="white" stroke-width="2"/>
+  <line x1="270" y1="245" x2="720" y2="245"
+        stroke="white" stroke-width="2"/>
+  <line x1="270" y1="245" x2="720" y2="330"
+        stroke="white" stroke-width="2"/>
+  <line x1="270" y1="245" x2="720" y2="400"
+        stroke="white" stroke-width="2"/>
+
+  <!-- screen -->
+  <line x1="720" y1="55" x2="720" y2="445"
+        stroke="white" stroke-width="5"/>
+
+  <!-- labels -->
+  <text x="150" y="120" fill="white" font-size="20"
+        text-anchor="middle">Incident plane wave</text>
+
+  <text x="270" y="40" fill="white" font-size="20"
+        text-anchor="middle">Single slit</text>
+
+  <text x="735" y="45" fill="white" font-size="20">Screen</text>
+
+  <text x="390" y="125" fill="white" font-size="18">Diffracted waves</text>
+
+  <text x="450" y="475" fill="white" font-size="19"
+        text-anchor="middle">
+    Diffraction through a single narrow slit
+  </text>
+</svg>
+<figcaption>Figure: Diffraction of monochromatic light through a single narrow slit.</figcaption>
+</figure>
+
+<h3>Diffraction Pattern</h3>
+
+<p>When the diffracted waves interfere on a distant screen, a characteristic diffraction pattern is obtained. It consists of a broad central bright maximum surrounded by alternate dark and bright regions of decreasing intensity.</p>
+
+<div class="box note">
+<strong>Important:</strong> The central maximum in a single-slit diffraction pattern is approximately twice as wide as each of the secondary maxima.
+</div>
+
+<h3>Characteristics of Single-Slit Diffraction Pattern</h3>
+
+<ul class="key-points">
+<li>A broad and intense central maximum is formed.</li>
+<li>The central maximum is approximately twice the width of the secondary maxima.</li>
+<li>Secondary maxima occur on both sides of the central maximum.</li>
+<li>The intensity of successive secondary maxima decreases rapidly.</li>
+<li>The pattern is symmetrical about the central maximum.</li>
+<li>Diffraction becomes more pronounced when the slit width is decreased.</li>
+<li>For a fixed slit width, diffraction increases when the wavelength is increased.</li>
+</ul>
+
+
+<h2>11.2 Understand Diffraction Pattern and Derive the Expression for the Position of nth-Order Minima</h2>
+
+<h3>Geometry of Single-Slit Diffraction</h3>
+
+<p>Consider a single slit of width \(a\) illuminated normally by monochromatic light of wavelength \(\lambda\). Let the diffracted light be observed at an angle \(\theta\) from the original direction.</p>
+
+<figure>
+<svg viewBox="0 0 900 550"
+     role="img"
+     aria-label="Single slit diffraction geometry for deriving minima condition"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="900" height="550" fill="#111111"/>
+
+  <!-- slit -->
+  <line x1="220" y1="150" x2="220" y2="390"
+        stroke="white" stroke-width="8"/>
+
+  <!-- slit ends -->
+  <circle cx="220" cy="150" r="5" fill="white"/>
+  <circle cx="220" cy="390" r="5" fill="white"/>
+
+  <!-- central axis -->
+  <line x1="220" y1="270" x2="760" y2="270"
+        stroke="white" stroke-width="2"
+        stroke-dasharray="8,7"/>
+
+  <!-- upper diffracted ray -->
+  <line x1="220" y1="150" x2="760" y2="85"
+        stroke="white" stroke-width="3"/>
+
+  <!-- lower diffracted ray -->
+  <line x1="220" y1="390" x2="760" y2="325"
+        stroke="white" stroke-width="3"/>
+
+  <!-- perpendicular construction -->
+  <line x1="220" y1="390" x2="300" y2="140"
+        stroke="white" stroke-width="2"
+        stroke-dasharray="7,6"/>
+
+  <!-- screen -->
+  <line x1="760" y1="55" x2="760" y2="480"
+        stroke="white" stroke-width="4"/>
+
+  <!-- angle -->
+  <path d="M220 270 A75 75 0 0 1 294 261"
+        fill="none" stroke="white" stroke-width="2"/>
+
+  <text x="285" y="255" fill="white" font-size="19">θ</text>
+
+  <!-- slit width dimension -->
+  <line x1="175" y1="150" x2="175" y2="390"
+        stroke="white" stroke-width="2"/>
+  <line x1="168" y1="150" x2="182" y2="150"
+        stroke="white" stroke-width="2"/>
+  <line x1="168" y1="390" x2="182" y2="390"
+        stroke="white" stroke-width="2"/>
+
+  <text x="145" y="275" fill="white" font-size="20">a</text>
+
+  <!-- labels -->
+  <text x="220" y="120" fill="white" font-size="20"
+        text-anchor="middle">Single slit</text>
+
+  <text x="500" y="245" fill="white" font-size="18">
+    Central direction
+  </text>
+
+  <text x="500" y="120" fill="white" font-size="18">
+    Diffracted ray
+  </text>
+
+  <text x="780" y="50" fill="white" font-size="18">Screen</text>
+
+  <text x="450" y="520" fill="white" font-size="19"
+        text-anchor="middle">
+    Geometry for the condition of diffraction minima
+  </text>
+</svg>
+<figcaption>Figure: Geometry of single-slit diffraction.</figcaption>
+</figure>
+
+<h3>Path Difference</h3>
+
+<p>Let \(a\) be the width of the slit. For light diffracted at an angle \(\theta\), the path difference between the extreme rays from the upper and lower edges of the slit is</p>
+
+<div class="formula">
+\[
+\boxed{\Delta=a\sin\theta}
+\]
+</div>
+
+<h3>Condition for First Minimum</h3>
+
+<p>To obtain the first minimum, imagine the slit divided into two equal halves.</p>
+
+<p>Each point in the upper half can be paired with a corresponding point in the lower half. If the path difference between each pair is \(\lambda/2\), the corresponding waves cancel each other.</p>
+
+<p>The path difference between the extreme rays is then \(\lambda\).</p>
+
+<p>Therefore, for the first minimum,</p>
+
+<div class="formula">
+\[
+a\sin\theta=\lambda
+\]
+</div>
+
+<h3>Condition for nth Minimum</h3>
+
+<p>For the \(n\)th minimum, the slit can be divided into \(2n\) equal parts so that waves from corresponding pairs cancel each other.</p>
+
+<p>The total path difference between the extreme rays must therefore be \(n\lambda\).</p>
+
+<div class="formula">
+\[
+\boxed{a\sin\theta_n=n\lambda}
+\]
+
+<span class="where">where \(n=1,2,3,\ldots\).</span>
+</div>
+
+<p>Thus, the angular position of the \(n\)th minimum is given by</p>
+
+<div class="formula">
+\[
+\boxed{\sin\theta_n=\frac{n\lambda}{a}}
+\]
+</div>
+
+<p>For small angles,</p>
+
+<div class="formula">
+\[
+\sin\theta_n\approx\tan\theta_n
+\]
+</div>
+
+<p>If the screen is at a distance \(D\) from the slit and the \(n\)th minimum is at a distance \(y_n\) from the central maximum, then</p>
+
+<div class="formula">
+\[
+\tan\theta_n=\frac{y_n}{D}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\frac{y_n}{D}=\frac{n\lambda}{a}
+\]
+</div>
+
+<p>Hence, the position of the \(n\)th minimum is</p>
+
+<div class="formula">
+\[
+\boxed{
+y_n=\frac{n\lambda D}{a}
+}
+\]
+
+<span class="where">where \(a\) is the slit width and \(D\) is the distance between the slit and screen.</span>
+</div>
+
+<div class="box law">
+<strong>Position of nth-order minimum in single-slit diffraction:</strong>
+
+\[
+\boxed{a\sin\theta_n=n\lambda}
+\]
+
+<p>For small diffraction angles,</p>
+
+\[
+\boxed{y_n=\frac{n\lambda D}{a}}
+\]
+
+<p>where \(n=1,2,3,\ldots\).</p>
+</div>
+
+<h3>Width of Central Maximum</h3>
+
+<p>The first minima occur on either side of the central maximum.</p>
+
+<p>For the first minimum,</p>
+
+\[
+y_1=\frac{\lambda D}{a}
+\]
+
+<p>Therefore, the angular width of the central maximum is approximately</p>
+
+<div class="formula">
+\[
+\boxed{2\theta_1\approx\frac{2\lambda}{a}}
+\]
+</div>
+
+<p>Its linear width on the screen is</p>
+
+<div class="formula">
+\[
+W=2y_1
+\]
+
+\[
+\boxed{W=\frac{2\lambda D}{a}}
+\]
+</div>
+
+<div class="box tip">
+<strong>Remember:</strong> The width of the central maximum is twice the distance from the central maximum to the first minimum.
+</div>
+
+<h3>Worked Example 1 — Position of First Minimum</h3>
+
+<div class="box example">
+<strong>Problem:</strong> A monochromatic light of wavelength \(600\,\text{nm}\) falls normally on a single slit of width \(0.20\,\text{mm}\). Find the angular position of the first minimum.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>For the first minimum, \(n=1\).</p>
+
+\[
+a\sin\theta_1=\lambda
+\]
+
+\[
+\sin\theta_1=\frac{\lambda}{a}
+\]
+
+Given,
+
+\[
+\lambda=600\times10^{-9}\,\text{m}
+\]
+
+\[
+a=0.20\times10^{-3}\,\text{m}
+\]
+
+Therefore,
+
+\[
+\sin\theta_1
+=
+\frac{600\times10^{-9}}
+{0.20\times10^{-3}}
+\]
+
+\[
+\sin\theta_1=3.0\times10^{-3}
+\]
+
+For a small angle,
+
+\[
+\theta_1\approx3.0\times10^{-3}\,\text{rad}
+\]
+
+\[
+\boxed{\theta_1\approx0.003\,\text{rad}}
+\]
+
+</details>
+</div>
+
+
+<h2>11.3 Explain Diffraction Through Transmission/Diffraction Grating</h2>
+
+<h3>Diffraction Grating</h3>
+
+<div class="box definition">
+<strong>Definition:</strong> A diffraction grating is an optical device consisting of a large number of equally spaced parallel slits separated by opaque spaces.
+</div>
+
+<p>A transmission grating consists of a large number of transparent slits separated by opaque lines. When monochromatic light falls normally on the grating, light is diffracted by each slit and the diffracted waves interfere with one another.</p>
+
+<p>Because a large number of slits contribute to the interference, sharp and well-defined principal maxima are obtained.</p>
+
+<h3>Grating Element</h3>
+
+<p>Let:</p>
+
+<ul>
+<li>\(a\) = width of each transparent slit</li>
+<li>\(b\) = width of each opaque space</li>
+<li>\(d=a+b\) = grating element</li>
+<li>\(\lambda\) = wavelength of incident light</li>
+<li>\(\theta\) = angle of diffraction</li>
+<li>\(N\) = number of lines per unit length</li>
+</ul>
+
+<p>If there are \(N\) lines per unit length, the grating element is</p>
+
+<div class="formula">
+\[
+\boxed{d=\frac{1}{N}}
+\]
+
+<span class="where">when \(N\) is expressed as the number of grating lines per metre.</span>
+</div>
+
+<h3>Condition for Principal Maximum</h3>
+
+<figure>
+<svg viewBox="0 0 900 500"
+     role="img"
+     aria-label="Transmission diffraction grating showing principal maxima"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="900" height="500" fill="#111111"/>
+
+  <!-- incident beam -->
+  <line x1="60" y1="250" x2="270" y2="250"
+        stroke="white" stroke-width="3"/>
+  <line x1="60" y1="220" x2="270" y2="220"
+        stroke="white" stroke-width="3"/>
+  <line x1="60" y1="280" x2="270" y2="280"
+        stroke="white" stroke-width="3"/>
+
+  <!-- grating -->
+  <g stroke="white" stroke-width="4">
+    <line x1="290" y1="100" x2="290" y2="180"/>
+    <line x1="290" y1="200" x2="290" y2="240"/>
+    <line x1="290" y1="260" x2="290" y2="300"/>
+    <line x1="290" y1="320" x2="290" y2="360"/>
+    <line x1="290" y1="380" x2="290" y2="430"/>
+
+    <line x1="310" y1="100" x2="310" y2="180"/>
+    <line x1="310" y1="200" x2="310" y2="240"/>
+    <line x1="310" y1="260" x2="310" y2="300"/>
+    <line x1="310" y1="320" x2="310" y2="360"/>
+    <line x1="310" y1="380" x2="310" y2="430"/>
+
+    <line x1="330" y1="100" x2="330" y2="180"/>
+    <line x1="330" y1="200" x2="330" y2="240"/>
+    <line x1="330" y1="260" x2="330" y2="300"/>
+    <line x1="330" y1="320" x2="330" y2="360"/>
+    <line x1="330" y1="380" x2="330" y2="430"/>
+
+    <line x1="350" y1="100" x2="350" y2="180"/>
+    <line x1="350" y1="200" x2="350" y2="240"/>
+    <line x1="350" y1="260" x2="350" y2="300"/>
+    <line x1="350" y1="320" x2="350" y2="360"/>
+    <line x1="350" y1="380" x2="350" y2="430"/>
+  </g>
+
+  <!-- central axis -->
+  <line x1="350" y1="250" x2="800" y2="250"
+        stroke="white" stroke-width="2"
+        stroke-dasharray="8,7"/>
+
+  <!-- diffracted maxima -->
+  <line x1="350" y1="250" x2="800" y2="100"
+        stroke="white" stroke-width="3"/>
+  <line x1="350" y1="250" x2="800" y2="175"
+        stroke="white" stroke-width="3"/>
+  <line x1="350" y1="250" x2="800" y2="250"
+        stroke="white" stroke-width="3"/>
+  <line x1="350" y1="250" x2="800" y2="325"
+        stroke="white" stroke-width="3"/>
+  <line x1="350" y1="250" x2="800" y2="400"
+        stroke="white" stroke-width="3"/>
+
+  <!-- labels -->
+  <text x="150" y="190" fill="white" font-size="19"
+        text-anchor="middle">Incident light</text>
+
+  <text x="320" y="70" fill="white" font-size="20"
+        text-anchor="middle">Grating</text>
+
+  <text x="805" y="95" fill="white" font-size="18">+2</text>
+  <text x="805" y="170" fill="white" font-size="18">+1</text>
+  <text x="805" y="245" fill="white" font-size="18">0</text>
+  <text x="805" y="320" fill="white" font-size="18">−1</text>
+  <text x="805" y="395" fill="white" font-size="18">−2</text>
+
+  <text x="560" y="230" fill="white" font-size="18">
+    Principal maxima
+  </text>
+
+  <text x="450" y="460" fill="white" font-size="19"
+        text-anchor="middle">
+    Transmission diffraction grating
+  </text>
+</svg>
+<figcaption>Figure: Diffraction through a transmission grating.</figcaption>
+</figure>
+
+<p>Consider two consecutive slits of a grating. If the path difference between the waves emerging from them is an integral multiple of the wavelength, the waves reinforce each other and a principal maximum is formed.</p>
+
+<p>The path difference between waves from two consecutive slits is</p>
+
+<div class="formula">
+\[
+\Delta=d\sin\theta
+\]
+</div>
+
+<p>For constructive interference,</p>
+
+<div class="formula">
+\[
+\Delta=n\lambda
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{d\sin\theta_n=n\lambda}
+\]
+
+<span class="where">where \(n=0,\pm1,\pm2,\ldots\) is the order of the principal maximum.</span>
+</div>
+
+<div class="box law">
+<strong>Grating equation:</strong>
+
+\[
+\boxed{d\sin\theta_n=n\lambda}
+\]
+
+<p>This is the condition for principal maxima in a transmission diffraction grating for normal incidence.</p>
+</div>
+
+<h3>Maximum Possible Order</h3>
+
+<p>Since the maximum possible value of \(\sin\theta\) is 1,</p>
+
+\[
+n\lambda\le d
+\]
+
+Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{n_{\max}\le\frac{d}{\lambda}}
+\]
+</div>
+
+<p>The greatest integral value satisfying this condition gives the maximum possible order.</p>
+
+<h3>Worked Example 2 — Grating Maximum</h3>
+
+<div class="box example">
+<strong>Problem:</strong> A diffraction grating has 5000 lines per centimetre. Find the angle of diffraction for the first-order maximum when light of wavelength \(600\,\text{nm}\) is incident normally.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Number of lines per metre:</p>
+
+\[
+N=5000\times100=5.0\times10^5\,\text{m}^{-1}
+\]
+
+<p>Therefore, the grating element is</p>
+
+\[
+d=\frac{1}{N}
+\]
+
+\[
+d=\frac{1}{5.0\times10^5}
+=2.0\times10^{-6}\,\text{m}
+\]
+
+<p>For first order, \(n=1\).</p>
+
+\[
+d\sin\theta=n\lambda
+\]
+
+\[
+\sin\theta=
+\frac{600\times10^{-9}}
+{2.0\times10^{-6}}
+\]
+
+\[
+\sin\theta=0.30
+\]
+
+Therefore,
+
+\[
+\boxed{\theta\approx17.5^\circ}
+\]
+
+</details>
+</div>
+
+<h3>Difference Between Single-Slit Diffraction and Grating</h3>
+
+<table>
+<tr>
+<th>Single-slit diffraction</th>
+<th>Diffraction grating</th>
+</tr>
+<tr>
+<td>Light passes through one narrow slit.</td>
+<td>Light passes through a large number of equally spaced slits.</td>
+</tr>
+<tr>
+<td>Central maximum is broad.</td>
+<td>Principal maxima are sharp and narrow.</td>
+</tr>
+<tr>
+<td>Secondary maxima are relatively weak.</td>
+<td>Principal maxima are much sharper and more intense.</td>
+</tr>
+<tr>
+<td>Minima satisfy \(a\sin\theta=n\lambda\).</td>
+<td>Principal maxima satisfy \(d\sin\theta=n\lambda\).</td>
+</tr>
+</table>
+
+
+<h2>Resolving Power of Optical Instruments</h2>
+
+<h3>Resolution</h3>
+
+<div class="box definition">
+<strong>Resolution:</strong> The ability of an optical instrument to distinguish between two very close objects or spectral lines as separate entities is called its resolving power or resolving ability.
+</div>
+
+<p>When two point objects are very close together, their diffraction patterns may overlap. If the separation is sufficiently small, they may appear as a single object.</p>
+
+<p>The ability to distinguish the two objects depends on the resolving power of the instrument.</p>
+
+<h3>Rayleigh Criterion</h3>
+
+<div class="box law">
+<strong>Rayleigh criterion:</strong> Two point objects are said to be just resolved when the principal maximum of the diffraction pattern of one object coincides with the first minimum of the diffraction pattern of the other.
+</div>
+
+<h3>Resolving Power of a Telescope</h3>
+
+<p>For a circular aperture of diameter \(D\), the minimum angular separation between two stars that can just be resolved according to Rayleigh's criterion is</p>
+
+<div class="formula">
+\[
+\boxed{\theta_{\min}=\frac{1.22\lambda}{D}}
+\]
+
+<span class="where">where \(\lambda\) is the wavelength of light and \(D\) is the diameter of the objective.</span>
+</div>
+
+<p>The resolving power of a telescope is defined as the reciprocal of the minimum angular separation:</p>
+
+<div class="formula">
+\[
+\boxed{R=\frac{1}{\theta_{\min}}}
+\]
+
+Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{R=\frac{D}{1.22\lambda}}
+\]
+</div>
+
+<p>Thus, the resolving power of a telescope:</p>
+
+<ul>
+<li>increases when the diameter of the objective increases;</li>
+<li>increases when the wavelength of light decreases.</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 900 480"
+     role="img"
+     aria-label="Rayleigh criterion showing two just resolved diffraction patterns"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="0" y="0" width="900" height="480" fill="#111111"/>
+
+  <!-- baseline -->
+  <line x1="100" y1="370" x2="800" y2="370"
+        stroke="white" stroke-width="2"/>
+
+  <!-- first diffraction pattern -->
+  <path d="M130 370
+           C150 350 155 250 190 150
+           C225 250 230 350 250 370"
+        fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- second diffraction pattern -->
+  <path d="M230 370
+           C250 345 260 235 295 180
+           C330 235 340 345 360 370"
+        fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- combined pattern -->
+  <path d="M430 370
+           C450 350 460 255 495 160
+           C520 235 525 340 550 370
+           C575 340 580 235 605 160
+           C640 255 650 350 670 370"
+        fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- labels -->
+  <text x="210" y="80" fill="white" font-size="20"
+        text-anchor="middle">
+    Two overlapping diffraction patterns
+  </text>
+
+  <text x="550" y="80" fill="white" font-size="20"
+        text-anchor="middle">
+    Just resolved
+  </text>
+
+  <text x="550" y="420" fill="white" font-size="18"
+        text-anchor="middle">
+    Rayleigh criterion
+  </text>
+
+  <text x="495" y="145" fill="white" font-size="16"
+        text-anchor="middle">Maximum</text>
+
+  <text x="550" y="225" fill="white" font-size="16"
+        text-anchor="middle">Minimum</text>
+
+</svg>
+<figcaption>Figure: Rayleigh criterion for just resolving two close objects.</figcaption>
+</figure>
+
+<h3>Resolving Power of a Microscope</h3>
+
+<p>For a microscope, the ability to distinguish two closely spaced points depends on the wavelength of light and the numerical aperture of the objective.</p>
+
+<p>The minimum distance between two points that can be just resolved is approximately</p>
+
+<div class="formula">
+\[
+\boxed{d_{\min}=\frac{0.61\lambda}{NA}}
+\]
+
+<span class="where">where \(NA\) is the numerical aperture of the microscope objective.</span>
+</div>
+
+<p>The numerical aperture is</p>
+
+<div class="formula">
+\[
+\boxed{NA=\mu\sin\alpha}
+\]
+
+<span class="where">\(\mu\) is the refractive index of the medium between the object and objective, and \(\alpha\) is the half-angle of the cone of light entering the objective.</span>
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{
+d_{\min}=\frac{0.61\lambda}{\mu\sin\alpha}
+}
+\]
+</div>
+
+<p>The resolving power of the microscope is inversely proportional to the minimum resolvable distance:</p>
+
+<div class="formula">
+\[
+\boxed{
+R\propto\frac{1}{d_{\min}}
+}
+\]
+
+\[
+\boxed{
+R=\frac{NA}{0.61\lambda}
+}
+\]
+</div>
+
+<div class="box tip">
+<strong>To increase resolving power:</strong> Use light of shorter wavelength and increase the numerical aperture of the objective.
+</div>
+
+<h3>Resolving Power of a Diffraction Grating</h3>
+
+<p>The resolving power of a diffraction grating is its ability to distinguish two spectral lines of nearly equal wavelengths.</p>
+
+<p>It is defined as</p>
+
+<div class="formula">
+\[
+\boxed{
+R=\frac{\lambda}{\Delta\lambda}
+}
+\]
+
+<span class="where">\(\Delta\lambda\) is the smallest difference in wavelength that can be resolved.</span>
+</div>
+
+<p>For a grating having \(N\) illuminated lines and operating in the \(n\)th order, the resolving power is</p>
+
+<div class="formula">
+\[
+\boxed{
+R=nN
+}
+\]
+
+<p>Hence,</p>
+
+\[
+\boxed{
+\frac{\lambda}{\Delta\lambda}=nN
+}
+\]
+
+<p>or</p>
+
+\[
+\boxed{
+\Delta\lambda=\frac{\lambda}{nN}
+}
+\]
+</div>
+
+<p>Thus, the resolving power of a grating can be increased by:</p>
+
+<ul>
+<li>increasing the number of illuminated grating lines \(N\);</li>
+<li>using a higher order \(n\).</li>
+</ul>
+
+<h3>Worked Example 3 — Resolving Power of a Telescope</h3>
+
+<div class="box example">
+<strong>Problem:</strong> Calculate the minimum angular separation that can be resolved by a telescope having an objective diameter of \(10\,\text{cm}\) when light of wavelength \(500\,\text{nm}\) is used.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Given:</p>
+
+\[
+D=10\,\text{cm}=0.10\,\text{m}
+\]
+
+\[
+\lambda=500\times10^{-9}\,\text{m}
+\]
+
+<p>According to Rayleigh's criterion,</p>
+
+\[
+\theta_{\min}=\frac{1.22\lambda}{D}
+\]
+
+Therefore,
+
+\[
+\theta_{\min}
+=
+\frac{1.22(500\times10^{-9})}{0.10}
+\]
+
+\[
+\theta_{\min}=6.1\times10^{-6}\,\text{rad}
+\]
+
+\[
+\boxed{\theta_{\min}=6.1\times10^{-6}\,\text{rad}}
+\]
+
+</details>
+</div>
+
+<h3>Worked Example 4 — Resolving Power of a Grating</h3>
+
+<div class="box example">
+<strong>Problem:</strong> A diffraction grating has 5000 illuminated lines and is used in the second order. Calculate its resolving power.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>For a diffraction grating,</p>
+
+\[
+R=nN
+\]
+
+Given,
+
+\[
+n=2
+\]
+
+\[
+N=5000
+\]
+
+Therefore,
+
+\[
+R=2\times5000
+\]
+
+\[
+\boxed{R=10000}
+\]
+
+</details>
+</div>
+
+<h3>Comparison of Resolving Power</h3>
+
+<table>
+<tr>
+<th>Instrument</th>
+<th>Criterion / Expression</th>
+<th>How resolving power is increased</th>
+</tr>
+<tr>
+<td>Telescope</td>
+<td>\(\displaystyle R=\frac{D}{1.22\lambda}\)</td>
+<td>Increase aperture diameter \(D\), decrease wavelength.</td>
+</tr>
+<tr>
+<td>Microscope</td>
+<td>\(\displaystyle R=\frac{NA}{0.61\lambda}\)</td>
+<td>Increase numerical aperture, decrease wavelength.</td>
+</tr>
+<tr>
+<td>Diffraction grating</td>
+<td>\(\displaystyle R=nN\)</td>
+<td>Increase order \(n\) and number of illuminated lines \(N\).</td>
+</tr>
+</table>
+
+<h3>Common Mistakes</h3>
+
+<ul>
+<li>Do not confuse the single-slit width \(a\) with the grating element \(d\).</li>
+<li>For single-slit minima, use \(a\sin\theta=n\lambda\).</li>
+<li>For grating principal maxima, use \(d\sin\theta=n\lambda\).</li>
+<li>In the grating equation, \(d\) is the distance between corresponding points of two adjacent slits, \(d=a+b\).</li>
+<li>The central maximum of a single-slit diffraction pattern is twice as wide as the distance between adjacent minima.</li>
+<li>Resolving power is the reciprocal of the minimum separation for angular or linear resolution.</li>
+<li>For a telescope, increasing the objective diameter improves resolving power.</li>
+<li>For a grating, increasing the number of illuminated lines and the order increases resolving power.</li>
+</ul>
+
+<div class="box warning">
+<strong>Exam Focus:</strong> The most important derivations and formulae from this topic are:
+<ul>
+<li>Single-slit diffraction: \(\boxed{a\sin\theta_n=n\lambda}\)</li>
+<li>Position of nth minimum: \(\boxed{y_n=n\lambda D/a}\)</li>
+<li>Width of central maximum: \(\boxed{2\lambda D/a}\)</li>
+<li>Grating equation: \(\boxed{d\sin\theta_n=n\lambda}\)</li>
+<li>Telescope: \(\boxed{\theta_{\min}=1.22\lambda/D}\)</li>
+<li>Grating resolving power: \(\boxed{R=nN}\)</li>
+<li>Microscope minimum resolution: \(\boxed{d_{\min}=0.61\lambda/NA}\)</li>
+</ul>
+</div>
+
+<h3>Key Points Summary</h3>
+
+<ul class="key-points">
+<li>Diffraction is the bending and spreading of waves around an obstacle or through a narrow aperture.</li>
+<li>Single-slit diffraction produces a broad central maximum and weaker secondary maxima.</li>
+<li>The condition for the \(n\)th minimum is \(a\sin\theta_n=n\lambda\).</li>
+<li>For small angles, the position of the \(n\)th minimum is \(y_n=n\lambda D/a\).</li>
+<li>The central maximum has twice the width of each secondary maximum.</li>
+<li>A diffraction grating consists of a large number of equally spaced parallel slits.</li>
+<li>The grating equation for principal maxima is \(d\sin\theta_n=n\lambda\).</li>
+<li>The resolving power of an optical instrument indicates its ability to distinguish two close objects or spectral lines.</li>
+<li>According to Rayleigh's criterion, two objects are just resolved when the principal maximum of one diffraction pattern coincides with the first minimum of the other.</li>
+<li>Telescope resolving power is \(D/(1.22\lambda)\).</li>
+<li>Grating resolving power is \(nN\).</li>
+<li>Microscope resolution improves with larger numerical aperture and shorter wavelength.</li>
+</ul>
