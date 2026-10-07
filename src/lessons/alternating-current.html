@@ -1,0 +1,870 @@
+---
+title: Alternating current
+grade: XII
+chapters: [15]
+date: 2026-10-07
+---
+<h2>19. Alternating Currents</h2>
+
+<p>An <strong>alternating current (AC)</strong> is an electric current whose magnitude and direction change periodically with time. In a sinusoidal AC circuit, the instantaneous current and voltage are represented by sinusoidal functions.</p>
+
+<div class="formula">\[
+i=I_0\sin\omega t
+\]<span class="where">where \(I_0\) is the peak current and \(\omega\) is the angular frequency.</span></div>
+
+<div class="formula">\[
+v=V_0\sin\omega t
+\]<span class="where">where \(V_0\) is the peak voltage.</span></div>
+
+<p>The angular frequency is related to frequency \(f\) and time period \(T\) by</p>
+
+<div class="formula">\[
+\omega=2\pi f=\frac{2\pi}{T}
+\]<span class="where">where \(f\) is frequency and \(T\) is the time period.</span></div>
+
+<figure>
+<svg viewBox="0 0 760 330" role="img" aria-label="Sinusoidal alternating current waveform">
+<line x1="60" y1="165" x2="710" y2="165" stroke="currentColor" stroke-width="2"/>
+<line x1="80" y1="40" x2="80" y2="290" stroke="currentColor" stroke-width="2"/>
+<path d="M80 165 C120 45 180 45 220 165 S320 285 360 165 S460 45 500 165 S600 285 640 165 S680 45 710 165" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="675" y="155" fill="currentColor">t</text>
+<text x="50" y="55" fill="currentColor">i</text>
+<text x="105" y="65" fill="currentColor">+I₀</text>
+<text x="105" y="275" fill="currentColor">−I₀</text>
+<text x="280" y="315" fill="currentColor">One complete cycle</text>
+</svg>
+<figcaption>Sinusoidal alternating current</figcaption>
+</figure>
+
+<h2>19.1 Peak and RMS Values of AC Current and Voltage</h2>
+
+<h3>Peak Value</h3>
+
+<p>The <strong>peak value</strong> or <strong>maximum value</strong> of an alternating current is the greatest value attained by the current during a cycle. It is denoted by \(I_0\).</p>
+
+<p>Similarly, the maximum value of AC voltage is denoted by \(V_0\).</p>
+
+<h3>Root Mean Square (RMS) Value</h3>
+
+<p>The <strong>rms value</strong> of an alternating current is the value of steady DC current that produces the same heating effect in a given resistor as the AC current over one complete cycle.</p>
+
+<p>For a sinusoidal alternating current,</p>
+
+<div class="formula">\[
+I_{\mathrm{rms}}=\frac{I_0}{\sqrt{2}}
+\]<span class="where">where \(I_0\) is the peak current.</span></div>
+
+<p>Similarly, the rms value of sinusoidal AC voltage is</p>
+
+<div class="formula">\[
+V_{\mathrm{rms}}=\frac{V_0}{\sqrt{2}}
+\]<span class="where">where \(V_0\) is the peak voltage.</span></div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+I_0=\sqrt{2}\,I_{\mathrm{rms}}
+\]<span class="where">where \(I_0\) is the peak current.</span></div>
+
+<div class="formula">\[
+V_0=\sqrt{2}\,V_{\mathrm{rms}}
+\]<span class="where \(V_0\) is the peak voltage.</span></div>
+
+<h3>Derivation of RMS Current</h3>
+
+<p>Let the instantaneous current be</p>
+
+<div class="formula">\[
+i=I_0\sin\omega t
+\]<span class="where">where \(I_0\) is the maximum current.</span></div>
+
+<p>The mean square current over one complete cycle is</p>
+
+<div class="formula">\[
+I_{\mathrm{rms}}^2=\frac{1}{T}\int_0^T i^2\,dt
+\]<span class="where">where \(T\) is the time period.</span></div>
+
+<p>Substituting \(i=I_0\sin\omega t\),</p>
+
+<div class="formula">\[
+I_{\mathrm{rms}}^2=\frac{I_0^2}{T}\int_0^T\sin^2\omega t\,dt
+\]<span class="where">where the average value of \(\sin^2\omega t\) over one complete cycle is \(1/2\).</span></div>
+
+<div class="formula">\[
+I_{\mathrm{rms}}^2=\frac{I_0^2}{2}
+\]<span class="where">where \(I_0\) is the peak current.</span></div>
+
+<div class="formula">\[
+I_{\mathrm{rms}}=\frac{I_0}{\sqrt2}
+\]<span class="where">where \(I_{\mathrm{rms}}\) is the rms current.</span></div>
+
+<div class="box tip">
+<strong>Important:</strong> AC ammeters and voltmeters normally read rms values. Thus a household AC supply rated at \(230\,\text{V}\) has an rms voltage of approximately \(230\,\text{V}\), not \(230\sqrt2\,\text{V}\).
+</div>
+
+<div class="box example">
+<strong>Example 1: Peak and RMS values</strong>
+<p>An AC current has a peak value of \(10\,\text{A}\). Find its rms value.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<div class="formula">\[
+I_{\mathrm{rms}}=\frac{I_0}{\sqrt2}
+=\frac{10}{\sqrt2}
+=7.07\,\text{A}
+\]<span class="where">where \(I_0=10\,\text{A}\).</span></div>
+<p><strong>Answer:</strong> \(I_{\mathrm{rms}}=7.07\,\text{A}\).</p>
+</details>
+</div>
+
+<h2>19.2 AC Through a Resistor, Capacitor and Inductor</h2>
+
+<h3>AC Through a Pure Resistor</h3>
+
+<p>Consider a pure resistance \(R\) connected to an AC source.</p>
+
+<p>If</p>
+
+<div class="formula">\[
+v=V_0\sin\omega t
+\]<span class="where">where \(V_0\) is the peak voltage.</span></div>
+
+<p>Using Ohm's law,</p>
+
+<div class="formula">\[
+i=\frac{v}{R}
+=\frac{V_0}{R}\sin\omega t
+\]<span class="where">where \(R\) is the resistance.</span></div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+i=I_0\sin\omega t
+\]<span class="where \(I_0=V_0/R\).</span></div>
+
+<p>Thus, current and voltage are <strong>in phase</strong> in a pure resistive circuit.</p>
+
+<figure>
+<svg viewBox="0 0 760 300" role="img" aria-label="Voltage and current in phase in a resistor">
+<line x1="60" y1="150" x2="710" y2="150" stroke="currentColor" stroke-width="2"/>
+<path d="M70 150 C110 60 160 60 200 150 S290 240 330 150 S420 60 460 150 S550 240 590 150 S680 60 710 150" stroke="currentColor" fill="none" stroke-width="3"/>
+<path d="M70 150 C110 60 160 60 200 150 S290 240 330 150 S420 60 460 150 S550 240 590 150 S680 60 710 150" stroke="currentColor" fill="none" stroke-width="1" stroke-dasharray="7 5"/>
+<text x="80" y="45" fill="currentColor">v and i</text>
+<text x="570" y="275" fill="currentColor">In phase</text>
+</svg>
+<figcaption>Voltage and current are in phase in a pure resistive circuit</figcaption>
+</figure>
+
+<div class="formula">\[
+V_{\mathrm{rms}}=I_{\mathrm{rms}}R
+\]<span class="where">where \(R\) is the resistance.</span></div>
+
+<div class="box definition">
+<strong>For a pure resistor:</strong> Voltage and current are in phase, so the phase difference is \(\phi=0^\circ\).
+</div>
+
+<h3>AC Through a Pure Inductor</h3>
+
+<p>When an AC voltage is applied to a pure inductor of inductance \(L\), a self-induced emf is produced that opposes the change in current.</p>
+
+<p>For an inductor,</p>
+
+<div class="formula">\[
+v=L\frac{di}{dt}
+\]<span class="where">where \(L\) is the inductance.</span></div>
+
+<p>Let</p>
+
+<div class="formula">\[
+v=V_0\sin\omega t
+\]<span class="where">where \(V_0\) is the peak applied voltage.</span></div>
+
+<p>Then</p>
+
+<div class="formula">\[
+i=I_0\sin\left(\omega t-\frac{\pi}{2}\right)
+\]<span class="where \(I_0\) is the peak current.</span></div>
+
+<p>Thus, in a pure inductive circuit, <strong>current lags voltage by \(90^\circ\)</strong>.</p>
+
+<h3>Inductive Reactance</h3>
+
+<p>The opposition offered by an inductor to AC is called <strong>inductive reactance</strong>.</p>
+
+<div class="formula">\[
+X_L=\omega L=2\pi fL
+\]<span class="where \(X_L\) is inductive reactance, \(L\) is inductance and \(f\) is frequency.</span></div>
+
+<div class="formula">\[
+I_{\mathrm{rms}}=\frac{V_{\mathrm{rms}}}{X_L}
+\]<span class="where \(X_L\) is the inductive reactance.</span></div>
+
+<p>As frequency increases, inductive reactance increases.</p>
+
+<figure>
+<svg viewBox="0 0 760 300" role="img" aria-label="Current lags voltage by 90 degrees in a pure inductor">
+<line x1="60" y1="150" x2="710" y2="150" stroke="currentColor" stroke-width="2"/>
+<path d="M70 150 C110 60 160 60 200 150 S290 240 330 150 S420 60 460 150 S550 240 590 150 S680 60 710 150" stroke="currentColor" fill="none" stroke-width="3"/>
+<path d="M70 70 C110 160 160 160 200 70 S290 -20 330 70 S420 160 460 70 S550 -20 590 70 S680 160 710 70" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="80" y="45" fill="currentColor">Voltage v</text>
+<text x="80" y="275" fill="currentColor">Current i</text>
+<text x="505" y="275" fill="currentColor">i lags v by 90°</text>
+</svg>
+<figcaption>Phase relation between voltage and current in a pure inductor</figcaption>
+</figure>
+
+<h3>AC Through a Pure Capacitor</h3>
+
+<p>For a capacitor of capacitance \(C\),</p>
+
+<div class="formula">\[
+q=Cv
+\]<span class="where">where \(q\) is charge and \(v\) is potential difference.</span></div>
+
+<p>Since</p>
+
+<div class="formula">\[
+i=\frac{dq}{dt}
+\]<span class="where \(i\) is instantaneous current.</span></div>
+
+<p>we obtain</p>
+
+<div class="formula">\[
+i=C\frac{dv}{dt}
+\]<span class="where \(C\) is capacitance.</span></div>
+
+<p>If</p>
+
+<div class="formula">\[
+v=V_0\sin\omega t
+\]<span class="where">where \(V_0\) is the peak voltage.</span></div>
+
+<p>then</p>
+
+<div class="formula">\[
+i=I_0\sin\left(\omega t+\frac{\pi}{2}\right)
+\]<span class="where \(I_0=\omega CV_0\).</span></div>
+
+<p>Therefore, in a pure capacitive circuit, <strong>current leads voltage by \(90^\circ\)</strong>.</p>
+
+<h3>Capacitive Reactance</h3>
+
+<p>The opposition offered by a capacitor to AC is called <strong>capacitive reactance</strong>.</p>
+
+<div class="formula">\[
+X_C=\frac{1}{\omega C}=\frac{1}{2\pi fC}
+\]<span class="where \(X_C\) is capacitive reactance and \(C\) is capacitance.</span></div>
+
+<div class="formula">\[
+I_{\mathrm{rms}}=\frac{V_{\mathrm{rms}}}{X_C}
+\]<span class="where \(X_C\) is capacitive reactance.</span></div>
+
+<p>As frequency increases, capacitive reactance decreases.</p>
+
+<figure>
+<svg viewBox="0 0 760 300" role="img" aria-label="Current leads voltage by 90 degrees in a pure capacitor">
+<line x1="60" y1="150" x2="710" y2="150" stroke="currentColor" stroke-width="2"/>
+<path d="M70 150 C110 60 160 60 200 150 S290 240 330 150 S420 60 460 150 S550 240 590 150 S680 60 710 150" stroke="currentColor" fill="none" stroke-width="3"/>
+<path d="M70 70 C110 160 160 160 200 70 S290 -20 330 70 S420 160 460 70 S550 -20 590 70 S680 160 710 70" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="80" y="45" fill="currentColor">Current i</text>
+<text x="80" y="275" fill="currentColor">Voltage v</text>
+<text x="500" y="275" fill="currentColor">i leads v by 90°</text>
+</svg>
+<figcaption>Phase relation between current and voltage in a pure capacitor</figcaption>
+</figure>
+
+<h3>Comparison of R, L and C Circuits</h3>
+
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Reactance/Resistance</th>
+<th>Phase relation</th>
+<th>Frequency dependence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resistor</td>
+<td>\(R\)</td>
+<td>Current and voltage are in phase</td>
+<td>Independent of frequency for an ideal resistor</td>
+</tr>
+<tr>
+<td>Inductor</td>
+<td>\(X_L=\omega L\)</td>
+<td>Current lags voltage by \(90^\circ\)</td>
+<td>Increases with frequency</td>
+</tr>
+<tr>
+<td>Capacitor</td>
+<td>\(X_C=1/(\omega C)\)</td>
+<td>Current leads voltage by \(90^\circ\)</td>
+<td>Decreases with frequency</td>
+</tr>
+</tbody>
+</table>
+
+<h2>19.3 Phasor Diagram in RC and RL Circuits</h2>
+
+<h3>Phasor</h3>
+
+<p>A <strong>phasor</strong> is a rotating vector used to represent the magnitude and phase of a sinusoidally varying quantity.</p>
+
+<p>In AC circuit analysis, phasors make it convenient to represent the phase relationship between voltage and current.</p>
+
+<h3>RL Series Circuit</h3>
+
+<p>In a series RL circuit, the same current flows through both the resistor and inductor. Take current \(I\) as the reference phasor.</p>
+
+<p>The resistor voltage \(V_R\) is in phase with current, while the inductor voltage \(V_L\) leads current by \(90^\circ\).</p>
+
+<figure>
+<svg viewBox="0 0 650 400" role="img" aria-label="Phasor diagram of series RL circuit">
+<line x1="100" y1="300" x2="500" y2="300" stroke="currentColor" stroke-width="2"/>
+<line x1="100" y1="300" x2="100" y2="70" stroke="currentColor" stroke-width="2"/>
+<line x1="100" y1="300" x2="430" y2="100" stroke="currentColor" stroke-width="3"/>
+<text x="275" y="325" fill="currentColor">V_R</text>
+<text x="115" y="85" fill="currentColor">V_L</text>
+<text x="305" y="165" fill="currentColor">V</text>
+<text x="450" y="295" fill="currentColor">I</text>
+<path d="M170 300 A70 70 0 0 0 160 255" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="165" y="250" fill="currentColor">φ</text>
+</svg>
+<figcaption>Phasor diagram for a series RL circuit</figcaption>
+</figure>
+
+<p>From the right-angled phasor triangle,</p>
+
+<div class="formula">\[
+V=\sqrt{V_R^2+V_L^2}
+\]<span class="where \(V\) is the supply voltage.</span></div>
+
+<p>Since \(V_R=IR\) and \(V_L=IX_L\),</p>
+
+<div class="formula">\[
+V=I\sqrt{R^2+X_L^2}
+\]<span class="where \(I\) is rms current.</span></div>
+
+<p>Therefore, the impedance is</p>
+
+<div class="formula">\[
+Z=\sqrt{R^2+X_L^2}
+\]<span class="where \(Z\) is the impedance of the RL circuit.</span></div>
+
+<p>The phase angle is given by</p>
+
+<div class="formula">\[
+\tan\phi=\frac{X_L}{R}
+\]<span class="where \(\phi\) is the phase angle between supply voltage and current.</span></div>
+
+<p>In an RL circuit, current <strong>lags</strong> the supply voltage by \(\phi\).</p>
+
+<h3>RC Series Circuit</h3>
+
+<p>In a series RC circuit, take current \(I\) as the reference phasor. The resistor voltage \(V_R\) is in phase with current, while the capacitor voltage \(V_C\) lags current by \(90^\circ\).</p>
+
+<figure>
+<svg viewBox="0 0 650 400" role="img" aria-label="Phasor diagram of series RC circuit">
+<line x1="100" y1="300" x2="500" y2="300" stroke="currentColor" stroke-width="2"/>
+<line x1="100" y1="300" x2="100" y2="70" stroke="currentColor" stroke-width="2"/>
+<line x1="100" y1="300" x2="430" y2="410" stroke="currentColor" stroke-width="3"/>
+<text x="275" y="325" fill="currentColor">V_R</text>
+<text x="115" y="390" fill="currentColor">V_C</text>
+<text x="305" y="350" fill="currentColor">V</text>
+<text x="450" y="295" fill="currentColor">I</text>
+<text x="160" y="280" fill="currentColor">φ</text>
+</svg>
+<figcaption>Phasor diagram for a series RC circuit</figcaption>
+</figure>
+
+<div class="formula">\[
+V=\sqrt{V_R^2+V_C^2}
+\]<span class="where">where \(V\) is the rms supply voltage.</span></div>
+
+<div class="formula">\[
+Z=\sqrt{R^2+X_C^2}
+\]<span class="where \(Z\) is the impedance of the RC circuit.</span></div>
+
+<div class="formula">\[
+\tan\phi=\frac{X_C}{R}
+\]<span class="where \(\phi\) is the magnitude of the phase angle.</span></div>
+
+<p>In an RC circuit, current <strong>leads</strong> the supply voltage by \(\phi\).</p>
+
+<div class="box warning">
+<strong>Common mistake:</strong> In an RL circuit, current lags voltage. In an RC circuit, current leads voltage. Remember: <strong>ELI the ICE man</strong> — in an inductor, \(E\) (voltage) leads \(I\); in a capacitor, \(I\) leads \(E\).
+</div>
+
+<h2>19.4 Series Circuit Containing Resistance, Capacitance and Inductance</h2>
+
+<p>A circuit containing resistance \(R\), inductance \(L\), and capacitance \(C\) connected in series is called a <strong>series RLC circuit</strong>.</p>
+
+<figure>
+<svg viewBox="0 0 800 300" role="img" aria-label="Series RLC circuit">
+<line x1="80" y1="150" x2="180" y2="150" stroke="currentColor" stroke-width="2"/>
+<rect x="180" y="120" width="90" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="212" y="155" fill="currentColor">R</text>
+<line x1="270" y1="150" x2="330" y2="150" stroke="currentColor" stroke-width="2"/>
+<path d="M330 150 C345 110 360 190 375 150 S405 110 420 150" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="370" y="100" fill="currentColor">L</text>
+<line x1="420" y1="150" x2="490" y2="150" stroke="currentColor" stroke-width="2"/>
+<line x1="490" y1="115" x2="490" y2="185" stroke="currentColor" stroke-width="3"/>
+<line x1="540" y1="115" x2="540" y2="185" stroke="currentColor" stroke-width="3"/>
+<line x1="540" y1="150" x2="620" y2="150" stroke="currentColor" stroke-width="2"/>
+<text x="505" y="100" fill="currentColor">C</text>
+<line x1="620" y1="150" x2="720" y2="150" stroke="currentColor" stroke-width="2"/>
+<text x="65" y="130" fill="currentColor">AC</text>
+</svg>
+<figcaption>Series RLC circuit</figcaption>
+</figure>
+
+<h3>Reactance</h3>
+
+<p>The net reactance of a series RLC circuit is the difference between inductive and capacitive reactances.</p>
+
+<div class="formula">\[
+X=X_L-X_C
+\]<span class="where \(X\) is the net reactance.</span></div>
+
+<p>Using</p>
+
+<div class="formula">\[
+X_L=\omega L
+\]<span class="where \(X_L\) is inductive reactance.</span></div>
+
+<div class="formula">\[
+X_C=\frac{1}{\omega C}
+\]<span class="where \(X_C\) is capacitive reactance.</span></div>
+
+<p>we obtain</p>
+
+<div class="formula">\[
+X=\omega L-\frac{1}{\omega C}
+\]<span class="where \(\omega\) is angular frequency.</span></div>
+
+<h3>Impedance of Series RLC Circuit</h3>
+
+<p>The total opposition offered by a series RLC circuit to AC is called its <strong>impedance</strong>, \(Z\).</p>
+
+<div class="formula">\[
+Z=\sqrt{R^2+(X_L-X_C)^2}
+\]<span class="where \(Z\) is the impedance.</span></div>
+
+<p>Therefore, the rms current is</p>
+
+<div class="formula">\[
+I_{\mathrm{rms}}=\frac{V_{\mathrm{rms}}}{Z}
+\]<span class="where \(V_{\mathrm{rms}}\) is the rms supply voltage.</span></div>
+
+<h3>Phase Angle in Series RLC Circuit</h3>
+
+<div class="formula">\[
+\tan\phi=\frac{X_L-X_C}{R}
+\]<span class="where \(\phi\) is the phase difference between supply voltage and current.</span></div>
+
+<ul>
+<li>If \(X_L>X_C\), the circuit is <strong>inductive</strong> and current lags voltage.</li>
+<li>If \(X_C>X_L\), the circuit is <strong>capacitive</strong> and current leads voltage.</li>
+<li>If \(X_L=X_C\), the circuit is <strong>purely resistive at that frequency</strong> and voltage and current are in phase.</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 700 400" role="img" aria-label="Phasor diagram of series RLC circuit">
+<line x1="100" y1="300" x2="570" y2="300" stroke="currentColor" stroke-width="2"/>
+<line x1="100" y1="300" x2="100" y2="100" stroke="currentColor" stroke-width="2"/>
+<line x1="100" y1="300" x2="460" y2="150" stroke="currentColor" stroke-width="3"/>
+<line x1="460" y1="150" x2="460" y2="250" stroke="currentColor" stroke-width="2"/>
+<text x="270" y="325" fill="currentColor">V_R</text>
+<text x="120" y="125" fill="currentColor">V_L−V_C</text>
+<text x="335" y="205" fill="currentColor">V</text>
+<text x="500" y="295" fill="currentColor">I</text>
+<text x="150" y="275" fill="currentColor">φ</text>
+</svg>
+<figcaption>Phasor relationship in a series RLC circuit</figcaption>
+</figure>
+
+<h2>19.5 Series Resonance and Its Applications</h2>
+
+<h3>Condition for Resonance</h3>
+
+<p>In a series RLC circuit, <strong>resonance</strong> occurs when the inductive reactance becomes equal to the capacitive reactance.</p>
+
+<div class="formula">\[
+X_L=X_C
+\]<span class="where \(X_L\) and \(X_C\) are inductive and capacitive reactances.</span></div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\omega L=\frac{1}{\omega C}
+\]<span class="where \(\omega\) is the angular resonant frequency.</span></div>
+
+<p>Hence,</p>
+
+<div class="formula">\[
+\omega_0=\frac{1}{\sqrt{LC}}
+\]<span class="where \(\omega_0\) is the angular resonant frequency.</span></div>
+
+<p>Since \(\omega_0=2\pi f_0\),</p>
+
+<div class="formula">\[
+f_0=\frac{1}{2\pi\sqrt{LC}}
+\]<span class="where \(f_0\) is the resonant frequency.</span></div>
+
+<h3>Characteristics of Series Resonance</h3>
+
+<p>At resonance, \(X_L=X_C\). Hence the net reactance is zero.</p>
+
+<div class="formula">\[
+Z=R
+\]<span class="where \(Z\) is the impedance at resonance.</span></div>
+
+<p>Therefore, the current is maximum:</p>
+
+<div class="formula">\[
+I_{\max}=\frac{V}{R}
+\]<span class="where \(V\) is the rms supply voltage.</span></div>
+
+<p>The phase angle becomes zero:</p>
+
+<div class="formula">\[
+\phi=0^\circ
+\]<span class="where \(\phi\) is the phase difference between voltage and current.</span></div>
+
+<p>Thus voltage and current are in phase and the power factor becomes unity.</p>
+
+<figure>
+<svg viewBox="0 0 760 360" role="img" aria-label="Current versus frequency resonance curve">
+<line x1="80" y1="300" x2="700" y2="300" stroke="currentColor" stroke-width="2"/>
+<line x1="80" y1="50" x2="80" y2="300" stroke="currentColor" stroke-width="2"/>
+<path d="M90 285 C180 280 250 270 310 220 C350 170 370 70 400 60 C430 70 450 170 490 220 C550 270 620 280 690 285" stroke="currentColor" fill="none" stroke-width="3"/>
+<line x1="400" y1="60" x2="400" y2="300" stroke="currentColor" stroke-width="1" stroke-dasharray="7 5"/>
+<text x="370" y="330" fill="currentColor">f₀</text>
+<text x="560" y="45" fill="currentColor">Maximum current</text>
+<text x="480" y="350" fill="currentColor">Frequency →</text>
+</svg>
+<figcaption>Current resonance curve for a series RLC circuit</figcaption>
+</figure>
+
+<h3>Applications of Series Resonance</h3>
+
+<ul>
+<li>Selection or tuning of a desired radio or television frequency.</li>
+<li>Frequency-selective circuits.</li>
+<li>Radio receivers and transmitters.</li>
+<li>Communication circuits.</li>
+<li>Electronic oscillators and filters.</li>
+</ul>
+
+<div class="box example">
+<strong>Example 2: Resonant frequency</strong>
+<p>A series RLC circuit contains an inductance of \(0.20\,\text{H}\) and capacitance of \(50\,\mu\text{F}\). Find its resonant frequency.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<div class="formula">\[
+f_0=\frac{1}{2\pi\sqrt{LC}}
+\]<span class="where \(L=0.20\,\text{H}\) and \(C=50\times10^{-6}\,\text{F}\).</span></div>
+
+<div class="formula">\[
+f_0=\frac{1}{2\pi\sqrt{(0.20)(50\times10^{-6})}}
+\]<span class="where the values of \(L\) and \(C\) are substituted in SI units.</span></div>
+
+<div class="formula">\[
+f_0\approx50.3\,\text{Hz}
+\]<span class="where \(f_0\) is the resonant frequency.</span></div>
+
+<p><strong>Answer:</strong> \(f_0\approx50.3\,\text{Hz}\).</p>
+</details>
+</div>
+
+<h2>19.6 Quality Factor</h2>
+
+<p>The <strong>quality factor</strong>, or <strong>Q-factor</strong>, of a resonant circuit is a measure of the sharpness or selectivity of resonance.</p>
+
+<p>For a series RLC circuit,</p>
+
+<div class="formula">\[
+Q=\frac{\omega_0L}{R}
+\]<span class="where \(\omega_0\) is the resonant angular frequency, \(L\) is inductance and \(R\) is resistance.</span></div>
+
+<p>Using \(\omega_0=1/\sqrt{LC}\),</p>
+
+<div class="formula">\[
+Q=\frac{1}{R}\sqrt{\frac{L}{C}}
+\]<span class="where \(R\), \(L\), and \(C\) are the resistance, inductance and capacitance of the series RLC circuit.</span></div>
+
+<p>Q-factor can also be expressed in terms of resonant frequency and bandwidth:</p>
+
+<div class="formula">\[
+Q=\frac{f_0}{\Delta f}
+\]<span class="where \(f_0\) is resonant frequency and \(\Delta f=f_2-f_1\) is the bandwidth.</span></div>
+
+<h3>Significance of Q-Factor</h3>
+
+<ul>
+<li>A <strong>high Q-factor</strong> means a sharp and narrow resonance.</li>
+<li>A high Q-factor indicates high frequency selectivity.</li>
+<li>A <strong>low Q-factor</strong> corresponds to a broad resonance curve.</li>
+<li>High-Q circuits are useful in tuning and frequency-selective applications.</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 760 360" role="img" aria-label="Comparison of sharp and broad resonance curves">
+<line x1="80" y1="300" x2="700" y2="300" stroke="currentColor" stroke-width="2"/>
+<line x1="80" y1="50" x2="80" y2="300" stroke="currentColor" stroke-width="2"/>
+<path d="M100 290 C250 285 330 270 390 70 C450 270 530 285 680 290" stroke="currentColor" fill="none" stroke-width="3"/>
+<path d="M100 285 C210 250 290 190 390 170 C490 190 570 250 680 285" stroke="currentColor" fill="none" stroke-width="3"/>
+<text x="400" y="60" fill="currentColor">High Q</text>
+<text x="520" y="155" fill="currentColor">Low Q</text>
+<text x="475" y="340" fill="currentColor">Frequency →</text>
+</svg>
+<figcaption>High-Q resonance is sharper and narrower than low-Q resonance</figcaption>
+</figure>
+
+<div class="box example">
+<strong>Example 3: Quality factor</strong>
+<p>A series RLC circuit has \(L=0.20\,\text{H}\), \(C=50\,\mu\text{F}\), and \(R=2\,\Omega\). Find its Q-factor.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<div class="formula">\[
+Q=\frac{1}{R}\sqrt{\frac{L}{C}}
+\]<span class="where \(R=2\,\Omega\), \(L=0.20\,\text{H}\), and \(C=50\times10^{-6}\,\text{F}\).</span></div>
+
+<div class="formula">\[
+Q=\frac{1}{2}\sqrt{\frac{0.20}{50\times10^{-6}}}
+\]<span class="where the quantities are expressed in SI units.</span></div>
+
+<div class="formula">\[
+Q\approx31.6
+\]<span class="where \(Q\) is dimensionless.</span></div>
+
+<p><strong>Answer:</strong> \(Q\approx31.6\).</p>
+</details>
+</div>
+
+<h2>19.7 Power in AC Circuits and Power Factor</h2>
+
+<h3>Instantaneous Power</h3>
+
+<p>The instantaneous power supplied to an AC circuit is</p>
+
+<div class="formula">\[
+p=vi
+\]<span class="where \(p\) is instantaneous power.</span></div>
+
+<p>For a circuit in which the voltage and current differ in phase by \(\phi\), the average power consumed is</p>
+
+<div class="formula">\[
+P=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi
+\]<span class="where \(\phi\) is the phase difference between voltage and current.</span></div>
+
+<h3>Power Factor</h3>
+
+<div class="box definition">
+<strong>Power factor</strong> is the cosine of the phase difference between the voltage and current in an AC circuit.
+</div>
+
+<div class="formula">\[
+\text{Power factor}=\cos\phi
+\]<span class="where \(\phi\) is the phase difference between voltage and current.</span></div>
+
+<p>Hence,</p>
+
+<div class="formula">\[
+P=V_{\mathrm{rms}}I_{\mathrm{rms}}\times\text{power factor}
+\]<span class="where \(P\) is average power consumed.</span></div>
+
+<h3>Power Factor in Different Circuits</h3>
+
+<table>
+<thead>
+<tr>
+<th>Circuit</th>
+<th>Phase difference</th>
+<th>Power factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pure resistor</td>
+<td>\(\phi=0^\circ\)</td>
+<td>\(\cos0^\circ=1\)</td>
+</tr>
+<tr>
+<td>Pure inductor</td>
+<td>\(\phi=90^\circ\)</td>
+<td>\(\cos90^\circ=0\)</td>
+</tr>
+<tr>
+<td>Pure capacitor</td>
+<td>\(\phi=90^\circ\)</td>
+<td>\(\cos90^\circ=0\)</td>
+</tr>
+<tr>
+<td>RLC circuit</td>
+<td>Depends on \(X_L-X_C\)</td>
+<td>Between 0 and 1 for a passive circuit</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Power Factor of a Series RLC Circuit</h3>
+
+<p>For a series RLC circuit,</p>
+
+<div class="formula">\[
+\cos\phi=\frac{R}{Z}
+\]<span class="where \(R\) is resistance and \(Z\) is impedance.</span></div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+P=I_{\mathrm{rms}}^2R
+\]<span class="where \(P\) is the average power consumed by the resistive part of the circuit.</span></div>
+
+<p>The inductors and capacitors ideally do not consume average power over a complete cycle; they alternately store and return energy to the circuit.</p>
+
+<h3>Lagging and Leading Power Factor</h3>
+
+<ul>
+<li>If the circuit is predominantly inductive, current lags voltage and the power factor is called <strong>lagging power factor</strong>.</li>
+<li>If the circuit is predominantly capacitive, current leads voltage and the power factor is called <strong>leading power factor</strong>.</li>
+<li>At series resonance, voltage and current are in phase and the power factor is <strong>unity</strong>.</li>
+</ul>
+
+<h3>Importance of High Power Factor</h3>
+
+<p>A low power factor means that a larger current is required to transmit a given amount of useful power at a given voltage. Larger current produces greater \(I^2R\) losses in transmission and distribution conductors.</p>
+
+<p>Therefore, electrical systems generally aim to maintain a power factor close to unity.</p>
+
+<div class="box example">
+<strong>Example 4: AC power</strong>
+<p>An AC circuit operates at \(230\,\text{V}\) rms and draws \(5\,\text{A}\) rms at a power factor of \(0.8\). Find the average power consumed.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<div class="formula">\[
+P=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi
+\]<span class="where \(\cos\phi=0.8\).</span></div>
+
+<div class="formula">\[
+P=(230)(5)(0.8)
+\]<span class="where \(V_{\mathrm{rms}}=230\,\text{V}\) and \(I_{\mathrm{rms}}=5\,\text{A}\).</span></div>
+
+<div class="formula">\[
+P=920\,\text{W}
+\]<span class="where \(P\) is the average power consumed.</span></div>
+
+<p><strong>Answer:</strong> \(920\,\text{W}\).</p>
+</details>
+</div>
+
+<h2>Important Formula Sheet</h2>
+
+<div class="formula">\[
+I_{\mathrm{rms}}=\frac{I_0}{\sqrt2}
+\]<span class="where \(I_0\) is peak current.</span></div>
+
+<div class="formula">\[
+V_{\mathrm{rms}}=\frac{V_0}{\sqrt2}
+\]<span class="where \(V_0\) is peak voltage.</span></div>
+
+<div class="formula">\[
+X_L=\omega L=2\pi fL
+\]<span class="where \(X_L\) is inductive reactance.</span></div>
+
+<div class="formula">\[
+X_C=\frac{1}{\omega C}=\frac{1}{2\pi fC}
+\]<span class="where \(X_C\) is capacitive reactance.</span></div>
+
+<div class="formula">\[
+Z_{\mathrm{RLC}}=\sqrt{R^2+(X_L-X_C)^2}
+\]<span class="where \(Z_{\mathrm{RLC}}\) is impedance of a series RLC circuit.</span></div>
+
+<div class="formula">\[
+\tan\phi=\frac{X_L-X_C}{R}
+\]<span class="where \(\phi\) is the phase angle.</span></div>
+
+<div class="formula">\[
+\omega_0=\frac{1}{\sqrt{LC}}
+\]<span class="where \(\omega_0\) is resonant angular frequency.</span></div>
+
+<div class="formula">\[
+f_0=\frac{1}{2\pi\sqrt{LC}}
+\]<span class="where \(f_0\) is resonant frequency.</span></div>
+
+<div class="formula">\[
+Q=\frac{\omega_0L}{R}
+=\frac{1}{R}\sqrt{\frac{L}{C}}
+\]<span class="where \(Q\) is the quality factor of a series RLC circuit.</span></div>
+
+<div class="formula">\[
+Q=\frac{f_0}{\Delta f}
+\]<span class="where \(\Delta f\) is the bandwidth.</span></div>
+
+<div class="formula">\[
+P=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi
+\]<span class="where \(P\) is average AC power.</span></div>
+
+<div class="formula">\[
+\text{Power factor}=\cos\phi=\frac{R}{Z}
+\]<span class="where the last expression applies to a series RLC circuit.</span></div>
+
+<h2>Common Examination Questions</h2>
+
+<ol>
+<li>Define alternating current. Write the equation for sinusoidal AC current.</li>
+<li>Define peak and rms values of AC current and voltage.</li>
+<li>Derive the relation \(I_{\mathrm{rms}}=I_0/\sqrt2\).</li>
+<li>Show that current and voltage are in phase in a pure resistive AC circuit.</li>
+<li>Explain the phase relation between current and voltage in a pure inductor.</li>
+<li>Define inductive reactance and derive \(X_L=\omega L\).</li>
+<li>Explain the phase relation between current and voltage in a pure capacitor.</li>
+<li>Define capacitive reactance and derive \(X_C=1/\omega C\).</li>
+<li>Draw the phasor diagram of an RL series circuit and derive its impedance.</li>
+<li>Draw the phasor diagram of an RC series circuit and derive its impedance.</li>
+<li>Derive the expression for impedance of a series RLC circuit.</li>
+<li>What is resonance in a series RLC circuit? Derive the expression for resonant frequency.</li>
+<li>State the characteristics and applications of series resonance.</li>
+<li>Define quality factor. Obtain its expression for a series RLC circuit.</li>
+<li>What is bandwidth? Relate bandwidth with the Q-factor.</li>
+<li>Define power factor. Derive the expression for average power in an AC circuit.</li>
+<li>Distinguish between leading and lagging power factor.</li>
+<li>Why is a high power factor desirable in electrical power systems?</li>
+</ol>
+
+<h2>Key Points Summary</h2>
+
+<ul class="key-points">
+<li>For sinusoidal AC, \(I_{\mathrm{rms}}=I_0/\sqrt2\) and \(V_{\mathrm{rms}}=V_0/\sqrt2\).</li>
+<li>In a pure resistor, current and voltage are in phase.</li>
+<li>In a pure inductor, current lags voltage by \(90^\circ\).</li>
+<li>Inductive reactance is \(X_L=\omega L\).</li>
+<li>In a pure capacitor, current leads voltage by \(90^\circ\).</li>
+<li>Capacitive reactance is \(X_C=1/\omega C\).</li>
+<li>For a series RLC circuit, \(Z=\sqrt{R^2+(X_L-X_C)^2}\).</li>
+<li>At resonance, \(X_L=X_C\).</li>
+<li>The resonant frequency is \(f_0=1/(2\pi\sqrt{LC})\).</li>
+<li>At resonance, impedance is minimum and current is maximum.</li>
+<li>At resonance, voltage and current are in phase and power factor is unity.</li>
+<li>Q-factor measures the sharpness or selectivity of resonance.</li>
+<li>For a series RLC circuit, \(Q=\omega_0L/R\).</li>
+<li>Average AC power is \(P=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi\).</li>
+<li>Power factor is \(\cos\phi\).</li>
+<li>Inductive circuits have lagging power factor, while capacitive circuits have leading power factor.</li>
+</ul>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<ul>
+<li>Do not confuse peak value with rms value.</li>
+<li>Do not write \(X_L=1/\omega L\); that expression belongs to capacitive reactance in reciprocal form. The correct inductive reactance is \(X_L=\omega L\).</li>
+<li>Do not write \(X_C=\omega C\); the correct capacitive reactance is \(X_C=1/\omega C\).</li>
+<li>Remember that current <strong>lags</strong> voltage in an inductor.</li>
+<li>Remember that current <strong>leads</strong> voltage in a capacitor.</li>
+<li>At resonance, do not say that \(X_L\) and \(X_C\) individually become zero. They are equal in magnitude and opposite in effect, so their net reactance is zero.</li>
+<li>For a series RLC circuit, use \(Z=\sqrt{R^2+(X_L-X_C)^2}\), not \(R+X_L+X_C\).</li>
+<li>Power factor is \(\cos\phi\), not simply the phase angle \(\phi\).</li>
+<li>At resonance in a series RLC circuit, the power factor is unity.</li>
+</ul>
