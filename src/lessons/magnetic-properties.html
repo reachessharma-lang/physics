@@ -1,0 +1,895 @@
+---
+title: Magnetic properties of material
+grade: XII
+chapters: [13]
+date: 2026-10-02
+---
+<p>Magnetic materials respond differently when placed in an external magnetic field. Their magnetic behaviour is described using quantities such as magnetic intensity, magnetization, magnetic susceptibility and relative permeability. On the basis of their magnetic response, materials are broadly classified as diamagnetic, paramagnetic and ferromagnetic.</p>
+
+<h2>16.1 Relative Permeability and Relative Susceptibility</h2>
+
+<h3>Magnetic Field Intensity</h3>
+
+<p>The magnetic field intensity or magnetizing field is represented by \(H\). It describes the strength of the externally applied magnetic field.</p>
+
+<p>For a long solenoid,</p>
+
+<div class="formula">
+\[
+H=nI
+\]
+<span class="where">where \(n\) is the number of turns per unit length and \(I\) is the current.</span>
+</div>
+
+<p>The SI unit of \(H\) is \(\mathrm{A\,m^{-1}}\).</p>
+
+<h3>Magnetic Induction</h3>
+
+<p>The magnetic flux density or magnetic induction is represented by \(B\). In vacuum,</p>
+
+<div class="formula">
+\[
+B_0=\mu_0H
+\]
+<span class="where">\(\mu_0\) is the permeability of free space.</span>
+</div>
+
+<p>For a magnetic material,</p>
+
+<div class="formula">
+\[
+B=\mu H
+\]
+<span class="where">\(\mu\) is the permeability of the material.</span>
+</div>
+
+<h3>Permeability</h3>
+
+<div class="box.definition">
+<strong>Permeability:</strong> The permeability of a material is a measure of the ability of the material to allow magnetic field lines to pass through it.
+</div>
+
+<p>It is defined as</p>
+
+<div class="formula">
+\[
+\boxed{\mu=\frac{B}{H}}
+\]
+</div>
+
+<p>The SI unit of permeability is \(\mathrm{H\,m^{-1}}\) or equivalently \(\mathrm{N\,A^{-2}}\).</p>
+
+<h3>Relative Permeability</h3>
+
+<div class="box.definition">
+<strong>Relative permeability:</strong> The relative permeability of a magnetic material is the ratio of its permeability to the permeability of free space.
+</div>
+
+<div class="formula">
+\[
+\boxed{\mu_r=\frac{\mu}{\mu_0}}
+\]
+</div>
+
+<p>Since</p>
+
+<div class="formula">
+\[
+\mu=\mu_0\mu_r
+\]
+</div>
+
+<p>we can write</p>
+
+<div class="formula">
+\[
+\boxed{B=\mu_0\mu_rH}
+\]
+</div>
+
+<div class="box.note">
+Relative permeability is dimensionless because it is the ratio of two quantities having the same unit.
+</div>
+
+<h3>Magnetization</h3>
+
+<p>When a magnetic material is placed in an external magnetic field, its magnetic dipoles become preferentially oriented. The magnetic dipole moment produced per unit volume of the material is called its <strong>magnetization</strong>.</p>
+
+<div class="formula">
+\[
+\boxed{M=\frac{\text{magnetic dipole moment}}{\text{volume}}}
+\]
+</div>
+
+<p>The SI unit of magnetization is \(\mathrm{A\,m^{-1}}\).</p>
+
+<p>For a magnetic material, the relationship between \(B\), \(H\), and \(M\) is</p>
+
+<div class="formula">
+\[
+\boxed{B=\mu_0(H+M)}
+\]
+</div>
+
+<h3>Magnetic Susceptibility</h3>
+
+<div class="box.definition">
+<strong>Magnetic susceptibility:</strong> Magnetic susceptibility is the measure of the degree to which a material becomes magnetized when placed in an external magnetic field.
+</div>
+
+<p>It is defined as the ratio of magnetization to magnetic field intensity.</p>
+
+<div class="formula">
+\[
+\boxed{\chi_m=\frac{M}{H}}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{M=\chi_mH}
+\]
+</div>
+
+<div class="box.note">
+Magnetic susceptibility \(\chi_m\) is dimensionless because both \(M\) and \(H\) have the same SI unit \(\mathrm{A\,m^{-1}}\).
+</div>
+
+<h2>16.2 Relationship Between Relative Permeability and Magnetic Susceptibility</h2>
+
+<p>For a magnetic material,</p>
+
+<div class="formula">
+\[
+B=\mu_0(H+M)
+\]
+</div>
+
+<p>Since</p>
+
+<div class="formula">
+\[
+M=\chi_mH
+\]
+</div>
+
+<p>substituting this into the expression for \(B\),</p>
+
+<div class="formula">
+\[
+B=\mu_0(H+\chi_mH)
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+B=\mu_0(1+\chi_m)H
+\]
+</div>
+
+<p>But</p>
+
+<div class="formula">
+\[
+B=\mu H=\mu_0\mu_rH
+\]
+</div>
+
+<p>Comparing the two equations,</p>
+
+<div class="formula">
+\[
+\mu_0\mu_rH=\mu_0(1+\chi_m)H
+\]
+</div>
+
+<p>Hence,</p>
+
+<div class="formula">
+\[
+\boxed{\mu_r=1+\chi_m}
+\]
+</div>
+
+<div class="box.law">
+<strong>Important relationship:</strong>
+\[
+\boxed{\mu_r=1+\chi_m}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{\chi_m=\mu_r-1}
+\]
+</div>
+
+<h3>Interpretation of the Relationship</h3>
+
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Magnetic susceptibility \(\chi_m\)</th>
+<th>Relative permeability \(\mu_r\)</th>
+<th>Magnetic behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diamagnetic</td>
+<td>Small and negative</td>
+<td>Slightly less than 1</td>
+<td>Weakly repelled</td>
+</tr>
+<tr>
+<td>Paramagnetic</td>
+<td>Small and positive</td>
+<td>Slightly greater than 1</td>
+<td>Weakly attracted</td>
+</tr>
+<tr>
+<td>Ferromagnetic</td>
+<td>Large and positive</td>
+<td>Much greater than 1</td>
+<td>Strongly attracted</td>
+</tr>
+</tbody>
+</table>
+
+<div class="box.example">
+<strong>Example 1: Finding relative permeability</strong>
+
+<p>A material has magnetic susceptibility \(2.5\times10^{-3}\). Find its relative permeability.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Using</p>
+
+<div class="formula">
+\[
+\mu_r=1+\chi_m
+\]
+</div>
+
+<p>Given</p>
+
+<div class="formula">
+\[
+\chi_m=2.5\times10^{-3}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\mu_r=1+2.5\times10^{-3}
+\]
+
+$$
+\boxed{\mu_r=1.0025}
+$$
+
+</div>
+
+<p><strong>Answer:</strong> The relative permeability is \(1.0025\).</p>
+
+</details>
+</div>
+
+<div class="box.example">
+<strong>Example 2: Finding magnetic susceptibility</strong>
+
+<p>The relative permeability of a material is \(1.0008\). Find its magnetic susceptibility.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Using</p>
+
+<div class="formula">
+\[
+\chi_m=\mu_r-1
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\chi_m=1.0008-1
+\]
+
+$$
+\boxed{\chi_m=8\times10^{-4}}
+$$
+
+</div>
+
+<p><strong>Answer:</strong> The magnetic susceptibility is \(8\times10^{-4}\).</p>
+
+</details>
+</div>
+
+<h2>16.3 Hysteresis of Ferromagnetism</h2>
+
+<div class="box.definition">
+<strong>Magnetic hysteresis:</strong> The phenomenon in which the magnetization \(M\) or magnetic induction \(B\) of a ferromagnetic material lags behind the magnetizing field \(H\) when the magnetic field is changed is called magnetic hysteresis.
+</div>
+
+<p>Ferromagnetic materials contain magnetic domains. In an unmagnetized specimen, the magnetic moments of different domains are oriented in different directions, resulting in very small net magnetization.</p>
+
+<p>When an external magnetic field is applied, the magnetic domains gradually align with the applied field. As the field is increased, the magnetization increases until the material reaches <strong>saturation</strong>.</p>
+
+<h3>Hysteresis Loop</h3>
+
+<figure>
+<svg viewBox="0 0 800 520" role="img" aria-label="Magnetic hysteresis loop showing saturation, retentivity and coercivity">
+<rect x="0" y="0" width="800" height="520" rx="12" fill="#111"/>
+
+<text x="400" y="35" text-anchor="middle" fill="white" font-size="22">Magnetic Hysteresis Loop</text>
+
+<line x1="100" y1="270" x2="720" y2="270" stroke="white" stroke-width="2"/>
+<polygon points="720,270 705,263 705,277" fill="white"/>
+<polygon points="100,270 115,263 115,277" fill="white"/>
+
+<line x1="410" y1="80" x2="410" y2="460" stroke="white" stroke-width="2"/>
+<polygon points="410,80 403,95 417,95" fill="white"/>
+<polygon points="410,460 403,445 417,445" fill="white"/>
+
+<text x="725" y="278" fill="white" font-size="18">H</text> <text x="418" y="85" fill="white" font-size="18">B</text>
+
+<path d="M410 270
+C500 255,570 210,625 145
+C660 105,685 100,700 105
+C670 120,635 150,590 195
+C530 250,475 265,410 270
+C350 275,285 290,220 345
+C175 382,140 390,120 385
+C145 375,180 350,225 310
+C285 260,350 245,410 270
+C470 295,540 335,605 395
+C650 435,685 440,700 430
+C670 425,630 405,585 370
+C520 320,460 285,410 270
+C350 255,280 210,215 145
+C170 100,135 95,120 105
+C150 115,190 140,235 180
+C300 235,350 260,410 270"
+fill="none" stroke="white" stroke-width="4"/>
+
+<line x1="410" y1="270" x2="410" y2="150" stroke="white" stroke-width="1" stroke-dasharray="6,5"/>
+<text x="425" y="160" fill="white" font-size="16">Retentivity</text>
+
+<line x1="290" y1="270" x2="290" y2="290" stroke="white" stroke-width="1" stroke-dasharray="6,5"/>
+<text x="225" y="305" fill="white" font-size="16">Coercivity</text>
+
+<text x="625" y="105" fill="white" font-size="16">+ Saturation</text> <text x="105" y="90" fill="white" font-size="16">− Saturation</text>
+
+<text x="400" y="500" text-anchor="middle" fill="white" font-size="17">Magnetizing field H</text> <text x="45" y="270" transform="rotate(-90 45 270)" text-anchor="middle" fill="white" font-size="17">Magnetic induction B</text> </svg>
+
+<figcaption>Figure 1: Magnetic hysteresis loop of a ferromagnetic material</figcaption>
+</figure>
+
+<p>The hysteresis loop represents the variation of magnetic induction \(B\) with the magnetizing field \(H\).</p>
+
+<h3>Stages of the Hysteresis Cycle</h3>
+
+<h4>1. Initial Magnetization</h4>
+
+<p>Starting from an unmagnetized state, as \(H\) is increased, \(B\) increases. Initially, the increase may be rapid because magnetic domains begin to align with the applied field.</p>
+
+<h4>2. Saturation</h4>
+
+<p>When nearly all magnetic domains are aligned, further increase in \(H\) produces only a small increase in \(B\). This condition is called <strong>magnetic saturation</strong>.</p>
+
+<h4>3. Retentivity or Remanence</h4>
+
+<p>When the magnetizing field is reduced to zero after the material has been magnetized, some magnetism remains in the material. The ability of a material to retain magnetism is called <strong>retentivity</strong> or <strong>remanence</strong>.</p>
+
+<div class="box.definition">
+<strong>Retentivity:</strong> The ability of a magnetic material to retain magnetism after the external magnetizing field is removed is called retentivity.
+</div>
+
+<h4>4. Coercivity</h4>
+
+<p>To reduce the residual magnetism to zero, a reverse magnetic field must be applied. The magnitude of the reverse field required to make the magnetization or magnetic induction zero is called the <strong>coercive field</strong> or coercivity.</p>
+
+<div class="box.definition">
+<strong>Coercivity:</strong> The magnitude of the reverse magnetizing field required to reduce the residual magnetism of a material to zero is called coercivity.
+</div>
+
+<h4>5. Reverse Saturation</h4>
+
+<p>If the reverse magnetic field is increased further, the material becomes saturated in the opposite direction.</p>
+
+<p>When the reverse field is removed and then restored in the original direction, the complete hysteresis loop is obtained.</p>
+
+<h3>Energy Loss Due to Hysteresis</h3>
+
+<p>During repeated magnetization and demagnetization, some energy is lost in the form of heat. This energy loss is called <strong>hysteresis loss</strong>.</p>
+
+<div class="box.law">
+<strong>Important:</strong> The energy loss per unit volume per cycle is proportional to the area enclosed by the hysteresis loop.
+</div>
+
+<div class="formula">
+\[
+\boxed{W_h\propto\text{area of hysteresis loop}}
+\]
+</div>
+
+<p>A narrow hysteresis loop represents small hysteresis loss, whereas a wide hysteresis loop represents large hysteresis loss.</p>
+
+<h3>Soft and Hard Magnetic Materials</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Soft magnetic material</th>
+<th>Hard magnetic material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coercivity</td>
+<td>Small</td>
+<td>Large</td>
+</tr>
+<tr>
+<td>Retentivity</td>
+<td>Relatively small</td>
+<td>Large</td>
+</tr>
+<tr>
+<td>Hysteresis loop</td>
+<td>Narrow</td>
+<td>Wide</td>
+</tr>
+<tr>
+<td>Hysteresis loss</td>
+<td>Small</td>
+<td>Large</td>
+</tr>
+<tr>
+<td>Magnetization</td>
+<td>Easy</td>
+<td>Difficult</td>
+</tr>
+<tr>
+<td>Demagnetization</td>
+<td>Easy</td>
+<td>Difficult</td>
+</tr>
+<tr>
+<td>Applications</td>
+<td>Transformer cores, electromagnets</td>
+<td>Permanent magnets</td>
+</tr>
+</tbody>
+</table>
+
+<figure>
+<svg viewBox="0 0 850 430" role="img" aria-label="Comparison of narrow and wide hysteresis loops">
+<rect x="0" y="0" width="850" height="430" rx="12" fill="#111"/>
+
+<text x="425" y="32" text-anchor="middle" fill="white" font-size="22">Soft and Hard Magnetic Materials</text>
+
+<line x1="80" y1="220" x2="390" y2="220" stroke="white" stroke-width="2"/>
+<line x1="235" y1="90" x2="235" y2="350" stroke="white" stroke-width="2"/>
+
+<path d="M235 220 C285 205 310 165 320 120 C325 95 300 90 275 110 C255 130 245 175 235 220 C225 265 215 310 195 330 C170 350 145 340 150 315 C160 270 185 235 235 220" fill="none" stroke="white" stroke-width="4"/>
+
+<text x="235" y="385" text-anchor="middle" fill="white" font-size="18">Soft magnetic material</text> <text x="235" y="405" text-anchor="middle" fill="white" font-size="15">Narrow loop → small loss</text>
+
+<line x1="460" y1="220" x2="770" y2="220" stroke="white" stroke-width="2"/>
+<line x1="615" y1="90" x2="615" y2="350" stroke="white" stroke-width="2"/>
+
+<path d="M615 220 C700 195 745 145 755 105 C760 75 710 65 665 95 C630 120 620 170 615 220 C610 270 600 320 555 345 C510 365 470 345 480 305 C495 260 530 230 615 220" fill="none" stroke="white" stroke-width="4"/>
+
+<text x="615" y="385" text-anchor="middle" fill="white" font-size="18">Hard magnetic material</text> <text x="615" y="405" text-anchor="middle" fill="white" font-size="15">Wide loop → large loss</text> </svg>
+
+<figcaption>Figure 2: Qualitative comparison of hysteresis loops</figcaption>
+</figure>
+
+<div class="box.example">
+<strong>Example 3: Hysteresis loss</strong>
+
+<p>A magnetic material has a hysteresis-loop area of \(0.20\,\mathrm{J\,m^{-3}}\) per cycle. If the material undergoes \(50\) magnetization cycles per second, find the hysteresis power loss per unit volume.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Energy loss per unit volume per cycle is</p>
+
+<div class="formula">
+\[
+W=0.20\,\mathrm{J\,m^{-3}}
+\]
+</div>
+
+<p>Frequency of magnetization is</p>
+
+<div class="formula">
+\[
+f=50\,\mathrm{s^{-1}}
+\]
+</div>
+
+<p>Therefore, power loss per unit volume is</p>
+
+<div class="formula">
+\[
+P= Wf
+\]
+</div>
+
+<div class="formula">
+\[
+P=0.20\times50
+\]
+
+$$
+\boxed{P=10\,\mathrm{W\,m^{-3}}}
+$$
+
+</div>
+
+<p><strong>Answer:</strong> The hysteresis power loss is \(10\,\mathrm{W\,m^{-3}}\).</p>
+
+</details>
+</div>
+
+<h2>16.4 Diamagnetic, Paramagnetic and Ferromagnetic Materials</h2>
+
+<p>Magnetic materials are classified according to their response to an external magnetic field into three main groups:</p>
+
+<ul>
+<li>Diamagnetic materials</li>
+<li>Paramagnetic materials</li>
+<li>Ferromagnetic materials</li>
+</ul>
+
+<h3>Diamagnetic Materials</h3>
+
+<div class="box.definition">
+<strong>Diamagnetic materials:</strong> Materials that are weakly repelled by an external magnetic field and acquire magnetization opposite to the applied field are called diamagnetic materials.
+</div>
+
+<p>In diamagnetic materials, the magnetic susceptibility is small and negative.</p>
+
+<div class="formula">
+\[
+\boxed{\chi_m<0}
+\]
+</div>
+
+<p>Since</p>
+
+<div class="formula">
+\[
+\mu_r=1+\chi_m
+\]
+</div>
+
+<p>and \(\chi_m\) is negative,</p>
+
+<div class="formula">
+\[
+\boxed{\mu_r<1}
+\]
+</div>
+
+<p>Diamagnetic materials tend to move from a region of stronger magnetic field toward a region of weaker magnetic field.</p>
+
+<p>Examples include bismuth, copper, silver, gold, water and quartz.</p>
+
+<h3>Paramagnetic Materials</h3>
+
+<div class="box.definition">
+<strong>Paramagnetic materials:</strong> Materials that are weakly attracted by an external magnetic field and acquire magnetization in the direction of the applied field are called paramagnetic materials.
+</div>
+
+<p>For paramagnetic materials, magnetic susceptibility is small and positive.</p>
+
+<div class="formula">
+\[
+\boxed{\chi_m>0}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{\mu_r>1}
+\]
+</div>
+
+<p>Paramagnetic materials tend to move from a region of weaker magnetic field toward a region of stronger magnetic field.</p>
+
+<p>Examples include aluminium, platinum, oxygen and manganese salts.</p>
+
+<h3>Ferromagnetic Materials</h3>
+
+<div class="box.definition">
+<strong>Ferromagnetic materials:</strong> Materials that are strongly attracted by an external magnetic field and can retain strong magnetization after the external field is removed are called ferromagnetic materials.
+</div>
+
+<p>Ferromagnetic materials have very large positive magnetic susceptibility and relative permeability much greater than unity.</p>
+
+<div class="formula">
+\[
+\boxed{\chi_m\gg1}
+\]
+</div>
+
+<div class="formula">
+\[
+\boxed{\mu_r\gg1}
+\]
+</div>
+
+<p>The strong magnetic behaviour of ferromagnetic materials is associated with the alignment of magnetic domains.</p>
+
+<p>Examples include iron, cobalt, nickel and several alloys.</p>
+
+<h3>Magnetic Domains</h3>
+
+<p>A ferromagnetic material consists of small regions called <strong>magnetic domains</strong>. Within each domain, the magnetic moments of many atoms are aligned in the same direction.</p>
+
+<p>In an unmagnetized ferromagnetic material, the domains are oriented in different directions, so the net magnetic moment is small.</p>
+
+<p>When an external magnetic field is applied, domains favourably oriented with the field grow and rotate toward the field direction. As a result, the material becomes strongly magnetized.</p>
+
+<figure>
+<svg viewBox="0 0 850 420" role="img" aria-label="Magnetic domains before and after magnetization">
+<rect x="0" y="0" width="850" height="420" rx="12" fill="#111"/>
+
+<text x="210" y="35" text-anchor="middle" fill="white" font-size="21">Before magnetization</text> <text x="640" y="35" text-anchor="middle" fill="white" font-size="21">After magnetization</text>
+
+<rect x="60" y="70" width="300" height="260" fill="none" stroke="white" stroke-width="2"/>
+<rect x="490" y="70" width="300" height="260" fill="none" stroke="white" stroke-width="2"/>
+
+<line x1="90" y1="110" x2="140" y2="140" stroke="white" stroke-width="3"/>
+<polygon points="140,140 127,136 134,125" fill="white"/>
+
+<line x1="190" y1="110" x2="150" y2="165" stroke="white" stroke-width="3"/>
+<polygon points="150,165 151,151 162,159" fill="white"/>
+
+<line x1="270" y1="110" x2="320" y2="100" stroke="white" stroke-width="3"/>
+<polygon points="320,100 307,96 310,108" fill="white"/>
+
+<line x1="100" y1="210" x2="155" y2="190" stroke="white" stroke-width="3"/>
+<polygon points="155,190 143,187 147,199" fill="white"/>
+
+<line x1="230" y1="200" x2="205" y2="260" stroke="white" stroke-width="3"/>
+<polygon points="205,260 202,246 214,251" fill="white"/>
+
+<line x1="290" y1="250" x2="335" y2="215" stroke="white" stroke-width="3"/>
+<polygon points="335,215 322,219 330,228" fill="white"/>
+
+<line x1="530" y1="110" x2="590" y2="110" stroke="white" stroke-width="3"/>
+<polygon points="590,110 577,103 577,117" fill="white"/>
+
+<line x1="620" y1="160" x2="680" y2="160" stroke="white" stroke-width="3"/>
+<polygon points="680,160 667,153 667,167" fill="white"/>
+
+<line x1="530" y1="220" x2="590" y2="220" stroke="white" stroke-width="3"/>
+<polygon points="590,220 577,213 577,227" fill="white"/>
+
+<line x1="650" y1="270" x2="710" y2="270" stroke="white" stroke-width="3"/>
+<polygon points="710,270 697,263 697,277" fill="white"/>
+
+<line x1="540" y1="300" x2="600" y2="300" stroke="white" stroke-width="3"/>
+<polygon points="600,300 587,293 587,307" fill="white"/>
+
+<line x1="600" y1="70" x2="600" y2="40" stroke="white" stroke-width="2"/>
+<polygon points="600,40 593,53 607,53" fill="white"/>
+
+<text x="640" y="390" text-anchor="middle" fill="white" font-size="17">Domains become largely aligned</text> <text x="210" y="390" text-anchor="middle" fill="white" font-size="17">Domains have random orientations</text> </svg>
+
+<figcaption>Figure 3: Magnetic domains in a ferromagnetic material</figcaption>
+</figure>
+
+<h3>Comparison of Magnetic Materials</h3>
+
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Diamagnetic</th>
+<th>Paramagnetic</th>
+<th>Ferromagnetic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Response to magnetic field</td>
+<td>Weakly repelled</td>
+<td>Weakly attracted</td>
+<td>Strongly attracted</td>
+</tr>
+<tr>
+<td>Susceptibility \(\chi_m\)</td>
+<td>Small negative</td>
+<td>Small positive</td>
+<td>Large positive</td>
+</tr>
+<tr>
+<td>Relative permeability \(\mu_r\)</td>
+<td>Slightly less than 1</td>
+<td>Slightly greater than 1</td>
+<td>Much greater than 1</td>
+</tr>
+<tr>
+<td>Direction of magnetization</td>
+<td>Opposite to applied field</td>
+<td>Same as applied field</td>
+<td>Strongly along applied field</td>
+</tr>
+<tr>
+<td>Magnetic domains</td>
+<td>No permanent domain alignment</td>
+<td>Individual atomic magnetic moments tend to align weakly</td>
+<td>Well-defined magnetic domains</td>
+</tr>
+<tr>
+<td>Retains magnetism</td>
+<td>No</td>
+<td>No appreciable retention</td>
+<td>Can retain strong magnetism</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>Bismuth, copper, silver</td>
+<td>Aluminium, platinum, oxygen</td>
+<td>Iron, cobalt, nickel</td>
+</tr>
+</tbody>
+</table>
+
+<div class="box.example">
+<strong>Example 4: Identifying a magnetic material</strong>
+
+<p>A material has magnetic susceptibility \(\chi_m=-2\times10^{-5}\). Determine its relative permeability and identify the type of magnetic material.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Using</p>
+
+<div class="formula">
+\[
+\mu_r=1+\chi_m
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\mu_r=1-2\times10^{-5}
+\]
+
+$$
+\boxed{\mu_r=0.99998}
+$$
+
+</div>
+
+<p>Since the susceptibility is negative and the relative permeability is slightly less than unity, the material is <strong>diamagnetic</strong>.</p>
+
+<p><strong>Answer:</strong> \(\mu_r=0.99998\), and the material is diamagnetic.</p>
+
+</details>
+</div>
+
+<div class="box.example">
+<strong>Example 5: Finding magnetization</strong>
+
+<p>A magnetic material has magnetic susceptibility \(4\times10^{-3}\) and is placed in a magnetic field of intensity \(500\,\mathrm{A\,m^{-1}}\). Find its magnetization.</p>
+
+<details class="solution">
+<summary>Show solution</summary>
+
+<p>Using</p>
+
+<div class="formula">
+\[
+M=\chi_mH
+\]
+</div>
+
+<p>Given</p>
+
+<div class="formula">
+\[
+\chi_m=4\times10^{-3},
+\qquad
+H=500\,\mathrm{A\,m^{-1}}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+M=(4\times10^{-3})(500)
+\]
+
+$$
+\boxed{M=2\,\mathrm{A\,m^{-1}}}
+$$
+
+</div>
+
+<p><strong>Answer:</strong> The magnetization is \(2\,\mathrm{A\,m^{-1}}\).</p>
+
+</details>
+</div>
+
+<h2>Important Applications</h2>
+
+<h3>Soft Magnetic Materials</h3>
+
+<ul>
+<li>Transformer cores</li>
+<li>Electromagnets</li>
+<li>Electric motors and generators</li>
+<li>Magnetic shielding</li>
+</ul>
+
+<h3>Hard Magnetic Materials</h3>
+
+<ul>
+<li>Permanent magnets</li>
+<li>Loudspeakers</li>
+<li>Magnetic recording devices</li>
+<li>Compass needles</li>
+</ul>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Do not confuse magnetic permeability \(\mu\) with relative permeability \(\mu_r\).</li>
+<li>Relative permeability is dimensionless.</li>
+<li>Magnetic susceptibility is also dimensionless.</li>
+<li>The correct relationship is \(\mu_r=1+\chi_m\).</li>
+<li>Diamagnetic materials have negative susceptibility.</li>
+<li>Paramagnetic materials have small positive susceptibility.</li>
+<li>Ferromagnetic materials have large positive susceptibility.</li>
+<li>Retentivity measures the ability to retain magnetism.</li>
+<li>Coercivity is the reverse magnetic field required to remove the residual magnetism.</li>
+<li>The area of a hysteresis loop represents energy loss per unit volume per magnetization cycle.</li>
+<li>Soft magnetic materials have narrow hysteresis loops and small hysteresis losses.</li>
+<li>Hard magnetic materials have wide hysteresis loops and high retentivity and coercivity.</li>
+</ul>
+
+<h2>Key Points Summary</h2>
+
+<ul class="key-points">
+<li>Magnetic induction is given by \(B=\mu H\).</li>
+<li>Relative permeability is \(\mu_r=\mu/\mu_0\).</li>
+<li>Magnetic susceptibility is \(\chi_m=M/H\).</li>
+<li>The fundamental relationship is \(\mu_r=1+\chi_m\).</li>
+<li>Diamagnetic materials have \(\chi_m<0\) and \(\mu_r<1\).</li>
+<li>Paramagnetic materials have small positive \(\chi_m\) and \(\mu_r>1\).</li>
+<li>Ferromagnetic materials have large positive \(\chi_m\) and \(\mu_r\gg1\).</li>
+<li>Ferromagnetic materials consist of magnetic domains.</li>
+<li>Hysteresis is the lagging of magnetization or magnetic induction behind the magnetizing field.</li>
+<li>Retentivity is the ability of a material to retain magnetism.</li>
+<li>Coercivity is the reverse field required to reduce residual magnetism to zero.</li>
+<li>The area of the hysteresis loop represents energy loss per unit volume per cycle.</li>
+<li>Soft magnetic materials are suitable for transformer cores and electromagnets.</li>
+<li>Hard magnetic materials are suitable for permanent magnets.</li>
+</ul>
