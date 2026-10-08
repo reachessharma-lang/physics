@@ -1,0 +1,923 @@
+---
+title: Refraction through prism
+grade: XII
+chapters: [16]
+date: 2026-10-02
+---
+<h2>15. Refraction Through Prisms</h2>
+
+<p>A <strong>prism</strong> is a transparent refracting medium bounded by two plane refracting surfaces inclined to each other at an angle. The angle between the two refracting surfaces is called the <strong>angle of prism</strong>.</p>
+
+<p>When a ray of light passes through a prism, it undergoes refraction at both refracting surfaces. As a result, the emergent ray is deviated from its original direction.</p>
+
+<div class="box definition">
+  <p><strong>Angle of prism \(A\):</strong> The angle between the two refracting faces of a prism.</p>
+
+  <p><strong>Angle of deviation \(\delta\):</strong> The angle through which the emergent ray is deviated from the original direction of the incident ray.</p>
+</div>
+
+<h3>Basic Geometry of a Prism</h3>
+
+<figure>
+<svg viewBox="0 0 850 520" role="img" aria-label="Ray diagram showing refraction through a triangular prism, angles of incidence, refraction, emergence and deviation">
+  <rect x="0" y="0" width="850" height="520" rx="12" fill="#111"/>
+
+  <!-- Prism -->
+
+<polygon points="400,90 650,410 250,410"
+        fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- Prism angle A -->
+
+<path d="M380 115 A45 45 0 0 0 420 115"
+     fill="none" stroke="white" stroke-width="2"/> <text x="400" y="145" text-anchor="middle" fill="white" font-size="22">A</text>
+
+  <!-- Incident ray -->
+
+<line x1="80" y1="250" x2="325" y2="250"
+     stroke="white" stroke-width="3"/> <polygon points="325,250 311,242 311,258" fill="white"/> <text x="85" y="225" fill="white" font-size="18">Incident ray</text>
+
+  <!-- First normal -->
+
+<line x1="325" y1="250" x2="385" y2="205"
+     stroke="white" stroke-width="2"
+     stroke-dasharray="8 6"/> <text x="330" y="215" fill="white" font-size="17">N₁</text>
+
+  <!-- Ray inside prism -->
+
+<line x1="325" y1="250" x2="510" y2="285"
+     stroke="white" stroke-width="3"/> <polygon points="510,285 496,277 498,292" fill="white"/>
+
+  <!-- Second normal -->
+
+<line x1="510" y1="285" x2="560" y2="245"
+     stroke="white" stroke-width="2"
+     stroke-dasharray="8 6"/> <text x="545" y="245" fill="white" font-size="17">N₂</text>
+
+  <!-- Emergent ray -->
+
+<line x1="510" y1="285" x2="735" y2="285"
+     stroke="white" stroke-width="3"/> <polygon points="735,285 721,277 721,293" fill="white"/> <text x="650" y="260" fill="white" font-size="18">Emergent ray</text>
+
+  <!-- Original direction -->
+
+<line x1="80" y1="250" x2="735" y2="250"
+     stroke="white" stroke-width="1.5"
+     stroke-dasharray="10 7"/> <text x="555" y="235" fill="white" font-size="16">Original direction</text>
+
+  <!-- i -->
+
+<path d="M325 250 A45 45 0 0 1 350 220"
+     fill="none" stroke="white" stroke-width="2"/> <text x="348" y="225" fill="white" font-size="20">i</text>
+
+  <!-- r₁ -->
+
+<path d="M325 250 A42 42 0 0 0 360 260"
+     fill="none" stroke="white" stroke-width="2"/> <text x="350" y="280" fill="white" font-size="20">r₁</text>
+
+  <!-- r₂ -->
+
+<path d="M510 285 A42 42 0 0 1 530 255"
+     fill="none" stroke="white" stroke-width="2"/> <text x="530" y="275" fill="white" font-size="20">r₂</text>
+
+  <!-- e -->
+
+<path d="M510 285 A45 45 0 0 0 550 285"
+     fill="none" stroke="white" stroke-width="2"/> <text x="548" y="310" fill="white" font-size="20">e</text>
+
+  <!-- Deviation angle -->
+
+<path d="M650 250 A70 70 0 0 1 650 285"
+     fill="none" stroke="white" stroke-width="2"/> <text x="670" y="275" fill="white" font-size="20">δ</text>
+
+  <text x="425" y="475" text-anchor="middle" fill="white" font-size="19">
+    Refraction through a triangular prism
+  </text>
+</svg>
+<figcaption>Figure 15.1: Refraction of a ray through a prism showing \(i\), \(r_1\), \(r_2\), \(e\), prism angle \(A\), and deviation \(\delta\).</figcaption>
+</figure>
+
+<h3>Important Relations for a Prism</h3>
+
+<p>From the geometry of the prism, the angle of prism is related to the angles of refraction inside the prism by</p>
+
+<div class="formula">\[
+\boxed{A=r_1+r_2}
+\]</div>
+
+<p>The total deviation produced by the prism is</p>
+
+<div class="formula">\[
+\boxed{\delta=i+e-A}
+\]</div>
+
+<div class="box note">
+  <p>Here, \(i\) is the angle of incidence, \(e\) is the angle of emergence, \(r_1\) and \(r_2\) are the angles of refraction inside the prism, \(A\) is the angle of prism, and \(\delta\) is the angle of deviation.</p>
+</div>
+
+<h2>15.1 Minimum Deviation Condition</h2>
+
+<p>As the angle of incidence \(i\) is gradually increased, the angle of deviation \(\delta\) initially decreases, reaches a minimum value, and then increases again.</p>
+
+<div class="box definition">
+  <p><strong>Angle of minimum deviation \(\delta_m\):</strong> The minimum value of the angle of deviation produced by a prism for a particular wavelength of light is called the angle of minimum deviation.</p>
+</div>
+
+<p>At the condition of minimum deviation, the path of the ray through the prism becomes symmetrical.</p>
+
+<div class="box law">
+  <p><strong>Condition for minimum deviation:</strong></p>
+
+  <div class="formula">\[
+  \boxed{i=e}
+  \]</div>
+
+  <p>Consequently, the two angles of refraction inside the prism are equal:</p>
+
+  <div class="formula">\[
+  \boxed{r_1=r_2}
+  \]</div>
+</div>
+
+<p>Since</p>
+
+<div class="formula">\[
+A=r_1+r_2
+\]</div>
+
+<p>At minimum deviation, \(r_1=r_2=r\), so</p>
+
+<div class="formula">\[
+A=2r
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\boxed{r=\frac{A}{2}}
+\]</div>
+
+<p>Also, using</p>
+
+<div class="formula">\[
+\delta=i+e-A
+\]</div>
+
+<p>and \(i=e=i_m\) at minimum deviation,</p>
+
+<div class="formula">\[
+\delta_m=2i_m-A
+\]</div>
+
+<p>Hence,</p>
+
+<div class="formula">\[
+\boxed{i_m=\frac{A+\delta_m}{2}}
+\]</div>
+
+<h3>Symmetrical Path at Minimum Deviation</h3>
+
+<figure>
+<svg viewBox="0 0 850 500" role="img" aria-label="Symmetrical ray path through a prism at minimum deviation">
+
+  <rect x="0" y="0" width="850" height="500" rx="12" fill="#111"/>
+
+  <!-- Prism -->
+
+<polygon points="400,70 650,390 250,390"
+        fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- Incident ray -->
+
+<line x1="70" y1="230" x2="325" y2="230"
+     stroke="white" stroke-width="3"/> <polygon points="325,230 311,222 311,238" fill="white"/>
+
+  <!-- Refracted ray -->
+
+<line x1="325" y1="230" x2="510" y2="300"
+     stroke="white" stroke-width="3"/>
+
+  <!-- Emergent ray -->
+
+<line x1="510" y1="300" x2="765" y2="300"
+     stroke="white" stroke-width="3"/> <polygon points="765,300 751,292 751,308" fill="white"/>
+
+  <!-- Normals -->
+
+<line x1="325" y1="230" x2="385" y2="185"
+     stroke="white" stroke-width="2" stroke-dasharray="8 6"/> <line x1="510" y1="300" x2="570" y2="255"
+     stroke="white" stroke-width="2" stroke-dasharray="8 6"/>
+
+  <!-- Original direction -->
+
+<line x1="70" y1="230" x2="765" y2="230"
+     stroke="white" stroke-width="1.5" stroke-dasharray="10 7"/>
+
+  <!-- Symmetry line -->
+
+<line x1="400" y1="70" x2="450" y2="390"
+     stroke="white" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+  <!-- A -->
+
+<text x="400" y="55" text-anchor="middle" fill="white" font-size="21">A</text>
+
+  <!-- equal i/e labels -->
+
+<text x="340" y="205" fill="white" font-size="21">iₘ</text> <text x="535" y="285" fill="white" font-size="21">iₘ</text>
+
+  <!-- r -->
+
+<text x="405" y="275" fill="white" font-size="21">r = A/2</text>
+
+  <!-- deviation -->
+
+<path d="M650 230 A80 80 0 0 1 650 300"
+     fill="none" stroke="white" stroke-width="2"/> <text x="675" y="270" fill="white" font-size="21">δₘ</text>
+
+  <text x="425" y="455" text-anchor="middle" fill="white" font-size="19">
+    Symmetrical path at minimum deviation
+  </text>
+</svg>
+<figcaption>Figure 15.2: At minimum deviation, \(i=e\) and \(r_1=r_2=A/2\); the ray path through the prism is symmetrical.</figcaption>
+</figure>
+
+<h3>Why Is the Path Symmetrical at Minimum Deviation?</h3>
+
+<p>The angle of deviation depends on the angle of incidence. When the prism is rotated through the position of minimum deviation, the incident and emergent rays make equal angles with the corresponding normals.</p>
+
+<div class="formula">\[
+i=e
+\]</div>
+
+<p>Since</p>
+
+<div class="formula">\[
+A=r_1+r_2
+\]</div>
+
+<p>and \(r_1=r_2\), we obtain</p>
+
+<div class="formula">\[
+r_1=r_2=\frac{A}{2}
+\]</div>
+
+<p>Thus, the path of the light ray inside the prism is symmetrical about the plane bisecting the prism angle.</p>
+
+<h3>Deviation Curve</h3>
+
+<p>The variation of the angle of deviation \(\delta\) with the angle of incidence \(i\) is represented by a deviation curve.</p>
+
+<figure>
+<svg viewBox="0 0 760 480" role="img" aria-label="Graph of angle of deviation versus angle of incidence showing minimum deviation">
+
+  <rect x="0" y="0" width="760" height="480" rx="12" fill="#111"/>
+
+  <!-- axes -->
+
+<line x1="100" y1="400" x2="690" y2="400"
+     stroke="white" stroke-width="3"/> <line x1="100" y1="400" x2="100" y2="60"
+     stroke="white" stroke-width="3"/>
+
+  <!-- arrows -->
+
+  <polygon points="690,400 675,392 675,408" fill="white"/>
+  <polygon points="100,60 92,75 108,75" fill="white"/>
+
+  <!-- curve -->
+
+<path d="M145 130
+        C205 220, 270 315, 365 350
+        C425 372, 470 350, 525 290
+        C570 240, 615 160, 660 105"
+     fill="none" stroke="white" stroke-width="4"/>
+
+  <!-- minimum point -->
+
+  <circle cx="405" cy="365" r="5" fill="white"/>
+
+  <!-- horizontal minimum line -->
+
+<line x1="100" y1="365" x2="405" y2="365"
+     stroke="white" stroke-width="1.5"
+     stroke-dasharray="7 6"/>
+
+  <!-- labels -->
+
+  <text x="385" y="445" fill="white" font-size="19">
+    Angle of incidence, i
+  </text>
+
+<text x="30" y="250" transform="rotate(-90 30 250)"
+     fill="white" font-size="19">
+Angle of deviation, δ </text>
+
+  <text x="415" y="350" fill="white" font-size="18">
+    δₘ
+  </text>
+
+  <text x="410" y="395" fill="white" font-size="17">
+    iₘ
+  </text>
+
+<text x="400" y="55" text-anchor="middle"
+     fill="white" font-size="20">
+Deviation curve </text> </svg>
+
+<figcaption>Figure 15.3: Variation of angle of deviation with angle of incidence. The lowest point gives the angle of minimum deviation \(\delta_m\).</figcaption>
+</figure>
+
+<div class="box tip">
+  <p><strong>Exam point:</strong> At minimum deviation, the deviation is minimum and the ray passes symmetrically through the prism. Therefore, \(i=e\) and \(r_1=r_2=A/2\).</p>
+</div>
+
+<h2>15.2 Relation Between Angle of Prism, Angle of Minimum Deviation and Refractive Index</h2>
+
+<p>Let \(A\) be the angle of the prism, \(\delta_m\) the angle of minimum deviation, \(i_m\) the angle of incidence at minimum deviation, and \(r\) the angle of refraction inside the prism.</p>
+
+<p>At minimum deviation:</p>
+
+<div class="formula">\[
+i=e=i_m
+\]</div>
+
+<p>and</p>
+
+<div class="formula">\[
+r_1=r_2=r
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+A=r_1+r_2=2r
+\]</div>
+
+<p>Hence,</p>
+
+<div class="formula">\[
+\boxed{r=\frac{A}{2}}
+\]</div>
+
+<p>Also,</p>
+
+<div class="formula">\[
+\delta_m=i_m+e-A
+\]</div>
+
+<p>Since \(i_m=e\),</p>
+
+<div class="formula">\[
+\delta_m=2i_m-A
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\boxed{i_m=\frac{A+\delta_m}{2}}
+\]</div>
+
+<h3>Derivation of Refractive Index of the Prism</h3>
+
+<p>Applying Snell's law at the first refracting surface:</p>
+
+<div class="formula">\[
+\mu=\frac{\sin i_m}{\sin r}
+\]</div>
+
+<p>Using</p>
+
+<div class="formula">\[
+i_m=\frac{A+\delta_m}{2}
+\]</div>
+
+<p>and</p>
+
+<div class="formula">\[
+r=\frac{A}{2}
+\]</div>
+
+<p>we obtain</p>
+
+<div class="formula">\[
+\boxed{
+\mu=
+\frac{
+\sin\left(\frac{A+\delta_m}{2}\right)
+}{
+\sin\left(\frac{A}{2}\right)
+}
+}
+\]</div>
+
+<div class="box law">
+  <p><strong>Prism formula at minimum deviation:</strong></p>
+
+  <div class="formula">\[
+  \boxed{
+  \mu=
+  \frac{
+  \sin\left(\frac{A+\delta_m}{2}\right)
+  }{
+  \sin\left(\frac{A}{2}\right)
+  }
+  }
+  \]</div>
+
+  <p>This equation is used to determine the refractive index of the material of a prism when its angle \(A\) and angle of minimum deviation \(\delta_m\) are known.</p>
+</div>
+
+<h3>Special Case: Equilateral Prism</h3>
+
+<p>For an equilateral prism,</p>
+
+<div class="formula">\[
+A=60^\circ
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\boxed{
+\mu=
+\frac{\sin\left(\frac{60^\circ+\delta_m}{2}\right)}
+{\sin30^\circ}
+}
+\]</div>
+
+<p>Since \(\sin30^\circ=1/2\),</p>
+
+<div class="formula">\[
+\boxed{
+\mu=2\sin\left(\frac{60^\circ+\delta_m}{2}\right)
+}
+\]</div>
+
+<h3>Worked Example 1: Finding Refractive Index</h3>
+
+<div class="box example">
+  <p><strong>Question:</strong> A prism has an angle of \(60^\circ\) and produces a minimum deviation of \(40^\circ\). Find the refractive index of its material.</p>
+
+  <details class="solution">
+    <summary>Show solution</summary>
+
+```
+<p>Using the prism formula,</p>
+
+<div class="formula">\[
+\mu=
+\frac{
+\sin\left(\frac{A+\delta_m}{2}\right)
+}{
+\sin\left(\frac{A}{2}\right)
+}
+\]</div>
+
+<p>Substituting \(A=60^\circ\) and \(\delta_m=40^\circ\):</p>
+
+<div class="formula">\[
+\mu=
+\frac{\sin50^\circ}{\sin30^\circ}
+\]</div>
+
+<div class="formula">\[
+\mu=
+\frac{0.7660}{0.5}
+\approx1.532
+\]</div>
+
+<p><strong>Answer:</strong> The refractive index of the prism material is approximately \(1.53\).</p>
+```
+
+  </details>
+</div>
+
+<h3>Worked Example 2: Finding Minimum Deviation</h3>
+
+<div class="box example">
+  <p><strong>Question:</strong> A prism has an angle of \(60^\circ\) and refractive index \(1.5\). Find its angle of minimum deviation.</p>
+
+  <details class="solution">
+    <summary>Show solution</summary>
+
+```
+<p>Using</p>
+
+<div class="formula">\[
+\mu=
+\frac{
+\sin\left(\frac{A+\delta_m}{2}\right)
+}{
+\sin\left(\frac{A}{2}\right)
+}
+\]</div>
+
+<p>For \(A=60^\circ\):</p>
+
+<div class="formula">\[
+1.5=
+\frac{
+\sin\left(\frac{60^\circ+\delta_m}{2}\right)
+}{\sin30^\circ}
+\]</div>
+
+<p>Since \(\sin30^\circ=0.5\),</p>
+
+<div class="formula">\[
+\sin\left(\frac{60^\circ+\delta_m}{2}\right)=0.75
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\frac{60^\circ+\delta_m}{2}
+=\sin^{-1}(0.75)
+\approx48.59^\circ
+\]</div>
+
+<div class="formula">\[
+\delta_m=2(48.59^\circ)-60^\circ
+\]</div>
+
+<div class="formula">\[
+\boxed{\delta_m\approx37.18^\circ}
+\]</div>
+
+<p><strong>Answer:</strong> The angle of minimum deviation is approximately \(37.2^\circ\).</p>
+```
+
+  </details>
+</div>
+
+<h3>Worked Example 3: Finding the Angle of Refraction at Minimum Deviation</h3>
+
+<div class="box example">
+  <p><strong>Question:</strong> A prism has an angle of \(50^\circ\). Find the angle of refraction inside the prism when the prism is in the condition of minimum deviation.</p>
+
+  <details class="solution">
+    <summary>Show solution</summary>
+
+```
+<p>At minimum deviation,</p>
+
+<div class="formula">\[
+r_1=r_2
+\]</div>
+
+<p>Also,</p>
+
+<div class="formula">\[
+A=r_1+r_2=2r
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+r=\frac{A}{2}
+=\frac{50^\circ}{2}
+=25^\circ
+\]</div>
+
+<p><strong>Answer:</strong> The angle of refraction at each face is \(25^\circ\).</p>
+```
+
+  </details>
+</div>
+
+<h2>15.3 Determination of Refractive Index of Prism Material</h2>
+
+<p>The refractive index of the material of a prism can be determined experimentally by measuring:</p>
+
+<ul>
+  <li>the angle of the prism \(A\), and</li>
+  <li>the angle of minimum deviation \(\delta_m\).</li>
+</ul>
+
+<p>The refractive index is then calculated using</p>
+
+<div class="formula">\[
+\boxed{
+\mu=
+\frac{
+\sin\left(\frac{A+\delta_m}{2}\right)
+}{
+\sin\left(\frac{A}{2}\right)
+}
+}
+\]</div>
+
+<h3>Experimental Idea</h3>
+
+<ol>
+  <li>Place the prism on a prism table.</li>
+  <li>Allow a narrow beam of monochromatic light to fall on one face of the prism.</li>
+  <li>Observe the emergent ray through a telescope.</li>
+  <li>Rotate the prism gradually and observe the position of the emergent ray.</li>
+  <li>The deviation decreases to a minimum value and then starts increasing.</li>
+  <li>Record the angle corresponding to the minimum deviation.</li>
+  <li>Measure the angle of the prism.</li>
+  <li>Use the prism formula to calculate the refractive index.</li>
+</ol>
+
+<div class="box tip">
+  <p><strong>Practical significance:</strong> The refractive index is a characteristic optical property of the prism material and depends on the wavelength of light and temperature.</p>
+</div>
+
+<h3>Worked Example 4: Experimental Determination</h3>
+
+<div class="box example">
+  <p><strong>Question:</strong> In an experiment, the angle of a prism is \(60^\circ\) and its measured angle of minimum deviation is \(42^\circ\). Determine the refractive index of the prism material.</p>
+
+  <details class="solution">
+    <summary>Show solution</summary>
+
+```
+<div class="formula">\[
+\mu=
+\frac{
+\sin\left(\frac{A+\delta_m}{2}\right)
+}{
+\sin\left(\frac{A}{2}\right)
+}
+\]</div>
+
+<div class="formula">\[
+\mu=
+\frac{\sin\left(\frac{60^\circ+42^\circ}{2}\right)}
+{\sin30^\circ}
+\]</div>
+
+<div class="formula">\[
+\mu=
+\frac{\sin51^\circ}{0.5}
+\]</div>
+
+<div class="formula">\[
+\mu\approx\frac{0.7771}{0.5}
+\approx1.554
+\]</div>
+
+<p><strong>Answer:</strong> The refractive index is approximately \(1.55\).</p>
+```
+
+  </details>
+</div>
+
+<h2>15.4 Deviation in a Small-Angle Prism</h2>
+
+<p>A prism whose refracting angle \(A\) is very small is called a <strong>small-angle prism</strong> or <strong>thin prism</strong>.</p>
+
+<div class="box definition">
+  <p><strong>Small-angle prism:</strong> A prism having a very small refracting angle, for which the angles involved are sufficiently small that the small-angle approximation can be used.</p>
+</div>
+
+<p>For a small-angle prism, the angles of incidence, refraction and emergence are small. Hence, we can use</p>
+
+<div class="formula">\[
+\sin\theta\approx\theta
+\]</div>
+
+<p>where \(\theta\) is expressed in radians.</p>
+
+<h3>Derivation of Deviation Produced by a Small-Angle Prism</h3>
+
+<p>For a prism,</p>
+
+<div class="formula">\[
+\delta=i+e-A
+\]</div>
+
+<p>For a small-angle prism, using the small-angle approximation and Snell's law at the two surfaces:</p>
+
+<div class="formula">\[
+\mu-1\approx\frac{i-r_1}{r_1}
+\]</div>
+
+<p>More directly, for the two refracting surfaces, the total deviation is</p>
+
+<div class="formula">\[
+\delta\approx(\mu-1)(r_1+r_2)
+\]</div>
+
+<p>But</p>
+
+<div class="formula">\[
+r_1+r_2=A
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\boxed{\delta=(\mu-1)A}
+\]</div>
+
+<div class="box law">
+  <p><strong>Deviation by a small-angle prism:</strong></p>
+
+  <div class="formula">\[
+  \boxed{\delta=(\mu-1)A}
+  \]</div>
+
+  <p>This important relation shows that the deviation produced by a thin prism is independent of the angle of incidence, provided the small-angle approximation is valid.</p>
+</div>
+
+<h3>Small-Angle Prism Diagram</h3>
+
+<figure>
+<svg viewBox="0 0 850 480" role="img" aria-label="Ray diagram showing small-angle prism and deviation">
+
+  <rect x="0" y="0" width="850" height="480" rx="12" fill="#111"/>
+
+  <!-- Small angle prism -->
+
+<polygon points="390,120 570,370 210,370"
+        fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- Incident direction -->
+
+<line x1="70" y1="245" x2="390" y2="245"
+     stroke="white" stroke-width="2"
+     stroke-dasharray="10 7"/> <text x="75" y="220" fill="white" font-size="18">
+Original direction </text>
+
+  <!-- Incident ray -->
+
+<line x1="70" y1="245" x2="390" y2="245"
+     stroke="white" stroke-width="3"/> <polygon points="390,245 376,237 376,253" fill="white"/>
+
+  <!-- Emergent ray -->
+
+<line x1="470" y1="330" x2="780" y2="330"
+     stroke="white" stroke-width="3"/> <polygon points="780,330 766,322 766,338" fill="white"/> <text x="650" y="310" fill="white" font-size="18">
+Emergent ray </text>
+
+  <!-- Deviation -->
+
+<path d="M650 245 A80 80 0 0 1 650 330"
+     fill="none" stroke="white" stroke-width="2"/> <text x="675" y="292" fill="white" font-size="21">δ</text>
+
+  <!-- Prism angle -->
+
+<path d="M370 145 A45 45 0 0 0 410 145"
+     fill="none" stroke="white" stroke-width="2"/> <text x="390" y="170" fill="white" font-size="21">A</text>
+
+<text x="425" y="435" text-anchor="middle"
+     fill="white" font-size="19">
+Small-angle prism: δ = (μ − 1)A </text>
+
+</svg>
+<figcaption>Figure 15.4: Deviation produced by a small-angle prism.</figcaption>
+</figure>
+
+<h3>Worked Example 5: Deviation by a Small-Angle Prism</h3>
+
+<div class="box example">
+  <p><strong>Question:</strong> A small-angle prism has an angle of \(4^\circ\) and refractive index \(1.5\). Find the deviation produced by it.</p>
+
+  <details class="solution">
+    <summary>Show solution</summary>
+
+```
+<p>For a small-angle prism,</p>
+
+<div class="formula">\[
+\delta=(\mu-1)A
+\]</div>
+
+<p>Substituting \(\mu=1.5\) and \(A=4^\circ\):</p>
+
+<div class="formula">\[
+\delta=(1.5-1)\times4^\circ
+\]</div>
+
+<div class="formula">\[
+\boxed{\delta=2^\circ}
+\]</div>
+
+<p><strong>Answer:</strong> The deviation produced is \(2^\circ\).</p>
+```
+
+  </details>
+</div>
+
+<h3>Worked Example 6: Finding the Refractive Index from Small-Prism Deviation</h3>
+
+<div class="box example">
+  <p><strong>Question:</strong> A small-angle prism of angle \(5^\circ\) produces a deviation of \(2^\circ\). Find its refractive index.</p>
+
+  <details class="solution">
+    <summary>Show solution</summary>
+
+```
+<p>Using</p>
+
+<div class="formula">\[
+\delta=(\mu-1)A
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\mu=1+\frac{\delta}{A}
+\]</div>
+
+<div class="formula">\[
+\mu=1+\frac{2}{5}
+\]</div>
+
+<div class="formula">\[
+\boxed{\mu=1.4}
+\]</div>
+
+<p><strong>Answer:</strong> The refractive index of the prism is \(1.4\).</p>
+```
+
+  </details>
+</div>
+
+<h3>Importance and Applications of Small-Angle Prisms</h3>
+
+<p>Small-angle prisms are important because they produce a small, controlled angular deviation of light. They are widely used in optical instruments and practical devices.</p>
+
+<ul>
+  <li>They are used for accurately deviating light rays by a small angle.</li>
+  <li>They are useful in optical instruments for changing the direction of light.</li>
+  <li>They are used in spectrometers and other optical arrangements.</li>
+  <li>They can be combined to produce desired angular deviation.</li>
+  <li>Prisms are used in binoculars and periscopes for redirecting light.</li>
+  <li>Prismatic optical elements are used in cameras and other precision optical systems.</li>
+  <li>The deviation of a prism can be used to determine the refractive index of transparent materials.</li>
+</ul>
+
+<h3>Important Formulae</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Formula</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Prism angle</td>
+      <td>\(A=r_1+r_2\)</td>
+    </tr>
+    <tr>
+      <td>Deviation</td>
+      <td>\(\delta=i+e-A\)</td>
+    </tr>
+    <tr>
+      <td>Minimum deviation condition</td>
+      <td>\(i=e\)</td>
+    </tr>
+    <tr>
+      <td>Refraction angle at minimum deviation</td>
+      <td>\(r_1=r_2=A/2\)</td>
+    </tr>
+    <tr>
+      <td>Angle of incidence at minimum deviation</td>
+      <td>\(i_m=(A+\delta_m)/2\)</td>
+    </tr>
+    <tr>
+      <td>Refractive index</td>
+      <td>\(\displaystyle \mu=\frac{\sin[(A+\delta_m)/2]}{\sin(A/2)}\)</td>
+    </tr>
+    <tr>
+      <td>Small-angle prism</td>
+      <td>\(\delta=(\mu-1)A\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Common Mistakes to Avoid</h3>
+
+<ul>
+  <li>Do not measure the angle of incidence from the prism face; it is measured from the normal.</li>
+  <li>Do not confuse the angle of prism \(A\) with the angle of deviation \(\delta\).</li>
+  <li>At minimum deviation, remember \(i=e\), not \(i=r\).</li>
+  <li>At minimum deviation, \(r_1=r_2=A/2\).</li>
+  <li>Use angles in consistent units when applying small-angle approximations. If using \(\sin\theta\approx\theta\), \(\theta\) must be in radians.</li>
+  <li>The formula \(\delta=(\mu-1)A\) applies to a small-angle prism under the small-angle approximation.</li>
+  <li>In the prism formula, use the angle of <strong>minimum deviation</strong>, not an arbitrary deviation.</li>
+  <li>For an equilateral prism, \(A=60^\circ\).</li>
+</ul>
+
+<h3>Key Points for NEB Examination</h3>
+
+<ul class="key-points">
+  <li>A prism is a transparent refracting medium bounded by two plane surfaces inclined at an angle.</li>
+  <li>The angle between the two refracting faces is called the angle of prism \(A\).</li>
+  <li>The angle between the original direction and emergent ray is called the angle of deviation \(\delta\).</li>
+  <li>For a prism, \(A=r_1+r_2\).</li>
+  <li>The deviation produced by a prism is \(\delta=i+e-A\).</li>
+  <li>At minimum deviation, \(i=e\).</li>
+  <li>At minimum deviation, \(r_1=r_2=A/2\).</li>
+  <li>The angle of incidence at minimum deviation is \(i_m=(A+\delta_m)/2\).</li>
+  <li>The refractive index of the prism is
+    \(\displaystyle \mu=\frac{\sin[(A+\delta_m)/2]}{\sin(A/2)}\).</li>
+  <li>For an equilateral prism,
+    \(\displaystyle \mu=2\sin[(60^\circ+\delta_m)/2]\).</li>
+  <li>For a small-angle prism, \(\delta=(\mu-1)A\).</li>
+  <li>Small-angle prisms are useful for producing controlled angular deviation in optical instruments.</li>
+</ul>
