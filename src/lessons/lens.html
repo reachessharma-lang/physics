@@ -1,0 +1,935 @@
+---
+title: Refraction Through Lenses
+grade: XI
+chapters: [17]
+date: 2026-10-08
+description: Complete NEB Grade XI notes on spherical lenses, the convex-lens equation, visual angle, angular magnification, and derivation and application of the lens maker's formula using the real-positive and virtual-negative sign convention.
+---
+<h2>17.1 Properties of Spherical Lenses</h2>
+
+<p>A <strong>spherical lens</strong> is a transparent refracting medium bounded by two surfaces, at least one of which is spherical. The surfaces may be convex or concave.</p>
+
+<div class="box definition">
+<p><strong>Lens:</strong> A transparent optical medium bounded by two refracting surfaces, at least one of which is spherical, is called a lens.</p>
+</div>
+
+<h3>Types of Spherical Lenses</h3>
+
+<p>Spherical lenses are mainly of two types:</p>
+
+<ul>
+<li><strong>Convex lens:</strong> It is thicker at the centre than at the edges and generally converges a parallel beam of light. It is therefore called a <strong>converging lens</strong>.</li>
+<li><strong>Concave lens:</strong> It is thinner at the centre than at the edges and generally diverges a parallel beam of light. It is therefore called a <strong>diverging lens</strong>.</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 850 360" role="img" aria-label="Clear diagram showing convex and concave spherical lenses">
+
+<rect x="0" y="0" width="850" height="360" fill="none"/>
+
+<!-- Principal axes -->
+
+<line x1="55" y1="155" x2="395" y2="155" stroke="currentColor" stroke-width="2"/>
+<line x1="455" y1="155" x2="795" y2="155" stroke="currentColor" stroke-width="2"/>
+
+<!-- Convex lens -->
+
+<path d="M210 65 Q165 155 210 245 Q255 155 210 65 Z"
+   fill="none" stroke="currentColor" stroke-width="4"/>
+
+<!-- Concave lens -->
+
+<path d="M640 65 Q685 155 640 245 Q595 155 640 65 Z"
+   fill="none" stroke="currentColor" stroke-width="4"/>
+
+<text x="210" y="285" text-anchor="middle" font-size="22">Convex lens</text> <text x="210" y="315" text-anchor="middle" font-size="18">Converging lens</text>
+
+<text x="640" y="285" text-anchor="middle" font-size="22">Concave lens</text> <text x="640" y="315" text-anchor="middle" font-size="18">Diverging lens</text>
+
+<!-- arrows showing convergence/divergence -->
+
+<line x1="70" y1="105" x2="185" y2="105" stroke="currentColor" stroke-width="3"/>
+<polygon points="185,105 171,97 171,113" fill="currentColor"/>
+
+<line x1="70" y1="205" x2="185" y2="205" stroke="currentColor" stroke-width="3"/>
+<polygon points="185,205 171,197 171,213" fill="currentColor"/>
+
+<line x1="665" y1="105" x2="780" y2="75" stroke="currentColor" stroke-width="3"/>
+<polygon points="780,75 765,72 769,86" fill="currentColor"/>
+
+<line x1="665" y1="205" x2="780" y2="235" stroke="currentColor" stroke-width="3"/>
+<polygon points="780,235 769,224 765,238" fill="currentColor"/>
+
+</svg>
+<figcaption>Figure 17.1: Convex and concave spherical lenses.</figcaption>
+</figure>
+
+<h3>Important Terms Related to a Spherical Lens</h3>
+
+<h3>1. Principal Axis</h3>
+
+<p>The straight line passing through the optical centre and the centres of curvature of the two spherical surfaces is called the <strong>principal axis</strong> of the lens.</p>
+
+<h3>2. Optical Centre</h3>
+
+<p>The point inside a thin lens through which a ray of light passes approximately without deviation is called the <strong>optical centre \(O\)</strong>.</p>
+
+<h3>3. Centres of Curvature</h3>
+
+<p>The centres of the spheres of which the two refracting surfaces of a spherical lens form parts are called the <strong>centres of curvature \(C_1\) and \(C_2\)</strong>.</p>
+
+<h3>4. Radii of Curvature</h3>
+
+<p>The distances from the poles of the refracting surfaces to their respective centres of curvature are called the <strong>radii of curvature</strong>, represented by \(R_1\) and \(R_2\).</p>
+
+<h3>5. Principal Focus</h3>
+
+<p>The principal focus is the point on the principal axis at which rays parallel to the principal axis converge, or from which they appear to diverge, after refraction through the lens.</p>
+
+<p>A thin lens has two principal foci, \(F_1\) and \(F_2\), situated on opposite sides of the lens.</p>
+
+<ul>
+<li>For a <strong>convex lens</strong>, parallel rays actually converge at the principal focus.</li>
+<li>For a <strong>concave lens</strong>, parallel rays appear to diverge from the principal focus.</li>
+</ul>
+
+<h3>6. Focal Length</h3>
+
+<p>The distance between the optical centre \(O\) and either principal focus is called the <strong>focal length</strong> of the lens.</p>
+
+<div class="formula">\[
+\boxed{f=OF}
+\]</div>
+
+<div class="box note">
+<p>For a converging convex lens, \(f\) is positive. For a diverging concave lens, \(f\) is negative under the real-positive, virtual-negative convention used in these notes.</p>
+</div>
+
+<h3>Ray Rules for a Thin Convex Lens</h3>
+
+<p>The following standard rays are used to construct images formed by a convex lens.</p>
+
+<ol>
+<li>A ray parallel to the principal axis passes through the second principal focus \(F_2\) after refraction.</li>
+<li>A ray passing through the first principal focus \(F_1\) emerges parallel to the principal axis.</li>
+<li>A ray passing through the optical centre \(O\) passes approximately undeviated.</li>
+</ol>
+
+<figure>
+<svg viewBox="0 0 900 500" role="img" aria-label="Student friendly convex lens ray diagram showing a real inverted image using two principal rays">
+
+<!-- principal axis -->
+
+<line x1="55" y1="320" x2="850" y2="320" stroke="currentColor" stroke-width="2"/>
+
+<!-- lens -->
+
+<path d="M470 90 Q425 320 470 450 Q515 320 470 90 Z"
+   fill="none" stroke="currentColor" stroke-width="4"/>
+
+<!-- focal points -->
+
+<circle cx="360" cy="320" r="5" fill="currentColor"/>
+<circle cx="580" cy="320" r="5" fill="currentColor"/>
+<text x="360" y="350" text-anchor="middle" font-size="22">F₁</text>
+<text x="580" y="350" text-anchor="middle" font-size="22">F₂</text>
+
+<!-- object -->
+
+<line x1="180" y1="320" x2="180" y2="190" stroke="currentColor" stroke-width="5"/>
+<polygon points="180,190 170,210 190,210" fill="currentColor"/>
+<text x="180" y="170" text-anchor="middle" font-size="20">Object</text>
+
+<!-- ray 1 parallel then through F2 -->
+
+<line x1="180" y1="190" x2="445" y2="190" stroke="currentColor" stroke-width="3"/>
+<polygon points="445,190 431,182 431,198" fill="currentColor"/>
+
+<line x1="495" y1="190" x2="690" y2="320" stroke="currentColor" stroke-width="3"/>
+<polygon points="690,320 674,311 677,327" fill="currentColor"/>
+
+<!-- ray 2 through optical centre -->
+
+<line x1="180" y1="190" x2="690" y2="320" stroke="currentColor" stroke-width="3"/>
+<polygon points="690,320 674,311 677,327" fill="currentColor"/>
+
+<!-- image -->
+
+<line x1="690" y1="320" x2="690" y2="420" stroke="currentColor" stroke-width="5"/>
+<polygon points="690,420 680,400 700,400" fill="currentColor"/>
+<text x="690" y="455" text-anchor="middle" font-size="20">Real, inverted image</text>
+
+<text x="470" y="475" text-anchor="middle" font-size="19">Convex lens: object beyond F₁</text>
+
+</svg>
+<figcaption>Figure 17.2: Two standard rays used to locate a real image formed by a convex lens. Arrows indicate the direction of light.</figcaption>
+</figure>
+
+<h2>17.2 Relation Between Object Distance, Image Distance and Focal Length of a Convex Lens</h2>
+
+<p>For a thin convex lens, the relation between object distance, image distance and focal length is called the <strong>lens formula</strong>.</p>
+
+<div class="box law">
+<p><strong>Lens formula using the real-positive, virtual-negative convention:</strong></p>
+
+<div class="formula">\[
+\boxed{\frac{1}{f}=\frac{1}{u}+\frac{1}{v}}
+\]</div>
+
+<p>where \(u\) is the object distance, \(v\) is the image distance and \(f\) is the focal length.</p>
+</div>
+
+<h3>Sign Convention Used in These Notes</h3>
+
+<p>For consistency with the requested NEB-style <strong>real-positive, virtual-negative</strong> convention:</p>
+
+<ul>
+<li>Distance of a <strong>real object</strong> from the lens: \(u>0\).</li>
+<li>Distance of a <strong>virtual object</strong>: \(u<0\).</li>
+<li>Distance of a <strong>real image</strong> from the lens: \(v>0\).</li>
+<li>Distance of a <strong>virtual image</strong>: \(v<0\).</li>
+<li>Focal length of a <strong>convex lens</strong>: \(f>0\).</li>
+<li>Focal length of a <strong>concave lens</strong>: \(f<0\).</li>
+<li>For a convex lens, the radius of curvature of the first surface is positive and that of the second surface is negative when light travels from left to right.</li>
+</ul>
+
+<div class="box warning">
+<p><strong>Important:</strong> Do not mix this real-positive convention with the Cartesian sign convention in which a real object distance is negative. The numerical signs and the form of the lens formula must be used consistently.</p>
+</div>
+
+<h3>Formation of a Real Image by a Convex Lens</h3>
+
+<p>When a real object is placed beyond the principal focus of a convex lens, the refracted rays actually meet on the opposite side of the lens and form a real, inverted image.</p>
+
+<p>For this case:</p>
+
+<div class="formula">\[
+u>0,\qquad v>0,\qquad f>0
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\frac{1}{f}=\frac{1}{u}+\frac{1}{v}
+\]</div>
+
+<h3>Formation of a Virtual Image by a Convex Lens</h3>
+
+<p>When the object is placed between the optical centre and the principal focus of a convex lens, the refracted rays diverge. Their backward extensions meet on the object side, producing a virtual, erect and magnified image.</p>
+
+<figure>
+<svg viewBox="0 0 900 500" role="img" aria-label="Convex lens forming a virtual erect magnified image when the object is between optical centre and focus">
+
+<line x1="55" y1="320" x2="850" y2="320" stroke="currentColor" stroke-width="2"/>
+
+<!-- lens -->
+
+<path d="M470 90 Q425 320 470 450 Q515 320 470 90 Z"
+   fill="none" stroke="currentColor" stroke-width="4"/>
+
+<!-- focal points -->
+
+<circle cx="360" cy="320" r="5" fill="currentColor"/>
+<circle cx="580" cy="320" r="5" fill="currentColor"/>
+<text x="360" y="350" text-anchor="middle" font-size="22">F₁</text>
+<text x="580" y="350" text-anchor="middle" font-size="22">F₂</text>
+
+<!-- object between O and F1 -->
+
+<line x1="405" y1="320" x2="405" y2="230" stroke="currentColor" stroke-width="5"/>
+<polygon points="405,230 395,250 415,250" fill="currentColor"/>
+<text x="405" y="210" text-anchor="middle" font-size="19">Object</text>
+
+<!-- parallel incident ray -->
+
+<line x1="405" y1="230" x2="445" y2="230" stroke="currentColor" stroke-width="3"/>
+<polygon points="445,230 431,222 431,238" fill="currentColor"/>
+
+<!-- refracted ray diverging -->
+
+<line x1="495" y1="230" x2="680" y2="285" stroke="currentColor" stroke-width="3"/>
+<polygon points="680,285 664,276 668,292" fill="currentColor"/>
+
+<!-- second ray through centre -->
+
+<line x1="405" y1="230" x2="680" y2="290" stroke="currentColor" stroke-width="3"/>
+<polygon points="680,290 664,281 668,297" fill="currentColor"/>
+
+<!-- backward extensions -->
+
+<line x1="405" y1="230" x2="250" y2="185" stroke="currentColor" stroke-width="2" stroke-dasharray="8 6"/>
+<line x1="495" y1="230" x2="250" y2="185" stroke="currentColor" stroke-width="2" stroke-dasharray="8 6"/>
+
+<!-- virtual image -->
+
+<line x1="250" y1="320" x2="250" y2="175" stroke="currentColor" stroke-width="5"/>
+<polygon points="250,175 240,195 260,195" fill="currentColor"/>
+<text x="250" y="150" text-anchor="middle" font-size="19">Virtual, erect, magnified image</text>
+
+</svg>
+<figcaption>Figure 17.3: A convex lens forms a virtual, erect and magnified image when the object lies between \(O\) and \(F_1\).</figcaption>
+</figure>
+
+<p>For this case:</p>
+
+<div class="formula">\[
+u>0,\qquad v<0,\qquad f>0
+\]</div>
+
+<p>and the lens formula remains</p>
+
+<div class="formula">\[
+\boxed{\frac{1}{f}=\frac{1}{u}+\frac{1}{v}}
+\]</div>
+
+<h3>Useful Rearrangements</h3>
+
+<p>From</p>
+
+<div class="formula">\[
+\frac{1}{f}=\frac{1}{u}+\frac{1}{v}
+\]</div>
+
+<p>we obtain</p>
+
+<div class="formula">\[
+\boxed{f=\frac{uv}{u+v}}
+\]</div>
+
+<p>For finding the image distance:</p>
+
+<div class="formula">\[
+\boxed{v=\frac{uf}{u-f}}
+\]</div>
+
+<p>For finding the object distance:</p>
+
+<div class="formula">\[
+\boxed{u=\frac{vf}{v-f}}
+\]</div>
+
+<h3>Magnification of a Lens</h3>
+
+<p>The linear magnification \(m\) is defined as the ratio of the height of the image to the height of the object.</p>
+
+<div class="formula">\[
+\boxed{m=\frac{h_i}{h_o}}
+\]</div>
+
+<p>With the real-positive, virtual-negative convention, the corresponding relation is</p>
+
+<div class="formula">\[
+\boxed{m=-\frac{v}{u}}
+\]</div>
+
+<p>The negative sign indicates an inverted image, while a positive magnification indicates an erect image.</p>
+
+<h3>Worked Example 1: Finding Image Distance</h3>
+
+<div class="box example">
+<p><strong>Question:</strong> An object is placed \(30\,\text{cm}\) from a convex lens of focal length \(20\,\text{cm}\). Find the image distance and state the nature of the image.</p>
+
+<p><strong>Given:</strong></p>
+
+<div class="formula">\[
+u=30\,\text{cm},\qquad f=20\,\text{cm}
+\]</div>
+
+<p>Using the lens formula,</p>
+
+<div class="formula">\[
+\frac{1}{f}=\frac{1}{u}+\frac{1}{v}
+\]</div>
+
+<div class="formula">\[
+\frac{1}{v}=\frac{1}{20}-\frac{1}{30}
+\]</div>
+
+<div class="formula">\[
+\frac{1}{v}=\frac{3-2}{60}=\frac{1}{60}
+\]</div>
+
+<div class="formula">\[
+\boxed{v=60\,\text{cm}}
+\]</div>
+
+<p>Since \(v>0\), the image is real. Its magnification is</p>
+
+<div class="formula">\[
+m=-\frac{v}{u}=-\frac{60}{30}=-2
+\]</div>
+
+<p>Therefore, the image is <strong>real, inverted and twice the size of the object</strong>.</p>
+</div>
+
+<h3>Worked Example 2: Virtual Image by a Convex Lens</h3>
+
+<div class="box example">
+<p><strong>Question:</strong> An object is placed \(10\,\text{cm}\) from a convex lens of focal length \(15\,\text{cm}\). Find the image distance and magnification.</p>
+
+<p><strong>Given:</strong></p>
+
+<div class="formula">\[
+u=10\,\text{cm},\qquad f=15\,\text{cm}
+\]</div>
+
+<p>Using</p>
+
+<div class="formula">\[
+\frac{1}{f}=\frac{1}{u}+\frac{1}{v}
+\]</div>
+
+<div class="formula">\[
+\frac{1}{v}=\frac{1}{15}-\frac{1}{10}
+\]</div>
+
+<div class="formula">\[
+\frac{1}{v}=\frac{2-3}{30}=-\frac{1}{30}
+\]</div>
+
+<div class="formula">\[
+\boxed{v=-30\,\text{cm}}
+\]</div>
+
+<p>The negative value of \(v\) shows that the image is virtual.</p>
+
+<p>Magnification:</p>
+
+<div class="formula">\[
+m=-\frac{v}{u}
+=-\frac{-30}{10}
+=3
+\]</div>
+
+<p><strong>Answer:</strong> The image is \(30\,\text{cm}\) in front of the lens, virtual, erect and three times magnified.</p>
+</div>
+
+<h2>17.3 Visual Angle and Angular Magnification</h2>
+
+<h3>Visual Angle</h3>
+
+<p>The <strong>visual angle</strong> is the angle subtended by an object at the eye when the object is viewed from a particular position.</p>
+
+<p>If an object of height \(h\) is at a distance \(D\) from the eye, the visual angle \(\theta\) is given by</p>
+
+<div class="formula">\[
+\boxed{\theta=\tan^{-1}\left(\frac{h}{D}\right)}
+\]</div>
+
+<p>For a small object viewed at a relatively large distance, \(\theta\) is small and</p>
+
+<div class="formula">\[
+\boxed{\theta\approx\frac{h}{D}}
+\]</div>
+
+<p>where \(\theta\) is measured in radians.</p>
+
+<figure>
+<svg viewBox="0 0 850 430" role="img" aria-label="Diagram showing visual angle subtended by an object at the eye">
+
+<line x1="120" y1="215" x2="670" y2="215" stroke="currentColor" stroke-width="2" stroke-dasharray="8 6"/>
+
+<!-- eye -->
+
+<ellipse cx="110" cy="215" rx="38" ry="25" fill="none" stroke="currentColor" stroke-width="3"/>
+<circle cx="115" cy="215" r="8" fill="currentColor"/>
+<text x="110" y="270" text-anchor="middle" font-size="20">Eye</text>
+
+<!-- object -->
+
+<line x1="670" y1="135" x2="670" y2="295" stroke="currentColor" stroke-width="6"/>
+<polygon points="670,135 660,155 680,155" fill="currentColor"/>
+<text x="670" y="110" text-anchor="middle" font-size="20">Object</text>
+
+<!-- visual angle rays -->
+
+<line x1="120" y1="215" x2="670" y2="135" stroke="currentColor" stroke-width="3"/>
+<line x1="120" y1="215" x2="670" y2="295" stroke="currentColor" stroke-width="3"/>
+
+<!-- angle -->
+
+<path d="M170 208 A55 55 0 0 0 170 222" fill="none" stroke="currentColor" stroke-width="2"/>
+<text x="180" y="218" font-size="21">θ</text>
+
+<!-- distance -->
+
+<line x1="120" y1="345" x2="670" y2="345" stroke="currentColor" stroke-width="2"/>
+<polygon points="120,345 134,337 134,353" fill="currentColor"/>
+<polygon points="670,345 656,337 656,353" fill="currentColor"/>
+<text x="395" y="375" text-anchor="middle" font-size="19">D</text>
+
+</svg>
+<figcaption>Figure 17.4: Visual angle \(\theta\) subtended by an object at the eye.</figcaption>
+</figure>
+
+<h3>Angular Magnification</h3>
+
+<p>Angular magnification is the ratio of the angle subtended at the eye by the image to the angle subtended by the object when the object is viewed directly, both being considered from the same eye position.</p>
+
+<div class="box definition">
+<p><strong>Angular magnification:</strong> It is the ratio of the angle subtended by the image at the eye to the angle subtended by the object at the eye when viewed directly.</p>
+</div>
+
+<div class="formula">\[
+\boxed{M=\frac{\theta'}{\theta}}
+\]</div>
+
+<p>where \(\theta'\) is the angle subtended by the image at the eye and \(\theta\) is the angle subtended by the object when viewed directly.</p>
+
+<p>Angular magnification is dimensionless.</p>
+
+<h3>Angular Magnification of a Simple Magnifying Glass</h3>
+
+<p>A convex lens used to produce an enlarged virtual image of a small object is called a <strong>simple microscope</strong> or <strong>magnifying glass</strong>.</p>
+
+<p>When the final image is formed at the least distance of distinct vision \(D\), the angular magnification is</p>
+
+<div class="formula">\[
+\boxed{M=1+\frac{D}{f}}
+\]</div>
+
+<p>where \(D\) is the least distance of distinct vision and \(f\) is the focal length of the convex lens.</p>
+
+<p>For a normal adult eye,</p>
+
+<div class="formula">\[
+\boxed{D\approx25\,\text{cm}}
+\]</div>
+
+<div class="box note">
+<p>The value \(D=25\,\text{cm}\) is conventionally used for a normal adult eye in NEB numerical problems unless another value is specified.</p>
+</div>
+
+<h3>Worked Example 3: Angular Magnification</h3>
+
+<div class="box example">
+<p><strong>Question:</strong> A convex lens of focal length \(5\,\text{cm}\) is used as a magnifying glass. Find its angular magnification when the final image is formed at the least distance of distinct vision. Take \(D=25\,\text{cm}\).</p>
+
+<p>For a magnifying glass,</p>
+
+<div class="formula">\[
+M=1+\frac{D}{f}
+\]</div>
+
+<div class="formula">\[
+M=1+\frac{25}{5}
+\]</div>
+
+<div class="formula">\[
+\boxed{M=6}
+\]</div>
+
+<p><strong>Answer:</strong> The angular magnification is \(6\).</p>
+</div>
+
+<h2>17.4 Lens Maker's Formula</h2>
+
+<p>The focal length of a lens depends on the refractive index of the lens material and the radii of curvature of its two refracting surfaces. The relation connecting these quantities is called the <strong>lens maker's formula</strong>.</p>
+
+<div class="box law">
+<p><strong>Lens maker's formula for a thin lens in air:</strong></p>
+
+<div class="formula">\[
+\boxed{
+\frac{1}{f}
+=
+(\mu-1)
+\left(
+\frac{1}{R_1}-\frac{1}{R_2}
+\right)
+}
+\]</div>
+
+<p>Here, \(\mu\) is the refractive index of the lens material relative to air, \(R_1\) and \(R_2\) are the radii of curvature of the first and second surfaces, and \(f\) is the focal length.</p>
+</div>
+
+<h3>Sign Convention for Radii of Curvature</h3>
+
+<p>Light is assumed to travel from left to right.</p>
+
+<ul>
+<li>For the first surface of a typical biconvex lens, \(R_1>0\).</li>
+<li>For the second surface of a typical biconvex lens, \(R_2<0\).</li>
+<li>For a typical biconcave lens, \(R_1<0\) and \(R_2>0\).</li>
+</ul>
+
+<figure>
+<svg viewBox="0 0 900 440" role="img" aria-label="Biconvex lens showing optical centre, centres of curvature and radii of curvature with correct signs">
+
+<!-- principal axis -->
+
+<line x1="70" y1="250" x2="830" y2="250" stroke="currentColor" stroke-width="2"/>
+
+<!-- lens -->
+
+<path d="M450 70 Q390 250 450 430 Q510 250 450 70 Z"
+   fill="none" stroke="currentColor" stroke-width="4"/>
+
+<!-- centers -->
+
+<circle cx="280" cy="250" r="5" fill="currentColor"/>
+<circle cx="620" cy="250" r="5" fill="currentColor"/>
+<text x="280" y="285" text-anchor="middle" font-size="21">C₁</text>
+<text x="620" y="285" text-anchor="middle" font-size="21">C₂</text>
+
+<!-- optical centre -->
+
+<circle cx="450" cy="250" r="5" fill="currentColor"/>
+<text x="450" y="285" text-anchor="middle" font-size="21">O</text>
+
+<!-- radius arrows -->
+
+<line x1="280" y1="215" x2="450" y2="215" stroke="currentColor" stroke-width="2"/>
+<polygon points="450,215 436,207 436,223" fill="currentColor"/>
+<text x="365" y="200" text-anchor="middle" font-size="20">R₁ &gt; 0</text>
+
+<line x1="620" y1="215" x2="450" y2="215" stroke="currentColor" stroke-width="2"/>
+<polygon points="450,215 464,207 464,223" fill="currentColor"/>
+<text x="535" y="200" text-anchor="middle" font-size="20">R₂ &lt; 0</text>
+
+<text x="450" y="40" text-anchor="middle" font-size="21">Biconvex lens</text>
+
+<!-- direction -->
+
+<line x1="90" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="3"/>
+<polygon points="180,100 166,92 166,108" fill="currentColor"/>
+<text x="95" y="80" font-size="18">Light</text>
+
+</svg>
+<figcaption>Figure 17.5: Sign convention for the radii of curvature of a typical biconvex lens when light travels from left to right.</figcaption>
+</figure>
+
+<h3>Derivation of Lens Maker's Formula</h3>
+
+<p>Consider a thin lens of refractive index \(\mu\) placed in air. Let the radii of curvature of the first and second refracting surfaces be \(R_1\) and \(R_2\).</p>
+
+<p>Let the first surface form an intermediate image at distance \(v_1\).</p>
+
+<h3>Refraction at the First Surface</h3>
+
+<p>For refraction at a spherical surface, using the real-positive and virtual-negative convention:</p>
+
+<div class="formula">\[
+\frac{\mu}{v_1}-\frac{1}{u}
+=
+\frac{\mu-1}{R_1}
+\]</div>
+
+<p>For the complete lens, let the final image be formed at distance \(v\). Since the lens is thin, the intermediate image formed by the first surface acts as a virtual object for the second surface. Therefore, the object distance for the second surface is</p>
+
+<div class="formula">\[
+u_2=-v_1
+\]</div>
+
+<h3>Refraction at the Second Surface</h3>
+
+<p>Applying the spherical refracting-surface relation at the second surface:</p>
+
+<div class="formula">\[
+\frac{1}{v}
+-
+\frac{\mu}{u_2}
+=
+\frac{1-\mu}{R_2}
+\]</div>
+
+<p>Since \(u_2=-v_1\),</p>
+
+<div class="formula">\[
+\frac{1}{v}
++
+\frac{\mu}{v_1}
+=
+\frac{1-\mu}{R_2}
+\]</div>
+
+<p>From the first surface equation,</p>
+
+<div class="formula">\[
+\frac{\mu}{v_1}
+=
+\frac{1}{u}
++
+\frac{\mu-1}{R_1}
+\]</div>
+
+<p>Substituting this into the equation for the second surface:</p>
+
+<div class="formula">\[
+\frac{1}{v}
++
+\frac{1}{u}
++
+\frac{\mu-1}{R_1}
+=
+\frac{1-\mu}{R_2}
+\]</div>
+
+<p>Since \(1-\mu=-(\mu-1)\),</p>
+
+<div class="formula">\[
+\frac{1}{u}+\frac{1}{v}
+=
+(\mu-1)
+\left(
+\frac{1}{R_1}-\frac{1}{R_2}
+\right)
+\]</div>
+
+<p>For a thin lens in air, the lens formula is</p>
+
+<div class="formula">\[
+\frac{1}{u}+\frac{1}{v}=\frac{1}{f}
+\]</div>
+
+<p>Therefore,</p>
+
+<div class="formula">\[
+\boxed{
+\frac{1}{f}
+=
+(\mu-1)
+\left(
+\frac{1}{R_1}-\frac{1}{R_2}
+\right)
+}
+\]</div>
+
+<div class="box law">
+<p><strong>Lens Maker's Formula:</strong></p>
+
+<div class="formula">\[
+\boxed{
+\frac{1}{f}
+=
+(\mu-1)
+\left(
+\frac{1}{R_1}-\frac{1}{R_2}
+\right)
+}
+\]</div>
+</div>
+
+<h3>Physical Meaning of Lens Maker's Formula</h3>
+
+<p>The formula shows that the focal length of a lens depends on:</p>
+
+<ul>
+<li>the refractive index \(\mu\) of the lens material,</li>
+<li>the curvature of the first surface represented by \(R_1\), and</li>
+<li>the curvature of the second surface represented by \(R_2\).</li>
+</ul>
+
+<p>A lens with a smaller magnitude of focal length has greater converging or diverging power.</p>
+
+<div class="formula">\[
+\boxed{P=\frac{1}{f}}
+\]</div>
+
+<p>when \(f\) is expressed in metres and \(P\) is expressed in dioptres.</p>
+
+<h3>Worked Example 4: Finding Focal Length Using Lens Maker's Formula</h3>
+
+<div class="box example">
+<p><strong>Question:</strong> A biconvex lens has refractive index \(1.5\). Its radii of curvature are \(20\,\text{cm}\) and \(20\,\text{cm}\). Find its focal length in air.</p>
+
+<p>For a biconvex lens, using the real-positive convention:</p>
+
+<div class="formula">\[
+\mu=1.5,\qquad
+R_1=+20\,\text{cm},\qquad
+R_2=-20\,\text{cm}
+\]</div>
+
+<p>Using the lens maker's formula:</p>
+
+<div class="formula">\[
+\frac{1}{f}
+=
+(\mu-1)
+\left(
+\frac{1}{R_1}-\frac{1}{R_2}
+\right)
+\]</div>
+
+<div class="formula">\[
+\frac{1}{f}
+=
+(1.5-1)
+\left(
+\frac{1}{20}-\frac{1}{-20}
+\right)
+\]</div>
+
+<div class="formula">\[
+\frac{1}{f}
+=
+0.5
+\left(
+\frac{2}{20}
+\right)
+=
+\frac{1}{20}
+\]</div>
+
+<div class="formula">\[
+\boxed{f=20\,\text{cm}}
+\]</div>
+
+<p><strong>Answer:</strong> The focal length of the lens is \(20\,\text{cm}\).</p>
+</div>
+
+<h3>Worked Example 5: Finding a Radius of Curvature</h3>
+
+<div class="box example">
+<p><strong>Question:</strong> A symmetric biconvex glass lens has refractive index \(1.5\) and focal length \(20\,\text{cm}\). Find the magnitude of the radius of curvature of each surface.</p>
+
+<p>For a symmetric biconvex lens:</p>
+
+<div class="formula">\[
+R_1=R,\qquad R_2=-R
+\]</div>
+
+<p>Using the lens maker's formula:</p>
+
+<div class="formula">\[
+\frac{1}{f}
+=
+(\mu-1)
+\left(
+\frac{1}{R}-\frac{1}{-R}
+\right)
+\]</div>
+
+<div class="formula">\[
+\frac{1}{20}
+=
+0.5\left(\frac{2}{R}\right)
+\]</div>
+
+<div class="formula">\[
+\frac{1}{20}=\frac{1}{R}
+\]</div>
+
+<div class="formula">\[
+\boxed{R=20\,\text{cm}}
+\]</div>
+
+<p>Thus,</p>
+
+<div class="formula">\[
+\boxed{R_1=+20\,\text{cm},\qquad R_2=-20\,\text{cm}}
+\]</div>
+</div>
+
+<h3>Worked Example 6: Effect of Refractive Index</h3>
+
+<div class="box example">
+<p><strong>Question:</strong> A thin symmetric biconvex lens has \(R_1=+20\,\text{cm}\), \(R_2=-20\,\text{cm}\), and refractive index \(1.6\). Find its focal length in air.</p>
+
+<div class="formula">\[
+\frac{1}{f}
+=
+(1.6-1)
+\left(
+\frac{1}{20}-\frac{1}{-20}
+\right)
+\]</div>
+
+<div class="formula">\[
+\frac{1}{f}
+=
+0.6\left(\frac{2}{20}\right)
+=
+\frac{0.06}{1}
+\]</div>
+
+<div class="formula">\[
+f=\frac{1}{0.06}
+\approx16.67\,\text{cm}
+\]</div>
+
+<p><strong>Answer:</strong></p>
+
+<div class="formula">\[
+\boxed{f\approx16.7\,\text{cm}}
+\]</div>
+
+<p>The higher refractive index produces a shorter focal length for the same surface curvatures.</p>
+</div>
+
+<h3>Lens Maker's Formula in a Medium</h3>
+
+<p>If a lens is placed in a medium whose refractive index is \(\mu_m\), the relative refractive index of the lens material is \(\mu/\mu_m\).</p>
+
+<p>The general lens maker's formula becomes</p>
+
+<div class="formula">\[
+\boxed{
+\frac{1}{f}
+=
+\left(
+\frac{\mu}{\mu_m}-1
+\right)
+\left(
+\frac{1}{R_1}-\frac{1}{R_2}
+\right)
+}
+\]</div>
+
+<p>For a lens in air, \(\mu_m\approx1\), giving</p>
+
+<div class="formula">\[
+\boxed{
+\frac{1}{f}
+=
+(\mu-1)
+\left(
+\frac{1}{R_1}-\frac{1}{R_2}
+\right)
+}
+\]</div>
+
+<h3>Common Mistakes</h3>
+
+<ul>
+<li>Do not confuse a convex lens with a concave lens: a convex lens is generally converging and a concave lens is generally diverging.</li>
+<li>Do not measure the focal length from the lens surface; for a thin lens it is measured from the optical centre.</li>
+<li>Do not mix sign conventions. These notes use <strong>real positive and virtual negative</strong>.</li>
+<li>For a real object, use \(u>0\); for a virtual object, use \(u<0\).</li>
+<li>For a real image, use \(v>0\); for a virtual image, use \(v<0\).</li>
+<li>For a convex lens, \(f>0\); for a concave lens, \(f<0\).</li>
+<li>For a typical biconvex lens with light travelling from left to right, \(R_1>0\) and \(R_2<0\).</li>
+<li>Do not use \(R_1=R_2\) for a symmetric biconvex lens; the correct signed values are \(R_1=+R\) and \(R_2=-R\).</li>
+<li>In the lens maker's formula, the second radius appears as \(-R_2\): \(\frac{1}{R_1}-\frac{1}{R_2}\).</li>
+<li>In a virtual-image problem with a convex lens, \(v\) is negative and the lens equation must still be used consistently.</li>
+<li>The small-angle approximation \(\tan\theta\approx\theta\) is valid only when \(\theta\) is small and measured in radians.</li>
+</ul>
+
+<h3>Key Points Summary</h3>
+
+<ul class="key-points">
+<li>A spherical lens has at least one spherical refracting surface.</li>
+<li>A convex lens is thicker at the centre and is generally converging.</li>
+<li>A concave lens is thinner at the centre and is generally diverging.</li>
+<li>The optical centre is the point through which a ray passes approximately without deviation.</li>
+<li>The focal length is the distance between the optical centre and principal focus.</li>
+<li>Using the real-positive, virtual-negative convention, the lens formula is
+\(\displaystyle \frac{1}{f}=\frac{1}{u}+\frac{1}{v}\).</li>
+<li>For a real object, \(u>0\); for a virtual object, \(u<0\).</li>
+<li>For a real image, \(v>0\); for a virtual image, \(v<0\).</li>
+<li>For a convex lens, \(f>0\); for a concave lens, \(f<0\).</li>
+<li>The linear magnification of a lens is
+\(\displaystyle m=-\frac{v}{u}\).</li>
+<li>Visual angle is the angle subtended by an object at the eye.</li>
+<li>Angular magnification is
+\(\displaystyle M=\frac{\theta'}{\theta}\).</li>
+<li>For a simple magnifying glass with the final image at the least distance of distinct vision,
+\(\displaystyle M=1+\frac{D}{f}\).</li>
+<li>The lens maker's formula in air is
+\(\displaystyle \frac{1}{f}=(\mu-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\).</li>
+<li>For a typical biconvex lens, \(R_1>0\) and \(R_2<0\).</li>
+<li>The focal length can be determined from the refractive index and the radii of curvature of the lens surfaces.</li>
+<li>For a lens immersed in another medium,
+\(\displaystyle \frac{1}{f}=\left(\frac{\mu}{\mu_m}-1\right)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\).</li>
+</ul>
