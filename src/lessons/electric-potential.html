@@ -1,0 +1,1031 @@
+---
+title: Electric Potential
+grade: XI
+chapters: [21]
+date: 2026-10-08
+---
+<h2>Chapter 21: Potential, Potential Difference and Potential Energy</h2>
+
+<p>Electric potential is one of the most important concepts in electrostatics. While electric field describes the force experienced by a charge, electric potential describes the work required to bring a unit positive charge from infinity to a particular point in an electric field. Potential is a scalar quantity, so it can be added algebraically.</p>
+
+<p>This chapter develops the concepts of electric potential, potential difference, electric potential energy, electron volt, potential due to a point charge, potential gradient, equipotential surfaces and the relation between electric field and potential difference in a uniform electric field.</p>
+
+<div class="key-points">
+<ul>
+<li>Electric potential is work done per unit positive test charge.</li>
+<li>The SI unit of electric potential is volt (V).</li>
+<li>Potential is a scalar quantity.</li>
+<li>For a point charge, \(V=\dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{r}\).</li>
+<li>Electric field strength is related to potential gradient by \(E=-\dfrac{dV}{dx}\).</li>
+<li>No work is done in moving a charge along an equipotential surface.</li>
+<li>For a uniform electric field, \(E=\dfrac{\Delta V}{\Delta x}\) in magnitude.</li>
+</ul>
+</div>
+
+<h2>21.1 Electric Potential at a Point</h2>
+
+<div class="definition">
+<strong>Definition:</strong> Electric potential at a point is the work done per unit positive test charge in bringing a small positive test charge from infinity to that point, without producing acceleration of the test charge.
+</div>
+
+<p>Suppose a small positive test charge \(q_0\) is brought from infinity to a point \(P\) in an electric field. If the work done by the external agent is \(W\), then the electric potential at \(P\) is</p>
+
+<div class="formula">
+\[
+V=\frac{W}{q_0}
+\]
+<span class="where">where \(V\) is electric potential, \(W\) is work done, and \(q_0\) is the positive test charge.</span>
+</div>
+
+<h3>SI Unit of Potential</h3>
+
+<p>From</p>
+
+<div class="formula">
+\[
+V=\frac{W}{q_0}
+\]
+<span class="where">where work is measured in joule and charge in coulomb.</span>
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+1\ \mathrm{volt}=1\ \mathrm{joule\ per\ coulomb}
+\]
+<span class="where">\(1\ \mathrm{V}=1\ \mathrm{J\,C^{-1}}\).</span>
+</div>
+
+<div class="note">
+<strong>Important:</strong> Electric potential is a scalar quantity. It has magnitude and sign but no direction.
+</div>
+
+<h3>Reference Potential</h3>
+
+<p>Electric potential is defined relative to a reference point. For isolated charges, infinity is generally chosen as the reference point and its potential is taken as zero:</p>
+
+<div class="formula">
+\[
+V_{\infty}=0
+\]
+</div>
+
+<h3>Potential Due to a Positive and Negative Charge</h3>
+
+<p>For a positive source charge, the potential at a point is positive when infinity is taken as zero. For a negative source charge, the potential is negative.</p>
+
+<div class="formula">
+\[
+V=\frac{1}{4\pi\varepsilon_0}\frac{Q}{r}
+\]
+<span class="where">\(Q\) is the source charge and \(r\) is the distance of the point from the charge.</span>
+</div>
+
+<figure>
+<svg viewBox="0 0 700 300" role="img" aria-label="Electric potential at a point due to a positive point charge">
+<line x1="80" y1="150" x2="620" y2="150" stroke="currentColor" stroke-width="2"/>
+<circle cx="180" cy="150" r="28" stroke="currentColor" stroke-width="2" fill="none"/>
+<text x="180" y="157" text-anchor="middle" font-size="20">+Q</text>
+<circle cx="500" cy="150" r="5" fill="currentColor"/>
+<text x="500" y="125" text-anchor="middle" font-size="18">P</text>
+<line x1="210" y1="150" x2="490" y2="150" stroke="currentColor" stroke-width="2"/>
+<polygon points="490,145 502,150 490,155" fill="currentColor"/>
+<text x="350" y="140" text-anchor="middle" font-size="17">r</text>
+<text x="350" y="205" text-anchor="middle" font-size="17">\(V=\dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{r}\)</text>
+</svg>
+<figcaption>Potential at point \(P\) due to a positive point charge \(+Q\).</figcaption>
+</figure>
+
+<h3>Work Done and Potential Difference</h3>
+
+<p>If a positive test charge \(q_0\) is moved from point \(A\) to point \(B\), the work done by the electric field is related to the potential difference by</p>
+
+<div class="formula">
+\[
+W_{\mathrm{field}}=q_0(V_A-V_B)
+\]
+<span class="where">\(V_A\) and \(V_B\) are the potentials at \(A\) and \(B\).</span>
+</div>
+
+<p>Therefore, if \(V_B>V_A\), the electric field does negative work on a positive charge when it is moved from \(A\) to \(B\).</p>
+
+<h2>21.2 Electron Volt as a Unit of Electric Potential Energy</h2>
+
+<div class="definition">
+<strong>Electron volt:</strong> One electron volt is the amount of energy gained by an electron when it moves through a potential difference of one volt in the direction of increasing electric potential energy.
+</div>
+
+<p>The magnitude of charge on an electron is</p>
+
+<div class="formula">
+\[
+e=1.602\times10^{-19}\ \mathrm{C}
+\]
+</div>
+
+<p>When a charge \(e\) moves through a potential difference of \(1\ \mathrm{V}\), the energy change in magnitude is</p>
+
+<div class="formula">
+\[
+1\ \mathrm{eV}=e\times1\ \mathrm{V}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{1\ \mathrm{eV}=1.602\times10^{-19}\ \mathrm{J}}
+\]
+</div>
+
+<h3>Conversion Between Electron Volt and Joule</h3>
+
+<div class="formula">
+\[
+1\ \mathrm{J}=\frac{1}{1.602\times10^{-19}}\ \mathrm{eV}
+\]
+</div>
+
+<div class="formula">
+\[
+1\ \mathrm{J}\approx6.242\times10^{18}\ \mathrm{eV}
+\]
+</div>
+
+<p>Electron volt is particularly convenient for expressing very small energies involved in atomic, molecular and nuclear physics.</p>
+
+<h3>Relation Between Potential Energy and Potential</h3>
+
+<p>If a charge \(q\) is placed at a point having electric potential \(V\), its electric potential energy is</p>
+
+<div class="formula">
+\[
+U=qV
+\]
+<span class="where">\(U\) is electric potential energy, \(q\) is the charge and \(V\) is electric potential.</span>
+</div>
+
+<p>For an electron, \(q=-e\), so</p>
+
+<div class="formula">
+\[
+U=-eV
+\]
+</div>
+
+<div class="example">
+<strong>Worked Example 1: Conversion of electron volt to joule</strong>
+<p><strong>Problem:</strong> Convert \(5\ \mathrm{eV}\) into joules.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<p>We know that</p>
+<div class="formula">
+\[
+1\ \mathrm{eV}=1.602\times10^{-19}\ \mathrm{J}
+\]
+</div>
+<p>Therefore,</p>
+<div class="formula">
+\[
+5\ \mathrm{eV}=5(1.602\times10^{-19})
+\]
+</div>
+<div class="formula">
+\[
+\boxed{5\ \mathrm{eV}=8.01\times10^{-19}\ \mathrm{J}}
+\]
+</div>
+</details>
+</div>
+
+<h2>21.3 Potential in the Field of a Point Charge</h2>
+
+<p>Consider an isolated point charge \(Q\). Let \(P\) be a point at distance \(r\) from the charge. The electric field at distance \(x\) from the point charge is</p>
+
+<div class="formula">
+\[
+E=\frac{1}{4\pi\varepsilon_0}\frac{Q}{x^2}
+\]
+</div>
+
+<p>The small work required to move a positive test charge \(q_0\) through a small distance \(dx\) towards the charge is related to the potential difference. Taking infinity as the reference point, the potential at \(P\) is obtained by integration.</p>
+
+<h3>Derivation of Potential Due to a Point Charge</h3>
+
+<p>The electric field due to \(Q\) at distance \(x\) is</p>
+
+<div class="formula">
+\[
+E=\frac{1}{4\pi\varepsilon_0}\frac{Q}{x^2}
+\]
+</div>
+
+<p>The work done by an external agent in moving a positive test charge through a small distance \(dx\) against the electric field is</p>
+
+<div class="formula">
+\[
+dW=q_0E\,dx
+\]
+</div>
+
+<p>Hence, the total work done in bringing \(q_0\) from infinity to a point at distance \(r\) is</p>
+
+<div class="formula">
+\[
+W=q_0\int_{\infty}^{r}(-E)\,dx
+\]
+</div>
+
+<p>Equivalently, using the potential definition and integrating the field contribution from \(r\) to infinity,</p>
+
+<div class="formula">
+\[
+V=-\int_{\infty}^{r}\vec E\cdot d\vec r
+\]
+</div>
+
+<p>For the point charge,</p>
+
+<div class="formula">
+\[
+V=-\int_{\infty}^{r}\frac{1}{4\pi\varepsilon_0}\frac{Q}{x^2}\,dx
+\]
+</div>
+
+<p>Taking the constant outside the integral,</p>
+
+<div class="formula">
+\[
+V=-\frac{Q}{4\pi\varepsilon_0}\int_{\infty}^{r}\frac{dx}{x^2}
+\]
+</div>
+
+<p>Since</p>
+
+<div class="formula">
+\[
+\int\frac{dx}{x^2}=-\frac{1}{x}
+\]
+</div>
+
+<p>we obtain</p>
+
+<div class="formula">
+\[
+V=-\frac{Q}{4\pi\varepsilon_0}
+\left[-\frac{1}{x}\right]_{\infty}^{r}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{V=\frac{1}{4\pi\varepsilon_0}\frac{Q}{r}}
+\]
+<span class="where">where \(V\) is potential at distance \(r\) from point charge \(Q\).</span>
+</div>
+
+<div class="law">
+<strong>Potential due to a point charge:</strong>
+<div class="formula">
+\[
+V=\frac{Q}{4\pi\varepsilon_0r}
+\]
+</div>
+<p>In air or vacuum, \(\dfrac{1}{4\pi\varepsilon_0}\approx9\times10^9\ \mathrm{N\,m^2\,C^{-2}}\), so</p>
+<div class="formula">
+\[
+\boxed{V=\frac{9\times10^9Q}{r}}
+\]
+</div>
+</div>
+
+<h3>Potential Due to Several Point Charges</h3>
+
+<p>Since potential is a scalar quantity, the potential due to several point charges is the algebraic sum of their individual potentials.</p>
+
+<div class="formula">
+\[
+V=\frac{1}{4\pi\varepsilon_0}
+\left(
+\frac{Q_1}{r_1}+
+\frac{Q_2}{r_2}+
+\frac{Q_3}{r_3}+\cdots
+\right)
+\]
+<span class="where">\(r_1,r_2,r_3,\ldots\) are distances of the point from the corresponding charges.</span>
+</div>
+
+<div class="note">
+<strong>Important:</strong> Unlike electric field, potential does not require vector addition. Positive and negative potentials are simply added algebraically.
+</div>
+
+<figure>
+<svg viewBox="0 0 700 330" role="img" aria-label="Potential due to two point charges at a point">
+<line x1="70" y1="170" x2="630" y2="170" stroke="currentColor" stroke-width="2"/>
+<circle cx="170" cy="170" r="25" stroke="currentColor" stroke-width="2" fill="none"/>
+<text x="170" y="177" text-anchor="middle" font-size="18">+Q₁</text>
+<circle cx="470" cy="170" r="25" stroke="currentColor" stroke-width="2" fill="none"/>
+<text x="470" y="177" text-anchor="middle" font-size="18">−Q₂</text>
+<circle cx="340" cy="170" r="5" fill="currentColor"/>
+<text x="340" y="140" text-anchor="middle" font-size="18">P</text>
+<line x1="195" y1="170" x2="335" y2="170" stroke="currentColor" stroke-width="1.5"/>
+<line x1="445" y1="170" x2="345" y2="170" stroke="currentColor" stroke-width="1.5"/>
+<text x="265" y="158" text-anchor="middle" font-size="16">r₁</text>
+<text x="395" y="158" text-anchor="middle" font-size="16">r₂</text>
+<text x="350" y="245" text-anchor="middle" font-size="17">\(V=\dfrac{1}{4\pi\varepsilon_0}\left(\dfrac{Q_1}{r_1}+\dfrac{Q_2}{r_2}\right)\)</text>
+</svg>
+<figcaption>Potential at a point due to two point charges is the algebraic sum of their potentials.</figcaption>
+</figure>
+
+<div class="example">
+<strong>Worked Example 2: Potential due to a point charge</strong>
+<p><strong>Problem:</strong> Calculate the electric potential at a point \(0.20\ \mathrm{m}\) from a point charge of \(4\times10^{-8}\ \mathrm{C}\). Take \(k=9\times10^9\ \mathrm{N\,m^2\,C^{-2}}\).</p>
+<details class="solution">
+<summary>Show solution</summary>
+<p>Given:</p>
+<ul>
+<li>\(Q=4\times10^{-8}\ \mathrm{C}\)</li>
+<li>\(r=0.20\ \mathrm{m}\)</li>
+<li>\(k=9\times10^9\ \mathrm{N\,m^2\,C^{-2}}\)</li>
+</ul>
+<p>Using</p>
+<div class="formula">
+\[
+V=\frac{kQ}{r}
+\]
+</div>
+<p>Therefore,</p>
+<div class="formula">
+\[
+V=\frac{(9\times10^9)(4\times10^{-8})}{0.20}
+\]
+</div>
+<div class="formula">
+\[
+V=\frac{360}{0.20}=1800\ \mathrm{V}
+\]
+</div>
+<p><strong>Answer:</strong></p>
+<div class="formula">
+\[
+\boxed{V=1.8\times10^3\ \mathrm{V}}
+\]
+</div>
+</details>
+</div>
+
+<h2>21.4 Variation of Potential with Distance and Potential Gradient</h2>
+
+<h3>Variation of Potential Due to a Point Charge</h3>
+
+<p>For a point charge \(Q\),</p>
+
+<div class="formula">
+\[
+V=\frac{kQ}{r}
+\]
+</div>
+
+<p>Therefore, for a fixed source charge,</p>
+
+<div class="formula">
+\[
+V\propto\frac{1}{r}
+\]
+</div>
+
+<p>Thus, the potential decreases inversely with distance from the source charge. It does not decrease as \(1/r^2\); that relation applies to electric field strength.</p>
+
+<figure>
+<svg viewBox="0 0 700 420" role="img" aria-label="Graph showing potential versus distance for a positive point charge">
+<line x1="90" y1="350" x2="630" y2="350" stroke="currentColor" stroke-width="2.5"/>
+<line x1="90" y1="350" x2="90" y2="45" stroke="currentColor" stroke-width="2.5"/>
+<polygon points="630,345 642,350 630,355" fill="currentColor"/>
+<polygon points="85,45 90,33 95,45" fill="currentColor"/>
+<path d="M 105 65 C 130 105, 150 155, 180 200 C 225 265, 300 300, 400 325 C 480 340, 550 345, 620 348" stroke="currentColor" stroke-width="3" fill="none"/>
+<line x1="90" y1="350" x2="90" y2="360" stroke="currentColor"/>
+<line x1="220" y1="350" x2="220" y2="360" stroke="currentColor"/>
+<line x1="350" y1="350" x2="350" y2="360" stroke="currentColor"/>
+<line x1="480" y1="350" x2="480" y2="360" stroke="currentColor"/>
+<text x="360" y="390" text-anchor="middle" font-size="18">Distance \(r\)</text>
+<text x="35" y="200" transform="rotate(-90 35 200)" text-anchor="middle" font-size="18">Potential \(V\)</text>
+<text x="100" y="375" font-size="15">0</text>
+<text x="110" y="65" font-size="17">\(V=\dfrac{kQ}{r}\)</text>
+</svg>
+<figcaption>Variation of electric potential with distance from a positive point charge.</figcaption>
+</figure>
+
+<p>For a negative point charge, the potential is negative and approaches zero from below as the distance increases.</p>
+
+<h3>Potential Gradient</h3>
+
+<p>The rate of change of potential with distance along a particular direction is called the <strong>potential gradient</strong>.</p>
+
+<div class="definition">
+<strong>Potential gradient:</strong> The potential gradient at a point is the rate of decrease of electric potential per unit distance in the direction of the electric field.
+</div>
+
+<p>Consider a small displacement \(dx\) in the direction of the electric field. The potential difference is related to the electric field by</p>
+
+<div class="formula">
+\[
+dV=-E\,dx
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{E=-\frac{dV}{dx}}
+\]
+<span class="where">\(E\) is electric field strength and \(\dfrac{dV}{dx}\) is the potential gradient.</span>
+</div>
+
+<div class="law">
+<strong>Relation between electric field and potential gradient:</strong>
+<div class="formula">
+\[
+\boxed{E=-\frac{dV}{dx}}
+\]
+</div>
+<p>The negative sign indicates that the electric field is directed from higher potential towards lower potential.</p>
+</div>
+
+<h3>Derivation of \(E=-dV/dx\)</h3>
+
+<p>Consider a positive test charge \(q\) moved through a small distance \(dx\) in an electric field \(E\).</p>
+
+<p>The work done by the electric field is</p>
+
+<div class="formula">
+\[
+dW=-q\,dV
+\]
+</div>
+
+<p>But work done by the electric field for a small displacement in its direction is</p>
+
+<div class="formula">
+\[
+dW=qE\,dx
+\]
+</div>
+
+<p>Equating the two expressions,</p>
+
+<div class="formula">
+\[
+qE\,dx=-q\,dV
+\]
+</div>
+
+<p>Dividing by \(q\,dx\),</p>
+
+<div class="formula">
+\[
+\boxed{E=-\frac{dV}{dx}}
+\]
+</div>
+
+<h3>Physical Meaning of the Negative Sign</h3>
+
+<ul>
+<li>Electric field points in the direction in which potential decreases.</li>
+<li>Potential decreases in the direction of the electric field.</li>
+<li>A positive charge naturally moves from higher potential to lower potential.</li>
+<li>The magnitude of electric field is large where potential changes rapidly with distance.</li>
+</ul>
+
+<div class="example">
+<strong>Worked Example 3: Electric field from potential gradient</strong>
+<p><strong>Problem:</strong> The potential along the \(x\)-axis is given by \(V=100-20x\), where \(V\) is in volts and \(x\) is in metres. Find the electric field strength.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<p>Given</p>
+<div class="formula">
+\[
+V=100-20x
+\]
+</div>
+<p>Electric field is</p>
+<div class="formula">
+\[
+E=-\frac{dV}{dx}
+\]
+</div>
+<p>Therefore,</p>
+<div class="formula">
+\[
+\frac{dV}{dx}=-20\ \mathrm{V\,m^{-1}}
+\]
+</div>
+<p>Hence,</p>
+<div class="formula">
+\[
+E=-(-20)=20\ \mathrm{V\,m^{-1}}
+\]
+</div>
+<p><strong>Answer:</strong></p>
+<div class="formula">
+\[
+\boxed{E=20\ \mathrm{V\,m^{-1}}}
+\]
+</div>
+<p>The field is directed in the positive \(x\)-direction.</p>
+</details>
+</div>
+
+<h2>21.5 Equipotential Lines and Surfaces</h2>
+
+<div class="definition">
+<strong>Equipotential surface:</strong> A surface on which every point has the same electric potential is called an equipotential surface.
+</div>
+
+<div class="definition">
+<strong>Equipotential line:</strong> In a two-dimensional representation, a line joining points having the same electric potential is called an equipotential line.
+</div>
+
+<h3>Potential Difference Between Two Points on an Equipotential</h3>
+
+<p>If points \(A\) and \(B\) lie on the same equipotential surface,</p>
+
+<div class="formula">
+\[
+V_A=V_B
+\]
+</div>
+
+<p>Therefore, the potential difference is</p>
+
+<div class="formula">
+\[
+\Delta V=V_B-V_A=0
+\]
+</div>
+
+<p>The work done in moving a charge \(q\) from \(A\) to \(B\) is</p>
+
+<div class="formula">
+\[
+W=q\Delta V
+\]
+</div>
+
+<p>Since \(\Delta V=0\),</p>
+
+<div class="formula">
+\[
+\boxed{W=0}
+\]
+</div>
+
+<div class="law">
+<strong>Important property:</strong> No work is done in moving a charge along an equipotential surface.
+</div>
+
+<h3>Equipotential Surfaces Around a Point Charge</h3>
+
+<p>For an isolated point charge, all points at the same distance from the charge have the same potential. Therefore, the equipotential surfaces are concentric spherical surfaces centered on the charge.</p>
+
+<figure>
+<svg viewBox="0 0 700 400" role="img" aria-label="Concentric equipotential surfaces around a positive point charge">
+<circle cx="330" cy="190" r="35" stroke="currentColor" stroke-width="2" fill="none"/>
+<circle cx="330" cy="190" r="75" stroke="currentColor" stroke-width="2" fill="none"/>
+<circle cx="330" cy="190" r="120" stroke="currentColor" stroke-width="2" fill="none"/>
+<circle cx="330" cy="190" r="12" stroke="currentColor" stroke-width="2" fill="none"/>
+<text x="330" y="197" text-anchor="middle" font-size="16">+Q</text>
+<line x1="330" y1="190" x2="510" y2="190" stroke="currentColor" stroke-width="2"/>
+<polygon points="505,185 517,190 505,195" fill="currentColor"/>
+<text x="425" y="180" text-anchor="middle" font-size="16">Electric field</text>
+<text x="520" y="145" font-size="16">\(V_1\)</text>
+<text x="590" y="185" font-size="16">\(V_2\)</text>
+<text x="600" y="225" font-size="16">\(V_3\)</text>
+</svg>
+<figcaption>Equipotential surfaces around an isolated positive point charge. The electric field is perpendicular to the surfaces.</figcaption>
+</figure>
+
+<h3>Properties of Equipotential Surfaces</h3>
+
+<ul>
+<li>Every point on an equipotential surface has the same potential.</li>
+<li>No work is done in moving a charge along an equipotential surface.</li>
+<li>Electric field is always perpendicular to an equipotential surface.</li>
+<li>Two equipotential surfaces never intersect.</li>
+<li>For a point charge, equipotential surfaces are concentric spheres.</li>
+<li>For a uniform electric field, equipotential surfaces are parallel planes perpendicular to the field.</li>
+<li>Closer equipotential surfaces indicate a stronger electric field because potential changes more rapidly with distance.</li>
+</ul>
+
+<h3>Why is Electric Field Perpendicular to an Equipotential Surface?</h3>
+
+<p>Suppose a component of electric field existed along an equipotential surface. A charge moved along that component would experience a force and work would be done. But the potential difference along an equipotential surface is zero, so no work can be done.</p>
+
+<p>Therefore, the electric field can have no component along an equipotential surface and must be perpendicular to it.</p>
+
+<h3>Equipotential Surfaces in a Uniform Electric Field</h3>
+
+<figure>
+<svg viewBox="0 0 700 350" role="img" aria-label="Equipotential planes between parallel plates">
+<line x1="130" y1="60" x2="130" y2="290" stroke="currentColor" stroke-width="5"/>
+<line x1="570" y1="60" x2="570" y2="290" stroke="currentColor" stroke-width="5"/>
+<text x="130" y="40" text-anchor="middle" font-size="18">+</text>
+<text x="570" y="40" text-anchor="middle" font-size="18">−</text>
+<line x1="220" y1="70" x2="220" y2="280" stroke="currentColor" stroke-width="1.5" stroke-dasharray="7,6"/>
+<line x1="310" y1="70" x2="310" y2="280" stroke="currentColor" stroke-width="1.5" stroke-dasharray="7,6"/>
+<line x1="400" y1="70" x2="400" y2="280" stroke="currentColor" stroke-width="1.5" stroke-dasharray="7,6"/>
+<line x1="490" y1="70" x2="490" y2="280" stroke="currentColor" stroke-width="1.5" stroke-dasharray="7,6"/>
+<line x1="150" y1="120" x2="550" y2="120" stroke="currentColor" stroke-width="1.5"/>
+<polygon points="550,115 562,120 550,125" fill="currentColor"/>
+<line x1="150" y1="180" x2="550" y2="180" stroke="currentColor" stroke-width="1.5"/>
+<polygon points="550,175 562,180 550,185" fill="currentColor"/>
+<line x1="150" y1="240" x2="550" y2="240" stroke="currentColor" stroke-width="1.5"/>
+<polygon points="550,235 562,240 550,245" fill="currentColor"/>
+<text x="350" y="320" text-anchor="middle" font-size="17">Electric field from high potential to low potential</text>
+<text x="220" y="55" text-anchor="middle" font-size="15">\(V_1\)</text>
+<text x="310" y="55" text-anchor="middle" font-size="15">\(V_2\)</text>
+<text x="400" y="55" text-anchor="middle" font-size="15">\(V_3\)</text>
+<text x="490" y="55" text-anchor="middle" font-size="15">\(V_4\)</text>
+</svg>
+<figcaption>Equipotential planes are perpendicular to the electric field between charged parallel plates.</figcaption>
+</figure>
+
+<h2>21.6 Electric Field Between Charged Parallel Plates</h2>
+
+<p>Consider two large, oppositely charged parallel conducting plates separated by a distance \(d\). Neglecting edge effects, the electric field between the plates is approximately uniform.</p>
+
+<figure>
+<svg viewBox="0 0 700 360" role="img" aria-label="Uniform electric field between two oppositely charged parallel plates">
+<line x1="120" y1="50" x2="120" y2="310" stroke="currentColor" stroke-width="6"/>
+<line x1="580" y1="50" x2="580" y2="310" stroke="currentColor" stroke-width="6"/>
+<text x="120" y="35" text-anchor="middle" font-size="20">+ plate</text>
+<text x="580" y="35" text-anchor="middle" font-size="20">− plate</text>
+<line x1="145" y1="100" x2="555" y2="100" stroke="currentColor" stroke-width="2"/>
+<polygon points="555,94 568,100 555,106" fill="currentColor"/>
+<line x1="145" y1="160" x2="555" y2="160" stroke="currentColor" stroke-width="2"/>
+<polygon points="555,154 568,160 555,166" fill="currentColor"/>
+<line x1="145" y1="220" x2="555" y2="220" stroke="currentColor" stroke-width="2"/>
+<polygon points="555,214 568,220 555,226" fill="currentColor"/>
+<line x1="145" y1="280" x2="555" y2="280" stroke="currentColor" stroke-width="2"/>
+<polygon points="555,274 568,280 555,286" fill="currentColor"/>
+<line x1="120" y1="330" x2="580" y2="330" stroke="currentColor" stroke-width="1.5"/>
+<line x1="120" y1="322" x2="120" y2="338" stroke="currentColor"/>
+<line x1="580" y1="322" x2="580" y2="338" stroke="currentColor"/>
+<text x="350" y="350" text-anchor="middle" font-size="17">separation \(d\)</text>
+<text x="350" y="75" text-anchor="middle" font-size="17">Uniform electric field \(E\)</text>
+</svg>
+<figcaption>Uniform electric field between two oppositely charged parallel plates.</figcaption>
+</figure>
+
+<h3>Relation Between Electric Field and Potential Difference</h3>
+
+<p>Let the potential difference between two parallel plates be \(\Delta V\), and let their separation be \(\Delta x\). For a uniform field, the potential changes uniformly with distance.</p>
+
+<p>From the potential-gradient relation,</p>
+
+<div class="formula">
+\[
+E=-\frac{\Delta V}{\Delta x}
+\]
+</div>
+
+<p>When only the magnitude of field strength is required,</p>
+
+<div class="formula">
+\[
+\boxed{E=\frac{\Delta V}{\Delta x}}
+\]
+<span class="where">\(E\) is the magnitude of electric field strength, \(\Delta V\) is the potential difference and \(\Delta x\) is the separation.</span>
+</div>
+
+<p>If the plates are separated by distance \(d\) and the potential difference between them is \(V\), then</p>
+
+<div class="formula">
+\[
+\boxed{E=\frac{V}{d}}
+\]
+</div>
+
+<h3>Derivation of \(E=\Delta V/\Delta x\)</h3>
+
+<p>For a uniform electric field, the potential gradient is constant. Therefore,</p>
+
+<div class="formula">
+\[
+E=-\frac{dV}{dx}
+\]
+</div>
+
+<p>For a finite separation, integration gives</p>
+
+<div class="formula">
+\[
+\int E\,dx=-\int dV
+\]
+</div>
+
+<p>Since \(E\) is constant,</p>
+
+<div class="formula">
+\[
+E\Delta x=V_A-V_B
+\]
+</div>
+
+<p>Thus, in magnitude,</p>
+
+<div class="formula">
+\[
+\boxed{E=\frac{\Delta V}{\Delta x}}
+\]
+</div>
+
+<div class="note">
+<strong>Direction:</strong> The electric field is directed from the plate at higher potential to the plate at lower potential. The magnitude relation \(E=\Delta V/\Delta x\) does not show direction; the vector relation contains the negative sign.
+</div>
+
+<h3>Potential Difference Across Parallel Plates</h3>
+
+<p>Rearranging</p>
+
+<div class="formula">
+\[
+E=\frac{V}{d}
+\]
+</div>
+
+<p>gives</p>
+
+<div class="formula">
+\[
+\boxed{V=Ed}
+\]
+</div>
+
+<h3>Force on a Charge Between Parallel Plates</h3>
+
+<p>A charge \(q\) placed between the plates experiences an electric force</p>
+
+<div class="formula">
+\[
+F=qE
+\]
+</div>
+
+<p>Since \(E=V/d\),</p>
+
+<div class="formula">
+\[
+\boxed{F=\frac{qV}{d}}
+\]
+</div>
+
+<p>The direction of the force depends on the sign of the charge. A positive charge experiences force in the direction of the electric field, whereas a negative charge experiences force opposite to the electric field.</p>
+
+<div class="example">
+<strong>Worked Example 4: Field between parallel plates</strong>
+<p><strong>Problem:</strong> Two parallel plates are separated by \(5\ \mathrm{cm}\) and maintained at a potential difference of \(500\ \mathrm{V}\). Find the electric field strength between the plates.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<p>Given:</p>
+<ul>
+<li>\(V=500\ \mathrm{V}\)</li>
+<li>\(d=5\ \mathrm{cm}=0.05\ \mathrm{m}\)</li>
+</ul>
+<p>For a uniform electric field,</p>
+<div class="formula">
+\[
+E=\frac{V}{d}
+\]
+</div>
+<p>Therefore,</p>
+<div class="formula">
+\[
+E=\frac{500}{0.05}
+\]
+</div>
+<div class="formula">
+\[
+\boxed{E=1.0\times10^4\ \mathrm{V\,m^{-1}}}
+\]
+</div>
+<p>Since \(1\ \mathrm{V\,m^{-1}}=1\ \mathrm{N\,C^{-1}}\),</p>
+<div class="formula">
+\[
+\boxed{E=1.0\times10^4\ \mathrm{N\,C^{-1}}}
+\]
+</div>
+</details>
+</div>
+
+<h3>Potential Variation in a Uniform Electric Field</h3>
+
+<p>In a uniform electric field, the potential decreases linearly with distance in the direction of the electric field.</p>
+
+<figure>
+<svg viewBox="0 0 700 400" role="img" aria-label="Linear decrease of electric potential with distance in a uniform electric field">
+<line x1="100" y1="330" x2="620" y2="330" stroke="currentColor" stroke-width="2.5"/>
+<line x1="100" y1="330" x2="100" y2="50" stroke="currentColor" stroke-width="2.5"/>
+<polygon points="620,325 632,330 620,335" fill="currentColor"/>
+<polygon points="95,50 100,38 105,50" fill="currentColor"/>
+<line x1="130" y1="80" x2="580" y2="300" stroke="currentColor" stroke-width="3"/>
+<text x="360" y="390" text-anchor="middle" font-size="18">Distance \(x\)</text>
+<text x="35" y="200" transform="rotate(-90 35 200)" text-anchor="middle" font-size="18">Potential \(V\)</text>
+<text x="135" y="70" font-size="17">Higher potential</text>
+<text x="500" y="300" font-size="17">Lower potential</text>
+<text x="390" y="180" font-size="17">Slope \(=-E\)</text>
+</svg>
+<figcaption>Potential decreases linearly with distance in the direction of a uniform electric field.</figcaption>
+</figure>
+
+<h3>Potential Gradient from the Graph</h3>
+
+<p>For a graph of \(V\) against \(x\), the gradient is</p>
+
+<div class="formula">
+\[
+\text{gradient}=\frac{\Delta V}{\Delta x}
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+\boxed{E=-\text{gradient of the }V-x\text{ graph}}
+\]
+</div>
+
+<div class="example">
+<strong>Worked Example 5: Potential difference and field strength</strong>
+<p><strong>Problem:</strong> The potential decreases from \(1200\ \mathrm{V}\) to \(300\ \mathrm{V}\) over a distance of \(0.15\ \mathrm{m}\) in a uniform electric field. Find the magnitude of the electric field.</p>
+<details class="solution">
+<summary>Show solution</summary>
+<p>Potential difference in magnitude:</p>
+<div class="formula">
+\[
+\Delta V=1200-300=900\ \mathrm{V}
+\]
+</div>
+<p>Distance:</p>
+<div class="formula">
+\[
+\Delta x=0.15\ \mathrm{m}
+\]
+</div>
+<p>Hence,</p>
+<div class="formula">
+\[
+E=\frac{\Delta V}{\Delta x}
+\]
+</div>
+<div class="formula">
+\[
+E=\frac{900}{0.15}=6000\ \mathrm{V\,m^{-1}}
+\]
+</div>
+<p><strong>Answer:</strong></p>
+<div class="formula">
+\[
+\boxed{E=6.0\times10^3\ \mathrm{V\,m^{-1}}}
+\]
+</div>
+<p>The field is directed from the \(1200\ \mathrm{V}\) point towards the \(300\ \mathrm{V}\) point.</p>
+</details>
+</div>
+
+<h3>Electric Potential Energy</h3>
+
+<p>When a charge is placed in an electric field, it possesses electric potential energy because of its position in the field.</p>
+
+<div class="definition">
+<strong>Electric potential energy:</strong> Electric potential energy of a charge at a point is the work required to bring the charge from the chosen reference point to that point without changing its kinetic energy.
+</div>
+
+<p>For a charge \(q\) at a point having potential \(V\),</p>
+
+<div class="formula">
+\[
+\boxed{U=qV}
+\]
+</div>
+
+<p>For two point charges \(q_1\) and \(q_2\), separated by distance \(r\),</p>
+
+<div class="formula">
+\[
+\boxed{U=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r}}
+\]
+</div>
+
+<p>If \(q_1q_2>0\), the potential energy is positive. If \(q_1q_2<0\), the potential energy is negative, when zero potential energy is taken at infinite separation.</p>
+
+<h3>Relation Between Potential Energy and Work</h3>
+
+<p>The change in electric potential energy is equal to the negative of the work done by the electric field:</p>
+
+<div class="formula">
+\[
+\boxed{\Delta U=-W_{\mathrm{field}}}
+\]
+</div>
+
+<p>For a charge \(q\) moved from \(A\) to \(B\),</p>
+
+<div class="formula">
+\[
+\Delta U=q(V_B-V_A)
+\]
+</div>
+
+<p>Therefore,</p>
+
+<div class="formula">
+\[
+W_{\mathrm{field}}=q(V_A-V_B)
+\]
+</div>
+
+<h3>Important Comparison: Electric Field and Electric Potential</h3>
+
+<table>
+<thead>
+<tr>
+<th>Electric Field</th>
+<th>Electric Potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vector quantity</td>
+<td>Scalar quantity</td>
+</tr>
+<tr>
+<td>Unit: \(\mathrm{N\,C^{-1}}\) or \(\mathrm{V\,m^{-1}}\)</td>
+<td>Unit: volt (V)</td>
+</tr>
+<tr>
+<td>Related to force per unit positive charge</td>
+<td>Related to work per unit positive charge</td>
+</tr>
+<tr>
+<td>For a point charge, \(E\propto1/r^2\)</td>
+<td>For a point charge, \(V\propto1/r\)</td>
+</tr>
+<tr>
+<td>Field points from high potential to low potential</td>
+<td>Potential decreases in the direction of the electric field</td>
+</tr>
+<tr>
+<td>Field lines represent direction and relative strength</td>
+<td>Equipotential surfaces represent equal potential</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Common Mistakes</h2>
+
+<ul>
+<li>Do not confuse electric potential \(V\) with potential energy \(U\). Potential is energy per unit charge, while potential energy is the actual energy of a charge.</li>
+<li>Do not write \(V=\dfrac{kQ}{r^2}\). The correct expression is \(V=\dfrac{kQ}{r}\).</li>
+<li>Remember that electric field varies as \(1/r^2\), whereas potential varies as \(1/r\) for a point charge.</li>
+<li>Electric potential is scalar, so potentials are added algebraically.</li>
+<li>Electric field is a vector, so electric fields must be added vectorially.</li>
+<li>Do not forget the negative sign in \(E=-dV/dx\) when direction is required.</li>
+<li>For the magnitude of a uniform electric field, use \(E=\Delta V/\Delta x\).</li>
+<li>Convert centimetres into metres before calculating electric field using \(E=V/d\).</li>
+<li>Do not say that an equipotential surface has zero electric field. The field is perpendicular to the surface and may be non-zero.</li>
+<li>No work is done in moving a charge along an equipotential surface because \(\Delta V=0\).</li>
+<li>One electron volt is \(1.602\times10^{-19}\ \mathrm{J}\), not \(1.602\times10^{19}\ \mathrm{J}\).</li>
+<li>For an electron, the charge is negative: \(q=-e\). Therefore, its potential energy is \(U=-eV\).</li>
+<li>The electric field always points in the direction of decreasing potential.</li>
+</ul>
+
+<h2>Key Points Summary</h2>
+
+<ul class="key-points">
+<li>Electric potential at a point is the work done per unit positive charge in bringing a small test charge from infinity to that point.</li>
+<li>\(V=W/q_0\).</li>
+<li>The SI unit of potential is volt, where \(1\ \mathrm{V}=1\ \mathrm{J\,C^{-1}}\).</li>
+<li>Electric potential is a scalar quantity.</li>
+<li>Potential due to a point charge is \(V=\dfrac{Q}{4\pi\varepsilon_0r}\).</li>
+<li>For several point charges, \(V=\dfrac{1}{4\pi\varepsilon_0}\sum\dfrac{Q_i}{r_i}\).</li>
+<li>Electric potential energy of a charge is \(U=qV\).</li>
+<li>For two point charges, \(U=\dfrac{1}{4\pi\varepsilon_0}\dfrac{q_1q_2}{r}\).</li>
+<li>\(1\ \mathrm{eV}=1.602\times10^{-19}\ \mathrm{J}\).</li>
+<li>For a point charge, \(V\propto1/r\).</li>
+<li>Potential gradient is the rate of change of potential with distance.</li>
+<li>\(E=-dV/dx\).</li>
+<li>The negative sign means that electric field points from higher potential towards lower potential.</li>
+<li>An equipotential surface has the same potential at every point.</li>
+<li>No work is done in moving a charge along an equipotential surface.</li>
+<li>Electric field is perpendicular to an equipotential surface.</li>
+<li>For a uniform electric field, \(E=\Delta V/\Delta x\) in magnitude.</li>
+<li>For parallel plates, \(E=V/d\).</li>
+<li>The potential difference across a uniform field is \(V=Ed\).</li>
+<li>Electric field strength has units \(\mathrm{N\,C^{-1}}\) and \(\mathrm{V\,m^{-1}}\).</li>
+</ul>
