@@ -1,0 +1,327 @@
+---
+title: Electric Charges
+grade: XI
+chapters: [19]
+date: 2026-10-08
+---
+<p>Electric charge is one of the most fundamental properties of matter. In this chapter we study the nature of electric charge, how it is transferred between bodies, and the quantitative law (Coulomb's law) that governs the force between charges. These ideas form the foundation of electrostatics and are essential for every later chapter on electric fields, potential and capacitance.</p>
+
+<section>
+<h3>19.1 Electric Charge and Charge Carriers</h3>
+
+<div class="definition">
+<p><strong>Electric charge</strong> is a fundamental scalar property of matter that causes it to experience a force when placed in an electric field. It exists in two kinds: <em>positive</em> (+) and <em>negative</em> (−).</p>
+</div>
+
+<h4>Types of Charges</h4>
+<ul>
+<li><strong>Positive charge:</strong> body has fewer electrons than protons (e.g. glass rod rubbed with silk).</li>
+<li><strong>Negative charge:</strong> body has more electrons than protons (e.g. ebonite rod rubbed with wool).</li>
+<li>Like charges repel; unlike charges attract.</li>
+</ul>
+
+<h4>Properties of Electric Charge</h4>
+<ol>
+<li><strong>Quantization:</strong> Charge exists only in integral multiples of the elementary charge \(e\).
+\[ Q = n e, \quad e = 1.6 \times 10^{-19} \text{ C}, \quad n = 0, \pm 1, \pm 2, \dots \]
+</li>
+<li><strong>Conservation:</strong> The total charge of an isolated system remains constant. Charge can neither be created nor destroyed, only transferred.</li>
+<li><strong>Additivity:</strong> The total charge of a system is the algebraic sum of individual charges: \(Q_{\text{total}} = q_1 + q_2 + q_3 + \dots\)</li>
+<li><strong>Invariance:</strong> Charge of a body does not change with its velocity (unlike mass in relativity).</li>
+</ol>
+
+<h4>Charge Carriers</h4>
+<p>In different materials the mobile carriers of charge are different:</p>
+<ul>
+<li><strong>Solid conductors (metals):</strong> free electrons.</li>
+<li><strong>Electrolytes:</strong> positive and negative ions (e.g. Na⁺, Cl⁻).</li>
+<li><strong>Gases / plasmas:</strong> electrons and positive ions.</li>
+<li><strong>Semiconductors:</strong> electrons and holes.</li>
+</ul>
+
+<div class="note">
+<p>The proton and the electron carry equal and opposite charges (\(\pm e\)), but the mass of a proton is about 1836 times the mass of an electron. Hence in solids, only electrons move during charging.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 300 120" role="img" aria-label="Atom showing positive nucleus and negative electrons">
+<g stroke="currentColor" fill="none">
+<circle cx="150" cy="60" r="14"/>
+<text x="150" y="65" text-anchor="middle" fill="currentColor" font-size="14">+</text>
+<ellipse cx="150" cy="60" rx="60" ry="30"/>
+<ellipse cx="150" cy="60" rx="60" ry="30" transform="rotate(60 150 60)"/>
+<ellipse cx="150" cy="60" rx="60" ry="30" transform="rotate(-60 150 60)"/>
+<circle cx="210" cy="60" r="5" fill="currentColor"/>
+<circle cx="120" cy="86" r="5" fill="currentColor"/>
+<circle cx="120" cy="34" r="5" fill="currentColor"/>
+<text x="260" y="65" fill="currentColor" font-size="12">nucleus (+)</text>
+<text x="260" y="85" fill="currentColor" font-size="12">electrons (−)</text>
+</g>
+</svg>
+<figcaption>Structure of an atom: a positive nucleus surrounded by negatively charged electrons.</figcaption>
+</figure>
+</section>
+
+<section>
+<h3>19.2 Charging by Friction</h3>
+
+<p>When two different insulating bodies are rubbed together, <strong>electrons are transferred</strong> from the body with lower work function (weaker hold on electrons) to the body with higher work function. The body that loses electrons becomes positively charged and the body that gains electrons becomes negatively charged.</p>
+
+<h4>Common Pairs</h4>
+<ul>
+<li><strong>Glass rod + silk:</strong> electrons move from glass to silk → glass becomes +, silk becomes −.</li>
+<li><strong>Ebonite (rubber) rod + wool:</strong> electrons move from wool to ebonite → ebonite becomes −, wool becomes +.</li>
+<li><strong>Plastic comb + dry hair:</strong> comb becomes −, hair becomes + (hence hair stands up).</li>
+</ul>
+
+<div class="tip">
+<p>Friction does <em>not create</em> charge; it only <em>transfers</em> electrons. The total charge of the two bodies together remains zero — this is the law of conservation of charge.</p>
+</div>
+
+<h4>Day-to-Day Observations Explained</h4>
+<ol>
+<li><strong>Crackling sound when removing a nylon shirt in winter:</strong> friction between shirt and body transfers charge; discharge through air produces sound and tiny sparks.</li>
+<li><strong>Lightning:</strong> friction between ice particles and water droplets in clouds separates charge; huge discharge occurs between cloud and earth.</li>
+<li><strong>Dust sticking to a TV screen:</strong> the screen gets charged and attracts neutral dust particles by induction.</li>
+<li><strong>Photocopier / laser printer:</strong> a charged drum attracts toner particles only where the image is to be printed.</li>
+</ol>
+
+<figure>
+<svg viewBox="0 0 300 120" role="img" aria-label="Glass rod and silk showing charge transfer">
+<g stroke="currentColor" fill="none">
+<rect x="20" y="50" width="120" height="16" rx="4"/>
+<text x="80" y="62" text-anchor="middle" fill="currentColor" font-size="12">glass rod</text>
+<text x="80" y="40" text-anchor="middle" fill="currentColor" font-size="14">+ + +</text>
+<path d="M 160 58 Q 200 30 240 58 Q 200 86 160 58" />
+<text x="200" y="62" text-anchor="middle" fill="currentColor" font-size="12">silk</text>
+<text x="200" y="105" text-anchor="middle" fill="currentColor" font-size="14">− − −</text>
+<path d="M 140 58 L 155 58" marker-end="url(#arr)"/>
+<text x="148" y="50" text-anchor="middle" fill="currentColor" font-size="10">e⁻</text>
+</g>
+</svg>
+<figcaption>When glass is rubbed with silk, electrons move from glass to silk.</figcaption>
+</figure>
+</section>
+
+<section>
+<h3>19.3 Spherical Conductor as a Point Charge</h3>
+
+<div class="definition">
+<p>For any point <strong>outside</strong> a uniformly charged spherical conductor, the entire charge on the sphere may be considered to be concentrated at its centre and behaves like a point charge.</p>
+</div>
+
+<h4>Why does this work?</h4>
+<ul>
+<li>In a conductor in electrostatic equilibrium, all excess charge resides on the outer surface and distributes uniformly (for an isolated sphere).</li>
+<li>By symmetry (or by Gauss's law), the field outside is identical to that of a point charge \(Q\) placed at the centre.</li>
+<li>Inside the conductor the field is zero.</li>
+</ul>
+
+<p>Mathematically, for a point at distance \(r\) from the centre (\(r \ge R\), where \(R\) is the radius):</p>
+\[ E = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}, \qquad V = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r} \]
+<p>which are exactly the expressions for a point charge \(Q\) at the centre.</p>
+
+<div class="warning">
+<p>This result holds only for points <em>outside</em> (or on the surface of) the sphere. Inside a charged conducting sphere the electric field is zero, not that of a point charge.</p>
+</div>
+</section>
+
+<section>
+<h3>19.4 Coulomb's Law</h3>
+
+<div class="definition">
+<p><strong>Coulomb's law</strong> states that the magnitude of the electrostatic force between two stationary point charges is directly proportional to the product of the magnitudes of the charges and inversely proportional to the square of the distance between them. The force acts along the line joining the two charges.</p>
+</div>
+
+<h4>Mathematical Form</h4>
+\[ F = \frac{1}{4\pi\varepsilon_0}\,\frac{|q_1 q_2|}{r^2} \]
+where
+<ul>
+<li>\(F\) = electrostatic force (N)</li>
+<li>\(q_1, q_2\) = charges (C)</li>
+<li>\(r\) = distance between the charges (m)</li>
+<li>\(\varepsilon_0\) = permittivity of free space = \(8.854 \times 10^{-12}\ \text{C}^2\text{N}^{-1}\text{m}^{-2}\)</li>
+<li>\(\dfrac{1}{4\pi\varepsilon_0} = k = 9 \times 10^9\ \text{N m}^2\text{C}^{-2}\)</li>
+</ul>
+
+<h4>Vector Form</h4>
+\[ \vec{F}_{12} = \frac{1}{4\pi\varepsilon_0}\,\frac{q_1 q_2}{r^2}\,\hat{r}_{21} \]
+<p>where \(\hat{r}_{21}\) is the unit vector from charge 2 to charge 1. \(\vec{F}_{12}\) is the force on charge 1 due to charge 2.</p>
+
+<h4>Conditions for Coulomb's Law</h4>
+<ol>
+<li>Charges must be <strong>point charges</strong> (size \(\ll\) separation).</li>
+<li>Charges must be <strong>stationary</strong> (electrostatics).</li>
+<li>Force is pairwise and obeys Newton's third law: \(\vec{F}_{12} = -\vec{F}_{21}\).</li>
+<li>The law is valid in vacuum/air; in a medium a correction factor is needed (see 19.5).</li>
+</ol>
+
+<figure>
+<svg viewBox="0 0 300 120" role="img" aria-label="Two charges with force vectors">
+<g stroke="currentColor" fill="none">
+<circle cx="80" cy="60" r="14"/>
+<text x="80" y="65" text-anchor="middle" fill="currentColor" font-size="14">+</text>
+<text x="80" y="95" text-anchor="middle" fill="currentColor" font-size="12">q₁</text>
+<circle cx="220" cy="60" r="14"/>
+<text x="220" y="65" text-anchor="middle" fill="currentColor" font-size="14">+</text>
+<text x="220" y="95" text-anchor="middle" fill="currentColor" font-size="12">q₂</text>
+<path d="M 100 60 L 140 60" marker-end="url(#arr)"/>
+<text x="120" y="50" text-anchor="middle" fill="currentColor" font-size="11">F₁₂</text>
+<path d="M 200 60 L 160 60" marker-end="url(#arr)"/>
+<text x="180" y="50" text-anchor="middle" fill="currentColor" font-size="11">F₂₁</text>
+<text x="150" y="115" text-anchor="middle" fill="currentColor" font-size="11">r</text>
+</g>
+</svg>
+<figcaption>Two like charges repel each other with equal and opposite forces along the line joining them.</figcaption>
+</figure>
+</section>
+
+<section>
+<h3>19.5 Coulomb's Law in a Medium: Permittivity and Dielectric Constant</h3>
+
+<p>When the charges are placed in a material medium (instead of vacuum), the force between them is <strong>reduced</strong> because the medium becomes polarised and opposes the field.</p>
+
+\[ F_{\text{medium}} = \frac{1}{4\pi\varepsilon}\,\frac{|q_1 q_2|}{r^2} \]
+<p>where \(\varepsilon\) is the <strong>absolute permittivity</strong> of the medium.</p>
+
+<h4>Key Quantities</h4>
+<ul>
+<li><strong>Permittivity of free space:</strong> \(\varepsilon_0 = 8.854 \times 10^{-12}\ \text{C}^2\text{N}^{-1}\text{m}^{-2}\)</li>
+<li><strong>Absolute permittivity of medium:</strong> \(\varepsilon\) (units same as \(\varepsilon_0\))</li>
+<li><strong>Relative permittivity (dielectric constant):</strong>
+\[ \varepsilon_r = K = \frac{\varepsilon}{\varepsilon_0} \]
+It is a dimensionless number. For vacuum \(K = 1\); for air \(K \approx 1.0006 \approx 1\); for water \(K \approx 81\).</li>
+</ul>
+
+<h4>Relation between Forces in Vacuum and Medium</h4>
+\[ \frac{F_{\text{vacuum}}}{F_{\text{medium}}} = \frac{\varepsilon}{\varepsilon_0} = K \]
+\[ \boxed{F_{\text{medium}} = \frac{F_{\text{vacuum}}}{K}} \]
+
+<div class="note">
+<p>Since \(K \ge 1\) for all material media, the force in a medium is always <em>less than or equal to</em> the force in vacuum. Putting charges in water (K = 81) reduces the force to about 1/81 of its value in air.</p>
+</div>
+
+<h4>Effective Distance Method</h4>
+<p>Sometimes it is convenient to write the force in a medium as if the charges were in vacuum but at an <em>effective distance</em> \(r' = r\sqrt{K}\):</p>
+\[ F_{\text{medium}} = \frac{1}{4\pi\varepsilon_0}\,\frac{q_1 q_2}{(r\sqrt{K})^2} \]
+</section>
+
+<section>
+<h3>19.6 Net Force Due to Multiple Charges (Superposition)</h3>
+
+<div class="definition">
+<p>The <strong>principle of superposition</strong> states that the net force on any charge due to a number of other charges is the <strong>vector sum</strong> of the individual forces exerted by each charge, considered independently.</p>
+</div>
+
+\[ \vec{F}_{\text{net}} = \vec{F}_1 + \vec{F}_2 + \vec{F}_3 + \dots = \sum_{i} \vec{F}_i \]
+
+<h4>How to Apply</h4>
+<ol>
+<li>Draw a clear diagram and mark all charges and the charge of interest.</li>
+<li>Find the magnitude of each pairwise force using Coulomb's law.</li>
+<li>Determine the direction of each force (along the line joining the charges; repulsive or attractive).</li>
+<li>Resolve each force into \(x\) and \(y\) components.</li>
+<li>Add components: \(F_x = \sum F_{ix}\), \(F_y = \sum F_{iy}\).</li>
+<li>Resultant: \(F_{\text{net}} = \sqrt{F_x^2 + F_y^2}\) and \(\tan\theta = \dfrac{F_y}{F_x}\).</li>
+</ol>
+
+<div class="tip">
+<p>Remember: Coulomb's law is a <strong>vector</strong> law. Never add force magnitudes directly unless they happen to be along the same line.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 300 180" role="img" aria-label="Three charges arranged in a triangle">
+<g stroke="currentColor" fill="none">
+<circle cx="60" cy="140" r="12"/>
+<text x="60" y="145" text-anchor="middle" fill="currentColor" font-size="12">q₁</text>
+<circle cx="240" cy="140" r="12"/>
+<text x="240" y="145" text-anchor="middle" fill="currentColor" font-size="12">q₂</text>
+<circle cx="150" cy="40" r="12"/>
+<text x="150" y="45" text-anchor="middle" fill="currentColor" font-size="12">q₃</text>
+<path d="M 60 140 L 240 140"/>
+<path d="M 240 140 L 150 40"/>
+<path d="M 150 40 L 60 140"/>
+<path d="M 150 40 L 120 90" marker-end="url(#arr)"/>
+<text x="115" y="70" fill="currentColor" font-size="11">F₃₁</text>
+<path d="M 150 40 L 180 90" marker-end="url(#arr)"/>
+<text x="195" y="70" fill="currentColor" font-size="11">F₃₂</text>
+</g>
+</svg>
+<figcaption>Force on q₃ due to q₁ and q₂ is the vector sum of F₃₁ and F₃₂.</figcaption>
+</figure>
+</section>
+
+<section>
+<h3>Worked Examples</h3>
+
+<div class="example">
+<p><strong>Example 1.</strong> Two point charges \(+3\ \mu\text{C}\) and \(-5\ \mu\text{C}\) are separated by \(0.2\ \text{m}\) in air. Find the force between them. Is it attractive or repulsive?</p>
+<p><strong>Solution.</strong></p>
+<p>Given: \(q_1 = 3 \times 10^{-6}\ \text{C}\), \(q_2 = -5 \times 10^{-6}\ \text{C}\), \(r = 0.2\ \text{m}\).</p>
+\[ F = \frac{9 \times 10^9 \times (3 \times 10^{-6})(5 \times 10^{-6})}{(0.2)^2} \]
+\[ F = \frac{9 \times 10^9 \times 15 \times 10^{-12}}{0.04} = \frac{0.135}{0.04} = 3.375\ \text{N} \]
+<p>Since the charges are of opposite sign, the force is <strong>attractive</strong>.</p>
+<p><strong>Answer:</strong> \(F = 3.375\ \text{N}\) (attractive).</p>
+</div>
+
+<div class="example">
+<p><strong>Example 2.</strong> Two identical point charges repel each other with a force of \(0.5\ \text{N}\) when placed \(0.4\ \text{m}\) apart in air. What will be the force if they are placed in a medium of dielectric constant \(K = 5\)?</p>
+<p><strong>Solution.</strong></p>
+<p>Force in air (≈ vacuum): \(F_{\text{air}} = 0.5\ \text{N}\).</p>
+\[ F_{\text{medium}} = \frac{F_{\text{air}}}{K} = \frac{0.5}{5} = 0.1\ \text{N} \]
+<p><strong>Answer:</strong> \(F_{\text{medium}} = 0.1\ \text{N}\).</p>
+</div>
+
+<div class="example">
+<p><strong>Example 3.</strong> Three charges \(q_1 = +2\ \mu\text{C}\), \(q_2 = +2\ \mu\text{C}\) and \(q_3 = -4\ \mu\text{C}\) are placed at the corners A, B and C of an equilateral triangle of side \(10\ \text{cm}\). Find the net force on \(q_3\).</p>
+<p><strong>Solution.</strong></p>
+<p>Let the triangle be ABC with C at the top. The forces on \(q_3\) (at C) are:</p>
+<ul>
+<li>\(\vec{F}_{31}\) due to \(q_1\) (at A): attractive, directed from C toward A.</li>
+<li>\(\vec{F}_{32}\) due to \(q_2\) (at B): attractive, directed from C toward B.</li>
+</ul>
+<p>Magnitudes (with \(r = 0.1\ \text{m}\)):</p>
+\[ F_{31} = \frac{9 \times 10^9 \times (4 \times 10^{-6})(2 \times 10^{-6})}{(0.1)^2} = \frac{72 \times 10^{-3}}{0.01} = 7.2\ \text{N} \]
+\[ F_{32} = 7.2\ \text{N} \quad \text{(by symmetry)} \]
+<p>The angle between \(\vec{F}_{31}\) and \(\vec{F}_{32}\) is \(60^\circ\) (interior angle of equilateral triangle).</p>
+\[ F_{\text{net}} = \sqrt{F_{31}^2 + F_{32}^2 + 2 F_{31} F_{32} \cos 60^\circ} \]
+\[ = \sqrt{7.2^2 + 7.2^2 + 2(7.2)(7.2)\left(\frac{1}{2}\right)} = \sqrt{3 \times 7.2^2} = 7.2\sqrt{3} \approx 12.47\ \text{N} \]
+<p>By symmetry the resultant is directed along the median from C to the midpoint of AB, i.e. vertically downward in the figure.</p>
+<p><strong>Answer:</strong> \(F_{\text{net}} \approx 12.47\ \text{N}\), directed from C towards the midpoint of AB.</p>
+</div>
+
+<div class="example">
+<p><strong>Example 4.</strong> How many electrons must be removed from a body to give it a charge of \(+1.6\ \text{nC}\)?</p>
+<p><strong>Solution.</strong></p>
+<p>Positive charge means electrons have been removed. Using \(Q = ne\):</p>
+\[ n = \frac{Q}{e} = \frac{1.6 \times 10^{-9}}{1.6 \times 10^{-19}} = 10^{10} \]
+<p><strong>Answer:</strong> \(10^{10}\) electrons must be removed.</p>
+</div>
+</section>
+
+<section>
+<h3>Common Mistakes</h3>
+<ul>
+<li><strong>Forgetting the vector nature of force.</strong> Forces must be added as vectors, not as scalars, unless they are collinear.</li>
+<li><strong>Sign errors.</strong> Use magnitudes in Coulomb's formula and decide the direction (attraction/repulsion) separately.</li>
+<li><strong>Unit mistakes.</strong> Charges must be in coulombs (\(\mu\text{C} = 10^{-6}\ \text{C}\), \(\text{nC} = 10^{-9}\ \text{C}\), \(\text{pC} = 10^{-12}\ \text{C}\)) and distances in metres.</li>
+<li><strong>Confusing \(\varepsilon_0\), \(\varepsilon\) and \(K\).</strong> Remember \(K = \varepsilon/\varepsilon_0\) and \(F_{\text{medium}} = F_{\text{vacuum}}/K\).</li>
+<li><strong>Applying the point-charge result inside a sphere.</strong> Outside a charged conducting sphere the field is that of a point charge at the centre; <em>inside</em> the field is zero.</li>
+<li><strong>Using \(k = 9 \times 10^9\) with wrong units.</strong> \(k\) has units \(\text{N m}^2 \text{C}^{-2}\).</li>
+<li><strong>Wrong angle in superposition.</strong> Always identify the angle between the two force vectors correctly (often it is the angle of the triangle, not its supplement).</li>
+</ul>
+</section>
+
+<section>
+<h3>Key Points Summary</h3>
+<ul>
+<li>Electric charge is quantised (\(Q = ne\)), conserved and additive.</li>
+<li>Charging by friction transfers electrons; total charge of the system is conserved.</li>
+<li>A uniformly charged spherical conductor behaves like a point charge at its centre for all points outside.</li>
+<li>Coulomb's law: \(F = \dfrac{1}{4\pi\varepsilon_0}\dfrac{|q_1 q_2|}{r^2}\), with \(k = 9 \times 10^9\ \text{N m}^2\text{C}^{-2}\).</li>
+<li>In a medium: \(F_{\text{medium}} = F_{\text{vacuum}}/K\), where \(K = \varepsilon_r = \varepsilon/\varepsilon_0\).</li>
+<li>Superposition principle: \(\vec{F}_{\text{net}} = \sum \vec{F}_i\) (vector sum).</li>
+<li>\(\varepsilon_0 = 8.854 \times 10^{-12}\ \text{C}^2\text{N}^{-1}\text{m}^{-2}\); for air \(K \approx 1\).</li>
+<li>Always treat Coulomb's law as a vector law in problems with more than two charges.</li>
+</ul>
+</section>
