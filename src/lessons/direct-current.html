@@ -1,0 +1,748 @@
+---
+title: Direct Current 
+grade: XI
+chapters: [23]
+date: 2026-10-08
+---
+
+<p>Every electrical device, from a torch to a mobile charger, depends on how charge flows through a circuit. This chapter explains what limits the current (resistance), how resistance depends on the size and material of a conductor, how sensors use changes in resistance, how resistors combine in series and parallel, how a potential divider gives a variable voltage, why a real battery loses voltage when it supplies current (internal resistance), and how electrical energy is converted into heat and other forms (power).</p>
+
+<blockquote>
+<p><strong>Quantities and units used in these notes:</strong></p>
+<ul>
+<li>Current \(I\) in ampere (A), potential difference \(V\) in volt (V), resistance \(R\) in ohm (\(\Omega\)), power \(P\) in watt (W), energy \(W\) in joule (J).</li>
+<li>Conventional current is taken to flow from the positive terminal of a cell, through the external circuit, to the negative terminal.</li>
+<li>Meters are treated as ideal (an ammeter has zero resistance and a voltmeter has infinite resistance) and connecting wires have zero resistance, unless stated otherwise.</li>
+<li>In circuit diagrams, the longer line of a cell symbol is the positive terminal.</li>
+</ul>
+</blockquote>
+
+<h2>23.2 Electrical Resistance, Resistivity and Conductivity</h2>
+
+<h3>Electric resistance</h3>
+<blockquote>
+<p><strong>Definition:</strong> The electrical resistance of a component is the ratio of the potential difference across it to the current through it.</p>
+\[ R = \frac{V}{I} \]
+</blockquote>
+<p>A large resistance means a small current for a given p.d. Resistance arises because the moving charge carriers (free electrons in a metal) collide with the vibrating lattice ions and with impurities, and so lose energy.</p>
+
+<h3>The ohm</h3>
+<blockquote>
+<p><strong>Definition:</strong> One ohm (1 \(\Omega\)) is the resistance of a conductor through which a current of 1 ampere flows when a potential difference of 1 volt is applied across it.</p>
+\[ 1\ \Omega = 1\ \text{V A}^{-1} \]
+</blockquote>
+<p>The equation \(R = V/I\) defines resistance for <strong>any</strong> component, whether or not it obeys Ohm's law (see 23.3).</p>
+
+<h3>Factors affecting the resistance of a wire (at constant temperature)</h3>
+<ul>
+<li>The resistance is directly proportional to the length: \(R \propto l\). A longer wire means more collisions along the path.</li>
+<li>The resistance is inversely proportional to the cross-sectional area: \(R \propto \dfrac{1}{A}\). A thicker wire gives the charges more paths to flow through.</li>
+<li>The resistance depends on the material.</li>
+</ul>
+<p>Combining the first two, \(R \propto \dfrac{l}{A}\). Introducing a constant of proportionality \(\rho\), which depends on the material,</p>
+\[ \boxed{R = \frac{\rho\, l}{A}} \]
+
+<h3>Resistivity</h3>
+<blockquote>
+<p><strong>Definition:</strong> The resistivity \(\rho\) of a material is the resistance of a wire of that material of unit length and unit cross-sectional area.</p>
+\[ \rho = \frac{RA}{l} \]
+<p>The SI unit of resistivity is the ohm metre (\(\Omega\ \text{m}\)).</p>
+</blockquote>
+<p>Resistivity is a property of the <strong>material</strong> (and its temperature), not of the shape or size of the sample. Resistance depends on both material and shape.</p>
+
+<table>
+<thead>
+<tr><th>Material</th><th>Approximate resistivity at room temperature (\(\Omega\ \text{m}\))</th><th>Type</th></tr>
+</thead>
+<tbody>
+<tr><td>Copper</td><td>\(1.7 \times 10^{-8}\)</td><td>Good conductor</td></tr>
+<tr><td>Aluminium</td><td>\(2.8 \times 10^{-8}\)</td><td>Good conductor</td></tr>
+<tr><td>Nichrome</td><td>\(1.1 \times 10^{-6}\)</td><td>Resistance wire</td></tr>
+<tr><td>Pure silicon</td><td>of the order of \(10^{3}\)</td><td>Semiconductor</td></tr>
+<tr><td>Glass</td><td>\(10^{10}\) to \(10^{14}\)</td><td>Insulator</td></tr>
+</tbody>
+</table>
+
+<h3>Conductance and conductivity</h3>
+<blockquote>
+<p><strong>Definition:</strong> Conductance \(G\) is the reciprocal of resistance, \(G = \dfrac{1}{R}\). Its unit is the siemens (S), where \(1\ \text{S} = 1\ \Omega^{-1}\).</p>
+<p><strong>Definition:</strong> Conductivity \(\sigma\) of a material is the reciprocal of its resistivity.</p>
+\[ \sigma = \frac{1}{\rho} = \frac{l}{RA} \]
+<p>The SI unit of conductivity is the siemens per metre (\(\text{S m}^{-1}\) or \(\Omega^{-1}\ \text{m}^{-1}\)).</p>
+</blockquote>
+<p>A good conductor has low resistivity and high conductivity.</p>
+
+<h3>Change of resistance with temperature</h3>
+<p>For a metal, resistivity increases with temperature, because the lattice ions vibrate more and collide more often with the electrons. For a semiconductor, resistivity decreases with temperature, because more charge carriers become free (see the thermistor below).</p>
+
+<h3>Wire dimensions and the variable resistor</h3>
+<p>From \(R = \dfrac{\rho l}{A}\), the resistance of a wire of fixed material can be changed by changing its dimensions:</p>
+<ul>
+<li><strong>Changing the length:</strong> a variable resistor (rheostat) has a long coil of resistance wire (such as nichrome) wound on an insulating cylinder. A sliding contact selects how much of the wire is in the circuit. A longer length in the circuit gives a larger resistance (\(R \propto l\)). A slide-wire used in the laboratory works the same way.</li>
+<li><strong>Changing the area:</strong> a thicker wire has a smaller resistance. A thin wire is used where high resistance is needed, for example in a heater element.</li>
+<li><strong>Stretching a wire:</strong> stretching changes both length and area. The volume of the metal stays constant, \(Al = \) constant. If the length becomes \(k\) times the original, then \(l' = kl\) and \(A' = \dfrac{A}{k}\). So</li>
+</ul>
+\[ R' = \frac{\rho\, l'}{A'} = \frac{\rho\, (kl)}{A/k} = k^2\,\frac{\rho l}{A} = k^2 R \]
+<p>If a wire is stretched to double its length, its resistance becomes four times as large.</p>
+
+<h3>Strain gauge (pressure sensor)</h3>
+<p>A <strong>strain gauge</strong> is a thin metal foil, usually a long thin wire folded back and forth in a grid pattern, stuck on a flexible insulating backing. It has two terminals.</p>
+
+<figure>
+<svg viewBox="0 0 600 230" role="img" aria-label="Structure of a strain gauge: a zigzag metal foil grid mounted on a flexible insulating backing with two terminals, and arrows on either side showing the backing being stretched" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="sg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<rect x="150" y="40" width="300" height="150" rx="6"/>
+<polyline points="190,70 410,70 410,90 190,90 190,110 410,110 410,130 190,130 190,150 410,150" stroke-width="2"/>
+<line x1="130" y1="70" x2="190" y2="70"/>
+<line x1="410" y1="150" x2="470" y2="150"/>
+<circle cx="130" cy="70" r="3" fill="currentColor"/>
+<circle cx="470" cy="150" r="3" fill="currentColor"/>
+<line x1="145" y1="115" x2="95" y2="115" marker-end="url(#sg)"/>
+<line x1="455" y1="115" x2="505" y2="115" marker-end="url(#sg)"/>
+<text x="60" y="62" fill="currentColor" stroke="none">Terminal</text>
+<text x="480" y="154" fill="currentColor" stroke="none">Terminal</text>
+<text x="100" y="105" fill="currentColor" stroke="none">F</text>
+<text x="490" y="105" fill="currentColor" stroke="none">F</text>
+<text x="160" y="30" fill="currentColor" stroke="none">Flexible insulating backing</text>
+<text x="215" y="176" fill="currentColor" stroke="none">Metal foil grid</text>
+</svg>
+<figcaption>A strain gauge. When the backing is stretched along the length of the grid lines, the foil becomes longer and thinner, so its resistance increases.</figcaption>
+</figure>
+
+<p><strong>Working.</strong> The gauge is bonded to a surface (for example a diaphragm or a beam). When the pressure or force changes, the surface deforms and the gauge is stretched or compressed with it.</p>
+<ul>
+<li>When the foil is stretched, its length \(l\) increases and its cross-sectional area \(A\) decreases. By \(R = \dfrac{\rho l}{A}\), its resistance <strong>increases</strong>.</li>
+<li>A greater pressure gives a greater strain and so a greater increase in resistance.</li>
+<li>The fractional change in resistance is proportional to the strain \( \varepsilon = \dfrac{\Delta l}{l} \):</li>
+</ul>
+\[ \frac{\Delta R}{R} = G_f\, \varepsilon \]
+<p>Here \(G_f\) is the <strong>gauge factor</strong>, about 2 for metal foil. (For a wire of constant volume, \(R \propto l^2\), which gives \(\dfrac{\Delta R}{R} \approx 2\dfrac{\Delta l}{l}\).) The change is very small, so the gauge is connected in a potential divider or bridge circuit, and the resulting change in voltage is measured.</p>
+<p><strong>Use as a pressure sensor.</strong> The gauge is mounted on a diaphragm that bends when the pressure changes. The change in resistance is converted into a change in voltage that is displayed as the pressure reading. Examples are blood-pressure monitors, tyre-pressure sensors and weighing scales.</p>
+
+<h3>Light-dependent resistor (LDR, light sensor)</h3>
+<p>An LDR is made of a semiconductor material such as cadmium sulphide. In the dark, most electrons are bound to atoms, so there are few free charge carriers and the resistance is very high (of the order of a megohm). When light falls on it, photons give energy to bound electrons and free them. The number of charge carriers increases, so the resistance <strong>decreases</strong> as the light intensity increases (to a few hundred ohms in bright light).</p>
+
+<h3>n-type (NTC) thermistor (electronic temperature sensor)</h3>
+<p>A thermistor is a resistor made of a semiconducting metal oxide whose resistance is very sensitive to temperature. The <strong>n-type</strong> thermistor has a <strong>negative temperature coefficient</strong> (NTC): its resistance <strong>decreases</strong> as the temperature rises. At a higher temperature, more electrons gain enough thermal energy to become free, so there are more charge carriers. The effect of more carriers is larger than the effect of more lattice vibration, so the net resistance falls. The fall is non-linear.</p>
+
+<figure>
+<svg viewBox="0 0 780 260" role="img" aria-label="Two graphs. Left: resistance of a light-dependent resistor decreases as light intensity increases. Right: resistance of an n-type thermistor decreases as temperature increases. Both are decreasing curves that flatten out." fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="ldr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="60" y1="210" x2="360" y2="210" marker-end="url(#ldr)"/>
+<line x1="60" y1="210" x2="60" y2="25" marker-end="url(#ldr)"/>
+<path d="M80 45 Q110 190 340 203"/>
+<text x="40" y="38" fill="currentColor" stroke="none">R</text>
+<text x="120" y="238" fill="currentColor" stroke="none">Light intensity</text>
+<text x="100" y="20" fill="currentColor" stroke="none">LDR</text>
+<line x1="440" y1="210" x2="740" y2="210" marker-end="url(#ldr)"/>
+<line x1="440" y1="210" x2="440" y2="25" marker-end="url(#ldr)"/>
+<path d="M460 45 Q490 190 720 203"/>
+<text x="420" y="38" fill="currentColor" stroke="none">R</text>
+<text x="510" y="238" fill="currentColor" stroke="none">Temperature</text>
+<text x="470" y="20" fill="currentColor" stroke="none">n-type thermistor (NTC)</text>
+</svg>
+<figcaption>Left: the resistance of an LDR falls as the light intensity rises. Right: the resistance of an n-type (NTC) thermistor falls as the temperature rises. Neither graph is a straight line.</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr><th>Sensor</th><th>What it senses</th><th>Change causing a change in R</th><th>Effect on resistance</th></tr>
+</thead>
+<tbody>
+<tr><td>Strain gauge</td><td>Pressure or force (strain)</td><td>Foil stretched: longer and thinner</td><td>Increases with pressure</td></tr>
+<tr><td>LDR</td><td>Light intensity</td><td>More charge carriers released by photons</td><td>Decreases as light gets brighter</td></tr>
+<tr><td>n-type thermistor</td><td>Temperature</td><td>More charge carriers released by heat</td><td>Decreases as temperature rises</td></tr>
+</tbody>
+</table>
+
+<h2>23.3 Current-Voltage Relations: Ohmic and Non-ohmic Conductors</h2>
+
+<h3>Ohm's law</h3>
+<blockquote>
+<p><strong>Ohm's law:</strong> The current through a conductor is directly proportional to the potential difference across its ends, provided its temperature and other physical conditions remain constant.</p>
+\[ I \propto V \quad\Rightarrow\quad V = IR \quad (R \text{ constant}) \]
+</blockquote>
+<p>Ohm's law is not the same as the definition \(R = V/I\). The definition applies to every component. Ohm's law says that for some conductors \(R\) stays constant as \(V\) changes.</p>
+
+<h3>Ohmic and non-ohmic conductors</h3>
+<ul>
+<li>An <strong>ohmic conductor</strong> obeys Ohm's law. Its \(I\)-\(V\) graph is a straight line through the origin, and its resistance is constant. Example: a metallic conductor (a resistor) at constant temperature.</li>
+<li>A <strong>non-ohmic conductor</strong> does not obey Ohm's law. Its \(I\)-\(V\) graph is curved, and its resistance changes with \(V\) or \(I\). Examples: a filament lamp, a semiconductor diode, a thermistor.</li>
+</ul>
+<p>For any point on an \(I\)-\(V\) graph, the resistance at that point is \(R = \dfrac{V}{I}\), the ratio of the coordinates at that point. It is <strong>not</strong> the slope of the tangent for a curved graph.</p>
+
+<h3>(a) Metallic conductor at constant temperature</h3>
+<figure>
+<svg viewBox="0 0 400 260" role="img" aria-label="I-V graph of a metallic conductor at constant temperature: a straight line through the origin in both the positive and negative quadrants" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="iv1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="40" y1="130" x2="370" y2="130" marker-end="url(#iv1)"/>
+<line x1="200" y1="240" x2="200" y2="20" marker-end="url(#iv1)"/>
+<line x1="80" y1="210" x2="320" y2="50" stroke-width="2"/>
+<text x="376" y="134" fill="currentColor" stroke="none">V</text>
+<text x="208" y="26" fill="currentColor" stroke="none">I</text>
+<text x="215" y="236" fill="currentColor" stroke="none">gradient = 1/R (constant)</text>
+</svg>
+<figcaption>Metal at constant temperature: a straight line through the origin. The current reverses when the p.d. reverses, and the resistance is the same in both directions.</figcaption>
+</figure>
+<p>The graph is a straight line through the origin, so \(I \propto V\) and \(R\) is constant. The gradient of the graph is \(1/R\). A steeper line means a smaller resistance. This holds only while the temperature is constant. If the current is large enough to heat the wire, the graph bends (see the filament lamp).</p>
+
+<h3>(b) Filament lamp</h3>
+<figure>
+<svg viewBox="0 0 400 260" role="img" aria-label="I-V graph of a filament lamp: an S-shaped curve through the origin. Current rises quickly at first and then the curve flattens, in both positive and negative directions" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="iv2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="40" y1="130" x2="370" y2="130" marker-end="url(#iv2)"/>
+<line x1="200" y1="240" x2="200" y2="20" marker-end="url(#iv2)"/>
+<path d="M200 130 Q235 60 320 40" stroke-width="2"/>
+<path d="M200 130 Q165 200 80 220" stroke-width="2"/>
+<text x="376" y="134" fill="currentColor" stroke="none">V</text>
+<text x="208" y="26" fill="currentColor" stroke="none">I</text>
+<text x="226" y="170" fill="currentColor" stroke="none">gradient decreases: R increases</text>
+</svg>
+<figcaption>Filament lamp: the graph curves towards the V-axis. The current increases less and less for each additional volt, because the resistance of the hot filament increases.</figcaption>
+</figure>
+<p><strong>Explanation.</strong> The filament is a metal (tungsten) wire. As the current increases, the filament becomes hotter (it can reach over 2000 \(^\circ\)C). A higher temperature means more vigorous lattice vibrations and more collisions with the electrons, so the resistance \(R = V/I\) increases. The ratio \(V/I\) therefore grows as \(V\) grows, and the graph bends towards the voltage axis. The lamp is non-ohmic. The graph is symmetrical about the origin because the filament behaves the same in both directions.</p>
+
+<h3>(c) Semiconductor diode</h3>
+<figure>
+<svg viewBox="0 0 400 260" role="img" aria-label="I-V graph of a semiconductor diode: in reverse bias the current is almost zero; in forward bias the current is almost zero until about 0.6 volt and then rises very steeply" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="iv3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="40" y1="130" x2="370" y2="130" marker-end="url(#iv3)"/>
+<line x1="200" y1="240" x2="200" y2="20" marker-end="url(#iv3)"/>
+<path d="M60 133 L250 130 Q275 126 292 30" stroke-width="2"/>
+<line x1="255" y1="124" x2="255" y2="136"/>
+<text x="376" y="134" fill="currentColor" stroke="none">V</text>
+<text x="208" y="26" fill="currentColor" stroke="none">I</text>
+<text x="226" y="155" fill="currentColor" stroke="none">≈ 0.6 V (silicon)</text>
+<text x="70" y="115" fill="currentColor" stroke="none">Reverse bias</text>
+<text x="290" y="80" fill="currentColor" stroke="none">Forward bias</text>
+</svg>
+<figcaption>Semiconductor diode (silicon): negligible current in reverse bias, and negligible current in forward bias until the threshold p.d. of about 0.6 V is reached. After that the current rises very rapidly.</figcaption>
+</figure>
+<ul>
+<li><strong>Forward bias</strong> (p-side positive): almost no current until the p.d. exceeds the threshold (about 0.6 V for silicon, 0.2 V for germanium). Above the threshold, a small increase in p.d. causes a large increase in current, so the resistance becomes very small.</li>
+<li><strong>Reverse bias</strong> (p-side negative): only a tiny leakage current flows, so the resistance is very high. (At a very large reverse voltage the diode breaks down and a large current flows.)</li>
+<li>The diode conducts in one direction only. It is non-ohmic and is used as a rectifier.</li>
+</ul>
+
+<table>
+<thead>
+<tr><th>Component</th><th>\(I\)-\(V\) graph</th><th>Resistance</th><th>Ohmic?</th></tr>
+</thead>
+<tbody>
+<tr><td>Metallic conductor (constant temperature)</td><td>Straight line through the origin</td><td>Constant</td><td>Yes</td></tr>
+<tr><td>Filament lamp</td><td>Curve bending towards the \(V\)-axis</td><td>Increases as current (temperature) rises</td><td>No</td></tr>
+<tr><td>Semiconductor diode</td><td>Zero current in reverse; sharp rise after threshold in forward</td><td>Very high in reverse; very low above threshold in forward</td><td>No</td></tr>
+</tbody>
+</table>
+
+<h2>23.4 Resistors in Series and in Parallel</h2>
+<p>Two conservation laws are used to derive the formulae:</p>
+<ul>
+<li><strong>Conservation of charge:</strong> charge is not created or destroyed, and it does not pile up at any point in a steady circuit. The current into a junction equals the current out of it.</li>
+<li><strong>Conservation of energy:</strong> the energy a source gives to each coulomb of charge equals the total energy the coulomb transfers in the components of the circuit. Equivalently, the p.d. across a source equals the sum of the p.d.s across components in series. Between two points, the p.d. is the same along every path.</li>
+</ul>
+
+<h3>Resistors in series</h3>
+<figure>
+<svg viewBox="0 0 520 230" role="img" aria-label="Three resistors R1, R2 and R3 connected in series with a cell, with the same current I through each and potential differences V1, V2, V3 across them" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="sr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="80" y1="40" x2="130" y2="40"/>
+<rect x="130" y="30" width="50" height="20"/>
+<line x1="180" y1="40" x2="250" y2="40"/>
+<rect x="250" y="30" width="50" height="20"/>
+<line x1="300" y1="40" x2="370" y2="40"/>
+<rect x="370" y="30" width="50" height="20"/>
+<line x1="420" y1="40" x2="460" y2="40"/>
+<line x1="460" y1="40" x2="460" y2="190"/>
+<line x1="460" y1="190" x2="80" y2="190"/>
+<line x1="80" y1="190" x2="80" y2="110"/>
+<line x1="80" y1="40" x2="80" y2="100"/>
+<line x1="62" y1="100" x2="98" y2="100"/>
+<line x1="70" y1="110" x2="90" y2="110" stroke-width="4"/>
+<line x1="478" y1="90" x2="478" y2="140" marker-end="url(#sr)"/>
+<text x="488" y="118" fill="currentColor" stroke="none">I</text>
+<text x="102" y="98" fill="currentColor" stroke="none">+</text>
+<text x="40" y="108" fill="currentColor" stroke="none">V</text>
+<text x="145" y="22" fill="currentColor" stroke="none">R₁</text>
+<text x="265" y="22" fill="currentColor" stroke="none">R₂</text>
+<text x="385" y="22" fill="currentColor" stroke="none">R₃</text>
+<text x="145" y="72" fill="currentColor" stroke="none">V₁</text>
+<text x="265" y="72" fill="currentColor" stroke="none">V₂</text>
+<text x="385" y="72" fill="currentColor" stroke="none">V₃</text>
+</svg>
+<figcaption>Three resistors in series. The same current I flows through each. The supply voltage V is shared among them.</figcaption>
+</figure>
+<p><strong>Derivation.</strong> Let resistors \(R_1\), \(R_2\), \(R_3\) be connected end to end across a source of p.d. \(V\). Let the equivalent resistance be \(R\).</p>
+<p><strong>Step 1 (conservation of charge).</strong> There are no junctions where charge can leave or collect, so the same current \(I\) flows through every resistor:</p>
+\[ I_1 = I_2 = I_3 = I \]
+<p><strong>Step 2 (conservation of energy).</strong> Each coulomb leaving the source gains energy \(V\) joules, and it loses \(V_1\), \(V_2\), \(V_3\) joules as it passes through the three resistors. Energy gained equals energy lost:</p>
+\[ V = V_1 + V_2 + V_3 \]
+<p><strong>Step 3.</strong> Apply \(V = IR\) to each resistor and to the combination:</p>
+\[ IR = IR_1 + IR_2 + IR_3 \]
+<p>Divide by the common current \(I\):</p>
+\[ \boxed{R = R_1 + R_2 + R_3} \]
+<p>For \(n\) resistors, \(R = R_1 + R_2 + \dots + R_n\). The combined resistance is greater than the largest individual resistance. The p.d.s are in proportion to the resistances: \(V_1 : V_2 : V_3 = R_1 : R_2 : R_3\).</p>
+
+<h3>Resistors in parallel</h3>
+<figure>
+<svg viewBox="0 0 520 250" role="img" aria-label="Three resistors R1, R2 and R3 connected in parallel across a cell. The total current I from the cell divides into I1, I2 and I3 in the branches, and the potential difference V is the same across each branch" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="pr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="80" y1="40" x2="440" y2="40"/>
+<line x1="80" y1="200" x2="440" y2="200"/>
+<line x1="80" y1="40" x2="80" y2="105"/>
+<line x1="62" y1="105" x2="98" y2="105"/>
+<line x1="70" y1="115" x2="90" y2="115" stroke-width="4"/>
+<line x1="80" y1="115" x2="80" y2="200"/>
+<line x1="200" y1="40" x2="200" y2="90"/><rect x="190" y="90" width="20" height="60"/><line x1="200" y1="150" x2="200" y2="200"/>
+<line x1="300" y1="40" x2="300" y2="90"/><rect x="290" y="90" width="20" height="60"/><line x1="300" y1="150" x2="300" y2="200"/>
+<line x1="400" y1="40" x2="400" y2="90"/><rect x="390" y="90" width="20" height="60"/><line x1="400" y1="150" x2="400" y2="200"/>
+<circle cx="200" cy="40" r="3" fill="currentColor"/><circle cx="300" cy="40" r="3" fill="currentColor"/><circle cx="400" cy="40" r="3" fill="currentColor"/>
+<circle cx="200" cy="200" r="3" fill="currentColor"/><circle cx="300" cy="200" r="3" fill="currentColor"/><circle cx="400" cy="200" r="3" fill="currentColor"/>
+<line x1="110" y1="28" x2="150" y2="28" marker-end="url(#pr)"/>
+<line x1="178" y1="55" x2="178" y2="82" marker-end="url(#pr)"/>
+<line x1="278" y1="55" x2="278" y2="82" marker-end="url(#pr)"/>
+<line x1="378" y1="55" x2="378" y2="82" marker-end="url(#pr)"/>
+<text x="125" y="20" fill="currentColor" stroke="none">I</text>
+<text x="156" y="74" fill="currentColor" stroke="none">I₁</text>
+<text x="256" y="74" fill="currentColor" stroke="none">I₂</text>
+<text x="356" y="74" fill="currentColor" stroke="none">I₃</text>
+<text x="216" y="125" fill="currentColor" stroke="none">R₁</text>
+<text x="316" y="125" fill="currentColor" stroke="none">R₂</text>
+<text x="416" y="125" fill="currentColor" stroke="none">R₃</text>
+<text x="102" y="103" fill="currentColor" stroke="none">+</text>
+<text x="40" y="112" fill="currentColor" stroke="none">V</text>
+<text x="170" y="232" fill="currentColor" stroke="none">Same p.d. V across every branch</text>
+</svg>
+<figcaption>Three resistors in parallel. The total current I divides at the junction into I₁, I₂ and I₃. Every branch has the same p.d. V.</figcaption>
+</figure>
+<p><strong>Derivation.</strong> Let resistors \(R_1\), \(R_2\), \(R_3\) be connected between the same two points, across a source of p.d. \(V\). Let the equivalent resistance be \(R\) and the total current be \(I\).</p>
+<p><strong>Step 1 (conservation of energy).</strong> Each branch connects the same two points, so each coulomb that passes through any branch transfers the same energy per coulomb, which is the same p.d.:</p>
+\[ V_1 = V_2 = V_3 = V \]
+<p><strong>Step 2 (conservation of charge).</strong> Charge does not pile up at the junction, so the current entering equals the sum of the currents leaving:</p>
+\[ I = I_1 + I_2 + I_3 \]
+<p><strong>Step 3.</strong> Apply \(I = V/R\) to each branch and to the combination:</p>
+\[ \frac{V}{R} = \frac{V}{R_1} + \frac{V}{R_2} + \frac{V}{R_3} \]
+<p>Divide by the common \(V\):</p>
+\[ \boxed{\frac{1}{R} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}} \]
+<p>For two resistors, this becomes</p>
+\[ R = \frac{R_1 R_2}{R_1 + R_2} \quad \left(\frac{\text{product}}{\text{sum}}\right) \]
+<ul>
+<li>The combined resistance is <strong>less than the smallest</strong> individual resistance, because the current has more paths.</li>
+<li>The currents divide in inverse proportion to the resistances: \(I_1 : I_2 = R_2 : R_1\). The smaller resistor carries more current.</li>
+<li>\(n\) identical resistors \(r\) in parallel give \(R = \dfrac{r}{n}\).</li>
+</ul>
+
+<table>
+<thead>
+<tr><th></th><th>Series</th><th>Parallel</th></tr>
+</thead>
+<tbody>
+<tr><td>Current</td><td>Same through each</td><td>Divides: \(I = I_1 + I_2 + \dots\)</td></tr>
+<tr><td>p.d.</td><td>Divides: \(V = V_1 + V_2 + \dots\)</td><td>Same across each</td></tr>
+<tr><td>Combined resistance</td><td>\(R = R_1 + R_2 + \dots\)</td><td>\(\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2} + \dots\)</td></tr>
+<tr><td>Compared with individual resistors</td><td>Larger than the largest</td><td>Smaller than the smallest</td></tr>
+<tr><td>If one component fails (open circuit)</td><td>All stop working</td><td>Others keep working</td></tr>
+</tbody>
+</table>
+
+<h3>Method for mixed circuits</h3>
+<ol>
+<li>Combine each parallel group into one equivalent resistor.</li>
+<li>Add the series resistors to get the total resistance \(R_T\).</li>
+<li>Find the total current \(I = V/R_T\).</li>
+<li>Work back through the circuit to find the p.d. across each part, and then the current in each branch.</li>
+</ol>
+
+<h2>23.5 Potential Divider</h2>
+
+<blockquote>
+<p><strong>Potential divider:</strong> a potential divider is a circuit of two (or more) resistors in series across a supply. It splits the supply p.d. into smaller parts, and the output is taken across one of the resistors.</p>
+</blockquote>
+
+<figure>
+<svg viewBox="0 0 480 250" role="img" aria-label="Potential divider circuit: a cell of voltage Vin connected across two resistors R1 and R2 in series, and the output voltage Vout is taken across R2" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="pd1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="80" y1="40" x2="300" y2="40"/>
+<line x1="300" y1="40" x2="300" y2="60"/>
+<rect x="290" y="60" width="20" height="40"/>
+<line x1="300" y1="100" x2="300" y2="140"/>
+<rect x="290" y="140" width="20" height="40"/>
+<line x1="300" y1="180" x2="300" y2="220"/>
+<line x1="300" y1="220" x2="80" y2="220"/>
+<line x1="80" y1="40" x2="80" y2="105"/>
+<line x1="62" y1="105" x2="98" y2="105"/>
+<line x1="70" y1="115" x2="90" y2="115" stroke-width="4"/>
+<line x1="80" y1="115" x2="80" y2="220"/>
+<circle cx="300" cy="120" r="3" fill="currentColor"/>
+<line x1="300" y1="120" x2="400" y2="120"/>
+<line x1="300" y1="220" x2="400" y2="220"/>
+<circle cx="400" cy="120" r="3" fill="currentColor"/>
+<circle cx="400" cy="220" r="3" fill="currentColor"/>
+<line x1="400" y1="120" x2="430" y2="120" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="400" y1="220" x2="430" y2="220" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="430" y1="124" x2="430" y2="216" marker-start="url(#pd1)" marker-end="url(#pd1)"/>
+<text x="102" y="103" fill="currentColor" stroke="none">+</text>
+<text x="20" y="112" fill="currentColor" stroke="none">V_in</text>
+<text x="322" y="85" fill="currentColor" stroke="none">R₁</text>
+<text x="322" y="165" fill="currentColor" stroke="none">R₂</text>
+<text x="440" y="175" fill="currentColor" stroke="none">V_out</text>
+</svg>
+<figcaption>A potential divider. The same current flows through R₁ and R₂, and the output V_out is taken across R₂.</figcaption>
+</figure>
+
+<h3>Principle and formula</h3>
+<p>The resistors are in series, so the same current flows through both:</p>
+\[ I = \frac{V_{in}}{R_1 + R_2} \]
+<p>The output is the p.d. across \(R_2\):</p>
+\[ \boxed{V_{out} = IR_2 = \frac{R_2}{R_1 + R_2}\, V_{in}} \]
+<p>The p.d. across \(R_1\) is \(\dfrac{R_1}{R_1+R_2} V_{in}\). The resistor with the larger resistance takes the larger share of the supply p.d. The output is always smaller than the input, and it is controlled by the ratio of the resistances. The formula assumes that no current is drawn from the output terminals.</p>
+
+<h3>Variable potential divider (potentiometer)</h3>
+<p>A variable resistor with three terminals can be used as a potential divider. The whole resistance track is connected across the supply, and the output is taken between a sliding contact (the slider) and one end of the track. Moving the slider changes the ratio \(R_2 : R_1\), so the output can be varied smoothly from 0 to \(V_{in}\). This is how a volume control works.</p>
+
+<h3>Effect of a load</h3>
+<p>If a load is connected across the output terminals, it is in parallel with \(R_2\). The effective lower resistance is smaller than \(R_2\), so the output p.d. falls. The load resistance should therefore be much larger than \(R_2\) if the output is to stay close to the no-load value.</p>
+
+<h3>Use of sensors in a potential divider</h3>
+<p>A sensor whose resistance changes with the quantity being measured is used as one of the two resistors. The output p.d. then changes with that quantity, and can be measured, displayed, or used to switch a circuit on or off.</p>
+<p><strong>Key rule:</strong> in a series divider, the p.d. across a resistor <strong>increases</strong> when its own resistance increases (it takes a bigger share), and <strong>decreases</strong> when its resistance decreases.</p>
+
+<figure>
+<svg viewBox="0 0 540 250" role="img" aria-label="A potential divider with a sensor (thermistor or LDR) as the upper resistor and a fixed resistor as the lower resistor, with the output voltage taken across the fixed resistor" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="pd2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="80" y1="40" x2="300" y2="40"/>
+<line x1="300" y1="40" x2="300" y2="60"/>
+<rect x="290" y="60" width="20" height="40"/>
+<line x1="284" y1="106" x2="316" y2="54"/>
+<line x1="300" y1="100" x2="300" y2="140"/>
+<rect x="290" y="140" width="20" height="40"/>
+<line x1="300" y1="180" x2="300" y2="220"/>
+<line x1="300" y1="220" x2="80" y2="220"/>
+<line x1="80" y1="40" x2="80" y2="105"/>
+<line x1="62" y1="105" x2="98" y2="105"/>
+<line x1="70" y1="115" x2="90" y2="115" stroke-width="4"/>
+<line x1="80" y1="115" x2="80" y2="220"/>
+<circle cx="300" cy="120" r="3" fill="currentColor"/>
+<line x1="300" y1="120" x2="400" y2="120"/>
+<line x1="300" y1="220" x2="400" y2="220"/>
+<circle cx="400" cy="120" r="3" fill="currentColor"/>
+<circle cx="400" cy="220" r="3" fill="currentColor"/>
+<line x1="400" y1="120" x2="430" y2="120" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="400" y1="220" x2="430" y2="220" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="430" y1="124" x2="430" y2="216" marker-start="url(#pd2)" marker-end="url(#pd2)"/>
+<text x="102" y="103" fill="currentColor" stroke="none">+</text>
+<text x="20" y="112" fill="currentColor" stroke="none">V_in</text>
+<text x="322" y="78" fill="currentColor" stroke="none">Sensor</text>
+<text x="322" y="94" fill="currentColor" stroke="none">(thermistor or LDR)</text>
+<text x="322" y="165" fill="currentColor" stroke="none">Fixed R</text>
+<text x="440" y="175" fill="currentColor" stroke="none">V_out</text>
+</svg>
+<figcaption>A sensor in a potential divider. The thermistor or LDR is drawn as a resistor with a diagonal line through it. The output is taken across the fixed resistor.</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr><th>Sensor (as the upper resistor, output across the fixed resistor)</th><th>Change</th><th>Resistance of sensor</th><th>\(V_{out}\)</th></tr>
+</thead>
+<tbody>
+<tr><td>Thermistor (n-type)</td><td>Temperature rises</td><td>Decreases</td><td>Increases</td></tr>
+<tr><td>LDR</td><td>Light gets brighter</td><td>Decreases</td><td>Increases</td></tr>
+<tr><td>Strain gauge</td><td>Pressure increases</td><td>Increases</td><td>Decreases</td></tr>
+</tbody>
+</table>
+<p>If the sensor and the fixed resistor are swapped (output across the sensor), every change in the last column is reversed. For example, with the thermistor as the lower resistor and the output taken across it, \(V_{out}\) falls as the temperature rises. Examples of use: a thermistor divider in a fire alarm or thermostat, an LDR divider in an automatic street light (a switching circuit turns the lamp on when the output passes a set value), and a strain-gauge divider in a pressure gauge.</p>
+
+<h2>23.6 Electromotive Force and Internal Resistance</h2>
+
+<h3>Electromotive force (e.m.f.)</h3>
+<blockquote>
+<p><strong>Definition:</strong> The electromotive force (e.m.f.) \(E\) of a source is the energy transferred from other forms (chemical energy in a cell) to electrical energy by the source per unit charge in driving the charge round a complete circuit.</p>
+\[ E = \frac{W}{Q} \]
+<p>The unit is the volt: 1 V = 1 J C\(^{-1}\).</p>
+</blockquote>
+<p>An e.m.f. is not a force. The name is historical.</p>
+
+<h3>Potential difference (p.d.)</h3>
+<blockquote>
+<p><strong>Definition:</strong> The potential difference \(V\) between two points in a circuit is the energy transferred from electrical energy to other forms (heat, light, mechanical) per unit charge passing from one point to the other.</p>
+\[ V = \frac{W}{Q} \]
+</blockquote>
+
+<h3>Difference between e.m.f. and p.d.</h3>
+<table>
+<thead>
+<tr><th>E.m.f.</th><th>Potential difference</th></tr>
+</thead>
+<tbody>
+<tr><td>Energy converted <strong>from other forms into electrical</strong> energy per unit charge.</td><td>Energy converted <strong>from electrical into other forms</strong> per unit charge.</td></tr>
+<tr><td>Refers to the whole circuit, including the energy dissipated inside the source.</td><td>Refers to a pair of points, for example across one component.</td></tr>
+<tr><td>A property of the source. It does not depend on the external resistance.</td><td>Depends on the resistance across which it is measured and on the current.</td></tr>
+<tr><td>Equal to the terminal p.d. only when no current flows (open circuit).</td><td>Terminal p.d. is less than the e.m.f. when a current flows.</td></tr>
+<tr><td>Cause of the current.</td><td>Effect of the current in a resistor (\(V = IR\)).</td></tr>
+</tbody>
+</table>
+
+<h3>Internal resistance</h3>
+<blockquote>
+<p><strong>Definition:</strong> The internal resistance \(r\) of a source is the resistance of the material inside the source (electrolyte and electrodes of a cell) to the flow of charge through it.</p>
+</blockquote>
+<p>Every real source has internal resistance. When current flows, some of the energy provided by the source is converted into heat inside the source itself, so less energy per coulomb is available to the external circuit.</p>
+
+<figure>
+<svg viewBox="0 0 520 240" role="img" aria-label="Circuit of a cell of e.m.f. E with internal resistance r in series, connected to an external resistor R. The current I flows round the circuit and the terminal p.d. V is measured across R" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="ir1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<rect x="50" y="45" width="80" height="110" stroke-dasharray="5 4"/>
+<line x1="90" y1="20" x2="90" y2="60"/>
+<line x1="72" y1="60" x2="108" y2="60"/>
+<line x1="80" y1="70" x2="100" y2="70" stroke-width="4"/>
+<line x1="90" y1="70" x2="90" y2="100"/>
+<rect x="80" y="100" width="20" height="40"/>
+<line x1="90" y1="140" x2="90" y2="200"/>
+<line x1="90" y1="20" x2="400" y2="20"/>
+<line x1="400" y1="20" x2="400" y2="60"/>
+<rect x="390" y="60" width="20" height="80"/>
+<line x1="400" y1="140" x2="400" y2="200"/>
+<line x1="400" y1="200" x2="90" y2="200"/>
+<line x1="400" y1="20" x2="470" y2="20" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="400" y1="200" x2="470" y2="200" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="470" y1="24" x2="470" y2="196" marker-start="url(#ir1)" marker-end="url(#ir1)"/>
+<line x1="200" y1="38" x2="260" y2="38" marker-end="url(#ir1)"/>
+<text x="228" y="56" fill="currentColor" stroke="none">I</text>
+<text x="112" y="58" fill="currentColor" stroke="none">+</text>
+<text x="30" y="70" fill="currentColor" stroke="none">E</text>
+<text x="30" y="124" fill="currentColor" stroke="none">r</text>
+<text x="420" y="105" fill="currentColor" stroke="none">R</text>
+<text x="482" y="115" fill="currentColor" stroke="none">V</text>
+<text x="52" y="172" fill="currentColor" stroke="none">Cell (E, r)</text>
+</svg>
+<figcaption>A cell of e.m.f. E and internal resistance r (inside the dashed box) driving a current I through an external resistor R. The terminal p.d. V is the p.d. across R.</figcaption>
+</figure>
+
+<h3>Terminal p.d. and internal resistance</h3>
+<p>Consider charge \(Q\) passing round the circuit in time \(t\), with current \(I = Q/t\). Using conservation of energy, the energy supplied by the source equals the energy dissipated in the external resistor plus the energy dissipated in the internal resistance:</p>
+\[ EQ = (IR)Q + (Ir)Q \]
+<p>Divide by \(Q\):</p>
+\[ \boxed{E = IR + Ir = V + Ir} \]
+<ul>
+<li>The terminal p.d. is \(V = IR\) (the p.d. across the external circuit).</li>
+<li>The "lost volts" is the p.d. across the internal resistance, \(Ir\).</li>
+</ul>
+\[ \boxed{V = E - Ir} \qquad \boxed{I = \frac{E}{R + r}} \]
+<p><strong>Effects of internal resistance on the terminal p.d.:</strong></p>
+<ul>
+<li>With no current (open circuit, \(I = 0\)), \(V = E\).</li>
+<li>When a current is drawn, \(V = E - Ir\) is <strong>less than \(E\)</strong>. The larger the current, the greater the lost volts and the lower the terminal p.d.</li>
+<li>A source with a small \(r\) keeps its terminal p.d. nearly constant (a good battery). A source with a large \(r\) has a terminal p.d. that falls a lot when current is drawn.</li>
+<li>If the terminals are short-circuited (\(R = 0\)), the current is the maximum possible, \(I_{max} = \dfrac{E}{r}\), and the cell heats up.</li>
+</ul>
+
+<h3>Graph of terminal p.d. against current</h3>
+<figure>
+<svg viewBox="0 0 420 260" role="img" aria-label="Graph of terminal potential difference V against current I for a cell: a straight line decreasing from E on the V axis to E over r on the current axis, with gradient minus r" fill="none" stroke="currentColor" stroke-width="1.5" font-size="13" font-family="sans-serif">
+<defs><marker id="ir2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor" stroke="none"/></marker></defs>
+<line x1="70" y1="210" x2="390" y2="210" marker-end="url(#ir2)"/>
+<line x1="70" y1="210" x2="70" y2="25" marker-end="url(#ir2)"/>
+<line x1="70" y1="50" x2="330" y2="210" stroke-width="2"/>
+<line x1="70" y1="50" x2="64" y2="50"/>
+<text x="45" y="54" fill="currentColor" stroke="none">E</text>
+<text x="312" y="230" fill="currentColor" stroke="none">E/r</text>
+<text x="50" y="34" fill="currentColor" stroke="none">V</text>
+<text x="394" y="214" fill="currentColor" stroke="none">I</text>
+<text x="205" y="108" fill="currentColor" stroke="none">gradient = −r</text>
+</svg>
+<figcaption>V against I for a cell. From V = E − Ir: the intercept on the V-axis is E, the gradient is −r, and the intercept on the I-axis is the short-circuit current E/r.</figcaption>
+</figure>
+<p>A practical method: vary the external resistance with a rheostat, record pairs of ammeter and voltmeter readings, plot \(V\) against \(I\), and find \(E\) from the intercept and \(r\) from the magnitude of the gradient.</p>
+
+<h2>23.7 Work and Power in an Electrical Circuit</h2>
+
+<h3>Electrical energy and power: \(P = IV\)</h3>
+<p><strong>Derivation.</strong> By the definition of potential difference, when charge \(Q\) moves through a p.d. \(V\), the energy transferred is</p>
+\[ W = QV \]
+<p>By the definition of current, \(I = \dfrac{Q}{t}\), so \(Q = It\). Substituting,</p>
+\[ W = VIt \]
+<p>Power is the rate of transfer of energy, \(P = \dfrac{W}{t}\):</p>
+\[ \boxed{P = \frac{W}{t} = IV} \]
+<p>The SI unit of power is the watt: 1 W = 1 J s\(^{-1}\) = 1 V A. The energy transferred in time \(t\) is \(W = Pt = VIt\).</p>
+
+<h3>Power in a resistor: \(P = I^2R = \dfrac{V^2}{R}\)</h3>
+<p>For a resistor, Ohm's definition \(V = IR\) holds. Substitute into \(P = IV\):</p>
+\[ P = I(IR) = I^2R \qquad \text{and, using } I = \frac{V}{R}: \qquad P = \frac{V}{R}\, V = \frac{V^2}{R} \]
+\[ \boxed{P = IV = I^2R = \frac{V^2}{R}} \]
+<ul>
+<li>Use \(I^2R\) when the <strong>same current</strong> flows through different resistors (series). The larger resistance dissipates more power.</li>
+<li>Use \(V^2/R\) when the <strong>same p.d.</strong> is across different resistors (parallel). The smaller resistance dissipates more power.</li>
+</ul>
+
+<h3>Heating effect of an electric current (Joule heating)</h3>
+<p>When a current flows through a resistor, the charge carriers collide with the lattice ions and transfer energy to them. The ions vibrate more, so the resistor gets hotter. All the electrical energy supplied to a pure resistor appears as heat:</p>
+\[ \boxed{H = I^2Rt = VIt = \frac{V^2}{R}t} \]
+<p><strong>Applications:</strong> electric heaters, kettles, irons and toasters use wires of high resistivity and high melting point (nichrome). Filament lamps heat a tungsten filament until it glows. A <strong>fuse</strong> is a thin wire of low melting point. When the current exceeds its rating, \(I^2R\) heating melts it and breaks the circuit.</p>
+<p><strong>Unwanted heating:</strong> in transmission lines, the power lost is \(P_{loss} = I^2R\). For a given power \(P = VI\) to be delivered, a higher transmission voltage gives a lower current and so a much smaller loss. This is why electricity is transmitted at high voltage.</p>
+
+<h3>The kilowatt-hour</h3>
+<p>The commercial unit of electrical energy is the kilowatt-hour (kWh), the energy used by a 1 kW appliance in 1 hour:</p>
+\[ 1\ \text{kWh} = 1000\ \text{W} \times 3600\ \text{s} = 3.6 \times 10^6\ \text{J} \]
+
+<h3>Power in the whole circuit and maximum power transfer</h3>
+<p>For a source of e.m.f. \(E\) and internal resistance \(r\) driving a current \(I\) through an external resistance \(R\):</p>
+\[ EI = I^2R + I^2r \]
+<p>The power delivered by the source (\(EI\)) is the power in the external resistor (\(I^2R\)) plus the power wasted in the internal resistance (\(I^2r\)). The power in the external resistor is</p>
+\[ P = I^2R = \frac{E^2R}{(R+r)^2} \]
+<p>This is a maximum when \(R = r\) (the load resistance equals the internal resistance), and then \(P_{max} = \dfrac{E^2}{4r}\). Only half of the total power is then delivered to the load.</p>
+
+<h2>Worked Examples</h2>
+
+<h3>Example 1: resistance from p.d. and current</h3>
+<p>A p.d. of 12 V across a resistor produces a current of 0.40 A. Find its resistance. What current flows if the p.d. is changed to 18 V (assuming Ohm's law holds)?</p>
+<p><strong>Solution.</strong></p>
+\[ R = \frac{V}{I} = \frac{12}{0.40} = 30\ \Omega \]
+\[ I' = \frac{V'}{R} = \frac{18}{30} = 0.60\ \text{A} \]
+
+<h3>Example 2: resistance of a copper wire</h3>
+<p>Find the resistance of a copper wire of length 2.0 m and diameter 0.50 mm. (Resistivity of copper \(= 1.7 \times 10^{-8}\ \Omega\ \text{m}\).)</p>
+<p><strong>Solution.</strong> Cross-sectional area:</p>
+\[ A = \frac{\pi d^2}{4} = \frac{\pi (0.50 \times 10^{-3})^2}{4} = 1.96 \times 10^{-7}\ \text{m}^2 \]
+\[ R = \frac{\rho l}{A} = \frac{(1.7 \times 10^{-8})(2.0)}{1.96 \times 10^{-7}} = 0.17\ \Omega \]
+
+<h3>Example 3: resistivity and conductivity from measurements</h3>
+<p>A wire of length 1.5 m and cross-sectional area \(0.30\ \text{mm}^2\) has resistance 0.90 \(\Omega\). Find its resistivity and conductivity.</p>
+<p><strong>Solution.</strong> \(A = 0.30\ \text{mm}^2 = 0.30 \times 10^{-6}\ \text{m}^2 = 3.0 \times 10^{-7}\ \text{m}^2\).</p>
+\[ \rho = \frac{RA}{l} = \frac{0.90 \times 3.0 \times 10^{-7}}{1.5} = 1.8 \times 10^{-7}\ \Omega\ \text{m} \]
+\[ \sigma = \frac{1}{\rho} = \frac{1}{1.8 \times 10^{-7}} = 5.6 \times 10^{6}\ \text{S m}^{-1} \]
+
+<h3>Example 4: a stretched wire</h3>
+<p>A wire of resistance 5.0 \(\Omega\) is uniformly stretched to three times its original length. Find its new resistance.</p>
+<p><strong>Solution.</strong> The volume is constant, so when \(l' = 3l\), \(A' = \dfrac{A}{3}\).</p>
+\[ R' = \frac{\rho (3l)}{A/3} = 9\,\frac{\rho l}{A} = 9R = 9 \times 5.0 = 45\ \Omega \]
+
+<h3>Example 5: strain gauge</h3>
+<p>A strain gauge of resistance 120 \(\Omega\) and gauge factor 2.0 is stretched so that the strain is \(1.0 \times 10^{-3}\). (a) Find the change in resistance. (b) The gauge is the upper resistor of a potential divider with a fixed 120 \(\Omega\) resistor and a 5.0 V supply, with the output across the fixed resistor. Find the change in output p.d.</p>
+<p><strong>Solution.</strong></p>
+<p>(a) \( \dfrac{\Delta R}{R} = G_f \varepsilon = 2.0 \times 1.0 \times 10^{-3} = 2.0 \times 10^{-3} \), so \( \Delta R = 0.0020 \times 120 = 0.24\ \Omega \).</p>
+<p>(b) Before stretching: \(V_{out} = 5.0 \times \dfrac{120}{240} = 2.500\ \text{V}\). After stretching, the gauge is 120.24 \(\Omega\):</p>
+\[ V_{out}' = 5.0 \times \frac{120}{120.24 + 120} = 5.0 \times \frac{120}{240.24} = 2.4975\ \text{V} \]
+<p>The output falls by about 2.5 mV. This is a very small change, so it is amplified before it is displayed.</p>
+
+<h3>Example 6: resistors in series</h3>
+<p>Resistors of 2 \(\Omega\), 3 \(\Omega\) and 5 \(\Omega\) are connected in series across a 20 V supply. Find the current and the p.d. across each resistor.</p>
+<p><strong>Solution.</strong> \(R = 2 + 3 + 5 = 10\ \Omega\), so \( I = \dfrac{20}{10} = 2.0\ \text{A} \).</p>
+\[ V_1 = 2.0 \times 2 = 4\ \text{V},\quad V_2 = 2.0 \times 3 = 6\ \text{V},\quad V_3 = 2.0 \times 5 = 10\ \text{V} \]
+<p>Check: \(4 + 6 + 10 = 20\ \text{V}\). ✓</p>
+
+<h3>Example 7: resistors in parallel</h3>
+<p>A 6 \(\Omega\) resistor and a 3 \(\Omega\) resistor are connected in parallel across a 12 V supply. Find the combined resistance, the total current and the current in each resistor.</p>
+<p><strong>Solution.</strong></p>
+\[ R = \frac{6 \times 3}{6 + 3} = 2\ \Omega \qquad I = \frac{12}{2} = 6.0\ \text{A} \]
+\[ I_1 = \frac{12}{6} = 2.0\ \text{A}, \qquad I_2 = \frac{12}{3} = 4.0\ \text{A} \]
+<p>Check: \(2.0 + 4.0 = 6.0\ \text{A}\). ✓ The smaller resistor carries the larger current.</p>
+
+<h3>Example 8: series-parallel circuit</h3>
+<p>A 4 \(\Omega\) resistor is in series with a parallel combination of 6 \(\Omega\) and 12 \(\Omega\). The circuit is connected to a 24 V supply. Find the total resistance, the total current, and the current in each of the parallel resistors.</p>
+<p><strong>Solution.</strong> Parallel part: \( R_p = \dfrac{6 \times 12}{6 + 12} = \dfrac{72}{18} = 4\ \Omega \).</p>
+<p>Total resistance: \( R_T = 4 + 4 = 8\ \Omega \). Total current: \( I = \dfrac{24}{8} = 3.0\ \text{A} \).</p>
+<p>P.d. across the 4 \(\Omega\) resistor \(= 3.0 \times 4 = 12\ \text{V}\). So the p.d. across the parallel part is \(24 - 12 = 12\ \text{V}\).</p>
+\[ I_{6} = \frac{12}{6} = 2.0\ \text{A}, \qquad I_{12} = \frac{12}{12} = 1.0\ \text{A} \]
+<p>Check: \(2.0 + 1.0 = 3.0\ \text{A}\). ✓</p>
+
+<h3>Example 9: potential divider with a load</h3>
+<p>A 9.0 V supply is connected across \(R_1 = 6.0\ \text{k}\Omega\) and \(R_2 = 3.0\ \text{k}\Omega\) in series. (a) Find the output p.d. across \(R_2\). (b) Find the output if a 6.0 k\(\Omega\) load is connected across \(R_2\).</p>
+<p><strong>Solution.</strong></p>
+<p>(a) \( V_{out} = \dfrac{R_2}{R_1 + R_2} V_{in} = \dfrac{3.0}{9.0} \times 9.0 = 3.0\ \text{V} \)</p>
+<p>(b) The load is in parallel with \(R_2\): \( R_2' = \dfrac{3.0 \times 6.0}{3.0 + 6.0} = 2.0\ \text{k}\Omega \).</p>
+\[ V_{out}' = \frac{2.0}{6.0 + 2.0} \times 9.0 = 2.25\ \text{V} \]
+<p>The load lowers the output from 3.0 V to 2.25 V.</p>
+
+<h3>Example 10: thermistor in a potential divider</h3>
+<p>A 6.0 V supply is connected across an n-type thermistor (upper) and a fixed 2.0 k\(\Omega\) resistor (lower). The output is across the fixed resistor. The thermistor resistance is 4.0 k\(\Omega\) at 20 \(^\circ\)C and 0.50 k\(\Omega\) at 60 \(^\circ\)C. Find the output at each temperature.</p>
+<p><strong>Solution.</strong></p>
+<p>At 20 \(^\circ\)C: \( V_{out} = \dfrac{2.0}{4.0 + 2.0} \times 6.0 = 2.0\ \text{V} \)</p>
+<p>At 60 \(^\circ\)C: \( V_{out} = \dfrac{2.0}{0.50 + 2.0} \times 6.0 = 4.8\ \text{V} \)</p>
+<p>The output rises with temperature because the thermistor resistance falls, so the fixed resistor takes a greater share of the 6.0 V.</p>
+
+<h3>Example 11: LDR in a potential divider</h3>
+<p>An LDR (upper) and a fixed 10 k\(\Omega\) resistor (lower) are connected across a 9.0 V supply, and the output is across the fixed resistor. The LDR resistance is 20 k\(\Omega\) in the dark and 2.0 k\(\Omega\) in bright light. Find the output in each case.</p>
+<p><strong>Solution.</strong></p>
+<p>Dark: \( V_{out} = \dfrac{10}{20 + 10} \times 9.0 = 3.0\ \text{V} \)</p>
+<p>Bright: \( V_{out} = \dfrac{10}{2.0 + 10} \times 9.0 = 7.5\ \text{V} \)</p>
+<p>The output increases as the light gets brighter.</p>
+
+<h3>Example 12: internal resistance</h3>
+<p>A cell of e.m.f. 1.5 V and internal resistance 0.50 \(\Omega\) is connected to a 2.5 \(\Omega\) resistor. Find the current, the terminal p.d. and the lost volts.</p>
+<p><strong>Solution.</strong></p>
+\[ I = \frac{E}{R + r} = \frac{1.5}{2.5 + 0.50} = 0.50\ \text{A} \]
+\[ V = IR = 0.50 \times 2.5 = 1.25\ \text{V} \qquad \text{Lost volts} = Ir = 0.50 \times 0.50 = 0.25\ \text{V} \]
+<p>Check: \(V = E - Ir = 1.5 - 0.25 = 1.25\ \text{V}\). ✓ Power in the resistor \(= 0.625\ \text{W}\), power in the internal resistance \(= 0.125\ \text{W}\), and their sum \(0.75\ \text{W} = EI\). ✓</p>
+
+<h3>Example 13: finding E and r from two readings</h3>
+<p>When a cell supplies a current of 0.20 A, its terminal p.d. is 1.40 V. When it supplies 0.60 A, the terminal p.d. is 1.20 V. Find its e.m.f. and internal resistance.</p>
+<p><strong>Solution.</strong> Use \(V = E - Ir\) for each reading:</p>
+\[ 1.40 = E - 0.20\,r \quad \text{... (i)} \qquad 1.20 = E - 0.60\,r \quad \text{... (ii)} \]
+<p>Subtract (ii) from (i): \(0.20 = 0.40\,r\), so \(r = 0.50\ \Omega\). Substitute in (i): \(E = 1.40 + 0.20 \times 0.50 = 1.50\ \text{V}\).</p>
+
+<h3>Example 14: power of a kettle</h3>
+<p>An electric kettle is rated 2.3 kW at 230 V. Find (a) the current and resistance of the element, (b) the time to heat 1.0 kg of water from 20 \(^\circ\)C to 100 \(^\circ\)C, assuming all the energy heats the water. (Specific heat capacity of water \(= 4200\ \text{J kg}^{-1}\ \text{K}^{-1}\).)</p>
+<p><strong>Solution.</strong></p>
+<p>(a) \( I = \dfrac{P}{V} = \dfrac{2300}{230} = 10\ \text{A} \) and \( R = \dfrac{V}{I} = \dfrac{230}{10} = 23\ \Omega \). Check: \(I^2R = 100 \times 23 = 2300\ \text{W}\). ✓</p>
+<p>(b) Energy needed: \( Q = mc\Delta\theta = 1.0 \times 4200 \times 80 = 3.36 \times 10^5\ \text{J} \).</p>
+\[ t = \frac{Q}{P} = \frac{3.36 \times 10^5}{2300} = 146\ \text{s} \approx 2.4\ \text{minutes} \]
+<p>The energy used is \(3.36 \times 10^5\ \text{J} = 0.093\ \text{kWh}\).</p>
+
+<h3>Example 15: power loss in transmission lines</h3>
+<p>A power of 100 kW is sent along a line of total resistance 5.0 \(\Omega\). Find the power lost in the line if the power is transmitted at (a) 2000 V and (b) 20 000 V.</p>
+<p><strong>Solution.</strong></p>
+<p>(a) \( I = \dfrac{P}{V} = \dfrac{100\,000}{2000} = 50\ \text{A} \), so \( P_{loss} = I^2R = 50^2 \times 5.0 = 12\,500\ \text{W} = 12.5\ \text{kW} \).</p>
+<p>(b) \( I = \dfrac{100\,000}{20\,000} = 5.0\ \text{A} \), so \( P_{loss} = 5.0^2 \times 5.0 = 125\ \text{W} \).</p>
+<p>Increasing the voltage by 10 times reduces the loss by 100 times.</p>
+
+<h3>Example 16: maximum power transfer</h3>
+<p>A battery of e.m.f. 12 V and internal resistance 2.0 \(\Omega\) is connected to a variable resistor \(R\). Find the power in \(R\) for \(R = 1.0\ \Omega\), \(2.0\ \Omega\) and \(4.0\ \Omega\), and state the maximum power.</p>
+<p><strong>Solution.</strong> \(I = \dfrac{12}{R + 2.0}\) and \(P = I^2R\).</p>
+<table>
+<thead>
+<tr><th>\(R\) (\(\Omega\))</th><th>\(I\) (A)</th><th>\(P = I^2R\) (W)</th></tr>
+</thead>
+<tbody>
+<tr><td>1.0</td><td>4.0</td><td>16</td></tr>
+<tr><td>2.0</td><td>3.0</td><td>18</td></tr>
+<tr><td>4.0</td><td>2.0</td><td>16</td></tr>
+</tbody>
+</table>
+<p>The power is greatest when \(R = r = 2.0\ \Omega\). Then \( P_{max} = \dfrac{E^2}{4r} = \dfrac{144}{8} = 18\ \text{W} \). ✓</p>
+
+<h2>Common Mistakes</h2>
+<ul>
+<li>Confusing resistance with resistivity. Resistance (\(\Omega\)) depends on the length, area and material of the sample. Resistivity (\(\Omega\ \text{m}\)) depends on the material (and temperature) only.</li>
+<li>Using the diameter instead of the area in \(R = \rho l/A\). Calculate \(A = \pi d^2/4\) (or \(\pi r^2\)) and convert mm\(^2\) to m\(^2\) (\(1\ \text{mm}^2 = 10^{-6}\ \text{m}^2\)).</li>
+<li>When a wire is stretched, forgetting that the area decreases. The resistance becomes \(k^2 R\), not \(kR\).</li>
+<li>Saying that Ohm's law is \(V = IR\) in every case. Ohm's law applies only to ohmic conductors at constant temperature. \(R = V/I\) is the definition of resistance for any component.</li>
+<li>Saying that a filament lamp has a constant resistance. The resistance rises with temperature, so its \(I\)-\(V\) graph curves towards the \(V\)-axis.</li>
+<li>Drawing the diode graph as a straight line, or with current flowing from the origin. There is almost no current until about 0.6 V in forward bias.</li>
+<li>Saying that the resistance of an NTC thermistor increases with temperature. It decreases. Mixing this up with a metal wire, whose resistance increases.</li>
+<li>Adding the reciprocals for series resistors, or adding resistances directly for parallel resistors. Series: add \(R\). Parallel: add \(1/R\).</li>
+<li>Forgetting to invert at the end of a parallel calculation (\(\dfrac{1}{R} = \dots\) gives \(\dfrac{1}{R}\), not \(R\)).</li>
+<li>Using the potential divider formula with the wrong resistor in the numerator. The numerator is the resistor <strong>across which the output is taken</strong>.</li>
+<li>Ignoring the load across a potential divider output, which lowers the output p.d.</li>
+<li>Saying that the e.m.f. of a cell is the same as its terminal p.d. They are equal only when no current flows. Also, saying the e.m.f. is a force.</li>
+<li>Writing \(V = E + Ir\) for a cell supplying current. The correct relation is \(V = E - Ir\).</li>
+<li>Using \(P = V^2/R\) with the supply voltage when the p.d. across the resistor is smaller (for example a resistor in series). Use the p.d. across that resistor.</li>
+<li>Not converting units: kWh to J (\(\times 3.6 \times 10^6\)), minutes to seconds, k\(\Omega\) to \(\Omega\), cm to m.</li>
+<li>Saying that a high-voltage line is "dangerous because high power is lost". The reason for high-voltage transmission is that it gives a lower current, so \(I^2R\) loss is much smaller.</li>
+</ul>
+
+<h2>Key Points Summary</h2>
+<ul>
+<li>Resistance: \(R = V/I\). One ohm is 1 V per ampere.</li>
+<li>For a wire, \(R = \dfrac{\rho l}{A}\). Resistivity \(\rho = \dfrac{RA}{l}\) (unit \(\Omega\ \text{m}\)). Conductivity \(\sigma = 1/\rho\) (unit \(\text{S m}^{-1}\)). Conductance \(G = 1/R\) (unit S).</li>
+<li>Changing the length (rheostat), the area, or stretching the wire (\(R \to k^2R\) for a length factor \(k\)) changes the resistance.</li>
+<li>Strain gauge: stretching makes the foil longer and thinner, so \(R\) increases. \(\dfrac{\Delta R}{R} = G_f\,\varepsilon\), with \(G_f \approx 2\). It is a pressure sensor.</li>
+<li>LDR: resistance decreases as light intensity increases. n-type (NTC) thermistor: resistance decreases as temperature increases. Both are due to more charge carriers.</li>
+<li>Ohm's law: \(I \propto V\) at constant temperature. Ohmic: straight \(I\)-\(V\) line through the origin. Non-ohmic: filament lamp (resistance rises with temperature) and diode (conducts only in forward bias above about 0.6 V).</li>
+<li>Series: \(R = R_1 + R_2 + \dots\). Same current, p.d.s add (charge and energy conservation).</li>
+<li>Parallel: \(\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2} + \dots\). Same p.d., currents add. For two resistors, \(R = \dfrac{R_1 R_2}{R_1 + R_2}\).</li>
+<li>Potential divider: \(V_{out} = \dfrac{R_2}{R_1 + R_2} V_{in}\). The p.d. across a resistor increases when its resistance increases. With a sensor in a divider, \(V_{out}\) varies with temperature, light or strain.</li>
+<li>E.m.f. is the energy converted from other forms to electrical per unit charge round a complete circuit. P.d. is the energy converted from electrical to other forms per unit charge between two points.</li>
+<li>With internal resistance: \(E = V + Ir\), \(V = E - Ir\), \(I = \dfrac{E}{R + r}\). The terminal p.d. falls as the current increases. The \(V\)-\(I\) graph has intercept \(E\) and gradient \(-r\).</li>
+<li>Power: \(P = IV = I^2R = \dfrac{V^2}{R}\). Energy: \(W = VIt\). Heating: \(H = I^2Rt\). \(1\ \text{kWh} = 3.6 \times 10^6\ \text{J}\).</li>
+<li>Power loss in cables is \(I^2R\), so electricity is transmitted at high voltage and low current. Maximum power transfer to a load occurs when \(R = r\), with \(P_{max} = \dfrac{E^2}{4r}\).</li>
+</ul>
