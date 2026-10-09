@@ -1,0 +1,489 @@
+{
+  "title": "Acoustic phenomena — 40 MCQs",
+  "grade": "XII",
+  "chapters": [5],
+  "date": "2026-10-09",
+  "description": "This set covers sound waves including pressure amplitude, characteristics of sound (intensity, loudness, quality, pitch), and Doppler's effect.",
+  "questions": [
+    {
+      "q": "What is the SI unit of sound intensity?",
+      "options": [
+        "W/m²",
+        "J/m²",
+        "W/m",
+        "N/m²"
+      ],
+      "answer": 0,
+      "explanation": "Sound intensity is defined as the power transmitted per unit area, so its SI unit is Watt per square meter (W/m²).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a sound wave, the pressure amplitude is directly proportional to the:",
+      "options": [
+        "Displacement amplitude and frequency",
+        "Displacement amplitude only",
+        "Frequency only",
+        "Square of the wavelength"
+      ],
+      "answer": 0,
+      "explanation": "Pressure amplitude ΔP_max = BkA = 2πf√(ρB)A, so it is directly proportional to both displacement amplitude (A) and frequency (f).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The phase difference between the displacement wave and the pressure wave in a sound wave is:",
+      "options": [
+        "π/2 rad",
+        "π rad",
+        "π/4 rad",
+        "0 rad"
+      ],
+      "answer": 0,
+      "explanation": "Pressure is the negative gradient of displacement (ΔP = -B ∂s/∂x). If displacement is a sine wave, pressure is a cosine wave, meaning a phase difference of π/2 rad.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The quality of a musical note is determined by the:",
+      "options": [
+        "Number and relative intensities of overtones",
+        "Speed of sound in the instrument",
+        "Temperature of the surrounding air",
+        "Distance from the listener"
+      ],
+      "answer": 0,
+      "explanation": "Quality (timbre) is determined by the harmonic content, i.e., the number and relative intensities of the overtones present in the sound.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The pitch of a sound wave is primarily determined by its:",
+      "options": [
+        "Amplitude",
+        "Frequency",
+        "Intensity",
+        "Waveform"
+      ],
+      "answer": 1,
+      "explanation": "Pitch is the subjective perception of the frequency of a sound wave. Higher frequency corresponds to a higher pitch.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Doppler effect in sound is observed when there is:",
+      "options": [
+        "A change in the medium's temperature",
+        "Relative motion between the source and the observer",
+        "A change in the amplitude of the wave",
+        "Reflection of the sound wave"
+      ],
+      "answer": 1,
+      "explanation": "The Doppler effect is the change in apparent frequency of a wave due to relative motion between the source and the observer.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which of the following waves cannot exhibit the Doppler effect?",
+      "options": [
+        "Sound waves in air",
+        "Stationary waves on a string",
+        "Light waves in vacuum",
+        "Water waves"
+      ],
+      "answer": 1,
+      "explanation": "Stationary waves do not propagate energy or have a net wave velocity, so there is no relative motion of wave propagation to cause a Doppler shift.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A decibel (dB) is a unit used to measure:",
+      "options": [
+        "Absolute sound pressure",
+        "Relative intensity level of sound",
+        "Frequency of sound",
+        "Speed of sound"
+      ],
+      "answer": 1,
+      "explanation": "The decibel is a logarithmic unit used to express the ratio of a sound's intensity to a reference intensity, representing the intensity level.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which characteristic of sound allows us to distinguish between two sounds of the same pitch and loudness?",
+      "options": [
+        "Intensity",
+        "Doppler effect",
+        "Quality (timbre)",
+        "Pressure amplitude"
+      ],
+      "answer": 2,
+      "explanation": "Quality or timbre depends on the waveform and the number of overtones present, allowing us to distinguish different sound sources.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Loudness of a sound is a subjective quantity that primarily depends on:",
+      "options": [
+        "Wavelength of the sound",
+        "Speed of sound in the medium",
+        "Intensity of the sound and sensitivity of the ear",
+        "Phase of the sound wave"
+      ],
+      "answer": 2,
+      "explanation": "Loudness is a subjective perception that depends on both the physical intensity of the sound and the frequency sensitivity of the human ear.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The intensity of a sound wave is directly proportional to the square of its:",
+      "options": [
+        "Wavelength",
+        "Frequency only",
+        "Displacement amplitude",
+        "Phase velocity"
+      ],
+      "answer": 2,
+      "explanation": "Intensity I = ½ ρ v ω² A², which shows that intensity is directly proportional to the square of the displacement amplitude (A²).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a sound wave traveling in a uniform medium, the pressure amplitude remains constant if the wave is:",
+      "options": [
+        "Spherical",
+        "Cylindrical",
+        "Plane",
+        "Diverging"
+      ],
+      "answer": 2,
+      "explanation": "In a plane wave, the energy does not spread out over a larger area, so the intensity and pressure amplitude remain constant with distance (ignoring absorption).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The standard threshold of hearing intensity at 1000 Hz is approximately:",
+      "options": [
+        "10⁻² W/m²",
+        "10⁻⁶ W/m²",
+        "10⁻¹⁰ W/m²",
+        "10⁻¹² W/m²"
+      ],
+      "answer": 3,
+      "explanation": "The generally accepted value for the threshold of hearing (I₀) at 1000 Hz is 10⁻¹² W/m².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When a sound source moves away from a stationary observer, the apparent frequency is:",
+      "options": [
+        "Higher than the original frequency",
+        "Equal to the original frequency",
+        "Infinite",
+        "Lower than the original frequency"
+      ],
+      "answer": 3,
+      "explanation": "According to the Doppler effect, when a source moves away, the observed wavelength increases, resulting in a lower apparent frequency.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If there is no relative motion between the source of sound and the observer, the Doppler shift is:",
+      "options": [
+        "Positive",
+        "Negative",
+        "Infinite",
+        "Zero"
+      ],
+      "answer": 3,
+      "explanation": "The Doppler shift depends entirely on relative velocity. If the relative velocity is zero, there is no change in the apparent frequency.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A sound wave has a displacement amplitude of 1.0 × 10⁻⁶ m and a frequency of 500 Hz. If the bulk modulus of air is 1.4 × 10⁵ Pa and the speed of sound is 350 m/s, what is the pressure amplitude?",
+      "options": [
+        "1.26 Pa",
+        "0.63 Pa",
+        "2.52 Pa",
+        "3.14 Pa"
+      ],
+      "answer": 0,
+      "explanation": "ΔP_max = BkA = B(2πf/v)A = (1.4 × 10⁵)(2π × 500 / 350)(1.0 × 10⁻⁶) ≈ 1.26 Pa.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An observer moves towards a stationary sound source at a speed of 20 m/s. The source emits a frequency of 400 Hz, and the speed of sound is 340 m/s. The apparent frequency is:",
+      "options": [
+        "423.5 Hz",
+        "400 Hz",
+        "376.5 Hz",
+        "440 Hz"
+      ],
+      "answer": 0,
+      "explanation": "f' = f((v + v_o) / v) = 400 × ((340 + 20) / 340) = 400 × (360 / 340) ≈ 423.5 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The intensity of sound at a point is 10⁻⁶ W/m². What is the sound intensity level in dB? (I₀ = 10⁻¹² W/m²)",
+      "options": [
+        "60 dB",
+        "6 dB",
+        "120 dB",
+        "10⁶ dB"
+      ],
+      "answer": 0,
+      "explanation": "β = 10 log₁₀(I/I₀) = 10 log₁₀(10⁻⁶ / 10⁻¹²) = 10 log₁₀(10⁶) = 10 × 6 = 60 dB.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the intensity of a sound is increased by a factor of 100, the sound intensity level in decibels increases by:",
+      "options": [
+        "10 dB",
+        "20 dB",
+        "50 dB",
+        "100 dB"
+      ],
+      "answer": 1,
+      "explanation": "Δβ = 10 log₁₀(I₂/I₁) = 10 log₁₀(100) = 10 × 2 = 20 dB.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The sound level at a distance of 2 m from a point source is 60 dB. What is the sound level at a distance of 4 m from the same source?",
+      "options": [
+        "50 dB",
+        "54 dB",
+        "57 dB",
+        "30 dB"
+      ],
+      "answer": 1,
+      "explanation": "Doubling the distance reduces the intensity to 1/4. Δβ = 10 log₁₀(1/4) ≈ -6 dB. So, 60 - 6 = 54 dB.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the amplitude of a sound wave is doubled, the sound intensity level increases by approximately:",
+      "options": [
+        "3 dB",
+        "6 dB",
+        "10 dB",
+        "12 dB"
+      ],
+      "answer": 1,
+      "explanation": "Doubling the amplitude quadruples the intensity (I ∝ A²). Δβ = 10 log₁₀(4) ≈ 10 × 0.602 = 6.02 dB ≈ 6 dB.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A source of sound of frequency 500 Hz is moving towards a stationary observer at a speed of 30 m/s. If the speed of sound is 330 m/s, the apparent frequency heard by the observer is:",
+      "options": [
+        "450 Hz",
+        "500 Hz",
+        "550 Hz",
+        "600 Hz"
+      ],
+      "answer": 2,
+      "explanation": "f' = f(v / (v - v_s)) = 500 × (330 / (330 - 30)) = 500 × (330 / 300) = 500 × 1.1 = 550 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A whistle of frequency 540 Hz rotates in a circle of radius 2 m at an angular speed of 15 rad/s. What is the lowest frequency heard by a stationary listener far away? (Speed of sound = 330 m/s)",
+      "options": [
+        "500 Hz",
+        "520 Hz",
+        "495 Hz",
+        "510 Hz"
+      ],
+      "answer": 2,
+      "explanation": "The linear speed of the whistle is v_s = rω = 2 × 15 = 30 m/s. The lowest frequency occurs when it moves away: f' = f(v / (v + v_s)) = 540 × (330 / (330 + 30)) = 540 × (330 / 360) = 495 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A police car sounding a siren at 800 Hz is approaching a stationary observer at 34 m/s. What frequency does the observer hear? (Speed of sound = 340 m/s)",
+      "options": [
+        "727 Hz",
+        "800 Hz",
+        "889 Hz",
+        "900 Hz"
+      ],
+      "answer": 2,
+      "explanation": "f' = f(v / (v - v_s)) = 800 × (340 / (340 - 34)) = 800 × (340 / 306) = 800 × (10/9) ≈ 888.8 Hz ≈ 889 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two sound sources emit waves with intensities I and 4I. What is the ratio of their pressure amplitudes?",
+      "options": [
+        "1 : 4",
+        "1 : 8",
+        "1 : 16",
+        "1 : 2"
+      ],
+      "answer": 3,
+      "explanation": "Intensity is proportional to the square of pressure amplitude (I ∝ ΔP_max²). Therefore, ΔP_max ∝ √I. The ratio is √1 : √4 = 1 : 2.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of the following changes when a sound wave passes from air into water?",
+      "options": [
+        "Frequency",
+        "Period",
+        "Phase relationship",
+        "Wavelength"
+      ],
+      "answer": 3,
+      "explanation": "The frequency and period remain constant as they depend on the source. Since wave speed changes, the wavelength (λ = v/f) must also change.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two identical speakers emit sound waves of the same frequency in phase. At a point where the path difference is λ/2, the intensity is:",
+      "options": [
+        "Maximum",
+        "Double the maximum",
+        "Half of maximum",
+        "Minimum (zero)"
+      ],
+      "answer": 3,
+      "explanation": "A path difference of λ/2 corresponds to a phase difference of π rad, resulting in destructive interference and minimum (zero) intensity.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A source and an observer are moving towards each other, each with a speed of v/10, where v is the speed of sound. The apparent frequency is approximately:",
+      "options": [
+        "1.0 f",
+        "1.11 f",
+        "0.9 f",
+        "1.22 f"
+      ],
+      "answer": 3,
+      "explanation": "f' = f((v + v_o) / (v - v_s)) = f((v + 0.1v) / (v - 0.1v)) = f(1.1 / 0.9) = f(11/9) ≈ 1.22 f.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the distance between a point source of sound and a detector is increased by a factor of 3, the pressure amplitude becomes:",
+      "options": [
+        "1/9 of the original",
+        "1/√3 of the original",
+        "3 times the original",
+        "1/3 of the original"
+      ],
+      "answer": 3,
+      "explanation": "Intensity I ∝ 1/r², and I ∝ ΔP_max², so ΔP_max ∝ 1/r. If r increases by a factor of 3, ΔP_max becomes 1/3 of the original.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A train blowing a whistle of frequency 400 Hz moves away from a platform at 10 m/s. What is the frequency heard by a stationary observer on the platform? (v = 340 m/s)",
+      "options": [
+        "412 Hz",
+        "400 Hz",
+        "350 Hz",
+        "388 Hz"
+      ],
+      "answer": 3,
+      "explanation": "f' = f(v / (v + v_s)) = 400 × (340 / (340 + 10)) = 400 × (340 / 350) = 400 × (34/35) ≈ 388.5 Hz ≈ 388 Hz.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A sound source emits a frequency of 340 Hz and moves towards a wall at 10 m/s. A stationary observer is located behind the source. What is the approximate beat frequency heard by the observer due to the direct and reflected sound? (Speed of sound = 340 m/s)",
+      "options": [
+        "20 Hz",
+        "10 Hz",
+        "30 Hz",
+        "40 Hz"
+      ],
+      "answer": 0,
+      "explanation": "Direct sound (source moving away): f₁ = 340 × (340 / (340 + 10)) ≈ 330.3 Hz. Reflected sound (source moving towards wall): f₂ = 340 × (340 / (340 - 10)) ≈ 350.3 Hz. Beat frequency = f₂ - f₁ ≈ 20 Hz.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The intensity of a sound wave is 2.0 × 10⁻⁶ W/m². If the density of air is 1.2 kg/m³ and the speed of sound is 340 m/s, what is the pressure amplitude? (Use I = ΔP_max² / (2ρv))",
+      "options": [
+        "0.04 Pa",
+        "0.08 Pa",
+        "0.16 Pa",
+        "0.32 Pa"
+      ],
+      "answer": 0,
+      "explanation": "ΔP_max = √(2ρvI) = √(2 × 1.2 × 340 × 2.0 × 10⁻⁶) = √(1632 × 10⁻⁶) = √(1.632 × 10⁻³) ≈ 0.0404 Pa ≈ 0.04 Pa.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A bat emits an ultrasonic wave of frequency 50 kHz while flying towards a wall at 10 m/s. What frequency does the bat hear in the echo? (Speed of sound = 340 m/s)",
+      "options": [
+        "53.0 kHz",
+        "51.5 kHz",
+        "55.0 kHz",
+        "48.5 kHz"
+      ],
+      "answer": 0,
+      "explanation": "First, frequency at wall: f' = 50 × (340 / (340 - 10)) kHz. Second, bat hears echo: f'' = f' × ((340 + 10) / 340) = 50 × (340/330) × (350/340) = 50 × (350/330) = 50 × (35/33) ≈ 53.03 kHz.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two cars are moving towards each other on a straight road. Car A sounds a horn of frequency 300 Hz and moves at 30 m/s. Car B moves at 30 m/s. What frequency does the driver of Car B hear? (Speed of sound = 330 m/s)",
+      "options": [
+        "330 Hz",
+        "360 Hz",
+        "390 Hz",
+        "400 Hz"
+      ],
+      "answer": 1,
+      "explanation": "Both are moving towards each other. f' = f((v + v_o) / (v - v_s)) = 300 × ((330 + 30) / (330 - 30)) = 300 × (360 / 300) = 360 Hz.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An observer moving at 40 m/s passes a stationary siren emitting 680 Hz. What is the magnitude of the change in apparent frequency as the observer passes the siren? (Speed of sound = 340 m/s)",
+      "options": [
+        "80 Hz",
+        "160 Hz",
+        "340 Hz",
+        "680 Hz"
+      ],
+      "answer": 1,
+      "explanation": "Approaching: f₁ = 680 × ((340 + 40) / 340) = 680 × (380 / 340) = 760 Hz. Receding: f₂ = 680 × ((340 - 40) / 340) = 680 × (300 / 340) = 600 Hz. Change = 760 - 600 = 160 Hz.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The ratio of the intensities of two sound waves is 16 : 1. What is the difference in their sound intensity levels?",
+      "options": [
+        "8 dB",
+        "12 dB",
+        "16 dB",
+        "20 dB"
+      ],
+      "answer": 1,
+      "explanation": "Δβ = 10 log₁₀(I₁/I₂) = 10 log₁₀(16) = 10 × 1.204 = 12.04 dB ≈ 12 dB.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A sound wave has an intensity level of 80 dB at a distance of 10 m from a point source. What is the total acoustic power emitted by the source? (I₀ = 10⁻¹² W/m², π ≈ 3.14)",
+      "options": [
+        "1.26 × 10⁻³ W",
+        "1.26 × 10⁻² W",
+        "1.26 × 10⁻¹ W",
+        "1.26 W"
+      ],
+      "answer": 2,
+      "explanation": "80 dB means I = 10⁻⁴ W/m². Power P = I × 4πr² = 10⁻⁴ × 4 × 3.14 × (10)² = 10⁻⁴ × 1256 = 0.1256 W ≈ 1.26 × 10⁻¹ W.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A source of sound is moving in a circle of radius R with constant speed v_s. A stationary observer is located at the center of the circle. The frequency heard by the observer is:",
+      "options": [
+        "Higher than the source frequency",
+        "Lower than the source frequency",
+        "Equal to the source frequency",
+        "Variable, depending on the position"
+      ],
+      "answer": 2,
+      "explanation": "The radial velocity of the source relative to the observer at the center is always zero. Since there is no relative motion along the line joining them, the Doppler shift is zero.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If the pressure amplitude of a sound wave is tripled, by what factor does the intensity increase?",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "27"
+      ],
+      "answer": 2,
+      "explanation": "Intensity is proportional to the square of the pressure amplitude (I ∝ ΔP_max²). Tripling the pressure amplitude increases the intensity by a factor of 3² = 9.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A source of sound is moving directly towards a stationary observer at half the speed of sound (v/2). What is the ratio of the apparent wavelength to the original wavelength?",
+      "options": [
+        "2 : 1",
+        "1 : 1",
+        "3 : 2",
+        "1 : 2"
+      ],
+      "answer": 3,
+      "explanation": "The apparent wavelength is λ' = (v - v_s) / f = (v - 0.5v) / f = 0.5v / f = 0.5λ. Thus, the ratio λ' : λ is 1 : 2.",
+      "difficulty": "hard"
+    }
+  ]
+}
