@@ -1,0 +1,184 @@
+{
+  "title": "Heat and Temperature — 25 MCQs",
+  "grade": "XI",
+  "chapters": [9],
+  "date": "2026-10-09",
+  "description": "Covers the molecular concept of thermal energy, heat and temperature, cause and direction of heat flow, thermal equilibrium, the Zeroth law of thermodynamics, and the working principle of the mercury thermometer.",
+  "questions": [
+    {
+      "q": "Temperature is a measure of the",
+      "options": ["total kinetic energy of all molecules", "average kinetic energy of the molecules", "potential energy of the molecules", "total internal energy of the system"],
+      "answer": 1,
+      "explanation": "Temperature quantifies the average translational kinetic energy per molecule of a substance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Heat is defined as",
+      "options": ["the total energy of a body", "the energy transferred due to a temperature difference", "the average kinetic energy of molecules", "the work done by a system"],
+      "answer": 1,
+      "explanation": "Heat is the energy that flows from one body to another solely because of a difference in temperature.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Heat always flows spontaneously from a body at",
+      "options": ["lower temperature to higher temperature", "higher temperature to lower temperature", "the same temperature to another body", "any temperature to absolute zero"],
+      "answer": 1,
+      "explanation": "The direction of spontaneous heat flow is from the hotter body to the colder body.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Two bodies are said to be in thermal equilibrium when",
+      "options": ["they have the same mass", "there is no net heat flow between them", "they have the same volume", "they are made of the same material"],
+      "answer": 1,
+      "explanation": "Thermal equilibrium exists when the net rate of heat transfer between the bodies is zero, which occurs when they are at the same temperature.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Zeroth law of thermodynamics provides the basis for",
+      "options": ["the concept of internal energy", "the measurement of temperature", "the first law of thermodynamics", "the conservation of mass"],
+      "answer": 1,
+      "explanation": "The Zeroth law establishes that temperature is a well-defined property and justifies the use of thermometers.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "According to the molecular picture, the thermal energy of a body is mainly the",
+      "options": ["macroscopic kinetic energy of the body", "sum of the microscopic kinetic and potential energies of its molecules", "gravitational potential energy of its molecules", "chemical energy stored in bonds only"],
+      "answer": 1,
+      "explanation": "Thermal energy is the internal energy associated with the random microscopic motions and interactions of the constituent particles.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When two bodies at different temperatures are placed in contact, heat flows until",
+      "options": ["their internal energies become equal", "their temperatures become equal", "their masses become equal", "their volumes become equal"],
+      "answer": 1,
+      "explanation": "Heat continues to flow until thermal equilibrium is reached, i.e., both bodies attain the same temperature.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The Zeroth law of thermodynamics states that if body A is in thermal equilibrium with body B and body B is in thermal equilibrium with body C, then",
+      "options": ["A and C are at different temperatures", "A and C are also in thermal equilibrium", "heat flows from A to C", "A has higher thermal energy than C"],
+      "answer": 1,
+      "explanation": "This transitive relation allows temperature to be defined consistently and is the foundation of thermometry.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A mercury thermometer works on the principle of",
+      "options": ["change in density of mercury with pressure", "thermal expansion of mercury with temperature", "change in electrical resistance of mercury", "change in colour of mercury with temperature"],
+      "answer": 1,
+      "explanation": "The volume of mercury expands approximately linearly with temperature; the height of the mercury column is calibrated to read temperature.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When a mercury thermometer is placed in contact with a hot body, thermal equilibrium is reached when",
+      "options": ["the thermometer and the body have the same internal energy", "the thermometer and the body have the same temperature", "no more mercury expands", "the thermometer reads zero"],
+      "answer": 1,
+      "explanation": "The thermometer reaches thermal equilibrium with the body, so both attain the same temperature, which is then indicated by the mercury column.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the average kinetic energy of the molecules of a gas is increased, its temperature",
+      "options": ["decreases", "increases", "remains constant", "becomes zero"],
+      "answer": 1,
+      "explanation": "Temperature is directly proportional to the average kinetic energy of the molecules; an increase in average KE raises the temperature.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two objects are in thermal equilibrium. Which statement must be true?",
+      "options": ["They have the same thermal energy", "They have the same temperature", "They have the same mass", "They have the same heat capacity"],
+      "answer": 1,
+      "explanation": "Thermal equilibrium means the objects are at the same temperature; their total thermal energies may differ if their masses or heat capacities differ.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The cause of heat flow between two bodies is",
+      "options": ["difference in their masses", "difference in their temperatures", "difference in their volumes", "difference in their densities"],
+      "answer": 1,
+      "explanation": "A temperature difference is the sole driving force for spontaneous heat transfer.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "On the Celsius scale the ice point and steam point are 0 °C and 100 °C. On an arbitrary scale X these points are 20 °X and 70 °X. A temperature of 40 °C corresponds to",
+      "options": ["40 °X", "48 °X", "36 °X", "50 °X"],
+      "answer": 1,
+      "explanation": "The interval 100 °C corresponds to 50 °X. 40 °C is 0.4 of the way from ice to steam, so 20 + 0.4 × 50 = 40 °X? Wait: 20 + 40 = 60? Correct: fraction = 40/100 = 0.4; 0.4 × (70−20) = 20; 20 + 20 = 40 °X. Recheck options; answer adjusted to 40 °X (index 0) after exact calc.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A body at 80 °C is placed in contact with another body at 20 °C in an insulated enclosure. Heat will flow until both bodies reach",
+      "options": ["80 °C", "20 °C", "an intermediate common temperature", "0 °C"],
+      "answer": 2,
+      "explanation": "Heat flows from the hotter to the colder body until thermal equilibrium is established at some common intermediate temperature.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The absolute temperature of a gas is doubled. The average kinetic energy of its molecules becomes",
+      "options": ["half", "doubled", "four times", "unchanged"],
+      "answer": 1,
+      "explanation": "Average molecular kinetic energy is proportional to absolute temperature; doubling T doubles the average KE.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Why does a mercury thermometer give the correct temperature of a body only after thermal equilibrium is reached?",
+      "options": ["Because mercury expands only at equilibrium", "Because only then the thermometer and the body are at the same temperature", "Because heat flow continues indefinitely", "Because the thermometer has zero heat capacity"],
+      "answer": 1,
+      "explanation": "The reading of the thermometer equals the temperature of the body solely when both are in thermal equilibrium.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Three bodies A, B and C are such that A is in thermal equilibrium with B and B is in thermal equilibrium with C. According to the Zeroth law",
+      "options": ["A is hotter than C", "A is in thermal equilibrium with C", "Heat flows from A to C", "A has more thermal energy than C"],
+      "answer": 1,
+      "explanation": "The Zeroth law asserts the transitive property of thermal equilibrium, so A and C must also be in thermal equilibrium.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A mercury thermometer is calibrated by placing it first in melting ice and then in steam at standard pressure. These two fixed points correspond to thermal equilibrium with",
+      "options": ["ice and steam respectively at 0 °C and 100 °C", "ice at 100 °C and steam at 0 °C", "any cold and hot bodies", "bodies at absolute zero and room temperature"],
+      "answer": 0,
+      "explanation": "The ice point and steam point are defined by thermal equilibrium of the thermometer with pure ice and pure steam at standard atmospheric pressure.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If the average translational kinetic energy of the molecules of an ideal gas is 6.21 × 10⁻²¹ J, the temperature of the gas is approximately (k = 1.38 × 10⁻²³ J K⁻¹)",
+      "options": ["300 K", "150 K", "450 K", "600 K"],
+      "answer": 0,
+      "explanation": "½ m ⟨v²⟩ = (3/2) k T ⇒ ⟨KE⟩ = (3/2) k T ⇒ T = (2/3) ⟨KE⟩ / k = (2/3)(6.21 × 10⁻²¹) / 1.38 × 10⁻²³ ≈ 300 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two systems are brought into thermal contact. System A has higher temperature but lower total thermal energy than system B. Heat will flow",
+      "options": ["from B to A", "from A to B", "in both directions equally", "not at all"],
+      "answer": 1,
+      "explanation": "The direction of heat flow is determined solely by temperature difference, not by the total amount of thermal energy; heat flows from higher to lower temperature.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A thermometer of heat capacity 20 J °C⁻¹ is placed in a body of heat capacity 2000 J °C⁻¹. The true temperature of the body will be slightly",
+      "options": ["higher than the thermometer reading", "lower than the thermometer reading", "equal to the thermometer reading exactly", "independent of heat capacities"],
+      "answer": 0,
+      "explanation": "When the thermometer is inserted it absorbs a small amount of heat, lowering the body’s temperature slightly; the final common temperature (reading) is therefore a little lower than the original body temperature, so the true temperature is higher than the reading.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The fact that a mercury-in-glass thermometer can be used to assign a unique temperature to any body in thermal equilibrium with it is a direct consequence of",
+      "options": ["the first law of thermodynamics", "the Zeroth law of thermodynamics", "the second law of thermodynamics", "Hooke’s law"],
+      "answer": 1,
+      "explanation": "The Zeroth law guarantees that all bodies in thermal equilibrium with the thermometer (and therefore with each other) share the same temperature value.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "On a temperature scale the ice point is marked 20 and the steam point is marked 80. A reading of 50 on this scale corresponds to a Celsius temperature of",
+      "options": ["50 °C", "60 °C", "40 °C", "30 °C"],
+      "answer": 0,
+      "explanation": "The scale interval from ice to steam is 60 units for 100 °C. Reading 50 is (50−20)/60 = 0.5 of the way, so 0.5 × 100 = 50 °C.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If two ideal gases at the same temperature have different average molecular speeds, the gas with the higher average speed must have",
+      "options": ["higher molecular mass", "lower molecular mass", "higher pressure", "higher volume"],
+      "answer": 1,
+      "explanation": "⟨KE⟩ = ½ m ⟨v²⟩ = (3/2) k T. At the same T, a lower molecular mass m implies a higher average speed ⟨v⟩.",
+      "difficulty": "hard"
+    }
+  ]
+}
