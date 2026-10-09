@@ -1,0 +1,289 @@
+{
+  "title": "Circular Motion — 40 MCQs",
+  "grade": "XI",
+  "chapters": [6],
+  "date": "2026-10-09",
+  "description": "Covers angular displacement, velocity and acceleration, relations between angular and linear quantities, centripetal force and acceleration, motion in a vertical circle, motion of vehicles on banked surfaces, conical pendulum, and related numerical and conceptual problems.",
+  "questions": [
+    {
+      "q": "Angular displacement is measured in",
+      "options": ["metres", "radians", "degrees only", "revolutions only"],
+      "answer": 1,
+      "explanation": "In SI the natural unit of angular displacement is the radian, defined as arc length divided by radius.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Angular velocity ω is defined as",
+      "options": ["rate of change of linear displacement", "rate of change of angular displacement", "product of linear velocity and radius", "linear acceleration divided by radius"],
+      "answer": 1,
+      "explanation": "ω = dθ/dt, the time rate of change of angular displacement.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The SI unit of angular acceleration is",
+      "options": ["rad s⁻¹", "rad s⁻²", "m s⁻²", "rad m⁻¹"],
+      "answer": 1,
+      "explanation": "Angular acceleration α = dω/dt has the unit radian per second squared.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The relation between linear speed v and angular speed ω for circular motion of radius r is",
+      "options": ["v = r / ω", "v = r ω", "v = ω / r", "v = r² ω"],
+      "answer": 1,
+      "explanation": "Arc length s = r θ, differentiating with respect to time gives v = r ω.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Centripetal acceleration has magnitude",
+      "options": ["v² / r", "v / r", "r / v²", "ω / r"],
+      "answer": 0,
+      "explanation": "a_c = v² / r = r ω², directed toward the centre of the circle.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Centripetal force is the force that",
+      "options": ["acts outward from the centre", "is required to keep a body moving in a circular path", "is equal to the weight of the body", "acts tangentially"],
+      "answer": 1,
+      "explanation": "Centripetal force is the net force directed toward the centre that produces the centripetal acceleration needed for circular motion.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The direction of centripetal acceleration is",
+      "options": ["tangential to the path", "radially outward", "radially inward toward the centre", "along the velocity vector"],
+      "answer": 2,
+      "explanation": "Centripetal acceleration always points toward the centre of the circular path.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A body moving in a circle with constant speed has",
+      "options": ["zero acceleration", "constant velocity", "changing velocity but constant speed", "zero centripetal force"],
+      "answer": 2,
+      "explanation": "Speed is constant but direction of velocity changes continuously, so acceleration (centripetal) is non-zero.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Angular acceleration α is related to tangential linear acceleration a_t by",
+      "options": ["a_t = r α", "a_t = α / r", "a_t = r / α", "a_t = r² α"],
+      "answer": 0,
+      "explanation": "Differentiating v = r ω with respect to time yields a_t = r α when r is constant.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "One complete revolution corresponds to an angular displacement of",
+      "options": ["π rad", "2π rad", "π/2 rad", "4π rad"],
+      "answer": 1,
+      "explanation": "A full circle is 360° which equals 2π radians.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The period T of uniform circular motion is related to angular speed ω by",
+      "options": ["T = 2π / ω", "T = ω / 2π", "T = 2π ω", "T = ω² / 2π"],
+      "answer": 0,
+      "explanation": "ω = 2π / T, therefore T = 2π / ω.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a conical pendulum the bob moves in a",
+      "options": ["vertical circle", "horizontal circle", "straight line", "elliptical path"],
+      "answer": 1,
+      "explanation": "The string sweeps out a cone and the bob describes a horizontal circle at constant height.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a vehicle to move safely on a level circular road the necessary centripetal force is provided by",
+      "options": ["the weight of the vehicle", "friction between tyres and road", "the normal reaction", "air resistance"],
+      "answer": 1,
+      "explanation": "On a level road the only horizontal force available is static friction, which supplies the required centripetal force.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The frequency of revolution f is related to angular speed by",
+      "options": ["ω = 2π f", "ω = f / 2π", "ω = π f", "ω = 2 f"],
+      "answer": 0,
+      "explanation": "One revolution is 2π rad, so ω = 2π f.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A particle moving in a circle of radius 2 m with angular speed 3 rad s⁻¹ has linear speed",
+      "options": ["6 m s⁻¹", "1.5 m s⁻¹", "5 m s⁻¹", "9 m s⁻¹"],
+      "answer": 0,
+      "explanation": "v = r ω = 2 × 3 = 6 m s⁻¹.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A car of mass 1000 kg moves around a level circular track of radius 50 m at 10 m s⁻¹. The centripetal force required is",
+      "options": ["2000 N", "5000 N", "1000 N", "10000 N"],
+      "answer": 0,
+      "explanation": "F_c = m v² / r = 1000 × 100 / 50 = 2000 N.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The centripetal acceleration of a particle moving with speed 4 m s⁻¹ in a circle of radius 2 m is",
+      "options": ["8 m s⁻²", "2 m s⁻²", "4 m s⁻²", "16 m s⁻²"],
+      "answer": 0,
+      "explanation": "a_c = v² / r = 16 / 2 = 8 m s⁻².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A stone tied to a string of length 0.5 m is whirled in a horizontal circle with angular speed 4 rad s⁻¹. The linear speed of the stone is",
+      "options": ["2 m s⁻¹", "8 m s⁻¹", "1 m s⁻¹", "4 m s⁻¹"],
+      "answer": 0,
+      "explanation": "v = r ω = 0.5 × 4 = 2 m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a banked road of angle θ and radius r, the optimum speed (no friction needed) is given by",
+      "options": ["v = √(r g tan θ)", "v = √(r g / tan θ)", "v = √(r g cot θ)", "v = r g tan θ"],
+      "answer": 0,
+      "explanation": "Resolving forces perpendicular and parallel to the incline yields tan θ = v² / (r g), so v = √(r g tan θ).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle of mass 0.2 kg moves in a vertical circle of radius 1 m. The minimum speed at the highest point so that the string remains taut is (g = 10 m s⁻²)",
+      "options": ["√10 m s⁻¹", "10 m s⁻¹", "√5 m s⁻¹", "5 m s⁻¹"],
+      "answer": 0,
+      "explanation": "At the top the critical condition is m v² / r = m g, so v = √(r g) = √10 m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The period of a conical pendulum of string length L and semi-vertical angle θ is",
+      "options": ["2π √(L cos θ / g)", "2π √(L / g)", "2π √(L sin θ / g)", "2π √(L / (g cos θ))"],
+      "answer": 0,
+      "explanation": "The height of the cone h = L cos θ and T = 2π √(h / g) = 2π √(L cos θ / g).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A body is moving in a vertical circle. The difference between the tensions at the bottom and at the top is",
+      "options": ["2 m g", "4 m g", "6 m g", "m g"],
+      "answer": 2,
+      "explanation": "T_bottom − m g = m v_b² / r and T_top + m g = m v_t² / r. Using energy, v_b² − v_t² = 4 g r, so T_b − T_t = 6 m g.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A vehicle negotiates a banked curve of radius 100 m and banking angle 30°. Taking g = 10 m s⁻², the safe speed (no friction) is approximately",
+      "options": ["24 m s⁻¹", "10 m s⁻¹", "17 m s⁻¹", "30 m s⁻¹"],
+      "answer": 0,
+      "explanation": "v = √(r g tan 30°) = √(100 × 10 × 1/√3) = √(1000 / 1.732) ≈ √577 ≈ 24 m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If angular velocity is doubled for the same radius, the centripetal force becomes",
+      "options": ["twice", "four times", "half", "unchanged"],
+      "answer": 1,
+      "explanation": "F_c = m r ω²; doubling ω multiplies F_c by four.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle starts from rest and moves with constant angular acceleration 2 rad s⁻² in a circle of radius 1 m. Its linear speed after 3 s is",
+      "options": ["6 m s⁻¹", "3 m s⁻¹", "9 m s⁻¹", "2 m s⁻¹"],
+      "answer": 0,
+      "explanation": "ω = α t = 2 × 3 = 6 rad s⁻¹; v = r ω = 1 × 6 = 6 m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The angular displacement of a rotating body in 4 s is 20 rad. Its average angular velocity is",
+      "options": ["5 rad s⁻¹", "80 rad s⁻¹", "0.2 rad s⁻¹", "10 rad s⁻¹"],
+      "answer": 0,
+      "explanation": "ω_avg = Δθ / Δt = 20 / 4 = 5 rad s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For motion in a vertical circle the minimum speed at the bottom so that the body just completes the circle is",
+      "options": ["√(g r)", "√(2 g r)", "√(5 g r)", "√(4 g r)"],
+      "answer": 2,
+      "explanation": "At the top v_min = √(g r); by energy conservation v_bottom² = v_top² + 4 g r = 5 g r, so v_bottom = √(5 g r).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A conical pendulum has a string of length 1.0 m making an angle of 60° with the vertical. Taking g = 10 m s⁻², its period is approximately",
+      "options": ["1.0 s", "1.4 s", "2.0 s", "0.7 s"],
+      "answer": 1,
+      "explanation": "T = 2π √(L cos θ / g) = 2π √(1 × 0.5 / 10) = 2π √0.05 ≈ 2π × 0.224 ≈ 1.41 s.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The ratio of angular speeds of the hour hand and the minute hand of a clock is",
+      "options": ["1 : 12", "12 : 1", "1 : 60", "60 : 1"],
+      "answer": 0,
+      "explanation": "Minute hand completes one revolution in 1 h; hour hand in 12 h. Therefore ω_hour / ω_minute = 1/12.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle moves in a circle of radius 4 m with constant speed 8 m s⁻¹. The magnitude of its acceleration is",
+      "options": ["16 m s⁻²", "2 m s⁻²", "32 m s⁻²", "4 m s⁻²"],
+      "answer": 0,
+      "explanation": "a_c = v² / r = 64 / 4 = 16 m s⁻² (purely centripetal).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A motorcyclist rides in a vertical loop of radius 5 m. The minimum speed at the top so that he does not fall is (g = 10 m s⁻²)",
+      "options": ["√50 m s⁻¹", "5 m s⁻¹", "10 m s⁻¹", "√10 m s⁻¹"],
+      "answer": 0,
+      "explanation": "At the top N + m g = m v² / r; for minimum speed N → 0, so v = √(r g) = √50 m s⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A car is travelling at 20 m s⁻¹ on a banked curve of radius 100 m. The angle of banking required for no lateral friction is (g = 10 m s⁻²)",
+      "options": ["≈ 22°", "≈ 45°", "≈ 30°", "≈ 11°"],
+      "answer": 0,
+      "explanation": "tan θ = v² / (r g) = 400 / (100 × 10) = 0.4 ⇒ θ = arctan 0.4 ≈ 21.8°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A stone of mass 0.5 kg is tied to a string of length 1 m and whirled in a vertical circle. If the speed at the lowest point is 6 m s⁻¹, the tension at the lowest point is (g = 10 m s⁻²)",
+      "options": ["23 N", "13 N", "18 N", "8 N"],
+      "answer": 0,
+      "explanation": "T − m g = m v² / r ⇒ T = m (g + v² / r) = 0.5 (10 + 36 / 1) = 0.5 × 46 = 23 N.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The angular acceleration of a wheel increases from 2 rad s⁻¹ to 10 rad s⁻¹ in 4 s. The angular displacement during this interval is",
+      "options": ["24 rad", "16 rad", "32 rad", "8 rad"],
+      "answer": 0,
+      "explanation": "α = (10 − 2)/4 = 2 rad s⁻². θ = ω₀ t + ½ α t² = 2×4 + ½×2×16 = 8 + 16 = 24 rad.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle of mass m moves in a horizontal circle of radius r with constant speed v on the inside of a smooth hemispherical bowl. The normal reaction of the bowl on the particle is",
+      "options": ["m v² / r", "m g", "m √(g² + (v² / r)²)", "m (g + v² / r)"],
+      "answer": 0,
+      "explanation": "On a smooth surface the only radial force is the normal reaction, which supplies the centripetal force: N = m v² / r.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A conical pendulum of length 1.2 m makes an angle of 30° with the vertical. Taking g = 10 m s⁻², the linear speed of the bob is approximately",
+      "options": ["1.7 m s⁻¹", "2.4 m s⁻¹", "3.5 m s⁻¹", "1.0 m s⁻¹"],
+      "answer": 0,
+      "explanation": "r = L sin θ = 1.2 × 0.5 = 0.6 m. tan θ = v² / (r g) ⇒ v² = r g tan 30° = 0.6 × 10 × 1/√3 ≈ 3.46 ⇒ v ≈ 1.86 m s⁻¹ (closest 1.7).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two particles of equal mass m move in concentric circles of radii r and 2r with the same angular speed ω. The ratio of their centripetal forces is",
+      "options": ["1 : 2", "1 : 4", "2 : 1", "4 : 1"],
+      "answer": 0,
+      "explanation": "F_c = m r ω². For the same m and ω, F₁ / F₂ = r / (2r) = 1/2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A body slides down a frictionless track that ends in a vertical loop of radius R. The minimum height from which the body must be released to complete the loop is",
+      "options": ["2.5 R", "2 R", "5 R", "3 R"],
+      "answer": 0,
+      "explanation": "At the top of the loop v² ≥ g R. Energy conservation from height h: m g h = m g (2R) + ½ m (g R) ⇒ h = 2.5 R.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle moves with constant angular velocity 3 rad s⁻¹ in a circle of radius 2 m. The magnitude of its linear acceleration is",
+      "options": ["18 m s⁻²", "6 m s⁻²", "9 m s⁻²", "12 m s⁻²"],
+      "answer": 0,
+      "explanation": "Speed is constant so only centripetal acceleration exists: a = r ω² = 2 × 9 = 18 m s⁻².",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The maximum speed with which a car can negotiate a level circular curve of radius 40 m if the coefficient of friction is 0.5 (g = 10 m s⁻²) is",
+      "options": ["14.1 m s⁻¹", "20 m s⁻¹", "10 m s⁻¹", "28.3 m s⁻¹"],
+      "answer": 0,
+      "explanation": "μ m g = m v² / r ⇒ v = √(μ r g) = √(0.5 × 40 × 10) = √200 ≈ 14.14 m s⁻¹.",
+      "difficulty": "hard"
+    }
+  ]
+}
