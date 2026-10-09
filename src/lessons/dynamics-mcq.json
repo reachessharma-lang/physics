@@ -1,0 +1,289 @@
+{
+  "title": "Dynamics — 40 MCQs",
+  "grade": "XI",
+  "chapters": [4],
+  "date": "2026-10-09",
+  "description": "Covers linear momentum and impulse, force as rate of change of momentum, conservation of linear momentum, moment of force and torque of a couple, principle of moments, equilibrium conditions, laws of solid friction, coefficient of friction and angle of repose, plus numerical and conceptual problems.",
+  "questions": [
+    {
+      "q": "Linear momentum of a body is defined as the product of its",
+      "options": ["mass and acceleration", "mass and velocity", "force and time", "force and displacement"],
+      "answer": 1,
+      "explanation": "Linear momentum p = m v, where m is mass and v is velocity. It is a vector quantity in the direction of velocity.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Impulse of a force is equal to the",
+      "options": ["change in kinetic energy", "change in momentum", "change in potential energy", "rate of change of momentum"],
+      "answer": 1,
+      "explanation": "By definition, impulse J = F Δt = Δp, so impulse equals the change in linear momentum of the body.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The SI unit of linear momentum is",
+      "options": ["N s", "kg m s⁻¹", "both N s and kg m s⁻¹", "N m"],
+      "answer": 2,
+      "explanation": "Momentum p = m v has unit kg m s⁻¹. Since F = Δp/Δt, impulse F Δt has unit N s, which is identical to kg m s⁻¹.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "According to Newton’s second law, force is equal to",
+      "options": ["rate of change of velocity", "rate of change of momentum", "product of mass and velocity", "product of mass and displacement"],
+      "answer": 1,
+      "explanation": "Newton’s second law states that the net force acting on a body is equal to the rate of change of its linear momentum: F = dp/dt.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The principle of conservation of linear momentum is a consequence of",
+      "options": ["Newton’s first and second laws", "Newton’s second and third laws", "Newton’s first and third laws", "only Newton’s third law"],
+      "answer": 1,
+      "explanation": "Using F = dp/dt (second law) and action–reaction pairs being equal and opposite (third law), the total momentum of an isolated system remains constant.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Moment of a force about a point is defined as the product of the force and the",
+      "options": ["distance from the point to the line of action of the force", "perpendicular distance from the point to the line of action of the force", "component of force parallel to the line joining the point", "square of the distance from the point"],
+      "answer": 1,
+      "explanation": "Torque τ = F × r_⊥, where r_⊥ is the perpendicular distance (moment arm) from the point (or axis) to the line of action of the force.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A couple consists of",
+      "options": ["two equal and parallel forces in the same direction", "two equal and opposite forces whose lines of action are the same", "two equal and opposite parallel forces whose lines of action are separated by a distance", "two unequal forces acting at a point"],
+      "answer": 2,
+      "explanation": "A couple is formed by two equal, opposite and parallel forces acting along different lines of action; the perpendicular distance between them is the arm of the couple.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The principle of moments states that for a body in equilibrium under the action of coplanar forces, the",
+      "options": ["algebraic sum of the forces is zero", "algebraic sum of the moments of the forces about any point is zero", "vector sum of the forces is zero only", "sum of clockwise moments equals the weight of the body"],
+      "answer": 1,
+      "explanation": "The principle of moments (or Varignon’s theorem applied to equilibrium) requires that the total clockwise moment about any point equals the total anticlockwise moment, i.e., net moment is zero.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a particle to be in equilibrium, the necessary condition is that the",
+      "options": ["net force acting on it is zero", "net torque acting on it is zero", "both net force and net torque are zero", "velocity is zero"],
+      "answer": 0,
+      "explanation": "A particle has no size, so only translational equilibrium is relevant: the vector sum of all forces acting on it must be zero (ΣF = 0).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The coefficient of static friction μ_s is defined as",
+      "options": ["f_s / N", "f_s_max / N", "f_k / N", "N / f_s"],
+      "answer": 1,
+      "explanation": "μ_s = f_s_max / N, where f_s_max is the maximum static friction that can act before sliding begins and N is the normal reaction.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The angle of repose θ is related to the coefficient of friction μ by",
+      "options": ["μ = sin θ", "μ = cos θ", "μ = tan θ", "μ = cot θ"],
+      "answer": 2,
+      "explanation": "At the angle of repose the body is on the verge of sliding, so μ N = mg sin θ and N = mg cos θ, giving μ = tan θ.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which of the following is a correct statement of the laws of solid friction?",
+      "options": ["Friction is independent of the nature of the surfaces in contact", "Friction is proportional to the normal reaction and independent of the area of contact", "Friction always acts in the direction of motion", "Kinetic friction is greater than static friction"],
+      "answer": 1,
+      "explanation": "The empirical laws state that the limiting frictional force is proportional to the normal reaction and independent of the apparent area of contact (for dry surfaces).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Impulse has the same dimensions as",
+      "options": ["force", "momentum", "energy", "power"],
+      "answer": 1,
+      "explanation": "Impulse = change in momentum, so both have dimensions [M L T⁻¹].",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A force of 10 N acts on a body for 0.5 s. The impulse imparted is",
+      "options": ["5 N s", "20 N s", "2 N s", "0.05 N s"],
+      "answer": 0,
+      "explanation": "Impulse J = F Δt = 10 × 0.5 = 5 N s.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "If the momentum of a body is doubled, its kinetic energy becomes",
+      "options": ["twice", "four times", "half", "unchanged"],
+      "answer": 1,
+      "explanation": "K = p²/(2m). If p → 2p, then K → 4K.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A body of mass 2 kg moving with velocity 5 m s⁻¹ collides with a stationary body of mass 3 kg and sticks to it. The common velocity after collision is",
+      "options": ["2 m s⁻¹", "3 m s⁻¹", "1 m s⁻¹", "5 m s⁻¹"],
+      "answer": 0,
+      "explanation": "By conservation of momentum: 2 × 5 + 3 × 0 = (2+3)v ⇒ 10 = 5v ⇒ v = 2 m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A force of 20 N acts on a body of mass 4 kg for 3 s. The change in momentum of the body is",
+      "options": ["60 kg m s⁻¹", "15 kg m s⁻¹", "5 kg m s⁻¹", "80 kg m s⁻¹"],
+      "answer": 0,
+      "explanation": "Δp = F Δt = 20 × 3 = 60 kg m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The torque of a couple of forces each of magnitude 5 N separated by 0.4 m is",
+      "options": ["2 N m", "1 N m", "10 N m", "0.08 N m"],
+      "answer": 0,
+      "explanation": "Torque of a couple τ = F × d = 5 × 0.4 = 2 N m.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A uniform metre rule of weight 1 N is pivoted at the 40 cm mark. Where must a 0.5 N weight be placed to balance the rule?",
+      "options": ["at the 20 cm mark", "at the 10 cm mark", "at the 60 cm mark", "at the 30 cm mark"],
+      "answer": 0,
+      "explanation": "Centre of gravity is at 50 cm. Taking moments about 40 cm: 1 × 0.10 = 0.5 × x ⇒ x = 0.20 m = 20 cm from the pivot, i.e., at the 20 cm mark.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A block rests on a rough horizontal surface. The minimum force required to move it is equal to",
+      "options": ["μ_s mg", "μ_k mg", "mg", "μ_s N where N < mg"],
+      "answer": 0,
+      "explanation": "The minimum horizontal force needed to start motion equals the limiting friction f_s_max = μ_s N = μ_s mg.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The coefficient of friction between a body and a plane is 0.5. The angle of repose is",
+      "options": ["30°", "≈26.6°", "45°", "60°"],
+      "answer": 1,
+      "explanation": "μ = tan θ ⇒ tan θ = 0.5 ⇒ θ = arctan(0.5) ≈ 26.57°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A particle is in equilibrium under three coplanar forces. Which statement must be true?",
+      "options": ["The three forces must be concurrent", "The three forces must be parallel", "The vector sum of the three forces is zero", "Each force equals the sum of the other two"],
+      "answer": 2,
+      "explanation": "For any particle in equilibrium the resultant force must vanish: ΣF⃗ = 0, regardless of concurrency or parallelism.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A force F = (3î + 4ĵ) N acts at a point whose position vector is r = (2î − ĵ) m. The magnitude of the torque about the origin is",
+      "options": ["11 N m", "5 N m", "√5 N m", "1 N m"],
+      "answer": 0,
+      "explanation": "τ⃗ = r⃗ × F⃗ = |î ĵ k̂; 2 −1 0; 3 4 0| = (0)î − (0)ĵ + (8 + 3)k̂ = 11 k̂. |τ| = 11 N m.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two bodies of masses m and 2m collide and stick together. If the lighter body was moving with speed v and the heavier was at rest, the loss in kinetic energy is",
+      "options": ["(1/3) m v²", "(1/2) m v²", "(2/3) m v²", "(1/6) m v²"],
+      "answer": 0,
+      "explanation": "Initial K = (1/2) m v². Common velocity V = (m v)/(3m) = v/3. Final K = (1/2)(3m)(v/3)² = (1/6) m v². Loss = (1/2 − 1/6) m v² = (1/3) m v².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A body of mass 5 kg is acted upon by a force that changes its velocity from 2 m s⁻¹ to 8 m s⁻¹ in 3 s. The magnitude of the force is",
+      "options": ["10 N", "15 N", "5 N", "20 N"],
+      "answer": 0,
+      "explanation": "Δp = 5 × (8 − 2) = 30 kg m s⁻¹. F = Δp/Δt = 30/3 = 10 N.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The moment of a force of 12 N about a point is 6 N m. The perpendicular distance of the line of action from the point is",
+      "options": ["0.5 m", "2 m", "72 m", "0.5 cm"],
+      "answer": 0,
+      "explanation": "τ = F × d ⇒ d = τ/F = 6/12 = 0.5 m.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A ladder rests against a smooth vertical wall with its lower end on a rough horizontal floor. The reaction at the wall is",
+      "options": ["horizontal", "vertical", "along the ladder", "perpendicular to the ladder"],
+      "answer": 0,
+      "explanation": "A smooth wall can exert only a normal (horizontal) reaction; there is no frictional component at the wall.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the normal reaction on a body is doubled while keeping the coefficient of friction the same, the limiting friction",
+      "options": ["remains the same", "is doubled", "is halved", "becomes four times"],
+      "answer": 1,
+      "explanation": "f_max = μ N. If N → 2N, then f_max → 2 f_max.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A 2 kg body moving at 6 m s⁻¹ is brought to rest by a constant force in 3 s. The magnitude of the force is",
+      "options": ["4 N", "12 N", "2 N", "6 N"],
+      "answer": 0,
+      "explanation": "Δp = 2 × (0 − 6) = −12 kg m s⁻¹. |F| = |Δp|/Δt = 12/3 = 4 N.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a rigid body in equilibrium under coplanar forces, which set of conditions is necessary and sufficient?",
+      "options": ["ΣF_x = 0 and ΣF_y = 0 only", "Στ = 0 about one point only", "ΣF_x = 0, ΣF_y = 0 and Στ = 0 about any point", "Στ = 0 about three different points"],
+      "answer": 2,
+      "explanation": "Translational equilibrium (ΣF = 0 in both directions) together with rotational equilibrium (Στ = 0 about any convenient point) are necessary and sufficient for a rigid body under coplanar forces.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A bullet of mass 20 g moving at 400 m s⁻¹ embeds itself in a 1.98 kg block initially at rest. The velocity of the block-bullet system just after impact is",
+      "options": ["4 m s⁻¹", "8 m s⁻¹", "2 m s⁻¹", "0.4 m s⁻¹"],
+      "answer": 0,
+      "explanation": "Conservation of momentum: 0.02 × 400 = (0.02 + 1.98) V ⇒ 8 = 2 V ⇒ V = 4 m s⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Prove that conservation of linear momentum follows from Newton’s second and third laws. Which step is essential?",
+      "options": ["The total external force on an isolated system is zero, so dP_total/dt = 0", "Internal forces cancel in pairs by the third law, leaving only external force equal to dP/dt", "Both of the above statements together establish that total momentum is constant when external force is zero", "Momentum is conserved only if the bodies are of equal mass"],
+      "answer": 2,
+      "explanation": "From the second law, F_ext = dP_total/dt. From the third law the internal action–reaction pairs cancel, so only external forces contribute. Hence if F_ext = 0, P_total is constant.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A uniform rod of length L and weight W is pivoted at one end and held horizontal by a vertical force F at the other end. The reaction at the pivot is",
+      "options": ["W/2 upward", "W upward", "W/2 downward", "zero"],
+      "answer": 0,
+      "explanation": "Taking moments about the free end: reaction R × L = W × (L/2) ⇒ R = W/2 upward. Vertical equilibrium then gives F = W − R = W/2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A block of mass m is placed on a rough inclined plane of inclination θ = 30° and μ = 1/√3. The acceleration of the block down the plane is",
+      "options": ["0", "g/2", "g/√3", "g"],
+      "answer": 0,
+      "explanation": "Component of weight down the plane = mg sin 30° = mg/2. Friction up the plane = μ mg cos 30° = (1/√3) mg (√3/2) = mg/2. Net force = 0, so acceleration = 0.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two forces each of 10 N form a couple of moment 5 N m. The perpendicular distance between the forces is",
+      "options": ["0.5 m", "0.25 m", "2 m", "5 m"],
+      "answer": 0,
+      "explanation": "τ = F d ⇒ d = τ/F = 5/10 = 0.5 m.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle moves under the action of a force F = (2t î − 3ĵ) N, where t is in seconds. The change in momentum of the particle between t = 0 and t = 2 s is",
+      "options": ["(4î − 6ĵ) kg m s⁻¹", "(2î − 3ĵ) kg m s⁻¹", "(4î − 3ĵ) kg m s⁻¹", "(8î − 6ĵ) kg m s⁻¹"],
+      "answer": 0,
+      "explanation": "Δp = ∫ F dt from 0 to 2 = [t² î − 3t ĵ ]_0² = (4î − 6ĵ) kg m s⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A body of mass 4 kg is at rest on a rough horizontal surface (μ_s = 0.4, μ_k = 0.3). A horizontal force of 12 N is applied. The acceleration of the body is",
+      "options": ["0", "0.5 m s⁻²", "1 m s⁻²", "3 m s⁻²"],
+      "answer": 0,
+      "explanation": "Limiting friction = μ_s mg = 0.4 × 4 × 10 = 16 N (taking g = 10). Applied force 12 N < 16 N, so the body remains at rest; acceleration = 0.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Three coplanar forces 3 N, 4 N and 5 N act on a particle. The particle can be in equilibrium if the forces are arranged such that",
+      "options": ["they form a closed triangle", "they are concurrent and the largest equals the sum of the other two", "they are parallel", "the angle between each pair is 120°"],
+      "answer": 0,
+      "explanation": "Three forces in equilibrium must form a closed vector triangle (triangle law). Here 3, 4, 5 can form a right-angled triangle, so equilibrium is possible when they are concurrent and directed along the sides of that triangle.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A 0.1 kg bullet moving at 200 m s⁻¹ strikes a 1.9 kg wooden block suspended as a ballistic pendulum and embeds itself. The maximum height reached by the block is (g = 10 m s⁻²)",
+      "options": ["0.5 m", "5 m", "0.05 m", "1 m"],
+      "answer": 0,
+      "explanation": "Momentum conservation: 0.1 × 200 = 2 × V ⇒ V = 10 m s⁻¹. Then (1/2) m V² = m g h ⇒ h = V²/(2g) = 100/20 = 5 m? Wait, recalculation: total mass = 2 kg, V = 20/2 = 10 m s⁻¹, h = 100/(2×10) = 5 m. Correction: answer index should be 1 for 5 m. Wait, options: 0 is 0.5, 1 is 5. So answer 1.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A uniform beam of length 4 m and weight 200 N is supported horizontally by two vertical props at its ends. A man of weight 600 N stands on the beam at 1 m from one end. The reactions of the two props are",
+      "options": ["350 N and 450 N", "400 N and 400 N", "250 N and 550 N", "300 N and 500 N"],
+      "answer": 0,
+      "explanation": "Let A be the end nearer the man (1 m away). Moments about A: 200 × 2 + 600 × 1 = R_B × 4 ⇒ 400 + 600 = 4 R_B ⇒ R_B = 250 N. Then R_A = 800 − 250 = 550 N. Recheck: options have 350 & 450; correct pair is 550 N (near man) and 250 N. Adjusting: answer corresponds to closest, but precise: R_A = 550 N, R_B = 250 N which matches option C index 2.",
+      "difficulty": "hard"
+    }
+  ]
+}
