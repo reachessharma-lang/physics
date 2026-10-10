@@ -1,0 +1,491 @@
+{
+  "title": "Dispersion — 40 MCQs",
+  "grade": "XI",
+  "chapters": [
+    18
+  ],
+  "date": "2026-10-10",
+  "description": "Pure spectrum, dispersive power of a prism material, chromatic and spherical aberration of lenses, and achromatism in lenses with its applications.",
+  "questions": [
+    {
+      "q": "A pure spectrum is one in which",
+      "options": [
+        "the different colours are spread out without overlapping one another",
+        "the different colours overlap and mix with one another",
+        "only the red and violet colours are present",
+        "the light is not deviated at all"
+      ],
+      "answer": 0,
+      "explanation": "In a pure spectrum the colours are separated by a large enough angular dispersion and are brought to focus by a convex lens, so that no two colours overlap.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When white light passes through a glass prism, the colour that deviates the most is",
+      "options": [
+        "red",
+        "yellow",
+        "violet",
+        "green"
+      ],
+      "answer": 2,
+      "explanation": "Violet light has the shortest wavelength and the largest refractive index in glass, so it is deviated the most; red, with the longest wavelength, deviates the least.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The colours in the spectrum of white light, arranged in the order of increasing deviation, are",
+      "options": [
+        "violet, indigo, blue, green, yellow, orange, red",
+        "violet, blue, green, yellow, red, orange, indigo",
+        "red, orange, yellow, green, blue, indigo, violet",
+        "red, yellow, green, blue, orange, indigo, violet"
+      ],
+      "answer": 2,
+      "explanation": "The refractive index increases from red to violet, so the deviation also increases in the order red, orange, yellow, green, blue, indigo, violet.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The dispersive power ω of the material of a prism is defined by",
+      "options": [
+        "ω = (n_y − 1)/(n_v − n_r)",
+        "ω = (n_v − n_r)/(n_y − 1)",
+        "ω = (n_v − n_r)/(n_y + 1)",
+        "ω = (n_v + n_r)/n_y"
+      ],
+      "answer": 1,
+      "explanation": "Dispersive power is the ratio of the angular dispersion to the mean deviation, which reduces to ω = (n_v − n_r)/(n_y − 1), where n_v, n_r and n_y refer to violet, red and mean (yellow) light.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The splitting of white light into its constituent colours when it passes through a prism is called",
+      "options": [
+        "reflection",
+        "dispersion",
+        "diffraction",
+        "total internal reflection"
+      ],
+      "answer": 1,
+      "explanation": "The prism refracts each colour through a slightly different angle, so the colours emerge separately and the white light is said to be dispersed.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Dispersion of white light by a prism occurs because",
+      "options": [
+        "white light consists of only two colours",
+        "the speed of all colours in glass is the same",
+        "the refractive index of the material of the prism is different for different wavelengths",
+        "the prism absorbs some colours completely"
+      ],
+      "answer": 2,
+      "explanation": "Since n depends on wavelength, each colour is refracted through a different angle and the colours separate as they pass through the prism.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In vacuum (or air), all the colours of white light travel with",
+      "options": [
+        "the same speed",
+        "different speeds, violet being the fastest",
+        "speeds proportional to their wavelengths",
+        "speeds inversely proportional to their wavelengths"
+      ],
+      "answer": 0,
+      "explanation": "Vacuum is non-dispersive, so every wavelength travels with the same speed c = 3 × 10⁸ m s⁻¹; dispersion appears only in a material medium.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Chromatic aberration of a lens is the defect in which",
+      "options": [
+        "the lens absorbs the violet colour",
+        "different colours of light are brought to focus at different points",
+        "parallel rays are focused at a point on the axis",
+        "the image is formed only for red light"
+      ],
+      "answer": 1,
+      "explanation": "Because the focal length of a lens depends on the refractive index, and hence on wavelength, the violet image is formed nearer the lens than the red image, giving a coloured, blurred image.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Spherical aberration of a lens is caused by",
+      "options": [
+        "the marginal rays and the paraxial rays being focused at different points on the axis",
+        "the dependence of focal length on wavelength",
+        "the lens being made of a dispersive material",
+        "total internal reflection inside the lens"
+      ],
+      "answer": 0,
+      "explanation": "Rays passing through the outer (marginal) part of a spherical lens are refracted more strongly than the paraxial rays, so they meet the axis at a different point.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An achromatic lens is a lens which is free from",
+      "options": [
+        "astigmatism",
+        "coma",
+        "chromatic aberration",
+        "spherical aberration only"
+      ],
+      "answer": 2,
+      "explanation": "An achromatic combination brings two colours, usually red and violet, to the same focus, so that the image is free from coloured fringes.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The dispersive power of the material of a prism",
+      "options": [
+        "is measured in radian",
+        "has no unit, since it is the ratio of two angles",
+        "is measured in dioptre",
+        "is measured in degree per metre"
+      ],
+      "answer": 1,
+      "explanation": "Dispersive power is the ratio of the angular dispersion to the mean deviation, and a ratio of two similar quantities is a pure number with no unit.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Inside a glass prism, red light travels faster than violet light because",
+      "options": [
+        "the refractive index of glass is smaller for red light than for violet light",
+        "the prism absorbs violet light",
+        "red light has a shorter wavelength than violet light",
+        "red light is not refracted in glass"
+      ],
+      "answer": 0,
+      "explanation": "Speed in the medium is v = c/n; the refractive index is smaller for red light, so red light travels faster inside the glass than violet light.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The angular dispersion produced by a thin prism of angle A is given by",
+      "options": [
+        "(n_y − 1)A",
+        "(n_v + n_r)A",
+        "(n_v − n_r)/A",
+        "(n_v − n_r)A"
+      ],
+      "answer": 3,
+      "explanation": "The deviation of a thin prism is δ = (n − 1)A, so the angular dispersion is the difference of the deviations of violet and red light, i.e. (n_v − n_r)A.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The chromatic aberration of a convex lens can be corrected by combining it with",
+      "options": [
+        "another convex lens made of the same glass",
+        "a concave lens made of flint glass",
+        "a concave mirror",
+        "a plane glass plate"
+      ],
+      "answer": 1,
+      "explanation": "A convex lens of crown glass and a concave lens of flint glass, which has a greater dispersive power, together form an achromatic doublet in which the two colours come to a common focus.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Spherical aberration of a lens can be reduced by",
+      "options": [
+        "using a lens of larger aperture",
+        "using a stop to cut off the marginal rays",
+        "using a thicker lens",
+        "increasing the wavelength of the light used"
+      ],
+      "answer": 1,
+      "explanation": "The outer rays are the ones that focus farthest from the paraxial focus, so screening off the marginal rays with a stop makes the image sharper.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a certain glass, n_v = 1.53, n_r = 1.52 and n_y = 1.525. The dispersive power of the glass is about",
+      "options": [
+        "0.019",
+        "0.010",
+        "0.050",
+        "0.100"
+      ],
+      "answer": 0,
+      "explanation": "ω = (n_v − n_r)/(n_y − 1) = (1.53 − 1.52)/(1.525 − 1) = 0.01/0.525 ≈ 0.019.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a certain glass, n_v = 1.53, n_r = 1.51 and n_y = 1.52. The dispersive power is about",
+      "options": [
+        "0.062",
+        "0.020",
+        "0.038",
+        "0.019"
+      ],
+      "answer": 2,
+      "explanation": "ω = (1.53 − 1.51)/(1.52 − 1) = 0.02/0.52 ≈ 0.038.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a certain glass, n_v = 1.523, n_r = 1.515 and n_y = 1.519. The dispersive power is about",
+      "options": [
+        "0.062",
+        "0.032",
+        "0.008",
+        "0.015"
+      ],
+      "answer": 3,
+      "explanation": "ω = (1.523 − 1.515)/(1.519 − 1) = 0.008/0.519 ≈ 0.015.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a certain glass, n_v = 1.66, n_r = 1.62 and n_y = 1.64. The dispersive power is about",
+      "options": [
+        "0.063",
+        "0.125",
+        "0.040",
+        "0.024"
+      ],
+      "answer": 0,
+      "explanation": "ω = (1.66 − 1.62)/(1.64 − 1) = 0.04/0.64 = 0.0625 ≈ 0.063.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The dispersive power of a glass is 0.04 and its mean refractive index n_y is 1.5. The value of (n_v − n_r) is",
+      "options": [
+        "0.06",
+        "0.01",
+        "0.02",
+        "0.04"
+      ],
+      "answer": 2,
+      "explanation": "ω = (n_v − n_r)/(n_y − 1), so n_v − n_r = ω (n_y − 1) = 0.04 × 0.5 = 0.02.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin prism of angle 10° is made of glass for which (n_v − n_r) = 0.02. The angular dispersion produced is",
+      "options": [
+        "0.5°",
+        "0.2°",
+        "0.02°",
+        "2.0°"
+      ],
+      "answer": 1,
+      "explanation": "Angular dispersion = (n_v − n_r)A = 0.02 × 10° = 0.2°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin prism of angle 10° is made of glass of mean refractive index 1.5. The mean deviation produced is",
+      "options": [
+        "5°",
+        "10°",
+        "15°",
+        "2.5°"
+      ],
+      "answer": 0,
+      "explanation": "Mean deviation δ_y = (n_y − 1)A = (1.5 − 1) × 10° = 5°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism produces an angular dispersion of 0.2° and a mean deviation of 5°. The dispersive power of its material is",
+      "options": [
+        "0.02",
+        "0.4",
+        "0.04",
+        "0.25"
+      ],
+      "answer": 2,
+      "explanation": "ω = angular dispersion/mean deviation = 0.2°/5° = 0.04.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin prism of angle 5° is made of glass for which n_v = 1.54 and n_r = 1.52. The angular dispersion is",
+      "options": [
+        "0.2°",
+        "0.02°",
+        "0.5°",
+        "0.1°"
+      ],
+      "answer": 3,
+      "explanation": "Angular dispersion = (n_v − n_r)A = (1.54 − 1.52) × 5° = 0.02 × 5° = 0.1°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin prism of angle 15° is made of glass for which n_v = 1.52 and n_r = 1.50. The angular dispersion produced is",
+      "options": [
+        "0.15°",
+        "3.0°",
+        "0.3°",
+        "0.02°"
+      ],
+      "answer": 2,
+      "explanation": "Angular dispersion = (n_v − n_r)A = (1.52 − 1.50) × 15° = 0.02 × 15° = 0.3°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A convex lens of crown glass has focal length 20 cm and dispersive power 0.02. It is to be combined with a concave lens of flint glass of dispersive power 0.04 so that the combination is achromatic. The focal length of the flint lens must be",
+      "options": [
+        "−10 cm",
+        "−80 cm",
+        "−20 cm",
+        "−40 cm"
+      ],
+      "answer": 3,
+      "explanation": "For achromatism ω₁/f₁ + ω₂/f₂ = 0, so f₂ = −f₁ω₂/ω₁ = −20 × 0.04/0.02 = −40 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A convex lens of focal length 30 cm (ω = 0.03) is combined with a concave lens of focal length f₂ (ω = 0.05) to form an achromatic doublet. The value of f₂ is",
+      "options": [
+        "−60 cm",
+        "−18 cm",
+        "−50 cm",
+        "−30 cm"
+      ],
+      "answer": 2,
+      "explanation": "f₂ = −f₁ω₂/ω₁ = −30 × 0.05/0.03 = −50 cm; the flint lens must be concave and of greater focal length than the crown lens.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A convex lens of focal length 15 cm (ω = 0.017) is placed in contact with a concave lens (ω = 0.034) to make the combination achromatic. The focal length of the concave lens is",
+      "options": [
+        "−30 cm",
+        "−7.5 cm",
+        "−60 cm",
+        "−15 cm"
+      ],
+      "answer": 0,
+      "explanation": "f₂ = −f₁ω₂/ω₁ = −15 × 0.034/0.017 = −30 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The dispersive power of a glass is 0.03 and its mean refractive index is 1.6. The difference (n_v − n_r) for this glass is",
+      "options": [
+        "0.006",
+        "0.048",
+        "0.018",
+        "0.03"
+      ],
+      "answer": 2,
+      "explanation": "n_v − n_r = ω (n_y − 1) = 0.03 × 0.6 = 0.018.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A crown glass prism of angle 6° has (n_v − n_r) = 0.02, and a flint glass prism has (n_v − n_r) = 0.03. To produce no net dispersion, the angle of the flint glass prism must be",
+      "options": [
+        "3°",
+        "4°",
+        "9°",
+        "12°"
+      ],
+      "answer": 1,
+      "explanation": "For zero net dispersion (n_v − n_r)₁A₁ = (n_v − n_r)₂A₂, so A₂ = 0.02 × 6°/0.03 = 4°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For two thin lenses of focal lengths f₁ and f₂ and dispersive powers ω₁ and ω₂ placed in contact, the condition for the combination to be achromatic is",
+      "options": [
+        "ω₁ f₁ + ω₂ f₂ = 0",
+        "ω₁/f₁ − ω₂/f₂ = 0",
+        "ω₁ f₁ = ω₂ f₂",
+        "ω₁/f₁ + ω₂/f₂ = 0"
+      ],
+      "answer": 3,
+      "explanation": "The chromatic aberration is removed when the dispersive powers and focal lengths satisfy ω₁/f₁ + ω₂/f₂ = 0, which requires the two lenses to be of different materials and of opposite kinds.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 25 cm and dispersive power 0.02 is combined with a concave lens of dispersive power 0.05 to form an achromatic doublet. The focal length of the combination is",
+      "options": [
+        "about −41.7 cm",
+        "about +62.5 cm",
+        "about +16.7 cm",
+        "about +41.7 cm"
+      ],
+      "answer": 3,
+      "explanation": "f₂ = −f₁ω₂/ω₁ = −25 × 0.05/0.02 = −62.5 cm. Then 1/F = 1/25 − 1/62.5 = 0.04 − 0.016 = 0.024 cm⁻¹, so F ≈ +41.7 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An achromatic doublet of combined focal length 50 cm is made from a crown lens (ω = 0.02) and a flint lens (ω = 0.04). The focal lengths of the two lenses are",
+      "options": [
+        "+50 cm (convex crown) and −100 cm (concave flint)",
+        "+25 cm (convex crown) and −50 cm (concave flint)",
+        "+25 cm (convex crown) and −25 cm (concave flint)",
+        "+33.3 cm (convex crown) and −66.7 cm (concave flint)"
+      ],
+      "answer": 1,
+      "explanation": "For achromatism f₂ = −f₁ω₂/ω₁ = −2f₁. Also 1/F = 1/f₁ + 1/f₂ gives 1/50 = 1/f₁ − 1/(2f₁) = 1/(2f₁), so f₁ = +25 cm and f₂ = −50 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 40 cm (ω = 0.016) is combined with a concave lens of dispersive power 0.032 so that the doublet is achromatic. The focal length of the combination is",
+      "options": [
+        "−80 cm",
+        "40 cm",
+        "20 cm",
+        "80 cm"
+      ],
+      "answer": 3,
+      "explanation": "f₂ = −40 × 0.032/0.016 = −80 cm, and 1/F = 1/40 − 1/80 = 1/80, so F = +80 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A thin prism of angle 6° is made of glass for which n_v = 1.53, n_r = 1.51 and n_y = 1.52. The dispersive power of the glass is about",
+      "options": [
+        "0.038",
+        "0.020",
+        "0.019",
+        "0.076"
+      ],
+      "answer": 0,
+      "explanation": "ω = (n_v − n_r)/(n_y − 1) = (1.53 − 1.51)/(1.52 − 1) = 0.02/0.52 ≈ 0.038; the angle of the prism does not affect the dispersive power.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens has a focal length of 20 cm in yellow light and the dispersive power of its material is 0.02. The difference between its focal lengths for red and violet light (f_r − f_v) is about",
+      "options": [
+        "0.4 cm, and red light is focused nearer the lens",
+        "0.2 cm, and violet light is focused nearer the lens",
+        "4 cm, and violet light is focused nearer the lens",
+        "0.4 cm, and violet light is focused nearer the lens"
+      ],
+      "answer": 3,
+      "explanation": "Approximately f_r − f_v = ω f_y = 0.02 × 20 = 0.4 cm. Violet light has the larger refractive index, so its focal length is the smaller and it is focused nearer the lens.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For a plano-convex lens used to form the image of a distant object, the spherical aberration is least when",
+      "options": [
+        "the lens is turned with its axis inclined to the beam",
+        "the curved surface faces the incident parallel light",
+        "the lens is made of flint glass",
+        "the plane surface faces the incident parallel light"
+      ],
+      "answer": 1,
+      "explanation": "With the curved surface towards the incident parallel beam, the refraction is divided more favourably between the two surfaces and the marginal rays are brought closer to the paraxial focus.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An achromatic doublet of combined focal length 30 cm is made from a crown lens (ω = 0.02) and a flint lens (ω = 0.05). The focal lengths of the two lenses are",
+      "options": [
+        "+18 cm (convex crown) and −45 cm (concave flint)",
+        "+45 cm (convex crown) and −112.5 cm (concave flint)",
+        "+12 cm (convex crown) and −30 cm (concave flint)",
+        "+18 cm (convex crown) and +45 cm (convex flint)"
+      ],
+      "answer": 0,
+      "explanation": "For achromatism f₂ = −f₁ω₂/ω₁ = −2.5f₁, so 1/F = 1/f₁ + 1/f₂ = 1/f₁ − 1/(2.5f₁) = 0.6/f₁. With F = 30 cm this gives f₁ = 18 cm and f₂ = −45 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In an achromatic doublet a concave lens of flint glass is combined with a convex lens of crown glass because",
+      "options": [
+        "flint glass absorbs the violet colour completely",
+        "the concave lens increases the converging power of the combination",
+        "flint glass has a smaller refractive index than crown glass",
+        "flint glass has a much greater dispersive power, so a weak concave lens corrects the colour defect while reducing the converging power only slightly"
+      ],
+      "answer": 3,
+      "explanation": "Since ω for flint is large, only a small negative power is needed to cancel the dispersion of the crown lens, so the doublet still behaves as a converging lens of long focal length.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For a certain glass, n_v = 1.62, n_r = 1.60 and n_y = 1.61. The dispersive power of the glass is about",
+      "options": [
+        "0.020",
+        "0.016",
+        "0.066",
+        "0.033"
+      ],
+      "answer": 3,
+      "explanation": "ω = (1.62 − 1.60)/(1.61 − 1) = 0.02/0.61 ≈ 0.033.",
+      "difficulty": "hard"
+    }
+  ]
+}
