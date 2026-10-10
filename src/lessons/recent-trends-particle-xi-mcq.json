@@ -1,0 +1,289 @@
+{
+  "title": "Recent Trends in Physics — 40 MCQs",
+  "grade": "XI",
+  "chapters": [26],
+  "date": "2026-10-10",
+  "description": "Covers elementary particles and antiparticles, classification of particles, quarks and their charges, quark compositions of mesons and baryons, leptons, Big Bang theory, Hubble’s law and expansion of the universe, dark matter, black holes and gravitational waves.",
+  "questions": [
+    {
+      "q": "An antiparticle has the same mass as its corresponding particle but",
+      "options": ["opposite charge and opposite other quantum numbers", "the same charge", "zero charge", "opposite mass"],
+      "answer": 0,
+      "explanation": "Every particle has an antiparticle with identical mass but opposite electric charge and opposite values of other additive quantum numbers.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The antiparticle of the electron is the",
+      "options": ["proton", "positron", "neutron", "neutrino"],
+      "answer": 1,
+      "explanation": "The positron (e⁺) is the antiparticle of the electron.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Quarks are the fundamental constituents of",
+      "options": ["leptons", "hadrons", "photons", "gravitons"],
+      "answer": 1,
+      "explanation": "Hadrons (baryons and mesons) are composed of quarks.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The charge of an up quark is",
+      "options": ["+2/3 e", "−1/3 e", "+1/3 e", "−2/3 e"],
+      "answer": 0,
+      "explanation": "The up quark (u) carries electric charge +⅔ e.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The charge of a down quark is",
+      "options": ["+2/3 e", "−1/3 e", "+1 e", "0"],
+      "answer": 1,
+      "explanation": "The down quark (d) carries electric charge −⅓ e.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Leptons are particles that",
+      "options": ["participate in strong interactions", "do not participate in strong interactions", "are always composite", "have fractional charge"],
+      "answer": 1,
+      "explanation": "Leptons interact via electromagnetic, weak and gravitational forces but not via the strong force.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An example of a lepton is the",
+      "options": ["proton", "electron", "pion", "neutron"],
+      "answer": 1,
+      "explanation": "The electron is a fundamental lepton.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Hubble’s law states that the recessional velocity of a galaxy is proportional to its",
+      "options": ["mass", "distance", "luminosity", "age"],
+      "answer": 1,
+      "explanation": "v = H₀ d, where d is the distance of the galaxy from the observer.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Big Bang theory describes the",
+      "options": ["origin and evolution of the universe", "formation of the solar system only", "decay of elementary particles", "structure of the atom"],
+      "answer": 0,
+      "explanation": "The Big Bang model is the prevailing cosmological theory of the origin and expansion of the universe.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A black hole is a region of spacetime from which",
+      "options": ["light can easily escape", "nothing, not even light, can escape", "only neutrinos can escape", "matter is continuously emitted"],
+      "answer": 1,
+      "explanation": "The escape velocity at the event horizon exceeds the speed of light, so nothing can leave a black hole.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The quark composition of a proton is",
+      "options": ["uud", "udd", "uuu", "dds"],
+      "answer": 0,
+      "explanation": "A proton consists of two up quarks and one down quark (uud).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The quark composition of a neutron is",
+      "options": ["uud", "udd", "uus", "ddd"],
+      "answer": 1,
+      "explanation": "A neutron consists of one up quark and two down quarks (udd).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A meson is composed of",
+      "options": ["three quarks", "a quark and an antiquark", "two quarks", "four quarks"],
+      "answer": 1,
+      "explanation": "Mesons are quark-antiquark bound states.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A baryon is composed of",
+      "options": ["a quark and an antiquark", "three quarks", "two quarks", "one quark"],
+      "answer": 1,
+      "explanation": "Baryons (protons, neutrons, etc.) are three-quark states.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The positively charged pion π⁺ has the quark content",
+      "options": ["u d-bar", "u-bar d", "u u", "d d-bar"],
+      "answer": 0,
+      "explanation": "π⁺ = u d̄ (up quark and anti-down quark).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The six flavours of quarks are",
+      "options": ["up, down, strange, charm, top, bottom", "up, down, electron, muon, tau, neutrino", "proton, neutron, pion, kaon, lambda, sigma", "photon, gluon, W, Z, graviton, Higgs"],
+      "answer": 0,
+      "explanation": "The six quark flavours are u, d, s, c, t and b.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of the following is a lepton?",
+      "options": ["muon", "pion", "kaon", "proton"],
+      "answer": 0,
+      "explanation": "The muon (μ⁻) is a charged lepton.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "According to Hubble’s law, a galaxy at a distance of 100 Mpc with H₀ = 70 km s⁻¹ Mpc⁻¹ has a recessional velocity of",
+      "options": ["7000 km s⁻¹", "70 km s⁻¹", "700 km s⁻¹", "7 km s⁻¹"],
+      "answer": 0,
+      "explanation": "v = H₀ d = 70 × 100 = 7000 km s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Dark matter is called “dark” because it",
+      "options": ["emits no detectable electromagnetic radiation", "is black in colour", "absorbs all light", "exists only inside black holes"],
+      "answer": 0,
+      "explanation": "Dark matter does not interact electromagnetically and therefore neither emits nor absorbs light.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Gravitational waves are",
+      "options": ["ripples in spacetime produced by accelerating masses", "electromagnetic waves of very long wavelength", "sound waves in the interstellar medium", "streams of neutrinos"],
+      "answer": 0,
+      "explanation": "Accelerating masses (especially compact binaries) generate propagating distortions of spacetime called gravitational waves.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The event horizon of a black hole is the surface at which",
+      "options": ["escape velocity equals the speed of light", "temperature becomes absolute zero", "nuclear fusion stops", "matter is created"],
+      "answer": 0,
+      "explanation": "At the event horizon the escape velocity equals c; nothing can cross it outward.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The antiparticle of a proton is the",
+      "options": ["antiproton", "positron", "antineutron", "antiquark"],
+      "answer": 0,
+      "explanation": "The antiproton (p̄) has the same mass as the proton but opposite charge (−e).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Evidence for the expansion of the universe includes",
+      "options": ["redshift of distant galaxies", "blueshift of all stars", "decrease of CMB temperature only", "absence of dark matter"],
+      "answer": 0,
+      "explanation": "The cosmological redshift of galaxies is a direct observational consequence of the expansion of space.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The charge of a strange quark is",
+      "options": ["+2/3 e", "−1/3 e", "+1 e", "0"],
+      "answer": 1,
+      "explanation": "The strange quark (s) has electric charge −⅓ e.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Hadrons are classified into",
+      "options": ["baryons and mesons", "leptons and quarks", "bosons and fermions only", "photons and gluons"],
+      "answer": 0,
+      "explanation": "Hadrons that feel the strong force are subdivided into baryons (three quarks) and mesons (quark-antiquark).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A galaxy is observed to have a recessional velocity of 14000 km s⁻¹. Taking H₀ = 70 km s⁻¹ Mpc⁻¹ its distance is",
+      "options": ["200 Mpc", "100 Mpc", "70 Mpc", "140 Mpc"],
+      "answer": 0,
+      "explanation": "d = v / H₀ = 14000 / 70 = 200 Mpc.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The quark composition of the positive kaon K⁺ is",
+      "options": ["u s-bar", "u-bar s", "u d-bar", "d s-bar"],
+      "answer": 0,
+      "explanation": "K⁺ consists of an up quark and an anti-strange quark (u s̄).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The total electric charge of a uud combination is",
+      "options": ["+1 e", "0", "−1 e", "+2/3 e"],
+      "answer": 0,
+      "explanation": "Charge = (+2/3) + (+2/3) + (−1/3) = +1 e, which is the charge of the proton.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The total electric charge of a udd combination is",
+      "options": ["0", "+1 e", "−1 e", "+2/3 e"],
+      "answer": 0,
+      "explanation": "Charge = (+2/3) + (−1/3) + (−1/3) = 0, corresponding to the neutron.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Pair annihilation of an electron and a positron at rest produces two photons each of energy approximately",
+      "options": ["0.511 MeV", "1.022 MeV", "0.255 MeV", "2 MeV"],
+      "answer": 0,
+      "explanation": "Each photon carries the rest energy of one particle, 0.511 MeV.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The existence of dark matter is inferred mainly from",
+      "options": ["galactic rotation curves that remain flat at large radii", "direct detection of photons from it", "its emission of X-rays only", "its absorption of all starlight"],
+      "answer": 0,
+      "explanation": "Stars in the outer parts of galaxies orbit faster than can be explained by visible matter alone, indicating additional unseen mass.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Gravitational waves were first directly detected by LIGO from the merger of",
+      "options": ["two black holes", "two neutron stars only", "a black hole and a star", "two white dwarfs"],
+      "answer": 0,
+      "explanation": "The first detection (GW150914) was the merger of two stellar-mass black holes.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The Hubble constant H₀ has dimensions of",
+      "options": ["time⁻¹", "length⁻¹", "velocity", "acceleration"],
+      "answer": 0,
+      "explanation": "H₀ = v/d so its SI unit is s⁻¹ (or km s⁻¹ Mpc⁻¹).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A particle that is its own antiparticle is the",
+      "options": ["photon", "electron", "proton", "up quark"],
+      "answer": 0,
+      "explanation": "The photon (and also the Z⁰ and π⁰ under certain conditions) is identical to its antiparticle.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The Big Bang model predicts that the universe was once",
+      "options": ["hot and dense", "cold and empty", "static and infinite", "composed only of black holes"],
+      "answer": 0,
+      "explanation": "Extrapolation backward in time leads to a hot, dense early state from which the universe expanded.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The cosmic microwave background radiation is considered strong evidence for the Big Bang because it is",
+      "options": ["the cooled remnant of the early hot universe", "emitted by nearby stars", "produced by dark matter", "a local solar-system phenomenon"],
+      "answer": 0,
+      "explanation": "The nearly isotropic 2.7 K black-body radiation is the redshifted afterglow of the early hot phase.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A black hole of solar mass has a Schwarzschild radius of approximately",
+      "options": ["3 km", "3 m", "3000 km", "1 AU"],
+      "answer": 0,
+      "explanation": "R_s = 2GM/c² ≈ 3 km for M = M_☉.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The lepton number of an electron is +1. The lepton number of a positron is",
+      "options": ["−1", "+1", "0", "+2"],
+      "answer": 0,
+      "explanation": "Antiparticles carry the opposite lepton number; the positron has L = −1.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Which combination of quarks has a total charge of zero and can form a baryon?",
+      "options": ["udd", "uuu", "ddd", "uud"],
+      "answer": 0,
+      "explanation": "udd has charge 0 and is the neutron; uuu and ddd would have charges +2e and −e respectively and are not the ordinary neutron.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If the Hubble constant were larger, the estimated age of the universe would be",
+      "options": ["smaller", "larger", "unchanged", "infinite"],
+      "answer": 0,
+      "explanation": "In the simplest approximation the age is ∼1/H₀; a larger H₀ implies a younger universe.",
+      "difficulty": "hard"
+    }
+  ]
+}
