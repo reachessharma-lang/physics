@@ -1,0 +1,491 @@
+{
+  "title": "Refraction at Plane Surfaces — 40 MCQs",
+  "grade": "XI",
+  "chapters": [
+    15
+  ],
+  "date": "2026-10-10",
+  "description": "Laws of refraction, lateral shift through a glass slab, refractive index of a medium and its calculation from the angles of incidence and refraction, the relation between refractive indices of two media, total internal reflection and its condition, critical angle and its applications, and the working principle of an optical fibre.",
+  "questions": [
+    {
+      "q": "The refractive index of a medium is defined as the ratio of",
+      "options": [
+        "the speed of light in the medium to the speed of light in vacuum",
+        "the wavelength of light in the medium to that in vacuum",
+        "the speed of light in vacuum to the speed of light in the medium",
+        "the angle of incidence to the angle of refraction"
+      ],
+      "answer": 2,
+      "explanation": "The absolute refractive index is n = c/v, where c is the speed of light in vacuum and v is its speed in the medium; since v < c, n is always greater than 1.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The first law of refraction (Snell's law) states that for a given pair of media and a given colour of light,",
+      "options": [
+        "the sine of the angle of incidence bears a constant ratio to the sine of the angle of refraction",
+        "the angle of incidence is always equal to the angle of refraction",
+        "the ratio of the angle of incidence to the angle of refraction is constant",
+        "the product of the angle of incidence and the angle of refraction is constant"
+      ],
+      "answer": 0,
+      "explanation": "Snell's law gives sin i / sin r = n₂₁ = constant; the incident ray, the refracted ray and the normal all lie in the same plane.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The refractive index of water is 1.33. The speed of light in water is",
+      "options": [
+        "1.33 × 10⁸ m s⁻¹",
+        "2.26 × 10⁸ m s⁻¹",
+        "3.00 × 10⁸ m s⁻¹",
+        "4.00 × 10⁸ m s⁻¹"
+      ],
+      "answer": 1,
+      "explanation": "v = c/n = (3 × 10⁸)/1.33 ≈ 2.26 × 10⁸ m s⁻¹.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Total internal reflection of light can occur only when light travels",
+      "options": [
+        "along the normal to the surface between two media",
+        "from a rarer medium to a denser medium at any angle",
+        "from a denser medium to a rarer medium with the angle of incidence greater than the critical angle",
+        "from a denser to a rarer medium with the angle of incidence less than the critical angle"
+      ],
+      "answer": 2,
+      "explanation": "Total internal reflection requires the light to go from denser to rarer and the angle of incidence to exceed the critical angle, so that the refracted ray would have to bend more than 90°.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The critical angle of a medium of refractive index n with respect to air is given by",
+      "options": [
+        "cos C = 1/n",
+        "tan C = 1/n",
+        "sin C = n",
+        "sin C = 1/n"
+      ],
+      "answer": 3,
+      "explanation": "At the critical angle the angle of refraction is 90°, so n sin C = 1 × sin 90° = 1, giving sin C = 1/n.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The working principle of an optical fibre is",
+      "options": [
+        "dispersion of light inside the core",
+        "total internal reflection of light at the boundary between the core and the cladding",
+        "refraction of light at the boundary between the core and the cladding",
+        "diffraction of light by the cladding"
+      ],
+      "answer": 1,
+      "explanation": "Light entering the core strikes the core–cladding boundary at an angle greater than the critical angle and is totally internally reflected again and again, so it travels along the fibre with very little loss.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Lateral shift of a ray of light passing through a rectangular glass slab is the",
+      "options": [
+        "distance between the two refracting surfaces of the slab",
+        "angle between the incident ray and the emergent ray",
+        "distance travelled by the ray inside the slab",
+        "perpendicular distance between the direction of the incident ray and that of the emergent ray"
+      ],
+      "answer": 3,
+      "explanation": "The emergent ray is parallel to the incident ray but displaced sideways, and this perpendicular displacement is called the lateral shift.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A diamond sparkles brilliantly because it has",
+      "options": [
+        "a very large critical angle, so light is mostly refracted out",
+        "a very small critical angle, so light entering it suffers repeated total internal reflection",
+        "no critical angle at all",
+        "a refractive index less than that of water"
+      ],
+      "answer": 1,
+      "explanation": "The refractive index of diamond is about 2.42, so its critical angle is only about 24°; most rays striking the facets are totally internally reflected and the stone appears to sparkle.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When a ray of light passes obliquely from air into glass, it",
+      "options": [
+        "bends towards the normal because glass is optically denser than air",
+        "passes undeviated through the glass",
+        "is totally internally reflected at the surface",
+        "bends away from the normal because glass is optically denser than air"
+      ],
+      "answer": 0,
+      "explanation": "Going from a rarer to a denser medium the speed of light decreases, so by Snell's law the refracted ray bends towards the normal.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The refractive index of a medium is 1.5. The speed of light in that medium is",
+      "options": [
+        "2.0 × 10⁸ m s⁻¹",
+        "4.5 × 10⁸ m s⁻¹",
+        "3.0 × 10⁸ m s⁻¹",
+        "1.5 × 10⁸ m s⁻¹"
+      ],
+      "answer": 0,
+      "explanation": "v = c/n = (3 × 10⁸)/1.5 = 2.0 × 10⁸ m s⁻¹.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A ray of light passes from air into a medium of refractive index 1.5 at an angle of incidence of 30°. The angle of refraction is about",
+      "options": [
+        "35.3°",
+        "48.6°",
+        "30°",
+        "19.5°"
+      ],
+      "answer": 3,
+      "explanation": "By Snell's law sin r = sin 30°/1.5 = 0.5/1.5 = 0.333, so r ≈ 19.5°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A ray of light travelling in air makes an angle of incidence of 45° with the normal at a glass surface and is refracted at 30°. The refractive index of the glass is",
+      "options": [
+        "1.41",
+        "1.50",
+        "0.71",
+        "1.33"
+      ],
+      "answer": 0,
+      "explanation": "n = sin i/sin r = sin 45°/sin 30° = 0.7071/0.5 ≈ 1.41.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The refractive index of glass is 1.5 and that of water is 1.33. The refractive index of water with respect to glass is about",
+      "options": [
+        "1.99",
+        "1.13",
+        "0.89",
+        "1.33"
+      ],
+      "answer": 2,
+      "explanation": "n(water with respect to glass) = n_water/n_glass = 1.33/1.5 ≈ 0.89.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The refractive index of glass is 1.5 and that of water is 1.33. The refractive index of glass with respect to water is about",
+      "options": [
+        "1.33",
+        "1.13",
+        "1.99",
+        "0.89"
+      ],
+      "answer": 1,
+      "explanation": "n(glass with respect to water) = n_glass/n_water = 1.5/1.33 ≈ 1.13.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The critical angle for a glass–air interface when the refractive index of the glass is 1.5 is about",
+      "options": [
+        "41.8°",
+        "48.8°",
+        "24.4°",
+        "30.0°"
+      ],
+      "answer": 0,
+      "explanation": "sin C = 1/n = 1/1.5 = 0.667, so C ≈ 41.8°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A ray of light travelling in glass of refractive index 1.5 strikes the glass–air surface at an angle of incidence of 30°. The ray",
+      "options": [
+        "suffers total internal reflection",
+        "is refracted at about 19.5°",
+        "is refracted into air at about 48.6°",
+        "emerges at 30° without deviation"
+      ],
+      "answer": 2,
+      "explanation": "The critical angle for glass–air is about 41.8°, and 30° is smaller than this, so refraction occurs: sin r = 1.5 sin 30° = 0.75, giving r ≈ 48.6°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A ray of light is incident at 45° on one face of a rectangular glass slab of thickness 6 cm and refractive index 1.5. The lateral shift of the emergent ray is about",
+      "options": [
+        "6.00 cm",
+        "3.29 cm",
+        "1.97 cm",
+        "0.99 cm"
+      ],
+      "answer": 2,
+      "explanation": "r = sin⁻¹(sin 45°/1.5) ≈ 28.1°, so lateral shift = t sin(i − r)/cos r = 6 × sin 16.9°/cos 28.1° ≈ 6 × 0.291/0.882 ≈ 1.97 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A fish at a depth of 1.5 m below the surface of water (n = 1.33) is viewed from directly above. The apparent depth of the fish is about",
+      "options": [
+        "1.50 m",
+        "1.33 m",
+        "1.13 m",
+        "2.00 m"
+      ],
+      "answer": 2,
+      "explanation": "Apparent depth = real depth/n = 1.5/1.33 ≈ 1.13 m, because the rays from the fish bend away from the normal on emerging into air.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A medium has a critical angle of 30° with respect to air. The refractive index of the medium is",
+      "options": [
+        "1.5",
+        "0.5",
+        "1.41",
+        "2.0"
+      ],
+      "answer": 3,
+      "explanation": "sin C = 1/n, so n = 1/sin 30° = 1/0.5 = 2.0.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The refractive index of a medium in which light travels at 2.4 × 10⁸ m s⁻¹ is",
+      "options": [
+        "1.50",
+        "1.25",
+        "0.80",
+        "1.20"
+      ],
+      "answer": 1,
+      "explanation": "n = c/v = (3 × 10⁸)/(2.4 × 10⁸) = 1.25.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In an optical fibre the core has a refractive index of 1.50 and the cladding 1.45. The critical angle at the core–cladding boundary is about",
+      "options": [
+        "75.2°",
+        "88.6°",
+        "14.8°",
+        "45.0°"
+      ],
+      "answer": 0,
+      "explanation": "sin C = n_cladding/n_core = 1.45/1.50 = 0.967, so C ≈ 75.2°; rays striking the boundary at more than this angle are totally internally reflected along the fibre.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When a ray of light passes from glass (n = 1.5) into water (n = 1.33), the critical angle for this pair of media is about",
+      "options": [
+        "62.5°",
+        "90.0°",
+        "48.8°",
+        "41.8°"
+      ],
+      "answer": 0,
+      "explanation": "Here sin C = n_water/n_glass = 1.33/1.5 = 0.887, so C ≈ 62.5°; total internal reflection is possible because glass is denser than water.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Light of wavelength 600 nm in air enters glass of refractive index 1.5. The wavelength of this light inside the glass is",
+      "options": [
+        "400 nm",
+        "600 nm",
+        "300 nm",
+        "900 nm"
+      ],
+      "answer": 0,
+      "explanation": "The frequency does not change on refraction, so λ_glass = λ_air/n = 600/1.5 = 400 nm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of the following is NOT a consequence of the second law of refraction?",
+      "options": [
+        "The frequency of light remains unchanged on refraction",
+        "The incident ray, the refracted ray and the normal lie in the same plane",
+        "A ray striking a denser medium normally passes undeviated",
+        "Light bends towards the normal on entering a denser medium"
+      ],
+      "answer": 1,
+      "explanation": "The statement that the incident ray, the refracted ray and the normal are coplanar is part of the first law of refraction; Snell's law sin i/sin r = constant is the second law.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Total internal reflection can take place when light passes from",
+      "options": [
+        "air into glass, if the angle of incidence exceeds 41.8°",
+        "air into water, if the angle of incidence in air exceeds 48.8°",
+        "water into air, if the angle of incidence in water exceeds 48.8°",
+        "water into glass, at any angle of incidence"
+      ],
+      "answer": 2,
+      "explanation": "Total internal reflection needs a denser-to-rarer passage and an angle of incidence greater than the critical angle; for water–air this critical angle is sin⁻¹(1/1.33) ≈ 48.8°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A ray of light passes from air into a medium at an angle of incidence of 45° and is refracted at 30°. The speed of light in the medium is",
+      "options": [
+        "1.50 × 10⁸ m s⁻¹",
+        "3.00 × 10⁸ m s⁻¹",
+        "2.12 × 10⁷ m s⁻¹",
+        "2.12 × 10⁸ m s⁻¹"
+      ],
+      "answer": 3,
+      "explanation": "n = sin 45°/sin 30° = 1.414, so v = c/n = (3 × 10⁸)/1.414 ≈ 2.12 × 10⁸ m s⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light travelling in glass of refractive index 1.5 is incident on the glass–air boundary at 45°. The ray",
+      "options": [
+        "suffers total internal reflection, since 45° is greater than the critical angle 41.8°",
+        "emerges into air at about 70.5°",
+        "emerges into air at about 32.0°",
+        "emerges into air at about 45°"
+      ],
+      "answer": 0,
+      "explanation": "The critical angle for glass–air is sin⁻¹(1/1.5) ≈ 41.8°; the angle of incidence 45° exceeds it, so no refraction takes place and the ray is totally internally reflected back into the glass.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident at 45° on a rectangular glass slab of thickness 10 cm and refractive index 1.5. The lateral shift of the emergent ray is about",
+      "options": [
+        "10.0 cm",
+        "6.58 cm",
+        "1.97 cm",
+        "3.29 cm"
+      ],
+      "answer": 3,
+      "explanation": "r = sin⁻¹(sin 45°/1.5) ≈ 28.1°, so lateral shift = t sin(i − r)/cos r = 10 × sin 16.9°/cos 28.1° ≈ 10 × 0.291/0.882 ≈ 3.29 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light passes from air into a liquid so that the angle of refraction is half the angle of incidence, and the angle of incidence is 60°. The refractive index of the liquid is about",
+      "options": [
+        "2.00",
+        "1.50",
+        "1.41",
+        "1.73"
+      ],
+      "answer": 3,
+      "explanation": "Here r = 30°, so n = sin 60°/sin 30° = 0.866/0.5 ≈ 1.73.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Light travelling in air strikes the flat surface of a transparent medium at an angle of incidence of 40° and is refracted at 28.9°. The speed of light in the medium is about",
+      "options": [
+        "2.00 × 10⁸ m s⁻¹",
+        "1.98 × 10⁸ m s⁻¹",
+        "2.26 × 10⁸ m s⁻¹",
+        "2.65 × 10⁸ m s⁻¹"
+      ],
+      "answer": 2,
+      "explanation": "n = sin 40°/sin 28.9° ≈ 0.643/0.483 ≈ 1.33, so v = c/n = (3 × 10⁸)/1.33 ≈ 2.26 × 10⁸ m s⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A transparent medium has a refractive index of 2.0. A ray of light inside this medium strikes the boundary with air. The maximum angle of incidence for which the ray can still emerge into air is",
+      "options": [
+        "90°",
+        "45°",
+        "60°",
+        "30°"
+      ],
+      "answer": 3,
+      "explanation": "The maximum angle of incidence for emergence is the critical angle: sin C = 1/n = 1/2, so C = 30°; at larger angles the ray is totally internally reflected.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The refractive index of glass is 1.5 and that of water is 1.33. The critical angle for a ray travelling from glass into water is about",
+      "options": [
+        "48.8°",
+        "62.5°",
+        "41.8°",
+        "75.2°"
+      ],
+      "answer": 1,
+      "explanation": "sin C = n_water/n_glass = 1.33/1.5 = 0.887, so C ≈ 62.5°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident on one face of a rectangular glass slab of thickness t at an angle of incidence i. If the angle of refraction is r, the lateral shift of the emergent ray is given by",
+      "options": [
+        "t sin(i + r)/cos r",
+        "t sin(i − r)/sin r",
+        "t cos(i − r)/cos r",
+        "t sin(i − r)/cos r"
+      ],
+      "answer": 3,
+      "explanation": "The perpendicular separation of the incident and emergent rays is x = t sin(i − r)/cos r, which increases with the thickness of the slab, with i, and with the refractive index of the glass.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A coin lies at the bottom of a beaker of water of refractive index 1.33 and appears to be 1.35 m below the surface when viewed from directly above. The real depth of the water is about",
+      "options": [
+        "1.01 m",
+        "1.80 m",
+        "1.35 m",
+        "2.40 m"
+      ],
+      "answer": 1,
+      "explanation": "Apparent depth = real depth/n, so real depth = n × apparent depth = 1.33 × 1.35 ≈ 1.80 m.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The refractive index of a medium is 1.5 for red light and 1.52 for violet light. This shows that in this medium",
+      "options": [
+        "the speed of light is greater than in vacuum",
+        "both colours travel at the same speed",
+        "red light travels more slowly than violet light",
+        "violet light travels more slowly than red light"
+      ],
+      "answer": 3,
+      "explanation": "The refractive index is inversely proportional to the speed of light in the medium, so the larger refractive index for violet means violet travels more slowly; this difference causes dispersion.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light enters a medium of refractive index 1.6 from air. If the angle of incidence is 50°, the angle of refraction is about",
+      "options": [
+        "31.7°",
+        "35.3°",
+        "28.6°",
+        "41.8°"
+      ],
+      "answer": 2,
+      "explanation": "sin r = sin 50°/1.6 = 0.766/1.6 = 0.479, so r ≈ 28.6°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light travelling in a medium of refractive index 1.5 strikes the boundary with air at an angle of incidence of 20°. The angle of refraction in air is about",
+      "options": [
+        "41.8°",
+        "13.2°",
+        "30.9°",
+        "48.6°"
+      ],
+      "answer": 2,
+      "explanation": "The critical angle is 41.8°, so refraction occurs: sin r = n sin i = 1.5 sin 20° = 0.513, giving r ≈ 30.9°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In an optical fibre, light launched into the core is guided along it because the angle at which it strikes the core–cladding boundary is",
+      "options": [
+        "exactly equal to the critical angle, so the light travels along the boundary",
+        "greater than the critical angle, so total internal reflection occurs",
+        "less than the critical angle, so the light is refracted into the cladding",
+        "greater than 90°, so the light is reflected back to the source"
+      ],
+      "answer": 1,
+      "explanation": "The core has a higher refractive index than the cladding, so light striking the boundary at more than the critical angle is totally internally reflected and travels down the fibre with negligible loss.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident at the critical angle on the interface between a medium of refractive index 1.33 and air. The angle of refraction in air is",
+      "options": [
+        "90°",
+        "41.8°",
+        "48.8°",
+        "0°"
+      ],
+      "answer": 0,
+      "explanation": "By the definition of the critical angle the refracted ray grazes the surface, so the angle of refraction in the rarer medium is exactly 90°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A glass slab of refractive index 1.5 is immersed in a liquid of refractive index 1.2. A ray of light in the glass striking the glass–liquid boundary can be totally internally reflected. The critical angle for this boundary is",
+      "options": [
+        "41.8°",
+        "53.1°",
+        "48.8°",
+        "36.9°"
+      ],
+      "answer": 1,
+      "explanation": "sin C = n_liquid/n_glass = 1.2/1.5 = 0.8, so C = sin⁻¹(0.8) ≈ 53.1°; total internal reflection occurs only if the angle of incidence in the glass exceeds this value.",
+      "difficulty": "hard"
+    }
+  ]
+}
