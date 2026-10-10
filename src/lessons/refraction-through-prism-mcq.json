@@ -1,0 +1,491 @@
+{
+  "title": "Refraction through Prisms — 40 MCQs",
+  "grade": "XI",
+  "chapters": [
+    16
+  ],
+  "date": "2026-10-10",
+  "description": "The minimum deviation condition, the relation between the angle of the prism, the angle of minimum deviation and the refractive index, calculation of the refractive index of a prism, and deviation in a small-angle prism with its practical importance.",
+  "questions": [
+    {
+      "q": "For a prism, the angle of the prism A, the angle of incidence i, the angle of emergence e and the angle of deviation δ are related by",
+      "options": [
+        "A + δ = i − e",
+        "A = i + e + δ",
+        "δ = i + e + A",
+        "A + δ = i + e"
+      ],
+      "answer": 3,
+      "explanation": "In quadrilateral form the four angles give A + δ = i + e, so the deviation depends on the angles of incidence and emergence as well as on the angle of the prism.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In the refraction of light through a prism, if r₁ and r₂ are the angles of refraction at the two faces, then",
+      "options": [
+        "r₁ + r₂ = 2A",
+        "r₁ − r₂ = A",
+        "r₁ + r₂ = A",
+        "r₁ + r₂ = δ"
+      ],
+      "answer": 2,
+      "explanation": "The two refracted rays inside the prism lie in a quadrilateral whose angles give r₁ + r₂ = A, the angle of the prism.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "At the position of minimum deviation, the path of the ray through a prism is such that",
+      "options": [
+        "i = e and r₁ = r₂ = A",
+        "r₁ = A and r₂ = 0",
+        "i is much greater than e",
+        "i = e and r₁ = r₂ = A/2"
+      ],
+      "answer": 3,
+      "explanation": "At minimum deviation the ray passes symmetrically through the prism, so the angles of incidence and emergence are equal and each angle of refraction is half the prism angle.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The refractive index of the material of a prism, in terms of the angle of the prism A and the angle of minimum deviation δ_m, is given by",
+      "options": [
+        "n = sin((A − δ_m)/2)/sin(A/2)",
+        "n = sin((A + δ_m)/2)/sin(A/2)",
+        "n = sin(A/2)/sin((A + δ_m)/2)",
+        "n = sin(A)/sin(δ_m)"
+      ],
+      "answer": 1,
+      "explanation": "At minimum deviation i = (A + δ_m)/2 and r = A/2, so Snell's law gives n = sin((A + δ_m)/2)/sin(A/2).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The angle of deviation produced by a prism is the angle between",
+      "options": [
+        "the incident ray and the normal at the first face",
+        "the direction of the incident ray and the direction of the emergent ray",
+        "the two refracting faces of the prism",
+        "the emergent ray and the base of the prism"
+      ],
+      "answer": 1,
+      "explanation": "The emergent ray is bent away from the original direction of the incident ray, and the angle between these two directions is the angle of deviation.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a thin prism of small refracting angle A and refractive index n, the angle of deviation is given by",
+      "options": [
+        "δ = nA",
+        "δ = (n − 1)A",
+        "δ = (n + 1)A",
+        "δ = (n − 1)/A"
+      ],
+      "answer": 1,
+      "explanation": "For a thin prism the angles are so small that Snell's law may be written in terms of the angles themselves, which gives δ = (n − 1)A.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a thin prism of a given material, the angle of deviation produced is",
+      "options": [
+        "proportional to the square of the angle of the prism",
+        "inversely proportional to the angle of the prism",
+        "independent of the angle of the prism",
+        "directly proportional to the angle of the prism"
+      ],
+      "answer": 3,
+      "explanation": "Since δ = (n − 1)A for a thin prism, the deviation is directly proportional to A and is independent of the angle of incidence.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When light passes through a glass prism it is deviated towards the base because",
+      "options": [
+        "total internal reflection occurs inside the prism",
+        "the two faces of the prism are parallel to each other",
+        "it bends away from the normal on entering and towards the normal on leaving",
+        "it bends towards the normal on entering and away from the normal on leaving, both refractions turning the ray towards the base"
+      ],
+      "answer": 3,
+      "explanation": "Both refractions at the two inclined faces bend the ray in the same sense, i.e. towards the thicker part or base of the prism.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "As the angle of incidence on a prism is gradually increased from a small value, the angle of deviation",
+      "options": [
+        "first decreases, becomes minimum, and then increases",
+        "remains constant at all angles of incidence",
+        "goes on decreasing throughout",
+        "goes on increasing throughout"
+      ],
+      "answer": 0,
+      "explanation": "The i–δ curve of a prism is a curve with a single minimum, and the deviation is least when the ray passes symmetrically through the prism.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The deviation produced by a prism depends on",
+      "options": [
+        "only the angle of incidence",
+        "only the refractive index of the material",
+        "the angle of the prism, the refractive index of its material and the angle of incidence",
+        "only the angle of the prism"
+      ],
+      "answer": 2,
+      "explanation": "Since δ = i + e − A, and e depends on i, A and n, the deviation is a function of all three of these quantities.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A prism has an angle of 60° and is made of glass of refractive index 1.5. The angle of minimum deviation is about",
+      "options": [
+        "30.0°",
+        "37.2°",
+        "41.8°",
+        "48.6°"
+      ],
+      "answer": 1,
+      "explanation": "sin((A + δ_m)/2) = n sin(A/2) = 1.5 × sin 30° = 0.75, so (A + δ_m)/2 ≈ 48.6° and δ_m ≈ 37.2°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 60° gives a minimum deviation of 30°. The refractive index of its material is",
+      "options": [
+        "1.41",
+        "1.50",
+        "1.33",
+        "1.73"
+      ],
+      "answer": 0,
+      "explanation": "n = sin((60° + 30°)/2)/sin 30° = sin 45°/sin 30° = 0.7071/0.5 ≈ 1.41.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 60° gives a minimum deviation of 60°. The refractive index of its material is",
+      "options": [
+        "1.73",
+        "1.50",
+        "2.00",
+        "1.41"
+      ],
+      "answer": 0,
+      "explanation": "n = sin((60° + 60°)/2)/sin 30° = sin 60°/sin 30° = 0.866/0.5 ≈ 1.73.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 60° is made of glass of refractive index 1.6. The angle of minimum deviation is about",
+      "options": [
+        "37.2°",
+        "53.1°",
+        "46.3°",
+        "30.0°"
+      ],
+      "answer": 2,
+      "explanation": "sin((A + δ_m)/2) = 1.6 sin 30° = 0.8, so (A + δ_m)/2 ≈ 53.1° and δ_m ≈ 46.3°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 72° is made of glass of refractive index 1.5. The angle of minimum deviation is about",
+      "options": [
+        "41.8°",
+        "51.7°",
+        "37.2°",
+        "62.5°"
+      ],
+      "answer": 1,
+      "explanation": "sin((A + δ_m)/2) = 1.5 sin 36° = 0.8817, so (A + δ_m)/2 ≈ 61.8° and δ_m ≈ 51.7°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 30° is made of glass of refractive index 1.5. The angle of minimum deviation is about",
+      "options": [
+        "18.6°",
+        "15.7°",
+        "23.4°",
+        "30.0°"
+      ],
+      "answer": 1,
+      "explanation": "sin((A + δ_m)/2) = 1.5 sin 15° = 0.388, so (A + δ_m)/2 ≈ 22.8° and δ_m ≈ 15.7°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 40° is made of glass of refractive index 1.5. The angle of minimum deviation is about",
+      "options": [
+        "21.7°",
+        "37.2°",
+        "30.0°",
+        "15.7°"
+      ],
+      "answer": 0,
+      "explanation": "sin((A + δ_m)/2) = 1.5 sin 20° = 0.513, so (A + δ_m)/2 ≈ 30.9° and δ_m ≈ 21.7°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin prism has a refracting angle of 5° and is made of glass of refractive index 1.5. The deviation produced is",
+      "options": [
+        "7.5°",
+        "5.0°",
+        "1.5°",
+        "2.5°"
+      ],
+      "answer": 3,
+      "explanation": "For a thin prism δ = (n − 1)A = (1.5 − 1) × 5° = 2.5°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin prism has a refracting angle of 10° and is made of glass of refractive index 1.5. The deviation produced is",
+      "options": [
+        "2.5°",
+        "5°",
+        "10°",
+        "15°"
+      ],
+      "answer": 1,
+      "explanation": "δ = (n − 1)A = 0.5 × 10° = 5°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A thin prism of angle 8° is made of glass of refractive index 1.5. The deviation produced is",
+      "options": [
+        "4°",
+        "2°",
+        "8°",
+        "12°"
+      ],
+      "answer": 0,
+      "explanation": "δ = (n − 1)A = (1.5 − 1) × 8° = 4°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 60° gives a minimum deviation of 45°. The refractive index of the material is about",
+      "options": [
+        "1.73",
+        "1.50",
+        "1.59",
+        "1.41"
+      ],
+      "answer": 2,
+      "explanation": "n = sin((60° + 45°)/2)/sin 30° = sin 52.5°/sin 30° = 0.7934/0.5 ≈ 1.59.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 60° gives a minimum deviation of 40°. The refractive index of the material is about",
+      "options": [
+        "1.41",
+        "1.53",
+        "1.33",
+        "1.73"
+      ],
+      "answer": 1,
+      "explanation": "n = sin((60° + 40°)/2)/sin 30° = sin 50°/sin 30° = 0.766/0.5 ≈ 1.53.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 72° gives a minimum deviation of 36°. The refractive index of the material is about",
+      "options": [
+        "1.62",
+        "1.38",
+        "1.73",
+        "1.50"
+      ],
+      "answer": 1,
+      "explanation": "n = sin((72° + 36°)/2)/sin 36° = sin 54°/sin 36° = 0.809/0.588 ≈ 1.38.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 60° and refractive index 1.5 is set at minimum deviation. The angle of incidence is about",
+      "options": [
+        "48.6°",
+        "30.0°",
+        "37.2°",
+        "41.8°"
+      ],
+      "answer": 0,
+      "explanation": "At minimum deviation i = (A + δ_m)/2. With δ_m ≈ 37.2°, i ≈ (60° + 37.2°)/2 ≈ 48.6°.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A prism of angle 30° gives a minimum deviation of 30°. The refractive index of its material is about",
+      "options": [
+        "1.50",
+        "1.41",
+        "1.73",
+        "1.93"
+      ],
+      "answer": 3,
+      "explanation": "n = sin((30° + 30°)/2)/sin 15° = sin 30°/sin 15° = 0.5/0.2588 ≈ 1.93.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A ray of light is incident at 45° on a prism of angle 60° and refractive index 1.5. The angle of deviation is about",
+      "options": [
+        "37.4°",
+        "45.0°",
+        "30.0°",
+        "48.6°"
+      ],
+      "answer": 0,
+      "explanation": "r₁ = sin⁻¹(sin 45°/1.5) ≈ 28.1°, so r₂ = 60° − 28.1° = 31.9° and e = sin⁻¹(1.5 sin 31.9°) ≈ 52.4°. Hence δ = i + e − A ≈ 45° + 52.4° − 60° ≈ 37.4°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident at 40° on a prism of angle 60° and refractive index 1.5. The angle of deviation is about",
+      "options": [
+        "30.0°",
+        "45.0°",
+        "37.2°",
+        "38.5°"
+      ],
+      "answer": 3,
+      "explanation": "r₁ = sin⁻¹(sin 40°/1.5) ≈ 25.4°, r₂ = 60° − 25.4° = 34.6°, e = sin⁻¹(1.5 sin 34.6°) ≈ 58.5°. So δ = 40° + 58.5° − 60° ≈ 38.5°, slightly greater than δ_m = 37.2°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident at 35° on a prism of angle 60° and refractive index 1.5. The angle of deviation is about",
+      "options": [
+        "41.0°",
+        "48.6°",
+        "30.0°",
+        "37.2°"
+      ],
+      "answer": 0,
+      "explanation": "r₁ = sin⁻¹(sin 35°/1.5) ≈ 22.5°, r₂ = 37.5°, e = sin⁻¹(1.5 sin 37.5°) ≈ 66.0°. Hence δ = 35° + 66.0° − 60° ≈ 41.0°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident at 30° on a prism of angle 60° and refractive index 1.5. The angle of deviation is about",
+      "options": [
+        "30.0°",
+        "37.2°",
+        "47.1°",
+        "60.0°"
+      ],
+      "answer": 2,
+      "explanation": "r₁ = sin⁻¹(sin 30°/1.5) ≈ 19.5°, r₂ = 60° − 19.5° = 40.5°, e = sin⁻¹(1.5 sin 40.5°) ≈ 77.1°. So δ = 30° + 77.1° − 60° ≈ 47.1°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident at 45° on a prism of angle 60° and refractive index 1.5. The angle of emergence of the ray is about",
+      "options": [
+        "28.1°",
+        "52.4°",
+        "60.0°",
+        "45.0°"
+      ],
+      "answer": 1,
+      "explanation": "r₁ = sin⁻¹(sin 45°/1.5) ≈ 28.1°, so r₂ = 60° − 28.1° = 31.9°; then sin e = 1.5 sin 31.9° = 0.793 and e ≈ 52.4°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A prism of angle 60° is made of glass of refractive index 1.5. The angle of incidence for which the emergent ray just grazes the second face is about",
+      "options": [
+        "18.2°",
+        "41.8°",
+        "48.6°",
+        "27.9°"
+      ],
+      "answer": 3,
+      "explanation": "For grazing emergence r₂ = C = sin⁻¹(1/1.5) ≈ 41.8°, so r₁ = 60° − 41.8° = 18.2° and sin i = 1.5 sin 18.2° = 0.468, giving i ≈ 27.9°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a prism experiment the angle of the prism is 60° and, at minimum deviation, the angle of incidence is found to be 48.6°. The angle of minimum deviation is",
+      "options": [
+        "48.6°",
+        "41.8°",
+        "30.0°",
+        "37.2°"
+      ],
+      "answer": 3,
+      "explanation": "At minimum deviation δ_m = 2i − A = 2 × 48.6° − 60° = 37.2°, which agrees with n = sin 48.6°/sin 30° ≈ 1.5.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A prism of angle 60° is made of glass of refractive index 1.33. The angle of minimum deviation is about",
+      "options": [
+        "23.4°",
+        "48.8°",
+        "37.2°",
+        "30.0°"
+      ],
+      "answer": 0,
+      "explanation": "sin((A + δ_m)/2) = 1.33 sin 30° = 0.665, so (A + δ_m)/2 ≈ 41.7° and δ_m ≈ 23.4°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A prism of angle 60° is made of glass of refractive index 1.52. The angle of minimum deviation is about",
+      "options": [
+        "38.9°",
+        "37.2°",
+        "46.3°",
+        "51.7°"
+      ],
+      "answer": 0,
+      "explanation": "sin((A + δ_m)/2) = 1.52 sin 30° = 0.76, so (A + δ_m)/2 ≈ 49.5° and δ_m ≈ 38.9°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A thin prism of angle 5° produces a deviation of 2°. The refractive index of the material of the prism is",
+      "options": [
+        "1.5",
+        "1.6",
+        "1.4",
+        "1.2"
+      ],
+      "answer": 2,
+      "explanation": "For a thin prism δ = (n − 1)A, so n = 1 + δ/A = 1 + 2/5 = 1.4.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident at 40° on a prism of angle 60° and refractive index 1.5 and suffers a deviation of about 38.5°. By the principle of reversibility of light, the same deviation occurs for an angle of incidence of",
+      "options": [
+        "48.6°",
+        "40.0°",
+        "58.5°",
+        "30.0°"
+      ],
+      "answer": 2,
+      "explanation": "Since δ = i + e − A, the deviation is unchanged if i and e are interchanged; here i + e = 60° + 38.5° = 98.5°, so when i = 40° the emergence angle is 58.5°, and the deviation is the same for i = 58.5°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For a thin prism the deviation is found to be almost independent of the angle of incidence because",
+      "options": [
+        "the emergent ray is totally internally reflected",
+        "the ray passes through the prism without any refraction",
+        "the angles involved are so small that sin θ ≈ θ, so the deviation reduces to δ = (n − 1)A",
+        "the refractive index of the prism becomes equal to 1"
+      ],
+      "answer": 2,
+      "explanation": "When i, e and A are all small, Snell's law gives the angles directly, and the deviation reduces to δ = (n − 1)A, which contains neither i nor e.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Small-angle prisms are of great practical importance because they",
+      "options": [
+        "produce total internal reflection for all angles of incidence",
+        "magnify distant objects by themselves",
+        "deviate a beam of light through a small controlled angle and are used in instruments such as prism binoculars and periscopes",
+        "disperse white light into a complete spectrum"
+      ],
+      "answer": 2,
+      "explanation": "A thin prism of small angle gives a small, calculable deviation δ = (n − 1)A, and such prisms are used to turn beams through a fixed angle in optical instruments.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For a ray of light to just emerge from the second face of a prism (grazing emergence), the angle of refraction r₂ at the second face must be equal to",
+      "options": [
+        "zero",
+        "the angle of the prism A",
+        "the critical angle of the prism material with respect to air",
+        "half the angle of the prism A/2"
+      ],
+      "answer": 2,
+      "explanation": "At grazing emergence the refracted ray at the second face leaves along the surface, so the angle of refraction there is 90° and r₂ equals the critical angle C = sin⁻¹(1/n).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A ray of light is incident normally on one face of a prism of angle 30° and refractive index 1.5. The deviation produced is about",
+      "options": [
+        "30.0°",
+        "48.6°",
+        "15.7°",
+        "18.6°"
+      ],
+      "answer": 3,
+      "explanation": "For normal incidence i = 0 and r₁ = 0, so r₂ = A = 30°; then sin e = 1.5 sin 30° = 0.75 and e ≈ 48.6°. Hence δ = i + e − A = 0 + 48.6° − 30° ≈ 18.6°.",
+      "difficulty": "hard"
+    }
+  ]
+}
