@@ -1,44 +1,491 @@
 {
-  "title": "Quantity of Heat — MCQs",
+  "title": "Quantity of Heat — 40 MCQs",
   "grade": "XI",
-  "chapters": [11],
-  "date": "2026-09-24",
-  "description": "Newton's law of cooling, water equivalent, latent heat and change of phase.",
+  "chapters": [
+    11
+  ],
+  "date": "2026-10-10",
+  "description": "Heat capacity and specific heat capacity with their applications, Newton's law of cooling, the principle of calorimetry, latent heat and the heat–temperature graph, measurement of the specific latent heat of fusion, the effect of external pressure on boiling and melting points, evaporation versus boiling, and the triple point.",
   "questions": [
     {
-      "q": "Newton's law of cooling is valid when:",
-      "options": ["The temperature difference is more than 30 °C", "The body is perfectly black", "The temperature difference is small (about 20 °C or less)", "Convection is the main mode of heat loss"],
+      "q": "The SI unit of heat capacity of a body is",
+      "options": [
+        "J kg⁻¹",
+        "J kg⁻¹ K⁻¹",
+        "J K⁻¹",
+        "J K"
+      ],
       "answer": 2,
-      "explanation": "The law holds only for small temperature differences between the body and its surroundings, when the rate of heat loss is proportional to the temperature difference.",
+      "explanation": "Heat capacity C = Q/Δθ, so its unit is joule per kelvin (J K⁻¹); it depends on the mass and material of the body.",
       "difficulty": "easy"
     },
     {
-      "q": "In the method of mixture, the heat capacity of the calorimeter is usually expressed as its:",
-      "options": ["Specific heat", "Water equivalent", "Thermal conductivity", "Emissivity"],
-      "answer": 1,
-      "explanation": "The water equivalent W = m_cal c_cal / c_w is the mass of water that absorbs the same heat as the calorimeter for the same temperature rise.",
+      "q": "The specific heat capacity of a substance is the quantity of heat required to raise the temperature of",
+      "options": [
+        "any mass of the substance through 1 K",
+        "unit mass of the substance through 1 °C only at 0 °C",
+        "unit volume of the substance through 1 K",
+        "unit mass of the substance through 1 K"
+      ],
+      "answer": 3,
+      "explanation": "Specific heat capacity is defined per unit mass for a rise of one degree (1 K = 1 °C), and its SI unit is J kg⁻¹ K⁻¹.",
       "difficulty": "easy"
     },
     {
-      "q": "While ice is melting at 0 °C, the heat supplied is used to:",
-      "options": ["Increase the kinetic energy of the molecules", "Raise the temperature", "Overcome the intermolecular forces", "Increase the pressure"],
+      "q": "Water is used as a coolant in car radiators because it has",
+      "options": [
+        "a very low density, so it flows easily",
+        "a low specific heat capacity, so it heats up very quickly",
+        "a very high boiling point, so it never boils",
+        "a high specific heat capacity, so it absorbs a large quantity of heat with only a small rise in temperature"
+      ],
+      "answer": 3,
+      "explanation": "Water has a specific heat capacity of about 4200 J kg⁻¹ K⁻¹, so a large quantity of heat is carried away by a small rise in its temperature.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Newton's law of cooling states that the rate of loss of heat by a body is directly proportional to",
+      "options": [
+        "the excess of temperature of the body over that of its surroundings",
+        "the square of the excess of temperature over the surroundings",
+        "the temperature of the body alone",
+        "the mass of the body"
+      ],
+      "answer": 0,
+      "explanation": "The rate of loss of heat is proportional to the temperature difference between the body and its surroundings, so a hot body cools fast at first and then more slowly.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The principle of calorimetry states that, in an isolated system,",
+      "options": [
+        "heat lost by the hot body is greater than the heat gained by the cold body",
+        "the final temperature is always the average of the two initial temperatures",
+        "heat lost by the hot body is equal to the heat gained by the cold body",
+        "heat lost by the hot body is equal to the mass of the cold body"
+      ],
       "answer": 2,
-      "explanation": "During a change of phase the temperature (and hence the average kinetic energy) stays constant; the latent heat increases the potential energy by working against intermolecular forces.",
+      "explanation": "For an isolated system, energy conservation requires heat lost = heat gained, and this is the basis of all calorimetric measurements.",
       "difficulty": "easy"
     },
     {
-      "q": "The SI unit of specific latent heat is:",
-      "options": ["J", "J kg⁻¹", "J K⁻¹", "J kg⁻¹ K⁻¹"],
+      "q": "The specific latent heat of fusion of ice is",
+      "options": [
+        "3.36 × 10³ J kg⁻¹",
+        "3.36 × 10⁵ J kg⁻¹",
+        "2.26 × 10⁶ J kg⁻¹",
+        "4.2 × 10³ J kg⁻¹"
+      ],
       "answer": 1,
-      "explanation": "Specific latent heat is heat per unit mass, L = Q/m, so its unit is J kg⁻¹. There is no temperature term because the temperature does not change.",
+      "explanation": "Ice at 0 °C requires 3.36 × 10⁵ J of heat to melt each kilogram of it into water at 0 °C.",
       "difficulty": "easy"
     },
     {
-      "q": "When steam condenses to water at 100 °C, it:",
-      "options": ["Absorbs latent heat", "Releases latent heat", "Rises in temperature", "Decreases in density"],
-      "answer": 1,
-      "explanation": "Condensation is the reverse of vaporization, so the latent heat of vaporization is released. This is why a steam burn is more severe than a burn from water at 100 °C.",
+      "q": "While a substance is changing its state at its melting or boiling point, the heat supplied is used in",
+      "options": [
+        "raising the temperature of the substance",
+        "increasing the volume of the substance only",
+        "changing the state without changing the temperature",
+        "increasing the specific heat capacity of the substance"
+      ],
+      "answer": 2,
+      "explanation": "During melting or boiling the supplied heat (latent heat) breaks the bonds between the molecules, so the temperature remains constant; the heat–temperature graph is flat here.",
       "difficulty": "easy"
+    },
+    {
+      "q": "Which of the following statements about evaporation and boiling is correct?",
+      "options": [
+        "Evaporation requires a supply of heat from an external source, while boiling does not",
+        "Evaporation takes place only at the boiling point",
+        "Evaporation takes place at all temperatures, whereas boiling takes place only at a definite temperature",
+        "Boiling takes place at all temperatures"
+      ],
+      "answer": 2,
+      "explanation": "Evaporation occurs from the free surface at any temperature, while boiling occurs throughout the liquid at a fixed temperature that depends on the external pressure.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The triple point of a substance is the",
+      "options": [
+        "unique temperature and pressure at which its solid, liquid and vapour phases coexist in equilibrium",
+        "temperature at which its solid and liquid phases alone coexist",
+        "temperature at which its liquid and vapour phases alone coexist at 1 atm",
+        "highest temperature at which its liquid phase can exist"
+      ],
+      "answer": 0,
+      "explanation": "At the triple point the three phases coexist in equilibrium; for water it occurs at 273.16 K and 611.2 Pa.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The specific latent heat of vaporisation of water is",
+      "options": [
+        "4.2 × 10³ J kg⁻¹",
+        "2.26 × 10³ J kg⁻¹",
+        "2.26 × 10⁶ J kg⁻¹",
+        "3.36 × 10⁵ J kg⁻¹"
+      ],
+      "answer": 2,
+      "explanation": "Each kilogram of water at 100 °C needs 2.26 × 10⁶ J of heat to be converted into steam at 100 °C.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The quantity of heat required to raise the temperature of 2 kg of water through 50 K is (c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "8.4 × 10⁵ J",
+        "4.2 × 10⁵ J",
+        "2.1 × 10⁵ J",
+        "1.68 × 10⁵ J"
+      ],
+      "answer": 1,
+      "explanation": "Q = mcΔθ = 2 × 4200 × 50 = 4.2 × 10⁵ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The heat capacity of 0.5 kg of water is (c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "840 J K⁻¹",
+        "4200 J K⁻¹",
+        "8400 J K⁻¹",
+        "2100 J K⁻¹"
+      ],
+      "answer": 3,
+      "explanation": "Heat capacity C = mc = 0.5 × 4200 = 2100 J K⁻¹, i.e. 2100 J of heat raises its temperature by 1 K.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "100 g of water at 80 °C is mixed with 200 g of water at 20 °C. The temperature of the mixture is",
+      "options": [
+        "30 °C",
+        "40 °C",
+        "60 °C",
+        "50 °C"
+      ],
+      "answer": 1,
+      "explanation": "Heat lost = heat gained: 100(80 − θ) = 200(θ − 20), so 8000 − 100θ = 200θ − 4000 and θ = 12000/300 = 40 °C.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The quantity of heat required to melt 0.5 kg of ice at 0 °C completely into water at 0 °C is (L_f = 3.36 × 10⁵ J kg⁻¹)",
+      "options": [
+        "1.68 × 10⁵ J",
+        "8.4 × 10⁴ J",
+        "3.36 × 10⁴ J",
+        "3.36 × 10⁵ J"
+      ],
+      "answer": 0,
+      "explanation": "Q = mL_f = 0.5 × 3.36 × 10⁵ = 1.68 × 10⁵ J; note that no heat is used in raising the temperature.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The quantity of heat required to convert 2 kg of water at 100 °C completely into steam at 100 °C is (L_v = 2.26 × 10⁶ J kg⁻¹)",
+      "options": [
+        "8.4 × 10⁵ J",
+        "4.52 × 10⁶ J",
+        "2.26 × 10⁶ J",
+        "1.13 × 10⁶ J"
+      ],
+      "answer": 1,
+      "explanation": "Q = mL_v = 2 × 2.26 × 10⁶ = 4.52 × 10⁶ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The heat required to melt 50 g of ice at 0 °C into water at 0 °C is (L_f = 3.36 × 10⁵ J kg⁻¹)",
+      "options": [
+        "1.68 × 10⁴ J",
+        "3.36 × 10³ J",
+        "8.4 × 10³ J",
+        "1.68 × 10⁵ J"
+      ],
+      "answer": 0,
+      "explanation": "Q = mL_f = 0.05 × 3.36 × 10⁵ = 1.68 × 10⁴ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A solid of mass 0.2 kg heated to 100 °C is dropped into 0.1 kg of water at 20 °C in a calorimeter of negligible heat capacity. If the final temperature is 25 °C, the specific heat capacity of the solid is",
+      "options": [
+        "420 J kg⁻¹ K⁻¹",
+        "70 J kg⁻¹ K⁻¹",
+        "280 J kg⁻¹ K⁻¹",
+        "140 J kg⁻¹ K⁻¹"
+      ],
+      "answer": 3,
+      "explanation": "Heat gained by water = 0.1 × 4200 × 5 = 2100 J. Heat lost by the solid = 0.2 × c × 75 = 15c, so 15c = 2100 and c = 140 J kg⁻¹ K⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A body cools from 60 °C to 50 °C in 10 minutes when the temperature of the surroundings is 25 °C. The time it takes to cool from 50 °C to 40 °C is",
+      "options": [
+        "15 minutes",
+        "10 minutes",
+        "12 minutes",
+        "20 minutes"
+      ],
+      "answer": 0,
+      "explanation": "By Newton's law of cooling the rate ∝ (mean temperature − surroundings). First stage: mean 55 °C, excess 30 °C, rate 1 °C min⁻¹. Second stage: mean 45 °C, excess 20 °C, rate 2/3 °C min⁻¹, so time = 10/(2/3) = 15 minutes.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The quantity of heat required to raise the temperature of 0.5 kg of cooking oil from 20 °C to 60 °C is (c = 2100 J kg⁻¹ K⁻¹)",
+      "options": [
+        "1.68 × 10⁴ J",
+        "8.4 × 10⁴ J",
+        "4.2 × 10⁴ J",
+        "2.1 × 10⁴ J"
+      ],
+      "answer": 2,
+      "explanation": "Q = mcΔθ = 0.5 × 2100 × 40 = 4.2 × 10⁴ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The heat required to raise the temperature of 0.25 kg of water from 25 °C to 75 °C is (c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "2.63 × 10⁴ J",
+        "5.25 × 10⁴ J",
+        "1.05 × 10⁴ J",
+        "1.05 × 10⁵ J"
+      ],
+      "answer": 1,
+      "explanation": "Q = mcΔθ = 0.25 × 4200 × 50 = 5.25 × 10⁴ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The quantity of heat required to melt 0.25 kg of ice at 0 °C is (L_f = 3.36 × 10⁵ J kg⁻¹)",
+      "options": [
+        "1.68 × 10⁵ J",
+        "4.2 × 10⁴ J",
+        "3.36 × 10⁴ J",
+        "8.4 × 10⁴ J"
+      ],
+      "answer": 3,
+      "explanation": "Q = mL_f = 0.25 × 3.36 × 10⁵ = 8.4 × 10⁴ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A body cools from 70 °C to 60 °C in 5 minutes in surroundings at 30 °C. The time taken to cool from 60 °C to 50 °C is about",
+      "options": [
+        "3.5 minutes",
+        "7 minutes",
+        "5 minutes",
+        "10 minutes"
+      ],
+      "answer": 1,
+      "explanation": "First stage: mean 65 °C, excess 35 °C, rate 2 °C min⁻¹. Second stage: mean 55 °C, excess 25 °C, rate = 2 × 25/35 = 1.43 °C min⁻¹, so time = 10/1.43 ≈ 7 minutes.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Cooking oil is preferred to water for frying because oil has",
+      "options": [
+        "a high specific heat capacity, so it stores much more heat",
+        "a higher boiling point than water and a high specific heat capacity",
+        "a low specific heat capacity, so it heats up quickly to a high temperature",
+        "a very high specific latent heat of vaporisation"
+      ],
+      "answer": 2,
+      "explanation": "Because the specific heat capacity of oil is much smaller than that of water, a given quantity of heat raises its temperature much more, so it reaches the frying temperature quickly.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "50 g of water at 60 °C is mixed with 100 g of water at 20 °C. The temperature of the mixture is",
+      "options": [
+        "33.3 °C",
+        "45 °C",
+        "26.7 °C",
+        "40 °C"
+      ],
+      "answer": 0,
+      "explanation": "50(60 − θ) = 100(θ − 20), so 3000 − 50θ = 100θ − 2000 and θ = 5000/150 ≈ 33.3 °C.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In the laboratory determination of the specific latent heat of fusion of ice by the method of mixtures, the heat lost by the warm water and the calorimeter is equal to the",
+      "options": [
+        "heat gained in warming the melted ice to the final temperature alone",
+        "heat gained in melting the ice plus the heat gained in warming the melted ice to the final temperature",
+        "heat lost by the ice to the surroundings",
+        "heat gained in melting the ice alone"
+      ],
+      "answer": 1,
+      "explanation": "The ice first absorbs latent heat to melt at 0 °C and then absorbs sensible heat as the melted ice warms to the final temperature, so both terms appear on the heat-gained side.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "0.05 kg of ice at 0 °C is dropped into 0.2 kg of water at 40 °C. The final temperature of the mixture is (L_f = 3.36 × 10⁵ J kg⁻¹, c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "24 °C",
+        "32 °C",
+        "16 °C",
+        "0 °C"
+      ],
+      "answer": 2,
+      "explanation": "Heat available from water if it cooled to 0 °C = 0.2 × 4200 × 40 = 33600 J, while the ice needs 0.05 × 3.36 × 10⁵ = 16800 J to melt. The remaining 16800 J warms 0.25 kg of water: Δθ = 16800/(0.25 × 4200) = 16 K, so the final temperature is 16 °C.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "What mass of ice at 0 °C must be added to 0.5 kg of water at 60 °C so that the final temperature of the mixture is 20 °C? (L_f = 3.36 × 10⁵ J kg⁻¹, c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "0.4 kg",
+        "0.25 kg",
+        "0.1 kg",
+        "0.2 kg"
+      ],
+      "answer": 3,
+      "explanation": "Heat lost by water = 0.5 × 4200 × 40 = 84000 J. Heat gained by ice = mL_f + mc × 20 = m(336000 + 84000) = 420000m. So m = 84000/420000 = 0.2 kg.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The total heat required to convert 1 kg of water at 20 °C into steam at 100 °C is (c = 4200 J kg⁻¹ K⁻¹, L_v = 2.26 × 10⁶ J kg⁻¹)",
+      "options": [
+        "2.26 × 10⁶ J",
+        "2.60 × 10⁶ J",
+        "2.60 × 10⁵ J",
+        "3.36 × 10⁵ J"
+      ],
+      "answer": 1,
+      "explanation": "Heat to warm the water = 1 × 4200 × 80 = 3.36 × 10⁵ J; heat to vaporise = 1 × 2.26 × 10⁶ J. Total = 3.36 × 10⁵ + 2.26 × 10⁶ = 2.596 × 10⁶ J ≈ 2.60 × 10⁶ J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The heat required to convert 0.1 kg of ice at −10 °C into water at 0 °C is (c_ice = 2100 J kg⁻¹ K⁻¹, L_f = 3.36 × 10⁵ J kg⁻¹)",
+      "options": [
+        "3.57 × 10⁵ J",
+        "3.57 × 10⁴ J",
+        "2.10 × 10³ J",
+        "3.36 × 10⁴ J"
+      ],
+      "answer": 1,
+      "explanation": "Heat to warm the ice to 0 °C = 0.1 × 2100 × 10 = 2100 J; heat to melt it = 0.1 × 3.36 × 10⁵ = 33600 J. Total = 2100 + 33600 = 3.57 × 10⁴ J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The total heat required to convert 1 kg of ice at 0 °C completely into steam at 100 °C is (L_f = 3.36 × 10⁵ J kg⁻¹, c = 4200 J kg⁻¹ K⁻¹, L_v = 2.26 × 10⁶ J kg⁻¹)",
+      "options": [
+        "3.36 × 10⁶ J",
+        "2.60 × 10⁶ J",
+        "2.94 × 10⁶ J",
+        "3.02 × 10⁶ J"
+      ],
+      "answer": 3,
+      "explanation": "Melt the ice: 3.36 × 10⁵ J; warm the water 0 → 100 °C: 4200 × 100 = 4.20 × 10⁵ J; vaporise: 2.26 × 10⁶ J. Total = 3.36 × 10⁵ + 4.20 × 10⁵ + 2.26 × 10⁶ = 3.02 × 10⁶ J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A liquid cools from 50 °C to 40 °C in 5 minutes in surroundings at 20 °C. The time it takes to cool from 40 °C to 30 °C is about",
+      "options": [
+        "8.3 minutes",
+        "6.0 minutes",
+        "5.0 minutes",
+        "12.5 minutes"
+      ],
+      "answer": 0,
+      "explanation": "First stage: mean 45 °C, excess 25 °C, rate 2 °C min⁻¹. Second stage: mean 35 °C, excess 15 °C, rate = 2 × 15/25 = 1.2 °C min⁻¹, so time = 10/1.2 ≈ 8.3 minutes.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "0.5 kg of a metal at 100 °C is dropped into 0.2 kg of water at 20 °C. If the final temperature of the mixture is 30 °C, the specific heat capacity of the metal is (c_water = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "480 J kg⁻¹ K⁻¹",
+        "840 J kg⁻¹ K⁻¹",
+        "240 J kg⁻¹ K⁻¹",
+        "120 J kg⁻¹ K⁻¹"
+      ],
+      "answer": 2,
+      "explanation": "Heat gained by water = 0.2 × 4200 × 10 = 8400 J. Heat lost by metal = 0.5 × c × 70 = 35c, so 35c = 8400 and c = 240 J kg⁻¹ K⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "0.02 kg of ice at 0 °C is added to 0.2 kg of water at 30 °C. The final temperature of the mixture is (L_f = 3.36 × 10⁵ J kg⁻¹, c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "15 °C",
+        "24 °C",
+        "20 °C",
+        "10 °C"
+      ],
+      "answer": 2,
+      "explanation": "Heat available from the water if cooled to 0 °C = 0.2 × 4200 × 30 = 25200 J; the ice needs 0.02 × 3.36 × 10⁵ = 6720 J to melt. The remaining 18480 J warms 0.22 kg of water: Δθ = 18480/(0.22 × 4200) = 20 K, so the final temperature is 20 °C.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Steam at 100 °C is passed into 0.5 kg of water at 20 °C until the temperature of the mixture becomes 60 °C. The mass of steam condensed is (L_v = 2.26 × 10⁶ J kg⁻¹, c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "8.6 g",
+        "17.3 g",
+        "69.2 g",
+        "34.6 g"
+      ],
+      "answer": 3,
+      "explanation": "Heat gained by water = 0.5 × 4200 × 40 = 84000 J. Heat given by m kg of steam = mL_v + mc × 40 = m(2.26 × 10⁶ + 1.68 × 10⁵) = 2.428 × 10⁶ m. So m = 84000/2.428 × 10⁶ = 0.0346 kg ≈ 34.6 g.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A body cools at the rate of 2 °C per minute when the temperature difference between the body and the surroundings is 20 °C. At the moment when this difference is 30 °C, the rate of cooling is",
+      "options": [
+        "3 °C per minute",
+        "6 °C per minute",
+        "2 °C per minute",
+        "1.3 °C per minute"
+      ],
+      "answer": 0,
+      "explanation": "By Newton's law of cooling the rate of cooling is proportional to the temperature difference, so rate = 2 × 30/20 = 3 °C per minute.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The triple point of water occurs at",
+      "options": [
+        "273.16 K and 611.2 Pa",
+        "273.15 K and 1.013 × 10⁵ Pa",
+        "373.15 K and 1.013 × 10⁵ Pa",
+        "273.16 K and 1.013 × 10⁵ Pa"
+      ],
+      "answer": 0,
+      "explanation": "At the triple point of water the solid, liquid and vapour phases coexist in equilibrium at 273.16 K and a pressure of 611.2 Pa, which is much lower than atmospheric pressure.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "0.05 kg of ice at 0 °C is dropped into 0.2 kg of water at 40 °C and the final temperature of the mixture is 16 °C. The specific latent heat of fusion of ice is (c = 4200 J kg⁻¹ K⁻¹)",
+      "options": [
+        "1.68 × 10⁵ J kg⁻¹",
+        "6.72 × 10⁵ J kg⁻¹",
+        "2.26 × 10⁶ J kg⁻¹",
+        "3.36 × 10⁵ J kg⁻¹"
+      ],
+      "answer": 3,
+      "explanation": "Heat lost by the water = 0.2 × 4200 × (40 − 16) = 20160 J. Heat gained by the ice = mL_f + mc × 16 = 0.05L_f + 0.05 × 4200 × 16 = 0.05L_f + 3360. So 0.05L_f = 16800 and L_f = 3.36 × 10⁵ J kg⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Equal masses of water and of an oil of specific heat capacity 2100 J kg⁻¹ K⁻¹ are supplied with equal quantities of heat. The rise in temperature of the oil is",
+      "options": [
+        "four times that of water",
+        "twice that of water",
+        "the same as that of water",
+        "half that of water"
+      ],
+      "answer": 1,
+      "explanation": "Since Q = mcΔθ, Δθ ∝ 1/c for equal masses and equal heat. So Δθ_oil/Δθ_water = 4200/2100 = 2, i.e. the oil's temperature rises twice as much.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The quantity of heat released when 0.5 kg of steam at 100 °C condenses into water at 100 °C is (L_v = 2.26 × 10⁶ J kg⁻¹)",
+      "options": [
+        "2.26 × 10⁶ J",
+        "4.52 × 10⁶ J",
+        "5.65 × 10⁵ J",
+        "1.13 × 10⁶ J"
+      ],
+      "answer": 3,
+      "explanation": "Q = mL_v = 0.5 × 2.26 × 10⁶ = 1.13 × 10⁶ J, and this heat is released at constant temperature during condensation.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "When the external pressure on a liquid is reduced, its boiling point",
+      "options": [
+        "decreases, so water can be made to boil below 100 °C",
+        "remains unchanged at 100 °C",
+        "becomes equal to its melting point",
+        "increases, so water boils above 100 °C"
+      ],
+      "answer": 0,
+      "explanation": "Boiling occurs when the saturated vapour pressure of the liquid equals the external pressure; on a hill top, where the atmospheric pressure is low, water boils below 100 °C.",
+      "difficulty": "hard"
     }
   ]
 }
