@@ -1,0 +1,289 @@
+{
+  "title": "Semiconductor Devices — 40 MCQs",
+  "grade": "XII",
+  "chapters": [17],
+  "date": "2026-10-10",
+  "description": "Covers the p-n junction, semiconductor diode characteristics in forward and reverse bias, full-wave rectification, and logic gates (NOT, OR, AND, NAND, NOR).",
+  "questions": [
+    {
+      "q": "A p-n junction is formed by",
+      "options": ["joining a p-type and an n-type semiconductor", "joining two p-type semiconductors", "joining two n-type semiconductors", "doping an insulator"],
+      "answer": 0,
+      "explanation": "A p-n junction is created at the interface between a p-type and an n-type semiconductor region.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a p-n junction under forward bias",
+      "options": ["the barrier potential increases", "the barrier potential decreases", "the depletion layer widens", "current is zero"],
+      "answer": 1,
+      "explanation": "Forward bias reduces the potential barrier, allowing majority carriers to cross the junction.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a p-n junction under reverse bias",
+      "options": ["the barrier potential decreases", "the depletion layer narrows", "the barrier potential increases and depletion layer widens", "large current flows"],
+      "answer": 2,
+      "explanation": "Reverse bias increases the barrier height and widens the depletion region, resulting in a very small reverse current.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The ideal diode in forward bias acts as a",
+      "options": ["short circuit (closed switch)", "open circuit", "resistor of high value", "capacitor"],
+      "answer": 0,
+      "explanation": "An ideal diode has zero resistance when forward biased and conducts freely.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The ideal diode in reverse bias acts as an",
+      "options": ["short circuit", "open circuit (open switch)", "resistor of low value", "battery"],
+      "answer": 1,
+      "explanation": "An ideal diode has infinite resistance when reverse biased and does not conduct.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A full-wave rectifier converts",
+      "options": ["AC into unidirectional pulsating DC", "DC into AC", "AC into pure sine wave", "low voltage AC into high voltage AC"],
+      "answer": 0,
+      "explanation": "A full-wave rectifier produces output during both half-cycles of the AC input, giving pulsating DC.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Boolean expression for an AND gate is",
+      "options": ["Y = A + B", "Y = A · B", "Y = A̅", "Y = A̅ · B̅"],
+      "answer": 1,
+      "explanation": "The output of an AND gate is high only when both inputs are high: Y = A · B.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Boolean expression for an OR gate is",
+      "options": ["Y = A · B", "Y = A + B", "Y = A̅", "Y = A̅ + B̅"],
+      "answer": 1,
+      "explanation": "The output of an OR gate is high when either or both inputs are high: Y = A + B.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Boolean expression for a NOT gate is",
+      "options": ["Y = A · B", "Y = A + B", "Y = A̅", "Y = A · A"],
+      "answer": 2,
+      "explanation": "A NOT gate inverts the input: Y = A̅.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The output of a NAND gate is high when",
+      "options": ["both inputs are high", "at least one input is low", "both inputs are low only", "inputs are equal"],
+      "answer": 1,
+      "explanation": "NAND is the complement of AND; its output is low only when both inputs are high.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The knee voltage for a silicon diode is approximately",
+      "options": ["0.3 V", "0.7 V", "1.1 V", "0.1 V"],
+      "answer": 1,
+      "explanation": "Silicon diodes begin to conduct appreciably around 0.7 V in forward bias.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The knee voltage for a germanium diode is approximately",
+      "options": ["0.7 V", "0.3 V", "1.1 V", "0.0 V"],
+      "answer": 1,
+      "explanation": "Germanium diodes have a lower barrier potential of about 0.3 V.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In the reverse-bias characteristic of a diode the current is of the order of",
+      "options": ["amperes", "milliamperes", "microamperes", "kiloamperes"],
+      "answer": 2,
+      "explanation": "Reverse saturation current is typically a few microamperes until breakdown.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The efficiency of a full-wave rectifier is higher than that of a half-wave rectifier because",
+      "options": ["it uses both half-cycles of the input", "it uses only one half-cycle", "it has no diodes", "it produces pure DC"],
+      "answer": 0,
+      "explanation": "Full-wave rectification utilises both positive and negative half-cycles, giving higher average output and efficiency.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The output frequency of a full-wave rectifier for a 50 Hz AC input is",
+      "options": ["50 Hz", "25 Hz", "100 Hz", "0 Hz"],
+      "answer": 2,
+      "explanation": "Each half-cycle produces a pulse, so the output ripple frequency is twice the input frequency.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The truth table of a NOR gate shows output high only when",
+      "options": ["both inputs are high", "both inputs are low", "one input is high", "inputs are different"],
+      "answer": 1,
+      "explanation": "NOR is the complement of OR; output is 1 only when both inputs are 0.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A p-n junction diode is used as a rectifier because",
+      "options": ["it conducts in both directions equally", "it conducts only in one direction", "it has high reverse resistance and low forward resistance", "it amplifies signals"],
+      "answer": 2,
+      "explanation": "The diode’s unidirectional conduction property (low forward resistance, high reverse resistance) makes it suitable for rectification.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a full-wave bridge rectifier the number of diodes used is",
+      "options": ["1", "2", "4", "3"],
+      "answer": 2,
+      "explanation": "A bridge rectifier employs four diodes arranged in a bridge configuration.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The depletion region of a p-n junction contains",
+      "options": ["free electrons only", "holes only", "immobile ions and is depleted of free carriers", "both free electrons and holes in equal number"],
+      "answer": 2,
+      "explanation": "The depletion layer is formed by diffusion of carriers and is left with immobile space charge.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the inputs of an AND gate are A = 1 and B = 0, the output is",
+      "options": ["1", "0", "undefined", "A + B"],
+      "answer": 1,
+      "explanation": "AND requires both inputs high for output high; 1 · 0 = 0.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the inputs of an OR gate are A = 0 and B = 0, the output is",
+      "options": ["1", "0", "A · B", "undefined"],
+      "answer": 1,
+      "explanation": "OR output is 0 only when both inputs are 0.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The Boolean expression for a NAND gate is",
+      "options": ["Y = A · B", "Y = A̅ · B̅", "Y = (A · B)̅", "Y = A + B"],
+      "answer": 2,
+      "explanation": "NAND is the negation of AND: Y = (A · B)̅.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The Boolean expression for a NOR gate is",
+      "options": ["Y = (A + B)̅", "Y = A · B", "Y = A + B", "Y = A̅ · B"],
+      "answer": 0,
+      "explanation": "NOR is the negation of OR: Y = (A + B)̅.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Zener breakdown occurs in a diode when",
+      "options": ["forward bias exceeds knee voltage", "reverse bias exceeds a certain critical voltage", "temperature becomes zero", "current is zero"],
+      "answer": 1,
+      "explanation": "Zener (or avalanche) breakdown takes place under sufficiently high reverse bias.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The dynamic resistance of a diode in the forward-bias region is",
+      "options": ["high", "low", "infinite", "zero always"],
+      "answer": 1,
+      "explanation": "In the conducting region the slope dV/dI is small, corresponding to low dynamic resistance.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a full-wave rectifier using a centre-tapped transformer the peak inverse voltage (PIV) across each diode is",
+      "options": ["V_m", "2 V_m", "V_m / 2", "4 V_m"],
+      "answer": 1,
+      "explanation": "Each diode must withstand the full secondary voltage of the other half, i.e., 2 V_m.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The ripple factor of a full-wave rectifier is approximately",
+      "options": ["1.21", "0.48", "0.06", "2.0"],
+      "answer": 1,
+      "explanation": "For a full-wave rectifier the ripple factor γ ≈ 0.48.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The maximum efficiency of a full-wave rectifier is",
+      "options": ["40.6 %", "81.2 %", "100 %", "50 %"],
+      "answer": 1,
+      "explanation": "Theoretical maximum efficiency of a full-wave rectifier is 81.2 %.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A silicon diode has a forward voltage drop of 0.7 V and carries a current of 20 mA. The power dissipated in the diode is",
+      "options": ["14 mW", "0.014 W", "14 W", "1.4 mW"],
+      "answer": 0,
+      "explanation": "P = V I = 0.7 × 0.020 = 0.014 W = 14 mW.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For an ideal full-wave rectifier with peak input voltage V_m the average output voltage is",
+      "options": ["V_m / π", "2 V_m / π", "V_m / 2", "V_m"],
+      "answer": 1,
+      "explanation": "V_avg = 2 V_m / π for a full-wave rectifier.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The output of a two-input NAND gate is low only when",
+      "options": ["both inputs are low", "both inputs are high", "one input is high", "inputs are complementary"],
+      "answer": 1,
+      "explanation": "NAND output is 0 exclusively when A = B = 1.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Which gate is called the universal gate?",
+      "options": ["AND", "OR", "NAND", "NOT"],
+      "answer": 2,
+      "explanation": "NAND (and also NOR) can implement any Boolean function and is therefore universal.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The combination of gates that produces the same output as a single NOR gate is",
+      "options": ["OR followed by NOT", "AND followed by NOT", "NOT followed by OR", "AND followed by OR"],
+      "answer": 0,
+      "explanation": "NOR = NOT (OR), i.e., an OR gate followed by a NOT gate.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a reverse-biased p-n junction the minority-carrier current is called",
+      "options": ["forward current", "reverse saturation current", "breakdown current", "diffusion current"],
+      "answer": 1,
+      "explanation": "The small current due to minority carriers under reverse bias is the reverse saturation current.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If both inputs of a two-input NOR gate are connected together, the resulting gate behaves as a",
+      "options": ["NOT gate", "AND gate", "OR gate", "NAND gate"],
+      "answer": 0,
+      "explanation": "When A = B the NOR output is A̅, which is the NOT function.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The barrier potential of a silicon p-n junction at room temperature is approximately 0.7 V. The corresponding electric field in a depletion layer of width 0.5 μm is",
+      "options": ["1.4 × 10⁶ V m⁻¹", "1.4 × 10⁵ V m⁻¹", "0.7 × 10⁶ V m⁻¹", "3.5 × 10⁶ V m⁻¹"],
+      "answer": 0,
+      "explanation": "E = V / d = 0.7 / (0.5 × 10⁻⁶) = 1.4 × 10⁶ V m⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A full-wave rectifier supplies a load of 1 kΩ. The average DC current is 20 mA. The average DC voltage is",
+      "options": ["20 V", "10 V", "40 V", "5 V"],
+      "answer": 0,
+      "explanation": "V_dc = I_dc × R_L = 0.020 × 1000 = 20 V.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The logic expression (A + B)̅ is equivalent to",
+      "options": ["A̅ · B̅", "A̅ + B̅", "A · B", "A + B"],
+      "answer": 0,
+      "explanation": "By De Morgan’s theorem (A + B)̅ = A̅ · B̅.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a centre-tapped full-wave rectifier each diode conducts for",
+      "options": ["the full cycle", "half the cycle", "one-quarter of the cycle", "three-quarters of the cycle"],
+      "answer": 1,
+      "explanation": "Each diode conducts only during one half-cycle of the AC input.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The output of the combination of an AND gate followed by a NOT gate is the same as that of a",
+      "options": ["NAND gate", "NOR gate", "OR gate", "XOR gate"],
+      "answer": 0,
+      "explanation": "AND followed by NOT realises the NAND function.",
+      "difficulty": "hard"
+    }
+  ]
+}
