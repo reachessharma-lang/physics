@@ -1,0 +1,491 @@
+{
+  "title": "Rate of Heat Flow — 40 MCQs",
+  "grade": "XI",
+  "chapters": [
+    11
+  ],
+  "date": "2026-10-10",
+  "description": "Heat transfer by conduction, convection and radiation; temperature gradient; coefficient of thermal conductivity and Searle's method; coefficients of reflection, transmission and absorption; ideal radiator and black body radiation; Stefan's law, emissivity and the apparent temperature of the Sun.",
+  "questions": [
+    {
+      "q": "Which mode of heat transfer does not require a material medium for its propagation?",
+      "options": [
+        "Convection",
+        "Conduction",
+        "Radiation",
+        "Evaporation"
+      ],
+      "answer": 2,
+      "explanation": "Radiation is an electromagnetic process, so it travels through vacuum; conduction and convection both need matter.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In which mode of heat transfer is heat carried from one place to another by the actual movement of the heated particles of the medium?",
+      "options": [
+        "Conduction",
+        "Radiation",
+        "Induction",
+        "Convection"
+      ],
+      "answer": 3,
+      "explanation": "In convection the heated particles themselves move and carry heat with them, as in the circulation of air in a room or water in a vessel.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The rate of heat flow through a conductor is directly proportional to",
+      "options": [
+        "the mass of the conductor",
+        "the length of the conductor",
+        "the square of the temperature difference between its ends",
+        "the area of cross-section of the conductor"
+      ],
+      "answer": 3,
+      "explanation": "From Q/t = K A (θ₁ − θ₂)/L, the rate of heat flow is directly proportional to the area of cross-section A.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The SI unit of coefficient of thermal conductivity is",
+      "options": [
+        "W m⁻¹ K⁻¹",
+        "J m⁻¹ K⁻¹",
+        "W m K⁻¹",
+        "W m⁻² K⁻¹"
+      ],
+      "answer": 0,
+      "explanation": "K = Q L/(A Δθ t) gives the unit (J s⁻¹) m /(m² K) = W m⁻¹ K⁻¹.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The temperature gradient along a conductor is measured in",
+      "options": [
+        "K m",
+        "K⁻¹ m",
+        "K m⁻¹",
+        "K m⁻²"
+      ],
+      "answer": 2,
+      "explanation": "Temperature gradient is the fall of temperature per unit length, so its unit is kelvin per metre (K m⁻¹).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For an ideal black body, the emissivity e and the coefficient of absorption a are",
+      "options": [
+        "e = 0, a = 1",
+        "e = 1, a = 1",
+        "e = 0, a = 0",
+        "e = 1, a = 0"
+      ],
+      "answer": 1,
+      "explanation": "An ideal black body absorbs all the radiation incident on it (a = 1) and is the best possible emitter (e = 1).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "According to Stefan's law, the energy radiated per second per unit area of a black body is proportional to",
+      "options": [
+        "T",
+        "T²",
+        "T⁴",
+        "T³"
+      ],
+      "answer": 2,
+      "explanation": "Stefan's law gives E = σT⁴, i.e. the energy radiated per second per unit area varies as the fourth power of the absolute temperature.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a body that reflects the whole of the radiation incident on it, the correct relation is",
+      "options": [
+        "a = 1, r = t = 0",
+        "r = 0, a = 1, t = 0",
+        "r = 1, a = t = 0",
+        "t = 1, r = a = 0"
+      ],
+      "answer": 2,
+      "explanation": "A perfect reflector reflects all the incident radiation, so r = 1 while absorption a and transmission t are both zero.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Heat from the Sun reaches the Earth mainly by",
+      "options": [
+        "radiation",
+        "conduction",
+        "convection",
+        "conduction and convection together"
+      ],
+      "answer": 0,
+      "explanation": "The space between the Sun and the Earth is almost vacuum, and only radiation can transfer heat through a vacuum.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The coefficient of thermal conductivity of a conductor depends on",
+      "options": [
+        "the area of cross-section of the conductor",
+        "the temperature difference between its ends",
+        "the nature of the material of the conductor",
+        "the length of the conductor"
+      ],
+      "answer": 2,
+      "explanation": "Thermal conductivity is a property of the material itself; the length, area and temperature difference only change the rate of heat flow, not K.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The temperature gradient in a conductor is 100 K m⁻¹ and its thermal conductivity is 200 W m⁻¹ K⁻¹. The heat flowing per second per unit area of the conductor is",
+      "options": [
+        "2 W m⁻²",
+        "2 × 10⁴ W m⁻²",
+        "0.5 W m⁻²",
+        "5 × 10³ W m⁻²"
+      ],
+      "answer": 1,
+      "explanation": "Heat flux = K × temperature gradient = 200 × 100 = 2 × 10⁴ W m⁻².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "One end of a metal rod 0.4 m long is at 100 °C and the other end is at 20 °C. The magnitude of the temperature gradient along the rod is",
+      "options": [
+        "0.2 K m⁻¹",
+        "80 K m⁻¹",
+        "320 K m⁻¹",
+        "200 K m⁻¹"
+      ],
+      "answer": 3,
+      "explanation": "Temperature gradient = (θ₁ − θ₂)/L = (100 − 20)/0.4 = 200 K m⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Searle's method, water flows through the spiral at the rate of 5 × 10⁻⁴ kg s⁻¹ and its temperature rises by 10 K. If c = 4200 J kg⁻¹ K⁻¹, the distance between the thermometers is 0.25 m, the area of cross-section of the rod is 2.5 × 10⁻⁴ m² and θ₁ − θ₂ = 50 K, the thermal conductivity of the rod is",
+      "options": [
+        "210 W m⁻¹ K⁻¹",
+        "420 W m⁻¹ K⁻¹",
+        "42 W m⁻¹ K⁻¹",
+        "840 W m⁻¹ K⁻¹"
+      ],
+      "answer": 1,
+      "explanation": "Heat gained by water per second = m c Δθ = 5 × 10⁻⁴ × 4200 × 10 = 21 W. Then K = (Q/t) x /(A(θ₁ − θ₂)) = 21 × 0.25/(2.5 × 10⁻⁴ × 50) = 5.25/0.0125 = 420 W m⁻¹ K⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In Searle's experiment the rod is wrapped in felt and wool (lagging) mainly to",
+      "options": [
+        "prevent loss of heat from the sides of the rod to the surroundings",
+        "keep the rod at one single temperature throughout",
+        "prevent steam from escaping from the steam chamber",
+        "increase the thermal conductivity of the rod"
+      ],
+      "answer": 0,
+      "explanation": "Lagging insulates the sides of the rod so that heat flows only along the rod and the rate of heat flow measured at the spiral equals the heat conducted along the rod.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The emissive power of a body is measured in",
+      "options": [
+        "W m⁻² K⁻¹",
+        "W m⁻²",
+        "W",
+        "J m⁻²"
+      ],
+      "answer": 1,
+      "explanation": "Emissive power is the energy radiated per second per unit area of the surface, so its unit is W m⁻².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For an opaque body, which does not transmit radiation at all, the relation between the coefficient of reflection r and the coefficient of absorption a is",
+      "options": [
+        "r + a = 1",
+        "r + a = 0",
+        "r = a = 0.5 for every opaque body",
+        "r − a = 1"
+      ],
+      "answer": 0,
+      "explanation": "For an opaque body t = 0, and since r + a + t = 1 we get r + a = 1.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The net power radiated by a body of surface area A and emissivity e at absolute temperature T, kept in surroundings at absolute temperature T₀, is",
+      "options": [
+        "eσA(T − T₀)⁴",
+        "σA(T⁴ − T₀⁴)",
+        "eσAT⁴",
+        "eσA(T⁴ − T₀⁴)"
+      ],
+      "answer": 3,
+      "explanation": "For a non-black body Stefan's law gives eσAT⁴ radiated and eσAT₀⁴ absorbed, so the net power radiated is eσA(T⁴ − T₀⁴).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "While estimating the apparent temperature of the Sun, the relation used is (S = solar constant, R = distance of the Sun from the Earth, r = radius of the Sun, σ = Stefan's constant)",
+      "options": [
+        "T⁴ = S R²/(σ r²)",
+        "T⁴ = S r²/(σ R²)",
+        "T⁴ = σ R²/(S r²)",
+        "T⁴ = S/(4σ)"
+      ],
+      "answer": 0,
+      "explanation": "The energy received per second by the Earth's surface (solar constant × 4πR²) is equated to the energy radiated by the Sun (σ 4πr² T⁴), giving T⁴ = S R²/(σ r²).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of the following substances has the highest thermal conductivity?",
+      "options": [
+        "Wood",
+        "Air",
+        "Copper",
+        "Water"
+      ],
+      "answer": 2,
+      "explanation": "Metals are the best conductors of heat; among the given substances copper has the highest thermal conductivity while air, water and wood are poor conductors.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In steady state, the rate of heat flow through a rod of length L and area of cross-section A whose ends are at temperatures θ₁ and θ₂ (θ₁ > θ₂) is",
+      "options": [
+        "K A L (θ₁ − θ₂)",
+        "K A (θ₁ − θ₂)/L",
+        "K L (θ₁ − θ₂)/A",
+        "K A (θ₁ + θ₂)/L"
+      ],
+      "answer": 1,
+      "explanation": "In steady state the rate of heat flow along a rod is Q/t = K A (θ₁ − θ₂)/L, so it increases with A and the temperature difference and decreases with length.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A wall of area 2 m² and thickness 0.5 m has thermal conductivity 0.8 W m⁻¹ K⁻¹. If its inner surface is at 30 °C and its outer surface is at 10 °C, the heat flowing through it per second is",
+      "options": [
+        "16 W",
+        "32 W",
+        "128 W",
+        "64 W"
+      ],
+      "answer": 3,
+      "explanation": "Q/t = K A (θ₁ − θ₂)/L = 0.8 × 2 × 20/0.5 = 64 W.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two rods of the same material and the same area of cross-section have lengths L and 2L. If the same temperature difference is maintained across each rod, the ratio of the heat conducted per second through the first rod to that through the second is",
+      "options": [
+        "4 : 1",
+        "2 : 1",
+        "1 : 2",
+        "1 : 4"
+      ],
+      "answer": 1,
+      "explanation": "Since Q/t ∝ 1/L for the same material, area and temperature difference, the shorter rod conducts twice as much heat per second: 2 : 1.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The coefficient of thermal conductivity of a material is numerically equal to the heat conducted per second when",
+      "options": [
+        "the area of cross-section is 1 m² and the temperature difference is 1 K only",
+        "the conductor carries 1 J of heat in 1 second",
+        "the area of cross-section is 1 m², the thickness is 1 m and the temperature difference is 1 K",
+        "the temperature difference is 1 K and the length is 1 m only"
+      ],
+      "answer": 2,
+      "explanation": "Putting A = 1 m², L = 1 m and Δθ = 1 K in Q/t = K A Δθ/L gives Q/t = K, which is the definition of the coefficient of thermal conductivity.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A black body at 300 K radiates energy at the rate of E per second. If its temperature is raised to 600 K, the energy it radiates per second becomes",
+      "options": [
+        "16E",
+        "8E",
+        "4E",
+        "2E"
+      ],
+      "answer": 0,
+      "explanation": "E ∝ T⁴, so E′/E = (600/300)⁴ = 2⁴ = 16, i.e. E′ = 16E.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a room heated by a heater kept on the floor, the whole room becomes warm mainly due to",
+      "options": [
+        "radiation from the heater alone",
+        "convection currents set up in the air",
+        "conduction of heat through the walls of the room",
+        "conduction of heat through the air"
+      ],
+      "answer": 1,
+      "explanation": "Air near the heater gets heated, expands and rises while cooler air comes down; this circulation (convection) spreads heat throughout the room.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A steel rod 1 m long and of cross-sectional area 5 × 10⁻⁴ m² has its ends at 100 °C and 0 °C. If K = 50 W m⁻¹ K⁻¹, the heat conducted along the rod in 10 minutes is",
+      "options": [
+        "15 000 J",
+        "250 J",
+        "1500 J",
+        "150 J"
+      ],
+      "answer": 2,
+      "explanation": "Q = K A Δθ t/L = 50 × 5 × 10⁻⁴ × 100 × 600/1 = 1500 J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two slabs of the same area, each 0.1 m thick, are joined face to face in series. Their thermal conductivities are 200 and 400 W m⁻¹ K⁻¹ and the outer faces are at 200 °C and 100 °C. The heat flowing per second per unit area is",
+      "options": [
+        "6 × 10⁴ W m⁻²",
+        "2 × 10⁵ W m⁻²",
+        "4 × 10⁴ W m⁻²",
+        "1.33 × 10⁵ W m⁻²"
+      ],
+      "answer": 3,
+      "explanation": "For equal thicknesses in series, K_eq = 2K₁K₂/(K₁ + K₂) = 2 × 200 × 400/600 = 266.7 W m⁻¹ K⁻¹. Heat flux = K_eq Δθ/(2d) = 266.7 × 100/0.2 ≈ 1.33 × 10⁵ W m⁻².",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two rods of the same length and the same area of cross-section have thermal conductivities K and 2K. They are joined end to end, and the free ends are maintained at 200 °C and 100 °C. In steady state the temperature of the junction is",
+      "options": [
+        "120 °C",
+        "133.3 °C",
+        "166.7 °C",
+        "150 °C"
+      ],
+      "answer": 1,
+      "explanation": "In steady state the heat current is the same in both rods: K(200 − θ) = 2K(θ − 100), so 200 − θ = 2θ − 200 and θ = 400/3 ≈ 133.3 °C.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A black body at 500 K is cooled to 300 K. The ratio of the energy radiated per second by it at 300 K to that radiated at 500 K is",
+      "options": [
+        "0.60",
+        "0.13",
+        "0.44",
+        "0.36"
+      ],
+      "answer": 1,
+      "explanation": "Energy radiated ∝ T⁴, so the ratio is (300/500)⁴ = (0.6)⁴ = 0.1296 ≈ 0.13.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A spherical black body of radius 1 cm is at 1000 K. The power radiated by it is (σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴)",
+      "options": [
+        "35.6 W",
+        "17.8 W",
+        "89.0 W",
+        "71.3 W"
+      ],
+      "answer": 3,
+      "explanation": "A = 4πr² = 4π(0.01)² = 1.257 × 10⁻³ m², so P = σAT⁴ = 5.67 × 10⁻⁸ × 1.257 × 10⁻³ × (1000)⁴ = 71.3 W.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The Sun radiates energy at the rate of 3.9 × 10²⁶ W and its radius is 7 × 10⁸ m. Taking σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴, the surface temperature of the Sun is about",
+      "options": [
+        "5800 K",
+        "5000 K",
+        "4500 K",
+        "6800 K"
+      ],
+      "answer": 0,
+      "explanation": "σ 4πr² T⁴ = 3.9 × 10²⁶ gives T⁴ = 3.9 × 10²⁶/(5.67 × 10⁻⁸ × 4π × (7 × 10⁸)²) ≈ 1.12 × 10¹⁵, so T ≈ 5780 K ≈ 5800 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The solar constant is 1.4 × 10³ W m⁻², the mean Sun–Earth distance is 1.5 × 10¹¹ m and the radius of the Sun is 7 × 10⁸ m. The apparent temperature of the Sun's surface is about",
+      "options": [
+        "4800 K",
+        "6800 K",
+        "5800 K",
+        "5300 K"
+      ],
+      "answer": 2,
+      "explanation": "T⁴ = S R²/(σ r²) = 1.4 × 10³ × (1.5 × 10¹¹)²/(5.67 × 10⁻⁸ × (7 × 10⁸)²) ≈ 1.13 × 10¹⁵, so T ≈ 5803 K ≈ 5800 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A bar 0.2 m long and of cross-sectional area 1.25 × 10⁻³ m² conducts 100 J of heat per second in steady state when the temperature difference between its ends is 100 K. The thermal conductivity of the bar is",
+      "options": [
+        "40 W m⁻¹ K⁻¹",
+        "320 W m⁻¹ K⁻¹",
+        "160 W m⁻¹ K⁻¹",
+        "80 W m⁻¹ K⁻¹"
+      ],
+      "answer": 2,
+      "explanation": "K = (Q/t) L/(A Δθ) = 100 × 0.2/(1.25 × 10⁻³ × 100) = 20/0.125 = 160 W m⁻¹ K⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A black body of surface area 0.1 m² is at 1000 K and is kept in surroundings at 0 K. The energy radiated by it in one minute is",
+      "options": [
+        "1.7 × 10⁵ J",
+        "5.67 × 10⁴ J",
+        "3.4 × 10⁴ J",
+        "3.4 × 10⁵ J"
+      ],
+      "answer": 3,
+      "explanation": "E = σAT⁴t = 5.67 × 10⁻⁸ × 0.1 × (1000)⁴ × 60 = 3.4 × 10⁵ J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "When the absolute temperature of a black body is raised, the energy it radiates per second becomes 1.464 times the original value. The percentage rise in its absolute temperature is",
+      "options": [
+        "10%",
+        "1.1%",
+        "46%",
+        "21%"
+      ],
+      "answer": 0,
+      "explanation": "E ∝ T⁴, so (T′/T)⁴ = 1.464 and T′/T = (1.464)^(1/4) = 1.1, i.e. the temperature rises by 10%.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In Searle's method, water flows through the copper spiral at the rate of 2 × 10⁻³ kg s⁻¹ and its temperature rises by 2 K. Taking c = 4200 J kg⁻¹ K⁻¹, the heat conducted along the rod per second is",
+      "options": [
+        "16.8 W",
+        "8.4 W",
+        "33.6 W",
+        "4.2 W"
+      ],
+      "answer": 0,
+      "explanation": "In steady state heat conducted per second = heat gained by water per second = m c Δθ = 2 × 10⁻³ × 4200 × 2 = 16.8 W.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A black body of surface area 0.5 m² at 500 K is kept in surroundings at 300 K. The net energy it radiates per second is (σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴)",
+      "options": [
+        "3084 W",
+        "926 W",
+        "2700 W",
+        "1542 W"
+      ],
+      "answer": 3,
+      "explanation": "P = σA(T⁴ − T₀⁴) = 5.67 × 10⁻⁸ × 0.5 × ((500)⁴ − (300)⁴) = 5.67 × 10⁻⁸ × 0.5 × 5.44 × 10¹⁰ ≈ 1542 W.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two rods of the same length and the same area of cross-section are placed side by side between the same two temperatures. If their thermal conductivities are K and 2K, the ratio of the heat conducted per second by the first rod to that by the second rod is",
+      "options": [
+        "4 : 1",
+        "1 : 2",
+        "1 : 4",
+        "2 : 1"
+      ],
+      "answer": 1,
+      "explanation": "For the same length, area and temperature difference, Q/t ∝ K, so the ratio is K : 2K = 1 : 2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A black body radiates heat at 227 °C. To what temperature must it be heated so that the energy radiated per second becomes double?",
+      "options": [
+        "500 °C",
+        "454 °C",
+        "594.6 °C",
+        "321.6 °C"
+      ],
+      "answer": 3,
+      "explanation": "T = 227 + 273 = 500 K. Since E ∝ T⁴, T′ = 500 × 2^(1/4) = 500 × 1.189 = 594.6 K = 594.6 − 273 = 321.6 °C.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "At a point in a conductor the temperature gradient is 200 K m⁻¹ and the heat flowing per second per unit area is 5 × 10⁴ W m⁻². The thermal conductivity of the conductor is",
+      "options": [
+        "250 W m⁻¹ K⁻¹",
+        "500 W m⁻¹ K⁻¹",
+        "40 W m⁻¹ K⁻¹",
+        "100 W m⁻¹ K⁻¹"
+      ],
+      "answer": 0,
+      "explanation": "K = (heat flux)/(temperature gradient) = 5 × 10⁴/200 = 250 W m⁻¹ K⁻¹.",
+      "difficulty": "hard"
+    }
+  ]
+}
