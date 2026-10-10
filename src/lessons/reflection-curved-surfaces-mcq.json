@@ -1,0 +1,491 @@
+{
+  "title": "Reflection at Curved Mirrors — 40 MCQs",
+  "grade": "XI",
+  "chapters": [
+    14
+  ],
+  "date": "2026-10-10",
+  "description": "Mirror formula relating object distance, image distance and focal length; relation between object size and image size (linear magnification); real and virtual images in geometrical optics; and calculation of the focal length and radius of curvature of curved mirrors with their applications.",
+  "questions": [
+    {
+      "q": "For a spherical mirror, the relation between the object distance u, the image distance v and the focal length f (real-is-positive convention) is",
+      "options": [
+        "1/u − 1/v = 1/f",
+        "1/u + 1/v = 1/f",
+        "u + v = f",
+        "1/u + 1/v = 1/(2f)"
+      ],
+      "answer": 1,
+      "explanation": "The mirror formula is 1/u + 1/v = 1/f, where u, v and f are all measured from the pole of the mirror.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The focal length f of a spherical mirror is related to its radius of curvature R by",
+      "options": [
+        "f = R",
+        "f = R/2",
+        "f = 2R",
+        "f = R²"
+      ],
+      "answer": 1,
+      "explanation": "The principal focus lies midway between the pole and the centre of curvature, so f = R/2; for a plane mirror R is infinite and hence f is infinite.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The linear magnification m produced by a spherical mirror is given by",
+      "options": [
+        "m = u/v = h_o/h_i",
+        "m = v/u = h_i/h_o",
+        "m = −v/u = h_i/h_o",
+        "m = −u/v = h_i/h_o"
+      ],
+      "answer": 2,
+      "explanation": "Magnification is the ratio of the image size to the object size, and it is also equal to −v/u, the negative sign showing that a real image is inverted.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The image formed by a convex mirror of an object placed anywhere in front of it is always",
+      "options": [
+        "real, erect and of the same size",
+        "real, inverted and magnified",
+        "virtual, inverted and magnified",
+        "virtual, erect and diminished"
+      ],
+      "answer": 3,
+      "explanation": "A convex mirror diverges the reflected rays, so the image is always formed behind the mirror; it is virtual, erect and smaller than the object.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Convex mirrors are used as rear-view mirrors in vehicles mainly because they",
+      "options": [
+        "form a magnified real image of the traffic behind",
+        "form an erect, diminished image and therefore give a wide field of view",
+        "form an image which can be taken on a screen",
+        "have a very short focal length and a small field of view"
+      ],
+      "answer": 1,
+      "explanation": "A convex mirror always gives an erect, diminished virtual image, so a large region behind the vehicle can be seen in a small mirror.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A real image formed by a concave mirror",
+      "options": [
+        "is always of the same size as the object",
+        "is always formed behind the mirror",
+        "can be obtained on a screen and is inverted",
+        "cannot be obtained on a screen and is erect"
+      ],
+      "answer": 2,
+      "explanation": "In a real image the reflected rays actually meet, so it can be caught on a screen; for a concave mirror such an image is inverted.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A dentist uses a concave mirror to see a magnified image of a tooth. For this the tooth is held",
+      "options": [
+        "at the centre of curvature of the mirror",
+        "beyond the centre of curvature of the mirror",
+        "between the pole and the principal focus of the mirror",
+        "at the principal focus of the mirror"
+      ],
+      "answer": 2,
+      "explanation": "When the object lies between the pole and the focus, a concave mirror gives a virtual, erect and magnified image, which is exactly what is needed to examine a tooth.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The focal length of a plane mirror is",
+      "options": [
+        "equal to its thickness",
+        "zero",
+        "infinite",
+        "equal to half its length"
+      ],
+      "answer": 2,
+      "explanation": "A plane mirror has an infinite radius of curvature, and since f = R/2 its focal length is also infinite.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The principal focus of a concave mirror is the point on the principal axis at which",
+      "options": [
+        "a narrow beam of light parallel to the axis diverges after reflection",
+        "a narrow beam of light parallel to the axis converges after reflection",
+        "the incident ray is reflected back along its own path",
+        "the image of an object placed at infinity is virtual"
+      ],
+      "answer": 1,
+      "explanation": "A concave mirror is converging, so paraxial rays parallel to the principal axis meet at the principal focus after reflection.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When an object is placed at infinity in front of a concave mirror, the image is formed",
+      "options": [
+        "at the focus and is real, inverted and highly diminished",
+        "at infinity and is highly magnified",
+        "at the centre of curvature and is of the same size",
+        "behind the mirror and is virtual and erect"
+      ],
+      "answer": 0,
+      "explanation": "Rays from an object at infinity are parallel to the principal axis and are brought to a focus at F, giving a real, inverted and very small image.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A concave mirror has a focal length of 10 cm. An object is placed 15 cm in front of it. The image is formed (real-is-positive convention)",
+      "options": [
+        "6 cm in front of the mirror",
+        "25 cm in front of the mirror",
+        "30 cm in front of the mirror",
+        "30 cm behind the mirror"
+      ],
+      "answer": 2,
+      "explanation": "1/v = 1/f − 1/u = 1/10 − 1/15 = 1/30, so v = +30 cm, i.e. a real image 30 cm in front of the mirror.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A convex mirror has a focal length of 15 cm. An object is placed 30 cm in front of it. The image is formed",
+      "options": [
+        "10 cm behind the mirror",
+        "10 cm in front of the mirror",
+        "30 cm behind the mirror",
+        "45 cm behind the mirror"
+      ],
+      "answer": 0,
+      "explanation": "For a convex mirror f = −15 cm, so 1/v = 1/f − 1/u = −1/15 − 1/30 = −1/10, giving v = −10 cm; the negative sign shows the image is 10 cm behind the mirror.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A concave mirror of focal length 20 cm forms a real image of an object placed 25 cm in front of it. The image distance is",
+      "options": [
+        "25 cm",
+        "100 cm",
+        "11.1 cm",
+        "50 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/v = 1/20 − 1/25 = (5 − 4)/100 = 1/100, so v = 100 cm in front of the mirror.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object placed 30 cm in front of a concave mirror forms a real image 60 cm from the mirror. The focal length of the mirror is",
+      "options": [
+        "90 cm",
+        "20 cm",
+        "40 cm",
+        "10 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/f = 1/u + 1/v = 1/30 + 1/60 = 3/60 = 1/20, so f = 20 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object placed 20 cm in front of a concave mirror forms a real image at 20 cm from the mirror. The radius of curvature of the mirror is",
+      "options": [
+        "30 cm",
+        "10 cm",
+        "40 cm",
+        "20 cm"
+      ],
+      "answer": 3,
+      "explanation": "1/f = 1/20 + 1/20 = 1/10, so f = 10 cm; hence R = 2f = 20 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A concave mirror of focal length 10 cm has an object placed 15 cm in front of it. The magnification produced by the mirror is",
+      "options": [
+        "−0.5",
+        "−2",
+        "+0.5",
+        "+2"
+      ],
+      "answer": 1,
+      "explanation": "v = 30 cm, so m = −v/u = −30/15 = −2; the negative sign shows a real, inverted image twice the size of the object.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object 4 cm high is placed 30 cm in front of a concave mirror of focal length 10 cm. The height of the image is",
+      "options": [
+        "8 cm",
+        "4 cm",
+        "2 cm",
+        "1 cm"
+      ],
+      "answer": 2,
+      "explanation": "v = u f/(u − f) = 30 × 10/20 = 15 cm, so m = −15/30 = −0.5 and the image height is 0.5 × 4 = 2 cm, inverted.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed 30 cm in front of a convex mirror of focal length 15 cm. The magnification of the image is",
+      "options": [
+        "−1/3",
+        "+2/3",
+        "3",
+        "+1/3"
+      ],
+      "answer": 3,
+      "explanation": "v = u f/(u − f) = 30 × (−15)/(30 + 15) = −10 cm, so m = −v/u = 10/30 = +1/3; the image is virtual, erect and one-third the size of the object.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed at the centre of curvature of a concave mirror. The image formed is",
+      "options": [
+        "at the centre of curvature, real, inverted and of the same size as the object",
+        "at the focus, real, inverted and diminished",
+        "at infinity, real and highly magnified",
+        "behind the mirror, virtual and erect"
+      ],
+      "answer": 0,
+      "explanation": "When u = R = 2f, the mirror formula gives v = 2f = R, so the image is formed at the centre of curvature itself; the magnification is −1, i.e. the image is inverted and of the same size.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which type of spherical mirror can form both real and virtual images?",
+      "options": [
+        "A plane mirror",
+        "A convex mirror",
+        "A cylindrical mirror",
+        "A concave mirror"
+      ],
+      "answer": 3,
+      "explanation": "A concave mirror forms a real image when the object is beyond the focus and a virtual image when the object lies between the pole and the focus; a convex mirror always gives a virtual image.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When an object is placed at the principal focus of a concave mirror, the image is formed",
+      "options": [
+        "at the focus itself",
+        "at the centre of curvature",
+        "behind the mirror",
+        "at infinity"
+      ],
+      "answer": 3,
+      "explanation": "For u = f, 1/v = 1/f − 1/u = 0, so v is infinite; the reflected rays emerge parallel and the image is formed at infinity.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed between the pole and the principal focus of a concave mirror. The image formed is",
+      "options": [
+        "real, inverted and magnified",
+        "virtual, inverted and diminished",
+        "virtual, erect and magnified",
+        "real, erect and diminished"
+      ],
+      "answer": 2,
+      "explanation": "For an object between the pole and the focus the reflected rays diverge, so the image is virtual and erect; the mirror formula gives a magnification greater than 1.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of the following is true of a virtual image?",
+      "options": [
+        "It can be obtained on a screen and is always inverted",
+        "It is always of the same size as the object",
+        "It is always formed by a convex lens",
+        "It cannot be obtained on a screen and is always erect"
+      ],
+      "answer": 3,
+      "explanation": "In a virtual image the reflected rays only appear to meet, so the image cannot be caught on a screen; it is erect and lies behind the mirror.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A concave mirror of focal length 15 cm has an object placed 20 cm in front of it. The image is formed at a distance of",
+      "options": [
+        "60 cm from the mirror",
+        "8.6 cm from the mirror",
+        "45 cm from the mirror",
+        "30 cm from the mirror"
+      ],
+      "answer": 0,
+      "explanation": "1/v = 1/15 − 1/20 = (4 − 3)/60 = 1/60, so v = 60 cm; the image is real, inverted and three times as large as the object.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object 6 cm high is placed 15 cm in front of a concave mirror of focal length 10 cm. The height of the image is",
+      "options": [
+        "6 cm",
+        "3 cm",
+        "24 cm",
+        "12 cm"
+      ],
+      "answer": 3,
+      "explanation": "v = 15 × 10/(15 − 10) = 30 cm, so m = −30/15 = −2 and the image height is 2 × 6 = 12 cm, inverted.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A concave mirror has a focal length of 12 cm. An object is placed only 6 cm in front of it. The image formed is",
+      "options": [
+        "12 cm behind the mirror",
+        "12 cm in front of the mirror",
+        "6 cm behind the mirror",
+        "4 cm in front of the mirror"
+      ],
+      "answer": 0,
+      "explanation": "v = u f/(u − f) = 6 × 12/(6 − 12) = −12 cm; the negative sign shows a virtual image 12 cm behind the mirror, erect and twice as large as the object.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object is placed 12 cm in front of a concave mirror of focal length 8 cm. The image distance and magnification are",
+      "options": [
+        "v = 24 cm, m = −2",
+        "v = 12 cm, m = −1",
+        "v = 24 cm, m = +2",
+        "v = 4.8 cm, m = −0.4"
+      ],
+      "answer": 0,
+      "explanation": "1/v = 1/8 − 1/12 = (3 − 2)/24 = 1/24, so v = 24 cm and m = −v/u = −24/12 = −2; the image is real, inverted and twice as large.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A concave mirror has a radius of curvature of 48 cm. An object is placed 36 cm in front of it. The image is formed at",
+      "options": [
+        "72 cm from the mirror",
+        "24 cm from the mirror",
+        "144 cm from the mirror",
+        "48 cm from the mirror"
+      ],
+      "answer": 0,
+      "explanation": "f = R/2 = 24 cm, so 1/v = 1/24 − 1/36 = (3 − 2)/72 = 1/72 and v = 72 cm; the image is real and inverted.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object is placed 10 cm in front of a concave mirror of focal length 20 cm. The image is",
+      "options": [
+        "virtual, 6.7 cm behind the mirror and half the size of the object",
+        "real, 30 cm in front of the mirror and three times as large as the object",
+        "real, 20 cm in front of the mirror and twice as large as the object",
+        "virtual, 20 cm behind the mirror and twice as large as the object"
+      ],
+      "answer": 3,
+      "explanation": "v = u f/(u − f) = 10 × 20/(10 − 20) = −20 cm, so the image is 20 cm behind the mirror; m = −v/u = +2, i.e. virtual, erect and twice as large.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object is placed 6 cm in front of a convex mirror of focal length 12 cm. The image is formed",
+      "options": [
+        "4 cm in front of the mirror and is two-thirds the size of the object",
+        "4 cm behind the mirror and is two-thirds the size of the object",
+        "3 cm behind the mirror and is half the size of the object",
+        "12 cm behind the mirror and is twice the size of the object"
+      ],
+      "answer": 1,
+      "explanation": "v = u f/(u − f) = 6 × (−12)/(6 + 12) = −4 cm, so the image is 4 cm behind the mirror; m = −v/u = 4/6 = +2/3.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A concave mirror of focal length 12 cm forms a virtual image three times as large as the object. The object distance is",
+      "options": [
+        "4 cm",
+        "16 cm",
+        "8 cm",
+        "36 cm"
+      ],
+      "answer": 2,
+      "explanation": "For a virtual, erect image m = +3, so v = −3u. Then 1/u − 1/(3u) = 1/12 gives 2/(3u) = 1/12, so u = 8 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A concave mirror of focal length 15 cm is to form a real image three times as large as the object. The object must be placed at a distance of",
+      "options": [
+        "60 cm",
+        "45 cm",
+        "10 cm",
+        "20 cm"
+      ],
+      "answer": 3,
+      "explanation": "For a real image m = −3, so v = 3u. Then 1/u + 1/(3u) = 1/15 gives 4/(3u) = 1/15, so u = 20 cm and v = 60 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A concave mirror of focal length 10 cm forms a real image twice as large as the object. The object distance is",
+      "options": [
+        "15 cm",
+        "30 cm",
+        "5 cm",
+        "20 cm"
+      ],
+      "answer": 0,
+      "explanation": "For a real image m = −2, so v = 2u. Then 1/u + 1/(2u) = 1/10 gives 3/(2u) = 1/10, so u = 15 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object placed 10 cm in front of a concave mirror forms a real image 30 cm from the mirror. The radius of curvature of the mirror is",
+      "options": [
+        "15 cm",
+        "7.5 cm",
+        "40 cm",
+        "30 cm"
+      ],
+      "answer": 0,
+      "explanation": "1/f = 1/10 + 1/30 = 4/30 = 2/15, so f = 7.5 cm; hence R = 2f = 15 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object is placed 10 cm in front of a convex mirror of focal length 10 cm. The image is",
+      "options": [
+        "5 cm in front of the mirror and half the size of the object",
+        "20 cm behind the mirror and twice the size of the object",
+        "5 cm behind the mirror and half the size of the object",
+        "10 cm behind the mirror and of the same size as the object"
+      ],
+      "answer": 2,
+      "explanation": "v = u f/(u − f) = 10 × (−10)/(10 + 10) = −5 cm, so the image is 5 cm behind the mirror; m = −v/u = 5/10 = +0.5.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object is placed 20 cm in front of a concave mirror of focal length 40 cm. The image formed is",
+      "options": [
+        "virtual, 40 cm behind the mirror and twice as large as the object",
+        "real, 40 cm in front of the mirror and twice as large as the object",
+        "real, 60 cm in front of the mirror and three times as large as the object",
+        "virtual, 13.3 cm behind the mirror and two-thirds the size of the object"
+      ],
+      "answer": 0,
+      "explanation": "v = u f/(u − f) = 20 × 40/(20 − 40) = −40 cm, so the image is 40 cm behind the mirror; m = −v/u = +2, i.e. virtual, erect and magnified twice.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object is placed 10 cm in front of a convex mirror of focal length 15 cm. The magnification of the image is",
+      "options": [
+        "+1.5",
+        "+0.6",
+        "−0.6",
+        "+0.4"
+      ],
+      "answer": 1,
+      "explanation": "v = u f/(u − f) = 10 × (−15)/(10 + 15) = −6 cm, so m = −v/u = 6/10 = +0.6; the image is virtual, erect and diminished.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A concave mirror has a radius of curvature of 60 cm. An object is placed 45 cm in front of it. The image distance and magnification are",
+      "options": [
+        "v = 180 cm, m = −4",
+        "v = 30 cm, m = −0.67",
+        "v = 90 cm, m = +2",
+        "v = 90 cm, m = −2"
+      ],
+      "answer": 3,
+      "explanation": "f = R/2 = 30 cm, so 1/v = 1/30 − 1/45 = (3 − 2)/90 = 1/90 and v = 90 cm; m = −v/u = −90/45 = −2.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex mirror forms an image one-fourth the size of an object placed 30 cm in front of it. The radius of curvature of the mirror is",
+      "options": [
+        "60 cm",
+        "20 cm",
+        "10 cm",
+        "40 cm"
+      ],
+      "answer": 1,
+      "explanation": "m = +1/4 gives v = −u/4 = −7.5 cm. Then 1/f = 1/30 − 1/7.5 = 1/30 − 4/30 = −1/10, so f = −10 cm and R = 2f = 20 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object 2 cm high is placed 18 cm in front of a concave mirror of focal length 12 cm. The image is",
+      "options": [
+        "6 cm high, inverted and real",
+        "4 cm high, erect and virtual",
+        "4 cm high, inverted and real",
+        "1.3 cm high, inverted and real"
+      ],
+      "answer": 2,
+      "explanation": "v = 18 × 12/(18 − 12) = 36 cm, so m = −36/18 = −2; the image height is 2 × 2 = 4 cm and the negative sign shows it is inverted and real.",
+      "difficulty": "hard"
+    }
+  ]
+}
