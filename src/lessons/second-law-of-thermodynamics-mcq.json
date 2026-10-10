@@ -1,0 +1,289 @@
+{
+  "title": "Thermodynamics — 40 MCQs",
+  "grade": "XII",
+  "chapters": [11],
+  "date": "2026-10-10",
+  "description": "Covers thermodynamic systems and processes, the second law of thermodynamics, heat engines, Otto, Diesel and Carnot cycles, refrigerators, and entropy and disorder.",
+  "questions": [
+    {
+      "q": "A thermodynamic system is",
+      "options": ["any region of the universe under consideration", "always isolated from surroundings", "always at constant temperature", "always open"],
+      "answer": 0,
+      "explanation": "A thermodynamic system is a definite portion of matter or space chosen for study, separated from the surroundings by a boundary.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An isolated system can exchange",
+      "options": ["both matter and energy with surroundings", "only energy with surroundings", "only matter with surroundings", "neither matter nor energy with surroundings"],
+      "answer": 3,
+      "explanation": "An isolated system is completely sealed and insulated; neither matter nor energy can cross its boundary.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The second law of thermodynamics states that",
+      "options": ["energy is conserved", "heat flows spontaneously from a hotter to a colder body", "entropy of an isolated system can decrease", "work can be completely converted into heat"],
+      "answer": 1,
+      "explanation": "One statement of the second law is that heat cannot spontaneously flow from a colder to a hotter body.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A heat engine converts",
+      "options": ["heat completely into work", "part of the heat absorbed into work", "work completely into heat", "chemical energy into electrical energy"],
+      "answer": 1,
+      "explanation": "No heat engine can convert all absorbed heat into work; some heat is always rejected to a sink.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The efficiency of a Carnot engine operating between temperatures T₁ and T₂ (T₁ > T₂) is",
+      "options": ["1 − T₂/T₁", "1 − T₁/T₂", "T₂/T₁", "T₁/T₂"],
+      "answer": 0,
+      "explanation": "η_Carnot = 1 − T₂/T₁ where temperatures are in kelvin.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a refrigerator heat is extracted from",
+      "options": ["the hot body and rejected to the cold body", "the cold body and rejected to the hot body", "both bodies equally", "the surroundings only"],
+      "answer": 1,
+      "explanation": "A refrigerator removes heat from a cold interior and rejects it to the warmer surroundings.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Entropy is a measure of",
+      "options": ["order in a system", "disorder or randomness in a system", "temperature only", "internal energy only"],
+      "answer": 1,
+      "explanation": "Entropy quantifies the degree of molecular disorder or the number of microscopic configurations.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The working substance in a Carnot engine is usually",
+      "options": ["an ideal gas", "a real gas only", "a liquid", "a solid"],
+      "answer": 0,
+      "explanation": "The classical Carnot cycle is analysed using an ideal gas as the working substance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Otto cycle is the ideal cycle for",
+      "options": ["diesel engines", "spark-ignition petrol engines", "steam turbines", "refrigerators"],
+      "answer": 1,
+      "explanation": "The Otto cycle models the processes in a spark-ignition (petrol) internal-combustion engine.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The Diesel cycle is the ideal cycle for",
+      "options": ["petrol engines", "compression-ignition diesel engines", "Carnot engines", "steam engines"],
+      "answer": 1,
+      "explanation": "The Diesel cycle approximates the processes in a compression-ignition diesel engine.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A Carnot engine operates between 400 K and 300 K. Its efficiency is",
+      "options": ["25 %", "75 %", "33 %", "50 %"],
+      "answer": 0,
+      "explanation": "η = 1 − 300/400 = 0.25 = 25 %.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A heat engine absorbs 1000 J of heat from a source and rejects 600 J to the sink. Its efficiency is",
+      "options": ["40 %", "60 %", "25 %", "100 %"],
+      "answer": 0,
+      "explanation": "Work output = 1000 − 600 = 400 J; η = 400/1000 = 0.40 = 40 %.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The coefficient of performance (COP) of a refrigerator working between 250 K and 300 K is",
+      "options": ["5", "6", "1.2", "0.2"],
+      "answer": 0,
+      "explanation": "COP = T₂/(T₁ − T₂) = 250/(300 − 250) = 250/50 = 5.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a reversible adiabatic process the change in entropy is",
+      "options": ["positive", "negative", "zero", "infinite"],
+      "answer": 2,
+      "explanation": "For a reversible adiabatic process Q = 0, so ΔS = Q_rev/T = 0.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The efficiency of an Otto cycle depends on",
+      "options": ["the compression ratio and γ", "only the temperature of the source", "only the fuel used", "the size of the engine"],
+      "answer": 0,
+      "explanation": "η_Otto = 1 − 1/r^{γ−1} where r is the compression ratio.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "According to the second law, the entropy of an isolated system",
+      "options": ["always decreases", "always remains constant", "never decreases", "is always zero"],
+      "answer": 2,
+      "explanation": "The entropy of an isolated system can only increase or remain constant; it never decreases.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A Carnot refrigerator extracts 200 J of heat from a cold body. If its COP is 4 the work input required is",
+      "options": ["50 J", "800 J", "200 J", "40 J"],
+      "answer": 0,
+      "explanation": "COP = Q₂/W ⇒ W = Q₂/COP = 200/4 = 50 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In the Carnot cycle the processes are",
+      "options": ["two isothermal and two adiabatic", "two isobaric and two adiabatic", "two isothermal and two isochoric", "four isobaric"],
+      "answer": 0,
+      "explanation": "The Carnot cycle consists of reversible isothermal expansion, adiabatic expansion, isothermal compression and adiabatic compression.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The statement “It is impossible to construct a device that operates in a cycle and produces no effect other than the transfer of heat from a colder to a hotter body” is known as",
+      "options": ["Kelvin-Planck statement", "Clausius statement", "Zeroth law", "First law"],
+      "answer": 1,
+      "explanation": "This is the Clausius statement of the second law of thermodynamics.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The Kelvin-Planck statement of the second law asserts that",
+      "options": ["a heat engine cannot have 100 % efficiency", "heat cannot flow from cold to hot", "entropy is conserved", "energy is conserved"],
+      "answer": 0,
+      "explanation": "It is impossible for a heat engine to convert heat completely into work without rejecting some heat to a sink.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For an ideal gas the change in entropy in an isothermal reversible expansion is",
+      "options": ["nR ln(V₂/V₁)", "nC_v ln(T₂/T₁)", "zero", "nR ln(T₂/T₁)"],
+      "answer": 0,
+      "explanation": "ΔS = Q_rev/T = nRT ln(V₂/V₁)/T = nR ln(V₂/V₁).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The efficiency of a Carnot engine is 40 %. If the temperature of the sink is 300 K the temperature of the source is",
+      "options": ["500 K", "750 K", "450 K", "600 K"],
+      "answer": 0,
+      "explanation": "0.4 = 1 − 300/T₁ ⇒ 300/T₁ = 0.6 ⇒ T₁ = 500 K.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a Diesel cycle heat is added at",
+      "options": ["constant volume", "constant pressure", "constant temperature", "constant entropy"],
+      "answer": 1,
+      "explanation": "In the ideal Diesel cycle heat addition occurs at constant pressure.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In an Otto cycle heat is added at",
+      "options": ["constant pressure", "constant volume", "constant temperature", "constant entropy"],
+      "answer": 1,
+      "explanation": "In the ideal Otto cycle heat addition occurs at constant volume.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The work done by a heat engine is 150 J and the heat rejected is 350 J. The heat absorbed from the source is",
+      "options": ["500 J", "200 J", "350 J", "150 J"],
+      "answer": 0,
+      "explanation": "Q₁ = W + Q₂ = 150 + 350 = 500 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A Carnot engine has an efficiency of 30 %. If the temperature of the source is increased by 10 % the new efficiency is approximately",
+      "options": ["36.4 %", "33 %", "40 %", "27 %"],
+      "answer": 0,
+      "explanation": "η = 1 − T₂/T₁ = 0.3 ⇒ T₂/T₁ = 0.7. New T₁' = 1.1 T₁; η' = 1 − 0.7/1.1 ≈ 1 − 0.636 ≈ 0.364 = 36.4 %.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A refrigerator maintains a temperature of −10 °C inside while the outside temperature is 30 °C. The minimum work required to extract 100 J of heat from the interior is approximately",
+      "options": ["15.2 J", "40 J", "100 J", "25 J"],
+      "answer": 0,
+      "explanation": "T₂ = 263 K, T₁ = 303 K; COP_max = 263/(303−263) = 6.575; W_min = Q₂/COP = 100/6.575 ≈ 15.2 J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An Otto engine has a compression ratio of 8 and γ = 1.4. Its ideal efficiency is approximately",
+      "options": ["56.5 %", "40 %", "70 %", "25 %"],
+      "answer": 0,
+      "explanation": "η = 1 − 1/r^{γ−1} = 1 − 1/8^{0.4}. 8^{0.4} ≈ 2.3; 1/2.3 ≈ 0.435; η ≈ 0.565 = 56.5 %.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The entropy change of the universe for a reversible process is",
+      "options": ["positive", "negative", "zero", "infinite"],
+      "answer": 2,
+      "explanation": "For any reversible process the total entropy of the system plus surroundings remains constant.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A heat engine operates between 600 K and 300 K. If it absorbs 1200 J of heat the maximum work it can produce is",
+      "options": ["600 J", "900 J", "300 J", "1200 J"],
+      "answer": 0,
+      "explanation": "η_max = 1 − 300/600 = 0.5; W_max = 0.5 × 1200 = 600 J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a Carnot cycle the ratio of the heat absorbed to the heat rejected is equal to the ratio of",
+      "options": ["the temperatures of source and sink", "the volumes at the beginning and end of expansion", "the pressures", "the entropies"],
+      "answer": 0,
+      "explanation": "Q₁/Q₂ = T₁/T₂ for a Carnot engine.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The change in entropy when 1 kg of ice at 0 °C melts into water at 0 °C (latent heat = 3.34 × 10⁵ J kg⁻¹) is",
+      "options": ["1223 J K⁻¹", "334 J K⁻¹", "0", "273 J K⁻¹"],
+      "answer": 0,
+      "explanation": "ΔS = Q/T = 3.34 × 10⁵ / 273 ≈ 1223 J K⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A diesel engine has a cut-off ratio of 2 and compression ratio of 16 with γ = 1.4. Its efficiency is lower than that of an Otto engine with the same compression ratio because",
+      "options": ["heat is added at constant pressure rather than constant volume", "heat is rejected at higher temperature", "the compression ratio is lower", "it uses more fuel"],
+      "answer": 0,
+      "explanation": "For the same compression ratio the Otto cycle (constant-volume heat addition) has higher efficiency than the Diesel cycle.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The Clausius inequality states that for any cyclic process",
+      "options": ["∮ dQ/T ≤ 0", "∮ dQ/T ≥ 0", "∮ dQ/T = 0 always", "∮ dQ = 0"],
+      "answer": 0,
+      "explanation": "∮ dQ/T ≤ 0 with equality only for reversible cycles.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A system absorbs 500 J of heat and performs 200 J of work. The change in internal energy is",
+      "options": ["300 J", "700 J", "−300 J", "200 J"],
+      "answer": 0,
+      "explanation": "ΔU = Q − W = 500 − 200 = 300 J (first law).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The entropy of a perfect crystal at absolute zero is",
+      "options": ["zero (third law)", "infinite", "maximum", "undefined"],
+      "answer": 0,
+      "explanation": "The third law of thermodynamics states that the entropy of a perfect crystal approaches zero as T → 0 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A Carnot engine and a Carnot refrigerator operate between the same two temperatures. If the engine has efficiency 0.4 the COP of the refrigerator is",
+      "options": ["1.5", "2.5", "0.6", "4"],
+      "answer": 0,
+      "explanation": "η = 1 − T₂/T₁ = 0.4 ⇒ T₂/T₁ = 0.6; COP = T₂/(T₁ − T₂) = 0.6 / 0.4 = 1.5.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In an irreversible process the entropy of the universe",
+      "options": ["increases", "decreases", "remains constant", "becomes zero"],
+      "answer": 0,
+      "explanation": "Irreversible processes generate entropy; the total entropy of the universe always increases.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The work output of a Carnot engine is 400 J. If the heat rejected to the sink is 600 J the efficiency is",
+      "options": ["40 %", "60 %", "25 %", "66.7 %"],
+      "answer": 0,
+      "explanation": "Q₁ = W + Q₂ = 400 + 600 = 1000 J; η = 400/1000 = 0.40 = 40 %.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For a reversible isothermal expansion of an ideal gas the change in internal energy is zero while the entropy",
+      "options": ["increases", "decreases", "remains zero", "becomes negative"],
+      "answer": 0,
+      "explanation": "ΔU = 0 but Q = W > 0, so ΔS = Q/T > 0; the gas becomes more disordered.",
+      "difficulty": "hard"
+    }
+  ]
+}
