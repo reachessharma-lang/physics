@@ -1,0 +1,289 @@
+{
+  "title": "Current Electricity — 40 MCQs",
+  "grade": "XI",
+  "chapters": [23],
+  "date": "2026-10-10",
+  "description": "Covers Ohm’s law, electrical resistance, resistivity and conductivity, R = ρl/A, sensors (strain gauge, LDR, thermistor), ohmic and non-ohmic behaviour, series and parallel combinations, potential divider, e.m.f. and internal resistance, electrical power, and the microscopic expression for current.",
+  "questions": [
+    {
+      "q": "Ohm’s law states that the current through a conductor is proportional to the potential difference across it provided",
+      "options": ["the temperature remains constant", "the length remains constant", "the area remains constant", "the material remains the same"],
+      "answer": 0,
+      "explanation": "Ohm’s law holds only when physical conditions, especially temperature, are kept constant.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Electric resistance is defined as the ratio of",
+      "options": ["current to potential difference", "potential difference to current", "power to current", "charge to time"],
+      "answer": 1,
+      "explanation": "R = V / I by definition.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The SI unit of resistance is",
+      "options": ["volt", "ampere", "ohm", "siemens"],
+      "answer": 2,
+      "explanation": "One ohm is the resistance of a conductor when 1 V produces a current of 1 A.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Resistivity ρ of a material is given by",
+      "options": ["ρ = R A / l", "ρ = R l / A", "ρ = R A l", "ρ = l / (R A)"],
+      "answer": 0,
+      "explanation": "From R = ρ l / A it follows that ρ = R A / l.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Conductivity σ is the reciprocal of",
+      "options": ["resistance", "resistivity", "current", "potential difference"],
+      "answer": 1,
+      "explanation": "σ = 1 / ρ.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The resistance of a wire is doubled when its",
+      "options": ["length is halved", "length is doubled (area constant)", "area is doubled", "both length and area are doubled"],
+      "answer": 1,
+      "explanation": "R ∝ l when A is constant, so doubling length doubles resistance.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a series combination of resistors the total resistance is",
+      "options": ["less than the smallest resistance", "equal to the sum of the individual resistances", "equal to the reciprocal of the sum of reciprocals", "independent of the individual values"],
+      "answer": 1,
+      "explanation": "R_s = R₁ + R₂ + … for series connection.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The e.m.f. of a cell is the energy transferred by the cell in driving",
+      "options": ["unit charge round a complete circuit", "unit charge through the external circuit only", "all the charge through the internal resistance", "unit current through the circuit"],
+      "answer": 0,
+      "explanation": "e.m.f. is defined as the work done per unit charge by the source in a complete circuit.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Power dissipated in a resistor R carrying current I is",
+      "options": ["I R", "I² R", "I / R", "V / I"],
+      "answer": 1,
+      "explanation": "P = I² R (also equal to V I and V² / R).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Electric current is defined as the rate of flow of",
+      "options": ["negative charge only", "positive charge", "energy", "power"],
+      "answer": 1,
+      "explanation": "By convention current is the rate of flow of positive charge: I = dQ/dt.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A wire of length 2 m and cross-sectional area 0.5 mm² has resistance 4 Ω. Its resistivity is",
+      "options": ["1 × 10⁻⁶ Ω m", "2 × 10⁻⁶ Ω m", "4 × 10⁻⁶ Ω m", "0.5 × 10⁻⁶ Ω m"],
+      "answer": 0,
+      "explanation": "ρ = R A / l = 4 × (0.5 × 10⁻⁶) / 2 = 1 × 10⁻⁶ Ω m.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two resistors of 3 Ω and 6 Ω are connected in parallel. Their equivalent resistance is",
+      "options": ["2 Ω", "9 Ω", "4.5 Ω", "1.5 Ω"],
+      "answer": 0,
+      "explanation": "1/R = 1/3 + 1/6 = 1/2 ⇒ R = 2 Ω.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A metallic conductor at constant temperature has an I–V graph that is",
+      "options": ["a straight line through the origin", "a curve concave to the V-axis", "a curve concave to the I-axis", "a horizontal line"],
+      "answer": 0,
+      "explanation": "Ohmic conductors obey V ∝ I, giving a straight line through the origin.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The I–V characteristic of a filament lamp is non-ohmic because",
+      "options": ["its resistance increases with temperature", "its resistance decreases with temperature", "current is independent of voltage", "it contains a semiconductor"],
+      "answer": 0,
+      "explanation": "As the filament heats, its resistance rises, so the graph curves and does not remain linear.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A potential divider consists of two resistors 2 kΩ and 3 kΩ in series across a 10 V supply. The p.d. across the 3 kΩ resistor is",
+      "options": ["6 V", "4 V", "5 V", "3 V"],
+      "answer": 0,
+      "explanation": "Voltage division: V = 10 × (3/(2+3)) = 6 V.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A cell of e.m.f. 1.5 V and internal resistance 0.5 Ω is connected to a 2.5 Ω resistor. The terminal p.d. is",
+      "options": ["1.25 V", "1.5 V", "1.0 V", "0.75 V"],
+      "answer": 0,
+      "explanation": "I = E/(R+r) = 1.5/3 = 0.5 A; V = I R = 0.5 × 2.5 = 1.25 V.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The resistance of an n-type thermistor",
+      "options": ["increases with increase in temperature", "decreases with increase in temperature", "remains constant with temperature", "first increases then decreases"],
+      "answer": 1,
+      "explanation": "In an n-type thermistor the number of charge carriers increases with temperature, lowering the resistance.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The resistance of a light-dependent resistor (LDR)",
+      "options": ["increases with increase in light intensity", "decreases with increase in light intensity", "is independent of light intensity", "becomes zero in darkness"],
+      "answer": 1,
+      "explanation": "Higher light intensity generates more charge carriers, reducing the resistance of the LDR.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A strain gauge works on the principle that resistance changes with",
+      "options": ["temperature only", "change in dimensions caused by strain", "light intensity", "magnetic field"],
+      "answer": 1,
+      "explanation": "Strain alters the length and cross-sectional area of the gauge wire, changing its resistance according to R = ρ l / A.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Three resistors of 2 Ω, 3 Ω and 6 Ω are connected in parallel. The equivalent resistance is",
+      "options": ["1 Ω", "11 Ω", "0.5 Ω", "2 Ω"],
+      "answer": 0,
+      "explanation": "1/R = 1/2 + 1/3 + 1/6 = 1 ⇒ R = 1 Ω.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A wire of resistance 10 Ω is stretched to twice its original length. Assuming volume is constant its new resistance is",
+      "options": ["20 Ω", "40 Ω", "5 Ω", "10 Ω"],
+      "answer": 1,
+      "explanation": "Volume constant ⇒ A' = A/2; R' = ρ (2l)/(A/2) = 4 (ρ l / A) = 40 Ω.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The power delivered by a 12 V battery that supplies a current of 2 A is",
+      "options": ["24 W", "6 W", "12 W", "48 W"],
+      "answer": 0,
+      "explanation": "P = I V = 2 × 12 = 24 W.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two identical cells each of e.m.f. 1.5 V and internal resistance 1 Ω are connected in series to an external resistance of 4 Ω. The current in the circuit is",
+      "options": ["0.5 A", "0.75 A", "1.5 A", "0.3 A"],
+      "answer": 0,
+      "explanation": "Total E = 3 V, total r = 2 Ω; I = 3/(4+2) = 0.5 A.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The microscopic expression for current is I = n A v q. Here n stands for",
+      "options": ["number of free charge carriers per unit volume", "total number of charge carriers", "drift speed", "charge of each carrier"],
+      "answer": 0,
+      "explanation": "n is the number density of free charge carriers.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A semiconductor diode is a non-ohmic device because its I–V graph is",
+      "options": ["a straight line through the origin", "not a straight line through the origin", "a horizontal line", "a vertical line"],
+      "answer": 1,
+      "explanation": "A diode conducts appreciably only in one direction and its characteristic is highly non-linear.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A copper wire of length 1 m and area 1 mm² has resistivity 1.7 × 10⁻⁸ Ω m. Its resistance is",
+      "options": ["0.017 Ω", "0.17 Ω", "1.7 Ω", "0.0017 Ω"],
+      "answer": 0,
+      "explanation": "R = ρ l / A = (1.7 × 10⁻⁸ × 1) / 10⁻⁶ = 1.7 × 10⁻² = 0.017 Ω.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Four resistors of 4 Ω each are connected to form a square. The resistance between two adjacent corners is",
+      "options": ["3 Ω", "4 Ω", "2 Ω", "1 Ω"],
+      "answer": 0,
+      "explanation": "Between adjacent corners one resistor is in parallel with the series combination of the other three: R = 4 ∥ 12 = 3 Ω.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A cell of e.m.f. 2 V and internal resistance 0.5 Ω is connected to two resistors of 1.5 Ω and 2.5 Ω in series. The terminal voltage is",
+      "options": ["1.6 V", "1.8 V", "2.0 V", "1.2 V"],
+      "answer": 0,
+      "explanation": "Total external R = 4 Ω; I = 2/(4+0.5) = 0.4 A; V = I R = 0.4 × 4 = 1.6 V.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a potential divider a thermistor and a fixed resistor are used to monitor temperature. As temperature rises the output voltage across the thermistor",
+      "options": ["increases", "decreases", "remains constant", "becomes zero"],
+      "answer": 1,
+      "explanation": "Thermistor resistance falls with rising temperature, so the p.d. across it decreases if it forms the lower part of the divider.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A 60 W, 240 V lamp is operated at 240 V. The current in the lamp is",
+      "options": ["0.25 A", "0.5 A", "4 A", "0.125 A"],
+      "answer": 0,
+      "explanation": "I = P / V = 60 / 240 = 0.25 A.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two wires of the same material have lengths in the ratio 1 : 2 and radii in the ratio 2 : 1. The ratio of their resistances is",
+      "options": ["1 : 8", "1 : 4", "2 : 1", "1 : 2"],
+      "answer": 0,
+      "explanation": "R ∝ l / r²; (l₁/l₂) × (r₂/r₁)² = (1/2) × (1/2)² = 1/8.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A battery of e.m.f. 6 V and internal resistance 1 Ω is connected to a 2 Ω resistor. The power dissipated in the external resistor is",
+      "options": ["8 W", "12 W", "4 W", "6 W"],
+      "answer": 0,
+      "explanation": "I = 6/(2+1) = 2 A; P = I² R = 4 × 2 = 8 W.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The drift velocity of electrons in a conductor is of the order of",
+      "options": ["10⁻⁴ m s⁻¹", "10⁸ m s⁻¹", "10² m s⁻¹", "10⁰ m s⁻¹"],
+      "answer": 0,
+      "explanation": "Typical drift speeds are a fraction of a millimetre per second (≈ 10⁻⁴ m s⁻¹).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Three resistors 2 Ω, 4 Ω and 4 Ω are connected such that the two 4 Ω resistors are in parallel and this combination is in series with the 2 Ω resistor. The total resistance is",
+      "options": ["4 Ω", "6 Ω", "3 Ω", "8 Ω"],
+      "answer": 0,
+      "explanation": "Parallel of 4 Ω and 4 Ω = 2 Ω; then series with 2 Ω gives 4 Ω.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A strain gauge has unstrained resistance 100 Ω. Under strain its length increases by 0.2 % and area decreases by 0.1 %. The approximate new resistance is",
+      "options": ["100.3 Ω", "100.1 Ω", "99.7 Ω", "101 Ω"],
+      "answer": 0,
+      "explanation": "ΔR/R ≈ Δl/l − ΔA/A = 0.002 − (−0.001) = 0.003; new R ≈ 100.3 Ω.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "When a 12 V battery of internal resistance 0.5 Ω is short-circuited the current is",
+      "options": ["24 A", "12 A", "6 A", "0 A"],
+      "answer": 0,
+      "explanation": "Short-circuit current = E / r = 12 / 0.5 = 24 A.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The equivalent resistance between points A and B of a network consisting of three 6 Ω resistors forming a triangle is",
+      "options": ["4 Ω", "6 Ω", "2 Ω", "9 Ω"],
+      "answer": 0,
+      "explanation": "Two resistors in series (12 Ω) are in parallel with the third (6 Ω): R = (12 × 6)/(12+6) = 4 Ω.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A current of 2 A flows through a conductor for 5 minutes. The total charge that passes is",
+      "options": ["600 C", "10 C", "2.5 C", "100 C"],
+      "answer": 0,
+      "explanation": "Q = I t = 2 × (5 × 60) = 600 C.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a potential divider used with an LDR, the output voltage increases when the light intensity increases. This implies that the LDR is connected",
+      "options": ["as the upper resistor of the divider", "as the lower resistor of the divider", "in parallel with the fixed resistor", "directly across the supply"],
+      "answer": 1,
+      "explanation": "When LDR resistance falls, the p.d. across the lower arm rises if the LDR is the lower resistor.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A 100 W heater operates at 200 V. The resistance of the heating element is",
+      "options": ["400 Ω", "200 Ω", "2 Ω", "50 Ω"],
+      "answer": 0,
+      "explanation": "R = V² / P = (200)² / 100 = 400 Ω.",
+      "difficulty": "hard"
+    }
+  ]
+}
