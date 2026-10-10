@@ -1,0 +1,491 @@
+{
+  "title": "Lenses — 40 MCQs",
+  "grade": "XI",
+  "chapters": [
+    17
+  ],
+  "date": "2026-10-10",
+  "description": "Properties of spherical lenses, the relation between object distance, image distance and focal length of a convex lens, visual angle and angular magnification, the lens maker's formula and its use in finding focal length, and the combined focal length of two thin lenses in contact.",
+  "questions": [
+    {
+      "q": "For a spherical lens, the relation between the object distance u, the image distance v and the focal length f (real-is-positive convention) is",
+      "options": [
+        "1/u − 1/v = 1/f",
+        "1/u + 1/v = 1/f",
+        "u + v = f",
+        "1/u + 1/v = 2/f"
+      ],
+      "answer": 1,
+      "explanation": "The thin lens formula is 1/u + 1/v = 1/f, where u, v and f are all measured from the optical centre of the lens.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which of the following statements about a convex lens is correct?",
+      "options": [
+        "It is a converging lens and its focal length is taken as positive",
+        "It is a converging lens and its focal length is taken as negative",
+        "It is a diverging lens and its focal length is taken as positive",
+        "It always forms a virtual image of a real object"
+      ],
+      "answer": 0,
+      "explanation": "A convex lens is thicker at the middle, so it converges a parallel beam of light to a real focus; by the real-is-positive convention its focal length is positive.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The linear magnification m produced by a lens is given by",
+      "options": [
+        "m = +v/u = h_i/h_o",
+        "m = −u/v = h_i/h_o",
+        "m = −v/u = h_i/h_o",
+        "m = v × u = h_i/h_o"
+      ],
+      "answer": 2,
+      "explanation": "Magnification is the ratio of the image height to the object height, and it also equals −v/u; a negative value shows that the image is real and inverted.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The angular magnification of an optical instrument is defined as the ratio of",
+      "options": [
+        "the size of the image to the size of the object",
+        "the focal length of the lens to the object distance",
+        "the angle subtended at the eye by the image to the angle subtended at the eye by the object when viewed directly",
+        "the image distance to the object distance"
+      ],
+      "answer": 2,
+      "explanation": "Angular magnification compares the visual angle produced by the image with the visual angle subtended by the object itself, both measured at the eye.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The visual angle of an object at the eye is the angle",
+      "options": [
+        "subtended by the object at the eye, and a larger visual angle makes the object appear larger",
+        "subtended by the image at the principal focus",
+        "between the incident ray and the emergent ray through a lens",
+        "between the two ends of the object and the optical centre of a lens"
+      ],
+      "answer": 0,
+      "explanation": "The apparent size of an object depends on the visual angle it subtends at the eye; optical instruments increase this angle, thereby magnifying the object.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Lens maker's formula for a thin lens of refractive index n and radii of curvature R₁ and R₂ is",
+      "options": [
+        "1/f = n(1/R₁ − 1/R₂)",
+        "1/f = (n + 1)(1/R₁ − 1/R₂)",
+        "1/f = (n − 1)(1/R₁ + 1/R₂)",
+        "1/f = (n − 1)(1/R₁ − 1/R₂)"
+      ],
+      "answer": 3,
+      "explanation": "Lens maker's formula is 1/f = (n − 1)(1/R₁ − 1/R₂), which shows that the focal length depends on the material of the lens and on the curvature of its two surfaces.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When two thin lenses of focal lengths f₁ and f₂ are placed in contact, the focal length F of the combination is given by",
+      "options": [
+        "1/F = 1/f₁ + 1/f₂",
+        "1/F = 1/f₁ − 1/f₂",
+        "F = f₁ + f₂",
+        "F = f₁ f₂"
+      ],
+      "answer": 0,
+      "explanation": "The powers of lenses in contact add, so P = P₁ + P₂, which in terms of focal lengths gives 1/F = 1/f₁ + 1/f₂.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The power of a lens is defined as the reciprocal of its focal length in metres, and its SI unit is",
+      "options": [
+        "the radian (rad)",
+        "the watt (W)",
+        "the metre (m)",
+        "the dioptre (D)"
+      ],
+      "answer": 3,
+      "explanation": "P = 1/f with f in metres, so the unit of power is m⁻¹, which is called the dioptre; a convex lens has positive power and a concave lens negative power.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The image formed by a concave lens of a real object placed anywhere in front of it is always",
+      "options": [
+        "virtual, inverted and magnified",
+        "virtual, erect and diminished",
+        "real, inverted and magnified",
+        "real, erect and of the same size"
+      ],
+      "answer": 1,
+      "explanation": "A concave lens diverges the refracted rays, so the image is always virtual, erect and smaller than the object, and it lies on the same side as the object.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The power of a convex lens of focal length 20 cm is",
+      "options": [
+        "2 D",
+        "20 D",
+        "0.2 D",
+        "5 D"
+      ],
+      "answer": 3,
+      "explanation": "P = 1/f = 1/0.20 m = 5 dioptre.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An object is placed 15 cm from a convex lens of focal length 10 cm. The image is formed at a distance of",
+      "options": [
+        "25 cm from the lens",
+        "30 cm on the same side as the object",
+        "6 cm from the lens",
+        "30 cm from the lens"
+      ],
+      "answer": 3,
+      "explanation": "1/v = 1/f − 1/u = 1/10 − 1/15 = 1/30, so v = +30 cm; the image is real and is formed on the other side of the lens.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed 20 cm from a convex lens of focal length 10 cm. The magnification produced is",
+      "options": [
+        "+2",
+        "−2",
+        "−1",
+        "+1"
+      ],
+      "answer": 2,
+      "explanation": "v = u f/(u − f) = 20 × 10/10 = 20 cm, so m = −v/u = −20/20 = −1; the image is real, inverted and of the same size.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed 30 cm from a convex lens of focal length 20 cm. The image distance is",
+      "options": [
+        "30 cm",
+        "60 cm",
+        "50 cm",
+        "12 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/v = 1/20 − 1/30 = (3 − 2)/60 = 1/60, so v = 60 cm, a real image on the other side of the lens.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed only 5 cm from a convex lens of focal length 10 cm. The image is formed",
+      "options": [
+        "at infinity",
+        "5 cm from the lens on the same side",
+        "10 cm from the lens on the same side as the object",
+        "10 cm from the lens on the other side"
+      ],
+      "answer": 2,
+      "explanation": "v = u f/(u − f) = 5 × 10/(5 − 10) = −10 cm; the negative sign shows a virtual image 10 cm from the lens on the same side as the object.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed 10 cm from a convex lens of focal length 15 cm. The image formed is",
+      "options": [
+        "virtual, 6 cm from the lens on the same side",
+        "real, 25 cm from the lens on the other side",
+        "virtual, 30 cm from the lens on the same side as the object",
+        "real, 30 cm from the lens on the other side"
+      ],
+      "answer": 2,
+      "explanation": "v = 10 × 15/(10 − 15) = −30 cm, so the image is virtual, erect and magnified three times, formed on the same side as the object.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed 30 cm from a concave lens of focal length 20 cm. The image is formed at a distance of",
+      "options": [
+        "12 cm from the lens on the other side",
+        "20 cm from the lens on the other side",
+        "12 cm from the lens on the same side as the object",
+        "60 cm from the lens on the same side"
+      ],
+      "answer": 2,
+      "explanation": "For a concave lens f = −20 cm, so v = u f/(u − f) = 30 × (−20)/(30 + 20) = −12 cm; the image is virtual and lies 12 cm from the lens on the same side as the object.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two thin convex lenses of focal length 20 cm each are placed in contact. The focal length of the combination is",
+      "options": [
+        "40 cm",
+        "10 cm",
+        "5 cm",
+        "20 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/F = 1/f₁ + 1/f₂ = 1/20 + 1/20 = 1/10, so F = 10 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two thin convex lenses of focal lengths 20 cm and 30 cm are placed in contact. The focal length of the combination is",
+      "options": [
+        "6 cm",
+        "25 cm",
+        "50 cm",
+        "12 cm"
+      ],
+      "answer": 3,
+      "explanation": "1/F = 1/20 + 1/30 = (3 + 2)/60 = 1/12, so F = 12 cm, which is smaller than either focal length.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A convex lens of focal length 20 cm is placed in contact with another lens and the combination has a focal length of 60 cm. The focal length of the second lens is",
+      "options": [
+        "+60 cm (convex lens)",
+        "−15 cm (concave lens)",
+        "+30 cm (convex lens)",
+        "−30 cm (concave lens)"
+      ],
+      "answer": 3,
+      "explanation": "1/f₂ = 1/F − 1/f₁ = 1/60 − 1/20 = −2/60 = −1/30, so f₂ = −30 cm; the second lens is concave.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two thin lenses of focal lengths 10 cm and 15 cm are placed in contact. The power of the combination is",
+      "options": [
+        "16.7 D",
+        "25 D",
+        "4 D",
+        "6.7 D"
+      ],
+      "answer": 0,
+      "explanation": "F = 1/(1/10 + 1/15) = 6 cm = 0.06 m, so P = 1/F = 1/0.06 ≈ 16.7 D; equivalently P = P₁ + P₂ = 10 + 6.7 = 16.7 D.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A convex lens of focal length 30 cm is placed in contact with a second lens, and the combination behaves as a concave lens of focal length 15 cm. The second lens is",
+      "options": [
+        "a convex lens of focal length 45 cm",
+        "a concave lens of focal length 10 cm",
+        "a concave lens of focal length 45 cm",
+        "a convex lens of focal length 10 cm"
+      ],
+      "answer": 1,
+      "explanation": "1/f₂ = 1/F − 1/f₁ = −1/15 − 1/30 = −1/10, so f₂ = −10 cm; the second lens is concave with focal length 10 cm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The power of a concave lens of focal length 50 cm is",
+      "options": [
+        "+50 D",
+        "−2 D",
+        "−0.5 D",
+        "+2 D"
+      ],
+      "answer": 1,
+      "explanation": "f = −50 cm = −0.5 m, so P = 1/f = −2 dioptre.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A magnifying glass of focal length 5 cm is used to view an object with the image at the least distance of distinct vision (25 cm). The angular magnification is",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "M = 1 + D/f = 1 + 25/5 = 6, where D = 25 cm is the least distance of distinct vision.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A simple microscope of focal length 10 cm forms the image at the near point, 25 cm from the eye. Its magnifying power is",
+      "options": [
+        "0.4",
+        "3.5",
+        "2.5",
+        "1.5"
+      ],
+      "answer": 2,
+      "explanation": "M = 1 + D/f = 1 + 25/10 = 3.5 when the image is at the near point; for the image at infinity M = D/f = 25/10 = 2.5.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An object is placed 12 cm from a convex lens of focal length 8 cm. The image is formed at a distance of",
+      "options": [
+        "24 cm from the lens",
+        "20 cm from the lens",
+        "4.8 cm from the lens",
+        "24 cm on the same side as the object"
+      ],
+      "answer": 0,
+      "explanation": "1/v = 1/8 − 1/12 = (3 − 2)/24 = 1/24, so v = 24 cm; the image is real, inverted and twice as large as the object.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A biconvex lens is made of glass of refractive index 1.6 and both its surfaces have a radius of curvature of 24 cm. Its focal length is",
+      "options": [
+        "20 cm",
+        "12 cm",
+        "40 cm",
+        "24 cm"
+      ],
+      "answer": 0,
+      "explanation": "1/f = (n − 1)(1/R₁ − 1/R₂) = (1.6 − 1)(1/24 + 1/24) = 0.6 × (2/24) = 0.05 cm⁻¹, so f = 20 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A plano-convex lens is made of glass of refractive index 1.5 and the curved surface has a radius of curvature of 12 cm. Its focal length is",
+      "options": [
+        "6 cm",
+        "24 cm",
+        "18 cm",
+        "12 cm"
+      ],
+      "answer": 1,
+      "explanation": "Here R₁ = +12 cm and R₂ = ∞, so 1/f = (1.5 − 1)(1/12 − 0) = 0.5/12 = 1/24, giving f = 24 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 10 cm is placed in contact with a concave lens of focal length 15 cm. The focal length of the combination is",
+      "options": [
+        "30 cm, and it behaves as a convex lens",
+        "6 cm, and it behaves as a convex lens",
+        "25 cm, and it behaves as a concave lens",
+        "30 cm, and it behaves as a concave lens"
+      ],
+      "answer": 0,
+      "explanation": "1/F = 1/10 + 1/(−15) = 1/30, so F = +30 cm; the combination is still converging because the convex lens is the more powerful.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 12 cm is placed in contact with a convex lens of focal length 4 cm. The focal length of the combination is",
+      "options": [
+        "16 cm",
+        "48 cm",
+        "3 cm",
+        "8 cm"
+      ],
+      "answer": 2,
+      "explanation": "1/F = 1/12 + 1/4 = (1 + 3)/12 = 1/3, so F = 3 cm; the combination is much more powerful than either lens alone.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 20 cm is placed in contact with a concave lens of focal length 30 cm. The combination has a focal length of",
+      "options": [
+        "60 cm",
+        "12 cm",
+        "50 cm",
+        "−60 cm"
+      ],
+      "answer": 0,
+      "explanation": "1/F = 1/20 + 1/(−30) = (3 − 2)/60 = 1/60, so F = +60 cm, i.e. the combination behaves as a weak convex lens.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens forms a real image three times as large as the object placed 20 cm in front of it. The focal length of the lens is",
+      "options": [
+        "15 cm",
+        "30 cm",
+        "60 cm",
+        "10 cm"
+      ],
+      "answer": 0,
+      "explanation": "For a real image m = −3, so v = 3u = 60 cm. Then 1/f = 1/u + 1/v = 1/20 + 1/60 = 4/60 = 1/15, giving f = 15 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 15 cm forms a real image twice as large as the object. The object distance is",
+      "options": [
+        "45 cm",
+        "22.5 cm",
+        "30 cm",
+        "7.5 cm"
+      ],
+      "answer": 1,
+      "explanation": "For a real image m = −2, so v = 2u. Then 1/u + 1/(2u) = 1/15 gives 3/(2u) = 1/15, so u = 22.5 cm and v = 45 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of power +5 D is placed in contact with a concave lens of power −3 D. The focal length of the combination is",
+      "options": [
+        "20 cm",
+        "12.5 cm",
+        "−50 cm",
+        "50 cm"
+      ],
+      "answer": 3,
+      "explanation": "P = P₁ + P₂ = +5 − 3 = +2 D, so F = 1/P = 1/2 m = 50 cm; the combination behaves as a convex lens.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A glass lens (n = 1.5) has a focal length of 20 cm in air. When it is completely immersed in water (n = 1.33), its focal length becomes about",
+      "options": [
+        "27 cm",
+        "78 cm",
+        "15 cm",
+        "20 cm"
+      ],
+      "answer": 1,
+      "explanation": "In air, 1/f = (1.5 − 1)K = 1/20, so K = 0.1 cm⁻¹. In water, 1/f_w = (1.5/1.33 − 1) × 0.1 = 0.0128 cm⁻¹, giving f_w ≈ 78 cm; the lens becomes much weaker in water.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A magnifying glass of focal length 2.5 cm is used with the image at the least distance of distinct vision (25 cm). The angular magnification is",
+      "options": [
+        "10",
+        "5",
+        "2.5",
+        "11"
+      ],
+      "answer": 3,
+      "explanation": "M = 1 + D/f = 1 + 25/2.5 = 11; if instead the image were at infinity the magnification would be only 25/2.5 = 10.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An object is placed 30 cm from a concave lens of focal length 15 cm. The magnification of the image is",
+      "options": [
+        "−1/3",
+        "−3",
+        "+1/3",
+        "+3"
+      ],
+      "answer": 2,
+      "explanation": "v = u f/(u − f) = 30 × (−15)/(30 + 15) = −10 cm, so m = −v/u = +10/30 = +1/3; the image is virtual, erect and one-third the size of the object.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 20 cm is placed in contact with a concave lens of focal length 20 cm. The combination behaves as",
+      "options": [
+        "a concave lens of focal length 10 cm",
+        "a convex lens of focal length 40 cm",
+        "a convex lens of focal length 10 cm",
+        "a plane glass plate of infinite focal length"
+      ],
+      "answer": 3,
+      "explanation": "1/F = 1/20 + 1/(−20) = 0, so F is infinite; the two equal and opposite powers cancel and the combination neither converges nor diverges a beam.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 40 cm is combined with another lens so that the combination behaves as a concave lens of focal length 40 cm. The second lens is",
+      "options": [
+        "a concave lens of focal length 40 cm",
+        "a concave lens of focal length 80 cm",
+        "a convex lens of focal length 20 cm",
+        "a concave lens of focal length 20 cm"
+      ],
+      "answer": 3,
+      "explanation": "1/f₂ = 1/F − 1/f₁ = −1/40 − 1/40 = −1/20, so f₂ = −20 cm, i.e. a concave lens of focal length 20 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A lens is made of glass of refractive index 1.5 with radii of curvature R₁ = 10 cm and R₂ = −15 cm. Its focal length is",
+      "options": [
+        "6 cm",
+        "25 cm",
+        "12 cm",
+        "30 cm"
+      ],
+      "answer": 2,
+      "explanation": "1/f = (1.5 − 1)(1/10 − 1/(−15)) = 0.5 × (1/10 + 1/15) = 0.5 × (1/6) = 1/12, so f = 12 cm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A convex lens of focal length 10 cm forms a virtual image twice as large as the object. The object distance is",
+      "options": [
+        "10 cm",
+        "5 cm",
+        "20 cm",
+        "15 cm"
+      ],
+      "answer": 1,
+      "explanation": "For a virtual, erect image m = +2, so v = −2u. Then 1/u + 1/(−2u) = 1/10 gives 1/(2u) = 1/10, so u = 5 cm, i.e. the object lies between the lens and its focus.",
+      "difficulty": "hard"
+    }
+  ]
+}
