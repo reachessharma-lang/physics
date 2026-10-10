@@ -1,0 +1,149 @@
+{
+  "title": "Solids — 20 MCQs",
+  "grade": "XI",
+  "chapters": [25],
+  "date": "2026-10-10",
+  "description": "Covers energy levels and energy bands in solids, classification of metals, semiconductors and insulators on the basis of energy bands, intrinsic and extrinsic semiconductors, and the formation of p-type and n-type semiconductors.",
+  "questions": [
+    {
+      "q": "In an isolated atom the electrons occupy",
+      "options": ["continuous energy bands", "discrete energy levels", "only the valence band", "only the conduction band"],
+      "answer": 1,
+      "explanation": "Isolated atoms have sharp, discrete energy levels for their electrons.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When atoms come close to form a solid the discrete energy levels split into",
+      "options": ["energy bands", "single energy levels", "forbidden gaps only", "continuous spectra"],
+      "answer": 0,
+      "explanation": "Interatomic interaction causes each atomic level to split into a large number of closely spaced levels that form energy bands.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The energy gap between the valence band and the conduction band is called the",
+      "options": ["Fermi level", "forbidden energy gap", "work function", "ionization energy"],
+      "answer": 1,
+      "explanation": "The forbidden energy gap (band gap) is the energy range where no electron states exist.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In a metal the valence band and conduction band",
+      "options": ["are separated by a large gap", "overlap or have zero gap", "are completely empty", "do not exist"],
+      "answer": 1,
+      "explanation": "Metals have overlapping valence and conduction bands (or a partially filled conduction band), allowing free movement of electrons.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "An intrinsic semiconductor is a pure semiconductor in which",
+      "options": ["the number of free electrons equals the number of holes", "there are only free electrons", "there are only holes", "the band gap is zero"],
+      "answer": 0,
+      "explanation": "In an intrinsic semiconductor thermally generated electrons and holes are equal in number.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A semiconductor has a forbidden energy gap of the order of",
+      "options": ["10 eV", "1 eV", "0.01 eV", "100 eV"],
+      "answer": 1,
+      "explanation": "Typical semiconductor band gaps are around 1 eV (e.g., Si ≈ 1.1 eV, Ge ≈ 0.7 eV).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An insulator is characterized by a forbidden energy gap of approximately",
+      "options": ["less than 0.1 eV", "about 1 eV", "greater than 3 eV", "exactly zero"],
+      "answer": 2,
+      "explanation": "Insulators have large band gaps (typically > 3 eV), so electrons cannot easily jump to the conduction band at room temperature.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "n-type semiconductors are formed by doping a pure semiconductor with",
+      "options": ["trivalent impurities", "pentavalent impurities", "tetravalent impurities", "hexavalent impurities"],
+      "answer": 1,
+      "explanation": "Pentavalent (donor) atoms such as P or As contribute extra electrons, making the semiconductor n-type.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "p-type semiconductors are formed by doping a pure semiconductor with",
+      "options": ["pentavalent impurities", "trivalent impurities", "hexavalent impurities", "monovalent impurities"],
+      "answer": 1,
+      "explanation": "Trivalent (acceptor) atoms such as B or Al create holes, making the semiconductor p-type.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In an n-type semiconductor the majority charge carriers are",
+      "options": ["holes", "electrons", "protons", "ions"],
+      "answer": 1,
+      "explanation": "Donor impurities provide free electrons that become the majority carriers in n-type material.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a p-type semiconductor the majority charge carriers are",
+      "options": ["electrons", "holes", "neutrons", "positive ions only"],
+      "answer": 1,
+      "explanation": "Acceptor impurities create holes that act as the majority carriers in p-type material.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The Fermi level in an intrinsic semiconductor lies",
+      "options": ["near the conduction band", "near the valence band", "approximately in the middle of the forbidden gap", "inside the valence band"],
+      "answer": 2,
+      "explanation": "In pure semiconductors the Fermi level is located near the centre of the band gap.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "When a pentavalent atom is added to pure silicon, it acts as a",
+      "options": ["acceptor", "donor", "neutral atom", "hole generator"],
+      "answer": 1,
+      "explanation": "The fifth valence electron of the pentavalent atom is loosely bound and can be donated to the conduction band.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The resistivity of an intrinsic semiconductor",
+      "options": ["increases with increase in temperature", "decreases with increase in temperature", "remains constant with temperature", "first decreases then increases"],
+      "answer": 1,
+      "explanation": "Higher temperature generates more electron-hole pairs, increasing conductivity and therefore decreasing resistivity.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Germanium is doped with arsenic. The resulting semiconductor is",
+      "options": ["p-type", "n-type", "intrinsic", "an insulator"],
+      "answer": 1,
+      "explanation": "Arsenic is pentavalent and acts as a donor impurity, producing an n-type semiconductor.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Silicon is doped with boron. The resulting semiconductor is",
+      "options": ["n-type", "p-type", "intrinsic", "metallic"],
+      "answer": 1,
+      "explanation": "Boron is trivalent and acts as an acceptor impurity, producing a p-type semiconductor.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In an energy-band diagram the conduction band is the",
+      "options": ["highest filled band", "lowest empty or partially filled band that allows conduction", "forbidden gap", "valence band"],
+      "answer": 1,
+      "explanation": "The conduction band is the lowest energy band that is empty or partially filled and in which electrons can move freely under an applied field.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The energy gap of silicon is 1.1 eV. The minimum energy of a photon that can generate an electron-hole pair in silicon is",
+      "options": ["0.55 eV", "1.1 eV", "2.2 eV", "0.1 eV"],
+      "answer": 1,
+      "explanation": "A photon must supply at least the band-gap energy (1.1 eV) to excite an electron from the valence band to the conduction band.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "At absolute zero an intrinsic semiconductor behaves as",
+      "options": ["a perfect conductor", "a perfect insulator", "a metal", "a superconductor"],
+      "answer": 1,
+      "explanation": "At 0 K the valence band is completely filled and the conduction band is empty; no free carriers exist, so the material is insulating.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The number of free electrons in an intrinsic semiconductor is equal to the number of holes. If the semiconductor is doped with a donor impurity the Fermi level",
+      "options": ["moves towards the valence band", "moves towards the conduction band", "remains in the middle of the gap", "disappears"],
+      "answer": 1,
+      "explanation": "Donor doping increases the electron concentration, shifting the Fermi level upward toward the conduction band.",
+      "difficulty": "hard"
+    }
+  ]
+}
