@@ -1,0 +1,491 @@
+{
+  "title": "Ideal Gas — 40 MCQs",
+  "grade": "XI",
+  "chapters": [
+    13
+  ],
+  "date": "2026-10-10",
+  "description": "Pressure and volume coefficients of a gas, Charles's and Boyle's laws, absolute zero, the ideal gas equation, molecules and Avogadro's number, assumptions of the kinetic-molecular model, pressure of a gas, root mean square speed, and the relation between pressure, kinetic energy and temperature.",
+  "questions": [
+    {
+      "q": "The law which states that at constant temperature the product of the pressure and the volume of a given mass of gas is constant is",
+      "options": [
+        "Charles's law",
+        "Boyle's law",
+        "Dalton's law of partial pressures",
+        "Avogadro's law"
+      ],
+      "answer": 1,
+      "explanation": "Boyle's law gives PV = constant at constant temperature; Charles's law relates volume and temperature at constant pressure.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Charles's law for a fixed mass of gas at constant pressure states that",
+      "options": [
+        "V ∝ T",
+        "V ∝ 1/T",
+        "V ∝ T²",
+        "V ∝ P"
+      ],
+      "answer": 0,
+      "explanation": "At constant pressure the volume of a given mass of gas is directly proportional to its absolute temperature, V/T = constant.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The absolute zero of temperature on the Celsius scale is",
+      "options": [
+        "273.15 °C",
+        "0 °C",
+        "−100 °C",
+        "−273.15 °C"
+      ],
+      "answer": 3,
+      "explanation": "Absolute zero is 0 K, which corresponds to −273.15 °C on the Celsius scale; all gases would theoretically have zero volume there at constant pressure.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The equation of state of an ideal gas for n moles is",
+      "options": [
+        "PV = nR/T",
+        "PV² = nRT",
+        "P = nRTV",
+        "PV = nRT"
+      ],
+      "answer": 3,
+      "explanation": "Combining Boyle's law (PV = constant) and Charles's law (V ∝ T) for n moles gives the ideal gas equation PV = nRT.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Avogadro's number is",
+      "options": [
+        "6.022 × 10²⁴ mol⁻¹",
+        "6.022 × 10²² mol⁻¹",
+        "6.022 × 10²³ mol⁻¹",
+        "3.011 × 10²³ mol⁻¹"
+      ],
+      "answer": 2,
+      "explanation": "One mole of any substance contains 6.022 × 10²³ molecules (or particles); this number is Avogadro's number.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The SI unit of the universal gas constant R is",
+      "options": [
+        "J mol⁻¹ K⁻¹",
+        "N m K⁻¹",
+        "J K⁻¹",
+        "J mol⁻¹"
+      ],
+      "answer": 0,
+      "explanation": "From PV = nRT, R = PV/(nT), so its unit is (N m²)(m)/(mol K) = J mol⁻¹ K⁻¹.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For a fixed mass of gas kept at constant pressure, the volume at absolute zero temperature would theoretically become",
+      "options": [
+        "twice its volume at 0 °C",
+        "equal to its volume at 0 °C",
+        "zero",
+        "infinite"
+      ],
+      "answer": 2,
+      "explanation": "Since V ∝ T at constant pressure, the V–T graph is a straight line which, when produced backwards, meets the temperature axis at T = 0 K, where V = 0.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The average translational kinetic energy of one molecule of an ideal gas is",
+      "options": [
+        "(3/2) k T",
+        "(1/2) k T",
+        "3 k T",
+        "(3/2) R T"
+      ],
+      "answer": 0,
+      "explanation": "From kinetic theory the average translational kinetic energy of a molecule of an ideal gas is (3/2)kT, where k is Boltzmann's constant.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The root mean square speed of the molecules of a gas of molar mass M at absolute temperature T is",
+      "options": [
+        "√(2RT/M)",
+        "√(3RTM)",
+        "√(RT/M)",
+        "√(3RT/M)"
+      ],
+      "answer": 3,
+      "explanation": "Equating (1/3)ρc̄² with the gas pressure gives the root mean square speed as √(3RT/M) for one mole of an ideal gas.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Which of the following is NOT an assumption of the kinetic-molecular model of an ideal gas?",
+      "options": [
+        "A gas consists of a very large number of molecules",
+        "Molecular collisions are perfectly elastic",
+        "The volume of the molecules is negligible compared with the volume of the container",
+        "The molecules attract one another with strong intermolecular forces"
+      ],
+      "answer": 3,
+      "explanation": "In an ideal gas the intermolecular forces are assumed to be negligible; strong attraction between molecules belongs to real gases, not to the ideal-gas model.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The root mean square speed of oxygen molecules at 300 K is about (M = 32 g mol⁻¹, R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "241 m s⁻¹",
+        "483 m s⁻¹",
+        "386 m s⁻¹",
+        "966 m s⁻¹"
+      ],
+      "answer": 1,
+      "explanation": "c_rms = √(3RT/M) = √(3 × 8.31 × 300/0.032) = √233719 ≈ 483 m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The average translational kinetic energy of one mole of an ideal gas at 300 K is (R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "6.21 × 10⁻²¹ J",
+        "2.49 × 10³ J",
+        "3.74 × 10³ J",
+        "7.48 × 10³ J"
+      ],
+      "answer": 2,
+      "explanation": "For one mole, KE = (3/2)RT = 1.5 × 8.31 × 300 = 3739.5 J ≈ 3.74 × 10³ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "At the same temperature, the ratio of the root mean square speed of hydrogen molecules (M = 2 g mol⁻¹) to that of oxygen molecules (M = 32 g mol⁻¹) is",
+      "options": [
+        "1 : 16",
+        "1 : 4",
+        "4 : 1",
+        "16 : 1"
+      ],
+      "answer": 2,
+      "explanation": "At the same temperature c_rms ∝ 1/√M, so the ratio is √(32/2) = √16 = 4, i.e. 4 : 1.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The number of molecules in 1 cm³ of an ideal gas at STP (1.01 × 10⁵ Pa, 273 K) is about",
+      "options": [
+        "2.7 × 10¹⁹",
+        "6.0 × 10²³",
+        "2.7 × 10²²",
+        "2.7 × 10²⁵"
+      ],
+      "answer": 0,
+      "explanation": "n = PV/RT = (1.01 × 10⁵ × 1 × 10⁻⁶)/(8.31 × 273) = 4.45 × 10⁻⁵ mol, so N = 4.45 × 10⁻⁵ × 6.022 × 10²³ ≈ 2.7 × 10¹⁹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A gas occupies 200 cm³ at 27 °C. Keeping the pressure constant, its volume at 127 °C will be",
+      "options": [
+        "400 cm³",
+        "266.7 cm³",
+        "233.3 cm³",
+        "150 cm³"
+      ],
+      "answer": 1,
+      "explanation": "V/T = constant, so V₂ = V₁T₂/T₁ = 200 × 400/300 = 266.7 cm³.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A fixed mass of gas is at 0 °C at a pressure of 1 atm. Keeping the volume constant, the gas is heated to 273 °C. Its new pressure is",
+      "options": [
+        "0.5 atm",
+        "4 atm",
+        "2 atm",
+        "1.5 atm"
+      ],
+      "answer": 2,
+      "explanation": "At constant volume P ∝ T, so P₂ = P₁T₂/T₁ = 1 × (273 + 273)/(0 + 273) = 546/273 = 2 atm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The pressure of a gas is 1 × 10⁵ Pa and its density is 1.2 kg m⁻³. The root mean square speed of its molecules is",
+      "options": [
+        "250 m s⁻¹",
+        "866 m s⁻¹",
+        "500 m s⁻¹",
+        "375 m s⁻¹"
+      ],
+      "answer": 2,
+      "explanation": "P = (1/3)ρc̄², so c_rms = √(3P/ρ) = √(3 × 10⁵/1.2) = √250000 = 500 m s⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "At what temperature will oxygen molecules (M = 32 g mol⁻¹) have the same root mean square speed as helium molecules (M = 4 g mol⁻¹) at 300 K?",
+      "options": [
+        "37.5 K",
+        "300 K",
+        "2400 K",
+        "600 K"
+      ],
+      "answer": 2,
+      "explanation": "c_rms ∝ √(T/M), so T_O₂ = T_He × M_O₂/M_He = 300 × 0.032/0.004 = 2400 K.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The number of molecules in 3.2 g of oxygen gas (M = 32 g mol⁻¹) is",
+      "options": [
+        "6.022 × 10²³",
+        "6.022 × 10²²",
+        "1.505 × 10²³",
+        "3.011 × 10²²"
+      ],
+      "answer": 1,
+      "explanation": "Number of moles = 3.2/32 = 0.1, so the number of molecules = 0.1 × 6.022 × 10²³ = 6.022 × 10²².",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The volume occupied by 2 moles of an ideal gas at 1.5 × 10⁵ Pa and 300 K is (R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "0.033 m³",
+        "0.050 m³",
+        "0.066 m³",
+        "0.017 m³"
+      ],
+      "answer": 0,
+      "explanation": "V = nRT/P = (2 × 8.31 × 300)/(1.5 × 10⁵) = 4986/1.5 × 10⁵ = 0.0332 m³ ≈ 0.033 m³.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The kinetic energy per unit volume of an ideal gas at a pressure of 1 × 10⁵ Pa is",
+      "options": [
+        "6.7 × 10⁴ J m⁻³",
+        "1.5 × 10⁵ J m⁻³",
+        "3.0 × 10⁵ J m⁻³",
+        "1.0 × 10⁵ J m⁻³"
+      ],
+      "answer": 1,
+      "explanation": "For an ideal gas, KE per unit volume = (3/2)P = 1.5 × 1 × 10⁵ = 1.5 × 10⁵ J m⁻³.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For an ideal gas, the pressure coefficient and the volume coefficient are",
+      "options": [
+        "1/273.15 per °C and 273.15 per °C respectively",
+        "both equal to 273.15 per °C",
+        "both equal to 1/373.15 per °C",
+        "both equal to 1/273.15 per °C"
+      ],
+      "answer": 3,
+      "explanation": "By Charles's law the volume coefficient is 1/273.15 per °C and by the pressure law the pressure coefficient is also 1/273.15 per °C; both follow from the same extrapolation of the gas laws to absolute zero.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A gas at 2 atm occupies 600 cm³. It is compressed isothermally to 300 cm³. Its new pressure is",
+      "options": [
+        "1 atm",
+        "4 atm",
+        "2 atm",
+        "6 atm"
+      ],
+      "answer": 1,
+      "explanation": "For an isothermal change P₁V₁ = P₂V₂, so P₂ = (2 × 600)/300 = 4 atm.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The density of nitrogen (M = 28 g mol⁻¹) at 1 × 10⁵ Pa and 300 K is about (R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "11.2 kg m⁻³",
+        "2.24 kg m⁻³",
+        "0.28 kg m⁻³",
+        "1.12 kg m⁻³"
+      ],
+      "answer": 3,
+      "explanation": "ρ = PM/RT = (1 × 10⁵ × 0.028)/(8.31 × 300) = 2800/2493 ≈ 1.12 kg m⁻³.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The pressure of an ideal gas is doubled, its volume and mass remaining the same. The root mean square speed of its molecules becomes",
+      "options": [
+        "2 times the original value",
+        "√2 times the original value",
+        "4 times the original value",
+        "half the original value"
+      ],
+      "answer": 1,
+      "explanation": "At constant volume and mass, P = (1/3)ρc̄² gives P ∝ c̄², so doubling P makes c_rms √2 times its original value.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The average translational kinetic energy of a molecule of an ideal gas at 373 K is (k = 1.38 × 10⁻²³ J K⁻¹)",
+      "options": [
+        "7.72 × 10⁻²¹ J",
+        "2.57 × 10⁻²¹ J",
+        "3.86 × 10⁻²¹ J",
+        "5.15 × 10⁻²¹ J"
+      ],
+      "answer": 0,
+      "explanation": "KE = (3/2)kT = 1.5 × 1.38 × 10⁻²³ × 373 = 7.72 × 10⁻²¹ J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The total translational kinetic energy of 2 moles of an ideal gas at 300 K is (R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "3.74 × 10³ J",
+        "1.50 × 10⁴ J",
+        "2.49 × 10³ J",
+        "7.48 × 10³ J"
+      ],
+      "answer": 3,
+      "explanation": "Total KE = n(3/2)RT = 2 × 1.5 × 8.31 × 300 = 7479 J ≈ 7.48 × 10³ J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A gas has molecules of molar mass 0.02 kg mol⁻¹. The temperature at which their root mean square speed is 500 m s⁻¹ is about (R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "401.2 K",
+        "100.3 K",
+        "802.4 K",
+        "200.6 K"
+      ],
+      "answer": 3,
+      "explanation": "c_rms = √(3RT/M) gives T = Mc²/(3R) = (0.02 × 500²)/(3 × 8.31) = 5000/24.93 ≈ 200.6 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A gas occupies 500 cm³ at 27 °C and 1 atm. Its volume at 127 °C and 2 atm is",
+      "options": [
+        "500 cm³",
+        "133.3 cm³",
+        "333.3 cm³",
+        "750 cm³"
+      ],
+      "answer": 2,
+      "explanation": "From P₁V₁/T₁ = P₂V₂/T₂, V₂ = P₁V₁T₂/(T₁P₂) = (1 × 500 × 400)/(300 × 2) = 333.3 cm³.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A gas exerts a pressure of 1 atm at 0 °C. If it is heated at constant volume to 100 °C, its pressure becomes about",
+      "options": [
+        "1.100 atm",
+        "1.273 atm",
+        "2.732 atm",
+        "1.366 atm"
+      ],
+      "answer": 3,
+      "explanation": "At constant volume P ∝ T, so P₂ = 1 × (373.15/273.15) = 1.366 atm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "When the temperature of a gas is raised from 27 °C to 327 °C, the percentage increase in the root mean square speed of its molecules is about",
+      "options": [
+        "200%",
+        "41.4%",
+        "20.7%",
+        "100%"
+      ],
+      "answer": 1,
+      "explanation": "T rises from 300 K to 600 K, so c_rms increases by the factor √2 = 1.414, an increase of (1.414 − 1) × 100 ≈ 41.4%.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The number of molecules in 0.5 mole of a gas is",
+      "options": [
+        "3.011 × 10²³",
+        "1.204 × 10²⁴",
+        "6.022 × 10²³",
+        "3.011 × 10²²"
+      ],
+      "answer": 0,
+      "explanation": "N = n × N_A = 0.5 × 6.022 × 10²³ = 3.011 × 10²³ molecules.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A gas at 1 × 10⁵ Pa and 300 K has a density of 1.2 kg m⁻³. The molar mass of the gas is about (R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "30 g mol⁻¹",
+        "15 g mol⁻¹",
+        "120 g mol⁻¹",
+        "60 g mol⁻¹"
+      ],
+      "answer": 0,
+      "explanation": "From ρ = PM/RT, M = ρRT/P = (1.2 × 8.31 × 300)/(1 × 10⁵) = 0.0299 kg mol⁻¹ ≈ 30 g mol⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The root mean square speed of the molecules of a gas at 300 K is 500 m s⁻¹. The temperature at which their root mean square speed becomes 1000 m s⁻¹ is",
+      "options": [
+        "2400 K",
+        "1200 K",
+        "900 K",
+        "600 K"
+      ],
+      "answer": 1,
+      "explanation": "Since c_rms ∝ √T, quadrupling c̄² means quadrupling T: T = 300 × (1000/500)² = 300 × 4 = 1200 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The number of molecules per unit volume of an ideal gas at 1 × 10⁵ Pa and 300 K is about (k = 1.38 × 10⁻²³ J K⁻¹)",
+      "options": [
+        "2.4 × 10²⁵ m⁻³",
+        "2.4 × 10²² m⁻³",
+        "1.2 × 10²⁵ m⁻³",
+        "4.8 × 10²⁵ m⁻³"
+      ],
+      "answer": 0,
+      "explanation": "N/V = P/kT = (1 × 10⁵)/(1.38 × 10⁻²³ × 300) = 1 × 10⁵/4.14 × 10⁻²¹ ≈ 2.4 × 10²⁵ m⁻³.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The average kinetic energy of a molecule of a gas at 27 °C is E. If the temperature is raised by 1 K, the percentage increase in E is about",
+      "options": [
+        "3.3%",
+        "0.33%",
+        "1%",
+        "0.10%"
+      ],
+      "answer": 1,
+      "explanation": "KE ∝ T, and T = 300 K, so the fractional increase is 1/300 = 0.0033, i.e. about 0.33%.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The root mean square speed of hydrogen molecules (M = 2 g mol⁻¹) at 300 K is about (R = 8.31 J mol⁻¹ K⁻¹)",
+      "options": [
+        "9.66 × 10² m s⁻¹",
+        "3.86 × 10³ m s⁻¹",
+        "1.93 × 10³ m s⁻¹",
+        "4.83 × 10² m s⁻¹"
+      ],
+      "answer": 2,
+      "explanation": "c_rms = √(3RT/M) = √(3 × 8.31 × 300/0.002) = √3.74 × 10⁶ ≈ 1.93 × 10³ m s⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The pressure P exerted by an ideal gas is related to the translational kinetic energy E per unit volume of the gas by",
+      "options": [
+        "P = 3E",
+        "P = (1/3)E",
+        "P = (3/2)E",
+        "P = (2/3)E"
+      ],
+      "answer": 3,
+      "explanation": "Since P = (1/3)ρc̄² and E = (1/2)ρc̄², we get P = (2/3)E, i.e. the pressure of a gas is two-thirds of its kinetic energy per unit volume.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The volume occupied by 1 mole of an ideal gas at STP (1 atm, 273 K) is",
+      "options": [
+        "44.8 litres",
+        "11.2 litres",
+        "22.4 litres",
+        "2.24 litres"
+      ],
+      "answer": 2,
+      "explanation": "V = nRT/P = (1 × 8.31 × 273)/(1.01 × 10⁵) = 2.24 × 10⁻² m³ = 22.4 litres at STP.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The number of molecules in 8 g of oxygen gas (M = 32 g mol⁻¹) is",
+      "options": [
+        "1.505 × 10²³",
+        "6.022 × 10²³",
+        "2.408 × 10²⁴",
+        "3.011 × 10²³"
+      ],
+      "answer": 0,
+      "explanation": "Moles = 8/32 = 0.25, so N = 0.25 × 6.022 × 10²³ = 1.505 × 10²³.",
+      "difficulty": "hard"
+    }
+  ]
+}
