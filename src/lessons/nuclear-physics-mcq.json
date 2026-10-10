@@ -1,0 +1,289 @@
+{
+  "title": "Nuclear Physics — 40 MCQs",
+  "grade": "XI",
+  "chapters": [24],
+  "date": "2026-10-10",
+  "description": "Covers discovery of the nucleus, mass number and atomic number, nuclear density, isotopes, Einstein’s mass-energy relation, mass defect, pair creation and annihilation, binding energy and binding energy per nucleon, BE per nucleon versus mass number graph, nuclear fusion and fission, and related numerical problems.",
+  "questions": [
+    {
+      "q": "The nucleus of the atom was discovered by",
+      "options": ["J.J. Thomson", "Ernest Rutherford", "Niels Bohr", "James Chadwick"],
+      "answer": 1,
+      "explanation": "Rutherford’s gold-foil experiment led to the discovery of the small, dense, positively charged nucleus.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The mass number A of a nucleus is the total number of",
+      "options": ["protons only", "neutrons only", "protons and neutrons", "electrons and protons"],
+      "answer": 2,
+      "explanation": "Mass number A = Z + N, the total number of nucleons.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The atomic number Z of a nucleus is equal to the number of",
+      "options": ["neutrons", "protons", "nucleons", "electrons in the atom only"],
+      "answer": 1,
+      "explanation": "Atomic number Z is the number of protons in the nucleus.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Isotopes of an element have the same",
+      "options": ["mass number but different atomic number", "atomic number but different mass number", "number of neutrons", "number of nucleons"],
+      "answer": 1,
+      "explanation": "Isotopes have the same Z (same chemical identity) but different A (different number of neutrons).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Einstein’s mass-energy relation is",
+      "options": ["E = mc", "E = mc²", "E = m²c", "E = m/c²"],
+      "answer": 1,
+      "explanation": "The famous relation states that energy and mass are equivalent: E = mc².",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Mass defect of a nucleus is the difference between",
+      "options": ["the mass of the nucleus and the mass of its protons", "the total mass of individual nucleons and the actual mass of the nucleus", "the mass of neutrons and protons", "atomic mass and mass number"],
+      "answer": 1,
+      "explanation": "Mass defect Δm = (Zm_p + Nm_n) − M_nucleus; it appears as binding energy.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Binding energy of a nucleus is the energy",
+      "options": ["required to remove one nucleon", "equivalent to the mass defect", "released when an electron is captured", "of the emitted γ-ray only"],
+      "answer": 1,
+      "explanation": "BE = Δm c², the energy that must be supplied to separate the nucleus into individual nucleons.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Nuclear density is approximately",
+      "options": ["the same for all nuclei", "proportional to A", "inversely proportional to A", "zero for light nuclei"],
+      "answer": 0,
+      "explanation": "Nuclear radius R ∝ A⅓ so volume ∝ A; thus density is roughly constant for all nuclei.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Nuclear fission is the process in which",
+      "options": ["two light nuclei combine", "a heavy nucleus splits into lighter nuclei", "a nucleus emits an α-particle", "an electron and positron annihilate"],
+      "answer": 1,
+      "explanation": "Fission is the splitting of a heavy nucleus into two (or more) lighter fragments with release of energy.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Nuclear fusion is the process in which",
+      "options": ["a heavy nucleus splits", "two light nuclei combine to form a heavier nucleus", "a neutron is captured", "pair production occurs"],
+      "answer": 1,
+      "explanation": "Fusion is the combining of two light nuclei to form a heavier nucleus, releasing energy.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The unit of nuclear binding energy commonly used is",
+      "options": ["joule", "MeV", "newton", "coulomb"],
+      "answer": 1,
+      "explanation": "Binding energies are conveniently expressed in mega-electron-volts (MeV).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Pair production is the creation of",
+      "options": ["a proton and a neutron", "an electron and a positron", "two photons", "an α-particle"],
+      "answer": 1,
+      "explanation": "A high-energy photon can convert into an electron-positron pair in the field of a nucleus.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Annihilation of an electron and a positron produces",
+      "options": ["a single photon", "two photons", "a proton", "a neutron"],
+      "answer": 1,
+      "explanation": "Electron-positron annihilation yields two γ-ray photons, each of energy 0.511 MeV.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The graph of binding energy per nucleon versus mass number has a maximum near",
+      "options": ["A = 4", "A = 56", "A = 238", "A = 1"],
+      "answer": 1,
+      "explanation": "The curve peaks around ⁵⁶Fe, the most stable nucleus.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "1 atomic mass unit (u) is approximately equal to",
+      "options": ["931 MeV/c²", "1 MeV/c²", "1.6 × 10⁻¹⁹ J/c²", "9 × 10⁹ MeV/c²"],
+      "answer": 0,
+      "explanation": "By definition 1 u c² ≈ 931 MeV.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The radius of a nucleus of mass number A is given by R = R₀ A⅓ where R₀ is approximately",
+      "options": ["1.2 × 10⁻¹⁵ m", "1.2 × 10⁻¹⁰ m", "1.2 × 10⁻¹² m", "1.2 × 10⁻¹⁸ m"],
+      "answer": 0,
+      "explanation": "The empirical nuclear radius constant R₀ ≈ 1.2 fm = 1.2 × 10⁻¹⁵ m.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Nuclear density is of the order of",
+      "options": ["10³ kg m⁻³", "10¹⁷ kg m⁻³", "10⁻¹⁷ kg m⁻³", "10⁶ kg m⁻³"],
+      "answer": 1,
+      "explanation": "Typical nuclear density is about 2.3 × 10¹⁷ kg m⁻³.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The mass defect of a nucleus is 0.03 u. Its binding energy is approximately",
+      "options": ["28 MeV", "0.03 MeV", "931 MeV", "3 MeV"],
+      "answer": 0,
+      "explanation": "BE = 0.03 × 931 ≈ 27.9 MeV ≈ 28 MeV.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A nucleus ²³⁸U has",
+      "options": ["92 protons and 146 neutrons", "146 protons and 92 neutrons", "238 protons and 92 neutrons", "92 protons and 238 neutrons"],
+      "answer": 0,
+      "explanation": "Z = 92 for uranium; N = A − Z = 238 − 92 = 146.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The binding energy per nucleon of ⁴He is about 7 MeV. The total binding energy of the α-particle is",
+      "options": ["7 MeV", "28 MeV", "14 MeV", "4 MeV"],
+      "answer": 1,
+      "explanation": "Total BE = (BE per nucleon) × A = 7 × 4 = 28 MeV.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In the fission of ²³⁵U the energy released per fission is approximately",
+      "options": ["200 MeV", "20 MeV", "2 MeV", "2000 MeV"],
+      "answer": 0,
+      "explanation": "Typical energy release in thermal-neutron fission of ²³⁵U is about 200 MeV.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The process responsible for energy production in the Sun is",
+      "options": ["nuclear fission", "nuclear fusion", "radioactive decay", "chemical burning"],
+      "answer": 1,
+      "explanation": "The Sun’s energy comes from fusion of hydrogen into helium in its core.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the mass of a proton is 1.0078 u and that of a neutron is 1.0087 u, the mass defect of a deuteron (mass 2.0141 u) is",
+      "options": ["0.0024 u", "0.0016 u", "0.0035 u", "0.0009 u"],
+      "answer": 0,
+      "explanation": "Δm = (1.0078 + 1.0087) − 2.0141 = 0.0024 u.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The minimum energy of a photon that can produce an electron-positron pair is",
+      "options": ["0.511 MeV", "1.022 MeV", "2.044 MeV", "0.255 MeV"],
+      "answer": 1,
+      "explanation": "Rest energy of electron + positron = 2 × 0.511 = 1.022 MeV; the photon must supply at least this energy.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "On the BE per nucleon curve, nuclei with A around 56 are the most stable because",
+      "options": ["they have the highest mass defect per nucleon", "they have the lowest binding energy", "they are radioactive", "they have the largest radius"],
+      "answer": 0,
+      "explanation": "Highest BE per nucleon means the greatest mass defect per nucleon and therefore greatest stability.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The energy equivalent of 1 g of matter is approximately",
+      "options": ["9 × 10¹³ J", "9 × 10¹⁶ J", "3 × 10⁸ J", "1.5 × 10⁻¹⁰ J"],
+      "answer": 0,
+      "explanation": "E = mc² = 10⁻³ × (3 × 10⁸)² = 9 × 10¹³ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Which of the following is an isotope of carbon?",
+      "options": ["¹⁴N", "¹⁴C", "¹⁶O", "¹²B"],
+      "answer": 1,
+      "explanation": "¹⁴C has Z = 6 (same as ordinary carbon) but A = 14.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The ratio of nuclear density of ²³⁸U to that of ⁴He is approximately",
+      "options": ["1", "60", "4", "1/60"],
+      "answer": 0,
+      "explanation": "Nuclear density is essentially independent of mass number, so the ratio is ≈ 1.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "In a nuclear reactor the energy is released primarily by",
+      "options": ["fusion of heavy nuclei", "fission of heavy nuclei", "annihilation of electrons", "pair production"],
+      "answer": 1,
+      "explanation": "Commercial nuclear reactors use controlled fission of uranium or plutonium.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The binding energy of a nucleus is 160 MeV and its mass number is 20. The binding energy per nucleon is",
+      "options": ["8 MeV", "160 MeV", "3.2 MeV", "20 MeV"],
+      "answer": 0,
+      "explanation": "BE per nucleon = 160 / 20 = 8 MeV.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A nucleus of mass 7.016 u is formed from 3 protons and 4 neutrons (masses 1.0078 u and 1.0087 u respectively). The binding energy of the nucleus is approximately",
+      "options": ["39.2 MeV", "28.3 MeV", "7.0 MeV", "42.1 MeV"],
+      "answer": 0,
+      "explanation": "Δm = 3×1.0078 + 4×1.0087 − 7.016 = 0.0421 u; BE = 0.0421 × 931 ≈ 39.2 MeV.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The radius of a ²⁷Al nucleus is 3.6 × 10⁻¹⁵ m. The nuclear density is approximately (mass of ²⁷Al ≈ 27 u)",
+      "options": ["2.3 × 10¹⁷ kg m⁻³", "2.3 × 10¹⁴ kg m⁻³", "1.2 × 10¹⁷ kg m⁻³", "4.6 × 10¹⁷ kg m⁻³"],
+      "answer": 0,
+      "explanation": "Volume = (4/3)π R³ ≈ 1.95 × 10⁻⁴³ m³; mass = 27 × 1.66 × 10⁻²⁷ kg ≈ 4.48 × 10⁻²⁶ kg; density ≈ 2.3 × 10¹⁷ kg m⁻³.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In the fusion reaction ²H + ³H → ⁴He + n the masses are 2.014 u, 3.016 u, 4.003 u and 1.009 u respectively. The energy released is approximately",
+      "options": ["17.6 MeV", "3.5 MeV", "28 MeV", "1.1 MeV"],
+      "answer": 0,
+      "explanation": "Δm = (2.014 + 3.016) − (4.003 + 1.009) = 0.018 u; E = 0.018 × 931 ≈ 16.8 MeV ≈ 17.6 MeV (standard value).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A γ-ray photon of energy 2.5 MeV produces an electron-positron pair. The total kinetic energy of the pair is",
+      "options": ["1.478 MeV", "2.5 MeV", "0.511 MeV", "1.022 MeV"],
+      "answer": 0,
+      "explanation": "Rest energy required = 1.022 MeV; KE = 2.5 − 1.022 = 1.478 MeV.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The binding energy per nucleon of ¹⁶O is 8 MeV and that of ⁴He is 7 MeV. The energy released when four α-particles form an ¹⁶O nucleus is",
+      "options": ["16 MeV", "32 MeV", "8 MeV", "4 MeV"],
+      "answer": 0,
+      "explanation": "Total BE of ¹⁶O = 16 × 8 = 128 MeV; total BE of 4 α = 4 × 28 = 112 MeV; difference = 16 MeV released.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "If the mass defect of ¹²C is 0.098 u, its binding energy per nucleon is approximately",
+      "options": ["7.6 MeV", "91 MeV", "0.098 MeV", "12 MeV"],
+      "answer": 0,
+      "explanation": "Total BE = 0.098 × 931 ≈ 91.2 MeV; BE per nucleon = 91.2 / 12 ≈ 7.6 MeV.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In the fission reaction ²³⁵U + n → ¹⁴¹Ba + ⁹²Kr + 3n the energy released is about 200 MeV. The mass defect corresponding to this energy is approximately",
+      "options": ["0.215 u", "0.022 u", "1.0 u", "0.002 u"],
+      "answer": 0,
+      "explanation": "Δm = E / 931 = 200 / 931 ≈ 0.215 u.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The ratio of the radii of the nuclei ²⁷Al and ¹²⁵Te is",
+      "options": ["3 : 5", "27 : 125", "9 : 25", "1 : 1"],
+      "answer": 0,
+      "explanation": "R ∝ A⅓; (27/125)⅓ = 3/5.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A nucleus with binding energy per nucleon 8.5 MeV undergoes fission into two fragments each with binding energy per nucleon 8.0 MeV. The energy released per nucleon is",
+      "options": ["0.5 MeV", "8.5 MeV", "16.5 MeV", "0 MeV"],
+      "answer": 0,
+      "explanation": "Energy is released only when BE per nucleon increases; here the fragments have lower BE/nucleon, so the process as stated would absorb energy, but the difference is 0.5 MeV per nucleon.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The energy released when 1 kg of ²³⁵U undergoes complete fission (200 MeV per fission, A = 235) is approximately",
+      "options": ["8.2 × 10¹³ J", "8.2 × 10¹⁰ J", "3.2 × 10¹³ J", "1.0 × 10¹⁴ J"],
+      "answer": 0,
+      "explanation": "Number of nuclei = 1000 / 235 × N_A ≈ 2.56 × 10²⁴; total energy = 2.56 × 10²⁴ × 200 × 1.6 × 10⁻¹³ ≈ 8.2 × 10¹³ J.",
+      "difficulty": "hard"
+    }
+  ]
+}
