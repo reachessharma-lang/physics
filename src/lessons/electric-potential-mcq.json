@@ -1,0 +1,289 @@
+{
+  "title": "Potential, Potential Difference and Potential Energy — 40 MCQs",
+  "grade": "XI",
+  "chapters": [21],
+  "date": "2026-10-10",
+  "description": "Covers electric potential at a point, electron volt as a unit of energy, potential due to a point charge, variation of potential with distance and relation to field strength, equipotential lines and surfaces, and electric field between parallel plates in terms of potential difference.",
+  "questions": [
+    {
+      "q": "Electric potential at a point is defined as the work done per unit positive charge in bringing a small test charge from",
+      "options": ["the point to infinity", "infinity to the point", "one plate to another", "the centre of a charge distribution"],
+      "answer": 1,
+      "explanation": "By definition V = W∞→r / q₀ where the test charge is brought from infinity to the point.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The SI unit of electric potential is",
+      "options": ["newton", "joule", "volt", "coulomb"],
+      "answer": 2,
+      "explanation": "One volt is one joule per coulomb.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "One electron volt (eV) is equal to",
+      "options": ["1.6 × 10⁻¹⁹ J", "1.6 × 10⁻¹⁹ C", "1.6 × 10⁻¹⁹ V", "9 × 10⁹ J"],
+      "answer": 0,
+      "explanation": "1 eV is the energy gained by an electron accelerated through a potential difference of 1 V: e × 1 V = 1.6 × 10⁻¹⁹ J.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The electric potential due to a point charge Q at distance r in free space is",
+      "options": ["V = (1/(4πε₀)) Q / r²", "V = (1/(4πε₀)) Q / r", "V = (1/(4πε₀)) Q² / r", "V = (1/(4πε₀)) r / Q"],
+      "answer": 1,
+      "explanation": "V = k Q / r where k = 1/(4πε₀).",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Electric field strength is related to potential by",
+      "options": ["E = dV/dx", "E = −dV/dx", "E = V / x", "E = V × x"],
+      "answer": 1,
+      "explanation": "E is the negative gradient of potential: E = −dV/dx.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Equipotential surfaces are surfaces on which",
+      "options": ["the electric field is zero", "the potential is constant", "the charge is constant", "the force is maximum"],
+      "answer": 1,
+      "explanation": "By definition an equipotential surface is the locus of points having the same electric potential.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The work done in moving a charge on an equipotential surface is",
+      "options": ["maximum", "minimum but not zero", "zero", "infinite"],
+      "answer": 2,
+      "explanation": "Since ΔV = 0 on an equipotential surface, W = q ΔV = 0.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For parallel plates separated by distance d and potential difference ΔV the uniform field is",
+      "options": ["E = ΔV × d", "E = ΔV / d", "E = d / ΔV", "E = ΔV² / d"],
+      "answer": 1,
+      "explanation": "In a uniform field E = ΔV / d.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "Potential is a",
+      "options": ["vector quantity", "scalar quantity", "tensor quantity", "dimensionless quantity"],
+      "answer": 1,
+      "explanation": "Electric potential is a scalar; only its gradient (the field) is a vector.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The potential at infinity is conventionally taken as",
+      "options": ["infinity", "zero", "one volt", "−∞"],
+      "answer": 1,
+      "explanation": "By convention the potential at infinity is chosen to be zero so that V at any finite point is finite.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The potential at a distance of 30 cm from a point charge of 3 μC in air is",
+      "options": ["9 × 10⁴ V", "9 × 10⁵ V", "3 × 10⁴ V", "1 × 10⁵ V"],
+      "answer": 0,
+      "explanation": "V = (9 × 10⁹)(3 × 10⁻⁶)/0.3 = 27 × 10³ / 0.3 = 9 × 10⁴ V.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the potential difference between two points is 10 V, the work done in moving a charge of 2 μC between them is",
+      "options": ["2 × 10⁻⁵ J", "2 × 10⁻⁴ J", "20 J", "5 × 10⁻⁶ J"],
+      "answer": 0,
+      "explanation": "W = q ΔV = (2 × 10⁻⁶) × 10 = 2 × 10⁻⁵ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An electron is accelerated through a potential difference of 100 V. Its kinetic energy is",
+      "options": ["100 eV", "100 J", "1.6 × 10⁻¹⁷ J", "both 100 eV and 1.6 × 10⁻¹⁷ J"],
+      "answer": 0,
+      "explanation": "KE = e ΔV = 100 eV (numerically equal to the potential difference in volts).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The potential due to a point charge varies with distance r as",
+      "options": ["1/r²", "1/r", "r", "1/r³"],
+      "answer": 1,
+      "explanation": "V ∝ 1/r for a point charge; a graph of V versus r is a rectangular hyperbola.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two parallel plates are 4 cm apart and the potential difference between them is 200 V. The electric field between the plates is",
+      "options": ["5000 N C⁻¹", "50 N C⁻¹", "8000 N C⁻¹", "5 × 10³ V m⁻¹"],
+      "answer": 0,
+      "explanation": "E = ΔV / d = 200 / 0.04 = 5000 N C⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The electric field at a point is 200 N C⁻¹ and points in the positive x-direction. The potential difference between x = 0 and x = 5 cm is",
+      "options": ["10 V", "−10 V", "4 V", "−4 V"],
+      "answer": 1,
+      "explanation": "ΔV = −E Δx = −200 × 0.05 = −10 V (potential decreases in the direction of the field).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Equipotential surfaces around an isolated point charge are",
+      "options": ["planes", "spheres centred on the charge", "cylinders", "cones"],
+      "answer": 1,
+      "explanation": "V = kQ/r is constant on spheres of constant r centred on the point charge.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The potential energy of a system of two point charges q₁ and q₂ separated by distance r is",
+      "options": ["(1/(4πε₀)) q₁ q₂ / r²", "(1/(4πε₀)) q₁ q₂ / r", "(1/(4πε₀)) q₁ q₂ r", "zero"],
+      "answer": 1,
+      "explanation": "U = k q₁ q₂ / r (taking U = 0 at infinity).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A charge of +2 μC is moved through a potential difference of −50 V. The change in its potential energy is",
+      "options": ["−1 × 10⁻⁴ J", "+1 × 10⁻⁴ J", "−1 × 10⁻⁵ J", "+1 × 10⁻⁵ J"],
+      "answer": 0,
+      "explanation": "ΔU = q ΔV = (2 × 10⁻⁶)(−50) = −1 × 10⁻⁴ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The potential at a point 10 cm from a charge of 1 μC is 9 × 10⁴ V. The potential at 20 cm from the same charge is",
+      "options": ["4.5 × 10⁴ V", "1.8 × 10⁵ V", "9 × 10⁴ V", "2.25 × 10⁴ V"],
+      "answer": 0,
+      "explanation": "V ∝ 1/r; doubling the distance halves the potential: 9 × 10⁴ / 2 = 4.5 × 10⁴ V.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "If the electric field is zero in a region, the potential in that region must be",
+      "options": ["zero", "constant", "infinite", "maximum"],
+      "answer": 1,
+      "explanation": "E = −dV/dx = 0 implies V is constant (but not necessarily zero).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The work done in moving a +3 μC charge from a point at potential 100 V to a point at potential 50 V is",
+      "options": ["1.5 × 10⁻⁴ J", "−1.5 × 10⁻⁴ J", "3 × 10⁻⁴ J", "−3 × 10⁻⁴ J"],
+      "answer": 1,
+      "explanation": "W = q ΔV = (3 × 10⁻⁶)(50 − 100) = −1.5 × 10⁻⁴ J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two points are on the same equipotential surface. The potential difference between them is",
+      "options": ["maximum", "zero", "minimum but non-zero", "infinite"],
+      "answer": 1,
+      "explanation": "By definition all points on an equipotential surface have the same potential, so ΔV = 0.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The potential due to a positive point charge is",
+      "options": ["always positive", "always negative", "positive near the charge and negative far away", "zero"],
+      "answer": 0,
+      "explanation": "V = kQ/r with Q > 0 is positive at all finite distances (taking V∞ = 0).",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An electron-volt is a unit of",
+      "options": ["potential", "charge", "energy", "field strength"],
+      "answer": 2,
+      "explanation": "Although derived from potential, the electron-volt is a unit of energy.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "The potential at a distance of 50 cm from a point charge of 5 μC is 9 × 10⁴ V. The electric field at the same point is",
+      "options": ["1.8 × 10⁵ N C⁻¹", "9 × 10⁴ N C⁻¹", "3.6 × 10⁵ N C⁻¹", "4.5 × 10⁴ N C⁻¹"],
+      "answer": 0,
+      "explanation": "E = V / r = 9 × 10⁴ / 0.5 = 1.8 × 10⁵ N C⁻¹ (since E = kQ/r² = V/r).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Three charges +q, +q and −q are placed at the vertices of an equilateral triangle of side a. The potential at the centroid is",
+      "options": ["(1/(4πε₀)) (q / a)", "zero", "(1/(4πε₀)) (3q / a)", "(1/(4πε₀)) (−q / a)"],
+      "answer": 0,
+      "explanation": "Distance from each vertex to centroid is a/√3. V = kq/(a/√3) + kq/(a/√3) + k(−q)/(a/√3) = kq √3 / a.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A uniform electric field of 500 N C⁻¹ exists between two parallel plates. The potential difference between points 2 cm apart along the field is",
+      "options": ["10 V", "25 V", "100 V", "2500 V"],
+      "answer": 0,
+      "explanation": "ΔV = E Δx = 500 × 0.02 = 10 V.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The potential energy of an electron at a point is −4.8 × 10⁻¹⁹ J. The potential at that point is",
+      "options": ["3 V", "−3 V", "4.8 V", "−4.8 V"],
+      "answer": 0,
+      "explanation": "U = q V ⇒ V = U / q = (−4.8 × 10⁻¹⁹) / (−1.6 × 10⁻¹⁹) = 3 V.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two parallel plates are maintained at potentials +100 V and −100 V. If the separation is 5 cm the electric field between them is",
+      "options": ["4000 N C⁻¹", "2000 N C⁻¹", "40 N C⁻¹", "8000 N C⁻¹"],
+      "answer": 0,
+      "explanation": "ΔV = 200 V; E = 200 / 0.05 = 4000 N C⁻¹.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The potential at a point due to a system of charges is 20 V and the electric field is 10 N C⁻¹. Moving 2 cm in the direction of the field changes the potential by approximately",
+      "options": ["−0.2 V", "+0.2 V", "−2 V", "+2 V"],
+      "answer": 0,
+      "explanation": "ΔV ≈ −E Δx = −10 × 0.02 = −0.2 V.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A charge +Q is placed at the centre of a spherical shell of radius R carrying charge −Q. The potential at a point outside the shell is",
+      "options": ["zero", "(1/(4πε₀)) Q / r", "(1/(4πε₀)) (−Q / r)", "(1/(4πε₀)) (2Q / r)"],
+      "answer": 0,
+      "explanation": "Outside, the total enclosed charge is zero, so V = 0 (taking V∞ = 0).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The work required to assemble three charges +q, +q and +q at the vertices of an equilateral triangle of side a is",
+      "options": ["(1/(4πε₀)) (3 q² / a)", "(1/(4πε₀)) (q² / a)", "(1/(4πε₀)) (√3 q² / a)", "zero"],
+      "answer": 0,
+      "explanation": "U = 3 × k q² / a (three pairs each contributing k q² / a).",
+      "difficulty": "hard"
+    },
+    {
+      "q": "An electron moves from a point at potential −50 V to a point at potential +50 V. The change in its kinetic energy is",
+      "options": ["100 eV increase", "100 eV decrease", "50 eV increase", "zero"],
+      "answer": 0,
+      "explanation": "ΔU = q ΔV = (−e)(+100) = −100 eV; by energy conservation ΔK = −ΔU = +100 eV.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The potential difference between two points 10 cm apart in a uniform field of 200 N C⁻¹ is 15 V. The angle between the field and the line joining the points is approximately",
+      "options": ["41°", "0°", "90°", "60°"],
+      "answer": 0,
+      "explanation": "ΔV = E d cosθ ⇒ 15 = 200 × 0.1 × cosθ ⇒ cosθ = 0.75 ⇒ θ ≈ 41°.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A point charge +2 μC is at the origin. The potential difference between points at r = 1 m and r = 2 m is",
+      "options": ["9 × 10³ V", "1.8 × 10⁴ V", "4.5 × 10³ V", "9 × 10⁴ V"],
+      "answer": 0,
+      "explanation": "V(1) − V(2) = kQ (1/1 − 1/2) = (9 × 10⁹)(2 × 10⁻⁶)(0.5) = 9 × 10³ V.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Equipotential surfaces are always",
+      "options": ["parallel to the electric field lines", "perpendicular to the electric field lines", "at 45° to the field lines", "independent of the field"],
+      "answer": 1,
+      "explanation": "The electric field is the negative gradient of potential, so field lines are always perpendicular to equipotential surfaces.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The potential energy of a charge +q placed at a distance r from a fixed charge +Q is U. If the distance is doubled the new potential energy is",
+      "options": ["U/2", "2U", "U/4", "4U"],
+      "answer": 0,
+      "explanation": "U = k Q q / r; doubling r halves U.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a uniform electric field of 100 N C⁻¹ the potential difference between two points 20 cm apart measured perpendicular to the field is",
+      "options": ["0 V", "20 V", "5 V", "2000 V"],
+      "answer": 0,
+      "explanation": "Displacement is perpendicular to E so ΔV = −E · Δr = 0; the points lie on the same equipotential.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A proton is accelerated from rest through a potential difference of 500 V. Its final kinetic energy is",
+      "options": ["500 eV", "1000 eV", "250 eV", "8 × 10⁻¹⁷ J only"],
+      "answer": 0,
+      "explanation": "KE = q ΔV = e × 500 V = 500 eV.",
+      "difficulty": "hard"
+    }
+  ]
+}
