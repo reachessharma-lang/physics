@@ -1,0 +1,491 @@
+{
+  "title": "First Law of Thermodynamics — 40 MCQs",
+  "grade": "XII",
+  "chapters": [
+    10
+  ],
+  "date": "2026-10-10",
+  "description": "Thermodynamic systems, work done during volume change, heat, work and internal energy with the first law of thermodynamics, isothermal, adiabatic, isochoric and isobaric processes, heat capacities of an ideal gas at constant pressure and constant volume and the relation between them, and isothermal and adiabatic processes for an ideal gas.",
+  "questions": [
+    {
+      "q": "The first law of thermodynamics is expressed as",
+      "options": [
+        "ΔU = ΔQ + ΔW",
+        "ΔW = ΔQ + ΔU",
+        "ΔQ = ΔU − ΔW",
+        "ΔQ = ΔU + ΔW"
+      ],
+      "answer": 3,
+      "explanation": "The heat supplied to a system is used partly in increasing its internal energy and partly in doing work by the system, so ΔQ = ΔU + ΔW.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In an isochoric process (volume kept constant), the work done by the gas is",
+      "options": [
+        "zero, because ΔV = 0",
+        "equal to nRΔT",
+        "equal to the change in internal energy",
+        "equal to PΔV"
+      ],
+      "answer": 0,
+      "explanation": "Work done by a gas is ∫P dV; when the volume does not change, dV = 0 and hence the work done is zero.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For an ideal gas undergoing an isothermal process, which statement is correct?",
+      "options": [
+        "the internal energy increases as the gas expands",
+        "ΔU = 0, so the whole of the heat supplied is converted into work",
+        "ΔQ = 0 and ΔU = −ΔW",
+        "ΔU = ΔQ and no work is done"
+      ],
+      "answer": 1,
+      "explanation": "The internal energy of an ideal gas depends only on its temperature, so at constant temperature ΔU = 0 and the first law gives ΔQ = ΔW.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "In an adiabatic process, the quantity that is always zero is",
+      "options": [
+        "the change in internal energy",
+        "the work done by the gas",
+        "the heat exchanged with the surroundings",
+        "the change in temperature"
+      ],
+      "answer": 2,
+      "explanation": "An adiabatic process is one in which no heat enters or leaves the system, so ΔQ = 0 and the first law reduces to ΔU = −ΔW.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "One joule of work can also be written as",
+      "options": [
+        "1 kg·m·s⁻²",
+        "1 N·m²",
+        "1 Pa·m³",
+        "1 Pa·m⁻³"
+      ],
+      "answer": 2,
+      "explanation": "Since W = PΔV, the product of the pascal and the cubic metre is the joule; numerically 1 Pa·m³ = 1 N m⁻² × 1 m³ = 1 N m = 1 J.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "A gas expands at a constant pressure of 1 × 10⁵ Pa and its volume increases by 4 × 10⁻³ m³. The work done by the gas is",
+      "options": [
+        "40 J",
+        "4 × 10³ J",
+        "250 J",
+        "400 J"
+      ],
+      "answer": 3,
+      "explanation": "W = PΔV = 1 × 10⁵ Pa × 4 × 10⁻³ m³ = 400 J.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "For an ideal gas, the difference between the molar specific heats at constant pressure and at constant volume is",
+      "options": [
+        "Cp − Cv = γR",
+        "Cp − Cv = R/T",
+        "Cp + Cv = R",
+        "Cp − Cv = R"
+      ],
+      "answer": 3,
+      "explanation": "From the first law applied to one mole of an ideal gas, the difference of the two molar specific heats equals the universal gas constant, Cp − Cv = R = 8.31 J mol⁻¹ K⁻¹.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The ratio γ = Cp/Cv for a monatomic ideal gas is",
+      "options": [
+        "1.67",
+        "1.00",
+        "1.33",
+        "1.40"
+      ],
+      "answer": 0,
+      "explanation": "For a monatomic gas Cv = 3R/2 and Cp = 5R/2, so γ = 5/3 ≈ 1.67.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "The internal energy of an ideal gas depends only on",
+      "options": [
+        "its temperature",
+        "its volume",
+        "its pressure",
+        "the process it undergoes"
+      ],
+      "answer": 0,
+      "explanation": "For an ideal gas the molecules have no potential energy of interaction, so the internal energy is purely kinetic and depends only on the absolute temperature.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "When a gas expands and does work on the surroundings, this work is taken as",
+      "options": [
+        "equal to the heat supplied in every process",
+        "always zero",
+        "negative in the first law ΔQ = ΔU + ΔW",
+        "positive in the first law ΔQ = ΔU + ΔW"
+      ],
+      "answer": 3,
+      "explanation": "In the form ΔQ = ΔU + ΔW the symbol ΔW denotes the work done by the system, so an expansion, in which the gas does work, is counted as positive.",
+      "difficulty": "easy"
+    },
+    {
+      "q": "One mole of an ideal gas at 300 K expands isothermally until its volume is doubled. The work done by the gas is about",
+      "options": [
+        "2493 J",
+        "300 J",
+        "1728 J",
+        "864 J"
+      ],
+      "answer": 2,
+      "explanation": "W = nRT ln(V₂/V₁) = 1 × 8.31 × 300 × ln 2 = 2493 × 0.693 ≈ 1728 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two moles of an ideal gas at 300 K are expanded isothermally to twice their original volume. The work done by the gas is about",
+      "options": [
+        "4986 J",
+        "831 J",
+        "3456 J",
+        "1728 J"
+      ],
+      "answer": 2,
+      "explanation": "W = nRT ln 2 = 2 × 8.31 × 300 × 0.693 ≈ 3456 J, i.e. double the value for one mole.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "One mole of a monatomic ideal gas is heated from 300 K to 400 K at constant volume. The heat absorbed by the gas is about",
+      "options": [
+        "1247 J",
+        "416 J",
+        "2078 J",
+        "831 J"
+      ],
+      "answer": 0,
+      "explanation": "At constant volume no work is done, so Q = ΔU = (3/2)nRΔT = 1.5 × 8.31 × 100 ≈ 1247 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two moles of a monatomic ideal gas are heated through 50 K at constant pressure. The heat absorbed is about",
+      "options": [
+        "831 J",
+        "2078 J",
+        "1247 J",
+        "3324 J"
+      ],
+      "answer": 1,
+      "explanation": "For an isobaric process Q = nCpΔT = 2 × (5/2 × 8.31) × 50 = 2 × 20.775 × 50 ≈ 2078 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two moles of a diatomic ideal gas are heated through 100 K at constant pressure. The heat absorbed is about",
+      "options": [
+        "2909 J",
+        "1662 J",
+        "5817 J",
+        "4155 J"
+      ],
+      "answer": 2,
+      "explanation": "Cp = 7R/2 = 29.09 J mol⁻¹ K⁻¹, so Q = nCpΔT = 2 × 29.09 × 100 ≈ 5817 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a certain gas Cp = 29.1 J mol⁻¹ K⁻¹ and Cv = 20.8 J mol⁻¹ K⁻¹. The value of γ = Cp/Cv is about",
+      "options": [
+        "1.67",
+        "1.33",
+        "0.71",
+        "1.40"
+      ],
+      "answer": 3,
+      "explanation": "γ = Cp/Cv = 29.1/20.8 ≈ 1.40, which is the value expected for a diatomic gas.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Two moles of an ideal gas are heated through 100 K at constant pressure. The work done by the gas is about",
+      "options": [
+        "1662 J",
+        "4155 J",
+        "831 J",
+        "2078 J"
+      ],
+      "answer": 0,
+      "explanation": "For an isobaric process W = nRΔT = 2 × 8.31 × 100 ≈ 1662 J; the rest of the heat goes to raise the internal energy.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For a diatomic ideal gas, the molar specific heat at constant volume is about",
+      "options": [
+        "29.1 J mol⁻¹ K⁻¹",
+        "20.8 J mol⁻¹ K⁻¹",
+        "8.31 J mol⁻¹ K⁻¹",
+        "12.5 J mol⁻¹ K⁻¹"
+      ],
+      "answer": 1,
+      "explanation": "A diatomic molecule has 5 degrees of freedom, so Cv = (5/2)R = 2.5 × 8.31 ≈ 20.8 J mol⁻¹ K⁻¹.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A gas absorbs 2500 J of heat and does 1000 J of work on the surroundings. The change in its internal energy is",
+      "options": [
+        "1500 J",
+        "2500 J",
+        "3500 J",
+        "1000 J"
+      ],
+      "answer": 0,
+      "explanation": "By the first law ΔU = ΔQ − ΔW = 2500 J − 1000 J = 1500 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Three moles of a monatomic ideal gas are heated from 300 K to 350 K at constant volume. The heat absorbed is about",
+      "options": [
+        "623 J",
+        "1247 J",
+        "1869 J",
+        "3116 J"
+      ],
+      "answer": 2,
+      "explanation": "At constant volume Q = ΔU = (3/2)nRΔT = 1.5 × 3 × 8.31 × 50 ≈ 1869 J.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Five moles of a monatomic ideal gas expand adiabatically and do 2000 J of work. The fall in temperature of the gas is about",
+      "options": [
+        "16 K",
+        "32 K",
+        "64 K",
+        "48 K"
+      ],
+      "answer": 1,
+      "explanation": "For an adiabatic process ΔU = −W, so (3/2)nRΔT = −2000 J and ΔT = −2000/(1.5 × 5 × 8.31) ≈ −32 K.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "An ideal gas is taken through a complete cycle and returns to its initial state. The change in its internal energy over the cycle is",
+      "options": [
+        "equal to the area of the P–V diagram",
+        "equal to the net work done",
+        "equal to the net heat absorbed",
+        "zero, so the net heat absorbed equals the net work done"
+      ],
+      "answer": 3,
+      "explanation": "Internal energy is a state function, so it returns to its original value after a cycle; the first law then gives ΔQ = ΔW for the cycle.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "Four moles of a monatomic ideal gas are heated through 50 K at constant pressure. The increase in internal energy is about",
+      "options": [
+        "1662 J",
+        "4155 J",
+        "831 J",
+        "2493 J"
+      ],
+      "answer": 3,
+      "explanation": "ΔU = (3/2)nRΔT = 1.5 × 4 × 8.31 × 50 = 2493 J, which is less than the heat supplied (nCpΔT ≈ 4155 J) because the gas also does work.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "For an adiabatic process of an ideal gas, which of the following relations is correct?",
+      "options": [
+        "T V^γ = constant",
+        "P V = constant",
+        "T V^(γ − 1) = constant",
+        "T V^(1 − γ) = constant"
+      ],
+      "answer": 2,
+      "explanation": "Combining the adiabatic condition P V^γ = constant with the ideal gas equation gives T V^(γ − 1) = constant.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "During an adiabatic expansion of an ideal gas, the work done by the gas is equal to",
+      "options": [
+        "the increase in its internal energy",
+        "zero",
+        "the decrease in its internal energy",
+        "the heat absorbed by the gas"
+      ],
+      "answer": 2,
+      "explanation": "Since no heat is exchanged in an adiabatic process, the first law gives ΔW = −ΔU; the gas does work at the cost of its internal energy, so it cools.",
+      "difficulty": "medium"
+    },
+    {
+      "q": "A gas (γ = 1.4) at a pressure of 2 × 10⁵ Pa and volume 1 × 10⁻³ m³ is compressed adiabatically to 5 × 10⁻⁴ m³. The final pressure is about",
+      "options": [
+        "4.00 × 10⁵ Pa",
+        "1.06 × 10⁵ Pa",
+        "2.64 × 10⁵ Pa",
+        "5.28 × 10⁵ Pa"
+      ],
+      "answer": 3,
+      "explanation": "For an adiabatic change P₁V₁^γ = P₂V₂^γ, so P₂ = P₁(V₁/V₂)^γ = 2 × 10⁵ × 2^1.4 ≈ 2 × 10⁵ × 2.64 ≈ 5.28 × 10⁵ Pa.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A gas at 300 K is compressed adiabatically to half its volume. Taking γ = 1.4, its final temperature is about",
+      "options": [
+        "396 K",
+        "300 K",
+        "600 K",
+        "228 K"
+      ],
+      "answer": 0,
+      "explanation": "T₁V₁^(γ−1) = T₂V₂^(γ−1), so T₂ = 300 × 2^0.4 ≈ 300 × 1.32 ≈ 396 K; an adiabatic compression always heats the gas.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A gas (γ = 1.4) is compressed adiabatically from 2 × 10⁵ Pa, 1 × 10⁻³ m³ to 5.28 × 10⁵ Pa, 5 × 10⁻⁴ m³. The work done on the gas is about",
+      "options": [
+        "264 J",
+        "160 J",
+        "80 J",
+        "320 J"
+      ],
+      "answer": 1,
+      "explanation": "W on the gas = (P₂V₂ − P₁V₁)/(γ − 1) = (264 − 200)/0.4 = 160 J, where the products are in joules.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "The ratio of the specific heats of a gas is γ = 1.4. The number of degrees of freedom of each molecule of the gas is",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 1,
+      "explanation": "Using γ = 1 + 2/f gives f = 2/(γ − 1) = 2/0.4 = 5, which corresponds to a diatomic molecule.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A monatomic ideal gas at 300 K is compressed adiabatically to one-eighth of its original volume. Its final temperature is",
+      "options": [
+        "150 K",
+        "1200 K",
+        "2400 K",
+        "600 K"
+      ],
+      "answer": 1,
+      "explanation": "For a monatomic gas γ = 5/3, so T₂ = T₁(V₁/V₂)^(γ−1) = 300 × 8^(2/3) = 300 × 4 = 1200 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two moles of a monatomic ideal gas expand adiabatically and do 500 J of work. The change in temperature of the gas is about",
+      "options": [
+        "−20.1 K",
+        "−10.0 K",
+        "+20.1 K",
+        "−40.2 K"
+      ],
+      "answer": 0,
+      "explanation": "ΔU = −W = −500 J and ΔU = (3/2)nRΔT, so ΔT = −500/(1.5 × 2 × 8.31) ≈ −20.1 K.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Four moles of an ideal gas at 300 K are expanded isothermally until the volume becomes three times the original volume. The work done by the gas is about",
+      "options": [
+        "3.65 × 10³ J",
+        "1.10 × 10⁴ J",
+        "9.97 × 10³ J",
+        "5.48 × 10³ J"
+      ],
+      "answer": 1,
+      "explanation": "W = nRT ln(V₂/V₁) = 4 × 8.31 × 300 × ln 3 = 9972 × 1.0986 ≈ 1.10 × 10⁴ J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two moles of an ideal gas at 300 K are compressed isothermally to half their volume. The work done by the gas is about",
+      "options": [
+        "−1728 J",
+        "−831 J",
+        "+3456 J",
+        "−3456 J"
+      ],
+      "answer": 3,
+      "explanation": "W = nRT ln(V₂/V₁) = 2 × 8.31 × 300 × ln 0.5 = 4986 × (−0.693) ≈ −3456 J; the negative sign means that 3456 J of work is done on the gas.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Three moles of a monatomic ideal gas are heated from 300 K to 350 K at constant pressure. The heat absorbed is about",
+      "options": [
+        "1869 J",
+        "3116 J",
+        "4360 J",
+        "1247 J"
+      ],
+      "answer": 1,
+      "explanation": "Q = nCpΔT = 3 × (5/2 × 8.31) × 50 = 3 × 20.775 × 50 ≈ 3116 J; of this, ΔU ≈ 1869 J and W ≈ 1247 J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "One mole of a diatomic ideal gas is heated from 300 K to 400 K at constant volume. The heat absorbed is about",
+      "options": [
+        "1247 J",
+        "2078 J",
+        "2909 J",
+        "831 J"
+      ],
+      "answer": 1,
+      "explanation": "At constant volume Q = ΔU = (5/2)nRΔT = 2.5 × 8.31 × 100 ≈ 2078 J, since Cv = 5R/2 for a diatomic gas.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "In a cyclic process a gas absorbs 800 J of heat from the source and the net work done by the gas is 300 J. The heat rejected to the sink is",
+      "options": [
+        "500 J",
+        "1100 J",
+        "800 J",
+        "300 J"
+      ],
+      "answer": 0,
+      "explanation": "For a complete cycle ΔU = 0, so the net heat absorbed equals the net work done: Q_net = 800 − Q_rejected = 300 J, giving Q_rejected = 500 J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "For the same rise in temperature, an ideal gas absorbs 500 J of heat at constant volume and 700 J at constant pressure. The work done by the gas in the isobaric process is",
+      "options": [
+        "700 J",
+        "1200 J",
+        "200 J",
+        "500 J"
+      ],
+      "answer": 2,
+      "explanation": "Since ΔU is the same in both cases (same ΔT), the extra heat in the isobaric process is exactly the work done: W = 700 − 500 = 200 J.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "A gas releases 500 J of heat to the surroundings while 300 J of work is done on it by the surroundings. The change in its internal energy is",
+      "options": [
+        "−800 J",
+        "+200 J",
+        "+800 J",
+        "−200 J"
+      ],
+      "answer": 3,
+      "explanation": "Taking ΔQ = −500 J and ΔW = −300 J (work done by the gas), the first law gives ΔU = ΔQ − ΔW = −500 + 300 = −200 J, so the internal energy falls.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "On a P–V diagram, the slope of an adiabatic curve at any point, compared with the slope of the isothermal curve through the same point, is",
+      "options": [
+        "1/γ times as large, so the adiabatic curve is flatter",
+        "exactly equal",
+        "γ times as large, so the adiabatic curve is steeper",
+        "zero for the adiabatic curve"
+      ],
+      "answer": 2,
+      "explanation": "Differentiating P V = constant and P V^γ = constant gives slopes −P/V and −γP/V respectively, so the adiabatic curve is γ times steeper than the isotherm.",
+      "difficulty": "hard"
+    },
+    {
+      "q": "Two moles of an ideal gas at 400 K are expanded isothermally until the volume is doubled. The heat absorbed by the gas is about",
+      "options": [
+        "4608 J",
+        "2304 J",
+        "3324 J",
+        "5760 J"
+      ],
+      "answer": 0,
+      "explanation": "For an isothermal process ΔU = 0, so Q = W = nRT ln 2 = 2 × 8.31 × 400 × 0.693 ≈ 4608 J.",
+      "difficulty": "hard"
+    }
+  ]
+}
